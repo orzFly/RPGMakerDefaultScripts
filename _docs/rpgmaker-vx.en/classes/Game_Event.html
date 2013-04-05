@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Game_Event</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Game_Event 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Game_Character.html">Game_Character</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Game_Event_rb.html">Game_Event.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This class deals with events. It handles functions including event page 
+switching via condition determinants, and running parallel process events.
+It’s used within the <a href="Game_Map.html">Game_Map</a> class.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-check_event_trigger_auto">check_event_trigger_auto</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-check_event_trigger_touch">check_event_trigger_touch</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-clear_starting">clear_starting</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-conditions_met-3F">conditions_met?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-erase">erase</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-refresh">refresh</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-setup">setup</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start">start</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>list</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>starting</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>trigger</td>
+            <td class='attr-desc'><p>Public Instance Variables</p></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(map_id, event)
+            
+            <a href="../classes/Game_Event.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Object Initialization</p>
+
+<p>map_id : map ID event  : event (RPG::Event)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Event.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">map_id</span>, <span class="ruby-identifier">event</span>)
+  <span class="ruby-keyword">super</span>()
+  <span class="ruby-ivar">@map_id</span> = <span class="ruby-identifier">map_id</span>
+  <span class="ruby-ivar">@event</span> = <span class="ruby-identifier">event</span>
+  <span class="ruby-ivar">@id</span> = <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">id</span>
+  <span class="ruby-ivar">@erased</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@starting</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@through</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-identifier">moveto</span>(<span class="ruby-ivar">@event</span>.<span class="ruby-identifier">x</span>, <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">y</span>)            <span class="ruby-comment"># Move to initial position</span>
+  <span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-check_event_trigger_auto">
+            
+              <b>check_event_trigger_auto</b>()
+            
+            <a href="../classes/Game_Event.html#method-i-check_event_trigger_auto" name="method-i-check_event_trigger_auto" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if Autorun Event is Triggered</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-check_event_trigger_auto_source')" id="l_method-i-check_event_trigger_auto_source">show</a>
+                
+              </p>
+              <div id="method-i-check_event_trigger_auto_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Event.rb, line 169</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">check_event_trigger_auto</span>
+  <span class="ruby-identifier">start</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@trigger</span> <span class="ruby-operator">==</span> <span class="ruby-number">3</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-check_event_trigger_touch">
+            
+              <b>check_event_trigger_touch</b>(x, y)
+            
+            <a href="../classes/Game_Event.html#method-i-check_event_trigger_touch" name="method-i-check_event_trigger_touch" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if touch event is triggered</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-check_event_trigger_touch_source')" id="l_method-i-check_event_trigger_touch_source">show</a>
+                
+              </p>
+              <div id="method-i-check_event_trigger_touch_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Event.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">check_event_trigger_touch</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">interpreter</span>.<span class="ruby-identifier">running?</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@trigger</span> <span class="ruby-operator">==</span> <span class="ruby-number">2</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">pos?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+    <span class="ruby-identifier">start</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">jumping?</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@priority_type</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear_starting">
+            
+              <b>clear_starting</b>()
+            
+            <a href="../classes/Game_Event.html#method-i-clear_starting" name="method-i-clear_starting" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Clear Starting Flag</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_starting_source')" id="l_method-i-clear_starting_source">show</a>
+                
+              </p>
+              <div id="method-i-clear_starting_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Event.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear_starting</span>
+  <span class="ruby-ivar">@starting</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-conditions_met-3F">
+            
+              <b>conditions_met?</b>(page)
+            
+            <a href="../classes/Game_Event.html#method-i-conditions_met-3F" name="method-i-conditions_met-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if Event Page Conditions are Met</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-conditions_met-3F_source')" id="l_method-i-conditions_met-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-conditions_met-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Event.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">conditions_met?</span>(<span class="ruby-identifier">page</span>)
+  <span class="ruby-identifier">c</span> = <span class="ruby-identifier">page</span>.<span class="ruby-identifier">condition</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">switch1_valid</span>      <span class="ruby-comment"># Swtich 1</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_switches</span>[<span class="ruby-identifier">c</span>.<span class="ruby-identifier">switch1_id</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">switch2_valid</span>      <span class="ruby-comment"># Swtich 2</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_switches</span>[<span class="ruby-identifier">c</span>.<span class="ruby-identifier">switch2_id</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">variable_valid</span>     <span class="ruby-comment"># Variable</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_variables</span>[<span class="ruby-identifier">c</span>.<span class="ruby-identifier">variable_id</span>] <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">variable_value</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">self_switch_valid</span>  <span class="ruby-comment"># Self switch</span>
+    <span class="ruby-identifier">key</span> = [<span class="ruby-ivar">@map_id</span>, <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">c</span>.<span class="ruby-identifier">self_switch_ch</span>]
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_self_switches</span>[<span class="ruby-identifier">key</span>] <span class="ruby-operator">!=</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">item_valid</span>         <span class="ruby-comment"># Item</span>
+    <span class="ruby-identifier">item</span> = <span class="ruby-identifier">$data_items</span>[<span class="ruby-identifier">c</span>.<span class="ruby-identifier">item_id</span>]
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">item_number</span>(<span class="ruby-identifier">item</span>) <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">actor_valid</span>        <span class="ruby-comment"># Actor</span>
+    <span class="ruby-identifier">actor</span> = <span class="ruby-identifier">$game_actors</span>[<span class="ruby-identifier">c</span>.<span class="ruby-identifier">actor_id</span>]
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">members</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">actor</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>   <span class="ruby-comment"># Conditions met</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-erase">
+            
+              <b>erase</b>()
+            
+            <a href="../classes/Game_Event.html#method-i-erase" name="method-i-erase" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Temporarily Erase</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-erase_source')" id="l_method-i-erase_source">show</a>
+                
+              </p>
+              <div id="method-i-erase_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Event.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">erase</span>
+  <span class="ruby-ivar">@erased</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refresh">
+            
+              <b>refresh</b>()
+            
+            <a href="../classes/Game_Event.html#method-i-refresh" name="method-i-refresh" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Refresh</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refresh_source')" id="l_method-i-refresh_source">show</a>
+                
+              </p>
+              <div id="method-i-refresh_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Event.rb, line 140</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refresh</span>
+  <span class="ruby-identifier">new_page</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@erased</span>                          <span class="ruby-comment"># If not temporarily erased</span>
+    <span class="ruby-keyword">for</span> <span class="ruby-identifier">page</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">pages</span>.<span class="ruby-identifier">reverse</span>      <span class="ruby-comment"># From the largest numbered page</span>
+      <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">conditions_met?</span>(<span class="ruby-identifier">page</span>)   <span class="ruby-comment"># Determine if conditions are met</span>
+      <span class="ruby-identifier">new_page</span> = <span class="ruby-identifier">page</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">new_page</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@page</span>            <span class="ruby-comment"># Event page changed?</span>
+    <span class="ruby-identifier">clear_starting</span>                <span class="ruby-comment"># Clear starting flag</span>
+    <span class="ruby-identifier">setup</span>(<span class="ruby-identifier">new_page</span>)               <span class="ruby-comment"># Set up event page</span>
+    <span class="ruby-identifier">check_event_trigger_auto</span>      <span class="ruby-comment"># Check autorun event</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-setup">
+            
+              <b>setup</b>(new_page)
+            
+            <a href="../classes/Game_Event.html#method-i-setup" name="method-i-setup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Event page setup</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-setup_source')" id="l_method-i-setup_source">show</a>
+                
+              </p>
+              <div id="method-i-setup_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Event.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">setup</span>(<span class="ruby-identifier">new_page</span>)
+  <span class="ruby-ivar">@page</span> = <span class="ruby-identifier">new_page</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@page</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-ivar">@tile_id</span> = <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@character_name</span> = <span class="ruby-string">&quot;&quot;</span>
+    <span class="ruby-ivar">@character_index</span> = <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@move_type</span> = <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@through</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@trigger</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-ivar">@list</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-ivar">@interpreter</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@tile_id</span> = <span class="ruby-ivar">@page</span>.<span class="ruby-identifier">graphic</span>.<span class="ruby-identifier">tile_id</span>
+    <span class="ruby-ivar">@character_name</span> = <span class="ruby-ivar">@page</span>.<span class="ruby-identifier">graphic</span>.<span class="ruby-identifier">character_name</span>
+    <span class="ruby-ivar">@character_index</span> = <span class="ruby-ivar">@page</span>.<span class="ruby-identifier">graphic</span>.<span class="ruby-identifier">character_index</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@original_direction</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@page</span>.<span class="ruby-identifier">graphic</span>.<span class="ruby-identifier">direction</span>
+      <span class="ruby-ivar">@direction</span> = <span class="ruby-ivar">@page</span>.<span class="ruby-identifier">graphic</span>.<span class="ruby-identifier">direction</span>
+      <span class="ruby-ivar">@original_direction</span> = <span class="ruby-ivar">@direction</span>
+      <span class="ruby-ivar">@prelock_direction</span> = <span class="ruby-number">0</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@original_pattern</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@page</span>.<span class="ruby-identifier">graphic</span>.<span class="ruby-identifier">pattern</span>
+      <span class="ruby-ivar">@pattern</span> = <span class="ruby-ivar">@page</span>.<span class="ruby-identifier">graphic</span>.<span class="ruby-identifier">pattern</span>
+      <span class="ruby-ivar">@original_pattern</span> = <span class="ruby-ivar">@pattern</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-ivar">@move_type</span> = <span class="ruby-ivar">@page</span>.<span class="ruby-identifier">move_type</span>
+    <span class="ruby-ivar">@move_speed</span> = <span class="ruby-ivar">@page</span>.<span class="ruby-identifier">move_speed</span>
+    <span class="ruby-ivar">@move_frequency</span> = <span class="ruby-ivar">@page</span>.<span class="ruby-identifier">move_frequency</span>
+    <span class="ruby-ivar">@move_route</span> = <span class="ruby-ivar">@page</span>.<span class="ruby-identifier">move_route</span>
+    <span class="ruby-ivar">@move_route_index</span> = <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@move_route_forcing</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@walk_anime</span> = <span class="ruby-ivar">@page</span>.<span class="ruby-identifier">walk_anime</span>
+    <span class="ruby-ivar">@step_anime</span> = <span class="ruby-ivar">@page</span>.<span class="ruby-identifier">step_anime</span>
+    <span class="ruby-ivar">@direction_fix</span> = <span class="ruby-ivar">@page</span>.<span class="ruby-identifier">direction_fix</span>
+    <span class="ruby-ivar">@through</span> = <span class="ruby-ivar">@page</span>.<span class="ruby-identifier">through</span>
+    <span class="ruby-ivar">@priority_type</span> = <span class="ruby-ivar">@page</span>.<span class="ruby-identifier">priority_type</span>
+    <span class="ruby-ivar">@trigger</span> = <span class="ruby-ivar">@page</span>.<span class="ruby-identifier">trigger</span>
+    <span class="ruby-ivar">@list</span> = <span class="ruby-ivar">@page</span>.<span class="ruby-identifier">list</span>
+    <span class="ruby-ivar">@interpreter</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@trigger</span> <span class="ruby-operator">==</span> <span class="ruby-number">4</span>                       <span class="ruby-comment"># Trigger is [Parallel Process]?</span>
+      <span class="ruby-ivar">@interpreter</span> = <span class="ruby-constant">Game_Interpreter</span>.<span class="ruby-identifier">new</span>  <span class="ruby-comment"># For parallel processing</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">update_bush_depth</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start">
+            
+              <b>start</b>()
+            
+            <a href="../classes/Game_Event.html#method-i-start" name="method-i-start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Start Event</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_source')" id="l_method-i-start_source">show</a>
+                
+              </p>
+              <div id="method-i-start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Event.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@list</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-number">1</span>                   <span class="ruby-comment"># Execution content empty?</span>
+  <span class="ruby-ivar">@starting</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-identifier">lock</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@trigger</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">3</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">interpreter</span>.<span class="ruby-identifier">running?</span>
+    <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">interpreter</span>.<span class="ruby-identifier">setup_starting_event</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Game_Event.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Frame Update</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Event.rb, line 176</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">check_event_trigger_auto</span>                    <span class="ruby-comment"># Check autorun event</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@interpreter</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>                      <span class="ruby-comment"># Now parallel processing?</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@interpreter</span>.<span class="ruby-identifier">running?</span>              <span class="ruby-comment"># Not running</span>
+      <span class="ruby-ivar">@interpreter</span>.<span class="ruby-identifier">setup</span>(<span class="ruby-ivar">@list</span>, <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">id</span>)    <span class="ruby-comment"># Set up</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-ivar">@interpreter</span>.<span class="ruby-identifier">update</span>                       <span class="ruby-comment"># Update interpreter</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

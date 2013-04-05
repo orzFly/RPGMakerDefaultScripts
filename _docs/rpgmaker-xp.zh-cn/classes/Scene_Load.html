@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_Load</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_Load 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Scene_File.html">Scene_File</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_Load_rb.html">Scene_Load.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>处理读档画面的类。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-on_cancel">on_cancel</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_decision">on_decision</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-read_save_data">read_save_data</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Scene_Load.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>初始化对像</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Load.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-comment"># 再生成临时对像</span>
+  <span class="ruby-identifier">$game_temp</span> = <span class="ruby-constant">Game_Temp</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-comment"># 选择存档时间最新的文件</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">last_file_index</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">latest_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span>(<span class="ruby-number">0</span>)
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">0</span><span class="ruby-operator">..</span><span class="ruby-number">3</span>
+    <span class="ruby-identifier">filename</span> = <span class="ruby-identifier">make_filename</span>(<span class="ruby-identifier">i</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">filename</span>)
+      <span class="ruby-identifier">file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-string">&quot;r&quot;</span>)
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">file</span>.<span class="ruby-identifier">mtime</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">latest_time</span>
+        <span class="ruby-identifier">latest_time</span> = <span class="ruby-identifier">file</span>.<span class="ruby-identifier">mtime</span>
+        <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">last_file_index</span> = <span class="ruby-identifier">i</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">file</span>.<span class="ruby-identifier">close</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">super</span>(<span class="ruby-string">&quot;要载入哪个文件？&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-on_cancel">
+            
+              <b>on_cancel</b>()
+            
+            <a href="../classes/Scene_Load.html#method-i-on_cancel" name="method-i-on_cancel" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>取消时的处理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_cancel_source')" id="l_method-i-on_cancel_source">show</a>
+                
+              </p>
+              <div id="method-i-on_cancel_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Load.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_cancel</span>
+  <span class="ruby-comment"># 演奏取消 SE</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cancel_se</span>)
+  <span class="ruby-comment"># 切换到标题画面</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Title</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_decision">
+            
+              <b>on_decision</b>(filename)
+            
+            <a href="../classes/Scene_Load.html#method-i-on_decision" name="method-i-on_decision" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>确定时的处理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_decision_source')" id="l_method-i-on_decision_source">show</a>
+                
+              </p>
+              <div id="method-i-on_decision_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Load.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_decision</span>(<span class="ruby-identifier">filename</span>)
+  <span class="ruby-comment"># 文件不存在的情况下</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">filename</span>)
+    <span class="ruby-comment"># 演奏冻结 SE</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">buzzer_se</span>)
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 演奏读档 SE</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">load_se</span>)
+  <span class="ruby-comment"># 写入存档数据</span>
+  <span class="ruby-identifier">file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-string">&quot;rb&quot;</span>)
+  <span class="ruby-identifier">read_save_data</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-identifier">file</span>.<span class="ruby-identifier">close</span>
+  <span class="ruby-comment"># 还原 BGM、BGS</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">bgm_play</span>(<span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">playing_bgm</span>)
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">bgs_play</span>(<span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">playing_bgs</span>)
+  <span class="ruby-comment"># 刷新地图 (执行并行事件)</span>
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-comment"># 切换到地图画面</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Map</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-read_save_data">
+            
+              <b>read_save_data</b>(file)
+            
+            <a href="../classes/Scene_Load.html#method-i-read_save_data" name="method-i-read_save_data" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>读取存档数据</p>
+
+<p>file : 读取用文件对像 (已经打开)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-read_save_data_source')" id="l_method-i-read_save_data_source">show</a>
+                
+              </p>
+              <div id="method-i-read_save_data_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Load.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">read_save_data</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-comment"># 读取描绘存档文件用的角色数据</span>
+  <span class="ruby-identifier">characters</span> = <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-comment"># 读取测量游戏时间用画面计数</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">frame_count</span> = <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-comment"># 读取各种游戏对像</span>
+  <span class="ruby-identifier">$game_system</span>        = <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-identifier">$game_switches</span>      = <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-identifier">$game_variables</span>     = <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-identifier">$game_self_switches</span> = <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-identifier">$game_screen</span>        = <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-identifier">$game_actors</span>        = <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-identifier">$game_party</span>         = <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-identifier">$game_troop</span>         = <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-identifier">$game_map</span>           = <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-identifier">$game_player</span>        = <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-comment"># 魔法编号与保存时有差异的情况下</span>
+  <span class="ruby-comment"># (加入编辑器的编辑过的数据)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">magic_number</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">magic_number</span>
+    <span class="ruby-comment"># 重新装载地图</span>
+    <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">setup</span>(<span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">map_id</span>)
+    <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">center</span>(<span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">x</span>, <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 刷新同伴成员</span>
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

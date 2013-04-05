@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_Gameover</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_Gameover 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_Gameover_rb.html">Scene_Gameover.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>处理游戏结束画面的类。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-main">main</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-main">
+            
+              <b>main</b>()
+            
+            <a href="../classes/Scene_Gameover.html#method-i-main" name="method-i-main" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>主处理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-main_source')" id="l_method-i-main_source">show</a>
+                
+              </p>
+              <div id="method-i-main_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Gameover.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">main</span>
+  <span class="ruby-comment"># 生成游戏结束图形</span>
+  <span class="ruby-ivar">@sprite</span> = <span class="ruby-constant">Sprite</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@sprite</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Cache</span>.<span class="ruby-identifier">gameover</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">gameover_name</span>)
+  <span class="ruby-comment"># 停止 BGM、BGS</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">bgm_play</span>(<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">bgs_play</span>(<span class="ruby-keyword">nil</span>)
+  <span class="ruby-comment"># 演奏游戏结束 ME</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">me_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">gameover_me</span>)
+  <span class="ruby-comment"># 执行过渡</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">transition</span>(<span class="ruby-number">120</span>)
+  <span class="ruby-comment"># 主循环</span>
+  <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-comment"># 刷新游戏画面</span>
+    <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># 刷新输入信息</span>
+    <span class="ruby-constant">Input</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># 刷新画面情报</span>
+    <span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># 如果画面被切换的话就中断循环</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$scene</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">self</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 准备过渡</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">freeze</span>
+  <span class="ruby-comment"># 释放游戏结束图形</span>
+  <span class="ruby-ivar">@sprite</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@sprite</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-comment"># 执行过度</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">transition</span>(<span class="ruby-number">40</span>)
+  <span class="ruby-comment"># 准备过渡</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">freeze</span>
+  <span class="ruby-comment"># 战斗测试的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$BTEST</span>
+    <span class="ruby-identifier">$scene</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Scene_Gameover.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新画面</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Gameover.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-comment"># 按下 C 键的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+    <span class="ruby-comment"># 切换到标题画面</span>
+    <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Title</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

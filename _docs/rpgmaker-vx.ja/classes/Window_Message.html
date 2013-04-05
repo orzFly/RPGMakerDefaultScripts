@@ -1,0 +1,1520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Window_Message</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Window_Message 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Window_Selectable.html">Window_Selectable</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Window_Message_rb.html">Window_Message.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>文章表示に使うメッセージウィンドウです。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-continue-3F">continue?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-convert_special_characters">convert_special_characters</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_back_sprite">create_back_sprite</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_gold_window">create_gold_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_number_input_window">create_number_input_window</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dispose">dispose</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_back_sprite">dispose_back_sprite</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_gold_window">dispose_gold_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_number_input_window">dispose_number_input_window</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-finish_message">finish_message</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-input_choice">input_choice</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-input_number">input_number</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-input_pause">input_pause</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-new_line">new_line</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-new_page">new_page</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-reset_window">reset_window</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-start_choice">start_choice</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start_message">start_message</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start_number_input">start_number_input</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-terminate_message">terminate_message</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_back_sprite">update_back_sprite</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_cursor">update_cursor</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_gold_window">update_gold_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_message">update_message</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_number_input_window">update_number_input_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_show_fast">update_show_fast</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">MAX_LINE</td>
+            <td>=</td>
+            <td class="attr-value">4</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>定数</p></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Window_Message.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>オブジェクト初期化</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-keyword">super</span>(<span class="ruby-number">0</span>, <span class="ruby-number">288</span>, <span class="ruby-number">544</span>, <span class="ruby-number">128</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">z</span> = <span class="ruby-number">200</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">index</span> = <span class="ruby-number">-1</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">openness</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@opening</span> = <span class="ruby-keyword">false</span>            <span class="ruby-comment"># ウィンドウのオープン中フラグ</span>
+  <span class="ruby-ivar">@closing</span> = <span class="ruby-keyword">false</span>            <span class="ruby-comment"># ウィンドウのクローズ中フラグ</span>
+  <span class="ruby-ivar">@text</span> = <span class="ruby-keyword">nil</span>                 <span class="ruby-comment"># 表示すべき残りの文章</span>
+  <span class="ruby-ivar">@contents_x</span> = <span class="ruby-number">0</span>             <span class="ruby-comment"># 次の文字を描画する X 座標</span>
+  <span class="ruby-ivar">@contents_y</span> = <span class="ruby-number">0</span>             <span class="ruby-comment"># 次の文字を描画する Y 座標</span>
+  <span class="ruby-ivar">@line_count</span> = <span class="ruby-number">0</span>             <span class="ruby-comment"># 現在までに描画した行数</span>
+  <span class="ruby-ivar">@wait_count</span> = <span class="ruby-number">0</span>             <span class="ruby-comment"># ウェイトカウント</span>
+  <span class="ruby-ivar">@background</span> = <span class="ruby-number">0</span>             <span class="ruby-comment"># 背景タイプ</span>
+  <span class="ruby-ivar">@position</span> = <span class="ruby-number">2</span>               <span class="ruby-comment"># 表示位置</span>
+  <span class="ruby-ivar">@show_fast</span> = <span class="ruby-keyword">false</span>          <span class="ruby-comment"># 早送りフラグ</span>
+  <span class="ruby-ivar">@line_show_fast</span> = <span class="ruby-keyword">false</span>     <span class="ruby-comment"># 行単位早送りフラグ</span>
+  <span class="ruby-ivar">@pause_skip</span> = <span class="ruby-keyword">false</span>         <span class="ruby-comment"># 入力待ち省略フラグ</span>
+  <span class="ruby-identifier">create_gold_window</span>
+  <span class="ruby-identifier">create_number_input_window</span>
+  <span class="ruby-identifier">create_back_sprite</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-continue-3F">
+            
+              <b>continue?</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-continue-3F" name="method-i-continue-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>次のメッセージを続けて表示するべきか判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-continue-3F_source')" id="l_method-i-continue-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-continue-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 169</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">continue?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">num_input_variable_id</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">texts</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">openness</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">in_battle</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@background</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">background</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@position</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">position</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-convert_special_characters">
+            
+              <b>convert_special_characters</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-convert_special_characters" name="method-i-convert_special_characters" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>特殊文字の変換</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-convert_special_characters_source')" id="l_method-i-convert_special_characters_source">show</a>
+                
+              </p>
+              <div id="method-i-convert_special_characters_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 232</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">convert_special_characters</span>
+  <span class="ruby-ivar">@text</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp">/\V\[([0-9]+)\]/</span>) { <span class="ruby-identifier">$game_variables</span>[<span class="ruby-node">$1</span>.<span class="ruby-identifier">to_i</span>] }
+  <span class="ruby-ivar">@text</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp">/\V\[([0-9]+)\]/</span>) { <span class="ruby-identifier">$game_variables</span>[<span class="ruby-node">$1</span>.<span class="ruby-identifier">to_i</span>] }
+  <span class="ruby-ivar">@text</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp">/\N\[([0-9]+)\]/</span>) { <span class="ruby-identifier">$game_actors</span>[<span class="ruby-node">$1</span>.<span class="ruby-identifier">to_i</span>].<span class="ruby-identifier">name</span> }
+  <span class="ruby-ivar">@text</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp">/\C\[([0-9]+)\]/</span>) { <span class="ruby-node">&quot;\x01[#{$1}]&quot;</span> }
+  <span class="ruby-ivar">@text</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp">/\G/</span>)              { <span class="ruby-string">&quot;\x02&quot;</span> }
+  <span class="ruby-ivar">@text</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp">/\\./</span>)             { <span class="ruby-string">&quot;\x03&quot;</span> }
+  <span class="ruby-ivar">@text</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp">/\\|/</span>)             { <span class="ruby-string">&quot;\x04&quot;</span> }
+  <span class="ruby-ivar">@text</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp">/\!/</span>)              { <span class="ruby-string">&quot;\x05&quot;</span> }
+  <span class="ruby-ivar">@text</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp">/\&gt;/</span>)              { <span class="ruby-string">&quot;\x06&quot;</span> }
+  <span class="ruby-ivar">@text</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp">/\&lt;/</span>)              { <span class="ruby-string">&quot;\x07&quot;</span> }
+  <span class="ruby-ivar">@text</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp">/\\^/</span>)             { <span class="ruby-string">&quot;\x08&quot;</span> }
+  <span class="ruby-ivar">@text</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp">/\\/</span>)             { <span class="ruby-string">&quot;\\&quot;</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_back_sprite">
+            
+              <b>create_back_sprite</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-create_back_sprite" name="method-i-create_back_sprite" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>背景スプライトの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_back_sprite_source')" id="l_method-i-create_back_sprite_source">show</a>
+                
+              </p>
+              <div id="method-i-create_back_sprite_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_back_sprite</span>
+  <span class="ruby-ivar">@back_sprite</span> = <span class="ruby-constant">Sprite</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@back_sprite</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-constant">Cache</span>.<span class="ruby-identifier">system</span>(<span class="ruby-string">&quot;MessageBack&quot;</span>)
+  <span class="ruby-ivar">@back_sprite</span>.<span class="ruby-identifier">visible</span> = (<span class="ruby-ivar">@background</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>)
+  <span class="ruby-ivar">@back_sprite</span>.<span class="ruby-identifier">z</span> = <span class="ruby-number">190</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_gold_window">
+            
+              <b>create_gold_window</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-create_gold_window" name="method-i-create_gold_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>所持金ウィンドウの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_gold_window_source')" id="l_method-i-create_gold_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_gold_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_gold_window</span>
+  <span class="ruby-ivar">@gold_window</span> = <span class="ruby-constant">Window_Gold</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">384</span>, <span class="ruby-number">0</span>)
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">openness</span> = <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_number_input_window">
+            
+              <b>create_number_input_window</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-create_number_input_window" name="method-i-create_number_input_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>数値入力ウィンドウの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_number_input_window_source')" id="l_method-i-create_number_input_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_number_input_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_number_input_window</span>
+  <span class="ruby-ivar">@number_input_window</span> = <span class="ruby-constant">Window_NumberInput</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@number_input_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose">
+            
+              <b>dispose</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-dispose" name="method-i-dispose" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>解放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_source')" id="l_method-i-dispose_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">dispose_gold_window</span>
+  <span class="ruby-identifier">dispose_number_input_window</span>
+  <span class="ruby-identifier">dispose_back_sprite</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_back_sprite">
+            
+              <b>dispose_back_sprite</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-dispose_back_sprite" name="method-i-dispose_back_sprite" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>背景スプライトの解放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_back_sprite_source')" id="l_method-i-dispose_back_sprite_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_back_sprite_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_back_sprite</span>
+  <span class="ruby-ivar">@back_sprite</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_gold_window">
+            
+              <b>dispose_gold_window</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-dispose_gold_window" name="method-i-dispose_gold_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>所持金ウィンドウの解放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_gold_window_source')" id="l_method-i-dispose_gold_window_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_gold_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_gold_window</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_number_input_window">
+            
+              <b>dispose_number_input_window</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-dispose_number_input_window" name="method-i-dispose_number_input_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>数値入力ウィンドウの解放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_number_input_window_source')" id="l_method-i-dispose_number_input_window_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_number_input_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 115</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_number_input_window</span>
+  <span class="ruby-ivar">@number_input_window</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-finish_message">
+            
+              <b>finish_message</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-finish_message" name="method-i-finish_message" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>メッセージの更新終了</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-finish_message_source')" id="l_method-i-finish_message_source">show</a>
+                
+              </p>
+              <div id="method-i-finish_message_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 337</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">finish_message</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">choice_max</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">start_choice</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">num_input_variable_id</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">start_number_input</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@pause_skip</span>
+    <span class="ruby-identifier">terminate_message</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">pause</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@wait_count</span> = <span class="ruby-number">10</span>
+  <span class="ruby-ivar">@text</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-input_choice">
+            
+              <b>input_choice</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-input_choice" name="method-i-input_choice" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>選択肢の入力処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-input_choice_source')" id="l_method-i-input_choice_source">show</a>
+                
+              </p>
+              <div id="method-i-input_choice_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 408</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">input_choice</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">choice_cancel_type</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+      <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_cancel</span>
+      <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">choice_proc</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">choice_cancel_type</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>)
+      <span class="ruby-identifier">terminate_message</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+    <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_decision</span>
+    <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">choice_proc</span>.<span class="ruby-identifier">call</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">index</span>)
+    <span class="ruby-identifier">terminate_message</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-input_number">
+            
+              <b>input_number</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-input_number" name="method-i-input_number" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>数値入力の処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-input_number_source')" id="l_method-i-input_number_source">show</a>
+                
+              </p>
+              <div id="method-i-input_number_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 425</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">input_number</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+    <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_decision</span>
+    <span class="ruby-identifier">$game_variables</span>[<span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">num_input_variable_id</span>] =
+      <span class="ruby-ivar">@number_input_window</span>.<span class="ruby-identifier">number</span>
+    <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">need_refresh</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-identifier">terminate_message</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-input_pause">
+            
+              <b>input_pause</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-input_pause" name="method-i-input_pause" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>文章送りの入力処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-input_pause_source')" id="l_method-i-input_pause_source">show</a>
+                
+              </p>
+              <div id="method-i-input_pause_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 394</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">input_pause</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>) <span class="ruby-keyword">or</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">pause</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@text</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-ivar">@text</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-identifier">new_page</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@line_count</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-constant">MAX_LINE</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">terminate_message</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-new_line">
+            
+              <b>new_line</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-new_line" name="method-i-new_line" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>改行処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-new_line_source')" id="l_method-i-new_line_source">show</a>
+                
+              </p>
+              <div id="method-i-new_line_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 218</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">new_line</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">face_name</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-ivar">@contents_x</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@contents_x</span> = <span class="ruby-number">112</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@contents_y</span> <span class="ruby-operator">+=</span> <span class="ruby-constant">WLH</span>
+  <span class="ruby-ivar">@line_count</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+  <span class="ruby-ivar">@line_show_fast</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-new_page">
+            
+              <b>new_page</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-new_page" name="method-i-new_page" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>改ページ処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-new_page_source')" id="l_method-i-new_page_source">show</a>
+                
+              </p>
+              <div id="method-i-new_page_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">new_page</span>
+  <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">face_name</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-ivar">@contents_x</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">name</span> = <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">face_name</span>
+    <span class="ruby-identifier">index</span> = <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">face_index</span>
+    <span class="ruby-identifier">draw_face</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">index</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>)
+    <span class="ruby-ivar">@contents_x</span> = <span class="ruby-number">112</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@contents_y</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@line_count</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@show_fast</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@line_show_fast</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@pause_skip</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">font</span>.<span class="ruby-identifier">color</span> = <span class="ruby-identifier">text_color</span>(<span class="ruby-number">0</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-reset_window">
+            
+              <b>reset_window</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-reset_window" name="method-i-reset_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ウィンドウの背景と位置の設定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-reset_window_source')" id="l_method-i-reset_window_source">show</a>
+                
+              </p>
+              <div id="method-i-reset_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 250</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">reset_window</span>
+  <span class="ruby-ivar">@background</span> = <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">background</span>
+  <span class="ruby-ivar">@position</span> = <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">position</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@background</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>   <span class="ruby-comment"># 通常ウィンドウ</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">opacity</span> = <span class="ruby-number">255</span>
+  <span class="ruby-keyword">else</span>                  <span class="ruby-comment"># 背景を暗くする、透明にする</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">opacity</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-ivar">@position</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">0</span>  <span class="ruby-comment"># 上</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">y</span> = <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">y</span> = <span class="ruby-number">360</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>  <span class="ruby-comment"># 中</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">y</span> = <span class="ruby-number">144</span>
+    <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">y</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>  <span class="ruby-comment"># 下</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">y</span> = <span class="ruby-number">288</span>
+    <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">y</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start_choice">
+            
+              <b>start_choice</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-start_choice" name="method-i-start_choice" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>選択肢の開始</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_choice_source')" id="l_method-i-start_choice_source">show</a>
+                
+              </p>
+              <div id="method-i-start_choice_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 354</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start_choice</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">index</span> = <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start_message">
+            
+              <b>start_message</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-start_message" name="method-i-start_message" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>メッセージの開始</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_message_source')" id="l_method-i-start_message_source">show</a>
+                
+              </p>
+              <div id="method-i-start_message_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 182</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start_message</span>
+  <span class="ruby-ivar">@text</span> = <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">texts</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-ivar">@text</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;　　&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">choice_start</span>
+    <span class="ruby-ivar">@text</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">texts</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">clone</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\x00&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@item_max</span> = <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">choice_max</span>
+  <span class="ruby-identifier">convert_special_characters</span>
+  <span class="ruby-identifier">reset_window</span>
+  <span class="ruby-identifier">new_page</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start_number_input">
+            
+              <b>start_number_input</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-start_number_input" name="method-i-start_number_input" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>数値入力の開始</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_number_input_source')" id="l_method-i-start_number_input_source">show</a>
+                
+              </p>
+              <div id="method-i-start_number_input_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 362</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start_number_input</span>
+  <span class="ruby-identifier">digits_max</span> = <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">num_input_digits_max</span>
+  <span class="ruby-identifier">number</span> = <span class="ruby-identifier">$game_variables</span>[<span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">num_input_variable_id</span>]
+  <span class="ruby-ivar">@number_input_window</span>.<span class="ruby-identifier">digits_max</span> = <span class="ruby-identifier">digits_max</span>
+  <span class="ruby-ivar">@number_input_window</span>.<span class="ruby-identifier">number</span> = <span class="ruby-identifier">number</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">face_name</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-ivar">@number_input_window</span>.<span class="ruby-identifier">x</span> = <span class="ruby-identifier">x</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@number_input_window</span>.<span class="ruby-identifier">x</span> = <span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-number">112</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@number_input_window</span>.<span class="ruby-identifier">y</span> = <span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@contents_y</span>
+  <span class="ruby-ivar">@number_input_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-ivar">@number_input_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-ivar">@number_input_window</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-terminate_message">
+            
+              <b>terminate_message</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-terminate_message" name="method-i-terminate_message" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>メッセージの終了</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-terminate_message_source')" id="l_method-i-terminate_message_source">show</a>
+                
+              </p>
+              <div id="method-i-terminate_message_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 274</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">terminate_message</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">pause</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">index</span> = <span class="ruby-number">-1</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">close</span>
+  <span class="ruby-ivar">@number_input_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@number_input_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">main_proc</span>.<span class="ruby-identifier">call</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">main_proc</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">clear</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>フレーム更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">update_gold_window</span>
+  <span class="ruby-identifier">update_number_input_window</span>
+  <span class="ruby-identifier">update_back_sprite</span>
+  <span class="ruby-identifier">update_show_fast</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@opening</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@closing</span>             <span class="ruby-comment"># ウィンドウの開閉中以外</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@wait_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>                    <span class="ruby-comment"># 文章内ウェイト中</span>
+      <span class="ruby-ivar">@wait_count</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">pause</span>                      <span class="ruby-comment"># 文章送り待機中</span>
+      <span class="ruby-identifier">input_pause</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">active</span>                     <span class="ruby-comment"># 選択肢入力中</span>
+      <span class="ruby-identifier">input_choice</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@number_input_window</span>.<span class="ruby-identifier">visible</span>    <span class="ruby-comment"># 数値入力中</span>
+      <span class="ruby-identifier">input_number</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@text</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>                    <span class="ruby-comment"># 残りの文章が存在</span>
+      <span class="ruby-identifier">update_message</span>                        <span class="ruby-comment"># メッセージの更新</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">continue?</span>                       <span class="ruby-comment"># 続ける場合</span>
+      <span class="ruby-identifier">start_message</span>                         <span class="ruby-comment"># メッセージの開始</span>
+      <span class="ruby-identifier">open</span>                                  <span class="ruby-comment"># ウィンドウを開く</span>
+      <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">else</span>                                  <span class="ruby-comment"># 続けない場合</span>
+      <span class="ruby-identifier">close</span>                                 <span class="ruby-comment"># ウィンドウを閉じる</span>
+      <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-ivar">@closing</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_back_sprite">
+            
+              <b>update_back_sprite</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-update_back_sprite" name="method-i-update_back_sprite" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>背景スプライトの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_back_sprite_source')" id="l_method-i-update_back_sprite_source">show</a>
+                
+              </p>
+              <div id="method-i-update_back_sprite_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 143</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_back_sprite</span>
+  <span class="ruby-ivar">@back_sprite</span>.<span class="ruby-identifier">visible</span> = (<span class="ruby-ivar">@background</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>)
+  <span class="ruby-ivar">@back_sprite</span>.<span class="ruby-identifier">y</span> = <span class="ruby-identifier">y</span> <span class="ruby-operator">-</span> <span class="ruby-number">16</span>
+  <span class="ruby-ivar">@back_sprite</span>.<span class="ruby-identifier">opacity</span> = <span class="ruby-identifier">openness</span>
+  <span class="ruby-ivar">@back_sprite</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_cursor">
+            
+              <b>update_cursor</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-update_cursor" name="method-i-update_cursor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>カーソルの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_cursor_source')" id="l_method-i-update_cursor_source">show</a>
+                
+              </p>
+              <div id="method-i-update_cursor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 381</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_cursor</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">x</span> = <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">face_name</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">?</span> <span class="ruby-number">0</span> <span class="ruby-operator">:</span> <span class="ruby-number">112</span>
+    <span class="ruby-identifier">y</span> = (<span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">choice_start</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@index</span>) * <span class="ruby-constant">WLH</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">cursor_rect</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">x</span>, <span class="ruby-constant">WLH</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">cursor_rect</span>.<span class="ruby-identifier">empty</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_gold_window">
+            
+              <b>update_gold_window</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-update_gold_window" name="method-i-update_gold_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>所持金ウィンドウの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_gold_window_source')" id="l_method-i-update_gold_window_source">show</a>
+                
+              </p>
+              <div id="method-i-update_gold_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_gold_window</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_message">
+            
+              <b>update_message</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-update_message" name="method-i-update_message" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>メッセージの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_message_source')" id="l_method-i-update_message_source">show</a>
+                
+              </p>
+              <div id="method-i-update_message_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 288</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_message</span>
+  <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">c</span> = <span class="ruby-ivar">@text</span>.<span class="ruby-identifier">slice!</span>(<span class="ruby-regexp">/./</span>)            <span class="ruby-comment"># 次の文字を取得</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">c</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-keyword">nil</span>                          <span class="ruby-comment"># 描画すべき文字がない</span>
+      <span class="ruby-identifier">finish_message</span>                  <span class="ruby-comment"># 更新終了</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;\x00&quot;</span>                       <span class="ruby-comment"># 改行</span>
+      <span class="ruby-identifier">new_line</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@line_count</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-constant">MAX_LINE</span>      <span class="ruby-comment"># 行数が最大のとき</span>
+        <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@text</span>.<span class="ruby-identifier">empty?</span>           <span class="ruby-comment"># さらに続きがあるなら</span>
+          <span class="ruby-keyword">self</span>.<span class="ruby-identifier">pause</span> = <span class="ruby-keyword">true</span>           <span class="ruby-comment"># 入力待ちを入れる</span>
+          <span class="ruby-keyword">break</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;\x01&quot;</span>                       <span class="ruby-comment"># \C[n]  (文字色変更)</span>
+      <span class="ruby-ivar">@text</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp">/\[([0-9]+)\]/</span>, <span class="ruby-string">&quot;&quot;</span>)
+      <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">font</span>.<span class="ruby-identifier">color</span> = <span class="ruby-identifier">text_color</span>(<span class="ruby-node">$1</span>.<span class="ruby-identifier">to_i</span>)
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;\x02&quot;</span>                       <span class="ruby-comment"># \G  (所持金表示)</span>
+      <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">refresh</span>
+      <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">open</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;\x03&quot;</span>                       <span class="ruby-comment"># \.  (ウェイト 1/4 秒)</span>
+      <span class="ruby-ivar">@wait_count</span> = <span class="ruby-number">15</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;\x04&quot;</span>                       <span class="ruby-comment"># \|  (ウェイト 1 秒)</span>
+      <span class="ruby-ivar">@wait_count</span> = <span class="ruby-number">60</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;\x05&quot;</span>                       <span class="ruby-comment"># \!  (入力待ち)</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">pause</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;\x06&quot;</span>                       <span class="ruby-comment"># \&gt;  (瞬間表示 ON)</span>
+      <span class="ruby-ivar">@line_show_fast</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;\x07&quot;</span>                       <span class="ruby-comment"># \&lt;  (瞬間表示 OFF)</span>
+      <span class="ruby-ivar">@line_show_fast</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;\x08&quot;</span>                       <span class="ruby-comment"># \^  (入力待ちなし)</span>
+      <span class="ruby-ivar">@pause_skip</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">else</span>                              <span class="ruby-comment"># 普通の文字</span>
+      <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">draw_text</span>(<span class="ruby-ivar">@contents_x</span>, <span class="ruby-ivar">@contents_y</span>, <span class="ruby-number">40</span>, <span class="ruby-constant">WLH</span>, <span class="ruby-identifier">c</span>)
+      <span class="ruby-identifier">c_width</span> = <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">text_size</span>(<span class="ruby-identifier">c</span>).<span class="ruby-identifier">width</span>
+      <span class="ruby-ivar">@contents_x</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">c_width</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">break</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@show_fast</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@line_show_fast</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_number_input_window">
+            
+              <b>update_number_input_window</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-update_number_input_window" name="method-i-update_number_input_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>数値入力ウィンドウの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_number_input_window_source')" id="l_method-i-update_number_input_window_source">show</a>
+                
+              </p>
+              <div id="method-i-update_number_input_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 136</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_number_input_window</span>
+  <span class="ruby-ivar">@number_input_window</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_show_fast">
+            
+              <b>update_show_fast</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-update_show_fast" name="method-i-update_show_fast" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>早送りフラグの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_show_fast_source')" id="l_method-i-update_show_fast_source">show</a>
+                
+              </p>
+              <div id="method-i-update_show_fast_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 153</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_show_fast</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">pause</span> <span class="ruby-keyword">or</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">openness</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">255</span>
+    <span class="ruby-ivar">@show_fast</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>) <span class="ruby-keyword">and</span> <span class="ruby-ivar">@wait_count</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">2</span>
+    <span class="ruby-ivar">@show_fast</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-keyword">not</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">press?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+    <span class="ruby-ivar">@show_fast</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@show_fast</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@wait_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@wait_count</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

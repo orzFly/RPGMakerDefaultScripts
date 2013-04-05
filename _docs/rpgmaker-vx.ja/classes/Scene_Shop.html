@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_Shop</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_Shop 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Scene_Base.html">Scene_Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_Shop_rb.html">Scene_Shop.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>ショップ画面の処理を行うクラスです。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-cancel_number_input">cancel_number_input</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_command_window">create_command_window</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-decide_number_input">decide_number_input</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_command_window">dispose_command_window</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-start">start</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-terminate">terminate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_buy_selection">update_buy_selection</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_command_selection">update_command_selection</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_number_input">update_number_input</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_sell_selection">update_sell_selection</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-cancel_number_input">
+            
+              <b>cancel_number_input</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-cancel_number_input" name="method-i-cancel_number_input" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>個数入力のキャンセル</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cancel_number_input_source')" id="l_method-i-cancel_number_input_source">show</a>
+                
+              </p>
+              <div id="method-i-cancel_number_input_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 207</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cancel_number_input</span>
+  <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_cancel</span>
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">index</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">0</span>  <span class="ruby-comment"># 購入する</span>
+    <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>  <span class="ruby-comment"># 売却する</span>
+    <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_command_window">
+            
+              <b>create_command_window</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-create_command_window" name="method-i-create_command_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>コマンドウィンドウの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_command_window_source')" id="l_method-i-create_command_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_command_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_command_window</span>
+  <span class="ruby-identifier">s1</span> = <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">ShopBuy</span>
+  <span class="ruby-identifier">s2</span> = <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">ShopSell</span>
+  <span class="ruby-identifier">s3</span> = <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">ShopCancel</span>
+  <span class="ruby-ivar">@command_window</span> = <span class="ruby-constant">Window_Command</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">384</span>, [<span class="ruby-identifier">s1</span>, <span class="ruby-identifier">s2</span>, <span class="ruby-identifier">s3</span>], <span class="ruby-number">3</span>)
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">y</span> = <span class="ruby-number">56</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">shop_purchase_only</span>
+    <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">draw_item</span>(<span class="ruby-number">1</span>, <span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-decide_number_input">
+            
+              <b>decide_number_input</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-decide_number_input" name="method-i-decide_number_input" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>個数入力の決定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-decide_number_input_source')" id="l_method-i-decide_number_input_source">show</a>
+                
+              </p>
+              <div id="method-i-decide_number_input_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 225</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">decide_number_input</span>
+  <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_shop</span>
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">index</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">0</span>  <span class="ruby-comment"># 購入する</span>
+    <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">lose_gold</span>(<span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">number</span> * <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">price</span>)
+    <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">gain_item</span>(<span class="ruby-ivar">@item</span>, <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">number</span>)
+    <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">refresh</span>
+    <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">refresh</span>
+    <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">refresh</span>
+    <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>  <span class="ruby-comment"># 売却する</span>
+    <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">gain_gold</span>(<span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">number</span> * (<span class="ruby-ivar">@item</span>.<span class="ruby-identifier">price</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>))
+    <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">lose_item</span>(<span class="ruby-ivar">@item</span>, <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">number</span>)
+    <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">refresh</span>
+    <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">refresh</span>
+    <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">refresh</span>
+    <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_command_window">
+            
+              <b>dispose_command_window</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-dispose_command_window" name="method-i-dispose_command_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>コマンドウィンドウの解放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_command_window_source')" id="l_method-i-dispose_command_window_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_command_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_command_window</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start">
+            
+              <b>start</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-start" name="method-i-start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>開始処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_source')" id="l_method-i-start_source">show</a>
+                
+              </p>
+              <div id="method-i-start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">create_menu_background</span>
+  <span class="ruby-identifier">create_command_window</span>
+  <span class="ruby-ivar">@help_window</span> = <span class="ruby-constant">Window_Help</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@gold_window</span> = <span class="ruby-constant">Window_Gold</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">384</span>, <span class="ruby-number">56</span>)
+  <span class="ruby-ivar">@dummy_window</span> = <span class="ruby-constant">Window_Base</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">112</span>, <span class="ruby-number">544</span>, <span class="ruby-number">304</span>)
+  <span class="ruby-ivar">@buy_window</span> = <span class="ruby-constant">Window_ShopBuy</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">112</span>)
+  <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">help_window</span> = <span class="ruby-ivar">@help_window</span>
+  <span class="ruby-ivar">@sell_window</span> = <span class="ruby-constant">Window_ShopSell</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">112</span>, <span class="ruby-number">544</span>, <span class="ruby-number">304</span>)
+  <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">help_window</span> = <span class="ruby-ivar">@help_window</span>
+  <span class="ruby-ivar">@number_window</span> = <span class="ruby-constant">Window_ShopNumber</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">112</span>)
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@status_window</span> = <span class="ruby-constant">Window_ShopStatus</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">304</span>, <span class="ruby-number">112</span>)
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-terminate">
+            
+              <b>terminate</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-terminate" name="method-i-terminate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>終了処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-terminate_source')" id="l_method-i-terminate_source">show</a>
+                
+              </p>
+              <div id="method-i-terminate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">terminate</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">dispose_menu_background</span>
+  <span class="ruby-identifier">dispose_command_window</span>
+  <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@dummy_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>フレーム更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">update_menu_background</span>
+  <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@dummy_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">active</span>
+    <span class="ruby-identifier">update_command_selection</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">active</span>
+    <span class="ruby-identifier">update_buy_selection</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">active</span>
+    <span class="ruby-identifier">update_sell_selection</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">active</span>
+    <span class="ruby-identifier">update_number_input</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_buy_selection">
+            
+              <b>update_buy_selection</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-update_buy_selection" name="method-i-update_buy_selection" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>購入アイテム選択の更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_buy_selection_source')" id="l_method-i-update_buy_selection_source">show</a>
+                
+              </p>
+              <div id="method-i-update_buy_selection_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 132</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_buy_selection</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">item</span> = <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">item</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>)
+    <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_cancel</span>
+    <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@dummy_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">item</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">set_text</span>(<span class="ruby-string">&quot;&quot;</span>)
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+    <span class="ruby-ivar">@item</span> = <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">item</span>
+    <span class="ruby-identifier">number</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">item_number</span>(<span class="ruby-ivar">@item</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@item</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">price</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">gold</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">number</span> <span class="ruby-operator">==</span> <span class="ruby-number">99</span>
+      <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_buzzer</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_decision</span>
+      <span class="ruby-identifier">max</span> = <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">price</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-number">99</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">gold</span> <span class="ruby-operator">/</span> <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">price</span>
+      <span class="ruby-identifier">max</span> = [<span class="ruby-identifier">max</span>, <span class="ruby-number">99</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">number</span>].<span class="ruby-identifier">min</span>
+      <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">set</span>(<span class="ruby-ivar">@item</span>, <span class="ruby-identifier">max</span>, <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">price</span>)
+      <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_command_selection">
+            
+              <b>update_command_selection</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-update_command_selection" name="method-i-update_command_selection" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>コマンド選択の更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_command_selection_source')" id="l_method-i-update_command_selection_source">show</a>
+                
+              </p>
+              <div id="method-i-update_command_selection_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_command_selection</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>)
+    <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_cancel</span>
+    <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Map</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+    <span class="ruby-keyword">case</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">index</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">0</span>  <span class="ruby-comment"># 購入する</span>
+      <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_decision</span>
+      <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-ivar">@dummy_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">refresh</span>
+      <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>  <span class="ruby-comment"># 売却する</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">shop_purchase_only</span>
+        <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_buzzer</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_decision</span>
+        <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+        <span class="ruby-ivar">@dummy_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+        <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+        <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+        <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">refresh</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>  <span class="ruby-comment"># やめる</span>
+      <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_decision</span>
+      <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Map</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_number_input">
+            
+              <b>update_number_input</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-update_number_input" name="method-i-update_number_input" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>個数入力の更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_number_input_source')" id="l_method-i-update_number_input_source">show</a>
+                
+              </p>
+              <div id="method-i-update_number_input_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 196</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_number_input</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>)
+    <span class="ruby-identifier">cancel_number_input</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+    <span class="ruby-identifier">decide_number_input</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_sell_selection">
+            
+              <b>update_sell_selection</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-update_sell_selection" name="method-i-update_sell_selection" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>売却アイテム選択の更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_sell_selection_source')" id="l_method-i-update_sell_selection_source">show</a>
+                
+              </p>
+              <div id="method-i-update_sell_selection_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 166</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_sell_selection</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>)
+    <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_cancel</span>
+    <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@dummy_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">item</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">set_text</span>(<span class="ruby-string">&quot;&quot;</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+    <span class="ruby-ivar">@item</span> = <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">item</span>
+    <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">item</span> = <span class="ruby-ivar">@item</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@item</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">price</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+      <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_buzzer</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_decision</span>
+      <span class="ruby-identifier">max</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">item_number</span>(<span class="ruby-ivar">@item</span>)
+      <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">set</span>(<span class="ruby-ivar">@item</span>, <span class="ruby-identifier">max</span>, <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">price</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>)
+      <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

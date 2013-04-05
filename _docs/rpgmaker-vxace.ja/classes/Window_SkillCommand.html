@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Window_SkillCommand</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Window_SkillCommand 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Window_Command.html">Window_Command</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Window_SkillCommand_rb.html">Window_SkillCommand.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>スキル画面で、コマンド（特技や魔法など）を選択するウィンドウです。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-actor-3D">actor=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-make_command_list">make_command_list</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-select_last">select_last</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-skill_window-3D">skill_window=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-visible_line_number">visible_line_number</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-window_width">window_width</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>skill_window</td>
+            <td class='attr-desc'><p>公開インスタンス変数</p></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(x, y)
+            
+            <a href="../classes/Window_SkillCommand.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>オブジェクト初期化</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_SkillCommand.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-ivar">@actor</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-actor-3D">
+            
+              <b>actor=</b>(actor)
+            
+            <a href="../classes/Window_SkillCommand.html#method-i-actor-3D" name="method-i-actor-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>アクターの設定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-actor-3D_source')" id="l_method-i-actor-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-actor-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_SkillCommand.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">actor=</span>(<span class="ruby-identifier">actor</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@actor</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">actor</span>
+  <span class="ruby-ivar">@actor</span> = <span class="ruby-identifier">actor</span>
+  <span class="ruby-identifier">refresh</span>
+  <span class="ruby-identifier">select_last</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-make_command_list">
+            
+              <b>make_command_list</b>()
+            
+            <a href="../classes/Window_SkillCommand.html#method-i-make_command_list" name="method-i-make_command_list" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>コマンドリストの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-make_command_list_source')" id="l_method-i-make_command_list_source">show</a>
+                
+              </p>
+              <div id="method-i-make_command_list_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_SkillCommand.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">make_command_list</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@actor</span>
+  <span class="ruby-ivar">@actor</span>.<span class="ruby-identifier">added_skill_types</span>.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">stype_id</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">name</span> = <span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">skill_types</span>[<span class="ruby-identifier">stype_id</span>]
+    <span class="ruby-identifier">add_command</span>(<span class="ruby-identifier">name</span>, <span class="ruby-value">:skill</span>, <span class="ruby-keyword">true</span>, <span class="ruby-identifier">stype_id</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-select_last">
+            
+              <b>select_last</b>()
+            
+            <a href="../classes/Window_SkillCommand.html#method-i-select_last" name="method-i-select_last" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>前回の選択位置を復帰</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-select_last_source')" id="l_method-i-select_last_source">show</a>
+                
+              </p>
+              <div id="method-i-select_last_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_SkillCommand.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">select_last</span>
+  <span class="ruby-identifier">skill</span> = <span class="ruby-ivar">@actor</span>.<span class="ruby-identifier">last_skill</span>.<span class="ruby-identifier">object</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">skill</span>
+    <span class="ruby-identifier">select_ext</span>(<span class="ruby-identifier">skill</span>.<span class="ruby-identifier">stype_id</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">select</span>(<span class="ruby-number">0</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-skill_window-3D">
+            
+              <b>skill_window=</b>(skill_window)
+            
+            <a href="../classes/Window_SkillCommand.html#method-i-skill_window-3D" name="method-i-skill_window-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スキルウィンドウの設定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-skill_window-3D_source')" id="l_method-i-skill_window-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-skill_window-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_SkillCommand.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">skill_window=</span>(<span class="ruby-identifier">skill_window</span>)
+  <span class="ruby-ivar">@skill_window</span> = <span class="ruby-identifier">skill_window</span>
+  <span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Window_SkillCommand.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>フレーム更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_SkillCommand.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-ivar">@skill_window</span>.<span class="ruby-identifier">stype_id</span> = <span class="ruby-identifier">current_ext</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@skill_window</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-visible_line_number">
+            
+              <b>visible_line_number</b>()
+            
+            <a href="../classes/Window_SkillCommand.html#method-i-visible_line_number" name="method-i-visible_line_number" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>表示行数の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-visible_line_number_source')" id="l_method-i-visible_line_number_source">show</a>
+                
+              </p>
+              <div id="method-i-visible_line_number_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_SkillCommand.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">visible_line_number</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">4</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-window_width">
+            
+              <b>window_width</b>()
+            
+            <a href="../classes/Window_SkillCommand.html#method-i-window_width" name="method-i-window_width" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ウィンドウ幅の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-window_width_source')" id="l_method-i-window_width_source">show</a>
+                
+              </p>
+              <div id="method-i-window_width_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_SkillCommand.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">window_width</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">160</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

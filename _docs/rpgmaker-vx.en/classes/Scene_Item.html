@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_Item</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_Item 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Scene_Base.html">Scene_Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_Item_rb.html">Scene_Item.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This class performs the item screen processing.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-determine_item">determine_item</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-determine_target">determine_target</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-hide_target_window">hide_target_window</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-return_scene">return_scene</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-show_target_window">show_target_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start">start</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-terminate">terminate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_item_selection">update_item_selection</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_target_selection">update_target_selection</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-use_item_nontarget">use_item_nontarget</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-determine_item">
+            
+              <b>determine_item</b>()
+            
+            <a href="../classes/Scene_Item.html#method-i-determine_item" name="method-i-determine_item" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Confirm Item</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-determine_item_source')" id="l_method-i-determine_item_source">show</a>
+                
+              </p>
+              <div id="method-i-determine_item_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Item.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">determine_item</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">for_friend?</span>
+    <span class="ruby-identifier">show_target_window</span>(<span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">index</span> <span class="ruby-operator">%</span> <span class="ruby-number">2</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">for_all?</span>
+      <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">index</span> = <span class="ruby-number">99</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">last_target_index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">item_max</span>
+        <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">index</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">last_target_index</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">index</span> = <span class="ruby-number">0</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">use_item_nontarget</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-determine_target">
+            
+              <b>determine_target</b>()
+            
+            <a href="../classes/Scene_Item.html#method-i-determine_target" name="method-i-determine_target" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Confirm Target</p>
+
+<p>If there is no effect (such as using a potion on an incapacitated
+character), play a buzzer SE.</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-determine_target_source')" id="l_method-i-determine_target_source">show</a>
+                
+              </p>
+              <div id="method-i-determine_target_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Item.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">determine_target</span>
+  <span class="ruby-identifier">used</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">for_all?</span>
+    <span class="ruby-keyword">for</span> <span class="ruby-identifier">target</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">members</span>
+      <span class="ruby-identifier">target</span>.<span class="ruby-identifier">item_effect</span>(<span class="ruby-identifier">target</span>, <span class="ruby-ivar">@item</span>)
+      <span class="ruby-identifier">used</span> = <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">target</span>.<span class="ruby-identifier">skipped</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">last_target_index</span> = <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">index</span>
+    <span class="ruby-identifier">target</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">members</span>[<span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">index</span>]
+    <span class="ruby-identifier">target</span>.<span class="ruby-identifier">item_effect</span>(<span class="ruby-identifier">target</span>, <span class="ruby-ivar">@item</span>)
+    <span class="ruby-identifier">used</span> = <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">target</span>.<span class="ruby-identifier">skipped</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">used</span>
+    <span class="ruby-identifier">use_item_nontarget</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_buzzer</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-hide_target_window">
+            
+              <b>hide_target_window</b>()
+            
+            <a href="../classes/Scene_Item.html#method-i-hide_target_window" name="method-i-hide_target_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Hide Target Window</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-hide_target_window_source')" id="l_method-i-hide_target_window_source">show</a>
+                
+              </p>
+              <div id="method-i-hide_target_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Item.rb, line 166</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">hide_target_window</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@viewport</span>.<span class="ruby-identifier">rect</span>.<span class="ruby-identifier">set</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">544</span>, <span class="ruby-number">416</span>)
+  <span class="ruby-ivar">@viewport</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-return_scene">
+            
+              <b>return_scene</b>()
+            
+            <a href="../classes/Scene_Item.html#method-i-return_scene" name="method-i-return_scene" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Return to Original Screen</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-return_scene_source')" id="l_method-i-return_scene_source">show</a>
+                
+              </p>
+              <div id="method-i-return_scene_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Item.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">return_scene</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Menu</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-show_target_window">
+            
+              <b>show_target_window</b>(right)
+            
+            <a href="../classes/Scene_Item.html#method-i-show_target_window" name="method-i-show_target_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Show Target Window</p>
+
+<p>right : Right justification flag (if false, left justification)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-show_target_window_source')" id="l_method-i-show_target_window_source">show</a>
+                
+              </p>
+              <div id="method-i-show_target_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Item.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">show_target_window</span>(<span class="ruby-identifier">right</span>)
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">width_remain</span> = <span class="ruby-number">544</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">width</span>
+  <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">x</span> = <span class="ruby-identifier">right</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">width_remain</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">right</span>
+    <span class="ruby-ivar">@viewport</span>.<span class="ruby-identifier">rect</span>.<span class="ruby-identifier">set</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-identifier">width_remain</span>, <span class="ruby-number">416</span>)
+    <span class="ruby-ivar">@viewport</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@viewport</span>.<span class="ruby-identifier">rect</span>.<span class="ruby-identifier">set</span>(<span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">width</span>, <span class="ruby-number">0</span>, <span class="ruby-identifier">width_remain</span>, <span class="ruby-number">416</span>)
+    <span class="ruby-ivar">@viewport</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">width</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start">
+            
+              <b>start</b>()
+            
+            <a href="../classes/Scene_Item.html#method-i-start" name="method-i-start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Start processing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_source')" id="l_method-i-start_source">show</a>
+                
+              </p>
+              <div id="method-i-start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Item.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">create_menu_background</span>
+  <span class="ruby-ivar">@viewport</span> = <span class="ruby-constant">Viewport</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">544</span>, <span class="ruby-number">416</span>)
+  <span class="ruby-ivar">@help_window</span> = <span class="ruby-constant">Window_Help</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">viewport</span> = <span class="ruby-ivar">@viewport</span>
+  <span class="ruby-ivar">@item_window</span> = <span class="ruby-constant">Window_Item</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">56</span>, <span class="ruby-number">544</span>, <span class="ruby-number">360</span>)
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">viewport</span> = <span class="ruby-ivar">@viewport</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">help_window</span> = <span class="ruby-ivar">@help_window</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@target_window</span> = <span class="ruby-constant">Window_MenuStatus</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>)
+  <span class="ruby-identifier">hide_target_window</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-terminate">
+            
+              <b>terminate</b>()
+            
+            <a href="../classes/Scene_Item.html#method-i-terminate" name="method-i-terminate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Termination Processing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-terminate_source')" id="l_method-i-terminate_source">show</a>
+                
+              </p>
+              <div id="method-i-terminate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Item.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">terminate</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">dispose_menu_background</span>
+  <span class="ruby-ivar">@viewport</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Scene_Item.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Frame</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Item.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">update_menu_background</span>
+  <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">active</span>
+    <span class="ruby-identifier">update_item_selection</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">active</span>
+    <span class="ruby-identifier">update_target_selection</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_item_selection">
+            
+              <b>update_item_selection</b>()
+            
+            <a href="../classes/Scene_Item.html#method-i-update_item_selection" name="method-i-update_item_selection" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Item Selection</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_item_selection_source')" id="l_method-i-update_item_selection_source">show</a>
+                
+              </p>
+              <div id="method-i-update_item_selection_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Item.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_item_selection</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>)
+    <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_cancel</span>
+    <span class="ruby-identifier">return_scene</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+    <span class="ruby-ivar">@item</span> = <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">item</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@item</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+      <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">last_item_id</span> = <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">id</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">item_can_use?</span>(<span class="ruby-ivar">@item</span>)
+      <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_decision</span>
+      <span class="ruby-identifier">determine_item</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_buzzer</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_target_selection">
+            
+              <b>update_target_selection</b>()
+            
+            <a href="../classes/Scene_Item.html#method-i-update_target_selection" name="method-i-update_target_selection" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Target Selection</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_target_selection_source')" id="l_method-i-update_target_selection_source">show</a>
+                
+              </p>
+              <div id="method-i-update_target_selection_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Item.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_target_selection</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>)
+    <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_cancel</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">item_number</span>(<span class="ruby-ivar">@item</span>) <span class="ruby-operator">==</span> <span class="ruby-number">0</span>    <span class="ruby-comment"># If item is used up</span>
+      <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">refresh</span>                    <span class="ruby-comment"># Recreate the window contents</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">hide_target_window</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">item_can_use?</span>(<span class="ruby-ivar">@item</span>)
+      <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_buzzer</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">determine_target</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-use_item_nontarget">
+            
+              <b>use_item_nontarget</b>()
+            
+            <a href="../classes/Scene_Item.html#method-i-use_item_nontarget" name="method-i-use_item_nontarget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Use Item (apply effects to non-ally targets)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-use_item_nontarget_source')" id="l_method-i-use_item_nontarget_source">show</a>
+                
+              </p>
+              <div id="method-i-use_item_nontarget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Item.rb, line 177</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">use_item_nontarget</span>
+  <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_use_item</span>
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">consume_item</span>(<span class="ruby-ivar">@item</span>)
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">draw_item</span>(<span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">index</span>)
+  <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">refresh</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">all_dead?</span>
+    <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Gameover</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">common_event_id</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">common_event_id</span> = <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">common_event_id</span>
+    <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Map</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

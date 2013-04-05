@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_Base</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_Base 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_Base_rb.html">Scene_Base.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>ゲーム中のすべてのシーンのスーパークラスです。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-create_menu_background">create_menu_background</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dispose_menu_background">dispose_menu_background</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-main">main</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-perform_transition">perform_transition</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-post_start">post_start</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-pre_terminate">pre_terminate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-snapshot_for_background">snapshot_for_background</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start">start</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-terminate">terminate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_menu_background">update_menu_background</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-create_menu_background">
+            
+              <b>create_menu_background</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-create_menu_background" name="method-i-create_menu_background" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>メニュー画面系の背景作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_menu_background_source')" id="l_method-i-create_menu_background_source">show</a>
+                
+              </p>
+              <div id="method-i-create_menu_background_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_menu_background</span>
+  <span class="ruby-ivar">@menuback_sprite</span> = <span class="ruby-constant">Sprite</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@menuback_sprite</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">background_bitmap</span>
+  <span class="ruby-ivar">@menuback_sprite</span>.<span class="ruby-identifier">color</span>.<span class="ruby-identifier">set</span>(<span class="ruby-number">16</span>, <span class="ruby-number">16</span>, <span class="ruby-number">16</span>, <span class="ruby-number">128</span>)
+  <span class="ruby-identifier">update_menu_background</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_menu_background">
+            
+              <b>dispose_menu_background</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-dispose_menu_background" name="method-i-dispose_menu_background" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>メニュー画面系の背景解放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_menu_background_source')" id="l_method-i-dispose_menu_background_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_menu_background_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_menu_background</span>
+  <span class="ruby-ivar">@menuback_sprite</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-main">
+            
+              <b>main</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-main" name="method-i-main" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>メイン処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-main_source')" id="l_method-i-main_source">show</a>
+                
+              </p>
+              <div id="method-i-main_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">main</span>
+  <span class="ruby-identifier">start</span>                         <span class="ruby-comment"># 開始処理</span>
+  <span class="ruby-identifier">perform_transition</span>            <span class="ruby-comment"># トランジション実行</span>
+  <span class="ruby-identifier">post_start</span>                    <span class="ruby-comment"># 開始後処理</span>
+  <span class="ruby-constant">Input</span>.<span class="ruby-identifier">update</span>                  <span class="ruby-comment"># 入力情報を更新</span>
+  <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">update</span>             <span class="ruby-comment"># ゲーム画面を更新</span>
+    <span class="ruby-constant">Input</span>.<span class="ruby-identifier">update</span>                <span class="ruby-comment"># 入力情報を更新</span>
+    <span class="ruby-identifier">update</span>                      <span class="ruby-comment"># フレーム更新</span>
+    <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$scene</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">self</span>     <span class="ruby-comment"># 画面が切り替わったらループを中断</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-identifier">pre_terminate</span>                 <span class="ruby-comment"># 終了前処理</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">freeze</span>               <span class="ruby-comment"># トランジション準備</span>
+  <span class="ruby-identifier">terminate</span>                     <span class="ruby-comment"># 終了処理</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-perform_transition">
+            
+              <b>perform_transition</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-perform_transition" name="method-i-perform_transition" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>トランジション実行</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-perform_transition_source')" id="l_method-i-perform_transition_source">show</a>
+                
+              </p>
+              <div id="method-i-perform_transition_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">perform_transition</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">transition</span>(<span class="ruby-number">10</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-post_start">
+            
+              <b>post_start</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-post_start" name="method-i-post_start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>開始後処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-post_start_source')" id="l_method-i-post_start_source">show</a>
+                
+              </p>
+              <div id="method-i-post_start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">post_start</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pre_terminate">
+            
+              <b>pre_terminate</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-pre_terminate" name="method-i-pre_terminate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>終了前処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pre_terminate_source')" id="l_method-i-pre_terminate_source">show</a>
+                
+              </p>
+              <div id="method-i-pre_terminate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pre_terminate</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-snapshot_for_background">
+            
+              <b>snapshot_for_background</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-snapshot_for_background" name="method-i-snapshot_for_background" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>別画面の背景として使うためのスナップショット作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-snapshot_for_background_source')" id="l_method-i-snapshot_for_background_source">show</a>
+                
+              </p>
+              <div id="method-i-snapshot_for_background_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">snapshot_for_background</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">background_bitmap</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">background_bitmap</span> = <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">snap_to_bitmap</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">background_bitmap</span>.<span class="ruby-identifier">blur</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start">
+            
+              <b>start</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-start" name="method-i-start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>開始処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_source')" id="l_method-i-start_source">show</a>
+                
+              </p>
+              <div id="method-i-start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-terminate">
+            
+              <b>terminate</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-terminate" name="method-i-terminate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>終了処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-terminate_source')" id="l_method-i-terminate_source">show</a>
+                
+              </p>
+              <div id="method-i-terminate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">terminate</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>フレーム更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_menu_background">
+            
+              <b>update_menu_background</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-update_menu_background" name="method-i-update_menu_background" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>メニュー画面系の背景更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_menu_background_source')" id="l_method-i-update_menu_background_source">show</a>
+                
+              </p>
+              <div id="method-i-update_menu_background_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_menu_background</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

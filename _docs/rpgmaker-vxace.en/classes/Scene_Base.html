@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_Base</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_Base 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_Base_rb.html">Scene_Base.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This is a super class of all scenes within the game.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-check_gameover">check_gameover</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_main_viewport">create_main_viewport</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dispose_all_windows">dispose_all_windows</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_main_viewport">dispose_main_viewport</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-fadeout_all">fadeout_all</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-main">main</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-perform_transition">perform_transition</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-post_start">post_start</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-pre_terminate">pre_terminate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-return_scene">return_scene</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-scene_changing-3F">scene_changing?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start">start</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-terminate">terminate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-transition_speed">transition_speed</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_all_windows">update_all_windows</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_basic">update_basic</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-check_gameover">
+            
+              <b>check_gameover</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-check_gameover" name="method-i-check_gameover" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if Game Is Over</p>
+
+<p>Transition to the game over screen if the entire party is dead.</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-check_gameover_source')" id="l_method-i-check_gameover_source">show</a>
+                
+              </p>
+              <div id="method-i-check_gameover_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 144</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">check_gameover</span>
+  <span class="ruby-constant">SceneManager</span>.<span class="ruby-identifier">goto</span>(<span class="ruby-constant">Scene_Gameover</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">all_dead?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_main_viewport">
+            
+              <b>create_main_viewport</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-create_main_viewport" name="method-i-create_main_viewport" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Viewport</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_main_viewport_source')" id="l_method-i-create_main_viewport_source">show</a>
+                
+              </p>
+              <div id="method-i-create_main_viewport_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_main_viewport</span>
+  <span class="ruby-ivar">@viewport</span> = <span class="ruby-constant">Viewport</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@viewport</span>.<span class="ruby-identifier">z</span> = <span class="ruby-number">200</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_all_windows">
+            
+              <b>dispose_all_windows</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-dispose_all_windows" name="method-i-dispose_all_windows" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Free All Windows</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_all_windows_source')" id="l_method-i-dispose_all_windows_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_all_windows_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_all_windows</span>
+  <span class="ruby-identifier">instance_variables</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">varname</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">ivar</span> = <span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-identifier">varname</span>)
+    <span class="ruby-identifier">ivar</span>.<span class="ruby-identifier">dispose</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">ivar</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Window</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_main_viewport">
+            
+              <b>dispose_main_viewport</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-dispose_main_viewport" name="method-i-dispose_main_viewport" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Free Viewport</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_main_viewport_source')" id="l_method-i-dispose_main_viewport_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_main_viewport_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_main_viewport</span>
+  <span class="ruby-ivar">@viewport</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-fadeout_all">
+            
+              <b>fadeout_all</b>(time = 1000)
+            
+            <a href="../classes/Scene_Base.html#method-i-fadeout_all" name="method-i-fadeout_all" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Fade Out All Sounds and Graphics</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-fadeout_all_source')" id="l_method-i-fadeout_all_source">show</a>
+                
+              </p>
+              <div id="method-i-fadeout_all_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">fadeout_all</span>(<span class="ruby-identifier">time</span> = <span class="ruby-number">1000</span>)
+  <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">BGM</span>.<span class="ruby-identifier">fade</span>(<span class="ruby-identifier">time</span>)
+  <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">BGS</span>.<span class="ruby-identifier">fade</span>(<span class="ruby-identifier">time</span>)
+  <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">ME</span>.<span class="ruby-identifier">fade</span>(<span class="ruby-identifier">time</span>)
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">fadeout</span>(<span class="ruby-identifier">time</span> * <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">frame_rate</span> <span class="ruby-operator">/</span> <span class="ruby-number">1000</span>)
+  <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">BGM</span>.<span class="ruby-identifier">stop</span>
+  <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">BGS</span>.<span class="ruby-identifier">stop</span>
+  <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">ME</span>.<span class="ruby-identifier">stop</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-main">
+            
+              <b>main</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-main" name="method-i-main" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Main</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-main_source')" id="l_method-i-main_source">show</a>
+                
+              </p>
+              <div id="method-i-main_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">main</span>
+  <span class="ruby-identifier">start</span>
+  <span class="ruby-identifier">post_start</span>
+  <span class="ruby-identifier">update</span> <span class="ruby-keyword">until</span> <span class="ruby-identifier">scene_changing?</span>
+  <span class="ruby-identifier">pre_terminate</span>
+  <span class="ruby-identifier">terminate</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-perform_transition">
+            
+              <b>perform_transition</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-perform_transition" name="method-i-perform_transition" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Execute Transition</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-perform_transition_source')" id="l_method-i-perform_transition_source">show</a>
+                
+              </p>
+              <div id="method-i-perform_transition_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">perform_transition</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">transition</span>(<span class="ruby-identifier">transition_speed</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-post_start">
+            
+              <b>post_start</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-post_start" name="method-i-post_start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Post-Start Processing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-post_start_source')" id="l_method-i-post_start_source">show</a>
+                
+              </p>
+              <div id="method-i-post_start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">post_start</span>
+  <span class="ruby-identifier">perform_transition</span>
+  <span class="ruby-constant">Input</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pre_terminate">
+            
+              <b>pre_terminate</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-pre_terminate" name="method-i-pre_terminate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Pre-Termination Processing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pre_terminate_source')" id="l_method-i-pre_terminate_source">show</a>
+                
+              </p>
+              <div id="method-i-pre_terminate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pre_terminate</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-return_scene">
+            
+              <b>return_scene</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-return_scene" name="method-i-return_scene" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Return to Calling Scene</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-return_scene_source')" id="l_method-i-return_scene_source">show</a>
+                
+              </p>
+              <div id="method-i-return_scene_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 123</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">return_scene</span>
+  <span class="ruby-constant">SceneManager</span>.<span class="ruby-identifier">return</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scene_changing-3F">
+            
+              <b>scene_changing?</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-scene_changing-3F" name="method-i-scene_changing-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if Scene Is Changing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-scene_changing-3F_source')" id="l_method-i-scene_changing-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-scene_changing-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">scene_changing?</span>
+  <span class="ruby-constant">SceneManager</span>.<span class="ruby-identifier">scene</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start">
+            
+              <b>start</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-start" name="method-i-start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Start Processing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_source')" id="l_method-i-start_source">show</a>
+                
+              </p>
+              <div id="method-i-start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start</span>
+  <span class="ruby-identifier">create_main_viewport</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-terminate">
+            
+              <b>terminate</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-terminate" name="method-i-terminate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Termination Processing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-terminate_source')" id="l_method-i-terminate_source">show</a>
+                
+              </p>
+              <div id="method-i-terminate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">terminate</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">freeze</span>
+  <span class="ruby-identifier">dispose_all_windows</span>
+  <span class="ruby-identifier">dispose_main_viewport</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-transition_speed">
+            
+              <b>transition_speed</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-transition_speed" name="method-i-transition_speed" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Transition Speed</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-transition_speed_source')" id="l_method-i-transition_speed_source">show</a>
+                
+              </p>
+              <div id="method-i-transition_speed_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">transition_speed</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">10</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Frame Update</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-identifier">update_basic</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_all_windows">
+            
+              <b>update_all_windows</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-update_all_windows" name="method-i-update_all_windows" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update All Windows</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_all_windows_source')" id="l_method-i-update_all_windows_source">show</a>
+                
+              </p>
+              <div id="method-i-update_all_windows_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_all_windows</span>
+  <span class="ruby-identifier">instance_variables</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">varname</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">ivar</span> = <span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-identifier">varname</span>)
+    <span class="ruby-identifier">ivar</span>.<span class="ruby-identifier">update</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">ivar</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Window</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_basic">
+            
+              <b>update_basic</b>()
+            
+            <a href="../classes/Scene_Base.html#method-i-update_basic" name="method-i-update_basic" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Frame (Basic)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_basic_source')" id="l_method-i-update_basic_source">show</a>
+                
+              </p>
+              <div id="method-i-update_basic_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Base.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_basic</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-constant">Input</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-identifier">update_all_windows</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

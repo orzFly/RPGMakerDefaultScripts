@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Window_MenuActor</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Window_MenuActor 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Window_MenuStatus.html">Window_MenuStatus</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Window_MenuActor_rb.html">Window_MenuActor.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>顯示物品使用或技能使用的選擇目的的視窗</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-process_ok">process_ok</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-select_for_item">select_for_item</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-select_last">select_last</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Window_MenuActor.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>初始化物件</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuActor.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-keyword">super</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-process_ok">
+            
+              <b>process_ok</b>()
+            
+            <a href="../classes/Window_MenuActor.html#method-i-process_ok" name="method-i-process_ok" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>按下確定鍵時的處理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-process_ok_source')" id="l_method-i-process_ok_source">show</a>
+                
+              </p>
+              <div id="method-i-process_ok_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuActor.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">process_ok</span>
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">target_actor</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">members</span>[<span class="ruby-identifier">index</span>] <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@cursor_all</span>
+  <span class="ruby-identifier">call_ok_handler</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-select_for_item">
+            
+              <b>select_for_item</b>(item)
+            
+            <a href="../classes/Window_MenuActor.html#method-i-select_for_item" name="method-i-select_for_item" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>設定游標的選擇位置／範圍</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-select_for_item_source')" id="l_method-i-select_for_item_source">show</a>
+                
+              </p>
+              <div id="method-i-select_for_item_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuActor.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">select_for_item</span>(<span class="ruby-identifier">item</span>)
+  <span class="ruby-ivar">@cursor_fix</span> = <span class="ruby-identifier">item</span>.<span class="ruby-identifier">for_user?</span>
+  <span class="ruby-ivar">@cursor_all</span> = <span class="ruby-identifier">item</span>.<span class="ruby-identifier">for_all?</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@cursor_fix</span>
+    <span class="ruby-identifier">select</span>(<span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">menu_actor</span>.<span class="ruby-identifier">index</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@cursor_all</span>
+    <span class="ruby-identifier">select</span>(<span class="ruby-number">0</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">select_last</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-select_last">
+            
+              <b>select_last</b>()
+            
+            <a href="../classes/Window_MenuActor.html#method-i-select_last" name="method-i-select_last" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>返回上一個選擇的位置</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-select_last_source')" id="l_method-i-select_last_source">show</a>
+                
+              </p>
+              <div id="method-i-select_last_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuActor.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">select_last</span>
+  <span class="ruby-identifier">select</span>(<span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">target_actor</span>.<span class="ruby-identifier">index</span> <span class="ruby-operator">||</span> <span class="ruby-number">0</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

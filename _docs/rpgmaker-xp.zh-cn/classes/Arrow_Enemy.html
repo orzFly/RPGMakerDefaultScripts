@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Arrow_Enemy</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Arrow_Enemy 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Arrow_Base.html">Arrow_Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Arrow_Enemy_rb.html">Arrow_Enemy.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>选择敌人的箭头光标。本类继承 <a
+href="Arrow_Base.html">Arrow_Base</a> 类。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-enemy">enemy</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_help">update_help</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-enemy">
+            
+              <b>enemy</b>()
+            
+            <a href="../classes/Arrow_Enemy.html#method-i-enemy" name="method-i-enemy" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取光标指向的敌人</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-enemy_source')" id="l_method-i-enemy_source">show</a>
+                
+              </p>
+              <div id="method-i-enemy_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Arrow_Enemy.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">enemy</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">enemies</span>[<span class="ruby-ivar">@index</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Arrow_Enemy.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新画面</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Arrow_Enemy.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-comment"># 如果指向不存在的敌人就离开</span>
+  <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">enemies</span>.<span class="ruby-identifier">size</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">exist?</span>
+    <span class="ruby-ivar">@index</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+    <span class="ruby-ivar">@index</span> <span class="ruby-operator">=</span> <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">enemies</span>.<span class="ruby-identifier">size</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 光标右</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">RIGHT</span>)
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+    <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">enemies</span>.<span class="ruby-identifier">size</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span>
+      <span class="ruby-ivar">@index</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+      <span class="ruby-ivar">@index</span> <span class="ruby-operator">=</span> <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">enemies</span>.<span class="ruby-identifier">size</span>
+      <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">exist?</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 光标左</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">LEFT</span>)
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+    <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">enemies</span>.<span class="ruby-identifier">size</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span>
+      <span class="ruby-ivar">@index</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">enemies</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>
+      <span class="ruby-ivar">@index</span> <span class="ruby-operator">=</span> <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">enemies</span>.<span class="ruby-identifier">size</span>
+      <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">exist?</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 设置活动块坐标</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">enemy</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">x</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">screen_x</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">y</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">screen_y</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_help">
+            
+              <b>update_help</b>()
+            
+            <a href="../classes/Arrow_Enemy.html#method-i-update_help" name="method-i-update_help" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新帮助文本</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_help_source')" id="l_method-i-update_help_source">show</a>
+                
+              </p>
+              <div id="method-i-update_help_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Arrow_Enemy.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_help</span>
+  <span class="ruby-comment"># 帮助窗口显示敌人的名字与状态</span>
+  <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">set_enemy</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">enemy</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

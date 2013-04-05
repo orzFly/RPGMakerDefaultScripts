@@ -1,0 +1,2473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Game_Map</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Game_Map 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Game_Map_rb.html">Game_Map.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>マップを扱うクラスです。スクロールや通行可能判定などの機能を持っています。
+このクラスのインスタンスは $game_map で参照されます。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-adjust_x">adjust_x</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-adjust_y">adjust_y</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-airship">airship</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-airship_land_ok-3F">airship_land_ok?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-autoplay">autoplay</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-boat">boat</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-boat_passable-3F">boat_passable?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-bush-3F">bush?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-calc_parallax_x">calc_parallax_x</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calc_parallax_y">calc_parallax_y</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-counter-3F">counter?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_vehicles">create_vehicles</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-data">data</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-disable_dash-3F">disable_dash?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-encounter_list">encounter_list</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-encounter_step">encounter_step</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-events_xy">events_xy</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-height">height</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-loop_horizontal-3F">loop_horizontal?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-loop_vertical-3F">loop_vertical?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-map_id">map_id</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-passable-3F">passable?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-referesh_vehicles">referesh_vehicles</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-refresh">refresh</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-round_x">round_x</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-round_y">round_y</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-scroll_down">scroll_down</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-scroll_left">scroll_left</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-scroll_right">scroll_right</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-scroll_up">scroll_up</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-scrolling-3F">scrolling?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_display_pos">set_display_pos</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-setup">setup</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-setup_events">setup_events</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-setup_parallax">setup_parallax</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-setup_scroll">setup_scroll</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-ship">ship</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-ship_passable-3F">ship_passable?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start_scroll">start_scroll</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_events">update_events</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_parallax">update_parallax</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_scroll">update_scroll</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_vehicles">update_vehicles</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-valid-3F">valid?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-width">width</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>X</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-x_with_direction">x_with_direction</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>Y</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-y_with_direction">y_with_direction</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>display_x</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>display_y</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>events</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>interpreter</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>need_refresh</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>parallax_name</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>passages</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>screen</td>
+            <td class='attr-desc'><p>公開インスタンス変数</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>vehicles</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Game_Map.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>オブジェクト初期化</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-ivar">@screen</span> = <span class="ruby-constant">Game_Screen</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@interpreter</span> = <span class="ruby-constant">Game_Interpreter</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-keyword">true</span>)
+  <span class="ruby-ivar">@map_id</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@display_x</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@display_y</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">create_vehicles</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-adjust_x">
+            
+              <b>adjust_x</b>(x)
+            
+            <a href="../classes/Game_Map.html#method-i-adjust_x" name="method-i-adjust_x" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>表示座標を差し引いた X 座標の計算</p>
+
+<p>x : X 座標</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-adjust_x_source')" id="l_method-i-adjust_x_source">show</a>
+                
+              </p>
+              <div id="method-i-adjust_x_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 251</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">adjust_x</span>(<span class="ruby-identifier">x</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">loop_horizontal?</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@display_x</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@margin_x</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@display_x</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">width</span> * <span class="ruby-number">256</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@display_x</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-adjust_y">
+            
+              <b>adjust_y</b>(y)
+            
+            <a href="../classes/Game_Map.html#method-i-adjust_y" name="method-i-adjust_y" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>表示座標を差し引いた Y 座標の計算</p>
+
+<p>y : Y 座標</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-adjust_y_source')" id="l_method-i-adjust_y_source">show</a>
+                
+              </p>
+              <div id="method-i-adjust_y_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 263</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">adjust_y</span>(<span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">loop_vertical?</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@display_y</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@margin_y</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@display_y</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">height</span> * <span class="ruby-number">256</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@display_y</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-airship">
+            
+              <b>airship</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-airship" name="method-i-airship" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>飛行船の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-airship_source')" id="l_method-i-airship_source">show</a>
+                
+              </p>
+              <div id="method-i-airship_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">airship</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@vehicles</span>[<span class="ruby-number">2</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-airship_land_ok-3F">
+            
+              <b>airship_land_ok?</b>(x, y)
+            
+            <a href="../classes/Game_Map.html#method-i-airship_land_ok-3F" name="method-i-airship_land_ok-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>飛行船の着陸可能判定</p>
+
+<p>x : X 座標 y : Y 座標</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-airship_land_ok-3F_source')" id="l_method-i-airship_land_ok-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-airship_land_ok-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 472</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">airship_land_ok?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">passable?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-number">0x08</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-autoplay">
+            
+              <b>autoplay</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-autoplay" name="method-i-autoplay" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>BGM / BGS 自動切り替え</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-autoplay_source')" id="l_method-i-autoplay_source">show</a>
+                
+              </p>
+              <div id="method-i-autoplay_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 329</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">autoplay</span>
+  <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">bgm</span>.<span class="ruby-identifier">play</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">autoplay_bgm</span>
+  <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">bgs</span>.<span class="ruby-identifier">play</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">autoplay_bgs</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-boat">
+            
+              <b>boat</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-boat" name="method-i-boat" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>小型船の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-boat_source')" id="l_method-i-boat_source">show</a>
+                
+              </p>
+              <div id="method-i-boat_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">boat</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@vehicles</span>[<span class="ruby-number">0</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-boat_passable-3F">
+            
+              <b>boat_passable?</b>(x, y)
+            
+            <a href="../classes/Game_Map.html#method-i-boat_passable-3F" name="method-i-boat_passable-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>小型船の通行可能判定</p>
+
+<p>x : X 座標 y : Y 座標</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-boat_passable-3F_source')" id="l_method-i-boat_passable-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-boat_passable-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 454</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">boat_passable?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">passable?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-number">0x02</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bush-3F">
+            
+              <b>bush?</b>(x, y)
+            
+            <a href="../classes/Game_Map.html#method-i-bush-3F" name="method-i-bush-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>茂み判定</p>
+
+<p>x : X 座標 y : Y 座標</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bush-3F_source')" id="l_method-i-bush-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-bush-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 481</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bush?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">valid?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@passages</span>[<span class="ruby-ivar">@map</span>.<span class="ruby-identifier">data</span>[<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-number">1</span>]] &amp; <span class="ruby-number">0x40</span> <span class="ruby-operator">==</span> <span class="ruby-number">0x40</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calc_parallax_x">
+            
+              <b>calc_parallax_x</b>(bitmap)
+            
+            <a href="../classes/Game_Map.html#method-i-calc_parallax_x" name="method-i-calc_parallax_x" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>遠景表示 X 座標の計算</p>
+
+<p>bitmap : 遠景ビットマップ</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calc_parallax_x_source')" id="l_method-i-calc_parallax_x_source">show</a>
+                
+              </p>
+              <div id="method-i-calc_parallax_x_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 144</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calc_parallax_x</span>(<span class="ruby-identifier">bitmap</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">bitmap</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@parallax_loop_x</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-ivar">@parallax_x</span> <span class="ruby-operator">/</span> <span class="ruby-number">16</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">loop_horizontal?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">w1</span> = <span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-number">544</span>
+    <span class="ruby-identifier">w2</span> = <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">width</span> * <span class="ruby-number">32</span> <span class="ruby-operator">-</span> <span class="ruby-number">544</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">w1</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-number">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">w2</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-number">0</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-ivar">@parallax_x</span> * <span class="ruby-identifier">w1</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">w2</span> <span class="ruby-operator">/</span> <span class="ruby-number">8</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calc_parallax_y">
+            
+              <b>calc_parallax_y</b>(bitmap)
+            
+            <a href="../classes/Game_Map.html#method-i-calc_parallax_y" name="method-i-calc_parallax_y" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>遠景表示 Y 座標の計算</p>
+
+<p>bitmap : 遠景ビットマップ</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calc_parallax_y_source')" id="l_method-i-calc_parallax_y_source">show</a>
+                
+              </p>
+              <div id="method-i-calc_parallax_y_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 166</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calc_parallax_y</span>(<span class="ruby-identifier">bitmap</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">bitmap</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@parallax_loop_y</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-ivar">@parallax_y</span> <span class="ruby-operator">/</span> <span class="ruby-number">16</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">loop_vertical?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">h1</span> = <span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-number">416</span>
+    <span class="ruby-identifier">h2</span> = <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">height</span> * <span class="ruby-number">32</span> <span class="ruby-operator">-</span> <span class="ruby-number">416</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">h1</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-number">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">h2</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-number">0</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-ivar">@parallax_y</span> * <span class="ruby-identifier">h1</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">h2</span> <span class="ruby-operator">/</span> <span class="ruby-number">8</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-counter-3F">
+            
+              <b>counter?</b>(x, y)
+            
+            <a href="../classes/Game_Map.html#method-i-counter-3F" name="method-i-counter-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>カウンター判定</p>
+
+<p>x : X 座標 y : Y 座標</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-counter-3F_source')" id="l_method-i-counter-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-counter-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 491</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">counter?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">valid?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@passages</span>[<span class="ruby-ivar">@map</span>.<span class="ruby-identifier">data</span>[<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-number">0</span>]] &amp; <span class="ruby-number">0x80</span> <span class="ruby-operator">==</span> <span class="ruby-number">0x80</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_vehicles">
+            
+              <b>create_vehicles</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-create_vehicles" name="method-i-create_vehicles" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>乗り物の作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_vehicles_source')" id="l_method-i-create_vehicles_source">show</a>
+                
+              </p>
+              <div id="method-i-create_vehicles_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_vehicles</span>
+  <span class="ruby-ivar">@vehicles</span> = []
+  <span class="ruby-ivar">@vehicles</span>[<span class="ruby-number">0</span>] = <span class="ruby-constant">Game_Vehicle</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>)    <span class="ruby-comment"># 小型船</span>
+  <span class="ruby-ivar">@vehicles</span>[<span class="ruby-number">1</span>] = <span class="ruby-constant">Game_Vehicle</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">1</span>)    <span class="ruby-comment"># 大型船</span>
+  <span class="ruby-ivar">@vehicles</span>[<span class="ruby-number">2</span>] = <span class="ruby-constant">Game_Vehicle</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">2</span>)    <span class="ruby-comment"># 飛行船</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-data">
+            
+              <b>data</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-data" name="method-i-data" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>マップデータの取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-data_source')" id="l_method-i-data_source">show</a>
+                
+              </p>
+              <div id="method-i-data_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 243</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">data</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">data</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-disable_dash-3F">
+            
+              <b>disable_dash?</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-disable_dash-3F" name="method-i-disable_dash-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ダッシュ禁止か否かの取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-disable_dash-3F_source')" id="l_method-i-disable_dash-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-disable_dash-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 222</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">disable_dash?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">disable_dashing</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-encounter_list">
+            
+              <b>encounter_list</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-encounter_list" name="method-i-encounter_list" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>エンカウントリストの取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-encounter_list_source')" id="l_method-i-encounter_list_source">show</a>
+                
+              </p>
+              <div id="method-i-encounter_list_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 229</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">encounter_list</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">encounter_list</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-encounter_step">
+            
+              <b>encounter_step</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-encounter_step" name="method-i-encounter_step" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>エンカウント歩数の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-encounter_step_source')" id="l_method-i-encounter_step_source">show</a>
+                
+              </p>
+              <div id="method-i-encounter_step_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 236</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">encounter_step</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">encounter_step</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-events_xy">
+            
+              <b>events_xy</b>(x, y)
+            
+            <a href="../classes/Game_Map.html#method-i-events_xy" name="method-i-events_xy" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>指定座標に存在するイベントの配列取得</p>
+
+<p>x : X 座標 y : Y 座標</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-events_xy_source')" id="l_method-i-events_xy_source">show</a>
+                
+              </p>
+              <div id="method-i-events_xy_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 318</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">events_xy</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">result</span> = []
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">event</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">events</span>.<span class="ruby-identifier">values</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">event</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">event</span>.<span class="ruby-identifier">pos?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-height">
+            
+              <b>height</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-height" name="method-i-height" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>高さの取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-height_source')" id="l_method-i-height_source">show</a>
+                
+              </p>
+              <div id="method-i-height_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 201</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">height</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">height</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-loop_horizontal-3F">
+            
+              <b>loop_horizontal?</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-loop_horizontal-3F" name="method-i-loop_horizontal-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>横方向にループするか？</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-loop_horizontal-3F_source')" id="l_method-i-loop_horizontal-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-loop_horizontal-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 208</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">loop_horizontal?</span>
+  <span class="ruby-keyword">return</span> (<span class="ruby-ivar">@map</span>.<span class="ruby-identifier">scroll_type</span> <span class="ruby-operator">==</span> <span class="ruby-number">2</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">scroll_type</span> <span class="ruby-operator">==</span> <span class="ruby-number">3</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-loop_vertical-3F">
+            
+              <b>loop_vertical?</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-loop_vertical-3F" name="method-i-loop_vertical-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>縦方向にループするか？</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-loop_vertical-3F_source')" id="l_method-i-loop_vertical-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-loop_vertical-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 215</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">loop_vertical?</span>
+  <span class="ruby-keyword">return</span> (<span class="ruby-ivar">@map</span>.<span class="ruby-identifier">scroll_type</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">scroll_type</span> <span class="ruby-operator">==</span> <span class="ruby-number">3</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-map_id">
+            
+              <b>map_id</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-map_id" name="method-i-map_id" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>マップ ID の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-map_id_source')" id="l_method-i-map_id_source">show</a>
+                
+              </p>
+              <div id="method-i-map_id_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 187</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">map_id</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@map_id</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-passable-3F">
+            
+              <b>passable?</b>(x, y, flag = 0x01)
+            
+            <a href="../classes/Game_Map.html#method-i-passable-3F" name="method-i-passable-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>通行可能判定</p>
+
+<p>x    : X 座標 y    : Y 座標 flag : 調べる通行禁止ビット
+(通常 0x01、乗り物の場合のみ変更)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-passable-3F_source')" id="l_method-i-passable-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-passable-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 428</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">passable?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">flag</span> = <span class="ruby-number">0x01</span>)
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">event</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">events_xy</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)            <span class="ruby-comment"># 座標が一致するイベントを調べる</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">event</span>.<span class="ruby-identifier">tile_id</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>            <span class="ruby-comment"># グラフィックがタイルではない</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">event</span>.<span class="ruby-identifier">priority_type</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>       <span class="ruby-comment"># [通常キャラの下] ではない</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">event</span>.<span class="ruby-identifier">through</span>                 <span class="ruby-comment"># すり抜け状態</span>
+    <span class="ruby-identifier">pass</span> = <span class="ruby-ivar">@passages</span>[<span class="ruby-identifier">event</span>.<span class="ruby-identifier">tile_id</span>]       <span class="ruby-comment"># 通行属性を取得</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">pass</span> &amp; <span class="ruby-number">0x10</span> <span class="ruby-operator">==</span> <span class="ruby-number">0x10</span>           <span class="ruby-comment"># [☆] : 通行に影響しない</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">pass</span> &amp; <span class="ruby-identifier">flag</span> <span class="ruby-operator">==</span> <span class="ruby-number">0x00</span>    <span class="ruby-comment"># [○] : 通行可</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">pass</span> &amp; <span class="ruby-identifier">flag</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">flag</span>   <span class="ruby-comment"># [×] : 通行不可</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> [<span class="ruby-number">2</span>, <span class="ruby-number">1</span>, <span class="ruby-number">0</span>]                      <span class="ruby-comment"># レイヤーの上から順に調べる</span>
+    <span class="ruby-identifier">tile_id</span> = <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">data</span>[<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">i</span>]          <span class="ruby-comment"># タイル ID を取得</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">tile_id</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>        <span class="ruby-comment"># タイル ID 取得失敗 : 通行不可</span>
+    <span class="ruby-identifier">pass</span> = <span class="ruby-ivar">@passages</span>[<span class="ruby-identifier">tile_id</span>]             <span class="ruby-comment"># 通行属性を取得</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">pass</span> &amp; <span class="ruby-number">0x10</span> <span class="ruby-operator">==</span> <span class="ruby-number">0x10</span>           <span class="ruby-comment"># [☆] : 通行に影響しない</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">pass</span> &amp; <span class="ruby-identifier">flag</span> <span class="ruby-operator">==</span> <span class="ruby-number">0x00</span>    <span class="ruby-comment"># [○] : 通行可</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">pass</span> &amp; <span class="ruby-identifier">flag</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">flag</span>   <span class="ruby-comment"># [×] : 通行不可</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>                            <span class="ruby-comment"># 通行不可</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-referesh_vehicles">
+            
+              <b>referesh_vehicles</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-referesh_vehicles" name="method-i-referesh_vehicles" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>乗り物のリフレッシュ</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-referesh_vehicles_source')" id="l_method-i-referesh_vehicles_source">show</a>
+                
+              </p>
+              <div id="method-i-referesh_vehicles_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">referesh_vehicles</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">vehicle</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@vehicles</span>
+    <span class="ruby-identifier">vehicle</span>.<span class="ruby-identifier">refresh</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refresh">
+            
+              <b>refresh</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-refresh" name="method-i-refresh" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>リフレッシュ</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refresh_source')" id="l_method-i-refresh_source">show</a>
+                
+              </p>
+              <div id="method-i-refresh_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 337</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refresh</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@map_id</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">for</span> <span class="ruby-identifier">event</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@events</span>.<span class="ruby-identifier">values</span>
+      <span class="ruby-identifier">event</span>.<span class="ruby-identifier">refresh</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">for</span> <span class="ruby-identifier">common_event</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@common_events</span>.<span class="ruby-identifier">values</span>
+      <span class="ruby-identifier">common_event</span>.<span class="ruby-identifier">refresh</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@need_refresh</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-round_x">
+            
+              <b>round_x</b>(x)
+            
+            <a href="../classes/Game_Map.html#method-i-round_x" name="method-i-round_x" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ループ補正後の X 座標計算</p>
+
+<p>x : X 座標</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-round_x_source')" id="l_method-i-round_x_source">show</a>
+                
+              </p>
+              <div id="method-i-round_x_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 275</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">round_x</span>(<span class="ruby-identifier">x</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">loop_horizontal?</span>
+    <span class="ruby-keyword">return</span> (<span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">width</span>) <span class="ruby-operator">%</span> <span class="ruby-identifier">width</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">x</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-round_y">
+            
+              <b>round_y</b>(y)
+            
+            <a href="../classes/Game_Map.html#method-i-round_y" name="method-i-round_y" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ループ補正後の Y 座標計算</p>
+
+<p>y : Y 座標</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-round_y_source')" id="l_method-i-round_y_source">show</a>
+                
+              </p>
+              <div id="method-i-round_y_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 287</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">round_y</span>(<span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">loop_vertical?</span>
+    <span class="ruby-keyword">return</span> (<span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">height</span>) <span class="ruby-operator">%</span> <span class="ruby-identifier">height</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">y</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scroll_down">
+            
+              <b>scroll_down</b>(distance)
+            
+            <a href="../classes/Game_Map.html#method-i-scroll_down" name="method-i-scroll_down" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>下にスクロール</p>
+
+<p>distance : スクロールする距離</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-scroll_down_source')" id="l_method-i-scroll_down_source">show</a>
+                
+              </p>
+              <div id="method-i-scroll_down_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 353</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">scroll_down</span>(<span class="ruby-identifier">distance</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">loop_vertical?</span>
+    <span class="ruby-ivar">@display_y</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">distance</span>
+    <span class="ruby-ivar">@display_y</span> <span class="ruby-operator">=</span> <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">height</span> * <span class="ruby-number">256</span>
+    <span class="ruby-ivar">@parallax_y</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">distance</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">last_y</span> = <span class="ruby-ivar">@display_y</span>
+    <span class="ruby-ivar">@display_y</span> = [<span class="ruby-ivar">@display_y</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">distance</span>, (<span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-number">13</span>) * <span class="ruby-number">256</span>].<span class="ruby-identifier">min</span>
+    <span class="ruby-ivar">@parallax_y</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@display_y</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">last_y</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scroll_left">
+            
+              <b>scroll_left</b>(distance)
+            
+            <a href="../classes/Game_Map.html#method-i-scroll_left" name="method-i-scroll_left" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>左にスクロール</p>
+
+<p>distance : スクロールする距離</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-scroll_left_source')" id="l_method-i-scroll_left_source">show</a>
+                
+              </p>
+              <div id="method-i-scroll_left_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 369</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">scroll_left</span>(<span class="ruby-identifier">distance</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">loop_horizontal?</span>
+    <span class="ruby-ivar">@display_x</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">width</span> * <span class="ruby-number">256</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">distance</span>
+    <span class="ruby-ivar">@display_x</span> <span class="ruby-operator">=</span> <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">width</span> * <span class="ruby-number">256</span>
+    <span class="ruby-ivar">@parallax_x</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">distance</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">last_x</span> = <span class="ruby-ivar">@display_x</span>
+    <span class="ruby-ivar">@display_x</span> = [<span class="ruby-ivar">@display_x</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">distance</span>, <span class="ruby-number">0</span>].<span class="ruby-identifier">max</span>
+    <span class="ruby-ivar">@parallax_x</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@display_x</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">last_x</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scroll_right">
+            
+              <b>scroll_right</b>(distance)
+            
+            <a href="../classes/Game_Map.html#method-i-scroll_right" name="method-i-scroll_right" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>右にスクロール</p>
+
+<p>distance : スクロールする距離</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-scroll_right_source')" id="l_method-i-scroll_right_source">show</a>
+                
+              </p>
+              <div id="method-i-scroll_right_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 385</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">scroll_right</span>(<span class="ruby-identifier">distance</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">loop_horizontal?</span>
+    <span class="ruby-ivar">@display_x</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">distance</span>
+    <span class="ruby-ivar">@display_x</span> <span class="ruby-operator">=</span> <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">width</span> * <span class="ruby-number">256</span>
+    <span class="ruby-ivar">@parallax_x</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">distance</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">last_x</span> = <span class="ruby-ivar">@display_x</span>
+    <span class="ruby-ivar">@display_x</span> = [<span class="ruby-ivar">@display_x</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">distance</span>, (<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-number">17</span>) * <span class="ruby-number">256</span>].<span class="ruby-identifier">min</span>
+    <span class="ruby-ivar">@parallax_x</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@display_x</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">last_x</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scroll_up">
+            
+              <b>scroll_up</b>(distance)
+            
+            <a href="../classes/Game_Map.html#method-i-scroll_up" name="method-i-scroll_up" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>上にスクロール</p>
+
+<p>distance : スクロールする距離</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-scroll_up_source')" id="l_method-i-scroll_up_source">show</a>
+                
+              </p>
+              <div id="method-i-scroll_up_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 401</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">scroll_up</span>(<span class="ruby-identifier">distance</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">loop_vertical?</span>
+    <span class="ruby-ivar">@display_y</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">height</span> * <span class="ruby-number">256</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">distance</span>
+    <span class="ruby-ivar">@display_y</span> <span class="ruby-operator">=</span> <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">height</span> * <span class="ruby-number">256</span>
+    <span class="ruby-ivar">@parallax_y</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">distance</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">last_y</span> = <span class="ruby-ivar">@display_y</span>
+    <span class="ruby-ivar">@display_y</span> = [<span class="ruby-ivar">@display_y</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">distance</span>, <span class="ruby-number">0</span>].<span class="ruby-identifier">max</span>
+    <span class="ruby-ivar">@parallax_y</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@display_y</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">last_y</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scrolling-3F">
+            
+              <b>scrolling?</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-scrolling-3F" name="method-i-scrolling-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スクロール中判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-scrolling-3F_source')" id="l_method-i-scrolling-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-scrolling-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 511</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">scrolling?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@scroll_rest</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_display_pos">
+            
+              <b>set_display_pos</b>(x, y)
+            
+            <a href="../classes/Game_Map.html#method-i-set_display_pos" name="method-i-set_display_pos" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>表示位置の設定</p>
+
+<p>x : 新しい表示 X 座標 (*256) y : 新しい表示 Y 座標 (*256)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_display_pos_source')" id="l_method-i-set_display_pos_source">show</a>
+                
+              </p>
+              <div id="method-i-set_display_pos_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 133</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_display_pos</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-ivar">@display_x</span> = (<span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">width</span> * <span class="ruby-number">256</span>) <span class="ruby-operator">%</span> (<span class="ruby-ivar">@map</span>.<span class="ruby-identifier">width</span> * <span class="ruby-number">256</span>)
+  <span class="ruby-ivar">@display_y</span> = (<span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">height</span> * <span class="ruby-number">256</span>) <span class="ruby-operator">%</span> (<span class="ruby-ivar">@map</span>.<span class="ruby-identifier">height</span> * <span class="ruby-number">256</span>)
+  <span class="ruby-ivar">@parallax_x</span> = <span class="ruby-identifier">x</span>
+  <span class="ruby-ivar">@parallax_y</span> = <span class="ruby-identifier">y</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-setup">
+            
+              <b>setup</b>(map_id)
+            
+            <a href="../classes/Game_Map.html#method-i-setup" name="method-i-setup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>セットアップ</p>
+
+<p><a href="Game_Map.html#method-i-map_id">#map_id</a> : マップ ID</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-setup_source')" id="l_method-i-setup_source">show</a>
+                
+              </p>
+              <div id="method-i-setup_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">setup</span>(<span class="ruby-identifier">map_id</span>)
+  <span class="ruby-ivar">@map_id</span> = <span class="ruby-identifier">map_id</span>
+  <span class="ruby-ivar">@map</span> = <span class="ruby-identifier">load_data</span>(<span class="ruby-identifier">sprintf</span>(<span class="ruby-string">&quot;Data/Map%03d.rvdata&quot;</span>, <span class="ruby-ivar">@map_id</span>))
+  <span class="ruby-ivar">@display_x</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@display_y</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@passages</span> = <span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">passages</span>
+  <span class="ruby-identifier">referesh_vehicles</span>
+  <span class="ruby-identifier">setup_events</span>
+  <span class="ruby-identifier">setup_scroll</span>
+  <span class="ruby-identifier">setup_parallax</span>
+  <span class="ruby-ivar">@need_refresh</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-setup_events">
+            
+              <b>setup_events</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-setup_events" name="method-i-setup_events" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>イベントのセットアップ</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-setup_events_source')" id="l_method-i-setup_events_source">show</a>
+                
+              </p>
+              <div id="method-i-setup_events_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">setup_events</span>
+  <span class="ruby-ivar">@events</span> = {}          <span class="ruby-comment"># マップイベント</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">events</span>.<span class="ruby-identifier">keys</span>
+    <span class="ruby-ivar">@events</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-constant">Game_Event</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@map_id</span>, <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">events</span>[<span class="ruby-identifier">i</span>])
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@common_events</span> = {}   <span class="ruby-comment"># コモンイベント</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">1</span><span class="ruby-operator">...</span><span class="ruby-identifier">$data_common_events</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-ivar">@common_events</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-constant">Game_CommonEvent</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">i</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-setup_parallax">
+            
+              <b>setup_parallax</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-setup_parallax" name="method-i-setup_parallax" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>遠景のセットアップ</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-setup_parallax_source')" id="l_method-i-setup_parallax_source">show</a>
+                
+              </p>
+              <div id="method-i-setup_parallax_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">setup_parallax</span>
+  <span class="ruby-ivar">@parallax_name</span> = <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">parallax_name</span>
+  <span class="ruby-ivar">@parallax_loop_x</span> = <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">parallax_loop_x</span>
+  <span class="ruby-ivar">@parallax_loop_y</span> = <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">parallax_loop_y</span>
+  <span class="ruby-ivar">@parallax_sx</span> = <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">parallax_sx</span>
+  <span class="ruby-ivar">@parallax_sy</span> = <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">parallax_sy</span>
+  <span class="ruby-ivar">@parallax_x</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@parallax_y</span> = <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-setup_scroll">
+            
+              <b>setup_scroll</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-setup_scroll" name="method-i-setup_scroll" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スクロールのセットアップ</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-setup_scroll_source')" id="l_method-i-setup_scroll_source">show</a>
+                
+              </p>
+              <div id="method-i-setup_scroll_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 107</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">setup_scroll</span>
+  <span class="ruby-ivar">@scroll_direction</span> = <span class="ruby-number">2</span>
+  <span class="ruby-ivar">@scroll_rest</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@scroll_speed</span> = <span class="ruby-number">4</span>
+  <span class="ruby-ivar">@margin_x</span> = (<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-number">17</span>) * <span class="ruby-number">256</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>      <span class="ruby-comment"># 画面非表示分の横幅 / 2</span>
+  <span class="ruby-ivar">@margin_y</span> = (<span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-number">13</span>) * <span class="ruby-number">256</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>     <span class="ruby-comment"># 画面非表示分の縦幅 / 2</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-ship">
+            
+              <b>ship</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-ship" name="method-i-ship" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>大型船の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-ship_source')" id="l_method-i-ship_source">show</a>
+                
+              </p>
+              <div id="method-i-ship_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">ship</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@vehicles</span>[<span class="ruby-number">1</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-ship_passable-3F">
+            
+              <b>ship_passable?</b>(x, y)
+            
+            <a href="../classes/Game_Map.html#method-i-ship_passable-3F" name="method-i-ship_passable-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>大型船の通行可能判定</p>
+
+<p>x : X 座標 y : Y 座標</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-ship_passable-3F_source')" id="l_method-i-ship_passable-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-ship_passable-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 463</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">ship_passable?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">passable?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-number">0x04</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start_scroll">
+            
+              <b>start_scroll</b>(direction, distance, speed)
+            
+            <a href="../classes/Game_Map.html#method-i-start_scroll" name="method-i-start_scroll" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スクロールの開始</p>
+
+<p>direction : スクロールする方向 distance  :
+スクロールする距離 speed     : スクロールする速度</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_scroll_source')" id="l_method-i-start_scroll_source">show</a>
+                
+              </p>
+              <div id="method-i-start_scroll_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 502</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start_scroll</span>(<span class="ruby-identifier">direction</span>, <span class="ruby-identifier">distance</span>, <span class="ruby-identifier">speed</span>)
+  <span class="ruby-ivar">@scroll_direction</span> = <span class="ruby-identifier">direction</span>
+  <span class="ruby-ivar">@scroll_rest</span> = <span class="ruby-identifier">distance</span> * <span class="ruby-number">256</span>
+  <span class="ruby-ivar">@scroll_speed</span> = <span class="ruby-identifier">speed</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>フレーム更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 518</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-identifier">refresh</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">need_refresh</span>
+  <span class="ruby-identifier">update_scroll</span>
+  <span class="ruby-identifier">update_events</span>
+  <span class="ruby-identifier">update_vehicles</span>
+  <span class="ruby-identifier">update_parallax</span>
+  <span class="ruby-ivar">@screen</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_events">
+            
+              <b>update_events</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-update_events" name="method-i-update_events" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>イベントの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_events_source')" id="l_method-i-update_events_source">show</a>
+                
+              </p>
+              <div id="method-i-update_events_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 550</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_events</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">event</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@events</span>.<span class="ruby-identifier">values</span>
+    <span class="ruby-identifier">event</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">common_event</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@common_events</span>.<span class="ruby-identifier">values</span>
+    <span class="ruby-identifier">common_event</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_parallax">
+            
+              <b>update_parallax</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-update_parallax" name="method-i-update_parallax" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>遠景の更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_parallax_source')" id="l_method-i-update_parallax_source">show</a>
+                
+              </p>
+              <div id="method-i-update_parallax_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 571</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_parallax</span>
+  <span class="ruby-ivar">@parallax_x</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@parallax_sx</span> * <span class="ruby-number">4</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@parallax_loop_x</span>
+  <span class="ruby-ivar">@parallax_y</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@parallax_sy</span> * <span class="ruby-number">4</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@parallax_loop_y</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_scroll">
+            
+              <b>update_scroll</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-update_scroll" name="method-i-update_scroll" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スクロールの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_scroll_source')" id="l_method-i-update_scroll_source">show</a>
+                
+              </p>
+              <div id="method-i-update_scroll_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 530</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_scroll</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@scroll_rest</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>                 <span class="ruby-comment"># スクロール中の場合</span>
+    <span class="ruby-identifier">distance</span> = <span class="ruby-number">2</span> <span class="ruby-operator">**</span> <span class="ruby-ivar">@scroll_speed</span>     <span class="ruby-comment"># マップ座標系での距離に変換</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-ivar">@scroll_direction</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>  <span class="ruby-comment"># 下</span>
+      <span class="ruby-identifier">scroll_down</span>(<span class="ruby-identifier">distance</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-number">4</span>  <span class="ruby-comment"># 左</span>
+      <span class="ruby-identifier">scroll_left</span>(<span class="ruby-identifier">distance</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-number">6</span>  <span class="ruby-comment"># 右</span>
+      <span class="ruby-identifier">scroll_right</span>(<span class="ruby-identifier">distance</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-number">8</span>  <span class="ruby-comment"># 上</span>
+      <span class="ruby-identifier">scroll_up</span>(<span class="ruby-identifier">distance</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-ivar">@scroll_rest</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">distance</span>          <span class="ruby-comment"># スクロールした距離を減算</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_vehicles">
+            
+              <b>update_vehicles</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-update_vehicles" name="method-i-update_vehicles" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>乗り物の更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_vehicles_source')" id="l_method-i-update_vehicles_source">show</a>
+                
+              </p>
+              <div id="method-i-update_vehicles_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 562</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_vehicles</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">vehicle</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@vehicles</span>
+    <span class="ruby-identifier">vehicle</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-valid-3F">
+            
+              <b>valid?</b>(x, y)
+            
+            <a href="../classes/Game_Map.html#method-i-valid-3F" name="method-i-valid-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>有効座標判定</p>
+
+<p>x : X 座標 y : Y 座標</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-valid-3F_source')" id="l_method-i-valid-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-valid-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 418</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">valid?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">return</span> (<span class="ruby-identifier">x</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">0</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">width</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">0</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">height</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-width">
+            
+              <b>width</b>()
+            
+            <a href="../classes/Game_Map.html#method-i-width" name="method-i-width" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>幅の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-width_source')" id="l_method-i-width_source">show</a>
+                
+              </p>
+              <div id="method-i-width_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 194</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">width</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@map</span>.<span class="ruby-identifier">width</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-x_with_direction">
+            
+              <b>x_with_direction</b>(x, direction)
+            
+            <a href="../classes/Game_Map.html#method-i-x_with_direction" name="method-i-x_with_direction" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>特定の方向に 1 マスずらした X 座標の計算</p>
+
+<p>x         : X 座標 direction : 方向 (2,4,6,8)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-x_with_direction_source')" id="l_method-i-x_with_direction_source">show</a>
+                
+              </p>
+              <div id="method-i-x_with_direction_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 300</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">x_with_direction</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">direction</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">round_x</span>(<span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">direction</span> <span class="ruby-operator">==</span> <span class="ruby-number">6</span> <span class="ruby-operator">?</span> <span class="ruby-number">1</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">direction</span> <span class="ruby-operator">==</span> <span class="ruby-number">4</span> <span class="ruby-operator">?</span> <span class="ruby-number">-1</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-y_with_direction">
+            
+              <b>y_with_direction</b>(y, direction)
+            
+            <a href="../classes/Game_Map.html#method-i-y_with_direction" name="method-i-y_with_direction" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>特定の方向に 1 マスずらした Y 座標の計算</p>
+
+<p>y         : Y 座標 direction : 方向 (2,4,6,8)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-y_with_direction_source')" id="l_method-i-y_with_direction_source">show</a>
+                
+              </p>
+              <div id="method-i-y_with_direction_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Map.rb, line 309</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">y_with_direction</span>(<span class="ruby-identifier">y</span>, <span class="ruby-identifier">direction</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">round_y</span>(<span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">direction</span> <span class="ruby-operator">==</span> <span class="ruby-number">2</span> <span class="ruby-operator">?</span> <span class="ruby-number">1</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">direction</span> <span class="ruby-operator">==</span> <span class="ruby-number">8</span> <span class="ruby-operator">?</span> <span class="ruby-number">-1</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

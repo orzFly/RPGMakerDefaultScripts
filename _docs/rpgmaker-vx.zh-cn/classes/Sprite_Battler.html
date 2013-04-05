@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Sprite_Battler</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Sprite_Battler 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Sprite_Base.html">Sprite_Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Sprite_Battler_rb.html">Sprite_Battler.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>战斗显示用活动块。Game_Battler 类的实例监视、
+活动块的状态的监视。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dispose">dispose</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-setup_new_effect">setup_new_effect</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_appear">update_appear</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_battler_bitmap">update_battler_bitmap</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_blink">update_blink</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_collapse">update_collapse</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_disappear">update_disappear</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_effect">update_effect</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_whiten">update_whiten</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">WHITEN</td>
+            <td>=</td>
+            <td class="attr-value">1</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>定量</p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">BLINK</td>
+            <td>=</td>
+            <td class="attr-value">2</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">APPEAR</td>
+            <td>=</td>
+            <td class="attr-value">3</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">DISAPPEAR</td>
+            <td>=</td>
+            <td class="attr-value">4</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">COLLAPSE</td>
+            <td>=</td>
+            <td class="attr-value">5</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>battler</td>
+            <td class='attr-desc'><p>定义实例变量</p></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(viewport, battler = nil)
+            
+            <a href="../classes/Sprite_Battler.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>初始化对像</p>
+
+<p>viewport : 视口 battler  : 战斗者 (<a
+href="Game_Battler.html">Game_Battler</a>)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Battler.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">viewport</span>, <span class="ruby-identifier">battler</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">viewport</span>)
+  <span class="ruby-ivar">@battler</span> = <span class="ruby-identifier">battler</span>
+  <span class="ruby-ivar">@battler_visible</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@effect_type</span> = <span class="ruby-number">0</span>            <span class="ruby-comment"># 效果种类</span>
+  <span class="ruby-ivar">@effect_duration</span> = <span class="ruby-number">0</span>        <span class="ruby-comment"># 效果剩余时间</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose">
+            
+              <b>dispose</b>()
+            
+            <a href="../classes/Sprite_Battler.html#method-i-dispose" name="method-i-dispose" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>释放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_source')" id="l_method-i-dispose_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Battler.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bitmap</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-setup_new_effect">
+            
+              <b>setup_new_effect</b>()
+            
+            <a href="../classes/Sprite_Battler.html#method-i-setup_new_effect" name="method-i-setup_new_effect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>设置新效果</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-setup_new_effect_source')" id="l_method-i-setup_new_effect_source">show</a>
+                
+              </p>
+              <div id="method-i-setup_new_effect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Battler.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">setup_new_effect</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">white_flash</span>
+    <span class="ruby-ivar">@effect_type</span> = <span class="ruby-constant">WHITEN</span>
+    <span class="ruby-ivar">@effect_duration</span> = <span class="ruby-number">16</span>
+    <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">white_flash</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">blink</span>
+    <span class="ruby-ivar">@effect_type</span> = <span class="ruby-constant">BLINK</span>
+    <span class="ruby-ivar">@effect_duration</span> = <span class="ruby-number">20</span>
+    <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">blink</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-ivar">@battler_visible</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">exist?</span>
+    <span class="ruby-ivar">@effect_type</span> = <span class="ruby-constant">APPEAR</span>
+    <span class="ruby-ivar">@effect_duration</span> = <span class="ruby-number">16</span>
+    <span class="ruby-ivar">@battler_visible</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@battler_visible</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">hidden</span>
+    <span class="ruby-ivar">@effect_type</span> = <span class="ruby-constant">DISAPPEAR</span>
+    <span class="ruby-ivar">@effect_duration</span> = <span class="ruby-number">32</span>
+    <span class="ruby-ivar">@battler_visible</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">collapse</span>
+    <span class="ruby-ivar">@effect_type</span> = <span class="ruby-constant">COLLAPSE</span>
+    <span class="ruby-ivar">@effect_duration</span> = <span class="ruby-number">48</span>
+    <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">collapse</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@battler_visible</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">animation_id</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">animation</span> = <span class="ruby-identifier">$data_animations</span>[<span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">animation_id</span>]
+    <span class="ruby-identifier">mirror</span> = <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">animation_mirror</span>
+    <span class="ruby-identifier">start_animation</span>(<span class="ruby-identifier">animation</span>, <span class="ruby-identifier">mirror</span>)
+    <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">animation_id</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Sprite_Battler.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新画面</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Battler.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@battler</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@use_sprite</span> = <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">use_sprite?</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@use_sprite</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">x</span> = <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">screen_x</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">y</span> = <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">screen_y</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">z</span> = <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">screen_z</span>
+      <span class="ruby-identifier">update_battler_bitmap</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">setup_new_effect</span>
+    <span class="ruby-identifier">update_effect</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_appear">
+            
+              <b>update_appear</b>()
+            
+            <a href="../classes/Sprite_Battler.html#method-i-update_appear" name="method-i-update_appear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新出现效果</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_appear_source')" id="l_method-i-update_appear_source">show</a>
+                
+              </p>
+              <div id="method-i-update_appear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Battler.rb, line 166</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_appear</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">blend_type</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">color</span>.<span class="ruby-identifier">set</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">opacity</span> = (<span class="ruby-number">16</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@effect_duration</span>) * <span class="ruby-number">16</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_battler_bitmap">
+            
+              <b>update_battler_bitmap</b>()
+            
+            <a href="../classes/Sprite_Battler.html#method-i-update_battler_bitmap" name="method-i-update_battler_bitmap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新传送的位图数据</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_battler_bitmap_source')" id="l_method-i-update_battler_bitmap_source">show</a>
+                
+              </p>
+              <div id="method-i-update_battler_bitmap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Battler.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_battler_bitmap</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">battler_name</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@battler_name</span> <span class="ruby-keyword">or</span>
+     <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">battler_hue</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@battler_hue</span>
+    <span class="ruby-ivar">@battler_name</span> = <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">battler_name</span>
+    <span class="ruby-ivar">@battler_hue</span> = <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">battler_hue</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-constant">Cache</span>.<span class="ruby-identifier">battler</span>(<span class="ruby-ivar">@battler_name</span>, <span class="ruby-ivar">@battler_hue</span>)
+    <span class="ruby-ivar">@width</span> = <span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">width</span>
+    <span class="ruby-ivar">@height</span> = <span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">height</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-ivar">@width</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-ivar">@height</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">dead?</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">hidden</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">opacity</span> = <span class="ruby-number">0</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_blink">
+            
+              <b>update_blink</b>()
+            
+            <a href="../classes/Sprite_Battler.html#method-i-update_blink" name="method-i-update_blink" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新闪烁效果</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_blink_source')" id="l_method-i-update_blink_source">show</a>
+                
+              </p>
+              <div id="method-i-update_blink_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Battler.rb, line 156</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_blink</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">blend_type</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">color</span>.<span class="ruby-identifier">set</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">opacity</span> = <span class="ruby-number">255</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">visible</span> = (<span class="ruby-ivar">@effect_duration</span> <span class="ruby-operator">%</span> <span class="ruby-number">10</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">5</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_collapse">
+            
+              <b>update_collapse</b>()
+            
+            <a href="../classes/Sprite_Battler.html#method-i-update_collapse" name="method-i-update_collapse" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新崩坏效果</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_collapse_source')" id="l_method-i-update_collapse_source">show</a>
+                
+              </p>
+              <div id="method-i-update_collapse_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Battler.rb, line 184</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_collapse</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">blend_type</span> = <span class="ruby-number">1</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">color</span>.<span class="ruby-identifier">set</span>(<span class="ruby-number">255</span>, <span class="ruby-number">128</span>, <span class="ruby-number">128</span>, <span class="ruby-number">128</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">opacity</span> = <span class="ruby-number">256</span> <span class="ruby-operator">-</span> (<span class="ruby-number">48</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@effect_duration</span>) * <span class="ruby-number">6</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_disappear">
+            
+              <b>update_disappear</b>()
+            
+            <a href="../classes/Sprite_Battler.html#method-i-update_disappear" name="method-i-update_disappear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新消失效果</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_disappear_source')" id="l_method-i-update_disappear_source">show</a>
+                
+              </p>
+              <div id="method-i-update_disappear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Battler.rb, line 175</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_disappear</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">blend_type</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">color</span>.<span class="ruby-identifier">set</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">opacity</span> = <span class="ruby-number">256</span> <span class="ruby-operator">-</span> (<span class="ruby-number">32</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@effect_duration</span>) * <span class="ruby-number">10</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_effect">
+            
+              <b>update_effect</b>()
+            
+            <a href="../classes/Sprite_Battler.html#method-i-update_effect" name="method-i-update_effect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新效果</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_effect_source')" id="l_method-i-update_effect_source">show</a>
+                
+              </p>
+              <div id="method-i-update_effect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Battler.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_effect</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@effect_duration</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@effect_duration</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-ivar">@effect_type</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">WHITEN</span>
+      <span class="ruby-identifier">update_whiten</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">BLINK</span>
+      <span class="ruby-identifier">update_blink</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">APPEAR</span>
+      <span class="ruby-identifier">update_appear</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">DISAPPEAR</span>
+      <span class="ruby-identifier">update_disappear</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">COLLAPSE</span>
+      <span class="ruby-identifier">update_collapse</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_whiten">
+            
+              <b>update_whiten</b>()
+            
+            <a href="../classes/Sprite_Battler.html#method-i-update_whiten" name="method-i-update_whiten" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新白色闪光效果</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_whiten_source')" id="l_method-i-update_whiten_source">show</a>
+                
+              </p>
+              <div id="method-i-update_whiten_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Battler.rb, line 146</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_whiten</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">blend_type</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">color</span>.<span class="ruby-identifier">set</span>(<span class="ruby-number">255</span>, <span class="ruby-number">255</span>, <span class="ruby-number">255</span>, <span class="ruby-number">128</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">opacity</span> = <span class="ruby-number">255</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">color</span>.<span class="ruby-identifier">alpha</span> = <span class="ruby-number">128</span> <span class="ruby-operator">-</span> (<span class="ruby-number">16</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@effect_duration</span>) * <span class="ruby-number">10</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

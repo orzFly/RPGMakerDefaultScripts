@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Window_Selectable</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Window_Selectable 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Window_Base.html">Window_Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Window_Selectable_rb.html">Window_Selectable.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This window class contains cursor movement and scroll functions.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-help_window-3D">help_window=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-index-3D">index=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-page_item_max">page_item_max</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-page_row_max">page_row_max</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-row_max">row_max</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-top_row">top_row</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-top_row-3D">top_row=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_cursor_rect">update_cursor_rect</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>help_window</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>index</td>
+            <td class='attr-desc'><p>Public Instance Variables</p></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(x, y, width, height)
+            
+            <a href="../classes/Window_Selectable.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Object Initialization</p>
+
+<p>x      : window x-coordinate y      : window y-coordinate width  : window
+width height : window height</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>)
+  <span class="ruby-ivar">@item_max</span> = <span class="ruby-number">1</span>
+  <span class="ruby-ivar">@column_max</span> = <span class="ruby-number">1</span>
+  <span class="ruby-ivar">@index</span> = <span class="ruby-number">-1</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-help_window-3D">
+            
+              <b>help_window=</b>(help_window)
+            
+            <a href="../classes/Window_Selectable.html#method-i-help_window-3D" name="method-i-help_window-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Set Help Window</p>
+
+<p><a href="Window_Selectable.html#attribute-i-help_window">#help_window</a> :
+new help window</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-help_window-3D_source')" id="l_method-i-help_window-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-help_window-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">help_window=</span>(<span class="ruby-identifier">help_window</span>)
+  <span class="ruby-ivar">@help_window</span> = <span class="ruby-identifier">help_window</span>
+  <span class="ruby-comment"># Update help text (update_help is defined by the subclasses)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">active</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@help_window</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">update_help</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-index-3D">
+            
+              <b>index=</b>(index)
+            
+            <a href="../classes/Window_Selectable.html#method-i-index-3D" name="method-i-index-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Set Cursor Position</p>
+
+<p>index : new cursor position</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-index-3D_source')" id="l_method-i-index-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-index-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">index=</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-ivar">@index</span> = <span class="ruby-identifier">index</span>
+  <span class="ruby-comment"># Update Help Text (update_help is defined by the subclasses)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">active</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@help_window</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">update_help</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Update cursor rectangle</span>
+  <span class="ruby-identifier">update_cursor_rect</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-page_item_max">
+            
+              <b>page_item_max</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-page_item_max" name="method-i-page_item_max" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Number of Items Displayable on 1 Page</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-page_item_max_source')" id="l_method-i-page_item_max_source">show</a>
+                
+              </p>
+              <div id="method-i-page_item_max_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">page_item_max</span>
+  <span class="ruby-comment"># Multiply row count (page_row_max) times column count (@column_max)</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">page_row_max</span> * <span class="ruby-ivar">@column_max</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-page_row_max">
+            
+              <b>page_row_max</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-page_row_max" name="method-i-page_row_max" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Number of Rows Displayable on 1 Page</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-page_row_max_source')" id="l_method-i-page_row_max_source">show</a>
+                
+              </p>
+              <div id="method-i-page_row_max_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">page_row_max</span>
+  <span class="ruby-comment"># Subtract a frame height of 32 from the window height, and divide it by</span>
+  <span class="ruby-comment"># 1 row height of 32</span>
+  <span class="ruby-keyword">return</span> (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-number">32</span>) <span class="ruby-operator">/</span> <span class="ruby-number">32</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-row_max">
+            
+              <b>row_max</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-row_max" name="method-i-row_max" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Row Count</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-row_max_source')" id="l_method-i-row_max_source">show</a>
+                
+              </p>
+              <div id="method-i-row_max_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">row_max</span>
+  <span class="ruby-comment"># Compute rows from number of items and columns</span>
+  <span class="ruby-keyword">return</span> (<span class="ruby-ivar">@item_max</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@column_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>) <span class="ruby-operator">/</span> <span class="ruby-ivar">@column_max</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-top_row">
+            
+              <b>top_row</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-top_row" name="method-i-top_row" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Top Row</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-top_row_source')" id="l_method-i-top_row_source">show</a>
+                
+              </p>
+              <div id="method-i-top_row_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">top_row</span>
+  <span class="ruby-comment"># Divide y-coordinate of window contents transfer origin by 1 row</span>
+  <span class="ruby-comment"># height of 32</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">oy</span> <span class="ruby-operator">/</span> <span class="ruby-number">32</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-top_row-3D">
+            
+              <b>top_row=</b>(row)
+            
+            <a href="../classes/Window_Selectable.html#method-i-top_row-3D" name="method-i-top_row-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Set Top Row</p>
+
+<p>row : row shown on top</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-top_row-3D_source')" id="l_method-i-top_row-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-top_row-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">top_row=</span>(<span class="ruby-identifier">row</span>)
+  <span class="ruby-comment"># If row is less than 0, change it to 0</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">row</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If row exceeds row_max - 1, change it to row_max - 1</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">row_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>
+    <span class="ruby-identifier">row</span> = <span class="ruby-identifier">row_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Multiply 1 row height by 32 for y-coordinate of window contents</span>
+  <span class="ruby-comment"># transfer origin</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-identifier">row</span> * <span class="ruby-number">32</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Frame Update</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-comment"># If cursor is movable</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">active</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@item_max</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">0</span>
+    <span class="ruby-comment"># If pressing down on the directional buttons</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">DOWN</span>)
+      <span class="ruby-comment"># If column count is 1 and directional button was pressed down with no</span>
+      <span class="ruby-comment"># repeat, or if cursor position is more to the front than</span>
+      <span class="ruby-comment"># (item count - column count)</span>
+      <span class="ruby-keyword">if</span> (<span class="ruby-ivar">@column_max</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span> <span class="ruby-keyword">and</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">DOWN</span>)) <span class="ruby-keyword">or</span>
+         <span class="ruby-ivar">@index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@item_max</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@column_max</span>
+        <span class="ruby-comment"># Move cursor down</span>
+        <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+        <span class="ruby-ivar">@index</span> = (<span class="ruby-ivar">@index</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@column_max</span>) <span class="ruby-operator">%</span> <span class="ruby-ivar">@item_max</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># If the up directional button was pressed</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">UP</span>)
+      <span class="ruby-comment"># If column count is 1 and directional button was pressed up with no</span>
+      <span class="ruby-comment"># repeat, or if cursor position is more to the back than column count</span>
+      <span class="ruby-keyword">if</span> (<span class="ruby-ivar">@column_max</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span> <span class="ruby-keyword">and</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">UP</span>)) <span class="ruby-keyword">or</span>
+         <span class="ruby-ivar">@index</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-ivar">@column_max</span>
+        <span class="ruby-comment"># Move cursor up</span>
+        <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+        <span class="ruby-ivar">@index</span> = (<span class="ruby-ivar">@index</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@column_max</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@item_max</span>) <span class="ruby-operator">%</span> <span class="ruby-ivar">@item_max</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># If the right directional button was pressed</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">RIGHT</span>)
+      <span class="ruby-comment"># If column count is 2 or more, and cursor position is closer to front</span>
+      <span class="ruby-comment"># than (item count -1)</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@column_max</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">2</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@item_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>
+        <span class="ruby-comment"># Move cursor right</span>
+        <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+        <span class="ruby-ivar">@index</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># If the left directional button was pressed</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">LEFT</span>)
+      <span class="ruby-comment"># If column count is 2 or more, and cursor position is more back than 0</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@column_max</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">2</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+        <span class="ruby-comment"># Move cursor left</span>
+        <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+        <span class="ruby-ivar">@index</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># If R button was pressed</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">R</span>)
+      <span class="ruby-comment"># If bottom row being displayed is more to front than bottom data row</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_row</span> <span class="ruby-operator">+</span> (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">page_row_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>) <span class="ruby-operator">&lt;</span> (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">row_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>)
+        <span class="ruby-comment"># Move cursor 1 page back</span>
+        <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+        <span class="ruby-ivar">@index</span> = [<span class="ruby-ivar">@index</span> <span class="ruby-operator">+</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">page_item_max</span>, <span class="ruby-ivar">@item_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>].<span class="ruby-identifier">min</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_row</span> <span class="ruby-operator">+=</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">page_row_max</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># If L button was pressed</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">L</span>)
+      <span class="ruby-comment"># If top row being displayed is more to back than 0</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_row</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+        <span class="ruby-comment"># Move cursor 1 page forward</span>
+        <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+        <span class="ruby-ivar">@index</span> = [<span class="ruby-ivar">@index</span> <span class="ruby-operator">-</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">page_item_max</span>, <span class="ruby-number">0</span>].<span class="ruby-identifier">max</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_row</span> <span class="ruby-operator">-=</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">page_row_max</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Update help text (update_help is defined by the subclasses)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">active</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@help_window</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">update_help</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Update cursor rectangle</span>
+  <span class="ruby-identifier">update_cursor_rect</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_cursor_rect">
+            
+              <b>update_cursor_rect</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-update_cursor_rect" name="method-i-update_cursor_rect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Cursor Rectangle</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_cursor_rect_source')" id="l_method-i-update_cursor_rect_source">show</a>
+                
+              </p>
+              <div id="method-i-update_cursor_rect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_cursor_rect</span>
+  <span class="ruby-comment"># If cursor position is less than 0</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">cursor_rect</span>.<span class="ruby-identifier">empty</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Get current row</span>
+  <span class="ruby-identifier">row</span> = <span class="ruby-ivar">@index</span> <span class="ruby-operator">/</span> <span class="ruby-ivar">@column_max</span>
+  <span class="ruby-comment"># If current row is before top row</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">&lt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_row</span>
+    <span class="ruby-comment"># Scroll so that current row becomes top row</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_row</span> = <span class="ruby-identifier">row</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If current row is more to back than back row</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">&gt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_row</span> <span class="ruby-operator">+</span> (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">page_row_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>)
+    <span class="ruby-comment"># Scroll so that current row becomes back row</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_row</span> = <span class="ruby-identifier">row</span> <span class="ruby-operator">-</span> (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">page_row_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Calculate cursor width</span>
+  <span class="ruby-identifier">cursor_width</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">/</span> <span class="ruby-ivar">@column_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">32</span>
+  <span class="ruby-comment"># Calculate cursor coordinates</span>
+  <span class="ruby-identifier">x</span> = <span class="ruby-ivar">@index</span> <span class="ruby-operator">%</span> <span class="ruby-ivar">@column_max</span> * (<span class="ruby-identifier">cursor_width</span> <span class="ruby-operator">+</span> <span class="ruby-number">32</span>)
+  <span class="ruby-identifier">y</span> = <span class="ruby-ivar">@index</span> <span class="ruby-operator">/</span> <span class="ruby-ivar">@column_max</span> * <span class="ruby-number">32</span> <span class="ruby-operator">-</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">oy</span>
+  <span class="ruby-comment"># Update cursor rectangle</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">cursor_rect</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">cursor_width</span>, <span class="ruby-number">32</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

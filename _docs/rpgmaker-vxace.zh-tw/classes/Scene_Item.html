@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_Item</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_Item 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Scene_ItemBase.html">Scene_ItemBase</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_Item_rb.html">Scene_Item.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>物品畫面</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-create_category_window">create_category_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_item_window">create_item_window</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-on_category_ok">on_category_ok</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_item_cancel">on_item_cancel</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_item_ok">on_item_ok</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-play_se_for_item">play_se_for_item</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-start">start</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-use_item">use_item</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-create_category_window">
+            
+              <b>create_category_window</b>()
+            
+            <a href="../classes/Scene_Item.html#method-i-create_category_window" name="method-i-create_category_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>生成分類視窗</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_category_window_source')" id="l_method-i-create_category_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_category_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Item.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_category_window</span>
+  <span class="ruby-ivar">@category_window</span> = <span class="ruby-constant">Window_ItemCategory</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@category_window</span>.<span class="ruby-identifier">viewport</span> = <span class="ruby-ivar">@viewport</span>
+  <span class="ruby-ivar">@category_window</span>.<span class="ruby-identifier">help_window</span> = <span class="ruby-ivar">@help_window</span>
+  <span class="ruby-ivar">@category_window</span>.<span class="ruby-identifier">y</span> = <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">height</span>
+  <span class="ruby-ivar">@category_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:ok</span>,     <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_category_ok</span>))
+  <span class="ruby-ivar">@category_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:cancel</span>, <span class="ruby-identifier">method</span>(<span class="ruby-value">:return_scene</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_item_window">
+            
+              <b>create_item_window</b>()
+            
+            <a href="../classes/Scene_Item.html#method-i-create_item_window" name="method-i-create_item_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>生成物品視窗</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_item_window_source')" id="l_method-i-create_item_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_item_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Item.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_item_window</span>
+  <span class="ruby-identifier">wy</span> = <span class="ruby-ivar">@category_window</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@category_window</span>.<span class="ruby-identifier">height</span>
+  <span class="ruby-identifier">wh</span> = <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">wy</span>
+  <span class="ruby-ivar">@item_window</span> = <span class="ruby-constant">Window_ItemList</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-identifier">wy</span>, <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span>, <span class="ruby-identifier">wh</span>)
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">viewport</span> = <span class="ruby-ivar">@viewport</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">help_window</span> = <span class="ruby-ivar">@help_window</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:ok</span>,     <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_item_ok</span>))
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:cancel</span>, <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_item_cancel</span>))
+  <span class="ruby-ivar">@category_window</span>.<span class="ruby-identifier">item_window</span> = <span class="ruby-ivar">@item_window</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_category_ok">
+            
+              <b>on_category_ok</b>()
+            
+            <a href="../classes/Scene_Item.html#method-i-on_category_ok" name="method-i-on_category_ok" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>分類“確定”</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_category_ok_source')" id="l_method-i-on_category_ok_source">show</a>
+                
+              </p>
+              <div id="method-i-on_category_ok_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Item.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_category_ok</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">activate</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">select_last</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_item_cancel">
+            
+              <b>on_item_cancel</b>()
+            
+            <a href="../classes/Scene_Item.html#method-i-on_item_cancel" name="method-i-on_item_cancel" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>物品“取消”</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_item_cancel_source')" id="l_method-i-on_item_cancel_source">show</a>
+                
+              </p>
+              <div id="method-i-on_item_cancel_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Item.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_item_cancel</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">unselect</span>
+  <span class="ruby-ivar">@category_window</span>.<span class="ruby-identifier">activate</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_item_ok">
+            
+              <b>on_item_ok</b>()
+            
+            <a href="../classes/Scene_Item.html#method-i-on_item_ok" name="method-i-on_item_ok" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>物品“確定”</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_item_ok_source')" id="l_method-i-on_item_ok_source">show</a>
+                
+              </p>
+              <div id="method-i-on_item_ok_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Item.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_item_ok</span>
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">last_item</span>.<span class="ruby-identifier">object</span> = <span class="ruby-identifier">item</span>
+  <span class="ruby-identifier">determine_item</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-play_se_for_item">
+            
+              <b>play_se_for_item</b>()
+            
+            <a href="../classes/Scene_Item.html#method-i-play_se_for_item" name="method-i-play_se_for_item" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>播放使用物品聲效</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-play_se_for_item_source')" id="l_method-i-play_se_for_item_source">show</a>
+                
+              </p>
+              <div id="method-i-play_se_for_item_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Item.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">play_se_for_item</span>
+  <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_use_item</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start">
+            
+              <b>start</b>()
+            
+            <a href="../classes/Scene_Item.html#method-i-start" name="method-i-start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>開始處理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_source')" id="l_method-i-start_source">show</a>
+                
+              </p>
+              <div id="method-i-start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Item.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">create_help_window</span>
+  <span class="ruby-identifier">create_category_window</span>
+  <span class="ruby-identifier">create_item_window</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-use_item">
+            
+              <b>use_item</b>()
+            
+            <a href="../classes/Scene_Item.html#method-i-use_item" name="method-i-use_item" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>使用物品</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-use_item_source')" id="l_method-i-use_item_source">show</a>
+                
+              </p>
+              <div id="method-i-use_item_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Item.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">use_item</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">redraw_current_item</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_Skill</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_Skill 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_Skill_rb.html">Scene_Skill.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This class performs skill screen processing.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-main">main</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_skill">update_skill</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_target">update_target</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(actor_index = 0, equip_index = 0)
+            
+            <a href="../classes/Scene_Skill.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Object Initialization</p>
+
+<p>actor_index : actor index</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Skill.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">actor_index</span> = <span class="ruby-number">0</span>, <span class="ruby-identifier">equip_index</span> = <span class="ruby-number">0</span>)
+  <span class="ruby-ivar">@actor_index</span> = <span class="ruby-identifier">actor_index</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-main">
+            
+              <b>main</b>()
+            
+            <a href="../classes/Scene_Skill.html#method-i-main" name="method-i-main" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Main Processing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-main_source')" id="l_method-i-main_source">show</a>
+                
+              </p>
+              <div id="method-i-main_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Skill.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">main</span>
+  <span class="ruby-comment"># Get actor</span>
+  <span class="ruby-ivar">@actor</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">actors</span>[<span class="ruby-ivar">@actor_index</span>]
+  <span class="ruby-comment"># Make help window, status window, and skill window</span>
+  <span class="ruby-ivar">@help_window</span> = <span class="ruby-constant">Window_Help</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@status_window</span> = <span class="ruby-constant">Window_SkillStatus</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@actor</span>)
+  <span class="ruby-ivar">@skill_window</span> = <span class="ruby-constant">Window_Skill</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@actor</span>)
+  <span class="ruby-comment"># Associate help window</span>
+  <span class="ruby-ivar">@skill_window</span>.<span class="ruby-identifier">help_window</span> = <span class="ruby-ivar">@help_window</span>
+  <span class="ruby-comment"># Make target window (set to invisible / inactive)</span>
+  <span class="ruby-ivar">@target_window</span> = <span class="ruby-constant">Window_Target</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-comment"># Execute transition</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">transition</span>
+  <span class="ruby-comment"># Main loop</span>
+  <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-comment"># Update game screen</span>
+    <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># Update input information</span>
+    <span class="ruby-constant">Input</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># Frame update</span>
+    <span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># Abort loop if screen is changed</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$scene</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">self</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Prepare for transition</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">freeze</span>
+  <span class="ruby-comment"># Dispose of windows</span>
+  <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@skill_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Scene_Skill.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Frame Update</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Skill.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-comment"># Update windows</span>
+  <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@skill_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-comment"># If skill window is active: call update_skill</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@skill_window</span>.<span class="ruby-identifier">active</span>
+    <span class="ruby-identifier">update_skill</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If skill target is active: call update_target</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">active</span>
+    <span class="ruby-identifier">update_target</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_skill">
+            
+              <b>update_skill</b>()
+            
+            <a href="../classes/Scene_Skill.html#method-i-update_skill" name="method-i-update_skill" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Frame Update (if skill window is active)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_skill_source')" id="l_method-i-update_skill_source">show</a>
+                
+              </p>
+              <div id="method-i-update_skill_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Skill.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_skill</span>
+  <span class="ruby-comment"># If B button was pressed</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>)
+    <span class="ruby-comment"># Play cancel SE</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cancel_se</span>)
+    <span class="ruby-comment"># Switch to menu screen</span>
+    <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Menu</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">1</span>)
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If C button was pressed</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+    <span class="ruby-comment"># Get currently selected data on the skill window</span>
+    <span class="ruby-ivar">@skill</span> = <span class="ruby-ivar">@skill_window</span>.<span class="ruby-identifier">skill</span>
+    <span class="ruby-comment"># If unable to use</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@skill</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">or</span> <span class="ruby-keyword">not</span> <span class="ruby-ivar">@actor</span>.<span class="ruby-identifier">skill_can_use?</span>(<span class="ruby-ivar">@skill</span>.<span class="ruby-identifier">id</span>)
+      <span class="ruby-comment"># Play buzzer SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">buzzer_se</span>)
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># Play decision SE</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">decision_se</span>)
+    <span class="ruby-comment"># If effect scope is ally</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@skill</span>.<span class="ruby-identifier">scope</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">3</span>
+      <span class="ruby-comment"># Activate target window</span>
+      <span class="ruby-ivar">@skill_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">x</span> = (<span class="ruby-ivar">@skill_window</span>.<span class="ruby-identifier">index</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span>) <span class="ruby-operator">%</span> <span class="ruby-number">2</span> * <span class="ruby-number">304</span>
+      <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-comment"># Set cursor position to effect scope (single / all)</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@skill</span>.<span class="ruby-identifier">scope</span> <span class="ruby-operator">==</span> <span class="ruby-number">4</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@skill</span>.<span class="ruby-identifier">scope</span> <span class="ruby-operator">==</span> <span class="ruby-number">6</span>
+        <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">index</span> = <span class="ruby-number">-1</span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@skill</span>.<span class="ruby-identifier">scope</span> <span class="ruby-operator">==</span> <span class="ruby-number">7</span>
+        <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">index</span> = <span class="ruby-ivar">@actor_index</span> <span class="ruby-operator">-</span> <span class="ruby-number">10</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">index</span> = <span class="ruby-number">0</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># If effect scope is other than ally</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-comment"># If common event ID is valid</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@skill</span>.<span class="ruby-identifier">common_event_id</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+        <span class="ruby-comment"># Common event call reservation</span>
+        <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">common_event_id</span> = <span class="ruby-ivar">@skill</span>.<span class="ruby-identifier">common_event_id</span>
+        <span class="ruby-comment"># Play use skill SE</span>
+        <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-ivar">@skill</span>.<span class="ruby-identifier">menu_se</span>)
+        <span class="ruby-comment"># Use up SP</span>
+        <span class="ruby-ivar">@actor</span>.<span class="ruby-identifier">sp</span> <span class="ruby-operator">-=</span> <span class="ruby-ivar">@skill</span>.<span class="ruby-identifier">sp_cost</span>
+        <span class="ruby-comment"># Remake each window content</span>
+        <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">refresh</span>
+        <span class="ruby-ivar">@skill_window</span>.<span class="ruby-identifier">refresh</span>
+        <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">refresh</span>
+        <span class="ruby-comment"># Switch to map screen</span>
+        <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Map</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-keyword">return</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If R button was pressed</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">R</span>)
+    <span class="ruby-comment"># Play cursor SE</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+    <span class="ruby-comment"># To next actor</span>
+    <span class="ruby-ivar">@actor_index</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+    <span class="ruby-ivar">@actor_index</span> <span class="ruby-operator">=</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">actors</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-comment"># Switch to different skill screen</span>
+    <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Skill</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@actor_index</span>)
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If L button was pressed</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">L</span>)
+    <span class="ruby-comment"># Play cursor SE</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+    <span class="ruby-comment"># To previous actor</span>
+    <span class="ruby-ivar">@actor_index</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">actors</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>
+    <span class="ruby-ivar">@actor_index</span> <span class="ruby-operator">=</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">actors</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-comment"># Switch to different skill screen</span>
+    <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Skill</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@actor_index</span>)
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_target">
+            
+              <b>update_target</b>()
+            
+            <a href="../classes/Scene_Skill.html#method-i-update_target" name="method-i-update_target" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Frame Update (when target window is active)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_target_source')" id="l_method-i-update_target_source">show</a>
+                
+              </p>
+              <div id="method-i-update_target_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Skill.rb, line 163</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_target</span>
+  <span class="ruby-comment"># If B button was pressed</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>)
+    <span class="ruby-comment"># Play cancel SE</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cancel_se</span>)
+    <span class="ruby-comment"># Erase target window</span>
+    <span class="ruby-ivar">@skill_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If C button was pressed</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+    <span class="ruby-comment"># If unable to use because SP ran out</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@actor</span>.<span class="ruby-identifier">skill_can_use?</span>(<span class="ruby-ivar">@skill</span>.<span class="ruby-identifier">id</span>)
+      <span class="ruby-comment"># Play buzzer SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">buzzer_se</span>)
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># If target is all</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">index</span> <span class="ruby-operator">==</span> <span class="ruby-number">-1</span>
+      <span class="ruby-comment"># Apply skill use effects to entire party</span>
+      <span class="ruby-identifier">used</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">actors</span>
+        <span class="ruby-identifier">used</span> <span class="ruby-operator">|=</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">skill_effect</span>(<span class="ruby-ivar">@actor</span>, <span class="ruby-ivar">@skill</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># If target is user</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">index</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-number">-2</span>
+      <span class="ruby-comment"># Apply skill use effects to target actor</span>
+      <span class="ruby-identifier">target</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">actors</span>[<span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">index</span> <span class="ruby-operator">+</span> <span class="ruby-number">10</span>]
+      <span class="ruby-identifier">used</span> = <span class="ruby-identifier">target</span>.<span class="ruby-identifier">skill_effect</span>(<span class="ruby-ivar">@actor</span>, <span class="ruby-ivar">@skill</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># If single target</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">index</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">0</span>
+      <span class="ruby-comment"># Apply skill use effects to target actor</span>
+      <span class="ruby-identifier">target</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">actors</span>[<span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">index</span>]
+      <span class="ruby-identifier">used</span> = <span class="ruby-identifier">target</span>.<span class="ruby-identifier">skill_effect</span>(<span class="ruby-ivar">@actor</span>, <span class="ruby-ivar">@skill</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># If skill was used</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">used</span>
+      <span class="ruby-comment"># Play skill use SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-ivar">@skill</span>.<span class="ruby-identifier">menu_se</span>)
+      <span class="ruby-comment"># Use up SP</span>
+      <span class="ruby-ivar">@actor</span>.<span class="ruby-identifier">sp</span> <span class="ruby-operator">-=</span> <span class="ruby-ivar">@skill</span>.<span class="ruby-identifier">sp_cost</span>
+      <span class="ruby-comment"># Remake each window content</span>
+      <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">refresh</span>
+      <span class="ruby-ivar">@skill_window</span>.<span class="ruby-identifier">refresh</span>
+      <span class="ruby-ivar">@target_window</span>.<span class="ruby-identifier">refresh</span>
+      <span class="ruby-comment"># If entire party is dead</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">all_dead?</span>
+        <span class="ruby-comment"># Switch to game over screen</span>
+        <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Gameover</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-keyword">return</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-comment"># If command event ID is valid</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@skill</span>.<span class="ruby-identifier">common_event_id</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+        <span class="ruby-comment"># Command event call reservation</span>
+        <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">common_event_id</span> = <span class="ruby-ivar">@skill</span>.<span class="ruby-identifier">common_event_id</span>
+        <span class="ruby-comment"># Switch to map screen</span>
+        <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Map</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-keyword">return</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># If skill wasn't used</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">used</span>
+      <span class="ruby-comment"># Play buzzer SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">buzzer_se</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

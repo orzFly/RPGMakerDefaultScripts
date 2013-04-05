@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_Menu</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_Menu 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Scene_Base.html">Scene_Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_Menu_rb.html">Scene_Menu.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This class performs the menu screen processing.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-create_command_window">create_command_window</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-end_actor_selection">end_actor_selection</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-start">start</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start_actor_selection">start_actor_selection</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-terminate">terminate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_actor_selection">update_actor_selection</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_command_selection">update_command_selection</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(menu_index = 0)
+            
+            <a href="../classes/Scene_Menu.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Object Initialization</p>
+
+<p>menu_index : command cursor’s initial position</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Menu.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">menu_index</span> = <span class="ruby-number">0</span>)
+  <span class="ruby-ivar">@menu_index</span> = <span class="ruby-identifier">menu_index</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-create_command_window">
+            
+              <b>create_command_window</b>()
+            
+            <a href="../classes/Scene_Menu.html#method-i-create_command_window" name="method-i-create_command_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Command Window</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_command_window_source')" id="l_method-i-create_command_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_command_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Menu.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_command_window</span>
+  <span class="ruby-identifier">s1</span> = <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-identifier">item</span>
+  <span class="ruby-identifier">s2</span> = <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-identifier">skill</span>
+  <span class="ruby-identifier">s3</span> = <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-identifier">equip</span>
+  <span class="ruby-identifier">s4</span> = <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-identifier">status</span>
+  <span class="ruby-identifier">s5</span> = <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-identifier">save</span>
+  <span class="ruby-identifier">s6</span> = <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-identifier">game_end</span>
+  <span class="ruby-ivar">@command_window</span> = <span class="ruby-constant">Window_Command</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">160</span>, [<span class="ruby-identifier">s1</span>, <span class="ruby-identifier">s2</span>, <span class="ruby-identifier">s3</span>, <span class="ruby-identifier">s4</span>, <span class="ruby-identifier">s5</span>, <span class="ruby-identifier">s6</span>])
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">index</span> = <span class="ruby-ivar">@menu_index</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">members</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>          <span class="ruby-comment"># If number of party members is 0</span>
+    <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">draw_item</span>(<span class="ruby-number">0</span>, <span class="ruby-keyword">false</span>)     <span class="ruby-comment"># Disable item</span>
+    <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">draw_item</span>(<span class="ruby-number">1</span>, <span class="ruby-keyword">false</span>)     <span class="ruby-comment"># Disable skill</span>
+    <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">draw_item</span>(<span class="ruby-number">2</span>, <span class="ruby-keyword">false</span>)     <span class="ruby-comment"># Disable equipment</span>
+    <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">draw_item</span>(<span class="ruby-number">3</span>, <span class="ruby-keyword">false</span>)     <span class="ruby-comment"># Disable status</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">save_disabled</span>             <span class="ruby-comment"># If save is forbidden</span>
+    <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">draw_item</span>(<span class="ruby-number">4</span>, <span class="ruby-keyword">false</span>)     <span class="ruby-comment"># Disable save</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-end_actor_selection">
+            
+              <b>end_actor_selection</b>()
+            
+            <a href="../classes/Scene_Menu.html#method-i-end_actor_selection" name="method-i-end_actor_selection" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>End Actor Selection</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-end_actor_selection_source')" id="l_method-i-end_actor_selection_source">show</a>
+                
+              </p>
+              <div id="method-i-end_actor_selection_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Menu.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">end_actor_selection</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">index</span> = <span class="ruby-number">-1</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start">
+            
+              <b>start</b>()
+            
+            <a href="../classes/Scene_Menu.html#method-i-start" name="method-i-start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Start processing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_source')" id="l_method-i-start_source">show</a>
+                
+              </p>
+              <div id="method-i-start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Menu.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">create_menu_background</span>
+  <span class="ruby-identifier">create_command_window</span>
+  <span class="ruby-ivar">@gold_window</span> = <span class="ruby-constant">Window_Gold</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">360</span>)
+  <span class="ruby-ivar">@status_window</span> = <span class="ruby-constant">Window_MenuStatus</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">160</span>, <span class="ruby-number">0</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start_actor_selection">
+            
+              <b>start_actor_selection</b>()
+            
+            <a href="../classes/Scene_Menu.html#method-i-start_actor_selection" name="method-i-start_actor_selection" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Start Actor Selection</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_actor_selection_source')" id="l_method-i-start_actor_selection_source">show</a>
+                
+              </p>
+              <div id="method-i-start_actor_selection_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Menu.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start_actor_selection</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">last_actor_index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">item_max</span>
+    <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">index</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">last_actor_index</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">index</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-terminate">
+            
+              <b>terminate</b>()
+            
+            <a href="../classes/Scene_Menu.html#method-i-terminate" name="method-i-terminate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Termination Processing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-terminate_source')" id="l_method-i-terminate_source">show</a>
+                
+              </p>
+              <div id="method-i-terminate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Menu.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">terminate</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">dispose_menu_background</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Scene_Menu.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Frame Update</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Menu.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">update_menu_background</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">active</span>
+    <span class="ruby-identifier">update_command_selection</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">active</span>
+    <span class="ruby-identifier">update_actor_selection</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_actor_selection">
+            
+              <b>update_actor_selection</b>()
+            
+            <a href="../classes/Scene_Menu.html#method-i-update_actor_selection" name="method-i-update_actor_selection" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Actor Selection</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_actor_selection_source')" id="l_method-i-update_actor_selection_source">show</a>
+                
+              </p>
+              <div id="method-i-update_actor_selection_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Menu.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_actor_selection</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>)
+    <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_cancel</span>
+    <span class="ruby-identifier">end_actor_selection</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+    <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">last_actor_index</span> = <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">index</span>
+    <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_decision</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">index</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>  <span class="ruby-comment"># skill</span>
+      <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Skill</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">index</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>  <span class="ruby-comment"># equipment</span>
+      <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Equip</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">index</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-number">3</span>  <span class="ruby-comment"># status</span>
+      <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Status</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">index</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_command_selection">
+            
+              <b>update_command_selection</b>()
+            
+            <a href="../classes/Scene_Menu.html#method-i-update_command_selection" name="method-i-update_command_selection" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Command Selection</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_command_selection_source')" id="l_method-i-update_command_selection_source">show</a>
+                
+              </p>
+              <div id="method-i-update_command_selection_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Menu.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_command_selection</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>)
+    <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_cancel</span>
+    <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Map</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">members</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">4</span>
+      <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_buzzer</span>
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">save_disabled</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">index</span> <span class="ruby-operator">==</span> <span class="ruby-number">4</span>
+      <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_buzzer</span>
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_decision</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">index</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">0</span>      <span class="ruby-comment"># Item</span>
+      <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Item</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>,<span class="ruby-number">2</span>,<span class="ruby-number">3</span>  <span class="ruby-comment"># Skill, equipment, status</span>
+      <span class="ruby-identifier">start_actor_selection</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">4</span>      <span class="ruby-comment"># Save</span>
+      <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">true</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">false</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-number">5</span>      <span class="ruby-comment"># End Game</span>
+      <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_End</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

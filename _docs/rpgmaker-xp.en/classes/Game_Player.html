@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Game_Player</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Game_Player 
+            
+                <span class="parent">&lt; 
+                    
+                    Game_Character
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Game_Player_rb.html">Game_Player.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This class handles the player. Its functions include event starting
+determinants and map scrolling. Refer to “$game_player” for the one
+instance of this class.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-center">center</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-check_event_trigger_here">check_event_trigger_here</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-check_event_trigger_there">check_event_trigger_there</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-check_event_trigger_touch">check_event_trigger_touch</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-encounter_count">encounter_count</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-increase_steps">increase_steps</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-make_encounter_count">make_encounter_count</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-moveto">moveto</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-passable-3F">passable?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-refresh">refresh</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">CENTER_X</td>
+            <td>=</td>
+            <td class="attr-value">(320 - 16) * 4</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>Invariables</p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">CENTER_Y</td>
+            <td>=</td>
+            <td class="attr-value">(240 - 16) * 4</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-center">
+            
+              <b>center</b>(x, y)
+            
+            <a href="../classes/Game_Player.html#method-i-center" name="method-i-center" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Set Map Display Position to Center of Screen</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-center_source')" id="l_method-i-center_source">show</a>
+                
+              </p>
+              <div id="method-i-center_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">center</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">max_x</span> = (<span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-number">20</span>) * <span class="ruby-number">128</span>
+  <span class="ruby-identifier">max_y</span> = (<span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-number">15</span>) * <span class="ruby-number">128</span>
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">display_x</span> = [<span class="ruby-number">0</span>, [<span class="ruby-identifier">x</span> * <span class="ruby-number">128</span> <span class="ruby-operator">-</span> <span class="ruby-constant">CENTER_X</span>, <span class="ruby-identifier">max_x</span>].<span class="ruby-identifier">min</span>].<span class="ruby-identifier">max</span>
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">display_y</span> = [<span class="ruby-number">0</span>, [<span class="ruby-identifier">y</span> * <span class="ruby-number">128</span> <span class="ruby-operator">-</span> <span class="ruby-constant">CENTER_Y</span>, <span class="ruby-identifier">max_y</span>].<span class="ruby-identifier">min</span>].<span class="ruby-identifier">max</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-check_event_trigger_here">
+            
+              <b>check_event_trigger_here</b>(triggers)
+            
+            <a href="../classes/Game_Player.html#method-i-check_event_trigger_here" name="method-i-check_event_trigger_here" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Same Position Starting Determinant</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-check_event_trigger_here_source')" id="l_method-i-check_event_trigger_here_source">show</a>
+                
+              </p>
+              <div id="method-i-check_event_trigger_here_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">check_event_trigger_here</span>(<span class="ruby-identifier">triggers</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-comment"># If event is running</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">map_interpreter</span>.<span class="ruby-identifier">running?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># All event loops</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">event</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">events</span>.<span class="ruby-identifier">values</span>
+    <span class="ruby-comment"># If event coordinates and triggers are consistent</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">event</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@x</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">event</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@y</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">triggers</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">event</span>.<span class="ruby-identifier">trigger</span>)
+      <span class="ruby-comment"># If starting determinant is same position event (other than jumping)</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">event</span>.<span class="ruby-identifier">jumping?</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">event</span>.<span class="ruby-identifier">over_trigger?</span>
+        <span class="ruby-identifier">event</span>.<span class="ruby-identifier">start</span>
+        <span class="ruby-identifier">result</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-check_event_trigger_there">
+            
+              <b>check_event_trigger_there</b>(triggers)
+            
+            <a href="../classes/Game_Player.html#method-i-check_event_trigger_there" name="method-i-check_event_trigger_there" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Front Envent Starting Determinant</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-check_event_trigger_there_source')" id="l_method-i-check_event_trigger_there_source">show</a>
+                
+              </p>
+              <div id="method-i-check_event_trigger_there_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 145</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">check_event_trigger_there</span>(<span class="ruby-identifier">triggers</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-comment"># If event is running</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">map_interpreter</span>.<span class="ruby-identifier">running?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Calculate front event coordinates</span>
+  <span class="ruby-identifier">new_x</span> = <span class="ruby-ivar">@x</span> <span class="ruby-operator">+</span> (<span class="ruby-ivar">@direction</span> <span class="ruby-operator">==</span> <span class="ruby-number">6</span> <span class="ruby-operator">?</span> <span class="ruby-number">1</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@direction</span> <span class="ruby-operator">==</span> <span class="ruby-number">4</span> <span class="ruby-operator">?</span> <span class="ruby-number">-1</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>)
+  <span class="ruby-identifier">new_y</span> = <span class="ruby-ivar">@y</span> <span class="ruby-operator">+</span> (<span class="ruby-ivar">@direction</span> <span class="ruby-operator">==</span> <span class="ruby-number">2</span> <span class="ruby-operator">?</span> <span class="ruby-number">1</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@direction</span> <span class="ruby-operator">==</span> <span class="ruby-number">8</span> <span class="ruby-operator">?</span> <span class="ruby-number">-1</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>)
+  <span class="ruby-comment"># All event loops</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">event</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">events</span>.<span class="ruby-identifier">values</span>
+    <span class="ruby-comment"># If event coordinates and triggers are consistent</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">event</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">new_x</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">event</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">new_y</span> <span class="ruby-keyword">and</span>
+       <span class="ruby-identifier">triggers</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">event</span>.<span class="ruby-identifier">trigger</span>)
+      <span class="ruby-comment"># If starting determinant is front event (other than jumping)</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">event</span>.<span class="ruby-identifier">jumping?</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">event</span>.<span class="ruby-identifier">over_trigger?</span>
+        <span class="ruby-identifier">event</span>.<span class="ruby-identifier">start</span>
+        <span class="ruby-identifier">result</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If fitting event is not found</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">result</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">false</span>
+    <span class="ruby-comment"># If front tile is a counter</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">counter?</span>(<span class="ruby-identifier">new_x</span>, <span class="ruby-identifier">new_y</span>)
+      <span class="ruby-comment"># Calculate 1 tile inside coordinates</span>
+      <span class="ruby-identifier">new_x</span> <span class="ruby-operator">+=</span> (<span class="ruby-ivar">@direction</span> <span class="ruby-operator">==</span> <span class="ruby-number">6</span> <span class="ruby-operator">?</span> <span class="ruby-number">1</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@direction</span> <span class="ruby-operator">==</span> <span class="ruby-number">4</span> <span class="ruby-operator">?</span> <span class="ruby-number">-1</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>)
+      <span class="ruby-identifier">new_y</span> <span class="ruby-operator">+=</span> (<span class="ruby-ivar">@direction</span> <span class="ruby-operator">==</span> <span class="ruby-number">2</span> <span class="ruby-operator">?</span> <span class="ruby-number">1</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@direction</span> <span class="ruby-operator">==</span> <span class="ruby-number">8</span> <span class="ruby-operator">?</span> <span class="ruby-number">-1</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>)
+      <span class="ruby-comment"># All event loops</span>
+      <span class="ruby-keyword">for</span> <span class="ruby-identifier">event</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">events</span>.<span class="ruby-identifier">values</span>
+        <span class="ruby-comment"># If event coordinates and triggers are consistent</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">event</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">new_x</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">event</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">new_y</span> <span class="ruby-keyword">and</span>
+           <span class="ruby-identifier">triggers</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">event</span>.<span class="ruby-identifier">trigger</span>)
+          <span class="ruby-comment"># If starting determinant is front event (other than jumping)</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">event</span>.<span class="ruby-identifier">jumping?</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">event</span>.<span class="ruby-identifier">over_trigger?</span>
+            <span class="ruby-identifier">event</span>.<span class="ruby-identifier">start</span>
+            <span class="ruby-identifier">result</span> = <span class="ruby-keyword">true</span>
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-check_event_trigger_touch">
+            
+              <b>check_event_trigger_touch</b>(x, y)
+            
+            <a href="../classes/Game_Player.html#method-i-check_event_trigger_touch" name="method-i-check_event_trigger_touch" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Touch Event Starting Determinant</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-check_event_trigger_touch_source')" id="l_method-i-check_event_trigger_touch_source">show</a>
+                
+              </p>
+              <div id="method-i-check_event_trigger_touch_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 193</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">check_event_trigger_touch</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-comment"># If event is running</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">map_interpreter</span>.<span class="ruby-identifier">running?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># All event loops</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">event</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">events</span>.<span class="ruby-identifier">values</span>
+    <span class="ruby-comment"># If event coordinates and triggers are consistent</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">event</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">x</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">event</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">y</span> <span class="ruby-keyword">and</span> [<span class="ruby-number">1</span>,<span class="ruby-number">2</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">event</span>.<span class="ruby-identifier">trigger</span>)
+      <span class="ruby-comment"># If starting determinant is front event (other than jumping)</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">event</span>.<span class="ruby-identifier">jumping?</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">event</span>.<span class="ruby-identifier">over_trigger?</span>
+        <span class="ruby-identifier">event</span>.<span class="ruby-identifier">start</span>
+        <span class="ruby-identifier">result</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-encounter_count">
+            
+              <b>encounter_count</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-encounter_count" name="method-i-encounter_count" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Encounter Count</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-encounter_count_source')" id="l_method-i-encounter_count_source">show</a>
+                
+              </p>
+              <div id="method-i-encounter_count_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">encounter_count</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@encounter_count</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-increase_steps">
+            
+              <b>increase_steps</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-increase_steps" name="method-i-increase_steps" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Increaase Steps</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-increase_steps_source')" id="l_method-i-increase_steps_source">show</a>
+                
+              </p>
+              <div id="method-i-increase_steps_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">increase_steps</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-comment"># If move route is not forcing</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@move_route_forcing</span>
+    <span class="ruby-comment"># Increase steps</span>
+    <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">increase_steps</span>
+    <span class="ruby-comment"># Number of steps are an even number</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">steps</span> <span class="ruby-operator">%</span> <span class="ruby-number">2</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+      <span class="ruby-comment"># Slip damage check</span>
+      <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">check_map_slip_damage</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-make_encounter_count">
+            
+              <b>make_encounter_count</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-make_encounter_count" name="method-i-make_encounter_count" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Make Encounter Count</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-make_encounter_count_source')" id="l_method-i-make_encounter_count_source">show</a>
+                
+              </p>
+              <div id="method-i-make_encounter_count_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">make_encounter_count</span>
+  <span class="ruby-comment"># Image of two dice rolling</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">map_id</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">n</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">encounter_step</span>
+    <span class="ruby-ivar">@encounter_count</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-identifier">n</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">rand</span>(<span class="ruby-identifier">n</span>) <span class="ruby-operator">+</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-moveto">
+            
+              <b>moveto</b>(x, y)
+            
+            <a href="../classes/Game_Player.html#method-i-moveto" name="method-i-moveto" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move to Designated Position</p>
+
+<p>x : x-coordinate y : y-coordinate</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-moveto_source')" id="l_method-i-moveto_source">show</a>
+                
+              </p>
+              <div id="method-i-moveto_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">moveto</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-comment"># Centering</span>
+  <span class="ruby-identifier">center</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-comment"># Make encounter count</span>
+  <span class="ruby-identifier">make_encounter_count</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-passable-3F">
+            
+              <b>passable?</b>(x, y, d)
+            
+            <a href="../classes/Game_Player.html#method-i-passable-3F" name="method-i-passable-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Passable Determinants</p>
+
+<p>x : x-coordinate y : y-coordinate d : direction (0,2,4,6,8)</p>
+<ul><li>
+<p>0 = Determines if all directions are impassable (for jumping)</p>
+</li></ul>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-passable-3F_source')" id="l_method-i-passable-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-passable-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">passable?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">d</span>)
+  <span class="ruby-comment"># Get new coordinates</span>
+  <span class="ruby-identifier">new_x</span> = <span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">d</span> <span class="ruby-operator">==</span> <span class="ruby-number">6</span> <span class="ruby-operator">?</span> <span class="ruby-number">1</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">d</span> <span class="ruby-operator">==</span> <span class="ruby-number">4</span> <span class="ruby-operator">?</span> <span class="ruby-number">-1</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>)
+  <span class="ruby-identifier">new_y</span> = <span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">d</span> <span class="ruby-operator">==</span> <span class="ruby-number">2</span> <span class="ruby-operator">?</span> <span class="ruby-number">1</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">d</span> <span class="ruby-operator">==</span> <span class="ruby-number">8</span> <span class="ruby-operator">?</span> <span class="ruby-number">-1</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>)
+  <span class="ruby-comment"># If coordinates are outside of map</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">valid?</span>(<span class="ruby-identifier">new_x</span>, <span class="ruby-identifier">new_y</span>)
+    <span class="ruby-comment"># Impassable</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If debug mode is ON and ctrl key was pressed</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$DEBUG</span> <span class="ruby-keyword">and</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">press?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">CTRL</span>)
+    <span class="ruby-comment"># Passable</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refresh">
+            
+              <b>refresh</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-refresh" name="method-i-refresh" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Refresh</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refresh_source')" id="l_method-i-refresh_source">show</a>
+                
+              </p>
+              <div id="method-i-refresh_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refresh</span>
+  <span class="ruby-comment"># If party members = 0</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">actors</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-comment"># Clear character file name and hue</span>
+    <span class="ruby-ivar">@character_name</span> = <span class="ruby-string">&quot;&quot;</span>
+    <span class="ruby-ivar">@character_hue</span> = <span class="ruby-number">0</span>
+    <span class="ruby-comment"># End method</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Get lead actor</span>
+  <span class="ruby-identifier">actor</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">actors</span>[<span class="ruby-number">0</span>]
+  <span class="ruby-comment"># Set character file name and hue</span>
+  <span class="ruby-ivar">@character_name</span> = <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">character_name</span>
+  <span class="ruby-ivar">@character_hue</span> = <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">character_hue</span>
+  <span class="ruby-comment"># Initialize opacity level and blending method</span>
+  <span class="ruby-ivar">@opacity</span> = <span class="ruby-number">255</span>
+  <span class="ruby-ivar">@blend_type</span> = <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Frame Update</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 216</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-comment"># Remember whether or not moving in local variables</span>
+  <span class="ruby-identifier">last_moving</span> = <span class="ruby-identifier">moving?</span>
+  <span class="ruby-comment"># If moving, event running, move route forcing, and message window</span>
+  <span class="ruby-comment"># display are all not occurring</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">moving?</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">map_interpreter</span>.<span class="ruby-identifier">running?</span> <span class="ruby-keyword">or</span>
+         <span class="ruby-ivar">@move_route_forcing</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">message_window_showing</span>
+    <span class="ruby-comment"># Move player in the direction the directional button is being pressed</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">dir4</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>
+      <span class="ruby-identifier">move_down</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">4</span>
+      <span class="ruby-identifier">move_left</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">6</span>
+      <span class="ruby-identifier">move_right</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">8</span>
+      <span class="ruby-identifier">move_up</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Remember coordinates in local variables</span>
+  <span class="ruby-identifier">last_real_x</span> = <span class="ruby-ivar">@real_x</span>
+  <span class="ruby-identifier">last_real_y</span> = <span class="ruby-ivar">@real_y</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-comment"># If character moves down and is positioned lower than the center</span>
+  <span class="ruby-comment"># of the screen</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@real_y</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">last_real_y</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@real_y</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">display_y</span> <span class="ruby-operator">&gt;</span> <span class="ruby-constant">CENTER_Y</span>
+    <span class="ruby-comment"># Scroll map down</span>
+    <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">scroll_down</span>(<span class="ruby-ivar">@real_y</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">last_real_y</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If character moves left and is positioned more let on-screen than</span>
+  <span class="ruby-comment"># center</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@real_x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">last_real_x</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@real_x</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">display_x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">CENTER_X</span>
+    <span class="ruby-comment"># Scroll map left</span>
+    <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">scroll_left</span>(<span class="ruby-identifier">last_real_x</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@real_x</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If character moves right and is positioned more right on-screen than</span>
+  <span class="ruby-comment"># center</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@real_x</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">last_real_x</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@real_x</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">display_x</span> <span class="ruby-operator">&gt;</span> <span class="ruby-constant">CENTER_X</span>
+    <span class="ruby-comment"># Scroll map right</span>
+    <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">scroll_right</span>(<span class="ruby-ivar">@real_x</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">last_real_x</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If character moves up and is positioned higher than the center</span>
+  <span class="ruby-comment"># of the screen</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@real_y</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">last_real_y</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@real_y</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">display_y</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">CENTER_Y</span>
+    <span class="ruby-comment"># Scroll map up</span>
+    <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">scroll_up</span>(<span class="ruby-identifier">last_real_y</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@real_y</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If not moving</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">moving?</span>
+    <span class="ruby-comment"># If player was moving last time</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">last_moving</span>
+      <span class="ruby-comment"># Event determinant is via touch of same position event</span>
+      <span class="ruby-identifier">result</span> = <span class="ruby-identifier">check_event_trigger_here</span>([<span class="ruby-number">1</span>,<span class="ruby-number">2</span>])
+      <span class="ruby-comment"># If event which started does not exist</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">result</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">false</span>
+        <span class="ruby-comment"># Disregard if debug mode is ON and ctrl key was pressed</span>
+        <span class="ruby-keyword">unless</span> <span class="ruby-identifier">$DEBUG</span> <span class="ruby-keyword">and</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">press?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">CTRL</span>)
+          <span class="ruby-comment"># Encounter countdown</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-ivar">@encounter_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+            <span class="ruby-ivar">@encounter_count</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># If C button was pressed</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+      <span class="ruby-comment"># Same position and front event determinant</span>
+      <span class="ruby-identifier">check_event_trigger_here</span>([<span class="ruby-number">0</span>])
+      <span class="ruby-identifier">check_event_trigger_there</span>([<span class="ruby-number">0</span>,<span class="ruby-number">1</span>,<span class="ruby-number">2</span>])
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,1258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Game_Action</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Game_Action 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Game_Action_rb.html">Game_Action.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>戦闘行動を扱うクラスです。このクラスは <a
+href="Game_Battler.html">Game_Battler</a> クラスの内部で使用され
+ます。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-attack-3F">attack?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-clear">clear</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-confusion_target">confusion_target</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-decide_random_target">decide_random_target</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-evaluate">evaluate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-evaluate_item">evaluate_item</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-evaluate_item_with_target">evaluate_item_with_target</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-friends_unit">friends_unit</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-item_target_candidates">item_target_candidates</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-make_targets">make_targets</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-opponents_unit">opponents_unit</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-prepare">prepare</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set_attack">set_attack</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_confusion">set_confusion</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_enemy_action">set_enemy_action</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_guard">set_guard</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_item">set_item</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_skill">set_skill</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-speed">speed</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-targets_for_friends">targets_for_friends</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-targets_for_opponents">targets_for_opponents</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-valid-3F">valid?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>forcing</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>item</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>subject</td>
+            <td class='attr-desc'><p>公開インスタンス変数</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>target_index</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>value</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(subject, forcing = false)
+            
+            <a href="../classes/Game_Action.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>オブジェクト初期化</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Action.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">subject</span>, <span class="ruby-identifier">forcing</span> = <span class="ruby-keyword">false</span>)
+  <span class="ruby-ivar">@subject</span> = <span class="ruby-identifier">subject</span>
+  <span class="ruby-ivar">@forcing</span> = <span class="ruby-identifier">forcing</span>
+  <span class="ruby-identifier">clear</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-attack-3F">
+            
+              <b>attack?</b>()
+            
+            <a href="../classes/Game_Action.html#method-i-attack-3F" name="method-i-attack-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>通常攻撃判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-attack-3F_source')" id="l_method-i-attack-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-attack-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Action.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">attack?</span>
+  <span class="ruby-identifier">item</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">$data_skills</span>[<span class="ruby-identifier">subject</span>.<span class="ruby-identifier">attack_skill_id</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear">
+            
+              <b>clear</b>()
+            
+            <a href="../classes/Game_Action.html#method-i-clear" name="method-i-clear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>クリア</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_source')" id="l_method-i-clear_source">show</a>
+                
+              </p>
+              <div id="method-i-clear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Action.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear</span>
+  <span class="ruby-ivar">@item</span> = <span class="ruby-constant">Game_BaseItem</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@target_index</span> = <span class="ruby-number">-1</span>
+  <span class="ruby-ivar">@value</span> = <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-confusion_target">
+            
+              <b>confusion_target</b>()
+            
+            <a href="../classes/Game_Action.html#method-i-confusion_target" name="method-i-confusion_target" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>混乱時のターゲット</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-confusion_target_source')" id="l_method-i-confusion_target_source">show</a>
+                
+              </p>
+              <div id="method-i-confusion_target_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Action.rb, line 176</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">confusion_target</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">subject</span>.<span class="ruby-identifier">confusion_level</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>
+    <span class="ruby-identifier">opponents_unit</span>.<span class="ruby-identifier">random_target</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">rand</span>(<span class="ruby-number">2</span>) <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">opponents_unit</span>.<span class="ruby-identifier">random_target</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">friends_unit</span>.<span class="ruby-identifier">random_target</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">friends_unit</span>.<span class="ruby-identifier">random_target</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-decide_random_target">
+            
+              <b>decide_random_target</b>()
+            
+            <a href="../classes/Game_Action.html#method-i-decide_random_target" name="method-i-decide_random_target" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ランダムターゲット</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-decide_random_target_source')" id="l_method-i-decide_random_target_source">show</a>
+                
+              </p>
+              <div id="method-i-decide_random_target_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Action.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">decide_random_target</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">for_dead_friend?</span>
+    <span class="ruby-identifier">target</span> = <span class="ruby-identifier">friends_unit</span>.<span class="ruby-identifier">random_dead_target</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">for_friend?</span>
+    <span class="ruby-identifier">target</span> = <span class="ruby-identifier">friends_unit</span>.<span class="ruby-identifier">random_target</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">target</span> = <span class="ruby-identifier">opponents_unit</span>.<span class="ruby-identifier">random_target</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">target</span>
+    <span class="ruby-ivar">@target_index</span> = <span class="ruby-identifier">target</span>.<span class="ruby-identifier">index</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">clear</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-evaluate">
+            
+              <b>evaluate</b>()
+            
+            <a href="../classes/Game_Action.html#method-i-evaluate" name="method-i-evaluate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>行動の価値評価（自動戦闘用）</p>
+
+<p>`@value` および `@<a
+href="Game_Action.html#attribute-i-target_index">#target_index</a>`
+を自動的に設定する。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-evaluate_source')" id="l_method-i-evaluate_source">show</a>
+                
+              </p>
+              <div id="method-i-evaluate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Action.rb, line 234</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">evaluate</span>
+  <span class="ruby-ivar">@value</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">evaluate_item</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">valid?</span>
+  <span class="ruby-ivar">@value</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">rand</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@value</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-evaluate_item">
+            
+              <b>evaluate_item</b>()
+            
+            <a href="../classes/Game_Action.html#method-i-evaluate_item" name="method-i-evaluate_item" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スキル／アイテムの評価</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-evaluate_item_source')" id="l_method-i-evaluate_item_source">show</a>
+                
+              </p>
+              <div id="method-i-evaluate_item_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Action.rb, line 244</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">evaluate_item</span>
+  <span class="ruby-identifier">item_target_candidates</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">target</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">value</span> = <span class="ruby-identifier">evaluate_item_with_target</span>(<span class="ruby-identifier">target</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">for_all?</span>
+      <span class="ruby-ivar">@value</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">value</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@value</span>
+      <span class="ruby-ivar">@value</span> = <span class="ruby-identifier">value</span>
+      <span class="ruby-ivar">@target_index</span> = <span class="ruby-identifier">target</span>.<span class="ruby-identifier">index</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-evaluate_item_with_target">
+            
+              <b>evaluate_item_with_target</b>(target)
+            
+            <a href="../classes/Game_Action.html#method-i-evaluate_item_with_target" name="method-i-evaluate_item_with_target" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スキル／アイテムの評価（ターゲット指定）</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-evaluate_item_with_target_source')" id="l_method-i-evaluate_item_with_target_source">show</a>
+                
+              </p>
+              <div id="method-i-evaluate_item_with_target_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Action.rb, line 274</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">evaluate_item_with_target</span>(<span class="ruby-identifier">target</span>)
+  <span class="ruby-identifier">target</span>.<span class="ruby-identifier">result</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-identifier">target</span>.<span class="ruby-identifier">make_damage_value</span>(<span class="ruby-identifier">subject</span>, <span class="ruby-identifier">item</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">for_opponent?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">target</span>.<span class="ruby-identifier">result</span>.<span class="ruby-identifier">hp_damage</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> [<span class="ruby-identifier">target</span>.<span class="ruby-identifier">hp</span>, <span class="ruby-number">1</span>].<span class="ruby-identifier">max</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">recovery</span> = [<span class="ruby-operator">-</span><span class="ruby-identifier">target</span>.<span class="ruby-identifier">result</span>.<span class="ruby-identifier">hp_damage</span>, <span class="ruby-identifier">target</span>.<span class="ruby-identifier">mhp</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">target</span>.<span class="ruby-identifier">hp</span>].<span class="ruby-identifier">min</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">recovery</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">target</span>.<span class="ruby-identifier">mhp</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-friends_unit">
+            
+              <b>friends_unit</b>()
+            
+            <a href="../classes/Game_Action.html#method-i-friends_unit" name="method-i-friends_unit" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>味方ユニットを取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-friends_unit_source')" id="l_method-i-friends_unit_source">show</a>
+                
+              </p>
+              <div id="method-i-friends_unit_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Action.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">friends_unit</span>
+  <span class="ruby-identifier">subject</span>.<span class="ruby-identifier">friends_unit</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-item_target_candidates">
+            
+              <b>item_target_candidates</b>()
+            
+            <a href="../classes/Game_Action.html#method-i-item_target_candidates" name="method-i-item_target_candidates" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スキル／アイテムの使用対象候補を取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-item_target_candidates_source')" id="l_method-i-item_target_candidates_source">show</a>
+                
+              </p>
+              <div id="method-i-item_target_candidates_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Action.rb, line 259</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">item_target_candidates</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">for_opponent?</span>
+    <span class="ruby-identifier">opponents_unit</span>.<span class="ruby-identifier">alive_members</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">for_user?</span>
+    [<span class="ruby-identifier">subject</span>]
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">for_dead_friend?</span>
+    <span class="ruby-identifier">friends_unit</span>.<span class="ruby-identifier">dead_members</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">friends_unit</span>.<span class="ruby-identifier">alive_members</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-make_targets">
+            
+              <b>make_targets</b>()
+            
+            <a href="../classes/Game_Action.html#method-i-make_targets" name="method-i-make_targets" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ターゲットの配列作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-make_targets_source')" id="l_method-i-make_targets_source">show</a>
+                
+              </p>
+              <div id="method-i-make_targets_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Action.rb, line 161</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">make_targets</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">forcing</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">subject</span>.<span class="ruby-identifier">confusion?</span>
+    [<span class="ruby-identifier">confusion_target</span>]
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">for_opponent?</span>
+    <span class="ruby-identifier">targets_for_opponents</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">for_friend?</span>
+    <span class="ruby-identifier">targets_for_friends</span>
+  <span class="ruby-keyword">else</span>
+    []
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-opponents_unit">
+            
+              <b>opponents_unit</b>()
+            
+            <a href="../classes/Game_Action.html#method-i-opponents_unit" name="method-i-opponents_unit" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>敵ユニットを取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-opponents_unit_source')" id="l_method-i-opponents_unit_source">show</a>
+                
+              </p>
+              <div id="method-i-opponents_unit_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Action.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">opponents_unit</span>
+  <span class="ruby-identifier">subject</span>.<span class="ruby-identifier">opponents_unit</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-prepare">
+            
+              <b>prepare</b>()
+            
+            <a href="../classes/Game_Action.html#method-i-prepare" name="method-i-prepare" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>行動準備</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-prepare_source')" id="l_method-i-prepare_source">show</a>
+                
+              </p>
+              <div id="method-i-prepare_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Action.rb, line 135</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">prepare</span>
+  <span class="ruby-identifier">set_confusion</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">subject</span>.<span class="ruby-identifier">confusion?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">forcing</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_attack">
+            
+              <b>set_attack</b>()
+            
+            <a href="../classes/Game_Action.html#method-i-set_attack" name="method-i-set_attack" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>通常攻撃を設定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_attack_source')" id="l_method-i-set_attack_source">show</a>
+                
+              </p>
+              <div id="method-i-set_attack_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Action.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_attack</span>
+  <span class="ruby-identifier">set_skill</span>(<span class="ruby-identifier">subject</span>.<span class="ruby-identifier">attack_skill_id</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_confusion">
+            
+              <b>set_confusion</b>()
+            
+            <a href="../classes/Game_Action.html#method-i-set_confusion" name="method-i-set_confusion" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>混乱行動を設定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_confusion_source')" id="l_method-i-set_confusion_source">show</a>
+                
+              </p>
+              <div id="method-i-set_confusion_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Action.rb, line 128</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_confusion</span>
+  <span class="ruby-identifier">set_attack</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_enemy_action">
+            
+              <b>set_enemy_action</b>(action)
+            
+            <a href="../classes/Game_Action.html#method-i-set_enemy_action" name="method-i-set_enemy_action" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>敵キャラの戦闘行動を設定</p>
+
+<p>action : RPG::Enemy::Action</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_enemy_action_source')" id="l_method-i-set_enemy_action_source">show</a>
+                
+              </p>
+              <div id="method-i-set_enemy_action_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Action.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_enemy_action</span>(<span class="ruby-identifier">action</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">action</span>
+    <span class="ruby-identifier">set_skill</span>(<span class="ruby-identifier">action</span>.<span class="ruby-identifier">skill_id</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">clear</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_guard">
+            
+              <b>set_guard</b>()
+            
+            <a href="../classes/Game_Action.html#method-i-set_guard" name="method-i-set_guard" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>防御を設定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_guard_source')" id="l_method-i-set_guard_source">show</a>
+                
+              </p>
+              <div id="method-i-set_guard_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Action.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_guard</span>
+  <span class="ruby-identifier">set_skill</span>(<span class="ruby-identifier">subject</span>.<span class="ruby-identifier">guard_skill_id</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_item">
+            
+              <b>set_item</b>(item_id)
+            
+            <a href="../classes/Game_Action.html#method-i-set_item" name="method-i-set_item" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>アイテムを設定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_item_source')" id="l_method-i-set_item_source">show</a>
+                
+              </p>
+              <div id="method-i-set_item_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Action.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_item</span>(<span class="ruby-identifier">item_id</span>)
+  <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">object</span> = <span class="ruby-identifier">$data_items</span>[<span class="ruby-identifier">item_id</span>]
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_skill">
+            
+              <b>set_skill</b>(skill_id)
+            
+            <a href="../classes/Game_Action.html#method-i-set_skill" name="method-i-set_skill" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スキルを設定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_skill_source')" id="l_method-i-set_skill_source">show</a>
+                
+              </p>
+              <div id="method-i-set_skill_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Action.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_skill</span>(<span class="ruby-identifier">skill_id</span>)
+  <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">object</span> = <span class="ruby-identifier">$data_skills</span>[<span class="ruby-identifier">skill_id</span>]
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-speed">
+            
+              <b>speed</b>()
+            
+            <a href="../classes/Game_Action.html#method-i-speed" name="method-i-speed" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>行動速度の計算</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-speed_source')" id="l_method-i-speed_source">show</a>
+                
+              </p>
+              <div id="method-i-speed_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Action.rb, line 151</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">speed</span>
+  <span class="ruby-identifier">speed</span> = <span class="ruby-identifier">subject</span>.<span class="ruby-identifier">agi</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">rand</span>(<span class="ruby-number">5</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">subject</span>.<span class="ruby-identifier">agi</span> <span class="ruby-operator">/</span> <span class="ruby-number">4</span>)
+  <span class="ruby-identifier">speed</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">speed</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">item</span>
+  <span class="ruby-identifier">speed</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">subject</span>.<span class="ruby-identifier">atk_speed</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">attack?</span>
+  <span class="ruby-identifier">speed</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-targets_for_friends">
+            
+              <b>targets_for_friends</b>()
+            
+            <a href="../classes/Game_Action.html#method-i-targets_for_friends" name="method-i-targets_for_friends" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>味方に対するターゲット</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-targets_for_friends_source')" id="l_method-i-targets_for_friends_source">show</a>
+                
+              </p>
+              <div id="method-i-targets_for_friends_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Action.rb, line 212</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">targets_for_friends</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">for_user?</span>
+    [<span class="ruby-identifier">subject</span>]
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">for_dead_friend?</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">for_one?</span>
+      [<span class="ruby-identifier">friends_unit</span>.<span class="ruby-identifier">smooth_dead_target</span>(<span class="ruby-ivar">@target_index</span>)]
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">friends_unit</span>.<span class="ruby-identifier">dead_members</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">for_friend?</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">for_one?</span>
+      [<span class="ruby-identifier">friends_unit</span>.<span class="ruby-identifier">smooth_target</span>(<span class="ruby-ivar">@target_index</span>)]
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">friends_unit</span>.<span class="ruby-identifier">alive_members</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-targets_for_opponents">
+            
+              <b>targets_for_opponents</b>()
+            
+            <a href="../classes/Game_Action.html#method-i-targets_for_opponents" name="method-i-targets_for_opponents" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>敵に対するターゲット</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-targets_for_opponents_source')" id="l_method-i-targets_for_opponents_source">show</a>
+                
+              </p>
+              <div id="method-i-targets_for_opponents_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Action.rb, line 194</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">targets_for_opponents</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">for_random?</span>
+    <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">item</span>.<span class="ruby-identifier">number_of_targets</span>) { <span class="ruby-identifier">opponents_unit</span>.<span class="ruby-identifier">random_target</span> }
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">for_one?</span>
+    <span class="ruby-identifier">num</span> = <span class="ruby-number">1</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">attack?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">subject</span>.<span class="ruby-identifier">atk_times_add</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@target_index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>
+      [<span class="ruby-identifier">opponents_unit</span>.<span class="ruby-identifier">random_target</span>] * <span class="ruby-identifier">num</span>
+    <span class="ruby-keyword">else</span>
+      [<span class="ruby-identifier">opponents_unit</span>.<span class="ruby-identifier">smooth_target</span>(<span class="ruby-ivar">@target_index</span>)] * <span class="ruby-identifier">num</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">opponents_unit</span>.<span class="ruby-identifier">alive_members</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-valid-3F">
+            
+              <b>valid?</b>()
+            
+            <a href="../classes/Game_Action.html#method-i-valid-3F" name="method-i-valid-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>行動が有効か否かの判定</p>
+
+<p>イベントコマンドによる [戦闘行動の強制]
+ではないとき、ステートの制限
+やアイテム切れなどで予定の行動ができなければ false
+を返す。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-valid-3F_source')" id="l_method-i-valid-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-valid-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Action.rb, line 144</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">valid?</span>
+  (<span class="ruby-identifier">forcing</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">item</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">subject</span>.<span class="ruby-identifier">usable?</span>(<span class="ruby-identifier">item</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

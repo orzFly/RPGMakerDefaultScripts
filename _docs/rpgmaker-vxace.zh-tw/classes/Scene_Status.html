@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_Status</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_Status 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Scene_MenuBase.html">Scene_MenuBase</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_Status_rb.html">Scene_Status.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>狀態畫面</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-on_actor_change">on_actor_change</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-start">start</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-on_actor_change">
+            
+              <b>on_actor_change</b>()
+            
+            <a href="../classes/Scene_Status.html#method-i-on_actor_change" name="method-i-on_actor_change" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>切換角色</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_actor_change_source')" id="l_method-i-on_actor_change_source">show</a>
+                
+              </p>
+              <div id="method-i-on_actor_change_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Status.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_actor_change</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">actor</span> = <span class="ruby-ivar">@actor</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">activate</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start">
+            
+              <b>start</b>()
+            
+            <a href="../classes/Scene_Status.html#method-i-start" name="method-i-start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>開始處理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_source')" id="l_method-i-start_source">show</a>
+                
+              </p>
+              <div id="method-i-start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Status.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-ivar">@status_window</span> = <span class="ruby-constant">Window_Status</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@actor</span>)
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:cancel</span>,   <span class="ruby-identifier">method</span>(<span class="ruby-value">:return_scene</span>))
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:pagedown</span>, <span class="ruby-identifier">method</span>(<span class="ruby-value">:next_actor</span>))
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:pageup</span>,   <span class="ruby-identifier">method</span>(<span class="ruby-value">:prev_actor</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

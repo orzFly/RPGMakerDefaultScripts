@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Sprite_Base</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Sprite_Base 
+            
+                <span class="parent">&lt; 
+                    
+                    Sprite
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Sprite_Base_rb.html">Sprite_Base.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>A sprite class with animation display processing added.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-animation-3F">animation?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-animation_process_timing">animation_process_timing</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-animation_set_sprites">animation_set_sprites</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dispose">dispose</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_animation">dispose_animation</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-end_animation">end_animation</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-load_animation_bitmap">load_animation_bitmap</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-make_animation_sprites">make_animation_sprites</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set_animation_origin">set_animation_origin</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_animation_rate">set_animation_rate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start_animation">start_animation</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_animation">update_animation</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(viewport = nil)
+            
+            <a href="../classes/Sprite_Base.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p><a href="Object.html">Object</a> Initialization</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Base.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">viewport</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">viewport</span>)
+  <span class="ruby-ivar">@use_sprite</span> = <span class="ruby-keyword">true</span>        <span class="ruby-comment"># Sprite use flag</span>
+  <span class="ruby-ivar">@ani_duration</span> = <span class="ruby-number">0</span>         <span class="ruby-comment"># Remaining time of animation</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-animation-3F">
+            
+              <b>animation?</b>()
+            
+            <a href="../classes/Sprite_Base.html#method-i-animation-3F" name="method-i-animation-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if animation is being displayed</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-animation-3F_source')" id="l_method-i-animation-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-animation-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Base.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">animation?</span>
+  <span class="ruby-ivar">@animation</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-animation_process_timing">
+            
+              <b>animation_process_timing</b>(timing)
+            
+            <a href="../classes/Sprite_Base.html#method-i-animation_process_timing" name="method-i-animation_process_timing" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>SE and Flash Timing Processing</p>
+
+<p>timing : Timing data (RPG::Animation::Timing)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-animation_process_timing_source')" id="l_method-i-animation_process_timing_source">show</a>
+                
+              </p>
+              <div id="method-i-animation_process_timing_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Base.rb, line 232</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">animation_process_timing</span>(<span class="ruby-identifier">timing</span>)
+  <span class="ruby-identifier">timing</span>.<span class="ruby-identifier">se</span>.<span class="ruby-identifier">play</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@ani_duplicated</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">timing</span>.<span class="ruby-identifier">flash_scope</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">flash</span>(<span class="ruby-identifier">timing</span>.<span class="ruby-identifier">flash_color</span>, <span class="ruby-identifier">timing</span>.<span class="ruby-identifier">flash_duration</span> * <span class="ruby-ivar">@ani_rate</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">viewport</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@ani_duplicated</span>
+      <span class="ruby-identifier">viewport</span>.<span class="ruby-identifier">flash</span>(<span class="ruby-identifier">timing</span>.<span class="ruby-identifier">flash_color</span>, <span class="ruby-identifier">timing</span>.<span class="ruby-identifier">flash_duration</span> * <span class="ruby-ivar">@ani_rate</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">3</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">flash</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">timing</span>.<span class="ruby-identifier">flash_duration</span> * <span class="ruby-ivar">@ani_rate</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-animation_set_sprites">
+            
+              <b>animation_set_sprites</b>(frame)
+            
+            <a href="../classes/Sprite_Base.html#method-i-animation_set_sprites" name="method-i-animation_set_sprites" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Set Animation Sprite</p>
+
+<p>frame : Frame data (RPG::Animation::Frame)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-animation_set_sprites_source')" id="l_method-i-animation_set_sprites_source">show</a>
+                
+              </p>
+              <div id="method-i-animation_set_sprites_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Base.rb, line 194</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">animation_set_sprites</span>(<span class="ruby-identifier">frame</span>)
+  <span class="ruby-identifier">cell_data</span> = <span class="ruby-identifier">frame</span>.<span class="ruby-identifier">cell_data</span>
+  <span class="ruby-ivar">@ani_sprites</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">sprite</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">sprite</span>
+    <span class="ruby-identifier">pattern</span> = <span class="ruby-identifier">cell_data</span>[<span class="ruby-identifier">i</span>, <span class="ruby-number">0</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">pattern</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">pattern</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-identifier">pattern</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">100</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@ani_bitmap1</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@ani_bitmap2</span>
+    <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">src_rect</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">pattern</span> <span class="ruby-operator">%</span> <span class="ruby-number">5</span> * <span class="ruby-number">192</span>,
+      <span class="ruby-identifier">pattern</span> <span class="ruby-operator">%</span> <span class="ruby-number">100</span> <span class="ruby-operator">/</span> <span class="ruby-number">5</span> * <span class="ruby-number">192</span>, <span class="ruby-number">192</span>, <span class="ruby-number">192</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@ani_mirror</span>
+      <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">x</span> = <span class="ruby-ivar">@ani_ox</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">cell_data</span>[<span class="ruby-identifier">i</span>, <span class="ruby-number">1</span>]
+      <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">y</span> = <span class="ruby-ivar">@ani_oy</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">cell_data</span>[<span class="ruby-identifier">i</span>, <span class="ruby-number">2</span>]
+      <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">angle</span> = (<span class="ruby-number">360</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">cell_data</span>[<span class="ruby-identifier">i</span>, <span class="ruby-number">4</span>])
+      <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">mirror</span> = (<span class="ruby-identifier">cell_data</span>[<span class="ruby-identifier">i</span>, <span class="ruby-number">5</span>] <span class="ruby-operator">==</span> <span class="ruby-number">0</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">x</span> = <span class="ruby-ivar">@ani_ox</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">cell_data</span>[<span class="ruby-identifier">i</span>, <span class="ruby-number">1</span>]
+      <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">y</span> = <span class="ruby-ivar">@ani_oy</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">cell_data</span>[<span class="ruby-identifier">i</span>, <span class="ruby-number">2</span>]
+      <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">angle</span> = <span class="ruby-identifier">cell_data</span>[<span class="ruby-identifier">i</span>, <span class="ruby-number">4</span>]
+      <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">mirror</span> = (<span class="ruby-identifier">cell_data</span>[<span class="ruby-identifier">i</span>, <span class="ruby-number">5</span>] <span class="ruby-operator">==</span> <span class="ruby-number">1</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">z</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">z</span> <span class="ruby-operator">+</span> <span class="ruby-number">300</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>
+    <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-number">96</span>
+    <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-number">96</span>
+    <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">zoom_x</span> = <span class="ruby-identifier">cell_data</span>[<span class="ruby-identifier">i</span>, <span class="ruby-number">3</span>] <span class="ruby-operator">/</span> <span class="ruby-number">100.0</span>
+    <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">zoom_y</span> = <span class="ruby-identifier">cell_data</span>[<span class="ruby-identifier">i</span>, <span class="ruby-number">3</span>] <span class="ruby-operator">/</span> <span class="ruby-number">100.0</span>
+    <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">opacity</span> = <span class="ruby-identifier">cell_data</span>[<span class="ruby-identifier">i</span>, <span class="ruby-number">6</span>] * <span class="ruby-keyword">self</span>.<span class="ruby-identifier">opacity</span> <span class="ruby-operator">/</span> <span class="ruby-number">255.0</span>
+    <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">blend_type</span> = <span class="ruby-identifier">cell_data</span>[<span class="ruby-identifier">i</span>, <span class="ruby-number">7</span>]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose">
+            
+              <b>dispose</b>()
+            
+            <a href="../classes/Sprite_Base.html#method-i-dispose" name="method-i-dispose" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Free</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_source')" id="l_method-i-dispose_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Base.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">dispose_animation</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_animation">
+            
+              <b>dispose_animation</b>()
+            
+            <a href="../classes/Sprite_Base.html#method-i-dispose_animation" name="method-i-dispose_animation" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Free Animation</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_animation_source')" id="l_method-i-dispose_animation_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_animation_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Base.rb, line 141</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_animation</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@ani_bitmap1</span>
+    <span class="ruby-identifier">@@_reference_count</span>[<span class="ruby-ivar">@ani_bitmap1</span>] <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@_reference_count</span>[<span class="ruby-ivar">@ani_bitmap1</span>] <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+      <span class="ruby-ivar">@ani_bitmap1</span>.<span class="ruby-identifier">dispose</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@ani_bitmap2</span>
+    <span class="ruby-identifier">@@_reference_count</span>[<span class="ruby-ivar">@ani_bitmap2</span>] <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@_reference_count</span>[<span class="ruby-ivar">@ani_bitmap2</span>] <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+      <span class="ruby-ivar">@ani_bitmap2</span>.<span class="ruby-identifier">dispose</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@ani_sprites</span>
+    <span class="ruby-ivar">@ani_sprites</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">sprite</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">dispose</span> }
+    <span class="ruby-ivar">@ani_sprites</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-ivar">@animation</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@ani_bitmap1</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@ani_bitmap2</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-end_animation">
+            
+              <b>end_animation</b>()
+            
+            <a href="../classes/Sprite_Base.html#method-i-end_animation" name="method-i-end_animation" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>End Animation</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-end_animation_source')" id="l_method-i-end_animation_source">show</a>
+                
+              </p>
+              <div id="method-i-end_animation_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Base.rb, line 186</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">end_animation</span>
+  <span class="ruby-identifier">dispose_animation</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-load_animation_bitmap">
+            
+              <b>load_animation_bitmap</b>()
+            
+            <a href="../classes/Sprite_Base.html#method-i-load_animation_bitmap" name="method-i-load_animation_bitmap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Read (Load) Animation Graphics</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-load_animation_bitmap_source')" id="l_method-i-load_animation_bitmap_source">show</a>
+                
+              </p>
+              <div id="method-i-load_animation_bitmap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Base.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">load_animation_bitmap</span>
+  <span class="ruby-identifier">animation1_name</span> = <span class="ruby-ivar">@animation</span>.<span class="ruby-identifier">animation1_name</span>
+  <span class="ruby-identifier">animation1_hue</span> = <span class="ruby-ivar">@animation</span>.<span class="ruby-identifier">animation1_hue</span>
+  <span class="ruby-identifier">animation2_name</span> = <span class="ruby-ivar">@animation</span>.<span class="ruby-identifier">animation2_name</span>
+  <span class="ruby-identifier">animation2_hue</span> = <span class="ruby-ivar">@animation</span>.<span class="ruby-identifier">animation2_hue</span>
+  <span class="ruby-ivar">@ani_bitmap1</span> = <span class="ruby-constant">Cache</span>.<span class="ruby-identifier">animation</span>(<span class="ruby-identifier">animation1_name</span>, <span class="ruby-identifier">animation1_hue</span>)
+  <span class="ruby-ivar">@ani_bitmap2</span> = <span class="ruby-constant">Cache</span>.<span class="ruby-identifier">animation</span>(<span class="ruby-identifier">animation2_name</span>, <span class="ruby-identifier">animation2_hue</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@_reference_count</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-ivar">@ani_bitmap1</span>)
+    <span class="ruby-identifier">@@_reference_count</span>[<span class="ruby-ivar">@ani_bitmap1</span>] <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">@@_reference_count</span>[<span class="ruby-ivar">@ani_bitmap1</span>] = <span class="ruby-number">1</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@_reference_count</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-ivar">@ani_bitmap2</span>)
+    <span class="ruby-identifier">@@_reference_count</span>[<span class="ruby-ivar">@ani_bitmap2</span>] <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">@@_reference_count</span>[<span class="ruby-ivar">@ani_bitmap2</span>] = <span class="ruby-number">1</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">frame_reset</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-make_animation_sprites">
+            
+              <b>make_animation_sprites</b>()
+            
+            <a href="../classes/Sprite_Base.html#method-i-make_animation_sprites" name="method-i-make_animation_sprites" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Animation Spirtes</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-make_animation_sprites_source')" id="l_method-i-make_animation_sprites_source">show</a>
+                
+              </p>
+              <div id="method-i-make_animation_sprites_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Base.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">make_animation_sprites</span>
+  <span class="ruby-ivar">@ani_sprites</span> = []
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@use_sprite</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">@@ani_spr_checker</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-ivar">@animation</span>)
+    <span class="ruby-number">16</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">sprite</span> = <span class="ruby-operator">::</span><span class="ruby-constant">Sprite</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">viewport</span>)
+      <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-ivar">@ani_sprites</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">sprite</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@animation</span>.<span class="ruby-identifier">position</span> <span class="ruby-operator">==</span> <span class="ruby-number">3</span>
+      <span class="ruby-identifier">@@ani_spr_checker</span>.<span class="ruby-identifier">push</span>(<span class="ruby-ivar">@animation</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@ani_duplicated</span> = <span class="ruby-identifier">@@ani_checker</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-ivar">@animation</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@ani_duplicated</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@animation</span>.<span class="ruby-identifier">position</span> <span class="ruby-operator">==</span> <span class="ruby-number">3</span>
+    <span class="ruby-identifier">@@ani_checker</span>.<span class="ruby-identifier">push</span>(<span class="ruby-ivar">@animation</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_animation_origin">
+            
+              <b>set_animation_origin</b>()
+            
+            <a href="../classes/Sprite_Base.html#method-i-set_animation_origin" name="method-i-set_animation_origin" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Set Animation Origin</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_animation_origin_source')" id="l_method-i-set_animation_origin_source">show</a>
+                
+              </p>
+              <div id="method-i-set_animation_origin_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Base.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_animation_origin</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@animation</span>.<span class="ruby-identifier">position</span> <span class="ruby-operator">==</span> <span class="ruby-number">3</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">viewport</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+      <span class="ruby-ivar">@ani_ox</span> = <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+      <span class="ruby-ivar">@ani_oy</span> = <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@ani_ox</span> = <span class="ruby-identifier">viewport</span>.<span class="ruby-identifier">rect</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+      <span class="ruby-ivar">@ani_oy</span> = <span class="ruby-identifier">viewport</span>.<span class="ruby-identifier">rect</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@ani_ox</span> = <span class="ruby-identifier">x</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">ox</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">width</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+    <span class="ruby-ivar">@ani_oy</span> = <span class="ruby-identifier">y</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">oy</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">height</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@animation</span>.<span class="ruby-identifier">position</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+      <span class="ruby-ivar">@ani_oy</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">height</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@animation</span>.<span class="ruby-identifier">position</span> <span class="ruby-operator">==</span> <span class="ruby-number">2</span>
+      <span class="ruby-ivar">@ani_oy</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">height</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_animation_rate">
+            
+              <b>set_animation_rate</b>()
+            
+            <a href="../classes/Sprite_Base.html#method-i-set_animation_rate" name="method-i-set_animation_rate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Set Animation Speed</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_animation_rate_source')" id="l_method-i-set_animation_rate_source">show</a>
+                
+              </p>
+              <div id="method-i-set_animation_rate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Base.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_animation_rate</span>
+  <span class="ruby-ivar">@ani_rate</span> = <span class="ruby-number">4</span>     <span class="ruby-comment"># Fixed value by default</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start_animation">
+            
+              <b>start_animation</b>(animation, mirror = false)
+            
+            <a href="../classes/Sprite_Base.html#method-i-start_animation" name="method-i-start_animation" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Start Animation</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_animation_source')" id="l_method-i-start_animation_source">show</a>
+                
+              </p>
+              <div id="method-i-start_animation_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Base.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start_animation</span>(<span class="ruby-identifier">animation</span>, <span class="ruby-identifier">mirror</span> = <span class="ruby-keyword">false</span>)
+  <span class="ruby-identifier">dispose_animation</span>
+  <span class="ruby-ivar">@animation</span> = <span class="ruby-identifier">animation</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@animation</span>
+    <span class="ruby-ivar">@ani_mirror</span> = <span class="ruby-identifier">mirror</span>
+    <span class="ruby-identifier">set_animation_rate</span>
+    <span class="ruby-ivar">@ani_duration</span> = <span class="ruby-ivar">@animation</span>.<span class="ruby-identifier">frame_max</span> * <span class="ruby-ivar">@ani_rate</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span>
+    <span class="ruby-identifier">load_animation_bitmap</span>
+    <span class="ruby-identifier">make_animation_sprites</span>
+    <span class="ruby-identifier">set_animation_origin</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Sprite_Base.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Frame Update</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Base.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">update_animation</span>
+  <span class="ruby-identifier">@@ani_checker</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-identifier">@@ani_spr_checker</span>.<span class="ruby-identifier">clear</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_animation">
+            
+              <b>update_animation</b>()
+            
+            <a href="../classes/Sprite_Base.html#method-i-update_animation" name="method-i-update_animation" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Animation</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_animation_source')" id="l_method-i-update_animation_source">show</a>
+                
+              </p>
+              <div id="method-i-update_animation_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Base.rb, line 166</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_animation</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">animation?</span>
+  <span class="ruby-ivar">@ani_duration</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@ani_duration</span> <span class="ruby-operator">%</span> <span class="ruby-ivar">@ani_rate</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@ani_duration</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">frame_index</span> = <span class="ruby-ivar">@animation</span>.<span class="ruby-identifier">frame_max</span>
+      <span class="ruby-identifier">frame_index</span> <span class="ruby-operator">-=</span> (<span class="ruby-ivar">@ani_duration</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@ani_rate</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>) <span class="ruby-operator">/</span> <span class="ruby-ivar">@ani_rate</span>
+      <span class="ruby-identifier">animation_set_sprites</span>(<span class="ruby-ivar">@animation</span>.<span class="ruby-identifier">frames</span>[<span class="ruby-identifier">frame_index</span>])
+      <span class="ruby-ivar">@animation</span>.<span class="ruby-identifier">timings</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">timing</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">animation_process_timing</span>(<span class="ruby-identifier">timing</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">timing</span>.<span class="ruby-identifier">frame</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">frame_index</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">end_animation</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

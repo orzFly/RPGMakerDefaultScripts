@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Window_ShopCommand</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Window_ShopCommand 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Window_HorzCommand.html">Window_HorzCommand</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Window_ShopCommand_rb.html">Window_ShopCommand.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>商店画面中，选择买入／卖出的窗口。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-col_max">col_max</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-make_command_list">make_command_list</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-window_width">window_width</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(window_width, purchase_only)
+            
+            <a href="../classes/Window_ShopCommand.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>初始化对象</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopCommand.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">window_width</span>, <span class="ruby-identifier">purchase_only</span>)
+  <span class="ruby-ivar">@window_width</span> = <span class="ruby-identifier">window_width</span>
+  <span class="ruby-ivar">@purchase_only</span> = <span class="ruby-identifier">purchase_only</span>
+  <span class="ruby-keyword">super</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-col_max">
+            
+              <b>col_max</b>()
+            
+            <a href="../classes/Window_ShopCommand.html#method-i-col_max" name="method-i-col_max" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取列数</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-col_max_source')" id="l_method-i-col_max_source">show</a>
+                
+              </p>
+              <div id="method-i-col_max_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopCommand.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">col_max</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">3</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-make_command_list">
+            
+              <b>make_command_list</b>()
+            
+            <a href="../classes/Window_ShopCommand.html#method-i-make_command_list" name="method-i-make_command_list" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>生成指令列表</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-make_command_list_source')" id="l_method-i-make_command_list_source">show</a>
+                
+              </p>
+              <div id="method-i-make_command_list_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopCommand.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">make_command_list</span>
+  <span class="ruby-identifier">add_command</span>(<span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">ShopBuy</span>,    <span class="ruby-value">:buy</span>)
+  <span class="ruby-identifier">add_command</span>(<span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">ShopSell</span>,   <span class="ruby-value">:sell</span>,   <span class="ruby-operator">!</span><span class="ruby-ivar">@purchase_only</span>)
+  <span class="ruby-identifier">add_command</span>(<span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">ShopCancel</span>, <span class="ruby-value">:cancel</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-window_width">
+            
+              <b>window_width</b>()
+            
+            <a href="../classes/Window_ShopCommand.html#method-i-window_width" name="method-i-window_width" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取窗口的宽度</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-window_width_source')" id="l_method-i-window_width_source">show</a>
+                
+              </p>
+              <div id="method-i-window_width_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopCommand.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">window_width</span>
+  <span class="ruby-ivar">@window_width</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

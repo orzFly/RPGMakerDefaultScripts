@@ -1,0 +1,1246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_File</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_File 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Scene_MenuBase.html">Scene_MenuBase</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_File_rb.html">Scene_File.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>存档画面和读档画面共同的父类</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-bottom_index">bottom_index</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-bottom_index-3D">bottom_index=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-create_help_window">create_help_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_savefile_viewport">create_savefile_viewport</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_savefile_windows">create_savefile_windows</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cursor_down">cursor_down</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cursor_pagedown">cursor_pagedown</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cursor_pageup">cursor_pageup</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cursor_up">cursor_up</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-ensure_cursor_visible">ensure_cursor_visible</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-first_savefile_index">first_savefile_index</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-help_window_text">help_window_text</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-index">index</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-init_selection">init_selection</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-item_max">item_max</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-on_savefile_cancel">on_savefile_cancel</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_savefile_ok">on_savefile_ok</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-savefile_height">savefile_height</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start">start</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-terminate">terminate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-top_index">top_index</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-top_index-3D">top_index=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_cursor">update_cursor</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_savefile_selection">update_savefile_selection</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-visible_max">visible_max</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-bottom_index">
+            
+              <b>bottom_index</b>()
+            
+            <a href="../classes/Scene_File.html#method-i-bottom_index" name="method-i-bottom_index" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取末端索引</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bottom_index_source')" id="l_method-i-bottom_index_source">show</a>
+                
+              </p>
+              <div id="method-i-bottom_index_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 134</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bottom_index</span>
+  <span class="ruby-identifier">top_index</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">visible_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bottom_index-3D">
+            
+              <b>bottom_index=</b>(index)
+            
+            <a href="../classes/Scene_File.html#method-i-bottom_index-3D" name="method-i-bottom_index-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>设置末端索引</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bottom_index-3D_source')" id="l_method-i-bottom_index-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-bottom_index-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 141</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bottom_index=</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_index</span> = <span class="ruby-identifier">index</span> <span class="ruby-operator">-</span> (<span class="ruby-identifier">visible_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_help_window">
+            
+              <b>create_help_window</b>()
+            
+            <a href="../classes/Scene_File.html#method-i-create_help_window" name="method-i-create_help_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>生成帮助窗口</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_help_window_source')" id="l_method-i-create_help_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_help_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_help_window</span>
+  <span class="ruby-ivar">@help_window</span> = <span class="ruby-constant">Window_Help</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">1</span>)
+  <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">set_text</span>(<span class="ruby-identifier">help_window_text</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_savefile_viewport">
+            
+              <b>create_savefile_viewport</b>()
+            
+            <a href="../classes/Scene_File.html#method-i-create_savefile_viewport" name="method-i-create_savefile_viewport" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>生成存档文件显示端口</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_savefile_viewport_source')" id="l_method-i-create_savefile_viewport_source">show</a>
+                
+              </p>
+              <div id="method-i-create_savefile_viewport_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_savefile_viewport</span>
+  <span class="ruby-ivar">@savefile_viewport</span> = <span class="ruby-constant">Viewport</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@savefile_viewport</span>.<span class="ruby-identifier">rect</span>.<span class="ruby-identifier">y</span> = <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">height</span>
+  <span class="ruby-ivar">@savefile_viewport</span>.<span class="ruby-identifier">rect</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">-=</span> <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">height</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_savefile_windows">
+            
+              <b>create_savefile_windows</b>()
+            
+            <a href="../classes/Scene_File.html#method-i-create_savefile_windows" name="method-i-create_savefile_windows" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>生成存档文件窗口</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_savefile_windows_source')" id="l_method-i-create_savefile_windows_source">show</a>
+                
+              </p>
+              <div id="method-i-create_savefile_windows_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_savefile_windows</span>
+  <span class="ruby-ivar">@savefile_windows</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">item_max</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">Window_SaveFile</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">savefile_height</span>, <span class="ruby-identifier">i</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@savefile_windows</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">window</span><span class="ruby-operator">|</span> <span class="ruby-identifier">window</span>.<span class="ruby-identifier">viewport</span> = <span class="ruby-ivar">@savefile_viewport</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cursor_down">
+            
+              <b>cursor_down</b>(wrap)
+            
+            <a href="../classes/Scene_File.html#method-i-cursor_down" name="method-i-cursor_down" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>光标向下移动</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cursor_down_source')" id="l_method-i-cursor_down_source">show</a>
+                
+              </p>
+              <div id="method-i-cursor_down_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 187</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cursor_down</span>(<span class="ruby-identifier">wrap</span>)
+  <span class="ruby-ivar">@index</span> = (<span class="ruby-ivar">@index</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span>) <span class="ruby-operator">%</span> <span class="ruby-identifier">item_max</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">item_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">wrap</span>
+  <span class="ruby-identifier">ensure_cursor_visible</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cursor_pagedown">
+            
+              <b>cursor_pagedown</b>()
+            
+            <a href="../classes/Scene_File.html#method-i-cursor_pagedown" name="method-i-cursor_pagedown" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>光标移至下 1 页</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cursor_pagedown_source')" id="l_method-i-cursor_pagedown_source">show</a>
+                
+              </p>
+              <div id="method-i-cursor_pagedown_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 203</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cursor_pagedown</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">top_index</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">visible_max</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">item_max</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_index</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">visible_max</span>
+    <span class="ruby-ivar">@index</span> = [<span class="ruby-ivar">@index</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">visible_max</span>, <span class="ruby-identifier">item_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>].<span class="ruby-identifier">min</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cursor_pageup">
+            
+              <b>cursor_pageup</b>()
+            
+            <a href="../classes/Scene_File.html#method-i-cursor_pageup" name="method-i-cursor_pageup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>光标移至上 1 页</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cursor_pageup_source')" id="l_method-i-cursor_pageup_source">show</a>
+                
+              </p>
+              <div id="method-i-cursor_pageup_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 213</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cursor_pageup</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">top_index</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_index</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">visible_max</span>
+    <span class="ruby-ivar">@index</span> = [<span class="ruby-ivar">@index</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">visible_max</span>, <span class="ruby-number">0</span>].<span class="ruby-identifier">max</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cursor_up">
+            
+              <b>cursor_up</b>(wrap)
+            
+            <a href="../classes/Scene_File.html#method-i-cursor_up" name="method-i-cursor_up" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>光标向上移动</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cursor_up_source')" id="l_method-i-cursor_up_source">show</a>
+                
+              </p>
+              <div id="method-i-cursor_up_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 195</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cursor_up</span>(<span class="ruby-identifier">wrap</span>)
+  <span class="ruby-ivar">@index</span> = (<span class="ruby-ivar">@index</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">item_max</span>) <span class="ruby-operator">%</span> <span class="ruby-identifier">item_max</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">wrap</span>
+  <span class="ruby-identifier">ensure_cursor_visible</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-ensure_cursor_visible">
+            
+              <b>ensure_cursor_visible</b>()
+            
+            <a href="../classes/Scene_File.html#method-i-ensure_cursor_visible" name="method-i-ensure_cursor_visible" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>确保光标在画面范围内滚动</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-ensure_cursor_visible_source')" id="l_method-i-ensure_cursor_visible_source">show</a>
+                
+              </p>
+              <div id="method-i-ensure_cursor_visible_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 223</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">ensure_cursor_visible</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_index</span> = <span class="ruby-identifier">index</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">top_index</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bottom_index</span> = <span class="ruby-identifier">index</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">bottom_index</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-first_savefile_index">
+            
+              <b>first_savefile_index</b>()
+            
+            <a href="../classes/Scene_File.html#method-i-first_savefile_index" name="method-i-first_savefile_index" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取开始时文件索引的位置</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-first_savefile_index_source')" id="l_method-i-first_savefile_index_source">show</a>
+                
+              </p>
+              <div id="method-i-first_savefile_index_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 104</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">first_savefile_index</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-help_window_text">
+            
+              <b>help_window_text</b>()
+            
+            <a href="../classes/Scene_File.html#method-i-help_window_text" name="method-i-help_window_text" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取帮助窗口的文本</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-help_window_text_source')" id="l_method-i-help_window_text_source">show</a>
+                
+              </p>
+              <div id="method-i-help_window_text_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">help_window_text</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-index">
+            
+              <b>index</b>()
+            
+            <a href="../classes/Scene_File.html#method-i-index" name="method-i-index" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取当前索引</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-index_source')" id="l_method-i-index_source">show</a>
+                
+              </p>
+              <div id="method-i-index_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 111</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">index</span>
+  <span class="ruby-ivar">@index</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-init_selection">
+            
+              <b>init_selection</b>()
+            
+            <a href="../classes/Scene_File.html#method-i-init_selection" name="method-i-init_selection" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>初始化选择状态</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-init_selection_source')" id="l_method-i-init_selection_source">show</a>
+                
+              </p>
+              <div id="method-i-init_selection_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">init_selection</span>
+  <span class="ruby-ivar">@index</span> = <span class="ruby-identifier">first_savefile_index</span>
+  <span class="ruby-ivar">@savefile_windows</span>[<span class="ruby-ivar">@index</span>].<span class="ruby-identifier">selected</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_index</span> = <span class="ruby-ivar">@index</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">visible_max</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+  <span class="ruby-identifier">ensure_cursor_visible</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-item_max">
+            
+              <b>item_max</b>()
+            
+            <a href="../classes/Scene_File.html#method-i-item_max" name="method-i-item_max" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取项目数</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-item_max_source')" id="l_method-i-item_max_source">show</a>
+                
+              </p>
+              <div id="method-i-item_max_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">item_max</span>
+  <span class="ruby-constant">DataManager</span>.<span class="ruby-identifier">savefile_max</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_savefile_cancel">
+            
+              <b>on_savefile_cancel</b>()
+            
+            <a href="../classes/Scene_File.html#method-i-on_savefile_cancel" name="method-i-on_savefile_cancel" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>存档文件“取消”</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_savefile_cancel_source')" id="l_method-i-on_savefile_cancel_source">show</a>
+                
+              </p>
+              <div id="method-i-on_savefile_cancel_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 163</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_savefile_cancel</span>
+  <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_cancel</span>
+  <span class="ruby-identifier">return_scene</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_savefile_ok">
+            
+              <b>on_savefile_ok</b>()
+            
+            <a href="../classes/Scene_File.html#method-i-on_savefile_ok" name="method-i-on_savefile_ok" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>存档文件“确定”</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_savefile_ok_source')" id="l_method-i-on_savefile_ok_source">show</a>
+                
+              </p>
+              <div id="method-i-on_savefile_ok_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 157</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_savefile_ok</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-savefile_height">
+            
+              <b>savefile_height</b>()
+            
+            <a href="../classes/Scene_File.html#method-i-savefile_height" name="method-i-savefile_height" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取存档文件窗口的高度</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-savefile_height_source')" id="l_method-i-savefile_height_source">show</a>
+                
+              </p>
+              <div id="method-i-savefile_height_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">savefile_height</span>
+  <span class="ruby-ivar">@savefile_viewport</span>.<span class="ruby-identifier">rect</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">visible_max</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start">
+            
+              <b>start</b>()
+            
+            <a href="../classes/Scene_File.html#method-i-start" name="method-i-start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>开始处理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_source')" id="l_method-i-start_source">show</a>
+                
+              </p>
+              <div id="method-i-start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">create_help_window</span>
+  <span class="ruby-identifier">create_savefile_viewport</span>
+  <span class="ruby-identifier">create_savefile_windows</span>
+  <span class="ruby-identifier">init_selection</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-terminate">
+            
+              <b>terminate</b>()
+            
+            <a href="../classes/Scene_File.html#method-i-terminate" name="method-i-terminate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>结束处理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-terminate_source')" id="l_method-i-terminate_source">show</a>
+                
+              </p>
+              <div id="method-i-terminate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">terminate</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-ivar">@savefile_viewport</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@savefile_windows</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">window</span><span class="ruby-operator">|</span> <span class="ruby-identifier">window</span>.<span class="ruby-identifier">dispose</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-top_index">
+            
+              <b>top_index</b>()
+            
+            <a href="../classes/Scene_File.html#method-i-top_index" name="method-i-top_index" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取顶端索引</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-top_index_source')" id="l_method-i-top_index_source">show</a>
+                
+              </p>
+              <div id="method-i-top_index_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">top_index</span>
+  <span class="ruby-ivar">@savefile_viewport</span>.<span class="ruby-identifier">oy</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">savefile_height</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-top_index-3D">
+            
+              <b>top_index=</b>(index)
+            
+            <a href="../classes/Scene_File.html#method-i-top_index-3D" name="method-i-top_index-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>设置顶端索引</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-top_index-3D_source')" id="l_method-i-top_index-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-top_index-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">top_index=</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">index</span> = <span class="ruby-number">0</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">index</span> = <span class="ruby-identifier">item_max</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">visible_max</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">item_max</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">visible_max</span>
+  <span class="ruby-ivar">@savefile_viewport</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-identifier">index</span> * <span class="ruby-identifier">savefile_height</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Scene_File.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>更新画面</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-ivar">@savefile_windows</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">window</span><span class="ruby-operator">|</span> <span class="ruby-identifier">window</span>.<span class="ruby-identifier">update</span> }
+  <span class="ruby-identifier">update_savefile_selection</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_cursor">
+            
+              <b>update_cursor</b>()
+            
+            <a href="../classes/Scene_File.html#method-i-update_cursor" name="method-i-update_cursor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>更新光标</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_cursor_source')" id="l_method-i-update_cursor_source">show</a>
+                
+              </p>
+              <div id="method-i-update_cursor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 171</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_cursor</span>
+  <span class="ruby-identifier">last_index</span> = <span class="ruby-ivar">@index</span>
+  <span class="ruby-identifier">cursor_down</span> (<span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-value">:DOWN</span>))  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-value">:DOWN</span>)
+  <span class="ruby-identifier">cursor_up</span>   (<span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-value">:UP</span>))    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-value">:UP</span>)
+  <span class="ruby-identifier">cursor_pagedown</span>   <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-value">:R</span>)
+  <span class="ruby-identifier">cursor_pageup</span>     <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-value">:L</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">last_index</span>
+    <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_cursor</span>
+    <span class="ruby-ivar">@savefile_windows</span>[<span class="ruby-identifier">last_index</span>].<span class="ruby-identifier">selected</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@savefile_windows</span>[<span class="ruby-ivar">@index</span>].<span class="ruby-identifier">selected</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_savefile_selection">
+            
+              <b>update_savefile_selection</b>()
+            
+            <a href="../classes/Scene_File.html#method-i-update_savefile_selection" name="method-i-update_savefile_selection" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>更新存档文件选择</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_savefile_selection_source')" id="l_method-i-update_savefile_selection_source">show</a>
+                
+              </p>
+              <div id="method-i-update_savefile_selection_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_savefile_selection</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">on_savefile_ok</span>     <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-value">:C</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">on_savefile_cancel</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-value">:B</span>)
+  <span class="ruby-identifier">update_cursor</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-visible_max">
+            
+              <b>visible_max</b>()
+            
+            <a href="../classes/Scene_File.html#method-i-visible_max" name="method-i-visible_max" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取可显示的存档数目</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-visible_max_source')" id="l_method-i-visible_max_source">show</a>
+                
+              </p>
+              <div id="method-i-visible_max_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_File.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">visible_max</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">4</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

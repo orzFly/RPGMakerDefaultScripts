@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Window_NumberInput</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Window_NumberInput 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Window_Base.html">Window_Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Window_NumberInput_rb.html">Window_NumberInput.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This window is for inputting numbers, and is used within the message
+window.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-cursor_left">cursor_left</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cursor_right">cursor_right</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-digits_max">digits_max</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-digits_max-3D">digits_max=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-number">number</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-number-3D">number=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-refresh">refresh</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_cursor">update_cursor</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Window_NumberInput.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Object Initialization</p>
+
+<p><a href="Window_NumberInput.html#method-i-digits_max">#digits_max</a> :
+digit count</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NumberInput.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-keyword">super</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">544</span>, <span class="ruby-number">64</span>)
+  <span class="ruby-ivar">@number</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@digits_max</span> = <span class="ruby-number">6</span>
+  <span class="ruby-ivar">@index</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">opacity</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">z</span> <span class="ruby-operator">+=</span> <span class="ruby-number">9999</span>
+  <span class="ruby-identifier">refresh</span>
+  <span class="ruby-identifier">update_cursor</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-cursor_left">
+            
+              <b>cursor_left</b>(wrap)
+            
+            <a href="../classes/Window_NumberInput.html#method-i-cursor_left" name="method-i-cursor_left" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move cursor left</p>
+
+<p>wrap : Wraparound allowed</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cursor_left_source')" id="l_method-i-cursor_left_source">show</a>
+                
+              </p>
+              <div id="method-i-cursor_left_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NumberInput.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cursor_left</span>(<span class="ruby-identifier">wrap</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">wrap</span>
+    <span class="ruby-ivar">@index</span> = (<span class="ruby-ivar">@index</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@digits_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>) <span class="ruby-operator">%</span> <span class="ruby-ivar">@digits_max</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cursor_right">
+            
+              <b>cursor_right</b>(wrap)
+            
+            <a href="../classes/Window_NumberInput.html#method-i-cursor_right" name="method-i-cursor_right" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move cursor right</p>
+
+<p>wrap : Wraparound allowed</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cursor_right_source')" id="l_method-i-cursor_right_source">show</a>
+                
+              </p>
+              <div id="method-i-cursor_right_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NumberInput.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cursor_right</span>(<span class="ruby-identifier">wrap</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@digits_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">wrap</span>
+    <span class="ruby-ivar">@index</span> = (<span class="ruby-ivar">@index</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span>) <span class="ruby-operator">%</span> <span class="ruby-ivar">@digits_max</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-digits_max">
+            
+              <b>digits_max</b>()
+            
+            <a href="../classes/Window_NumberInput.html#method-i-digits_max" name="method-i-digits_max" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Digit Count</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-digits_max_source')" id="l_method-i-digits_max_source">show</a>
+                
+              </p>
+              <div id="method-i-digits_max_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NumberInput.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">digits_max</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@digits_max</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-digits_max-3D">
+            
+              <b>digits_max=</b>(digits_max)
+            
+            <a href="../classes/Window_NumberInput.html#method-i-digits_max-3D" name="method-i-digits_max-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Set Digit Count</p>
+
+<p><a href="Window_NumberInput.html#method-i-digits_max">#digits_max</a> : New
+digit count</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-digits_max-3D_source')" id="l_method-i-digits_max-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-digits_max-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NumberInput.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">digits_max=</span>(<span class="ruby-identifier">digits_max</span>)
+  <span class="ruby-ivar">@digits_max</span> = <span class="ruby-identifier">digits_max</span>
+  <span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-number">
+            
+              <b>number</b>()
+            
+            <a href="../classes/Window_NumberInput.html#method-i-number" name="method-i-number" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Number</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-number_source')" id="l_method-i-number_source">show</a>
+                
+              </p>
+              <div id="method-i-number_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NumberInput.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">number</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@number</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-number-3D">
+            
+              <b>number=</b>(number)
+            
+            <a href="../classes/Window_NumberInput.html#method-i-number-3D" name="method-i-number-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Set Number</p>
+
+<p>number : new number</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-number-3D_source')" id="l_method-i-number-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-number-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NumberInput.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">number=</span>(<span class="ruby-identifier">number</span>)
+  <span class="ruby-ivar">@number</span> = [[<span class="ruby-identifier">number</span>, <span class="ruby-number">0</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">10</span> <span class="ruby-operator">**</span> <span class="ruby-ivar">@digits_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>].<span class="ruby-identifier">min</span>
+  <span class="ruby-ivar">@index</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refresh">
+            
+              <b>refresh</b>()
+            
+            <a href="../classes/Window_NumberInput.html#method-i-refresh" name="method-i-refresh" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Refresh</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refresh_source')" id="l_method-i-refresh_source">show</a>
+                
+              </p>
+              <div id="method-i-refresh_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NumberInput.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refresh</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">font</span>.<span class="ruby-identifier">color</span> = <span class="ruby-identifier">normal_color</span>
+  <span class="ruby-identifier">s</span> = <span class="ruby-identifier">sprintf</span>(<span class="ruby-string">&quot;%0*d&quot;</span>, <span class="ruby-ivar">@digits_max</span>, <span class="ruby-ivar">@number</span>)
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">0</span><span class="ruby-operator">...</span><span class="ruby-ivar">@digits_max</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">draw_text</span>(<span class="ruby-number">24</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span> * <span class="ruby-number">16</span>, <span class="ruby-number">0</span>, <span class="ruby-number">16</span>, <span class="ruby-constant">WLH</span>, <span class="ruby-identifier">s</span>[<span class="ruby-identifier">i</span>,<span class="ruby-number">1</span>], <span class="ruby-number">1</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Window_NumberInput.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Frame Update</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NumberInput.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">active</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">UP</span>) <span class="ruby-keyword">or</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">DOWN</span>)
+      <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_cursor</span>
+      <span class="ruby-identifier">place</span> = <span class="ruby-number">10</span> <span class="ruby-operator">**</span> (<span class="ruby-ivar">@digits_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@index</span>)
+      <span class="ruby-identifier">n</span> = <span class="ruby-ivar">@number</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">place</span> <span class="ruby-operator">%</span> <span class="ruby-number">10</span>
+      <span class="ruby-ivar">@number</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">n</span> * <span class="ruby-identifier">place</span>
+      <span class="ruby-identifier">n</span> = (<span class="ruby-identifier">n</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span>) <span class="ruby-operator">%</span> <span class="ruby-number">10</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">UP</span>)
+      <span class="ruby-identifier">n</span> = (<span class="ruby-identifier">n</span> <span class="ruby-operator">+</span> <span class="ruby-number">9</span>) <span class="ruby-operator">%</span> <span class="ruby-number">10</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">DOWN</span>)
+      <span class="ruby-ivar">@number</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">n</span> * <span class="ruby-identifier">place</span>
+      <span class="ruby-identifier">refresh</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">last_index</span> = <span class="ruby-ivar">@index</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">RIGHT</span>)
+      <span class="ruby-identifier">cursor_right</span>(<span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">RIGHT</span>))
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">LEFT</span>)
+      <span class="ruby-identifier">cursor_left</span>(<span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">LEFT</span>))
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">last_index</span>
+      <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_cursor</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">update_cursor</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_cursor">
+            
+              <b>update_cursor</b>()
+            
+            <a href="../classes/Window_NumberInput.html#method-i-update_cursor" name="method-i-update_cursor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update cursor</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_cursor_source')" id="l_method-i-update_cursor_source">show</a>
+                
+              </p>
+              <div id="method-i-update_cursor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NumberInput.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_cursor</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">cursor_rect</span>.<span class="ruby-identifier">set</span>(<span class="ruby-number">24</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@index</span> * <span class="ruby-number">16</span>, <span class="ruby-number">0</span>, <span class="ruby-number">16</span>, <span class="ruby-constant">WLH</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

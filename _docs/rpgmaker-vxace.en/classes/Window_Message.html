@@ -1,0 +1,2075 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Window_Message</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Window_Message 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Window_Base.html">Window_Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Window_Message_rb.html">Window_Message.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This message window is used to display text.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-all_close-3F">all_close?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-back_color1">back_color1</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-back_color2">back_color2</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-clear_flags">clear_flags</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-clear_instance_variables">clear_instance_variables</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-close_and_wait">close_and_wait</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_all_windows">create_all_windows</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_back_bitmap">create_back_bitmap</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_back_sprite">create_back_sprite</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dispose">dispose</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_all_windows">dispose_all_windows</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_back_bitmap">dispose_back_bitmap</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_back_sprite">dispose_back_sprite</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-fiber_main">fiber_main</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-input_choice">input_choice</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-input_item">input_item</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-input_number">input_number</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-input_pause">input_pause</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-need_new_page-3F">need_new_page?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-new_line_x">new_line_x</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-new_page">new_page</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-open_and_wait">open_and_wait</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-process_all_text">process_all_text</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-process_draw_icon">process_draw_icon</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-process_escape_character">process_escape_character</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-process_input">process_input</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-process_new_line">process_new_line</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-process_new_page">process_new_page</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-process_normal_character">process_normal_character</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-settings_changed-3F">settings_changed?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-text_continue-3F">text_continue?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_all_windows">update_all_windows</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_back_sprite">update_back_sprite</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_background">update_background</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_fiber">update_fiber</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_placement">update_placement</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_show_fast">update_show_fast</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-visible_line_number">visible_line_number</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-wait">wait</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-wait_for_one_character">wait_for_one_character</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-window_height">window_height</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-window_width">window_width</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Window_Message.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p><a href="Object.html">Object</a> Initialization</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-keyword">super</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-identifier">window_width</span>, <span class="ruby-identifier">window_height</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">z</span> = <span class="ruby-number">200</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">openness</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">create_all_windows</span>
+  <span class="ruby-identifier">create_back_bitmap</span>
+  <span class="ruby-identifier">create_back_sprite</span>
+  <span class="ruby-identifier">clear_instance_variables</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-all_close-3F">
+            
+              <b>all_close?</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-all_close-3F" name="method-i-all_close-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if All Windows Are Fully Closed</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-all_close-3F_source')" id="l_method-i-all_close-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-all_close-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 270</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">all_close?</span>
+  <span class="ruby-identifier">close?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@choice_window</span>.<span class="ruby-identifier">close?</span> <span class="ruby-operator">&amp;&amp;</span>
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">close?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">close?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-back_color1">
+            
+              <b>back_color1</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-back_color1" name="method-i-back_color1" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Background Color 1</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-back_color1_source')" id="l_method-i-back_color1_source">show</a>
+                
+              </p>
+              <div id="method-i-back_color1_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 123</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">back_color1</span>
+  <span class="ruby-constant">Color</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">160</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-back_color2">
+            
+              <b>back_color2</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-back_color2" name="method-i-back_color2" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Background Color 2</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-back_color2_source')" id="l_method-i-back_color2_source">show</a>
+                
+              </p>
+              <div id="method-i-back_color2_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">back_color2</span>
+  <span class="ruby-constant">Color</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear_flags">
+            
+              <b>clear_flags</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-clear_flags" name="method-i-clear_flags" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Clear Flag</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_flags_source')" id="l_method-i-clear_flags_source">show</a>
+                
+              </p>
+              <div id="method-i-clear_flags_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear_flags</span>
+  <span class="ruby-ivar">@show_fast</span> = <span class="ruby-keyword">false</span>          <span class="ruby-comment"># Fast forward flag</span>
+  <span class="ruby-ivar">@line_show_fast</span> = <span class="ruby-keyword">false</span>     <span class="ruby-comment"># Fast forward by line flag</span>
+  <span class="ruby-ivar">@pause_skip</span> = <span class="ruby-keyword">false</span>         <span class="ruby-comment"># Input standby omission flag</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear_instance_variables">
+            
+              <b>clear_instance_variables</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-clear_instance_variables" name="method-i-clear_instance_variables" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Clear Instance Variables</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_instance_variables_source')" id="l_method-i-clear_instance_variables_source">show</a>
+                
+              </p>
+              <div id="method-i-clear_instance_variables_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear_instance_variables</span>
+  <span class="ruby-ivar">@fiber</span> = <span class="ruby-keyword">nil</span>                <span class="ruby-comment"># Fiber</span>
+  <span class="ruby-ivar">@background</span> = <span class="ruby-number">0</span>             <span class="ruby-comment"># Background type</span>
+  <span class="ruby-ivar">@position</span> = <span class="ruby-number">2</span>               <span class="ruby-comment"># Display position</span>
+  <span class="ruby-identifier">clear_flags</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-close_and_wait">
+            
+              <b>close_and_wait</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-close_and_wait" name="method-i-close_and_wait" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Close Window and Wait for It to Fully Close</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-close_and_wait_source')" id="l_method-i-close_and_wait_source">show</a>
+                
+              </p>
+              <div id="method-i-close_and_wait_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 262</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">close_and_wait</span>
+  <span class="ruby-identifier">close</span>
+  <span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">yield</span> <span class="ruby-keyword">until</span> <span class="ruby-identifier">all_close?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_all_windows">
+            
+              <b>create_all_windows</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-create_all_windows" name="method-i-create_all_windows" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create All Windows</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_all_windows_source')" id="l_method-i-create_all_windows_source">show</a>
+                
+              </p>
+              <div id="method-i-create_all_windows_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_all_windows</span>
+  <span class="ruby-ivar">@gold_window</span> = <span class="ruby-constant">Window_Gold</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">x</span> = <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">width</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">y</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">openness</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@choice_window</span> = <span class="ruby-constant">Window_ChoiceList</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>)
+  <span class="ruby-ivar">@number_window</span> = <span class="ruby-constant">Window_NumberInput</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>)
+  <span class="ruby-ivar">@item_window</span> = <span class="ruby-constant">Window_KeyItem</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_back_bitmap">
+            
+              <b>create_back_bitmap</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-create_back_bitmap" name="method-i-create_back_bitmap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Background Bitmap</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_back_bitmap_source')" id="l_method-i-create_back_bitmap_source">show</a>
+                
+              </p>
+              <div id="method-i-create_back_bitmap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_back_bitmap</span>
+  <span class="ruby-ivar">@back_bitmap</span> = <span class="ruby-constant">Bitmap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>)
+  <span class="ruby-identifier">rect1</span> = <span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-identifier">width</span>, <span class="ruby-number">12</span>)
+  <span class="ruby-identifier">rect2</span> = <span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">12</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-number">24</span>)
+  <span class="ruby-identifier">rect3</span> = <span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-number">12</span>, <span class="ruby-identifier">width</span>, <span class="ruby-number">12</span>)
+  <span class="ruby-ivar">@back_bitmap</span>.<span class="ruby-identifier">gradient_fill_rect</span>(<span class="ruby-identifier">rect1</span>, <span class="ruby-identifier">back_color2</span>, <span class="ruby-identifier">back_color1</span>, <span class="ruby-keyword">true</span>)
+  <span class="ruby-ivar">@back_bitmap</span>.<span class="ruby-identifier">fill_rect</span>(<span class="ruby-identifier">rect2</span>, <span class="ruby-identifier">back_color1</span>)
+  <span class="ruby-ivar">@back_bitmap</span>.<span class="ruby-identifier">gradient_fill_rect</span>(<span class="ruby-identifier">rect3</span>, <span class="ruby-identifier">back_color1</span>, <span class="ruby-identifier">back_color2</span>, <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_back_sprite">
+            
+              <b>create_back_sprite</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-create_back_sprite" name="method-i-create_back_sprite" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Background Sprite</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_back_sprite_source')" id="l_method-i-create_back_sprite_source">show</a>
+                
+              </p>
+              <div id="method-i-create_back_sprite_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 137</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_back_sprite</span>
+  <span class="ruby-ivar">@back_sprite</span> = <span class="ruby-constant">Sprite</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@back_sprite</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-ivar">@back_bitmap</span>
+  <span class="ruby-ivar">@back_sprite</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@back_sprite</span>.<span class="ruby-identifier">z</span> = <span class="ruby-identifier">z</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose">
+            
+              <b>dispose</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-dispose" name="method-i-dispose" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Free</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_source')" id="l_method-i-dispose_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">dispose_all_windows</span>
+  <span class="ruby-identifier">dispose_back_bitmap</span>
+  <span class="ruby-identifier">dispose_back_sprite</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_all_windows">
+            
+              <b>dispose_all_windows</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-dispose_all_windows" name="method-i-dispose_all_windows" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Free All Windows</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_all_windows_source')" id="l_method-i-dispose_all_windows_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_all_windows_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 147</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_all_windows</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@choice_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_back_bitmap">
+            
+              <b>dispose_back_bitmap</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-dispose_back_bitmap" name="method-i-dispose_back_bitmap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Free Background Bitmap</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_back_bitmap_source')" id="l_method-i-dispose_back_bitmap_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_back_bitmap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 157</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_back_bitmap</span>
+  <span class="ruby-ivar">@back_bitmap</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_back_sprite">
+            
+              <b>dispose_back_sprite</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-dispose_back_sprite" name="method-i-dispose_back_sprite" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Free Background Sprite</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_back_sprite_source')" id="l_method-i-dispose_back_sprite_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_back_sprite_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 164</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_back_sprite</span>
+  <span class="ruby-ivar">@back_sprite</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-fiber_main">
+            
+              <b>fiber_main</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-fiber_main" name="method-i-fiber_main" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Main Processing of Fiber</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-fiber_main_source')" id="l_method-i-fiber_main_source">show</a>
+                
+              </p>
+              <div id="method-i-fiber_main_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 191</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">fiber_main</span>
+  <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-identifier">update_background</span>
+  <span class="ruby-identifier">update_placement</span>
+  <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">process_all_text</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">has_text?</span>
+    <span class="ruby-identifier">process_input</span>
+    <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">clear</span>
+    <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">close</span>
+    <span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">yield</span>
+    <span class="ruby-keyword">break</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">text_continue?</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">close_and_wait</span>
+  <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@fiber</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-input_choice">
+            
+              <b>input_choice</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-input_choice" name="method-i-input_choice" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Choice Input Processing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-input_choice_source')" id="l_method-i-input_choice_source">show</a>
+                
+              </p>
+              <div id="method-i-input_choice_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 419</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">input_choice</span>
+  <span class="ruby-ivar">@choice_window</span>.<span class="ruby-identifier">start</span>
+  <span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">yield</span> <span class="ruby-keyword">while</span> <span class="ruby-ivar">@choice_window</span>.<span class="ruby-identifier">active</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-input_item">
+            
+              <b>input_item</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-input_item" name="method-i-input_item" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Item Selection Processing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-input_item_source')" id="l_method-i-input_item_source">show</a>
+                
+              </p>
+              <div id="method-i-input_item_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 435</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">input_item</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">start</span>
+  <span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">yield</span> <span class="ruby-keyword">while</span> <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">active</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-input_number">
+            
+              <b>input_number</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-input_number" name="method-i-input_number" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Number Input Processing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-input_number_source')" id="l_method-i-input_number_source">show</a>
+                
+              </p>
+              <div id="method-i-input_number_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 427</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">input_number</span>
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">start</span>
+  <span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">yield</span> <span class="ruby-keyword">while</span> <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">active</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-input_pause">
+            
+              <b>input_pause</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-input_pause" name="method-i-input_pause" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Input Pause Processing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-input_pause_source')" id="l_method-i-input_pause_source">show</a>
+                
+              </p>
+              <div id="method-i-input_pause_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 408</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">input_pause</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">pause</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-identifier">wait</span>(<span class="ruby-number">10</span>)
+  <span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">yield</span> <span class="ruby-keyword">until</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-value">:B</span>) <span class="ruby-operator">||</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-value">:C</span>)
+  <span class="ruby-constant">Input</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">pause</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-need_new_page-3F">
+            
+              <b>need_new_page?</b>(text, pos)
+            
+            <a href="../classes/Window_Message.html#method-i-need_new_page-3F" name="method-i-need_new_page-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if New Page Is Needed</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-need_new_page-3F_source')" id="l_method-i-need_new_page-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-need_new_page-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 356</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">need_new_page?</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">pos</span>)
+  <span class="ruby-identifier">pos</span>[<span class="ruby-value">:y</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">pos</span>[<span class="ruby-value">:height</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">text</span>.<span class="ruby-identifier">empty?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-new_line_x">
+            
+              <b>new_line_x</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-new_line_x" name="method-i-new_line_x" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get New Line Position</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-new_line_x_source')" id="l_method-i-new_line_x_source">show</a>
+                
+              </p>
+              <div id="method-i-new_line_x_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 329</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">new_line_x</span>
+  <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">face_name</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">?</span> <span class="ruby-number">0</span> <span class="ruby-operator">:</span> <span class="ruby-number">112</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-new_page">
+            
+              <b>new_page</b>(text, pos)
+            
+            <a href="../classes/Window_Message.html#method-i-new_page" name="method-i-new_page" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>New Page</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-new_page_source')" id="l_method-i-new_page_source">show</a>
+                
+              </p>
+              <div id="method-i-new_page_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 315</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">new_page</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">pos</span>)
+  <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-identifier">draw_face</span>(<span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">face_name</span>, <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">face_index</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>)
+  <span class="ruby-identifier">reset_font_settings</span>
+  <span class="ruby-identifier">pos</span>[<span class="ruby-value">:x</span>] = <span class="ruby-identifier">new_line_x</span>
+  <span class="ruby-identifier">pos</span>[<span class="ruby-value">:y</span>] = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">pos</span>[<span class="ruby-value">:new_x</span>] = <span class="ruby-identifier">new_line_x</span>
+  <span class="ruby-identifier">pos</span>[<span class="ruby-value">:height</span>] = <span class="ruby-identifier">calc_line_height</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-identifier">clear_flags</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-open_and_wait">
+            
+              <b>open_and_wait</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-open_and_wait" name="method-i-open_and_wait" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Open Window and Wait for It to Fully Open</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-open_and_wait_source')" id="l_method-i-open_and_wait_source">show</a>
+                
+              </p>
+              <div id="method-i-open_and_wait_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 254</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">open_and_wait</span>
+  <span class="ruby-identifier">open</span>
+  <span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">yield</span> <span class="ruby-keyword">until</span> <span class="ruby-identifier">open?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-process_all_text">
+            
+              <b>process_all_text</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-process_all_text" name="method-i-process_all_text" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Process All Text</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-process_all_text_source')" id="l_method-i-process_all_text_source">show</a>
+                
+              </p>
+              <div id="method-i-process_all_text_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 228</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">process_all_text</span>
+  <span class="ruby-identifier">open_and_wait</span>
+  <span class="ruby-identifier">text</span> = <span class="ruby-identifier">convert_escape_characters</span>(<span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">all_text</span>)
+  <span class="ruby-identifier">pos</span> = {}
+  <span class="ruby-identifier">new_page</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">pos</span>)
+  <span class="ruby-identifier">process_character</span>(<span class="ruby-identifier">text</span>.<span class="ruby-identifier">slice!</span>(<span class="ruby-number">0</span>, <span class="ruby-number">1</span>), <span class="ruby-identifier">text</span>, <span class="ruby-identifier">pos</span>) <span class="ruby-keyword">until</span> <span class="ruby-identifier">text</span>.<span class="ruby-identifier">empty?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-process_draw_icon">
+            
+              <b>process_draw_icon</b>(icon_index, pos)
+            
+            <a href="../classes/Window_Message.html#method-i-process_draw_icon" name="method-i-process_draw_icon" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Icon Drawing Process by Control Characters</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-process_draw_icon_source')" id="l_method-i-process_draw_icon_source">show</a>
+                
+              </p>
+              <div id="method-i-process_draw_icon_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 372</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">process_draw_icon</span>(<span class="ruby-identifier">icon_index</span>, <span class="ruby-identifier">pos</span>)
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">wait_for_one_character</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-process_escape_character">
+            
+              <b>process_escape_character</b>(code, text, pos)
+            
+            <a href="../classes/Window_Message.html#method-i-process_escape_character" name="method-i-process_escape_character" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Control Character Processing</p>
+
+<p>code : the core of the control character e.g. “C” in the case of the
+control character C[1]. text : character string buffer in drawing
+processing (destructive) pos  : draw position {:x, :y, :new_x, :height}</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-process_escape_character_source')" id="l_method-i-process_escape_character_source">show</a>
+                
+              </p>
+              <div id="method-i-process_escape_character_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 384</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">process_escape_character</span>(<span class="ruby-identifier">code</span>, <span class="ruby-identifier">text</span>, <span class="ruby-identifier">pos</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">code</span>.<span class="ruby-identifier">upcase</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'$'</span>
+    <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">open</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'.'</span>
+    <span class="ruby-identifier">wait</span>(<span class="ruby-number">15</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'|'</span>
+    <span class="ruby-identifier">wait</span>(<span class="ruby-number">60</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'!'</span>
+    <span class="ruby-identifier">input_pause</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'&gt;'</span>
+    <span class="ruby-ivar">@line_show_fast</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'&lt;'</span>
+    <span class="ruby-ivar">@line_show_fast</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'^'</span>
+    <span class="ruby-ivar">@pause_skip</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">super</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-process_input">
+            
+              <b>process_input</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-process_input" name="method-i-process_input" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Input Processing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-process_input_source')" id="l_method-i-process_input_source">show</a>
+                
+              </p>
+              <div id="method-i-process_input_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 239</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">process_input</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">choice?</span>
+    <span class="ruby-identifier">input_choice</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">num_input?</span>
+    <span class="ruby-identifier">input_number</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">item_choice?</span>
+    <span class="ruby-identifier">input_item</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">input_pause</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@pause_skip</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-process_new_line">
+            
+              <b>process_new_line</b>(text, pos)
+            
+            <a href="../classes/Window_Message.html#method-i-process_new_line" name="method-i-process_new_line" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>New Line Character Processing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-process_new_line_source')" id="l_method-i-process_new_line_source">show</a>
+                
+              </p>
+              <div id="method-i-process_new_line_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 344</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">process_new_line</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">pos</span>)
+  <span class="ruby-ivar">@line_show_fast</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">need_new_page?</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">pos</span>)
+    <span class="ruby-identifier">input_pause</span>
+    <span class="ruby-identifier">new_page</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">pos</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-process_new_page">
+            
+              <b>process_new_page</b>(text, pos)
+            
+            <a href="../classes/Window_Message.html#method-i-process_new_page" name="method-i-process_new_page" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>New Page Character Processing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-process_new_page_source')" id="l_method-i-process_new_page_source">show</a>
+                
+              </p>
+              <div id="method-i-process_new_page_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 363</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">process_new_page</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">pos</span>)
+  <span class="ruby-identifier">text</span>.<span class="ruby-identifier">slice!</span>(<span class="ruby-regexp">/^\n/</span>)
+  <span class="ruby-identifier">input_pause</span>
+  <span class="ruby-identifier">new_page</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">pos</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-process_normal_character">
+            
+              <b>process_normal_character</b>(c, pos)
+            
+            <a href="../classes/Window_Message.html#method-i-process_normal_character" name="method-i-process_normal_character" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Normal Character Processing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-process_normal_character_source')" id="l_method-i-process_normal_character_source">show</a>
+                
+              </p>
+              <div id="method-i-process_normal_character_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 336</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">process_normal_character</span>(<span class="ruby-identifier">c</span>, <span class="ruby-identifier">pos</span>)
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">wait_for_one_character</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-settings_changed-3F">
+            
+              <b>settings_changed?</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-settings_changed-3F" name="method-i-settings_changed-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if Background and Position Changed</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-settings_changed-3F_source')" id="l_method-i-settings_changed-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-settings_changed-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 285</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">settings_changed?</span>
+  <span class="ruby-ivar">@background</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">background</span> <span class="ruby-operator">||</span>
+  <span class="ruby-ivar">@position</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">position</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-text_continue-3F">
+            
+              <b>text_continue?</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-text_continue-3F" name="method-i-text_continue-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine Whether to Continue Displaying Text</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-text_continue-3F_source')" id="l_method-i-text_continue-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-text_continue-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 278</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">text_continue?</span>
+  <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">has_text?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">settings_changed?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Frame Update</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">update_all_windows</span>
+  <span class="ruby-identifier">update_back_sprite</span>
+  <span class="ruby-identifier">update_fiber</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_all_windows">
+            
+              <b>update_all_windows</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-update_all_windows" name="method-i-update_all_windows" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update All Windows</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_all_windows_source')" id="l_method-i-update_all_windows_source">show</a>
+                
+              </p>
+              <div id="method-i-update_all_windows_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 171</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_all_windows</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@choice_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_back_sprite">
+            
+              <b>update_back_sprite</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-update_back_sprite" name="method-i-update_back_sprite" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Background Sprite</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_back_sprite_source')" id="l_method-i-update_back_sprite_source">show</a>
+                
+              </p>
+              <div id="method-i-update_back_sprite_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 181</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_back_sprite</span>
+  <span class="ruby-ivar">@back_sprite</span>.<span class="ruby-identifier">visible</span> = (<span class="ruby-ivar">@background</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>)
+  <span class="ruby-ivar">@back_sprite</span>.<span class="ruby-identifier">y</span> = <span class="ruby-identifier">y</span>
+  <span class="ruby-ivar">@back_sprite</span>.<span class="ruby-identifier">opacity</span> = <span class="ruby-identifier">openness</span>
+  <span class="ruby-ivar">@back_sprite</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_background">
+            
+              <b>update_background</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-update_background" name="method-i-update_background" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Window Background</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_background_source')" id="l_method-i-update_background_source">show</a>
+                
+              </p>
+              <div id="method-i-update_background_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 211</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_background</span>
+  <span class="ruby-ivar">@background</span> = <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">background</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">opacity</span> = <span class="ruby-ivar">@background</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-number">255</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_fiber">
+            
+              <b>update_fiber</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-update_fiber" name="method-i-update_fiber" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Fiber</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_fiber_source')" id="l_method-i-update_fiber_source">show</a>
+                
+              </p>
+              <div id="method-i-update_fiber_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_fiber</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@fiber</span>
+    <span class="ruby-ivar">@fiber</span>.<span class="ruby-identifier">resume</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">busy?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">scroll_mode</span>
+    <span class="ruby-ivar">@fiber</span> = <span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">new</span> { <span class="ruby-identifier">fiber_main</span> }
+    <span class="ruby-ivar">@fiber</span>.<span class="ruby-identifier">resume</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_placement">
+            
+              <b>update_placement</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-update_placement" name="method-i-update_placement" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Window Position</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_placement_source')" id="l_method-i-update_placement_source">show</a>
+                
+              </p>
+              <div id="method-i-update_placement_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 219</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_placement</span>
+  <span class="ruby-ivar">@position</span> = <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">position</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">y</span> = <span class="ruby-ivar">@position</span> * (<span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">height</span>) <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">y</span> = <span class="ruby-identifier">y</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-number">0</span> <span class="ruby-operator">:</span> <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">height</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_show_fast">
+            
+              <b>update_show_fast</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-update_show_fast" name="method-i-update_show_fast" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Fast Forward Flag</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_show_fast_source')" id="l_method-i-update_show_fast_source">show</a>
+                
+              </p>
+              <div id="method-i-update_show_fast_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 300</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_show_fast</span>
+  <span class="ruby-ivar">@show_fast</span> = <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-value">:C</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-visible_line_number">
+            
+              <b>visible_line_number</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-visible_line_number" name="method-i-visible_line_number" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Number of Lines to Show</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-visible_line_number_source')" id="l_method-i-visible_line_number_source">show</a>
+                
+              </p>
+              <div id="method-i-visible_line_number_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">visible_line_number</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">4</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-wait">
+            
+              <b>wait</b>(duration)
+            
+            <a href="../classes/Window_Message.html#method-i-wait" name="method-i-wait" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Wait</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-wait_source')" id="l_method-i-wait_source">show</a>
+                
+              </p>
+              <div id="method-i-wait_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 293</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">wait</span>(<span class="ruby-identifier">duration</span>)
+  <span class="ruby-identifier">duration</span>.<span class="ruby-identifier">times</span> { <span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">yield</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-wait_for_one_character">
+            
+              <b>wait_for_one_character</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-wait_for_one_character" name="method-i-wait_for_one_character" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Wait After Output of One Character</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-wait_for_one_character_source')" id="l_method-i-wait_for_one_character_source">show</a>
+                
+              </p>
+              <div id="method-i-wait_for_one_character_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 307</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">wait_for_one_character</span>
+  <span class="ruby-identifier">update_show_fast</span>
+  <span class="ruby-constant">Fiber</span>.<span class="ruby-identifier">yield</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@show_fast</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@line_show_fast</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-window_height">
+            
+              <b>window_height</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-window_height" name="method-i-window_height" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Window Height</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-window_height_source')" id="l_method-i-window_height_source">show</a>
+                
+              </p>
+              <div id="method-i-window_height_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">window_height</span>
+  <span class="ruby-identifier">fitting_height</span>(<span class="ruby-identifier">visible_line_number</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-window_width">
+            
+              <b>window_width</b>()
+            
+            <a href="../classes/Window_Message.html#method-i-window_width" name="method-i-window_width" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Window Width</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-window_width_source')" id="l_method-i-window_width_source">show</a>
+                
+              </p>
+              <div id="method-i-window_width_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Message.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">window_width</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

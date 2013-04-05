@@ -1,0 +1,3253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Game_Character</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Game_Character 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Game_Character_rb.html">Game_Character.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This class deals with characters. It’s used as a superclass of the <a
+href="Game_Player.html">Game_Player</a> and <a
+href="Game_Event.html">Game_Event</a> classes.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-collide_with_characters-3F">collide_with_characters?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dash-3F">dash?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-debug_through-3F">debug_through?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-distance_x_from_player">distance_x_from_player</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-distance_y_from_player">distance_y_from_player</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-force_move_route">force_move_route</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-increase_steps">increase_steps</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>J</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-jump">jump</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-jumping-3F">jumping?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-lock">lock</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-map_passable-3F">map_passable?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-move_away_from_player">move_away_from_player</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-move_backward">move_backward</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-move_down">move_down</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-move_forward">move_forward</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-move_left">move_left</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-move_lower_left">move_lower_left</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-move_lower_right">move_lower_right</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-move_random">move_random</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-move_right">move_right</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-move_toward_player">move_toward_player</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-move_type_custom">move_type_custom</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-move_type_random">move_type_random</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-move_type_toward_player">move_type_toward_player</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-move_up">move_up</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-move_upper_left">move_upper_left</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-move_upper_right">move_upper_right</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-moveto">moveto</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-moving-3F">moving?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-object-3F">object?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-passable-3F">passable?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-pos-3F">pos?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-pos_nt-3F">pos_nt?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-screen_x">screen_x</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-screen_y">screen_y</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-screen_z">screen_z</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_direction">set_direction</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_graphic">set_graphic</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-stopping-3F">stopping?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-straighten">straighten</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-turn_180">turn_180</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-turn_away_from_player">turn_away_from_player</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-turn_down">turn_down</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-turn_left">turn_left</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-turn_left_90">turn_left_90</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-turn_random">turn_random</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-turn_right">turn_right</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-turn_right_90">turn_right_90</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-turn_right_or_left_90">turn_right_or_left_90</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-turn_toward_player">turn_toward_player</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-turn_up">turn_up</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-unlock">unlock</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_animation">update_animation</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_bush_depth">update_bush_depth</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_jump">update_jump</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_move">update_move</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_self_movement">update_self_movement</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_stop">update_stop</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>animation_id</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>balloon_id</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>blend_type</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>bush_depth</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>character_index</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>character_name</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>direction</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>id</td>
+            <td class='attr-desc'><p>Public Instance Variables</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>move_route_forcing</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>opacity</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>pattern</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>priority_type</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>real_x</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>real_y</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>through</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>tile_id</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>transparent</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>x</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>y</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Game_Character.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Object Initialization</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-ivar">@id</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@x</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@y</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@real_x</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@real_y</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@tile_id</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@character_name</span> = <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-ivar">@character_index</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@opacity</span> = <span class="ruby-number">255</span>
+  <span class="ruby-ivar">@blend_type</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@direction</span> = <span class="ruby-number">2</span>
+  <span class="ruby-ivar">@pattern</span> = <span class="ruby-number">1</span>
+  <span class="ruby-ivar">@move_route_forcing</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@priority_type</span> = <span class="ruby-number">1</span>
+  <span class="ruby-ivar">@through</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@bush_depth</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@animation_id</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@balloon_id</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@transparent</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@original_direction</span> = <span class="ruby-number">2</span>               <span class="ruby-comment"># Original direction</span>
+  <span class="ruby-ivar">@original_pattern</span> = <span class="ruby-number">1</span>                 <span class="ruby-comment"># Original pattern</span>
+  <span class="ruby-ivar">@move_type</span> = <span class="ruby-number">0</span>                        <span class="ruby-comment"># Movement type</span>
+  <span class="ruby-ivar">@move_speed</span> = <span class="ruby-number">4</span>                       <span class="ruby-comment"># Movement speed</span>
+  <span class="ruby-ivar">@move_frequency</span> = <span class="ruby-number">6</span>                   <span class="ruby-comment"># Movement frequency</span>
+  <span class="ruby-ivar">@move_route</span> = <span class="ruby-keyword">nil</span>                     <span class="ruby-comment"># Move route</span>
+  <span class="ruby-ivar">@move_route_index</span> = <span class="ruby-number">0</span>                 <span class="ruby-comment"># Move route index</span>
+  <span class="ruby-ivar">@original_move_route</span> = <span class="ruby-keyword">nil</span>            <span class="ruby-comment"># Original move route</span>
+  <span class="ruby-ivar">@original_move_route_index</span> = <span class="ruby-number">0</span>        <span class="ruby-comment"># Original move route index</span>
+  <span class="ruby-ivar">@walk_anime</span> = <span class="ruby-keyword">true</span>                    <span class="ruby-comment"># Walking animation</span>
+  <span class="ruby-ivar">@step_anime</span> = <span class="ruby-keyword">false</span>                   <span class="ruby-comment"># Stepping animation</span>
+  <span class="ruby-ivar">@direction_fix</span> = <span class="ruby-keyword">false</span>                <span class="ruby-comment"># Fixed direction</span>
+  <span class="ruby-ivar">@anime_count</span> = <span class="ruby-number">0</span>                      <span class="ruby-comment"># Animation count</span>
+  <span class="ruby-ivar">@stop_count</span> = <span class="ruby-number">0</span>                       <span class="ruby-comment"># Stop count</span>
+  <span class="ruby-ivar">@jump_count</span> = <span class="ruby-number">0</span>                       <span class="ruby-comment"># Jump count</span>
+  <span class="ruby-ivar">@jump_peak</span> = <span class="ruby-number">0</span>                        <span class="ruby-comment"># Jump peak count</span>
+  <span class="ruby-ivar">@wait_count</span> = <span class="ruby-number">0</span>                       <span class="ruby-comment"># Wait count</span>
+  <span class="ruby-ivar">@locked</span> = <span class="ruby-keyword">false</span>                       <span class="ruby-comment"># Locked flag</span>
+  <span class="ruby-ivar">@prelock_direction</span> = <span class="ruby-number">0</span>                <span class="ruby-comment"># Direction before lock</span>
+  <span class="ruby-ivar">@move_failed</span> = <span class="ruby-keyword">false</span>                  <span class="ruby-comment"># Movement failed flag</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-collide_with_characters-3F">
+            
+              <b>collide_with_characters?</b>(x, y)
+            
+            <a href="../classes/Game_Character.html#method-i-collide_with_characters-3F" name="method-i-collide_with_characters-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine Character Collision</p>
+
+<p>x : x-coordinate y : y-coordinate Detects normal character collision,
+including the player and vehicles.</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-collide_with_characters-3F_source')" id="l_method-i-collide_with_characters-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-collide_with_characters-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 186</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">collide_with_characters?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">event</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">events_xy</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)          <span class="ruby-comment"># Matches event position</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">event</span>.<span class="ruby-identifier">through</span>                          <span class="ruby-comment"># Passage OFF?</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Game_Event</span>)       <span class="ruby-comment"># Self is event</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">event</span>.<span class="ruby-identifier">priority_type</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>     <span class="ruby-comment"># Target is normal char</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@priority_type</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>                          <span class="ruby-comment"># Self is normal char</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">pos_nt?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)     <span class="ruby-comment"># Matches player position</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">boat</span>.<span class="ruby-identifier">pos_nt?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)   <span class="ruby-comment"># Matches boat position</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">ship</span>.<span class="ruby-identifier">pos_nt?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)   <span class="ruby-comment"># Matches ship position</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dash-3F">
+            
+              <b>dash?</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-dash-3F" name="method-i-dash-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if Dashing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dash-3F_source')" id="l_method-i-dash-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-dash-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dash?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-debug_through-3F">
+            
+              <b>debug_through?</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-debug_through-3F" name="method-i-debug_through-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if Debug Pass-through State</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-debug_through-3F_source')" id="l_method-i-debug_through-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-debug_through-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">debug_through?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-distance_x_from_player">
+            
+              <b>distance_x_from_player</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-distance_x_from_player" name="method-i-distance_x_from_player" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Calculate X Distance From Player</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-distance_x_from_player_source')" id="l_method-i-distance_x_from_player_source">show</a>
+                
+              </p>
+              <div id="method-i-distance_x_from_player_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 559</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">distance_x_from_player</span>
+  <span class="ruby-identifier">sx</span> = <span class="ruby-ivar">@x</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">x</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">loop_horizontal?</span>         <span class="ruby-comment"># When looping horizontally</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">sx</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>     <span class="ruby-comment"># Larger than half the map width?</span>
+      <span class="ruby-identifier">sx</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">width</span>             <span class="ruby-comment"># Subtract map width</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">sx</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-distance_y_from_player">
+            
+              <b>distance_y_from_player</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-distance_y_from_player" name="method-i-distance_y_from_player" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Calculate Y Distance From Player</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-distance_y_from_player_source')" id="l_method-i-distance_y_from_player_source">show</a>
+                
+              </p>
+              <div id="method-i-distance_y_from_player_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 572</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">distance_y_from_player</span>
+  <span class="ruby-identifier">sy</span> = <span class="ruby-ivar">@y</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">y</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">loop_vertical?</span>           <span class="ruby-comment"># When looping vertically</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">sy</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>    <span class="ruby-comment"># Larger than half the map height?</span>
+      <span class="ruby-identifier">sy</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">height</span>            <span class="ruby-comment"># Subtract map height</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">sy</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-force_move_route">
+            
+              <b>force_move_route</b>(move_route)
+            
+            <a href="../classes/Game_Character.html#method-i-force_move_route" name="method-i-force_move_route" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Force Move Route</p>
+
+<p>move_route : new move route</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-force_move_route_source')" id="l_method-i-force_move_route_source">show</a>
+                
+              </p>
+              <div id="method-i-force_move_route_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">force_move_route</span>(<span class="ruby-identifier">move_route</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@original_move_route</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-ivar">@original_move_route</span> = <span class="ruby-ivar">@move_route</span>
+    <span class="ruby-ivar">@original_move_route_index</span> = <span class="ruby-ivar">@move_route_index</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@move_route</span> = <span class="ruby-identifier">move_route</span>
+  <span class="ruby-ivar">@move_route_index</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@move_route_forcing</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-ivar">@prelock_direction</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@wait_count</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">move_type_custom</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-increase_steps">
+            
+              <b>increase_steps</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-increase_steps" name="method-i-increase_steps" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Increase Steps</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-increase_steps_source')" id="l_method-i-increase_steps_source">show</a>
+                
+              </p>
+              <div id="method-i-increase_steps_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 551</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">increase_steps</span>
+  <span class="ruby-ivar">@stop_count</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">update_bush_depth</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-jump">
+            
+              <b>jump</b>(x_plus, y_plus)
+            
+            <a href="../classes/Game_Character.html#method-i-jump" name="method-i-jump" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Jump</p>
+
+<p>x_plus : x-coordinate plus value y_plus : y-coordinate plus value</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-jump_source')" id="l_method-i-jump_source">show</a>
+                
+              </p>
+              <div id="method-i-jump_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 812</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">jump</span>(<span class="ruby-identifier">x_plus</span>, <span class="ruby-identifier">y_plus</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">x_plus</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">y_plus</span>.<span class="ruby-identifier">abs</span>            <span class="ruby-comment"># Horizontal distance is longer</span>
+    <span class="ruby-identifier">x_plus</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">turn_left</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">turn_right</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">x_plus</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">y_plus</span>.<span class="ruby-identifier">abs</span>         <span class="ruby-comment"># Vertical distance is longer</span>
+    <span class="ruby-identifier">y_plus</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">turn_up</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">turn_down</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@x</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">x_plus</span>
+  <span class="ruby-ivar">@y</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">y_plus</span>
+  <span class="ruby-identifier">distance</span> = <span class="ruby-constant">Math</span>.<span class="ruby-identifier">sqrt</span>(<span class="ruby-identifier">x_plus</span> * <span class="ruby-identifier">x_plus</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">y_plus</span> * <span class="ruby-identifier">y_plus</span>).<span class="ruby-identifier">round</span>
+  <span class="ruby-ivar">@jump_peak</span> = <span class="ruby-number">10</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">distance</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@move_speed</span>
+  <span class="ruby-ivar">@jump_count</span> = <span class="ruby-ivar">@jump_peak</span> * <span class="ruby-number">2</span>
+  <span class="ruby-ivar">@stop_count</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">straighten</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-jumping-3F">
+            
+              <b>jumping?</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-jumping-3F" name="method-i-jumping-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if Jumping</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-jumping-3F_source')" id="l_method-i-jumping-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-jumping-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">jumping?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@jump_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-lock">
+            
+              <b>lock</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-lock" name="method-i-lock" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Lock (process for stopping event in progress)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-lock_source')" id="l_method-i-lock_source">show</a>
+                
+              </p>
+              <div id="method-i-lock_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 204</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">lock</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@locked</span>
+    <span class="ruby-ivar">@prelock_direction</span> = <span class="ruby-ivar">@direction</span>
+    <span class="ruby-identifier">turn_toward_player</span>
+    <span class="ruby-ivar">@locked</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-map_passable-3F">
+            
+              <b>map_passable?</b>(x, y)
+            
+            <a href="../classes/Game_Character.html#method-i-map_passable-3F" name="method-i-map_passable-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if Map is Passable</p>
+
+<p>x : x-coordinate y : y-coordinate Gets whether the tile at the designated
+coordinates is passable.</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-map_passable-3F_source')" id="l_method-i-map_passable-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-map_passable-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 176</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">map_passable?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">passable?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move_away_from_player">
+            
+              <b>move_away_from_player</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-move_away_from_player" name="method-i-move_away_from_player" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move away from Player</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_away_from_player_source')" id="l_method-i-move_away_from_player_source">show</a>
+                
+              </p>
+              <div id="method-i-move_away_from_player_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 762</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move_away_from_player</span>
+  <span class="ruby-identifier">sx</span> = <span class="ruby-identifier">distance_x_from_player</span>
+  <span class="ruby-identifier">sy</span> = <span class="ruby-identifier">distance_y_from_player</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">sx</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">sy</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">sx</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">sy</span>.<span class="ruby-identifier">abs</span>                  <span class="ruby-comment"># Horizontal distance is longer</span>
+      <span class="ruby-identifier">sx</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">move_right</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">move_left</span>   <span class="ruby-comment"># Prioritize left-right</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@move_failed</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">sy</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span>
+        <span class="ruby-identifier">sy</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">move_down</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">move_up</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>                                <span class="ruby-comment"># Vertical distance is longer</span>
+      <span class="ruby-identifier">sy</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">move_down</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">move_up</span>      <span class="ruby-comment"># Prioritize up-down</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@move_failed</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">sx</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span>
+        <span class="ruby-identifier">sx</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">move_right</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">move_left</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move_backward">
+            
+              <b>move_backward</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-move_backward" name="method-i-move_backward" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>1 Step Backward</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_backward_source')" id="l_method-i-move_backward_source">show</a>
+                
+              </p>
+              <div id="method-i-move_backward_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 795</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move_backward</span>
+  <span class="ruby-identifier">last_direction_fix</span> = <span class="ruby-ivar">@direction_fix</span>
+  <span class="ruby-ivar">@direction_fix</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-ivar">@direction</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>;  <span class="ruby-identifier">move_up</span>(<span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-number">4</span>;  <span class="ruby-identifier">move_right</span>(<span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-number">6</span>;  <span class="ruby-identifier">move_left</span>(<span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-number">8</span>;  <span class="ruby-identifier">move_down</span>(<span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@direction_fix</span> = <span class="ruby-identifier">last_direction_fix</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move_down">
+            
+              <b>move_down</b>(turn_ok = true)
+            
+            <a href="../classes/Game_Character.html#method-i-move_down" name="method-i-move_down" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move Down</p>
+
+<p>turn_ok : Allows change of direction on the spot</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_down_source')" id="l_method-i-move_down_source">show</a>
+                
+              </p>
+              <div id="method-i-move_down_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 586</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move_down</span>(<span class="ruby-identifier">turn_ok</span> = <span class="ruby-keyword">true</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">passable?</span>(<span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>)                  <span class="ruby-comment"># Passable</span>
+    <span class="ruby-identifier">turn_down</span>
+    <span class="ruby-ivar">@y</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">round_y</span>(<span class="ruby-ivar">@y</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>)
+    <span class="ruby-ivar">@real_y</span> = (<span class="ruby-ivar">@y</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>)*<span class="ruby-number">256</span>
+    <span class="ruby-identifier">increase_steps</span>
+    <span class="ruby-ivar">@move_failed</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">else</span>                                    <span class="ruby-comment"># Impassable</span>
+    <span class="ruby-identifier">turn_down</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">turn_ok</span>
+    <span class="ruby-identifier">check_event_trigger_touch</span>(<span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>)   <span class="ruby-comment"># Touch event is triggered?</span>
+    <span class="ruby-ivar">@move_failed</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move_forward">
+            
+              <b>move_forward</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-move_forward" name="method-i-move_forward" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>1 Step Forward</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_forward_source')" id="l_method-i-move_forward_source">show</a>
+                
+              </p>
+              <div id="method-i-move_forward_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 783</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move_forward</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-ivar">@direction</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>;  <span class="ruby-identifier">move_down</span>(<span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-number">4</span>;  <span class="ruby-identifier">move_left</span>(<span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-number">6</span>;  <span class="ruby-identifier">move_right</span>(<span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-number">8</span>;  <span class="ruby-identifier">move_up</span>(<span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move_left">
+            
+              <b>move_left</b>(turn_ok = true)
+            
+            <a href="../classes/Game_Character.html#method-i-move_left" name="method-i-move_left" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move Left</p>
+
+<p>turn_ok : Allows change of direction on the spot</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_left_source')" id="l_method-i-move_left_source">show</a>
+                
+              </p>
+              <div id="method-i-move_left_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 604</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move_left</span>(<span class="ruby-identifier">turn_ok</span> = <span class="ruby-keyword">true</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">passable?</span>(<span class="ruby-ivar">@x</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>, <span class="ruby-ivar">@y</span>)                  <span class="ruby-comment"># Passable</span>
+    <span class="ruby-identifier">turn_left</span>
+    <span class="ruby-ivar">@x</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">round_x</span>(<span class="ruby-ivar">@x</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>)
+    <span class="ruby-ivar">@real_x</span> = (<span class="ruby-ivar">@x</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>)*<span class="ruby-number">256</span>
+    <span class="ruby-identifier">increase_steps</span>
+    <span class="ruby-ivar">@move_failed</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">else</span>                                    <span class="ruby-comment"># Impassable</span>
+    <span class="ruby-identifier">turn_left</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">turn_ok</span>
+    <span class="ruby-identifier">check_event_trigger_touch</span>(<span class="ruby-ivar">@x</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>, <span class="ruby-ivar">@y</span>)   <span class="ruby-comment"># Touch event is triggered?</span>
+    <span class="ruby-ivar">@move_failed</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move_lower_left">
+            
+              <b>move_lower_left</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-move_lower_left" name="method-i-move_lower_left" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move Lower Left</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_lower_left_source')" id="l_method-i-move_lower_left_source">show</a>
+                
+              </p>
+              <div id="method-i-move_lower_left_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 657</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move_lower_left</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@direction_fix</span>
+    <span class="ruby-ivar">@direction</span> = (<span class="ruby-ivar">@direction</span> <span class="ruby-operator">==</span> <span class="ruby-number">6</span> <span class="ruby-operator">?</span> <span class="ruby-number">4</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@direction</span> <span class="ruby-operator">==</span> <span class="ruby-number">8</span> <span class="ruby-operator">?</span> <span class="ruby-number">2</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@direction</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">passable?</span>(<span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>) <span class="ruby-keyword">and</span> <span class="ruby-identifier">passable?</span>(<span class="ruby-ivar">@x</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>, <span class="ruby-ivar">@y</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>)) <span class="ruby-keyword">or</span>
+     (<span class="ruby-identifier">passable?</span>(<span class="ruby-ivar">@x</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>, <span class="ruby-ivar">@y</span>) <span class="ruby-keyword">and</span> <span class="ruby-identifier">passable?</span>(<span class="ruby-ivar">@x</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>, <span class="ruby-ivar">@y</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>))
+    <span class="ruby-ivar">@x</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+    <span class="ruby-ivar">@y</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+    <span class="ruby-identifier">increase_steps</span>
+    <span class="ruby-ivar">@move_failed</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@move_failed</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move_lower_right">
+            
+              <b>move_lower_right</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-move_lower_right" name="method-i-move_lower_right" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move Lower Right</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_lower_right_source')" id="l_method-i-move_lower_right_source">show</a>
+                
+              </p>
+              <div id="method-i-move_lower_right_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 675</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move_lower_right</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@direction_fix</span>
+    <span class="ruby-ivar">@direction</span> = (<span class="ruby-ivar">@direction</span> <span class="ruby-operator">==</span> <span class="ruby-number">4</span> <span class="ruby-operator">?</span> <span class="ruby-number">6</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@direction</span> <span class="ruby-operator">==</span> <span class="ruby-number">8</span> <span class="ruby-operator">?</span> <span class="ruby-number">2</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@direction</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">passable?</span>(<span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>) <span class="ruby-keyword">and</span> <span class="ruby-identifier">passable?</span>(<span class="ruby-ivar">@x</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>, <span class="ruby-ivar">@y</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>)) <span class="ruby-keyword">or</span>
+     (<span class="ruby-identifier">passable?</span>(<span class="ruby-ivar">@x</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>, <span class="ruby-ivar">@y</span>) <span class="ruby-keyword">and</span> <span class="ruby-identifier">passable?</span>(<span class="ruby-ivar">@x</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>, <span class="ruby-ivar">@y</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>))
+    <span class="ruby-ivar">@x</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+    <span class="ruby-ivar">@y</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+    <span class="ruby-identifier">increase_steps</span>
+    <span class="ruby-ivar">@move_failed</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@move_failed</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move_random">
+            
+              <b>move_random</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-move_random" name="method-i-move_random" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move at Random</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_random_source')" id="l_method-i-move_random_source">show</a>
+                
+              </p>
+              <div id="method-i-move_random_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 729</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move_random</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">rand</span>(<span class="ruby-number">4</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-number">0</span>;  <span class="ruby-identifier">move_down</span>(<span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>;  <span class="ruby-identifier">move_left</span>(<span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>;  <span class="ruby-identifier">move_right</span>(<span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-number">3</span>;  <span class="ruby-identifier">move_up</span>(<span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move_right">
+            
+              <b>move_right</b>(turn_ok = true)
+            
+            <a href="../classes/Game_Character.html#method-i-move_right" name="method-i-move_right" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move Right</p>
+
+<p>turn_ok : Allows change of direction on the spot</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_right_source')" id="l_method-i-move_right_source">show</a>
+                
+              </p>
+              <div id="method-i-move_right_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 622</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move_right</span>(<span class="ruby-identifier">turn_ok</span> = <span class="ruby-keyword">true</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">passable?</span>(<span class="ruby-ivar">@x</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>, <span class="ruby-ivar">@y</span>)                  <span class="ruby-comment"># Passable</span>
+    <span class="ruby-identifier">turn_right</span>
+    <span class="ruby-ivar">@x</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">round_x</span>(<span class="ruby-ivar">@x</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>)
+    <span class="ruby-ivar">@real_x</span> = (<span class="ruby-ivar">@x</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>)*<span class="ruby-number">256</span>
+    <span class="ruby-identifier">increase_steps</span>
+    <span class="ruby-ivar">@move_failed</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">else</span>                                    <span class="ruby-comment"># Impassable</span>
+    <span class="ruby-identifier">turn_right</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">turn_ok</span>
+    <span class="ruby-identifier">check_event_trigger_touch</span>(<span class="ruby-ivar">@x</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>, <span class="ruby-ivar">@y</span>)   <span class="ruby-comment"># Touch event is triggered?</span>
+    <span class="ruby-ivar">@move_failed</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move_toward_player">
+            
+              <b>move_toward_player</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-move_toward_player" name="method-i-move_toward_player" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move toward Player</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_toward_player_source')" id="l_method-i-move_toward_player_source">show</a>
+                
+              </p>
+              <div id="method-i-move_toward_player_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 741</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move_toward_player</span>
+  <span class="ruby-identifier">sx</span> = <span class="ruby-identifier">distance_x_from_player</span>
+  <span class="ruby-identifier">sy</span> = <span class="ruby-identifier">distance_y_from_player</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">sx</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">sy</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">sx</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">sy</span>.<span class="ruby-identifier">abs</span>                  <span class="ruby-comment"># Horizontal distance is longer</span>
+      <span class="ruby-identifier">sx</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">move_left</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">move_right</span>   <span class="ruby-comment"># Prioritize left-right</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@move_failed</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">sy</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span>
+        <span class="ruby-identifier">sy</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">move_up</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">move_down</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>                                <span class="ruby-comment"># Vertical distance is longer</span>
+      <span class="ruby-identifier">sy</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">move_up</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">move_down</span>      <span class="ruby-comment"># Prioritize up-down</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@move_failed</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">sx</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span>
+        <span class="ruby-identifier">sx</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">move_left</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">move_right</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move_type_custom">
+            
+              <b>move_type_custom</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-move_type_custom" name="method-i-move_type_custom" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move Type : Custom</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_type_custom_source')" id="l_method-i-move_type_custom_source">show</a>
+                
+              </p>
+              <div id="method-i-move_type_custom_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 432</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move_type_custom</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">stopping?</span>
+    <span class="ruby-identifier">command</span> = <span class="ruby-ivar">@move_route</span>.<span class="ruby-identifier">list</span>[<span class="ruby-ivar">@move_route_index</span>]   <span class="ruby-comment"># Get movement command</span>
+    <span class="ruby-ivar">@move_failed</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">command</span>.<span class="ruby-identifier">code</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>                            <span class="ruby-comment"># End of list</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@move_route</span>.<span class="ruby-identifier">repeat</span>                         <span class="ruby-comment"># [Repeat Action]</span>
+        <span class="ruby-ivar">@move_route_index</span> = <span class="ruby-number">0</span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@move_route_forcing</span>                     <span class="ruby-comment"># Forced move route</span>
+        <span class="ruby-ivar">@move_route_forcing</span> = <span class="ruby-keyword">false</span>                 <span class="ruby-comment"># Cancel forcing</span>
+        <span class="ruby-ivar">@move_route</span> = <span class="ruby-ivar">@original_move_route</span>          <span class="ruby-comment"># Restore original</span>
+        <span class="ruby-ivar">@move_route_index</span> = <span class="ruby-ivar">@original_move_route_index</span>
+        <span class="ruby-ivar">@original_move_route</span> = <span class="ruby-keyword">nil</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">command</span>.<span class="ruby-identifier">code</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>    <span class="ruby-comment"># Move Down</span>
+        <span class="ruby-identifier">move_down</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>    <span class="ruby-comment"># Move Left</span>
+        <span class="ruby-identifier">move_left</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">3</span>    <span class="ruby-comment"># Move Right</span>
+        <span class="ruby-identifier">move_right</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">4</span>    <span class="ruby-comment"># Move Up</span>
+        <span class="ruby-identifier">move_up</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">5</span>    <span class="ruby-comment"># Move Lower Left</span>
+        <span class="ruby-identifier">move_lower_left</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">6</span>    <span class="ruby-comment"># Move Lower Right</span>
+        <span class="ruby-identifier">move_lower_right</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">7</span>    <span class="ruby-comment"># Move Upper Left</span>
+        <span class="ruby-identifier">move_upper_left</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">8</span>    <span class="ruby-comment"># Move Upper Right</span>
+        <span class="ruby-identifier">move_upper_right</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">9</span>    <span class="ruby-comment"># Move at Random</span>
+        <span class="ruby-identifier">move_random</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">10</span>   <span class="ruby-comment"># Move toward Player</span>
+        <span class="ruby-identifier">move_toward_player</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">11</span>   <span class="ruby-comment"># Move away from Player</span>
+        <span class="ruby-identifier">move_away_from_player</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">12</span>   <span class="ruby-comment"># 1 Step Forward</span>
+        <span class="ruby-identifier">move_forward</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">13</span>   <span class="ruby-comment"># 1 Step Backwards</span>
+        <span class="ruby-identifier">move_backward</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">14</span>   <span class="ruby-comment"># Jump</span>
+        <span class="ruby-identifier">jump</span>(<span class="ruby-identifier">command</span>.<span class="ruby-identifier">parameters</span>[<span class="ruby-number">0</span>], <span class="ruby-identifier">command</span>.<span class="ruby-identifier">parameters</span>[<span class="ruby-number">1</span>])
+      <span class="ruby-keyword">when</span> <span class="ruby-number">15</span>   <span class="ruby-comment"># Wait</span>
+        <span class="ruby-ivar">@wait_count</span> = <span class="ruby-identifier">command</span>.<span class="ruby-identifier">parameters</span>[<span class="ruby-number">0</span>] <span class="ruby-operator">-</span> <span class="ruby-number">1</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">16</span>   <span class="ruby-comment"># Turn Down</span>
+        <span class="ruby-identifier">turn_down</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">17</span>   <span class="ruby-comment"># Turn Left</span>
+        <span class="ruby-identifier">turn_left</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">18</span>   <span class="ruby-comment"># Turn Right</span>
+        <span class="ruby-identifier">turn_right</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">19</span>   <span class="ruby-comment"># Turn Up</span>
+        <span class="ruby-identifier">turn_up</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">20</span>   <span class="ruby-comment"># Turn 90° Right</span>
+        <span class="ruby-identifier">turn_right_90</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">21</span>   <span class="ruby-comment"># Turn 90° Left</span>
+        <span class="ruby-identifier">turn_left_90</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">22</span>   <span class="ruby-comment"># Turn 180°</span>
+        <span class="ruby-identifier">turn_180</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">23</span>   <span class="ruby-comment"># Turn 90° Right or Left</span>
+        <span class="ruby-identifier">turn_right_or_left_90</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">24</span>   <span class="ruby-comment"># Turn at Random</span>
+        <span class="ruby-identifier">turn_random</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">25</span>   <span class="ruby-comment"># Turn toward Player</span>
+        <span class="ruby-identifier">turn_toward_player</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">26</span>   <span class="ruby-comment"># Turn away from Player</span>
+        <span class="ruby-identifier">turn_away_from_player</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">27</span>   <span class="ruby-comment"># Switch ON</span>
+        <span class="ruby-identifier">$game_switches</span>[<span class="ruby-identifier">command</span>.<span class="ruby-identifier">parameters</span>[<span class="ruby-number">0</span>]] = <span class="ruby-keyword">true</span>
+        <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">need_refresh</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">28</span>   <span class="ruby-comment"># Switch OFF</span>
+        <span class="ruby-identifier">$game_switches</span>[<span class="ruby-identifier">command</span>.<span class="ruby-identifier">parameters</span>[<span class="ruby-number">0</span>]] = <span class="ruby-keyword">false</span>
+        <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">need_refresh</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">29</span>   <span class="ruby-comment"># Change Speed</span>
+        <span class="ruby-ivar">@move_speed</span> = <span class="ruby-identifier">command</span>.<span class="ruby-identifier">parameters</span>[<span class="ruby-number">0</span>]
+      <span class="ruby-keyword">when</span> <span class="ruby-number">30</span>   <span class="ruby-comment"># Change Frequency</span>
+        <span class="ruby-ivar">@move_frequency</span> = <span class="ruby-identifier">command</span>.<span class="ruby-identifier">parameters</span>[<span class="ruby-number">0</span>]
+      <span class="ruby-keyword">when</span> <span class="ruby-number">31</span>   <span class="ruby-comment"># Walking Animation ON</span>
+        <span class="ruby-ivar">@walk_anime</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">32</span>   <span class="ruby-comment"># Walking Animation OFF</span>
+        <span class="ruby-ivar">@walk_anime</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">33</span>   <span class="ruby-comment"># Stepping Animation ON</span>
+        <span class="ruby-ivar">@step_anime</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">34</span>   <span class="ruby-comment"># Stepping Animation OFF</span>
+        <span class="ruby-ivar">@step_anime</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">35</span>   <span class="ruby-comment"># Direction Fix ON</span>
+        <span class="ruby-ivar">@direction_fix</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">36</span>   <span class="ruby-comment"># Direction Fix OFF</span>
+        <span class="ruby-ivar">@direction_fix</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">37</span>   <span class="ruby-comment"># Through ON</span>
+        <span class="ruby-ivar">@through</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">38</span>   <span class="ruby-comment"># Through OFF</span>
+        <span class="ruby-ivar">@through</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">39</span>   <span class="ruby-comment"># Transparent ON</span>
+        <span class="ruby-ivar">@transparent</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">40</span>   <span class="ruby-comment"># Transparent OFF</span>
+        <span class="ruby-ivar">@transparent</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">41</span>   <span class="ruby-comment"># Change Graphic</span>
+        <span class="ruby-identifier">set_graphic</span>(<span class="ruby-identifier">command</span>.<span class="ruby-identifier">parameters</span>[<span class="ruby-number">0</span>], <span class="ruby-identifier">command</span>.<span class="ruby-identifier">parameters</span>[<span class="ruby-number">1</span>])
+      <span class="ruby-keyword">when</span> <span class="ruby-number">42</span>   <span class="ruby-comment"># Change Opacity</span>
+        <span class="ruby-ivar">@opacity</span> = <span class="ruby-identifier">command</span>.<span class="ruby-identifier">parameters</span>[<span class="ruby-number">0</span>]
+      <span class="ruby-keyword">when</span> <span class="ruby-number">43</span>   <span class="ruby-comment"># Change Blending</span>
+        <span class="ruby-ivar">@blend_type</span> = <span class="ruby-identifier">command</span>.<span class="ruby-identifier">parameters</span>[<span class="ruby-number">0</span>]
+      <span class="ruby-keyword">when</span> <span class="ruby-number">44</span>   <span class="ruby-comment"># Play SE</span>
+        <span class="ruby-identifier">command</span>.<span class="ruby-identifier">parameters</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">play</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-number">45</span>   <span class="ruby-comment"># Script</span>
+        <span class="ruby-identifier">eval</span>(<span class="ruby-identifier">command</span>.<span class="ruby-identifier">parameters</span>[<span class="ruby-number">0</span>])
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-ivar">@move_route</span>.<span class="ruby-identifier">skippable</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@move_failed</span>
+        <span class="ruby-keyword">return</span>  <span class="ruby-comment"># [Skip if Cannot Move] OFF &amp; movement failure</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-ivar">@move_route_index</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move_type_random">
+            
+              <b>move_type_random</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-move_type_random" name="method-i-move_type_random" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move Type : Random</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_type_random_source')" id="l_method-i-move_type_random_source">show</a>
+                
+              </p>
+              <div id="method-i-move_type_random_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 404</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move_type_random</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">rand</span>(<span class="ruby-number">6</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-number">0</span><span class="ruby-operator">..</span><span class="ruby-number">1</span>;  <span class="ruby-identifier">move_random</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">2</span><span class="ruby-operator">..</span><span class="ruby-number">4</span>;  <span class="ruby-identifier">move_forward</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">5</span>;     <span class="ruby-ivar">@stop_count</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move_type_toward_player">
+            
+              <b>move_type_toward_player</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-move_type_toward_player" name="method-i-move_type_toward_player" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move Type : Approach</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_type_toward_player_source')" id="l_method-i-move_type_toward_player_source">show</a>
+                
+              </p>
+              <div id="method-i-move_type_toward_player_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 415</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move_type_toward_player</span>
+  <span class="ruby-identifier">sx</span> = <span class="ruby-ivar">@x</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">x</span>
+  <span class="ruby-identifier">sy</span> = <span class="ruby-ivar">@y</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">y</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">sx</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">sy</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">20</span>
+    <span class="ruby-identifier">move_random</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">rand</span>(<span class="ruby-number">6</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-number">0</span><span class="ruby-operator">..</span><span class="ruby-number">3</span>;  <span class="ruby-identifier">move_toward_player</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">4</span>;     <span class="ruby-identifier">move_random</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">5</span>;     <span class="ruby-identifier">move_forward</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move_up">
+            
+              <b>move_up</b>(turn_ok = true)
+            
+            <a href="../classes/Game_Character.html#method-i-move_up" name="method-i-move_up" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move up</p>
+
+<p>turn_ok : Allows change of direction on the spot</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_up_source')" id="l_method-i-move_up_source">show</a>
+                
+              </p>
+              <div id="method-i-move_up_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 640</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move_up</span>(<span class="ruby-identifier">turn_ok</span> = <span class="ruby-keyword">true</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">passable?</span>(<span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>)                  <span class="ruby-comment"># Passable</span>
+    <span class="ruby-identifier">turn_up</span>
+    <span class="ruby-ivar">@y</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">round_y</span>(<span class="ruby-ivar">@y</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>)
+    <span class="ruby-ivar">@real_y</span> = (<span class="ruby-ivar">@y</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>)*<span class="ruby-number">256</span>
+    <span class="ruby-identifier">increase_steps</span>
+    <span class="ruby-ivar">@move_failed</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">else</span>                                    <span class="ruby-comment"># Impassable</span>
+    <span class="ruby-identifier">turn_up</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">turn_ok</span>
+    <span class="ruby-identifier">check_event_trigger_touch</span>(<span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>)   <span class="ruby-comment"># Touch event is triggered?</span>
+    <span class="ruby-ivar">@move_failed</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move_upper_left">
+            
+              <b>move_upper_left</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-move_upper_left" name="method-i-move_upper_left" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move Upper Left</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_upper_left_source')" id="l_method-i-move_upper_left_source">show</a>
+                
+              </p>
+              <div id="method-i-move_upper_left_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 693</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move_upper_left</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@direction_fix</span>
+    <span class="ruby-ivar">@direction</span> = (<span class="ruby-ivar">@direction</span> <span class="ruby-operator">==</span> <span class="ruby-number">6</span> <span class="ruby-operator">?</span> <span class="ruby-number">4</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@direction</span> <span class="ruby-operator">==</span> <span class="ruby-number">2</span> <span class="ruby-operator">?</span> <span class="ruby-number">8</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@direction</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">passable?</span>(<span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>) <span class="ruby-keyword">and</span> <span class="ruby-identifier">passable?</span>(<span class="ruby-ivar">@x</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>, <span class="ruby-ivar">@y</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>)) <span class="ruby-keyword">or</span>
+     (<span class="ruby-identifier">passable?</span>(<span class="ruby-ivar">@x</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>, <span class="ruby-ivar">@y</span>) <span class="ruby-keyword">and</span> <span class="ruby-identifier">passable?</span>(<span class="ruby-ivar">@x</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>, <span class="ruby-ivar">@y</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>))
+    <span class="ruby-ivar">@x</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+    <span class="ruby-ivar">@y</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+    <span class="ruby-identifier">increase_steps</span>
+    <span class="ruby-ivar">@move_failed</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@move_failed</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move_upper_right">
+            
+              <b>move_upper_right</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-move_upper_right" name="method-i-move_upper_right" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move Upper Right</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_upper_right_source')" id="l_method-i-move_upper_right_source">show</a>
+                
+              </p>
+              <div id="method-i-move_upper_right_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 711</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move_upper_right</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@direction_fix</span>
+    <span class="ruby-ivar">@direction</span> = (<span class="ruby-ivar">@direction</span> <span class="ruby-operator">==</span> <span class="ruby-number">4</span> <span class="ruby-operator">?</span> <span class="ruby-number">6</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@direction</span> <span class="ruby-operator">==</span> <span class="ruby-number">2</span> <span class="ruby-operator">?</span> <span class="ruby-number">8</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@direction</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">passable?</span>(<span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>) <span class="ruby-keyword">and</span> <span class="ruby-identifier">passable?</span>(<span class="ruby-ivar">@x</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>, <span class="ruby-ivar">@y</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>)) <span class="ruby-keyword">or</span>
+     (<span class="ruby-identifier">passable?</span>(<span class="ruby-ivar">@x</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>, <span class="ruby-ivar">@y</span>) <span class="ruby-keyword">and</span> <span class="ruby-identifier">passable?</span>(<span class="ruby-ivar">@x</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>, <span class="ruby-ivar">@y</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>))
+    <span class="ruby-ivar">@x</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+    <span class="ruby-ivar">@y</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+    <span class="ruby-identifier">increase_steps</span>
+    <span class="ruby-ivar">@move_failed</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@move_failed</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-moveto">
+            
+              <b>moveto</b>(x, y)
+            
+            <a href="../classes/Game_Character.html#method-i-moveto" name="method-i-moveto" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move to Designated Position</p>
+
+<p>x : x-coordinate y : y-coordinate</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-moveto_source')" id="l_method-i-moveto_source">show</a>
+                
+              </p>
+              <div id="method-i-moveto_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 227</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">moveto</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-ivar">@x</span> = <span class="ruby-identifier">x</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">width</span>
+  <span class="ruby-ivar">@y</span> = <span class="ruby-identifier">y</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">height</span>
+  <span class="ruby-ivar">@real_x</span> = <span class="ruby-ivar">@x</span> * <span class="ruby-number">256</span>
+  <span class="ruby-ivar">@real_y</span> = <span class="ruby-ivar">@y</span> * <span class="ruby-number">256</span>
+  <span class="ruby-ivar">@prelock_direction</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">straighten</span>
+  <span class="ruby-identifier">update_bush_depth</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-moving-3F">
+            
+              <b>moving?</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-moving-3F" name="method-i-moving-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if Moving</p>
+
+<p>Compare with logical coordinates.</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-moving-3F_source')" id="l_method-i-moving-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-moving-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">moving?</span>
+  <span class="ruby-keyword">return</span> (<span class="ruby-ivar">@real_x</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@x</span> * <span class="ruby-number">256</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@real_y</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@y</span> * <span class="ruby-number">256</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-object-3F">
+            
+              <b>object?</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-object-3F" name="method-i-object-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine Object Type</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-object-3F_source')" id="l_method-i-object-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-object-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 251</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">object?</span>
+  <span class="ruby-keyword">return</span> (<span class="ruby-ivar">@tile_id</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@character_name</span>[<span class="ruby-number">0</span>, <span class="ruby-number">1</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'!'</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-passable-3F">
+            
+              <b>passable?</b>(x, y)
+            
+            <a href="../classes/Game_Character.html#method-i-passable-3F" name="method-i-passable-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if Passable</p>
+
+<p>x : x-coordinate y : y-coordinate</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-passable-3F_source')" id="l_method-i-passable-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-passable-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">passable?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">x</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">round_x</span>(<span class="ruby-identifier">x</span>)                        <span class="ruby-comment"># Horizontal loop adj.</span>
+  <span class="ruby-identifier">y</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">round_y</span>(<span class="ruby-identifier">y</span>)                        <span class="ruby-comment"># Vertical loop adj.</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">valid?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)      <span class="ruby-comment"># Outside map?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@through</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">debug_through?</span>       <span class="ruby-comment"># Through ON?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">map_passable?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)         <span class="ruby-comment"># Map Impassable?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">collide_with_characters?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)  <span class="ruby-comment"># Collide with character?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>                                     <span class="ruby-comment"># Passable</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pos-3F">
+            
+              <b>pos?</b>(x, y)
+            
+            <a href="../classes/Game_Character.html#method-i-pos-3F" name="method-i-pos-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine Coordinate Match</p>
+
+<p>x : x-coordinate y : y-coordinate</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pos-3F_source')" id="l_method-i-pos-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-pos-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 142</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pos?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">return</span> (<span class="ruby-ivar">@x</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">x</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@y</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">y</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pos_nt-3F">
+            
+              <b>pos_nt?</b>(x, y)
+            
+            <a href="../classes/Game_Character.html#method-i-pos_nt-3F" name="method-i-pos_nt-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Coordinate Match and “Passage OFF” Determination (nt = No Through)</p>
+
+<p>x : x-coordinate y : y-coordinate</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pos_nt-3F_source')" id="l_method-i-pos_nt-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-pos_nt-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 151</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pos_nt?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">return</span> (<span class="ruby-identifier">pos?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>) <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-ivar">@through</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-screen_x">
+            
+              <b>screen_x</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-screen_x" name="method-i-screen_x" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Screen X-Coordinates</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-screen_x_source')" id="l_method-i-screen_x_source">show</a>
+                
+              </p>
+              <div id="method-i-screen_x_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 258</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">screen_x</span>
+  <span class="ruby-keyword">return</span> (<span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">adjust_x</span>(<span class="ruby-ivar">@real_x</span>) <span class="ruby-operator">+</span> <span class="ruby-number">8007</span>) <span class="ruby-operator">/</span> <span class="ruby-number">8</span> <span class="ruby-operator">-</span> <span class="ruby-number">1000</span> <span class="ruby-operator">+</span> <span class="ruby-number">16</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-screen_y">
+            
+              <b>screen_y</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-screen_y" name="method-i-screen_y" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Screen Y-Coordinates</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-screen_y_source')" id="l_method-i-screen_y_source">show</a>
+                
+              </p>
+              <div id="method-i-screen_y_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 265</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">screen_y</span>
+  <span class="ruby-identifier">y</span> = (<span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">adjust_y</span>(<span class="ruby-ivar">@real_y</span>) <span class="ruby-operator">+</span> <span class="ruby-number">8007</span>) <span class="ruby-operator">/</span> <span class="ruby-number">8</span> <span class="ruby-operator">-</span> <span class="ruby-number">1000</span> <span class="ruby-operator">+</span> <span class="ruby-number">32</span>
+  <span class="ruby-identifier">y</span> <span class="ruby-operator">-=</span> <span class="ruby-number">4</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">object?</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@jump_count</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-ivar">@jump_peak</span>
+    <span class="ruby-identifier">n</span> = <span class="ruby-ivar">@jump_count</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@jump_peak</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">n</span> = <span class="ruby-ivar">@jump_peak</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@jump_count</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">-</span> (<span class="ruby-ivar">@jump_peak</span> * <span class="ruby-ivar">@jump_peak</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">n</span> * <span class="ruby-identifier">n</span>) <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-screen_z">
+            
+              <b>screen_z</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-screen_z" name="method-i-screen_z" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Screen Z-Coordinates</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-screen_z_source')" id="l_method-i-screen_z_source">show</a>
+                
+              </p>
+              <div id="method-i-screen_z_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 279</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">screen_z</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@priority_type</span> <span class="ruby-operator">==</span> <span class="ruby-number">2</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-number">200</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@priority_type</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-number">60</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@tile_id</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">pass</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">passages</span>[<span class="ruby-ivar">@tile_id</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">pass</span> &amp; <span class="ruby-number">0x10</span> <span class="ruby-operator">==</span> <span class="ruby-number">0x10</span>    <span class="ruby-comment"># [☆]</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-number">160</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-number">40</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-number">100</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_direction">
+            
+              <b>set_direction</b>(direction)
+            
+            <a href="../classes/Game_Character.html#method-i-set_direction" name="method-i-set_direction" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Change Direction to Designated Direction</p>
+
+<p>direction : Direction</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_direction_source')" id="l_method-i-set_direction_source">show</a>
+                
+              </p>
+              <div id="method-i-set_direction_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 241</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_direction</span>(<span class="ruby-identifier">direction</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-ivar">@direction_fix</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">direction</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@direction</span> = <span class="ruby-identifier">direction</span>
+    <span class="ruby-ivar">@stop_count</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_graphic">
+            
+              <b>set_graphic</b>(character_name, character_index)
+            
+            <a href="../classes/Game_Character.html#method-i-set_graphic" name="method-i-set_graphic" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Change Graphic</p>
+
+<p><a
+href="Game_Character.html#attribute-i-character_name">#character_name</a> 
+: new character graphic filename <a
+href="Game_Character.html#attribute-i-character_index">#character_index</a>
+: new character graphic index</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_graphic_source')" id="l_method-i-set_graphic_source">show</a>
+                
+              </p>
+              <div id="method-i-set_graphic_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 944</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_graphic</span>(<span class="ruby-identifier">character_name</span>, <span class="ruby-identifier">character_index</span>)
+  <span class="ruby-ivar">@tile_id</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@character_name</span> = <span class="ruby-identifier">character_name</span>
+  <span class="ruby-ivar">@character_index</span> = <span class="ruby-identifier">character_index</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-stopping-3F">
+            
+              <b>stopping?</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-stopping-3F" name="method-i-stopping-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if Stopping</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-stopping-3F_source')" id="l_method-i-stopping-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-stopping-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">stopping?</span>
+  <span class="ruby-keyword">return</span> (<span class="ruby-keyword">not</span> (<span class="ruby-identifier">moving?</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">jumping?</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-straighten">
+            
+              <b>straighten</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-straighten" name="method-i-straighten" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Straighten Position</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-straighten_source')" id="l_method-i-straighten_source">show</a>
+                
+              </p>
+              <div id="method-i-straighten_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 115</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">straighten</span>
+  <span class="ruby-ivar">@pattern</span> = <span class="ruby-number">1</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@walk_anime</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@step_anime</span>
+  <span class="ruby-ivar">@anime_count</span> = <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-turn_180">
+            
+              <b>turn_180</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-turn_180" name="method-i-turn_180" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Turn 180°</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-turn_180_source')" id="l_method-i-turn_180_source">show</a>
+                
+              </p>
+              <div id="method-i-turn_180_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 882</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">turn_180</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-ivar">@direction</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>;  <span class="ruby-identifier">turn_up</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">4</span>;  <span class="ruby-identifier">turn_right</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">6</span>;  <span class="ruby-identifier">turn_left</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">8</span>;  <span class="ruby-identifier">turn_down</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-turn_away_from_player">
+            
+              <b>turn_away_from_player</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-turn_away_from_player" name="method-i-turn_away_from_player" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Turn away from Player</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-turn_away_from_player_source')" id="l_method-i-turn_away_from_player_source">show</a>
+                
+              </p>
+              <div id="method-i-turn_away_from_player_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 929</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">turn_away_from_player</span>
+  <span class="ruby-identifier">sx</span> = <span class="ruby-identifier">distance_x_from_player</span>
+  <span class="ruby-identifier">sy</span> = <span class="ruby-identifier">distance_y_from_player</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">sx</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">sy</span>.<span class="ruby-identifier">abs</span>                    <span class="ruby-comment"># Horizontal distance is longer</span>
+    <span class="ruby-identifier">sx</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">turn_right</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">turn_left</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">sx</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">sy</span>.<span class="ruby-identifier">abs</span>                 <span class="ruby-comment"># Vertical distance is longer</span>
+    <span class="ruby-identifier">sy</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">turn_down</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">turn_up</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-turn_down">
+            
+              <b>turn_down</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-turn_down" name="method-i-turn_down" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Turn Down</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-turn_down_source')" id="l_method-i-turn_down_source">show</a>
+                
+              </p>
+              <div id="method-i-turn_down_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 830</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">turn_down</span>
+  <span class="ruby-identifier">set_direction</span>(<span class="ruby-number">2</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-turn_left">
+            
+              <b>turn_left</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-turn_left" name="method-i-turn_left" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Turn Left</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-turn_left_source')" id="l_method-i-turn_left_source">show</a>
+                
+              </p>
+              <div id="method-i-turn_left_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 837</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">turn_left</span>
+  <span class="ruby-identifier">set_direction</span>(<span class="ruby-number">4</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-turn_left_90">
+            
+              <b>turn_left_90</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-turn_left_90" name="method-i-turn_left_90" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Turn 90° Left</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-turn_left_90_source')" id="l_method-i-turn_left_90_source">show</a>
+                
+              </p>
+              <div id="method-i-turn_left_90_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 870</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">turn_left_90</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-ivar">@direction</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>;  <span class="ruby-identifier">turn_right</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">4</span>;  <span class="ruby-identifier">turn_down</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">6</span>;  <span class="ruby-identifier">turn_up</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">8</span>;  <span class="ruby-identifier">turn_left</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-turn_random">
+            
+              <b>turn_random</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-turn_random" name="method-i-turn_random" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Turn at Random</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-turn_random_source')" id="l_method-i-turn_random_source">show</a>
+                
+              </p>
+              <div id="method-i-turn_random_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 904</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">turn_random</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">rand</span>(<span class="ruby-number">4</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-number">0</span>;  <span class="ruby-identifier">turn_up</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>;  <span class="ruby-identifier">turn_right</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>;  <span class="ruby-identifier">turn_left</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">3</span>;  <span class="ruby-identifier">turn_down</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-turn_right">
+            
+              <b>turn_right</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-turn_right" name="method-i-turn_right" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Turn Right</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-turn_right_source')" id="l_method-i-turn_right_source">show</a>
+                
+              </p>
+              <div id="method-i-turn_right_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 844</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">turn_right</span>
+  <span class="ruby-identifier">set_direction</span>(<span class="ruby-number">6</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-turn_right_90">
+            
+              <b>turn_right_90</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-turn_right_90" name="method-i-turn_right_90" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Turn 90° Right</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-turn_right_90_source')" id="l_method-i-turn_right_90_source">show</a>
+                
+              </p>
+              <div id="method-i-turn_right_90_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 858</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">turn_right_90</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-ivar">@direction</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>;  <span class="ruby-identifier">turn_left</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">4</span>;  <span class="ruby-identifier">turn_up</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">6</span>;  <span class="ruby-identifier">turn_down</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">8</span>;  <span class="ruby-identifier">turn_right</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-turn_right_or_left_90">
+            
+              <b>turn_right_or_left_90</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-turn_right_or_left_90" name="method-i-turn_right_or_left_90" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Turn 90° Right or Left</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-turn_right_or_left_90_source')" id="l_method-i-turn_right_or_left_90_source">show</a>
+                
+              </p>
+              <div id="method-i-turn_right_or_left_90_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 894</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">turn_right_or_left_90</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">rand</span>(<span class="ruby-number">2</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-number">0</span>;  <span class="ruby-identifier">turn_right_90</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>;  <span class="ruby-identifier">turn_left_90</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-turn_toward_player">
+            
+              <b>turn_toward_player</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-turn_toward_player" name="method-i-turn_toward_player" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Turn toward Player</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-turn_toward_player_source')" id="l_method-i-turn_toward_player_source">show</a>
+                
+              </p>
+              <div id="method-i-turn_toward_player_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 916</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">turn_toward_player</span>
+  <span class="ruby-identifier">sx</span> = <span class="ruby-identifier">distance_x_from_player</span>
+  <span class="ruby-identifier">sy</span> = <span class="ruby-identifier">distance_y_from_player</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">sx</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">sy</span>.<span class="ruby-identifier">abs</span>                    <span class="ruby-comment"># Horizontal distance is longer</span>
+    <span class="ruby-identifier">sx</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">turn_left</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">turn_right</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">sx</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">sy</span>.<span class="ruby-identifier">abs</span>                 <span class="ruby-comment"># Vertical distance is longer</span>
+    <span class="ruby-identifier">sy</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">turn_up</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">turn_down</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-turn_up">
+            
+              <b>turn_up</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-turn_up" name="method-i-turn_up" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Turn Up</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-turn_up_source')" id="l_method-i-turn_up_source">show</a>
+                
+              </p>
+              <div id="method-i-turn_up_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 851</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">turn_up</span>
+  <span class="ruby-identifier">set_direction</span>(<span class="ruby-number">8</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-unlock">
+            
+              <b>unlock</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-unlock" name="method-i-unlock" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Unlock</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-unlock_source')" id="l_method-i-unlock_source">show</a>
+                
+              </p>
+              <div id="method-i-unlock_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 215</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">unlock</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@locked</span>
+    <span class="ruby-ivar">@locked</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-identifier">set_direction</span>(<span class="ruby-ivar">@prelock_direction</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Frame Update</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 299</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">jumping?</span>                 <span class="ruby-comment"># Jumping</span>
+    <span class="ruby-identifier">update_jump</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">moving?</span>               <span class="ruby-comment"># Moving</span>
+    <span class="ruby-identifier">update_move</span>
+  <span class="ruby-keyword">else</span>                        <span class="ruby-comment"># Stopped</span>
+    <span class="ruby-identifier">update_stop</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@wait_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>          <span class="ruby-comment"># Waiting</span>
+    <span class="ruby-ivar">@wait_count</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@move_route_forcing</span>   <span class="ruby-comment"># Forced move route</span>
+    <span class="ruby-identifier">move_type_custom</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-keyword">not</span> <span class="ruby-ivar">@locked</span>           <span class="ruby-comment"># Not locked</span>
+    <span class="ruby-identifier">update_self_movement</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">update_animation</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_animation">
+            
+              <b>update_animation</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-update_animation" name="method-i-update_animation" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Animation Count</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_animation_source')" id="l_method-i-update_animation_source">show</a>
+                
+              </p>
+              <div id="method-i-update_animation_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 373</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_animation</span>
+  <span class="ruby-identifier">speed</span> = <span class="ruby-ivar">@move_speed</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">dash?</span> <span class="ruby-operator">?</span> <span class="ruby-number">1</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@anime_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">18</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">speed</span> * <span class="ruby-number">2</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-ivar">@step_anime</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@stop_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+      <span class="ruby-ivar">@pattern</span> = <span class="ruby-ivar">@original_pattern</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@pattern</span> = (<span class="ruby-ivar">@pattern</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span>) <span class="ruby-operator">%</span> <span class="ruby-number">4</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-ivar">@anime_count</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_bush_depth">
+            
+              <b>update_bush_depth</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-update_bush_depth" name="method-i-update_bush_depth" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Bush Depth</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_bush_depth_source')" id="l_method-i-update_bush_depth_source">show</a>
+                
+              </p>
+              <div id="method-i-update_bush_depth_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 388</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_bush_depth</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">object?</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@priority_type</span> <span class="ruby-operator">!=</span> <span class="ruby-number">1</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@jump_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@bush_depth</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">bush</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">bush?</span>(<span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">bush</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">moving?</span>
+      <span class="ruby-ivar">@bush_depth</span> = <span class="ruby-number">8</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">bush</span>
+      <span class="ruby-ivar">@bush_depth</span> = <span class="ruby-number">0</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_jump">
+            
+              <b>update_jump</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-update_jump" name="method-i-update_jump" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update While Jumping</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_jump_source')" id="l_method-i-update_jump_source">show</a>
+                
+              </p>
+              <div id="method-i-update_jump_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 320</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_jump</span>
+  <span class="ruby-ivar">@jump_count</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+  <span class="ruby-ivar">@real_x</span> = (<span class="ruby-ivar">@real_x</span> * <span class="ruby-ivar">@jump_count</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@x</span> * <span class="ruby-number">256</span>) <span class="ruby-operator">/</span> (<span class="ruby-ivar">@jump_count</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span>)
+  <span class="ruby-ivar">@real_y</span> = (<span class="ruby-ivar">@real_y</span> * <span class="ruby-ivar">@jump_count</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@y</span> * <span class="ruby-number">256</span>) <span class="ruby-operator">/</span> (<span class="ruby-ivar">@jump_count</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span>)
+  <span class="ruby-identifier">update_bush_depth</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_move">
+            
+              <b>update_move</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-update_move" name="method-i-update_move" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update While Moving</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_move_source')" id="l_method-i-update_move_source">show</a>
+                
+              </p>
+              <div id="method-i-update_move_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 330</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_move</span>
+  <span class="ruby-identifier">distance</span> = <span class="ruby-number">2</span> <span class="ruby-operator">**</span> <span class="ruby-ivar">@move_speed</span>   <span class="ruby-comment"># Convert to movement distance</span>
+  <span class="ruby-identifier">distance</span> <span class="ruby-operator">*=</span> <span class="ruby-number">2</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">dash?</span>        <span class="ruby-comment"># If dashing, double it</span>
+  <span class="ruby-ivar">@real_x</span> = [<span class="ruby-ivar">@real_x</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">distance</span>, <span class="ruby-ivar">@x</span> * <span class="ruby-number">256</span>].<span class="ruby-identifier">max</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@x</span> * <span class="ruby-number">256</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@real_x</span>
+  <span class="ruby-ivar">@real_x</span> = [<span class="ruby-ivar">@real_x</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">distance</span>, <span class="ruby-ivar">@x</span> * <span class="ruby-number">256</span>].<span class="ruby-identifier">min</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@x</span> * <span class="ruby-number">256</span> <span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@real_x</span>
+  <span class="ruby-ivar">@real_y</span> = [<span class="ruby-ivar">@real_y</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">distance</span>, <span class="ruby-ivar">@y</span> * <span class="ruby-number">256</span>].<span class="ruby-identifier">max</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@y</span> * <span class="ruby-number">256</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@real_y</span>
+  <span class="ruby-ivar">@real_y</span> = [<span class="ruby-ivar">@real_y</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">distance</span>, <span class="ruby-ivar">@y</span> * <span class="ruby-number">256</span>].<span class="ruby-identifier">min</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@y</span> * <span class="ruby-number">256</span> <span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@real_y</span>
+  <span class="ruby-identifier">update_bush_depth</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">moving?</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@walk_anime</span>
+    <span class="ruby-ivar">@anime_count</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1.5</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@step_anime</span>
+    <span class="ruby-ivar">@anime_count</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_self_movement">
+            
+              <b>update_self_movement</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-update_self_movement" name="method-i-update_self_movement" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update During Self movement</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_self_movement_source')" id="l_method-i-update_self_movement_source">show</a>
+                
+              </p>
+              <div id="method-i-update_self_movement_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 360</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_self_movement</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@stop_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">30</span> * (<span class="ruby-number">5</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@move_frequency</span>)
+    <span class="ruby-keyword">case</span> <span class="ruby-ivar">@move_type</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>;  <span class="ruby-identifier">move_type_random</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>;  <span class="ruby-identifier">move_type_toward_player</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">3</span>;  <span class="ruby-identifier">move_type_custom</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_stop">
+            
+              <b>update_stop</b>()
+            
+            <a href="../classes/Game_Character.html#method-i-update_stop" name="method-i-update_stop" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update While Stopped</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_stop_source')" id="l_method-i-update_stop_source">show</a>
+                
+              </p>
+              <div id="method-i-update_stop_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Character.rb, line 348</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_stop</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@step_anime</span>
+    <span class="ruby-ivar">@anime_count</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@pattern</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@original_pattern</span>
+    <span class="ruby-ivar">@anime_count</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1.5</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@stop_count</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@locked</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

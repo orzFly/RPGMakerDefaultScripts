@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Spriteset_Map</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Spriteset_Map 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Spriteset_Map_rb.html">Spriteset_Map.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This class brings together map screen sprites, tilemaps, etc. It’s used
+within the <a href="Scene_Map.html">Scene_Map</a> class.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dispose">dispose</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Object Initialization</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-comment"># Make viewports</span>
+  <span class="ruby-ivar">@viewport1</span> = <span class="ruby-constant">Viewport</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">640</span>, <span class="ruby-number">480</span>)
+  <span class="ruby-ivar">@viewport2</span> = <span class="ruby-constant">Viewport</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">640</span>, <span class="ruby-number">480</span>)
+  <span class="ruby-ivar">@viewport3</span> = <span class="ruby-constant">Viewport</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">640</span>, <span class="ruby-number">480</span>)
+  <span class="ruby-ivar">@viewport2</span>.<span class="ruby-identifier">z</span> = <span class="ruby-number">200</span>
+  <span class="ruby-ivar">@viewport3</span>.<span class="ruby-identifier">z</span> = <span class="ruby-number">5000</span>
+  <span class="ruby-comment"># Make tilemap</span>
+  <span class="ruby-ivar">@tilemap</span> = <span class="ruby-constant">Tilemap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport1</span>)
+  <span class="ruby-ivar">@tilemap</span>.<span class="ruby-identifier">tileset</span> = <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Cache</span>.<span class="ruby-identifier">tileset</span>(<span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">tileset_name</span>)
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">0</span><span class="ruby-operator">..</span><span class="ruby-number">6</span>
+    <span class="ruby-identifier">autotile_name</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">autotile_names</span>[<span class="ruby-identifier">i</span>]
+    <span class="ruby-ivar">@tilemap</span>.<span class="ruby-identifier">autotiles</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Cache</span>.<span class="ruby-identifier">autotile</span>(<span class="ruby-identifier">autotile_name</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@tilemap</span>.<span class="ruby-identifier">map_data</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">data</span>
+  <span class="ruby-ivar">@tilemap</span>.<span class="ruby-identifier">priorities</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">priorities</span>
+  <span class="ruby-comment"># Make panorama plane</span>
+  <span class="ruby-ivar">@panorama</span> = <span class="ruby-constant">Plane</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport1</span>)
+  <span class="ruby-ivar">@panorama</span>.<span class="ruby-identifier">z</span> = <span class="ruby-number">-1000</span>
+  <span class="ruby-comment"># Make fog plane</span>
+  <span class="ruby-ivar">@fog</span> = <span class="ruby-constant">Plane</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport1</span>)
+  <span class="ruby-ivar">@fog</span>.<span class="ruby-identifier">z</span> = <span class="ruby-number">3000</span>
+  <span class="ruby-comment"># Make character sprites</span>
+  <span class="ruby-ivar">@character_sprites</span> = []
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">events</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">sort</span>
+    <span class="ruby-identifier">sprite</span> = <span class="ruby-constant">Sprite_Character</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport1</span>, <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">events</span>[<span class="ruby-identifier">i</span>])
+    <span class="ruby-ivar">@character_sprites</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">sprite</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@character_sprites</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Sprite_Character</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport1</span>, <span class="ruby-identifier">$game_player</span>))
+  <span class="ruby-comment"># Make weather</span>
+  <span class="ruby-ivar">@weather</span> = <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Weather</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport1</span>)
+  <span class="ruby-comment"># Make picture sprites</span>
+  <span class="ruby-ivar">@picture_sprites</span> = []
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">50</span>
+    <span class="ruby-ivar">@picture_sprites</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Sprite_Picture</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport2</span>,
+      <span class="ruby-identifier">$game_screen</span>.<span class="ruby-identifier">pictures</span>[<span class="ruby-identifier">i</span>]))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Make timer sprite</span>
+  <span class="ruby-ivar">@timer_sprite</span> = <span class="ruby-constant">Sprite_Timer</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-comment"># Frame update</span>
+  <span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose">
+            
+              <b>dispose</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-dispose" name="method-i-dispose" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Dispose</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_source')" id="l_method-i-dispose_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose</span>
+  <span class="ruby-comment"># Dispose of tilemap</span>
+  <span class="ruby-ivar">@tilemap</span>.<span class="ruby-identifier">tileset</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">0</span><span class="ruby-operator">..</span><span class="ruby-number">6</span>
+    <span class="ruby-ivar">@tilemap</span>.<span class="ruby-identifier">autotiles</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">dispose</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@tilemap</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-comment"># Dispose of panorama plane</span>
+  <span class="ruby-ivar">@panorama</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-comment"># Dispose of fog plane</span>
+  <span class="ruby-ivar">@fog</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-comment"># Dispose of character sprites</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">sprite</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@character_sprites</span>
+    <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Dispose of weather</span>
+  <span class="ruby-ivar">@weather</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-comment"># Dispose of picture sprites</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">sprite</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@picture_sprites</span>
+    <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Dispose of timer sprite</span>
+  <span class="ruby-ivar">@timer_sprite</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-comment"># Dispose of viewports</span>
+  <span class="ruby-ivar">@viewport1</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@viewport2</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@viewport3</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Frame Update</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-comment"># If panorama is different from current one</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@panorama_name</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">panorama_name</span> <span class="ruby-keyword">or</span>
+     <span class="ruby-ivar">@panorama_hue</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">panorama_hue</span>
+    <span class="ruby-ivar">@panorama_name</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">panorama_name</span>
+    <span class="ruby-ivar">@panorama_hue</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">panorama_hue</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@panorama</span>.<span class="ruby-identifier">bitmap</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+      <span class="ruby-ivar">@panorama</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">dispose</span>
+      <span class="ruby-ivar">@panorama</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@panorama_name</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;&quot;</span>
+      <span class="ruby-ivar">@panorama</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Cache</span>.<span class="ruby-identifier">panorama</span>(<span class="ruby-ivar">@panorama_name</span>, <span class="ruby-ivar">@panorama_hue</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">frame_reset</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If fog is different than current fog</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@fog_name</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">fog_name</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@fog_hue</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">fog_hue</span>
+    <span class="ruby-ivar">@fog_name</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">fog_name</span>
+    <span class="ruby-ivar">@fog_hue</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">fog_hue</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@fog</span>.<span class="ruby-identifier">bitmap</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+      <span class="ruby-ivar">@fog</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">dispose</span>
+      <span class="ruby-ivar">@fog</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@fog_name</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;&quot;</span>
+      <span class="ruby-ivar">@fog</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Cache</span>.<span class="ruby-identifier">fog</span>(<span class="ruby-ivar">@fog_name</span>, <span class="ruby-ivar">@fog_hue</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">frame_reset</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Update tilemap</span>
+  <span class="ruby-ivar">@tilemap</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">display_x</span> <span class="ruby-operator">/</span> <span class="ruby-number">4</span>
+  <span class="ruby-ivar">@tilemap</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">display_y</span> <span class="ruby-operator">/</span> <span class="ruby-number">4</span>
+  <span class="ruby-ivar">@tilemap</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-comment"># Update panorama plane</span>
+  <span class="ruby-ivar">@panorama</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">display_x</span> <span class="ruby-operator">/</span> <span class="ruby-number">8</span>
+  <span class="ruby-ivar">@panorama</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">display_y</span> <span class="ruby-operator">/</span> <span class="ruby-number">8</span>
+  <span class="ruby-comment"># Update fog plane</span>
+  <span class="ruby-ivar">@fog</span>.<span class="ruby-identifier">zoom_x</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">fog_zoom</span> <span class="ruby-operator">/</span> <span class="ruby-number">100.0</span>
+  <span class="ruby-ivar">@fog</span>.<span class="ruby-identifier">zoom_y</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">fog_zoom</span> <span class="ruby-operator">/</span> <span class="ruby-number">100.0</span>
+  <span class="ruby-ivar">@fog</span>.<span class="ruby-identifier">opacity</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">fog_opacity</span>
+  <span class="ruby-ivar">@fog</span>.<span class="ruby-identifier">blend_type</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">fog_blend_type</span>
+  <span class="ruby-ivar">@fog</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">display_x</span> <span class="ruby-operator">/</span> <span class="ruby-number">4</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">fog_ox</span>
+  <span class="ruby-ivar">@fog</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">display_y</span> <span class="ruby-operator">/</span> <span class="ruby-number">4</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">fog_oy</span>
+  <span class="ruby-ivar">@fog</span>.<span class="ruby-identifier">tone</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">fog_tone</span>
+  <span class="ruby-comment"># Update character sprites</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">sprite</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@character_sprites</span>
+    <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Update weather graphic</span>
+  <span class="ruby-ivar">@weather</span>.<span class="ruby-identifier">type</span> = <span class="ruby-identifier">$game_screen</span>.<span class="ruby-identifier">weather_type</span>
+  <span class="ruby-ivar">@weather</span>.<span class="ruby-identifier">max</span> = <span class="ruby-identifier">$game_screen</span>.<span class="ruby-identifier">weather_max</span>
+  <span class="ruby-ivar">@weather</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">display_x</span> <span class="ruby-operator">/</span> <span class="ruby-number">4</span>
+  <span class="ruby-ivar">@weather</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">display_y</span> <span class="ruby-operator">/</span> <span class="ruby-number">4</span>
+  <span class="ruby-ivar">@weather</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-comment"># Update picture sprites</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">sprite</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@picture_sprites</span>
+    <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Update timer sprite</span>
+  <span class="ruby-ivar">@timer_sprite</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-comment"># Set screen color tone and shake position</span>
+  <span class="ruby-ivar">@viewport1</span>.<span class="ruby-identifier">tone</span> = <span class="ruby-identifier">$game_screen</span>.<span class="ruby-identifier">tone</span>
+  <span class="ruby-ivar">@viewport1</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-identifier">$game_screen</span>.<span class="ruby-identifier">shake</span>
+  <span class="ruby-comment"># Set screen flash color</span>
+  <span class="ruby-ivar">@viewport3</span>.<span class="ruby-identifier">color</span> = <span class="ruby-identifier">$game_screen</span>.<span class="ruby-identifier">flash_color</span>
+  <span class="ruby-comment"># Update viewports</span>
+  <span class="ruby-ivar">@viewport1</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@viewport3</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

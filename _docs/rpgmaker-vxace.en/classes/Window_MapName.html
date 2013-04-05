@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Window_MapName</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Window_MapName 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Window_Base.html">Window_Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Window_MapName_rb.html">Window_MapName.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This window displays the map name.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-back_color1">back_color1</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-back_color2">back_color2</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-close">close</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-draw_background">draw_background</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-open">open</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-refresh">refresh</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_fadein">update_fadein</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_fadeout">update_fadeout</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-window_width">window_width</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Window_MapName.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p><a href="Object.html">Object</a> Initialization</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MapName.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-keyword">super</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-identifier">window_width</span>, <span class="ruby-identifier">fitting_height</span>(<span class="ruby-number">1</span>))
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">opacity</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents_opacity</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@show_count</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-back_color1">
+            
+              <b>back_color1</b>()
+            
+            <a href="../classes/Window_MapName.html#method-i-back_color1" name="method-i-back_color1" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Background Color 1</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-back_color1_source')" id="l_method-i-back_color1_source">show</a>
+                
+              </p>
+              <div id="method-i-back_color1_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MapName.rb, line 95</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">back_color1</span>
+  <span class="ruby-constant">Color</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">192</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-back_color2">
+            
+              <b>back_color2</b>()
+            
+            <a href="../classes/Window_MapName.html#method-i-back_color2" name="method-i-back_color2" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Background Color 2</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-back_color2_source')" id="l_method-i-back_color2_source">show</a>
+                
+              </p>
+              <div id="method-i-back_color2_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MapName.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">back_color2</span>
+  <span class="ruby-constant">Color</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-close">
+            
+              <b>close</b>()
+            
+            <a href="../classes/Window_MapName.html#method-i-close" name="method-i-close" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Close Window</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-close_source')" id="l_method-i-close_source">show</a>
+                
+              </p>
+              <div id="method-i-close_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MapName.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">close</span>
+  <span class="ruby-ivar">@show_count</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-draw_background">
+            
+              <b>draw_background</b>(rect)
+            
+            <a href="../classes/Window_MapName.html#method-i-draw_background" name="method-i-draw_background" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Draw Background</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-draw_background_source')" id="l_method-i-draw_background_source">show</a>
+                
+              </p>
+              <div id="method-i-draw_background_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MapName.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">draw_background</span>(<span class="ruby-identifier">rect</span>)
+  <span class="ruby-identifier">temp_rect</span> = <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">clone</span>
+  <span class="ruby-identifier">temp_rect</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">/=</span> <span class="ruby-number">2</span>
+  <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">gradient_fill_rect</span>(<span class="ruby-identifier">temp_rect</span>, <span class="ruby-identifier">back_color2</span>, <span class="ruby-identifier">back_color1</span>)
+  <span class="ruby-identifier">temp_rect</span>.<span class="ruby-identifier">x</span> = <span class="ruby-identifier">temp_rect</span>.<span class="ruby-identifier">width</span>
+  <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">gradient_fill_rect</span>(<span class="ruby-identifier">temp_rect</span>, <span class="ruby-identifier">back_color1</span>, <span class="ruby-identifier">back_color2</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-open">
+            
+              <b>open</b>()
+            
+            <a href="../classes/Window_MapName.html#method-i-open" name="method-i-open" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Open Window</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-open_source')" id="l_method-i-open_source">show</a>
+                
+              </p>
+              <div id="method-i-open_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MapName.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">open</span>
+  <span class="ruby-identifier">refresh</span>
+  <span class="ruby-ivar">@show_count</span> = <span class="ruby-number">150</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents_opacity</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refresh">
+            
+              <b>refresh</b>()
+            
+            <a href="../classes/Window_MapName.html#method-i-refresh" name="method-i-refresh" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Refresh</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refresh_source')" id="l_method-i-refresh_source">show</a>
+                
+              </p>
+              <div id="method-i-refresh_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MapName.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refresh</span>
+  <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">display_name</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">draw_background</span>(<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">rect</span>)
+    <span class="ruby-identifier">draw_text</span>(<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">rect</span>, <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">display_name</span>, <span class="ruby-number">1</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Window_MapName.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Frame Update</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MapName.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@show_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">name_display</span>
+    <span class="ruby-identifier">update_fadein</span>
+    <span class="ruby-ivar">@show_count</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">update_fadeout</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_fadein">
+            
+              <b>update_fadein</b>()
+            
+            <a href="../classes/Window_MapName.html#method-i-update_fadein" name="method-i-update_fadein" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Fadein</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_fadein_source')" id="l_method-i-update_fadein_source">show</a>
+                
+              </p>
+              <div id="method-i-update_fadein_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MapName.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_fadein</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents_opacity</span> <span class="ruby-operator">+=</span> <span class="ruby-number">16</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_fadeout">
+            
+              <b>update_fadeout</b>()
+            
+            <a href="../classes/Window_MapName.html#method-i-update_fadeout" name="method-i-update_fadeout" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Fadeout</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_fadeout_source')" id="l_method-i-update_fadeout_source">show</a>
+                
+              </p>
+              <div id="method-i-update_fadeout_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MapName.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_fadeout</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents_opacity</span> <span class="ruby-operator">-=</span> <span class="ruby-number">16</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-window_width">
+            
+              <b>window_width</b>()
+            
+            <a href="../classes/Window_MapName.html#method-i-window_width" name="method-i-window_width" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Window Width</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-window_width_source')" id="l_method-i-window_width_source">show</a>
+                
+              </p>
+              <div id="method-i-window_width_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MapName.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">window_width</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">240</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

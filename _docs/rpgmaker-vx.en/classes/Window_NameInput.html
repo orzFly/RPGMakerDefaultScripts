@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Window_NameInput</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Window_NameInput 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Window_Base.html">Window_Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Window_NameInput_rb.html">Window_NameInput.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This window is used to select text characters on the name input screen.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-character">character</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cursor_down">cursor_down</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cursor_left">cursor_left</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cursor_pagedown">cursor_pagedown</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cursor_pageup">cursor_pageup</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cursor_right">cursor_right</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cursor_to_decision">cursor_to_decision</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cursor_up">cursor_up</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-is_decision">is_decision</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-is_mode_change">is_mode_change</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-item_rect">item_rect</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-refresh">refresh</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_cursor">update_cursor</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">ENGLISH</td>
+            <td>=</td>
+            <td class="attr-value">[ 'A','B','C','D','E',  'a','b','c','d','e',
+'F','G','H','I','J',  'f','g','h','i','j',
+'K','L','M','N','O',  'k','l','m','n','o',
+'P','Q','R','S','T',  'p','q','r','s','t',
+'U','V','W','X','Y',  'u','v','w','x','y',
+'Z',' ',' ',' ',' ',  'z',' ',' ',' ',' ',
+' ',' ',' ',' ',' ',  ' ',' ',' ',' ',' ',
+'1','2','3','4','5',  ' ',' ',' ',' ',' ',
+'6','7','8','9','0',  ' ',' ',' ',' ','OK']</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>Text Character Table</p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">TABLE</td>
+            <td>=</td>
+            <td class="attr-value">[ENGLISH]</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(mode = 0)
+            
+            <a href="../classes/Window_NameInput.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Object Initialization</p>
+
+<p>mode : Defeault input mode (always 0 in English version)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NameInput.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">mode</span> = <span class="ruby-number">0</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-number">88</span>, <span class="ruby-number">148</span>, <span class="ruby-number">368</span>, <span class="ruby-number">248</span>)
+  <span class="ruby-ivar">@mode</span> = <span class="ruby-identifier">mode</span>
+  <span class="ruby-ivar">@index</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">refresh</span>
+  <span class="ruby-identifier">update_cursor</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-character">
+            
+              <b>character</b>()
+            
+            <a href="../classes/Window_NameInput.html#method-i-character" name="method-i-character" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Text Character Acquisition</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-character_source')" id="l_method-i-character_source">show</a>
+                
+              </p>
+              <div id="method-i-character_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NameInput.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">character</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">88</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">TABLE</span>[<span class="ruby-ivar">@mode</span>][<span class="ruby-ivar">@index</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cursor_down">
+            
+              <b>cursor_down</b>(wrap)
+            
+            <a href="../classes/Window_NameInput.html#method-i-cursor_down" name="method-i-cursor_down" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move cursor down</p>
+
+<p>wrap : Wraparound allowed</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cursor_down_source')" id="l_method-i-cursor_down_source">show</a>
+                
+              </p>
+              <div id="method-i-cursor_down_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NameInput.rb, line 95</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cursor_down</span>(<span class="ruby-identifier">wrap</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">80</span>
+    <span class="ruby-ivar">@index</span> <span class="ruby-operator">+=</span> <span class="ruby-number">10</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">wrap</span>
+    <span class="ruby-ivar">@index</span> <span class="ruby-operator">-=</span> <span class="ruby-number">80</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cursor_left">
+            
+              <b>cursor_left</b>(wrap)
+            
+            <a href="../classes/Window_NameInput.html#method-i-cursor_left" name="method-i-cursor_left" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move cursor left</p>
+
+<p>wrap : Wraparound allowed</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cursor_left_source')" id="l_method-i-cursor_left_source">show</a>
+                
+              </p>
+              <div id="method-i-cursor_left_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NameInput.rb, line 131</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cursor_left</span>(<span class="ruby-identifier">wrap</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">%</span> <span class="ruby-number">10</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@index</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">wrap</span>
+    <span class="ruby-ivar">@index</span> <span class="ruby-operator">+=</span> <span class="ruby-number">9</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cursor_pagedown">
+            
+              <b>cursor_pagedown</b>()
+            
+            <a href="../classes/Window_NameInput.html#method-i-cursor_pagedown" name="method-i-cursor_pagedown" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move to Next Page</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cursor_pagedown_source')" id="l_method-i-cursor_pagedown_source">show</a>
+                
+              </p>
+              <div id="method-i-cursor_pagedown_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NameInput.rb, line 149</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cursor_pagedown</span>
+  <span class="ruby-ivar">@mode</span> = (<span class="ruby-ivar">@mode</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span>) <span class="ruby-operator">%</span> <span class="ruby-constant">TABLE</span>.<span class="ruby-identifier">size</span>
+  <span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cursor_pageup">
+            
+              <b>cursor_pageup</b>()
+            
+            <a href="../classes/Window_NameInput.html#method-i-cursor_pageup" name="method-i-cursor_pageup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move to Previous Page</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cursor_pageup_source')" id="l_method-i-cursor_pageup_source">show</a>
+                
+              </p>
+              <div id="method-i-cursor_pageup_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NameInput.rb, line 157</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cursor_pageup</span>
+  <span class="ruby-ivar">@mode</span> = (<span class="ruby-ivar">@mode</span> <span class="ruby-operator">+</span> <span class="ruby-constant">TABLE</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>) <span class="ruby-operator">%</span> <span class="ruby-constant">TABLE</span>.<span class="ruby-identifier">size</span>
+  <span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cursor_right">
+            
+              <b>cursor_right</b>(wrap)
+            
+            <a href="../classes/Window_NameInput.html#method-i-cursor_right" name="method-i-cursor_right" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move cursor right</p>
+
+<p>wrap : Wraparound allowed</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cursor_right_source')" id="l_method-i-cursor_right_source">show</a>
+                
+              </p>
+              <div id="method-i-cursor_right_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NameInput.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cursor_right</span>(<span class="ruby-identifier">wrap</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">%</span> <span class="ruby-number">10</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">9</span>
+    <span class="ruby-ivar">@index</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">wrap</span>
+    <span class="ruby-ivar">@index</span> <span class="ruby-operator">-=</span> <span class="ruby-number">9</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cursor_to_decision">
+            
+              <b>cursor_to_decision</b>()
+            
+            <a href="../classes/Window_NameInput.html#method-i-cursor_to_decision" name="method-i-cursor_to_decision" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move Cursor to [OK]</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cursor_to_decision_source')" id="l_method-i-cursor_to_decision_source">show</a>
+                
+              </p>
+              <div id="method-i-cursor_to_decision_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NameInput.rb, line 142</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cursor_to_decision</span>
+  <span class="ruby-ivar">@index</span> = <span class="ruby-number">89</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cursor_up">
+            
+              <b>cursor_up</b>(wrap)
+            
+            <a href="../classes/Window_NameInput.html#method-i-cursor_up" name="method-i-cursor_up" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Move cursor up</p>
+
+<p>wrap : Wraparound allowed</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cursor_up_source')" id="l_method-i-cursor_up_source">show</a>
+                
+              </p>
+              <div id="method-i-cursor_up_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NameInput.rb, line 107</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cursor_up</span>(<span class="ruby-identifier">wrap</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">10</span>
+    <span class="ruby-ivar">@index</span> <span class="ruby-operator">-=</span> <span class="ruby-number">10</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">wrap</span>
+    <span class="ruby-ivar">@index</span> <span class="ruby-operator">+=</span> <span class="ruby-number">80</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-is_decision">
+            
+              <b>is_decision</b>()
+            
+            <a href="../classes/Window_NameInput.html#method-i-is_decision" name="method-i-is_decision" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine Cursor Location: Confirmation</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-is_decision_source')" id="l_method-i-is_decision_source">show</a>
+                
+              </p>
+              <div id="method-i-is_decision_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NameInput.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">is_decision</span>
+  <span class="ruby-keyword">return</span> (<span class="ruby-ivar">@index</span> <span class="ruby-operator">==</span> <span class="ruby-number">89</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-is_mode_change">
+            
+              <b>is_mode_change</b>()
+            
+            <a href="../classes/Window_NameInput.html#method-i-is_mode_change" name="method-i-is_mode_change" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine Cursor Position: Mode Switch</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-is_mode_change_source')" id="l_method-i-is_mode_change_source">show</a>
+                
+              </p>
+              <div id="method-i-is_mode_change_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NameInput.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">is_mode_change</span>
+  <span class="ruby-keyword">return</span> (<span class="ruby-ivar">@index</span> <span class="ruby-operator">==</span> <span class="ruby-number">88</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-item_rect">
+            
+              <b>item_rect</b>(index)
+            
+            <a href="../classes/Window_NameInput.html#method-i-item_rect" name="method-i-item_rect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get rectangle for displaying items</p>
+
+<p>index : item number</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-item_rect_source')" id="l_method-i-item_rect_source">show</a>
+                
+              </p>
+              <div id="method-i-item_rect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NameInput.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">item_rect</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">rect</span> = <span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>)
+  <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">x</span> = <span class="ruby-identifier">index</span> <span class="ruby-operator">%</span> <span class="ruby-number">10</span> * <span class="ruby-number">32</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">%</span> <span class="ruby-number">10</span> <span class="ruby-operator">/</span> <span class="ruby-number">5</span> * <span class="ruby-number">16</span>
+  <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">y</span> = <span class="ruby-identifier">index</span> <span class="ruby-operator">/</span> <span class="ruby-number">10</span> * <span class="ruby-constant">WLH</span>
+  <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">width</span> = <span class="ruby-number">32</span>
+  <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">height</span> = <span class="ruby-constant">WLH</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">rect</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refresh">
+            
+              <b>refresh</b>()
+            
+            <a href="../classes/Window_NameInput.html#method-i-refresh" name="method-i-refresh" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Refresh</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refresh_source')" id="l_method-i-refresh_source">show</a>
+                
+              </p>
+              <div id="method-i-refresh_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NameInput.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refresh</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">0</span><span class="ruby-operator">..</span><span class="ruby-number">89</span>
+    <span class="ruby-identifier">rect</span> = <span class="ruby-identifier">item_rect</span>(<span class="ruby-identifier">i</span>)
+    <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">+=</span> <span class="ruby-number">2</span>
+    <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">-=</span> <span class="ruby-number">4</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">draw_text</span>(<span class="ruby-identifier">rect</span>, <span class="ruby-constant">TABLE</span>[<span class="ruby-ivar">@mode</span>][<span class="ruby-identifier">i</span>], <span class="ruby-number">1</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Window_NameInput.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Frame Update</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NameInput.rb, line 165</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">last_mode</span> = <span class="ruby-ivar">@mode</span>
+  <span class="ruby-identifier">last_index</span> = <span class="ruby-ivar">@index</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">DOWN</span>)
+    <span class="ruby-identifier">cursor_down</span>(<span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">DOWN</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">UP</span>)
+    <span class="ruby-identifier">cursor_up</span>(<span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">UP</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">RIGHT</span>)
+    <span class="ruby-identifier">cursor_right</span>(<span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">RIGHT</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">LEFT</span>)
+    <span class="ruby-identifier">cursor_left</span>(<span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">LEFT</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">A</span>)
+    <span class="ruby-identifier">cursor_to_decision</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">R</span>)
+    <span class="ruby-identifier">cursor_pagedown</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">L</span>)
+    <span class="ruby-identifier">cursor_pageup</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>) <span class="ruby-keyword">and</span> <span class="ruby-identifier">is_mode_change</span>
+    <span class="ruby-identifier">cursor_pagedown</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">last_index</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@mode</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">last_mode</span>
+    <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_cursor</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">update_cursor</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_cursor">
+            
+              <b>update_cursor</b>()
+            
+            <a href="../classes/Window_NameInput.html#method-i-update_cursor" name="method-i-update_cursor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update cursor</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_cursor_source')" id="l_method-i-update_cursor_source">show</a>
+                
+              </p>
+              <div id="method-i-update_cursor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NameInput.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_cursor</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">cursor_rect</span> = <span class="ruby-identifier">item_rect</span>(<span class="ruby-ivar">@index</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

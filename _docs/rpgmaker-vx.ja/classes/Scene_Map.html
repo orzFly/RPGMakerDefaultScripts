@@ -1,0 +1,1145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_Map</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_Map 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Scene_Base.html">Scene_Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_Map_rb.html">Scene_Map.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>マップ画面の処理を行うクラスです。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-call_battle">call_battle</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-call_debug">call_debug</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-call_gameover">call_gameover</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-call_menu">call_menu</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-call_name">call_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-call_save">call_save</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-call_shop">call_shop</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-call_title">call_title</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-fadein">fadein</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-fadeout">fadeout</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-perform_battle_transition">perform_battle_transition</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-perform_transition">perform_transition</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-preemptive_or_surprise">preemptive_or_surprise</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-start">start</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-terminate">terminate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_basic">update_basic</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_call_debug">update_call_debug</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_call_menu">update_call_menu</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_encounter">update_encounter</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_scene_change">update_scene_change</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_transfer_player">update_transfer_player</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-call_battle">
+            
+              <b>call_battle</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-call_battle" name="method-i-call_battle" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>バトル画面への切り替え</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_battle_source')" id="l_method-i-call_battle_source">show</a>
+                
+              </p>
+              <div id="method-i-call_battle_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 207</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_battle</span>
+  <span class="ruby-ivar">@spriteset</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">make_encounter_count</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">straighten</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">map_bgm</span> = <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">BGM</span>.<span class="ruby-identifier">last</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">map_bgs</span> = <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">BGS</span>.<span class="ruby-identifier">last</span>
+  <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">BGM</span>.<span class="ruby-identifier">stop</span>
+  <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">BGS</span>.<span class="ruby-identifier">stop</span>
+  <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_battle_start</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">battle_bgm</span>.<span class="ruby-identifier">play</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">next_scene</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Battle</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-call_debug">
+            
+              <b>call_debug</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-call_debug" name="method-i-call_debug" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>デバッグ画面への切り替え</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_debug_source')" id="l_method-i-call_debug_source">show</a>
+                
+              </p>
+              <div id="method-i-call_debug_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 261</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_debug</span>
+  <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_decision</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">next_scene</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Debug</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-call_gameover">
+            
+              <b>call_gameover</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-call_gameover" name="method-i-call_gameover" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ゲームオーバー画面への切り替え</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_gameover_source')" id="l_method-i-call_gameover_source">show</a>
+                
+              </p>
+              <div id="method-i-call_gameover_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 270</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_gameover</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">next_scene</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Gameover</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-call_menu">
+            
+              <b>call_menu</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-call_menu" name="method-i-call_menu" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>メニュー画面への切り替え</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_menu_source')" id="l_method-i-call_menu_source">show</a>
+                
+              </p>
+              <div id="method-i-call_menu_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 241</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_menu</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">menu_beep</span>
+    <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_decision</span>
+    <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">menu_beep</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">next_scene</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Menu</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-call_name">
+            
+              <b>call_name</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-call_name" name="method-i-call_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>名前入力画面への切り替え</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_name_source')" id="l_method-i-call_name_source">show</a>
+                
+              </p>
+              <div id="method-i-call_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 233</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_name</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">next_scene</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Name</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-call_save">
+            
+              <b>call_save</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-call_save" name="method-i-call_save" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>セーブ画面への切り替え</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_save_source')" id="l_method-i-call_save_source">show</a>
+                
+              </p>
+              <div id="method-i-call_save_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 253</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_save</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">next_scene</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">true</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-call_shop">
+            
+              <b>call_shop</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-call_shop" name="method-i-call_shop" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ショップ画面への切り替え</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_shop_source')" id="l_method-i-call_shop_source">show</a>
+                
+              </p>
+              <div id="method-i-call_shop_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 225</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_shop</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">next_scene</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Shop</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-call_title">
+            
+              <b>call_title</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-call_title" name="method-i-call_title" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>タイトル画面への切り替え</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_title_source')" id="l_method-i-call_title_source">show</a>
+                
+              </p>
+              <div id="method-i-call_title_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 278</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_title</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">next_scene</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Title</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">fadeout</span>(<span class="ruby-number">60</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-fadein">
+            
+              <b>fadein</b>(duration)
+            
+            <a href="../classes/Scene_Map.html#method-i-fadein" name="method-i-fadein" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>画面のフェードイン</p>
+
+<p>duration : 時間 マップ画面では、Graphics.fadeout
+を直接使うと天候エフェクトや遠景のス
+クロールなどが止まるなどの不都合があるため、動的にフェードインを行う。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-fadein_source')" id="l_method-i-fadein_source">show</a>
+                
+              </p>
+              <div id="method-i-fadein_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">fadein</span>(<span class="ruby-identifier">duration</span>)
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">transition</span>(<span class="ruby-number">0</span>)
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">duration</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>
+    <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">brightness</span> = <span class="ruby-number">255</span> * <span class="ruby-identifier">i</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">duration</span>
+    <span class="ruby-identifier">update_basic</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">brightness</span> = <span class="ruby-number">255</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-fadeout">
+            
+              <b>fadeout</b>(duration)
+            
+            <a href="../classes/Scene_Map.html#method-i-fadeout" name="method-i-fadeout" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>画面のフェードアウト</p>
+
+<p>duration : 時間 上記のフェードインと同じく、Graphics.fadein
+は直接使わない。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-fadeout_source')" id="l_method-i-fadeout_source">show</a>
+                
+              </p>
+              <div id="method-i-fadeout_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">fadeout</span>(<span class="ruby-identifier">duration</span>)
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">transition</span>(<span class="ruby-number">0</span>)
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">duration</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>
+    <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">brightness</span> = <span class="ruby-number">255</span> <span class="ruby-operator">-</span> <span class="ruby-number">255</span> * <span class="ruby-identifier">i</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">duration</span>
+    <span class="ruby-identifier">update_basic</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">brightness</span> = <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-perform_battle_transition">
+            
+              <b>perform_battle_transition</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-perform_battle_transition" name="method-i-perform_battle_transition" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>戦闘前トランジション実行</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-perform_battle_transition_source')" id="l_method-i-perform_battle_transition_source">show</a>
+                
+              </p>
+              <div id="method-i-perform_battle_transition_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 287</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">perform_battle_transition</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">transition</span>(<span class="ruby-number">80</span>, <span class="ruby-string">&quot;Graphics/System/BattleStart&quot;</span>, <span class="ruby-number">80</span>)
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">freeze</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-perform_transition">
+            
+              <b>perform_transition</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-perform_transition" name="method-i-perform_transition" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>トランジション実行</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-perform_transition_source')" id="l_method-i-perform_transition_source">show</a>
+                
+              </p>
+              <div id="method-i-perform_transition_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">perform_transition</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">brightness</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>       <span class="ruby-comment"># 戦闘後、ロード直後など</span>
+    <span class="ruby-identifier">fadein</span>(<span class="ruby-number">30</span>)
+  <span class="ruby-keyword">else</span>                              <span class="ruby-comment"># メニューからの復帰など</span>
+    <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">transition</span>(<span class="ruby-number">15</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-preemptive_or_surprise">
+            
+              <b>preemptive_or_surprise</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-preemptive_or_surprise" name="method-i-preemptive_or_surprise" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>先制攻撃と不意打ちの確率判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-preemptive_or_surprise_source')" id="l_method-i-preemptive_or_surprise_source">show</a>
+                
+              </p>
+              <div id="method-i-preemptive_or_surprise_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 139</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">preemptive_or_surprise</span>
+  <span class="ruby-identifier">actors_agi</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">average_agi</span>
+  <span class="ruby-identifier">enemies_agi</span> = <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">average_agi</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">actors_agi</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">enemies_agi</span>
+    <span class="ruby-identifier">percent_preemptive</span> = <span class="ruby-number">5</span>
+    <span class="ruby-identifier">percent_surprise</span> = <span class="ruby-number">3</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">percent_preemptive</span> = <span class="ruby-number">3</span>
+    <span class="ruby-identifier">percent_surprise</span> = <span class="ruby-number">5</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">rand</span>(<span class="ruby-number">100</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">percent_preemptive</span>
+    <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">preemptive</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">rand</span>(<span class="ruby-number">100</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">percent_surprise</span>
+    <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">surprise</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start">
+            
+              <b>start</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-start" name="method-i-start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>開始処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_source')" id="l_method-i-start_source">show</a>
+                
+              </p>
+              <div id="method-i-start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">refresh</span>
+  <span class="ruby-ivar">@spriteset</span> = <span class="ruby-constant">Spriteset_Map</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@message_window</span> = <span class="ruby-constant">Window_Message</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-terminate">
+            
+              <b>terminate</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-terminate" name="method-i-terminate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>終了処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-terminate_source')" id="l_method-i-terminate_source">show</a>
+                
+              </p>
+              <div id="method-i-terminate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">terminate</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$scene</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Scene_Battle</span>)     <span class="ruby-comment"># バトル画面に切り替え中の場合</span>
+    <span class="ruby-ivar">@spriteset</span>.<span class="ruby-identifier">dispose_characters</span>   <span class="ruby-comment"># 背景作成のためにキャラを隠す</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">snapshot_for_background</span>
+  <span class="ruby-ivar">@spriteset</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@message_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$scene</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Scene_Battle</span>)     <span class="ruby-comment"># バトル画面に切り替え中の場合</span>
+    <span class="ruby-identifier">perform_battle_transition</span>       <span class="ruby-comment"># 戦闘前トランジション実行</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>フレーム更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">interpreter</span>.<span class="ruby-identifier">update</span>      <span class="ruby-comment"># インタプリタを更新</span>
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">update</span>                  <span class="ruby-comment"># マップを更新</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">update</span>               <span class="ruby-comment"># プレイヤーを更新</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">update</span>               <span class="ruby-comment"># タイマーを更新</span>
+  <span class="ruby-ivar">@spriteset</span>.<span class="ruby-identifier">update</span>                 <span class="ruby-comment"># スプライトセットを更新</span>
+  <span class="ruby-ivar">@message_window</span>.<span class="ruby-identifier">update</span>            <span class="ruby-comment"># メッセージウィンドウを更新</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">visible</span>      <span class="ruby-comment"># メッセージ表示中以外</span>
+    <span class="ruby-identifier">update_transfer_player</span>
+    <span class="ruby-identifier">update_encounter</span>
+    <span class="ruby-identifier">update_call_menu</span>
+    <span class="ruby-identifier">update_call_debug</span>
+    <span class="ruby-identifier">update_scene_change</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_basic">
+            
+              <b>update_basic</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-update_basic" name="method-i-update_basic" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>基本更新処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_basic_source')" id="l_method-i-update_basic_source">show</a>
+                
+              </p>
+              <div id="method-i-update_basic_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_basic</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">update</span>                   <span class="ruby-comment"># ゲーム画面を更新</span>
+  <span class="ruby-constant">Input</span>.<span class="ruby-identifier">update</span>                      <span class="ruby-comment"># 入力情報を更新</span>
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">update</span>                  <span class="ruby-comment"># マップを更新</span>
+  <span class="ruby-ivar">@spriteset</span>.<span class="ruby-identifier">update</span>                 <span class="ruby-comment"># スプライトセットを更新</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_call_debug">
+            
+              <b>update_call_debug</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-update_call_debug" name="method-i-update_call_debug" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>F9 キーによるデバッグ呼び出し判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_call_debug_source')" id="l_method-i-update_call_debug_source">show</a>
+                
+              </p>
+              <div id="method-i-update_call_debug_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 171</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_call_debug</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$TEST</span> <span class="ruby-keyword">and</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">press?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">F9</span>)    <span class="ruby-comment"># テストプレイ中 F9 キー</span>
+    <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">next_scene</span> = <span class="ruby-string">&quot;debug&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_call_menu">
+            
+              <b>update_call_menu</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-update_call_menu" name="method-i-update_call_menu" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>キャンセルボタンによるメニュー呼び出し判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_call_menu_source')" id="l_method-i-update_call_menu_source">show</a>
+                
+              </p>
+              <div id="method-i-update_call_menu_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_call_menu</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">interpreter</span>.<span class="ruby-identifier">running?</span>        <span class="ruby-comment"># イベント実行中？</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">menu_disabled</span>            <span class="ruby-comment"># メニュー禁止中？</span>
+    <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">menu_beep</span> = <span class="ruby-keyword">true</span>                     <span class="ruby-comment"># SE 演奏フラグ設定</span>
+    <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">next_scene</span> = <span class="ruby-string">&quot;menu&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_encounter">
+            
+              <b>update_encounter</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-update_encounter" name="method-i-update_encounter" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>エンカウントの処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_encounter_source')" id="l_method-i-update_encounter_source">show</a>
+                
+              </p>
+              <div id="method-i-update_encounter_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 123</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_encounter</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">encounter_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>        <span class="ruby-comment"># 遭遇歩数未満？</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">interpreter</span>.<span class="ruby-identifier">running?</span>          <span class="ruby-comment"># イベント実行中？</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">encounter_disabled</span>         <span class="ruby-comment"># エンカウント禁止中？</span>
+  <span class="ruby-identifier">troop_id</span> = <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">make_encounter_troop_id</span>   <span class="ruby-comment"># 敵グループを決定</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$data_troops</span>[<span class="ruby-identifier">troop_id</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>           <span class="ruby-comment"># 敵グループが無効？</span>
+  <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">setup</span>(<span class="ruby-identifier">troop_id</span>)
+  <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">can_escape</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">battle_proc</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">next_scene</span> = <span class="ruby-string">&quot;battle&quot;</span>
+  <span class="ruby-identifier">preemptive_or_surprise</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_scene_change">
+            
+              <b>update_scene_change</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-update_scene_change" name="method-i-update_scene_change" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>画面切り替えの実行</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_scene_change_source')" id="l_method-i-update_scene_change_source">show</a>
+                
+              </p>
+              <div id="method-i-update_scene_change_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 180</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_scene_change</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">moving?</span>    <span class="ruby-comment"># プレイヤーの移動中？</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">next_scene</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;battle&quot;</span>
+    <span class="ruby-identifier">call_battle</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;shop&quot;</span>
+    <span class="ruby-identifier">call_shop</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;name&quot;</span>
+    <span class="ruby-identifier">call_name</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;menu&quot;</span>
+    <span class="ruby-identifier">call_menu</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;save&quot;</span>
+    <span class="ruby-identifier">call_save</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;debug&quot;</span>
+    <span class="ruby-identifier">call_debug</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;gameover&quot;</span>
+    <span class="ruby-identifier">call_gameover</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;title&quot;</span>
+    <span class="ruby-identifier">call_title</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">next_scene</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_transfer_player">
+            
+              <b>update_transfer_player</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-update_transfer_player" name="method-i-update_transfer_player" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>場所移動の処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_transfer_player_source')" id="l_method-i-update_transfer_player_source">show</a>
+                
+              </p>
+              <div id="method-i-update_transfer_player_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 106</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_transfer_player</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">transfer?</span>
+  <span class="ruby-identifier">fade</span> = (<span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">brightness</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>)
+  <span class="ruby-identifier">fadeout</span>(<span class="ruby-number">30</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">fade</span>
+  <span class="ruby-ivar">@spriteset</span>.<span class="ruby-identifier">dispose</span>              <span class="ruby-comment"># スプライトセットを解放</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">perform_transfer</span>   <span class="ruby-comment"># 場所移動の実行</span>
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">autoplay</span>              <span class="ruby-comment"># BGM と BGS の自動切り替え</span>
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">wait</span>(<span class="ruby-number">15</span>)
+  <span class="ruby-ivar">@spriteset</span> = <span class="ruby-constant">Spriteset_Map</span>.<span class="ruby-identifier">new</span>  <span class="ruby-comment"># スプライトセットを再作成</span>
+  <span class="ruby-identifier">fadein</span>(<span class="ruby-number">30</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">fade</span>
+  <span class="ruby-constant">Input</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

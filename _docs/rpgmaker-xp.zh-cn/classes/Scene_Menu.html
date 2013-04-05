@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_Menu</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_Menu 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_Menu_rb.html">Scene_Menu.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>处理菜单画面的类。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-main">main</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_command">update_command</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_status">update_status</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(menu_index = 0)
+            
+            <a href="../classes/Scene_Menu.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>初始化对像</p>
+
+<p>menu_index : 命令光标的初期位置</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Menu.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">menu_index</span> = <span class="ruby-number">0</span>)
+  <span class="ruby-ivar">@menu_index</span> = <span class="ruby-identifier">menu_index</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-main">
+            
+              <b>main</b>()
+            
+            <a href="../classes/Scene_Menu.html#method-i-main" name="method-i-main" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>主处理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-main_source')" id="l_method-i-main_source">show</a>
+                
+              </p>
+              <div id="method-i-main_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Menu.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">main</span>
+  <span class="ruby-comment"># 生成命令窗口</span>
+  <span class="ruby-identifier">s1</span> = <span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">words</span>.<span class="ruby-identifier">item</span>
+  <span class="ruby-identifier">s2</span> = <span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">words</span>.<span class="ruby-identifier">skill</span>
+  <span class="ruby-identifier">s3</span> = <span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">words</span>.<span class="ruby-identifier">equip</span>
+  <span class="ruby-identifier">s4</span> = <span class="ruby-string">&quot;状态&quot;</span>
+  <span class="ruby-identifier">s5</span> = <span class="ruby-string">&quot;存档&quot;</span>
+  <span class="ruby-identifier">s6</span> = <span class="ruby-string">&quot;结束游戏&quot;</span>
+  <span class="ruby-ivar">@command_window</span> = <span class="ruby-constant">Window_Command</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">160</span>, [<span class="ruby-identifier">s1</span>, <span class="ruby-identifier">s2</span>, <span class="ruby-identifier">s3</span>, <span class="ruby-identifier">s4</span>, <span class="ruby-identifier">s5</span>, <span class="ruby-identifier">s6</span>])
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">index</span> = <span class="ruby-ivar">@menu_index</span>
+  <span class="ruby-comment"># 同伴人数为 0 的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">actors</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-comment"># 物品、特技、装备、状态无效化</span>
+    <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">disable_item</span>(<span class="ruby-number">0</span>)
+    <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">disable_item</span>(<span class="ruby-number">1</span>)
+    <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">disable_item</span>(<span class="ruby-number">2</span>)
+    <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">disable_item</span>(<span class="ruby-number">3</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 禁止存档的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">save_disabled</span>
+    <span class="ruby-comment"># 存档无效</span>
+    <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">disable_item</span>(<span class="ruby-number">4</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 生成游戏时间窗口</span>
+  <span class="ruby-ivar">@playtime_window</span> = <span class="ruby-constant">Window_PlayTime</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@playtime_window</span>.<span class="ruby-identifier">x</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@playtime_window</span>.<span class="ruby-identifier">y</span> = <span class="ruby-number">224</span>
+  <span class="ruby-comment"># 生成步数窗口</span>
+  <span class="ruby-ivar">@steps_window</span> = <span class="ruby-constant">Window_Steps</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@steps_window</span>.<span class="ruby-identifier">x</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@steps_window</span>.<span class="ruby-identifier">y</span> = <span class="ruby-number">320</span>
+  <span class="ruby-comment"># 生成金钱窗口</span>
+  <span class="ruby-ivar">@gold_window</span> = <span class="ruby-constant">Window_Gold</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">x</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">y</span> = <span class="ruby-number">416</span>
+  <span class="ruby-comment"># 生成状态窗口</span>
+  <span class="ruby-ivar">@status_window</span> = <span class="ruby-constant">Window_MenuStatus</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">x</span> = <span class="ruby-number">160</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">y</span> = <span class="ruby-number">0</span>
+  <span class="ruby-comment"># 执行过渡</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">transition</span>
+  <span class="ruby-comment"># 主循环</span>
+  <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-comment"># 刷新游戏画面</span>
+    <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># 刷新输入信息</span>
+    <span class="ruby-constant">Input</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># 刷新画面</span>
+    <span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># 如果切换画面就中断循环</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$scene</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">self</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 准备过渡</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">freeze</span>
+  <span class="ruby-comment"># 释放窗口</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@playtime_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@steps_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Scene_Menu.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新画面</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Menu.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-comment"># 刷新窗口</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@playtime_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@steps_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-comment"># 命令窗口被激活的情况下: 调用 update_command</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">active</span>
+    <span class="ruby-identifier">update_command</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 状态窗口被激活的情况下: 调用 update_status</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">active</span>
+    <span class="ruby-identifier">update_status</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_command">
+            
+              <b>update_command</b>()
+            
+            <a href="../classes/Scene_Menu.html#method-i-update_command" name="method-i-update_command" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新画面 (命令窗口被激活的情况下)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_command_source')" id="l_method-i-update_command_source">show</a>
+                
+              </p>
+              <div id="method-i-update_command_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Menu.rb, line 107</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_command</span>
+  <span class="ruby-comment"># 按下 B 键的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>)
+    <span class="ruby-comment"># 演奏取消 SE</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cancel_se</span>)
+    <span class="ruby-comment"># 切换的地图画面</span>
+    <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Map</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 按下 C 键的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+    <span class="ruby-comment"># 同伴人数为 0、存档、游戏结束以外的场合</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">actors</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">4</span>
+      <span class="ruby-comment"># 演奏冻结 SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">buzzer_se</span>)
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># 命令窗口的光标位置分支</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">index</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">0</span>  <span class="ruby-comment"># 物品</span>
+      <span class="ruby-comment"># 演奏确定 SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">decision_se</span>)
+      <span class="ruby-comment"># 切换到物品画面</span>
+      <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Item</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>  <span class="ruby-comment"># 特技</span>
+      <span class="ruby-comment"># 演奏确定 SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">decision_se</span>)
+      <span class="ruby-comment"># 激活状态窗口</span>
+      <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">index</span> = <span class="ruby-number">0</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>  <span class="ruby-comment"># 装备</span>
+      <span class="ruby-comment"># 演奏确定 SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">decision_se</span>)
+      <span class="ruby-comment"># 激活状态窗口</span>
+      <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">index</span> = <span class="ruby-number">0</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">3</span>  <span class="ruby-comment"># 状态</span>
+      <span class="ruby-comment"># 演奏确定 SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">decision_se</span>)
+      <span class="ruby-comment"># 激活状态窗口</span>
+      <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">index</span> = <span class="ruby-number">0</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">4</span>  <span class="ruby-comment"># 存档</span>
+      <span class="ruby-comment"># 禁止存档的情况下</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">save_disabled</span>
+        <span class="ruby-comment"># 演奏冻结 SE</span>
+        <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">buzzer_se</span>)
+        <span class="ruby-keyword">return</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-comment"># 演奏确定 SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">decision_se</span>)
+      <span class="ruby-comment"># 切换到存档画面</span>
+      <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Save</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">5</span>  <span class="ruby-comment"># 游戏结束</span>
+      <span class="ruby-comment"># 演奏确定 SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">decision_se</span>)
+      <span class="ruby-comment"># 切换到游戏结束画面</span>
+      <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_End</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_status">
+            
+              <b>update_status</b>()
+            
+            <a href="../classes/Scene_Menu.html#method-i-update_status" name="method-i-update_status" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新画面 (状态窗口被激活的情况下)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_status_source')" id="l_method-i-update_status_source">show</a>
+                
+              </p>
+              <div id="method-i-update_status_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Menu.rb, line 176</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_status</span>
+  <span class="ruby-comment"># 按下 B 键的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>)
+    <span class="ruby-comment"># 演奏取消 SE</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cancel_se</span>)
+    <span class="ruby-comment"># 激活命令窗口</span>
+    <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">index</span> = <span class="ruby-number">-1</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 按下 C 键的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+    <span class="ruby-comment"># 命令窗口的光标位置分支</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">index</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>  <span class="ruby-comment"># 特技</span>
+      <span class="ruby-comment"># 本角色的行动限制在 2 以上的情况下</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">actors</span>[<span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">index</span>].<span class="ruby-identifier">restriction</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">2</span>
+        <span class="ruby-comment"># 演奏冻结 SE</span>
+        <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">buzzer_se</span>)
+        <span class="ruby-keyword">return</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-comment"># 演奏确定 SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">decision_se</span>)
+      <span class="ruby-comment"># 切换到特技画面</span>
+      <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Skill</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">index</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>  <span class="ruby-comment"># 装备</span>
+      <span class="ruby-comment"># 演奏确定 SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">decision_se</span>)
+      <span class="ruby-comment"># 切换的装备画面</span>
+      <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Equip</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">index</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-number">3</span>  <span class="ruby-comment"># 状态</span>
+      <span class="ruby-comment"># 演奏确定 SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">decision_se</span>)
+      <span class="ruby-comment"># 切换到状态画面</span>
+      <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Status</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">index</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

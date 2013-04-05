@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Game_Troop</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Game_Troop 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Game_Unit.html">Game_Unit</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Game_Troop_rb.html">Game_Troop.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This class handles enemy groups and battle-related data. Also performs
+battle events. The instance of this class is referenced by $game_troop.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-all_dead-3F">all_dead?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-clear">clear</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-conditions_met-3F">conditions_met?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-enemy_names">enemy_names</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-exp_total">exp_total</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-gold_total">gold_total</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-increase_turn">increase_turn</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-make_actions">make_actions</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-make_drop_items">make_drop_items</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-make_unique_names">make_unique_names</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-members">members</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-setup">setup</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-setup_battle_event">setup_battle_event</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-troop">troop</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">LETTER_TABLE</td>
+            <td>=</td>
+            <td class="attr-value">[ ' A',' B',' C',' D',' E',' F',' G',' H',' I',' J',
+' K',' L',' M',' N',' O',' P',' Q',' R',' S',' T',
+' U',' V',' W',' X',' Y',' Z']</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>Characters to be added to the end of enemy names</p></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>can_escape</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>can_lose</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>event_flags</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>forcing_battler</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>interpreter</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>name_counts</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>preemptive</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>screen</td>
+            <td class='attr-desc'><p>Public Instance Variables</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>surprise</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>turn_count</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>turn_ending</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Game_Troop.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Object Initialization</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Troop.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-ivar">@screen</span> = <span class="ruby-constant">Game_Screen</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@interpreter</span> = <span class="ruby-constant">Game_Interpreter</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@event_flags</span> = {}
+  <span class="ruby-ivar">@enemies</span> = []       <span class="ruby-comment"># Troop members (array of enemy objects)</span>
+  <span class="ruby-identifier">clear</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-all_dead-3F">
+            
+              <b>all_dead?</b>()
+            
+            <a href="../classes/Game_Troop.html#method-i-all_dead-3F" name="method-i-all_dead-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine Everyone is Dead</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-all_dead-3F_source')" id="l_method-i-all_dead-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-all_dead-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Troop.rb, line 222</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">all_dead?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">existing_members</span>.<span class="ruby-identifier">empty?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear">
+            
+              <b>clear</b>()
+            
+            <a href="../classes/Game_Troop.html#method-i-clear" name="method-i-clear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Clear</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_source')" id="l_method-i-clear_source">show</a>
+                
+              </p>
+              <div id="method-i-clear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Troop.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear</span>
+  <span class="ruby-ivar">@screen</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-ivar">@interpreter</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-ivar">@event_flags</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-ivar">@enemies</span> = []
+  <span class="ruby-ivar">@turn_count</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@names_count</span> = {}
+  <span class="ruby-ivar">@can_escape</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@can_lose</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@preemptive</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@surprise</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@turn_ending</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@forcing_battler</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-conditions_met-3F">
+            
+              <b>conditions_met?</b>(page)
+            
+            <a href="../classes/Game_Troop.html#method-i-conditions_met-3F" name="method-i-conditions_met-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if battle event (page) meets conditions</p>
+
+<p>page : battle event page</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-conditions_met-3F_source')" id="l_method-i-conditions_met-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-conditions_met-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Troop.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">conditions_met?</span>(<span class="ruby-identifier">page</span>)
+  <span class="ruby-identifier">c</span> = <span class="ruby-identifier">page</span>.<span class="ruby-identifier">condition</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">turn_ending</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">turn_valid</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">enemy_valid</span> <span class="ruby-keyword">and</span>
+     <span class="ruby-keyword">not</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">actor_valid</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">switch_valid</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>      <span class="ruby-comment"># Conditions not set: Not executed</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@event_flags</span>[<span class="ruby-identifier">page</span>]
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>      <span class="ruby-comment"># Executed</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">turn_ending</span>    <span class="ruby-comment"># At turn end</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@turn_ending</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">turn_valid</span>     <span class="ruby-comment"># Number of turns</span>
+    <span class="ruby-identifier">n</span> = <span class="ruby-ivar">@turn_count</span>
+    <span class="ruby-identifier">a</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">turn_a</span>
+    <span class="ruby-identifier">b</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">turn_b</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> (<span class="ruby-identifier">b</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">a</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> (<span class="ruby-identifier">b</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-keyword">and</span> (<span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">1</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">a</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">b</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">a</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">b</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">enemy_valid</span>    <span class="ruby-comment"># Enemy</span>
+    <span class="ruby-identifier">enemy</span> = <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">members</span>[<span class="ruby-identifier">c</span>.<span class="ruby-identifier">enemy_index</span>]
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">enemy</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">hp</span> * <span class="ruby-number">100.0</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">maxhp</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">enemy_hp</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">actor_valid</span>    <span class="ruby-comment"># Actor</span>
+    <span class="ruby-identifier">actor</span> = <span class="ruby-identifier">$game_actors</span>[<span class="ruby-identifier">c</span>.<span class="ruby-identifier">actor_id</span>]
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">actor</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> 
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">hp</span> * <span class="ruby-number">100.0</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">maxhp</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">actor_hp</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">switch_valid</span>   <span class="ruby-comment"># Switch</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_switches</span>[<span class="ruby-identifier">c</span>.<span class="ruby-identifier">switch_id</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>         <span class="ruby-comment"># Condition met</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-enemy_names">
+            
+              <b>enemy_names</b>()
+            
+            <a href="../classes/Game_Troop.html#method-i-enemy_names" name="method-i-enemy_names" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Enemy Name Array</p>
+
+<p>For display at start of battle. Overlapping names are removed.</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-enemy_names_source')" id="l_method-i-enemy_names_source">show</a>
+                
+              </p>
+              <div id="method-i-enemy_names_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Troop.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">enemy_names</span>
+  <span class="ruby-identifier">names</span> = []
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">enemy</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">members</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">exist?</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">names</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">original_name</span>)
+    <span class="ruby-identifier">names</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">original_name</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">names</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-exp_total">
+            
+              <b>exp_total</b>()
+            
+            <a href="../classes/Game_Troop.html#method-i-exp_total" name="method-i-exp_total" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Calculate Total Experience</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-exp_total_source')" id="l_method-i-exp_total_source">show</a>
+                
+              </p>
+              <div id="method-i-exp_total_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Troop.rb, line 229</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">exp_total</span>
+  <span class="ruby-identifier">exp</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">enemy</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">dead_members</span>
+    <span class="ruby-identifier">exp</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">exp</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">hidden</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">exp</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-gold_total">
+            
+              <b>gold_total</b>()
+            
+            <a href="../classes/Game_Troop.html#method-i-gold_total" name="method-i-gold_total" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Calculate Total Gold</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-gold_total_source')" id="l_method-i-gold_total_source">show</a>
+                
+              </p>
+              <div id="method-i-gold_total_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Troop.rb, line 240</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">gold_total</span>
+  <span class="ruby-identifier">gold</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">enemy</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">dead_members</span>
+    <span class="ruby-identifier">gold</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">gold</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">hidden</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">gold</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-increase_turn">
+            
+              <b>increase_turn</b>()
+            
+            <a href="../classes/Game_Troop.html#method-i-increase_turn" name="method-i-increase_turn" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Increase Turns</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-increase_turn_source')" id="l_method-i-increase_turn_source">show</a>
+                
+              </p>
+              <div id="method-i-increase_turn_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Troop.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">increase_turn</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">page</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">troop</span>.<span class="ruby-identifier">pages</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">page</span>.<span class="ruby-identifier">span</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>
+      <span class="ruby-ivar">@event_flags</span>[<span class="ruby-identifier">page</span>] = <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@turn_count</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-make_actions">
+            
+              <b>make_actions</b>()
+            
+            <a href="../classes/Game_Troop.html#method-i-make_actions" name="method-i-make_actions" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Battle Action</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-make_actions_source')" id="l_method-i-make_actions_source">show</a>
+                
+              </p>
+              <div id="method-i-make_actions_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Troop.rb, line 209</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">make_actions</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@preemptive</span>
+    <span class="ruby-identifier">clear_actions</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">for</span> <span class="ruby-identifier">enemy</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">members</span>
+      <span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">make_action</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-make_drop_items">
+            
+              <b>make_drop_items</b>()
+            
+            <a href="../classes/Game_Troop.html#method-i-make_drop_items" name="method-i-make_drop_items" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Array of Dropped Items</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-make_drop_items_source')" id="l_method-i-make_drop_items_source">show</a>
+                
+              </p>
+              <div id="method-i-make_drop_items_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Troop.rb, line 251</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">make_drop_items</span>
+  <span class="ruby-identifier">drop_items</span> = []
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">enemy</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">dead_members</span>
+    <span class="ruby-keyword">for</span> <span class="ruby-identifier">di</span> <span class="ruby-keyword">in</span> [<span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">drop_item1</span>, <span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">drop_item2</span>]
+      <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">di</span>.<span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+      <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">rand</span>(<span class="ruby-identifier">di</span>.<span class="ruby-identifier">denominator</span>) <span class="ruby-operator">!=</span> <span class="ruby-number">0</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">di</span>.<span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>
+        <span class="ruby-identifier">drop_items</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">$data_items</span>[<span class="ruby-identifier">di</span>.<span class="ruby-identifier">item_id</span>])
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">di</span>.<span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-number">2</span>
+        <span class="ruby-identifier">drop_items</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">$data_weapons</span>[<span class="ruby-identifier">di</span>.<span class="ruby-identifier">weapon_id</span>])
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">di</span>.<span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-number">3</span>
+        <span class="ruby-identifier">drop_items</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">$data_armors</span>[<span class="ruby-identifier">di</span>.<span class="ruby-identifier">armor_id</span>])
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">drop_items</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-make_unique_names">
+            
+              <b>make_unique_names</b>()
+            
+            <a href="../classes/Game_Troop.html#method-i-make_unique_names" name="method-i-make_unique_names" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Add letters (ABC, etc) to enemy characters with the same name</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-make_unique_names_source')" id="l_method-i-make_unique_names_source">show</a>
+                
+              </p>
+              <div id="method-i-make_unique_names_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Troop.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">make_unique_names</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">enemy</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">members</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">exist?</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">letter</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">n</span> = <span class="ruby-ivar">@names_count</span>[<span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">original_name</span>]
+    <span class="ruby-identifier">n</span> = <span class="ruby-number">0</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">letter</span> = <span class="ruby-constant">LETTER_TABLE</span>[<span class="ruby-identifier">n</span> <span class="ruby-operator">%</span> <span class="ruby-constant">LETTER_TABLE</span>.<span class="ruby-identifier">size</span>]
+    <span class="ruby-ivar">@names_count</span>[<span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">original_name</span>] = <span class="ruby-identifier">n</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">enemy</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">members</span>
+    <span class="ruby-identifier">n</span> = <span class="ruby-ivar">@names_count</span>[<span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">original_name</span>]
+    <span class="ruby-identifier">n</span> = <span class="ruby-number">0</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">plural</span> = <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">2</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-members">
+            
+              <b>members</b>()
+            
+            <a href="../classes/Game_Troop.html#method-i-members" name="method-i-members" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Members</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-members_source')" id="l_method-i-members_source">show</a>
+                
+              </p>
+              <div id="method-i-members_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Troop.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">members</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@enemies</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-setup">
+            
+              <b>setup</b>(troop_id)
+            
+            <a href="../classes/Game_Troop.html#method-i-setup" name="method-i-setup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Setup</p>
+
+<p>troop_id : troop ID</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-setup_source')" id="l_method-i-setup_source">show</a>
+                
+              </p>
+              <div id="method-i-setup_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Troop.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">setup</span>(<span class="ruby-identifier">troop_id</span>)
+  <span class="ruby-identifier">clear</span>
+  <span class="ruby-ivar">@troop_id</span> = <span class="ruby-identifier">troop_id</span>
+  <span class="ruby-ivar">@enemies</span> = []
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">member</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">troop</span>.<span class="ruby-identifier">members</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$data_enemies</span>[<span class="ruby-identifier">member</span>.<span class="ruby-identifier">enemy_id</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">enemy</span> = <span class="ruby-constant">Game_Enemy</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@enemies</span>.<span class="ruby-identifier">size</span>, <span class="ruby-identifier">member</span>.<span class="ruby-identifier">enemy_id</span>)
+    <span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">hidden</span> = <span class="ruby-identifier">member</span>.<span class="ruby-identifier">hidden</span>
+    <span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">immortal</span> = <span class="ruby-identifier">member</span>.<span class="ruby-identifier">immortal</span>
+    <span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">screen_x</span> = <span class="ruby-identifier">member</span>.<span class="ruby-identifier">x</span>
+    <span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">screen_y</span> = <span class="ruby-identifier">member</span>.<span class="ruby-identifier">y</span>
+    <span class="ruby-ivar">@enemies</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">enemy</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">make_unique_names</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-setup_battle_event">
+            
+              <b>setup_battle_event</b>()
+            
+            <a href="../classes/Game_Troop.html#method-i-setup_battle_event" name="method-i-setup_battle_event" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Battle Event Setup</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-setup_battle_event_source')" id="l_method-i-setup_battle_event_source">show</a>
+                
+              </p>
+              <div id="method-i-setup_battle_event_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Troop.rb, line 176</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">setup_battle_event</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@interpreter</span>.<span class="ruby-identifier">running?</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">common_event_id</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">common_event</span> = <span class="ruby-identifier">$data_common_events</span>[<span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">common_event_id</span>]
+    <span class="ruby-ivar">@interpreter</span>.<span class="ruby-identifier">setup</span>(<span class="ruby-identifier">common_event</span>.<span class="ruby-identifier">list</span>)
+    <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">common_event_id</span> = <span class="ruby-number">0</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">page</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">troop</span>.<span class="ruby-identifier">pages</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">conditions_met?</span>(<span class="ruby-identifier">page</span>)
+    <span class="ruby-ivar">@interpreter</span>.<span class="ruby-identifier">setup</span>(<span class="ruby-identifier">page</span>.<span class="ruby-identifier">list</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">page</span>.<span class="ruby-identifier">span</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-number">1</span>
+      <span class="ruby-ivar">@event_flags</span>[<span class="ruby-identifier">page</span>] = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-troop">
+            
+              <b>troop</b>()
+            
+            <a href="../classes/Game_Troop.html#method-i-troop" name="method-i-troop" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Troop Members</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-troop_source')" id="l_method-i-troop_source">show</a>
+                
+              </p>
+              <div id="method-i-troop_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Troop.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">troop</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">$data_troops</span>[<span class="ruby-ivar">@troop_id</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Game_Troop.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Frame Update</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Troop.rb, line 116</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-ivar">@screen</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

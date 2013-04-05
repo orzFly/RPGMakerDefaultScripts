@@ -1,0 +1,4133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Game_Battler</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Game_Battler 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Game_Battler_rb.html">Game_Battler.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>バトラーを扱うクラスです。このクラスは <a
+href="Game_Actor.html">Game_Actor</a> クラスと <a
+href="Game_Enemy.html">Game_Enemy</a> クラ
+スのスーパークラスとして使用されます。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-add_state">add_state</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-added_states">added_states</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-agi">agi</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-agi-3D">agi=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-apply_guard">apply_guard</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-apply_state_changes">apply_state_changes</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-apply_variance">apply_variance</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-atk">atk</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-atk-3D">atk=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-attack_effect">attack_effect</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-attack_effective-3F">attack_effective?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-berserker-3F">berserker?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-calc_eva">calc_eva</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calc_hit">calc_hit</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calc_hp_recovery">calc_hp_recovery</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calc_mp_cost">calc_mp_cost</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-calc_mp_recovery">calc_mp_recovery</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-clear_action_results">clear_action_results</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-clear_extra_values">clear_extra_values</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-clear_sprite_effects">clear_sprite_effects</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-confusion-3F">confusion?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dead-3F">dead?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-def">def</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dual_attack">dual_attack</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-element_rate">element_rate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-element_set">element_set</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-elements_max_rate">elements_max_rate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-execute_damage">execute_damage</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-exist-3F">exist?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-fast_attack">fast_attack</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-guarding-3F">guarding?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-half_mp_cost">half_mp_cost</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-hp-3D">hp=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-inputable-3F">inputable?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-item_effect">item_effect</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-item_effective-3F">item_effective?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-item_growth_effect">item_growth_effect</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-item_test">item_test</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-make_attack_damage_value">make_attack_damage_value</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-make_obj_absorb_effect">make_obj_absorb_effect</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-make_obj_damage_value">make_obj_damage_value</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-maxhp">maxhp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-maxhp-3D">maxhp=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-maxhp_limit">maxhp_limit</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-maxmp">maxmp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-maxmp-3D">maxmp=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-minus_state_set">minus_state_set</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-most_important_state_text">most_important_state_text</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-movable-3F">movable?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-mp-3D">mp=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-parriable-3F">parriable?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-plus_state_set">plus_state_set</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-prevent_critical">prevent_critical</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-recover_all">recover_all</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-reduce_hit_ratio-3F">reduce_hit_ratio?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-remained_states">remained_states</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-remove_state">remove_state</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-remove_states_auto">remove_states_auto</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-remove_states_battle">remove_states_battle</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-remove_states_shock">remove_states_shock</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-removed_states">removed_states</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-restriction">restriction</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-silent-3F">silent?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-skill_can_use-3F">skill_can_use?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-skill_effect">skill_effect</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-skill_effective-3F">skill_effective?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-skill_test">skill_test</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-slip_damage-3F">slip_damage?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-slip_damage_effect">slip_damage_effect</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-sort_states">sort_states</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-spi">spi</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-spi-3D">spi=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-state-3F">state?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-state_full-3F">state_full?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-state_ignore-3F">state_ignore?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-state_offset-3F">state_offset?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-state_probability">state_probability</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-state_resist-3F">state_resist?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-states">states</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-states_active-3F">states_active?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-super_guard">super_guard</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>absorbed</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>action</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>animation_id</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>animation_mirror</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>battler_hue</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>battler_name</td>
+            <td class='attr-desc'><p>公開インスタンス変数</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>blink</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>collapse</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>critical</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>evaded</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>hidden</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>hp</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>hp_damage</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>immortal</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>missed</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>mp</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>mp_damage</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>skipped</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>white_flash</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Game_Battler.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>オブジェクト初期化</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-ivar">@battler_name</span> = <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-ivar">@battler_hue</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@hp</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@mp</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@action</span> = <span class="ruby-constant">Game_BattleAction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>)
+  <span class="ruby-ivar">@states</span> = []                    <span class="ruby-comment"># ステート (ID の配列)</span>
+  <span class="ruby-ivar">@state_turns</span> = {}               <span class="ruby-comment"># ステートの持続ターン数 (ハッシュ)</span>
+  <span class="ruby-ivar">@hidden</span> = <span class="ruby-keyword">false</span>   
+  <span class="ruby-ivar">@immortal</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">clear_extra_values</span>
+  <span class="ruby-identifier">clear_sprite_effects</span>
+  <span class="ruby-identifier">clear_action_results</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-add_state">
+            
+              <b>add_state</b>(state_id)
+            
+            <a href="../classes/Game_Battler.html#method-i-add_state" name="method-i-add_state" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ステートの付加</p>
+
+<p>state_id : ステート ID</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_state_source')" id="l_method-i-add_state_source">show</a>
+                
+              </p>
+              <div id="method-i-add_state_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 511</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_state</span>(<span class="ruby-identifier">state_id</span>)
+  <span class="ruby-identifier">state</span> = <span class="ruby-identifier">$data_states</span>[<span class="ruby-identifier">state_id</span>]        <span class="ruby-comment"># ステートデータを取得</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">state</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>                <span class="ruby-comment"># データが無効？</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">state_ignore?</span>(<span class="ruby-identifier">state_id</span>)     <span class="ruby-comment"># 無視するべきステート？</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">state?</span>(<span class="ruby-identifier">state_id</span>)               <span class="ruby-comment"># このステートが付加されていない？</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">state_offset?</span>(<span class="ruby-identifier">state_id</span>)      <span class="ruby-comment"># 相殺するべきステートではない？</span>
+      <span class="ruby-ivar">@states</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">state_id</span>)            <span class="ruby-comment"># ID を `@states` 配列に追加</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">state_id</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>                    <span class="ruby-comment"># 戦闘不能 (ステート 1 番) なら</span>
+      <span class="ruby-ivar">@hp</span> = <span class="ruby-number">0</span>                           <span class="ruby-comment"># HP を 0 に変更する</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">inputable?</span>                   <span class="ruby-comment"># 自由意思で行動できない場合</span>
+      <span class="ruby-ivar">@action</span>.<span class="ruby-identifier">clear</span>                     <span class="ruby-comment"># 戦闘行動をクリアする</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">state_set</span>            <span class="ruby-comment"># [解除するステート] に指定されて</span>
+      <span class="ruby-identifier">remove_state</span>(<span class="ruby-identifier">i</span>)                   <span class="ruby-comment"># いるステートを実際に解除する</span>
+      <span class="ruby-ivar">@removed_states</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">i</span>)         <span class="ruby-comment"># 自動解除の分は表示しない</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">sort_states</span>                         <span class="ruby-comment"># 表示優先度の大きい順に並び替え</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@state_turns</span>[<span class="ruby-identifier">state_id</span>] = <span class="ruby-identifier">state</span>.<span class="ruby-identifier">hold_turn</span>    <span class="ruby-comment"># 自然解除のターン数を設定</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-added_states">
+            
+              <b>added_states</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-added_states" name="method-i-added_states" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>直前の行動で付加されたステートをオブジェクトの配列で取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-added_states_source')" id="l_method-i-added_states_source">show</a>
+                
+              </p>
+              <div id="method-i-added_states_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">added_states</span>
+  <span class="ruby-identifier">result</span> = []
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@added_states</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">$data_states</span>[<span class="ruby-identifier">i</span>])
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-agi">
+            
+              <b>agi</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-agi" name="method-i-agi" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>敏捷性の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-agi_source')" id="l_method-i-agi_source">show</a>
+                
+              </p>
+              <div id="method-i-agi_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">agi</span>
+  <span class="ruby-identifier">n</span> = [[<span class="ruby-identifier">base_agi</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@agi_plus</span>, <span class="ruby-number">1</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">999</span>].<span class="ruby-identifier">min</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">state</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">states</span> <span class="ruby-keyword">do</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">*=</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">agi_rate</span> <span class="ruby-operator">/</span> <span class="ruby-number">100.0</span> <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">n</span> = [[<span class="ruby-constant">Integer</span>(<span class="ruby-identifier">n</span>), <span class="ruby-number">1</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">999</span>].<span class="ruby-identifier">min</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">n</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-agi-3D">
+            
+              <b>agi=</b>(new_agi)
+            
+            <a href="../classes/Game_Battler.html#method-i-agi-3D" name="method-i-agi-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>敏捷性の設定</p>
+
+<p>agi : 新しい敏捷性</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-agi-3D_source')" id="l_method-i-agi-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-agi-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 290</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">agi=</span>(<span class="ruby-identifier">new_agi</span>)
+  <span class="ruby-ivar">@agi_plus</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">new_agi</span> <span class="ruby-operator">-</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">agi</span>
+  <span class="ruby-ivar">@agi_plus</span> = [[<span class="ruby-ivar">@agi_plus</span>, <span class="ruby-number">-999</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">999</span>].<span class="ruby-identifier">min</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-apply_guard">
+            
+              <b>apply_guard</b>(damage)
+            
+            <a href="../classes/Game_Battler.html#method-i-apply_guard" name="method-i-apply_guard" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>防御修正の適用</p>
+
+<p>damage : ダメージ</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-apply_guard_source')" id="l_method-i-apply_guard_source">show</a>
+                
+              </p>
+              <div id="method-i-apply_guard_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 811</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">apply_guard</span>(<span class="ruby-identifier">damage</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">damage</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">guarding?</span>                     <span class="ruby-comment"># 防御判定</span>
+    <span class="ruby-identifier">damage</span> <span class="ruby-operator">/=</span> <span class="ruby-identifier">super_guard</span> <span class="ruby-operator">?</span> <span class="ruby-number">4</span> <span class="ruby-operator">:</span> <span class="ruby-number">2</span>                 <span class="ruby-comment"># ダメージ減少</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">damage</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-apply_state_changes">
+            
+              <b>apply_state_changes</b>(obj)
+            
+            <a href="../classes/Game_Battler.html#method-i-apply_state_changes" name="method-i-apply_state_changes" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ステート変化の適用</p>
+
+<p>obj : スキル、アイテム、または攻撃者</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-apply_state_changes_source')" id="l_method-i-apply_state_changes_source">show</a>
+                
+              </p>
+              <div id="method-i-apply_state_changes_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 839</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">apply_state_changes</span>(<span class="ruby-identifier">obj</span>)
+  <span class="ruby-identifier">plus</span> = <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">plus_state_set</span>             <span class="ruby-comment"># ステート変化(+) を取得</span>
+  <span class="ruby-identifier">minus</span> = <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">minus_state_set</span>           <span class="ruby-comment"># ステート変化(-) を取得</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">plus</span>                         <span class="ruby-comment"># ステート変化 (+)</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">state_resist?</span>(<span class="ruby-identifier">i</span>)            <span class="ruby-comment"># 無効化されている？</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">dead?</span>                       <span class="ruby-comment"># 戦闘不能？</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@immortal</span>        <span class="ruby-comment"># 不死身？</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">state?</span>(<span class="ruby-identifier">i</span>)                        <span class="ruby-comment"># すでに付加されている？</span>
+      <span class="ruby-ivar">@remained_states</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">i</span>)          <span class="ruby-comment"># 変化しなかったステートを記録</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">rand</span>(<span class="ruby-number">100</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">state_probability</span>(<span class="ruby-identifier">i</span>) <span class="ruby-comment"># 確率判定</span>
+      <span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">i</span>)                      <span class="ruby-comment"># ステートを付加</span>
+      <span class="ruby-ivar">@added_states</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">i</span>)             <span class="ruby-comment"># 付加したステートを記録</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">minus</span>                        <span class="ruby-comment"># ステート変化 (-)</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">state?</span>(<span class="ruby-identifier">i</span>)               <span class="ruby-comment"># 付加されていない？</span>
+    <span class="ruby-identifier">remove_state</span>(<span class="ruby-identifier">i</span>)                     <span class="ruby-comment"># ステートを解除</span>
+    <span class="ruby-ivar">@removed_states</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">i</span>)             <span class="ruby-comment"># 解除したステートを記録する</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@added_states</span> &amp; <span class="ruby-ivar">@removed_states</span>
+    <span class="ruby-ivar">@added_states</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">i</span>)             <span class="ruby-comment"># 付加と解除の両方に記録されている</span>
+    <span class="ruby-ivar">@removed_states</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">i</span>)           <span class="ruby-comment"># ステートがあれば両方削除する</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-apply_variance">
+            
+              <b>apply_variance</b>(damage, variance)
+            
+            <a href="../classes/Game_Battler.html#method-i-apply_variance" name="method-i-apply_variance" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>分散度の適用</p>
+
+<p>damage   : ダメージ variance : 分散度</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-apply_variance_source')" id="l_method-i-apply_variance_source">show</a>
+                
+              </p>
+              <div id="method-i-apply_variance_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 799</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">apply_variance</span>(<span class="ruby-identifier">damage</span>, <span class="ruby-identifier">variance</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">damage</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span>                                  <span class="ruby-comment"># ダメージ 0 以外なら</span>
+    <span class="ruby-identifier">amp</span> = [<span class="ruby-identifier">damage</span>.<span class="ruby-identifier">abs</span> * <span class="ruby-identifier">variance</span> <span class="ruby-operator">/</span> <span class="ruby-number">100</span>, <span class="ruby-number">0</span>].<span class="ruby-identifier">max</span>    <span class="ruby-comment"># 分散の幅を計算</span>
+    <span class="ruby-identifier">damage</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">rand</span>(<span class="ruby-identifier">amp</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">rand</span>(<span class="ruby-identifier">amp</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>) <span class="ruby-operator">-</span> <span class="ruby-identifier">amp</span>     <span class="ruby-comment"># 分散実行</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">damage</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-atk">
+            
+              <b>atk</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-atk" name="method-i-atk" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>攻撃力の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-atk_source')" id="l_method-i-atk_source">show</a>
+                
+              </p>
+              <div id="method-i-atk_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 167</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">atk</span>
+  <span class="ruby-identifier">n</span> = [[<span class="ruby-identifier">base_atk</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@atk_plus</span>, <span class="ruby-number">1</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">999</span>].<span class="ruby-identifier">min</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">state</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">states</span> <span class="ruby-keyword">do</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">*=</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">atk_rate</span> <span class="ruby-operator">/</span> <span class="ruby-number">100.0</span> <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">n</span> = [[<span class="ruby-constant">Integer</span>(<span class="ruby-identifier">n</span>), <span class="ruby-number">1</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">999</span>].<span class="ruby-identifier">min</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">n</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-atk-3D">
+            
+              <b>atk=</b>(new_atk)
+            
+            <a href="../classes/Game_Battler.html#method-i-atk-3D" name="method-i-atk-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>攻撃力の設定</p>
+
+<p>new_atk : 新しい攻撃力</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-atk-3D_source')" id="l_method-i-atk-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-atk-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 263</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">atk=</span>(<span class="ruby-identifier">new_atk</span>)
+  <span class="ruby-ivar">@atk_plus</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">new_atk</span> <span class="ruby-operator">-</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">atk</span>
+  <span class="ruby-ivar">@atk_plus</span> = [[<span class="ruby-ivar">@atk_plus</span>, <span class="ruby-number">-999</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">999</span>].<span class="ruby-identifier">min</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-attack_effect">
+            
+              <b>attack_effect</b>(attacker)
+            
+            <a href="../classes/Game_Battler.html#method-i-attack_effect" name="method-i-attack_effect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>通常攻撃の効果適用</p>
+
+<p>attacker : 攻撃者</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-attack_effect_source')" id="l_method-i-attack_effect_source">show</a>
+                
+              </p>
+              <div id="method-i-attack_effect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 881</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">attack_effect</span>(<span class="ruby-identifier">attacker</span>)
+  <span class="ruby-identifier">clear_action_results</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">attack_effective?</span>(<span class="ruby-identifier">attacker</span>)
+    <span class="ruby-ivar">@skipped</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">rand</span>(<span class="ruby-number">100</span>) <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">calc_hit</span>(<span class="ruby-identifier">attacker</span>)            <span class="ruby-comment"># 命中判定</span>
+    <span class="ruby-ivar">@missed</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">rand</span>(<span class="ruby-number">100</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">calc_eva</span>(<span class="ruby-identifier">attacker</span>)             <span class="ruby-comment"># 回避判定</span>
+    <span class="ruby-ivar">@evaded</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">make_attack_damage_value</span>(<span class="ruby-identifier">attacker</span>)            <span class="ruby-comment"># ダメージ計算</span>
+  <span class="ruby-identifier">execute_damage</span>(<span class="ruby-identifier">attacker</span>)                      <span class="ruby-comment"># ダメージ反映</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@hp_damage</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>                            <span class="ruby-comment"># 物理ノーダメージ判定</span>
+    <span class="ruby-keyword">return</span>                                    
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">apply_state_changes</span>(<span class="ruby-identifier">attacker</span>)                 <span class="ruby-comment"># ステート変化</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-attack_effective-3F">
+            
+              <b>attack_effective?</b>(attacker)
+            
+            <a href="../classes/Game_Battler.html#method-i-attack_effective-3F" name="method-i-attack_effective-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>通常攻撃の適用可能判定</p>
+
+<p>attacker : 攻撃者</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-attack_effective-3F_source')" id="l_method-i-attack_effective-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-attack_effective-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 870</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">attack_effective?</span>(<span class="ruby-identifier">attacker</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">dead?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-berserker-3F">
+            
+              <b>berserker?</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-berserker-3F" name="method-i-berserker-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>暴走状態判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-berserker-3F_source')" id="l_method-i-berserker-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-berserker-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 372</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">berserker?</span>
+  <span class="ruby-keyword">return</span> (<span class="ruby-keyword">not</span> <span class="ruby-ivar">@hidden</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">restriction</span> <span class="ruby-operator">==</span> <span class="ruby-number">2</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calc_eva">
+            
+              <b>calc_eva</b>(user, obj = nil)
+            
+            <a href="../classes/Game_Battler.html#method-i-calc_eva" name="method-i-calc_eva" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>最終回避率の計算</p>
+
+<p>user : 攻撃者、スキルまたはアイテムの使用者 obj  :
+スキルまたはアイテム (通常攻撃の場合は nil)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calc_eva_source')" id="l_method-i-calc_eva_source">show</a>
+                
+              </p>
+              <div id="method-i-calc_eva_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 682</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calc_eva</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">obj</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">eva</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">eva</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">obj</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>                       <span class="ruby-comment"># 通常攻撃ではない場合</span>
+    <span class="ruby-identifier">eva</span> = <span class="ruby-number">0</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">physical_attack</span>    <span class="ruby-comment"># 物理攻撃以外なら 0% とする</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">parriable?</span>                       <span class="ruby-comment"># 回避不可能な状態の場合</span>
+    <span class="ruby-identifier">eva</span> = <span class="ruby-number">0</span>                               <span class="ruby-comment"># 回避率を 0% とする</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">eva</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calc_hit">
+            
+              <b>calc_hit</b>(user, obj = nil)
+            
+            <a href="../classes/Game_Battler.html#method-i-calc_hit" name="method-i-calc_hit" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>最終命中率の計算</p>
+
+<p>user : 攻撃者、スキルまたはアイテムの使用者 obj  :
+スキルまたはアイテム (通常攻撃の場合は nil)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calc_hit_source')" id="l_method-i-calc_hit_source">show</a>
+                
+              </p>
+              <div id="method-i-calc_hit_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 660</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calc_hit</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">obj</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">obj</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>                           <span class="ruby-comment"># 通常攻撃の場合</span>
+    <span class="ruby-identifier">hit</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">hit</span>                        <span class="ruby-comment"># 命中率を取得</span>
+    <span class="ruby-identifier">physical</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Skill</span>)             <span class="ruby-comment"># スキルの場合</span>
+    <span class="ruby-identifier">hit</span> = <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">hit</span>                         <span class="ruby-comment"># 成功率を取得</span>
+    <span class="ruby-identifier">physical</span> = <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">physical_attack</span>
+  <span class="ruby-keyword">else</span>                                    <span class="ruby-comment"># アイテムの場合</span>
+    <span class="ruby-identifier">hit</span> = <span class="ruby-number">100</span>                             <span class="ruby-comment"># 命中率を 100% とする</span>
+    <span class="ruby-identifier">physical</span> = <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">physical_attack</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">physical</span>                             <span class="ruby-comment"># 物理攻撃の場合</span>
+    <span class="ruby-identifier">hit</span> <span class="ruby-operator">/=</span> <span class="ruby-number">4</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">reduce_hit_ratio?</span>    <span class="ruby-comment"># 使用者が暗闇なら 1/4 にする</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">hit</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calc_hp_recovery">
+            
+              <b>calc_hp_recovery</b>(user, item)
+            
+            <a href="../classes/Game_Battler.html#method-i-calc_hp_recovery" name="method-i-calc_hp_recovery" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>アイテムによる HP 回復量計算</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calc_hp_recovery_source')" id="l_method-i-calc_hp_recovery_source">show</a>
+                
+              </p>
+              <div id="method-i-calc_hp_recovery_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 765</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calc_hp_recovery</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">item</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-identifier">maxhp</span> * <span class="ruby-identifier">item</span>.<span class="ruby-identifier">hp_recovery_rate</span> <span class="ruby-operator">/</span> <span class="ruby-number">100</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">hp_recovery</span>
+  <span class="ruby-identifier">result</span> <span class="ruby-operator">*=</span> <span class="ruby-number">2</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">pharmacology</span>    <span class="ruby-comment"># 薬の知識で効果 2 倍</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calc_mp_cost">
+            
+              <b>calc_mp_cost</b>(skill)
+            
+            <a href="../classes/Game_Battler.html#method-i-calc_mp_cost" name="method-i-calc_mp_cost" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スキルの消費 MP 計算</p>
+
+<p>skill : スキル</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calc_mp_cost_source')" id="l_method-i-calc_mp_cost_source">show</a>
+                
+              </p>
+              <div id="method-i-calc_mp_cost_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 631</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calc_mp_cost</span>(<span class="ruby-identifier">skill</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">half_mp_cost</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">skill</span>.<span class="ruby-identifier">mp_cost</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">skill</span>.<span class="ruby-identifier">mp_cost</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-calc_mp_recovery">
+            
+              <b>calc_mp_recovery</b>(user, item)
+            
+            <a href="../classes/Game_Battler.html#method-i-calc_mp_recovery" name="method-i-calc_mp_recovery" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>アイテムによる MP 回復量計算</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-calc_mp_recovery_source')" id="l_method-i-calc_mp_recovery_source">show</a>
+                
+              </p>
+              <div id="method-i-calc_mp_recovery_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 774</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">calc_mp_recovery</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">item</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-identifier">maxmp</span> * <span class="ruby-identifier">item</span>.<span class="ruby-identifier">mp_recovery_rate</span> <span class="ruby-operator">/</span> <span class="ruby-number">100</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">mp_recovery</span>
+  <span class="ruby-identifier">result</span> <span class="ruby-operator">*=</span> <span class="ruby-number">2</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">pharmacology</span>    <span class="ruby-comment"># 薬の知識で効果 2 倍</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear_action_results">
+            
+              <b>clear_action_results</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-clear_action_results" name="method-i-clear_action_results" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>行動効果の保持用変数をクリア</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_action_results_source')" id="l_method-i-clear_action_results_source">show</a>
+                
+              </p>
+              <div id="method-i-clear_action_results_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear_action_results</span>
+  <span class="ruby-ivar">@skipped</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@missed</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@evaded</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@critical</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@absorbed</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@hp_damage</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@mp_damage</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@added_states</span> = []              <span class="ruby-comment"># 付加されたステート (ID の配列)</span>
+  <span class="ruby-ivar">@removed_states</span> = []            <span class="ruby-comment"># 解除されたステート (ID の配列)</span>
+  <span class="ruby-ivar">@remained_states</span> = []           <span class="ruby-comment"># 変化しなかったステート (ID の配列)</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear_extra_values">
+            
+              <b>clear_extra_values</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-clear_extra_values" name="method-i-clear_extra_values" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>能力値に加算する値をクリア</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_extra_values_source')" id="l_method-i-clear_extra_values_source">show</a>
+                
+              </p>
+              <div id="method-i-clear_extra_values_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear_extra_values</span>
+  <span class="ruby-ivar">@maxhp_plus</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@maxmp_plus</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@atk_plus</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@def_plus</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@spi_plus</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@agi_plus</span> = <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear_sprite_effects">
+            
+              <b>clear_sprite_effects</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-clear_sprite_effects" name="method-i-clear_sprite_effects" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スプライトとの通信用変数をクリア</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_sprite_effects_source')" id="l_method-i-clear_sprite_effects_source">show</a>
+                
+              </p>
+              <div id="method-i-clear_sprite_effects_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear_sprite_effects</span>
+  <span class="ruby-ivar">@animation_id</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@animation_mirror</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@white_flash</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@blink</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@collapse</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-confusion-3F">
+            
+              <b>confusion?</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-confusion-3F" name="method-i-confusion-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>混乱状態判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-confusion-3F_source')" id="l_method-i-confusion-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-confusion-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 379</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">confusion?</span>
+  <span class="ruby-keyword">return</span> (<span class="ruby-keyword">not</span> <span class="ruby-ivar">@hidden</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">restriction</span> <span class="ruby-operator">==</span> <span class="ruby-number">3</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dead-3F">
+            
+              <b>dead?</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-dead-3F" name="method-i-dead-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>戦闘不能判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dead-3F_source')" id="l_method-i-dead-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-dead-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 330</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dead?</span>
+  <span class="ruby-keyword">return</span> (<span class="ruby-keyword">not</span> <span class="ruby-ivar">@hidden</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@hp</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-ivar">@immortal</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-def">
+            
+              <b>def</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-def" name="method-i-def" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>防御力の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-def_source')" id="l_method-i-def_source">show</a>
+                
+              </p>
+              <div id="method-i-def_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 177</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">def</span>
+  <span class="ruby-keyword ruby-title">n</span> = [[<span class="ruby-identifier">base_def</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@def_plus</span>, <span class="ruby-number">1</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">999</span>].<span class="ruby-identifier">min</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">state</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">states</span> <span class="ruby-keyword">do</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">*=</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">def_rate</span> <span class="ruby-operator">/</span> <span class="ruby-number">100.0</span> <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">n</span> = [[<span class="ruby-constant">Integer</span>(<span class="ruby-identifier">n</span>), <span class="ruby-number">1</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">999</span>].<span class="ruby-identifier">min</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">n</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dual_attack">
+            
+              <b>dual_attack</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-dual_attack" name="method-i-dual_attack" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>武器オプション [連続攻撃] の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dual_attack_source')" id="l_method-i-dual_attack_source">show</a>
+                
+              </p>
+              <div id="method-i-dual_attack_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 221</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dual_attack</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-element_rate">
+            
+              <b>element_rate</b>(element_id)
+            
+            <a href="../classes/Game_Battler.html#method-i-element_rate" name="method-i-element_rate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>属性修正値の取得</p>
+
+<p>element_id : 属性 ID</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-element_rate_source')" id="l_method-i-element_rate_source">show</a>
+                
+              </p>
+              <div id="method-i-element_rate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 394</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">element_rate</span>(<span class="ruby-identifier">element_id</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-number">100</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-element_set">
+            
+              <b>element_set</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-element_set" name="method-i-element_set" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>通常攻撃の属性取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-element_set_source')" id="l_method-i-element_set_source">show</a>
+                
+              </p>
+              <div id="method-i-element_set_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 416</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">element_set</span>
+  <span class="ruby-keyword">return</span> []
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-elements_max_rate">
+            
+              <b>elements_max_rate</b>(element_set)
+            
+            <a href="../classes/Game_Battler.html#method-i-elements_max_rate" name="method-i-elements_max_rate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>属性の最大修正値の取得</p>
+
+<p><a href="Game_Battler.html#method-i-element_set">#element_set</a> : 属性
+与えられた属性の中で最も有効な修正値を返す</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-elements_max_rate_source')" id="l_method-i-elements_max_rate_source">show</a>
+                
+              </p>
+              <div id="method-i-elements_max_rate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 785</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">elements_max_rate</span>(<span class="ruby-identifier">element_set</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-number">100</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">element_set</span>.<span class="ruby-identifier">empty?</span>                <span class="ruby-comment"># 無属性の場合</span>
+  <span class="ruby-identifier">rate_list</span> = []
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">element_set</span>
+    <span class="ruby-identifier">rate_list</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">element_rate</span>(<span class="ruby-identifier">i</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">rate_list</span>.<span class="ruby-identifier">max</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-execute_damage">
+            
+              <b>execute_damage</b>(user)
+            
+            <a href="../classes/Game_Battler.html#method-i-execute_damage" name="method-i-execute_damage" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ダメージの反映</p>
+
+<p>user : スキルかアイテムの使用者 呼び出し前に
+@mp_damage、 at hp_damage、@absorbed が設定されていること。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-execute_damage_source')" id="l_method-i-execute_damage_source">show</a>
+                
+              </p>
+              <div id="method-i-execute_damage_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 823</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">execute_damage</span>(<span class="ruby-identifier">user</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@hp_damage</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>           <span class="ruby-comment"># ダメージが正の数</span>
+    <span class="ruby-identifier">remove_states_shock</span>       <span class="ruby-comment"># 衝撃によるステート解除</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">hp</span> <span class="ruby-operator">-=</span> <span class="ruby-ivar">@hp_damage</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">mp</span> <span class="ruby-operator">-=</span> <span class="ruby-ivar">@mp_damage</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@absorbed</span>                <span class="ruby-comment"># 吸収の場合</span>
+    <span class="ruby-identifier">user</span>.<span class="ruby-identifier">hp</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@hp_damage</span>
+    <span class="ruby-identifier">user</span>.<span class="ruby-identifier">mp</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@mp_damage</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-exist-3F">
+            
+              <b>exist?</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-exist-3F" name="method-i-exist-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>存在判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-exist-3F_source')" id="l_method-i-exist-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-exist-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 337</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">exist?</span>
+  <span class="ruby-keyword">return</span> (<span class="ruby-keyword">not</span> <span class="ruby-ivar">@hidden</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">dead?</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-fast_attack">
+            
+              <b>fast_attack</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-fast_attack" name="method-i-fast_attack" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>武器オプション [ターン内先制] の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-fast_attack_source')" id="l_method-i-fast_attack_source">show</a>
+                
+              </p>
+              <div id="method-i-fast_attack_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 214</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">fast_attack</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-guarding-3F">
+            
+              <b>guarding?</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-guarding-3F" name="method-i-guarding-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>防御中判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-guarding-3F_source')" id="l_method-i-guarding-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-guarding-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 386</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">guarding?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@action</span>.<span class="ruby-identifier">guard?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-half_mp_cost">
+            
+              <b>half_mp_cost</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-half_mp_cost" name="method-i-half_mp_cost" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>防具オプション [消費 MP 半分] の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-half_mp_cost_source')" id="l_method-i-half_mp_cost_source">show</a>
+                
+              </p>
+              <div id="method-i-half_mp_cost_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 235</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">half_mp_cost</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-hp-3D">
+            
+              <b>hp=</b>(hp)
+            
+            <a href="../classes/Game_Battler.html#method-i-hp-3D" name="method-i-hp-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>HP の変更</p>
+
+<p>hp : 新しい HP</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-hp-3D_source')" id="l_method-i-hp-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-hp-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 299</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">hp=</span>(<span class="ruby-identifier">hp</span>)
+  <span class="ruby-ivar">@hp</span> = [[<span class="ruby-identifier">hp</span>, <span class="ruby-identifier">maxhp</span>].<span class="ruby-identifier">min</span>, <span class="ruby-number">0</span>].<span class="ruby-identifier">max</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@hp</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">state?</span>(<span class="ruby-number">1</span>) <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-ivar">@immortal</span>
+    <span class="ruby-identifier">add_state</span>(<span class="ruby-number">1</span>)                <span class="ruby-comment"># 戦闘不能 (ステート 1 番) を付加</span>
+    <span class="ruby-ivar">@added_states</span>.<span class="ruby-identifier">push</span>(<span class="ruby-number">1</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@hp</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">state?</span>(<span class="ruby-number">1</span>)
+    <span class="ruby-identifier">remove_state</span>(<span class="ruby-number">1</span>)             <span class="ruby-comment"># 戦闘不能 (ステート 1 番) を解除</span>
+    <span class="ruby-ivar">@removed_states</span>.<span class="ruby-identifier">push</span>(<span class="ruby-number">1</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-inputable-3F">
+            
+              <b>inputable?</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-inputable-3F" name="method-i-inputable-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>コマンド入力可能判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-inputable-3F_source')" id="l_method-i-inputable-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-inputable-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 344</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">inputable?</span>
+  <span class="ruby-keyword">return</span> (<span class="ruby-keyword">not</span> <span class="ruby-ivar">@hidden</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">restriction</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-number">1</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-item_effect">
+            
+              <b>item_effect</b>(user, item)
+            
+            <a href="../classes/Game_Battler.html#method-i-item_effect" name="method-i-item_effect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>アイテムの効果適用</p>
+
+<p>user : アイテムの使用者 item : アイテム</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-item_effect_source')" id="l_method-i-item_effect_source">show</a>
+                
+              </p>
+              <div id="method-i-item_effect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 1009</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">item_effect</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">item</span>)
+  <span class="ruby-identifier">clear_action_results</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">item_effective?</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">item</span>)
+    <span class="ruby-ivar">@skipped</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">rand</span>(<span class="ruby-number">100</span>) <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">calc_hit</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">item</span>)          <span class="ruby-comment"># 命中判定</span>
+    <span class="ruby-ivar">@missed</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">rand</span>(<span class="ruby-number">100</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">calc_eva</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">item</span>)           <span class="ruby-comment"># 回避判定</span>
+    <span class="ruby-ivar">@evaded</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">hp_recovery</span> = <span class="ruby-identifier">calc_hp_recovery</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">item</span>)    <span class="ruby-comment"># HP 回復量計算</span>
+  <span class="ruby-identifier">mp_recovery</span> = <span class="ruby-identifier">calc_mp_recovery</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">item</span>)    <span class="ruby-comment"># MP 回復量計算</span>
+  <span class="ruby-identifier">make_obj_damage_value</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">item</span>)             <span class="ruby-comment"># ダメージ計算</span>
+  <span class="ruby-ivar">@hp_damage</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">hp_recovery</span>                     <span class="ruby-comment"># HP 回復量を差し引く</span>
+  <span class="ruby-ivar">@mp_damage</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">mp_recovery</span>                     <span class="ruby-comment"># MP 回復量を差し引く</span>
+  <span class="ruby-identifier">make_obj_absorb_effect</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">item</span>)            <span class="ruby-comment"># 吸収効果計算</span>
+  <span class="ruby-identifier">execute_damage</span>(<span class="ruby-identifier">user</span>)                          <span class="ruby-comment"># ダメージ反映</span>
+  <span class="ruby-identifier">item_growth_effect</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">item</span>)                <span class="ruby-comment"># 成長効果適用</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">physical_attack</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@hp_damage</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>   <span class="ruby-comment"># 物理ノーダメージ判定</span>
+    <span class="ruby-keyword">return</span>                                    
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">apply_state_changes</span>(<span class="ruby-identifier">item</span>)                     <span class="ruby-comment"># ステート変化</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-item_effective-3F">
+            
+              <b>item_effective?</b>(user, item)
+            
+            <a href="../classes/Game_Battler.html#method-i-item_effective-3F" name="method-i-item_effective-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>アイテムの適用可能判定</p>
+
+<p>user : アイテムの使用者 item : アイテム</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-item_effective-3F_source')" id="l_method-i-item_effective-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-item_effective-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 972</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">item_effective?</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">item</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">for_dead_friend?</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">dead?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">in_battle</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">for_friend?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">item_test</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">item</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-item_growth_effect">
+            
+              <b>item_growth_effect</b>(user, item)
+            
+            <a href="../classes/Game_Battler.html#method-i-item_growth_effect" name="method-i-item_growth_effect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>アイテムの成長効果適用</p>
+
+<p>user : アイテムの使用者 item : アイテム</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-item_growth_effect_source')" id="l_method-i-item_growth_effect_source">show</a>
+                
+              </p>
+              <div id="method-i-item_growth_effect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 1042</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">item_growth_effect</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">item</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">parameter_type</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">parameter_points</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">parameter_type</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>  <span class="ruby-comment"># MaxHP</span>
+      <span class="ruby-ivar">@maxhp_plus</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">parameter_points</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>  <span class="ruby-comment"># MaxMP</span>
+      <span class="ruby-ivar">@maxmp_plus</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">parameter_points</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">3</span>  <span class="ruby-comment"># 攻撃力</span>
+      <span class="ruby-ivar">@atk_plus</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">parameter_points</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">4</span>  <span class="ruby-comment"># 防御力</span>
+      <span class="ruby-ivar">@def_plus</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">parameter_points</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">5</span>  <span class="ruby-comment"># 精神力</span>
+      <span class="ruby-ivar">@spi_plus</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">parameter_points</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">6</span>  <span class="ruby-comment"># 敏捷性</span>
+      <span class="ruby-ivar">@agi_plus</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">parameter_points</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-item_test">
+            
+              <b>item_test</b>(user, item)
+            
+            <a href="../classes/Game_Battler.html#method-i-item_test" name="method-i-item_test" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>アイテムの適用テスト</p>
+
+<p>user : アイテムの使用者 item : アイテム
+使用対象が全快しているときの回復禁止などを判定する。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-item_test_source')" id="l_method-i-item_test_source">show</a>
+                
+              </p>
+              <div id="method-i-item_test_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 988</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">item_test</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">item</span>)
+  <span class="ruby-identifier">tester</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">clone</span>
+  <span class="ruby-identifier">tester</span>.<span class="ruby-identifier">make_obj_damage_value</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">item</span>)
+  <span class="ruby-identifier">tester</span>.<span class="ruby-identifier">apply_state_changes</span>(<span class="ruby-identifier">item</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">tester</span>.<span class="ruby-identifier">hp_damage</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">tester</span>.<span class="ruby-identifier">calc_hp_recovery</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">item</span>) <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">tester</span>.<span class="ruby-identifier">hp</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">tester</span>.<span class="ruby-identifier">maxhp</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">tester</span>.<span class="ruby-identifier">mp_damage</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">tester</span>.<span class="ruby-identifier">calc_mp_recovery</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">item</span>) <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">tester</span>.<span class="ruby-identifier">mp</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">tester</span>.<span class="ruby-identifier">maxmp</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">tester</span>.<span class="ruby-identifier">added_states</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">tester</span>.<span class="ruby-identifier">removed_states</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">parameter_type</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-make_attack_damage_value">
+            
+              <b>make_attack_damage_value</b>(attacker)
+            
+            <a href="../classes/Game_Battler.html#method-i-make_attack_damage_value" name="method-i-make_attack_damage_value" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>通常攻撃によるダメージ計算</p>
+
+<p>attacker : 攻撃者 結果は `@<a
+href="Game_Battler.html#attribute-i-hp_damage">#hp_damage</a>`
+に代入する。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-make_attack_damage_value_source')" id="l_method-i-make_attack_damage_value_source">show</a>
+                
+              </p>
+              <div id="method-i-make_attack_damage_value_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 698</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">make_attack_damage_value</span>(<span class="ruby-identifier">attacker</span>)
+  <span class="ruby-identifier">damage</span> = <span class="ruby-identifier">attacker</span>.<span class="ruby-identifier">atk</span> * <span class="ruby-number">4</span> <span class="ruby-operator">-</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">def</span> * <span class="ruby-number">2</span>        <span class="ruby-comment"># 基本計算</span>
+  <span class="ruby-identifier">damage</span> = <span class="ruby-number">0</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">damage</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>                        <span class="ruby-comment"># マイナスなら 0 に</span>
+  <span class="ruby-identifier">damage</span> <span class="ruby-operator">*=</span> <span class="ruby-identifier">elements_max_rate</span>(<span class="ruby-identifier">attacker</span>.<span class="ruby-identifier">element_set</span>)   <span class="ruby-comment"># 属性修正</span>
+  <span class="ruby-identifier">damage</span> <span class="ruby-operator">/=</span> <span class="ruby-number">100</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">damage</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>                                  <span class="ruby-comment"># ダメージが 0</span>
+    <span class="ruby-identifier">damage</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-number">2</span>)                              <span class="ruby-comment"># 1/2 の確率で 1 ダメージ</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">damage</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>                                <span class="ruby-comment"># ダメージが正の数</span>
+    <span class="ruby-ivar">@critical</span> = (<span class="ruby-identifier">rand</span>(<span class="ruby-number">100</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">attacker</span>.<span class="ruby-identifier">cri</span>)        <span class="ruby-comment"># クリティカル判定</span>
+    <span class="ruby-ivar">@critical</span> = <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">prevent_critical</span>         <span class="ruby-comment"># クリティカル防止？</span>
+    <span class="ruby-identifier">damage</span> <span class="ruby-operator">*=</span> <span class="ruby-number">3</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@critical</span>                      <span class="ruby-comment"># クリティカル修正</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">damage</span> = <span class="ruby-identifier">apply_variance</span>(<span class="ruby-identifier">damage</span>, <span class="ruby-number">20</span>)             <span class="ruby-comment"># 分散</span>
+  <span class="ruby-identifier">damage</span> = <span class="ruby-identifier">apply_guard</span>(<span class="ruby-identifier">damage</span>)                    <span class="ruby-comment"># 防御修正</span>
+  <span class="ruby-ivar">@hp_damage</span> = <span class="ruby-identifier">damage</span>                             <span class="ruby-comment"># HP にダメージ</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-make_obj_absorb_effect">
+            
+              <b>make_obj_absorb_effect</b>(user, obj)
+            
+            <a href="../classes/Game_Battler.html#method-i-make_obj_absorb_effect" name="method-i-make_obj_absorb_effect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>吸収効果の計算</p>
+
+<p>user : スキルまたはアイテムの使用者 obj  :
+スキルまたはアイテム 呼び出し前に `@<a
+href="Game_Battler.html#attribute-i-hp_damage">#hp_damage</a>` と `@<a
+href="Game_Battler.html#attribute-i-mp_damage">#mp_damage</a>`
+が計算されていること。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-make_obj_absorb_effect_source')" id="l_method-i-make_obj_absorb_effect_source">show</a>
+                
+              </p>
+              <div id="method-i-make_obj_absorb_effect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 752</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">make_obj_absorb_effect</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">obj</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">absorb_damage</span>                        <span class="ruby-comment"># 吸収の場合</span>
+    <span class="ruby-ivar">@hp_damage</span> = [<span class="ruby-keyword">self</span>.<span class="ruby-identifier">hp</span>, <span class="ruby-ivar">@hp_damage</span>].<span class="ruby-identifier">min</span>    <span class="ruby-comment"># HP ダメージ範囲修正</span>
+    <span class="ruby-ivar">@mp_damage</span> = [<span class="ruby-keyword">self</span>.<span class="ruby-identifier">mp</span>, <span class="ruby-ivar">@mp_damage</span>].<span class="ruby-identifier">min</span>    <span class="ruby-comment"># MP ダメージ範囲修正</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@hp_damage</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@mp_damage</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>       <span class="ruby-comment"># ダメージが正の数の場合</span>
+      <span class="ruby-ivar">@absorbed</span> = <span class="ruby-keyword">true</span>                        <span class="ruby-comment"># 吸収フラグ ON</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-make_obj_damage_value">
+            
+              <b>make_obj_damage_value</b>(user, obj)
+            
+            <a href="../classes/Game_Battler.html#method-i-make_obj_damage_value" name="method-i-make_obj_damage_value" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スキルまたはアイテムによるダメージ計算</p>
+
+<p>user : スキルまたはアイテムの使用者 obj  :
+スキルまたはアイテム 結果は `@<a
+href="Game_Battler.html#attribute-i-hp_damage">#hp_damage</a>` または
+`@<a href="Game_Battler.html#attribute-i-mp_damage">#mp_damage</a>`
+に代入する。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-make_obj_damage_value_source')" id="l_method-i-make_obj_damage_value_source">show</a>
+                
+              </p>
+              <div id="method-i-make_obj_damage_value_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 721</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">make_obj_damage_value</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">obj</span>)
+  <span class="ruby-identifier">damage</span> = <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">base_damage</span>                        <span class="ruby-comment"># 基本ダメージを取得</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">damage</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>                                   <span class="ruby-comment"># ダメージが正の数</span>
+    <span class="ruby-identifier">damage</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">atk</span> * <span class="ruby-number">4</span> * <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">atk_f</span> <span class="ruby-operator">/</span> <span class="ruby-number">100</span>      <span class="ruby-comment"># 打撃関係度: 使用者</span>
+    <span class="ruby-identifier">damage</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">spi</span> * <span class="ruby-number">2</span> * <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">spi_f</span> <span class="ruby-operator">/</span> <span class="ruby-number">100</span>      <span class="ruby-comment"># 精神関係度: 使用者</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">ignore_defense</span>                     <span class="ruby-comment"># 防御力無視以外</span>
+      <span class="ruby-identifier">damage</span> <span class="ruby-operator">-=</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">def</span> * <span class="ruby-number">2</span> * <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">atk_f</span> <span class="ruby-operator">/</span> <span class="ruby-number">100</span>    <span class="ruby-comment"># 打撃関係度: 対象者</span>
+      <span class="ruby-identifier">damage</span> <span class="ruby-operator">-=</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">spi</span> * <span class="ruby-number">1</span> * <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">spi_f</span> <span class="ruby-operator">/</span> <span class="ruby-number">100</span>    <span class="ruby-comment"># 精神関係度: 対象者</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">damage</span> = <span class="ruby-number">0</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">damage</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>                      <span class="ruby-comment"># マイナスなら 0 に</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">damage</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>                                <span class="ruby-comment"># ダメージが負の数</span>
+    <span class="ruby-identifier">damage</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">atk</span> * <span class="ruby-number">4</span> * <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">atk_f</span> <span class="ruby-operator">/</span> <span class="ruby-number">100</span>      <span class="ruby-comment"># 打撃関係度: 使用者</span>
+    <span class="ruby-identifier">damage</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">spi</span> * <span class="ruby-number">2</span> * <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">spi_f</span> <span class="ruby-operator">/</span> <span class="ruby-number">100</span>      <span class="ruby-comment"># 精神関係度: 使用者</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">damage</span> <span class="ruby-operator">*=</span> <span class="ruby-identifier">elements_max_rate</span>(<span class="ruby-identifier">obj</span>.<span class="ruby-identifier">element_set</span>)    <span class="ruby-comment"># 属性修正</span>
+  <span class="ruby-identifier">damage</span> <span class="ruby-operator">/=</span> <span class="ruby-number">100</span>
+  <span class="ruby-identifier">damage</span> = <span class="ruby-identifier">apply_variance</span>(<span class="ruby-identifier">damage</span>, <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">variance</span>)   <span class="ruby-comment"># 分散</span>
+  <span class="ruby-identifier">damage</span> = <span class="ruby-identifier">apply_guard</span>(<span class="ruby-identifier">damage</span>)                    <span class="ruby-comment"># 防御修正</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">damage_to_mp</span>  
+    <span class="ruby-ivar">@mp_damage</span> = <span class="ruby-identifier">damage</span>                           <span class="ruby-comment"># MP にダメージ</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@hp_damage</span> = <span class="ruby-identifier">damage</span>                           <span class="ruby-comment"># HP にダメージ</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-maxhp">
+            
+              <b>maxhp</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-maxhp" name="method-i-maxhp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>MaxHP の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-maxhp_source')" id="l_method-i-maxhp_source">show</a>
+                
+              </p>
+              <div id="method-i-maxhp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 153</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">maxhp</span>
+  <span class="ruby-keyword">return</span> [[<span class="ruby-identifier">base_maxhp</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@maxhp_plus</span>, <span class="ruby-number">1</span>].<span class="ruby-identifier">max</span>, <span class="ruby-identifier">maxhp_limit</span>].<span class="ruby-identifier">min</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-maxhp-3D">
+            
+              <b>maxhp=</b>(new_maxhp)
+            
+            <a href="../classes/Game_Battler.html#method-i-maxhp-3D" name="method-i-maxhp-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>MaxHP の設定</p>
+
+<p>new_maxhp : 新しい MaxHP</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-maxhp-3D_source')" id="l_method-i-maxhp-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-maxhp-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 243</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">maxhp=</span>(<span class="ruby-identifier">new_maxhp</span>)
+  <span class="ruby-ivar">@maxhp_plus</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">new_maxhp</span> <span class="ruby-operator">-</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">maxhp</span>
+  <span class="ruby-ivar">@maxhp_plus</span> = [[<span class="ruby-ivar">@maxhp_plus</span>, <span class="ruby-number">-9999</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">9999</span>].<span class="ruby-identifier">min</span>
+  <span class="ruby-ivar">@hp</span> = [<span class="ruby-ivar">@hp</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">maxhp</span>].<span class="ruby-identifier">min</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-maxhp_limit">
+            
+              <b>maxhp_limit</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-maxhp_limit" name="method-i-maxhp_limit" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>MaxHP の制限値取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-maxhp_limit_source')" id="l_method-i-maxhp_limit_source">show</a>
+                
+              </p>
+              <div id="method-i-maxhp_limit_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 146</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">maxhp_limit</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">999999</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-maxmp">
+            
+              <b>maxmp</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-maxmp" name="method-i-maxmp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>MaxMP の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-maxmp_source')" id="l_method-i-maxmp_source">show</a>
+                
+              </p>
+              <div id="method-i-maxmp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">maxmp</span>
+  <span class="ruby-keyword">return</span> [[<span class="ruby-identifier">base_maxmp</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@maxmp_plus</span>, <span class="ruby-number">0</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">9999</span>].<span class="ruby-identifier">min</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-maxmp-3D">
+            
+              <b>maxmp=</b>(new_maxmp)
+            
+            <a href="../classes/Game_Battler.html#method-i-maxmp-3D" name="method-i-maxmp-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>MaxMP の設定</p>
+
+<p>new_maxmp : 新しい MaxMP</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-maxmp-3D_source')" id="l_method-i-maxmp-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-maxmp-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 253</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">maxmp=</span>(<span class="ruby-identifier">new_maxmp</span>)
+  <span class="ruby-ivar">@maxmp_plus</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">new_maxmp</span> <span class="ruby-operator">-</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">maxmp</span>
+  <span class="ruby-ivar">@maxmp_plus</span> = [[<span class="ruby-ivar">@maxmp_plus</span>, <span class="ruby-number">-9999</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">9999</span>].<span class="ruby-identifier">min</span>
+  <span class="ruby-ivar">@mp</span> = [<span class="ruby-ivar">@mp</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">maxmp</span>].<span class="ruby-identifier">min</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-minus_state_set">
+            
+              <b>minus_state_set</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-minus_state_set" name="method-i-minus_state_set" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>通常攻撃のステート変化 (-) 取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-minus_state_set_source')" id="l_method-i-minus_state_set_source">show</a>
+                
+              </p>
+              <div id="method-i-minus_state_set_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 430</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">minus_state_set</span>
+  <span class="ruby-keyword">return</span> []
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-most_important_state_text">
+            
+              <b>most_important_state_text</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-most_important_state_text" name="method-i-most_important_state_text" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>最重要のステート継続メッセージを取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-most_important_state_text_source')" id="l_method-i-most_important_state_text_source">show</a>
+                
+              </p>
+              <div id="method-i-most_important_state_text_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 584</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">most_important_state_text</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">state</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">states</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">message3</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">message3</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-movable-3F">
+            
+              <b>movable?</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-movable-3F" name="method-i-movable-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>行動可能判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-movable-3F_source')" id="l_method-i-movable-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-movable-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 351</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">movable?</span>
+  <span class="ruby-keyword">return</span> (<span class="ruby-keyword">not</span> <span class="ruby-ivar">@hidden</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">restriction</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">4</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-mp-3D">
+            
+              <b>mp=</b>(mp)
+            
+            <a href="../classes/Game_Battler.html#method-i-mp-3D" name="method-i-mp-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>MP の変更</p>
+
+<p>mp : 新しい MP</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mp-3D_source')" id="l_method-i-mp-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-mp-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 314</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">mp=</span>(<span class="ruby-identifier">mp</span>)
+  <span class="ruby-ivar">@mp</span> = [[<span class="ruby-identifier">mp</span>, <span class="ruby-identifier">maxmp</span>].<span class="ruby-identifier">min</span>, <span class="ruby-number">0</span>].<span class="ruby-identifier">max</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-parriable-3F">
+            
+              <b>parriable?</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-parriable-3F" name="method-i-parriable-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>回避可能判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-parriable-3F_source')" id="l_method-i-parriable-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-parriable-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 358</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">parriable?</span>
+  <span class="ruby-keyword">return</span> (<span class="ruby-keyword">not</span> <span class="ruby-ivar">@hidden</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">restriction</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">5</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-plus_state_set">
+            
+              <b>plus_state_set</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-plus_state_set" name="method-i-plus_state_set" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>通常攻撃のステート変化 (+) 取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-plus_state_set_source')" id="l_method-i-plus_state_set_source">show</a>
+                
+              </p>
+              <div id="method-i-plus_state_set_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 423</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">plus_state_set</span>
+  <span class="ruby-keyword">return</span> []
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-prevent_critical">
+            
+              <b>prevent_critical</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-prevent_critical" name="method-i-prevent_critical" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>防具オプション [クリティカル防止] の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-prevent_critical_source')" id="l_method-i-prevent_critical_source">show</a>
+                
+              </p>
+              <div id="method-i-prevent_critical_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 228</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">prevent_critical</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-recover_all">
+            
+              <b>recover_all</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-recover_all" name="method-i-recover_all" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>全回復</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-recover_all_source')" id="l_method-i-recover_all_source">show</a>
+                
+              </p>
+              <div id="method-i-recover_all_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 321</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">recover_all</span>
+  <span class="ruby-ivar">@hp</span> = <span class="ruby-identifier">maxhp</span>
+  <span class="ruby-ivar">@mp</span> = <span class="ruby-identifier">maxmp</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@states</span>.<span class="ruby-identifier">clone</span> <span class="ruby-keyword">do</span> <span class="ruby-identifier">remove_state</span>(<span class="ruby-identifier">i</span>) <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-reduce_hit_ratio-3F">
+            
+              <b>reduce_hit_ratio?</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-reduce_hit_ratio-3F" name="method-i-reduce_hit_ratio-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ステート [命中率減少] 判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-reduce_hit_ratio-3F_source')" id="l_method-i-reduce_hit_ratio-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-reduce_hit_ratio-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 574</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">reduce_hit_ratio?</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">state</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">states</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">reduce_hit_ratio</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-remained_states">
+            
+              <b>remained_states</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-remained_states" name="method-i-remained_states" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>直前の行動で変化しなかったステートをオブジェクトの配列で取得</p>
+
+<p>すでに眠っている相手をさらに眠らせようとした場合などの判定用。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-remained_states_source')" id="l_method-i-remained_states_source">show</a>
+                
+              </p>
+              <div id="method-i-remained_states_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">remained_states</span>
+  <span class="ruby-identifier">result</span> = []
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@remained_states</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">$data_states</span>[<span class="ruby-identifier">i</span>])
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-remove_state">
+            
+              <b>remove_state</b>(state_id)
+            
+            <a href="../classes/Game_Battler.html#method-i-remove_state" name="method-i-remove_state" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ステートの解除</p>
+
+<p>state_id : ステート ID</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-remove_state_source')" id="l_method-i-remove_state_source">show</a>
+                
+              </p>
+              <div id="method-i-remove_state_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 538</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">remove_state</span>(<span class="ruby-identifier">state_id</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">state?</span>(<span class="ruby-identifier">state_id</span>)        <span class="ruby-comment"># このステートが付加されていない？</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">state_id</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@hp</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>         <span class="ruby-comment"># 戦闘不能 (ステート 1 番) なら</span>
+    <span class="ruby-ivar">@hp</span> = <span class="ruby-number">1</span>                             <span class="ruby-comment"># HP を 1 に変更する</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@states</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">state_id</span>)              <span class="ruby-comment"># ID を `@states` 配列から削除</span>
+  <span class="ruby-ivar">@state_turns</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">state_id</span>)         <span class="ruby-comment"># ターン数記憶用ハッシュから削除</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-remove_states_auto">
+            
+              <b>remove_states_auto</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-remove_states_auto" name="method-i-remove_states_auto" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ステート自然解除 (ターンごとに呼び出し)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-remove_states_auto_source')" id="l_method-i-remove_states_auto_source">show</a>
+                
+              </p>
+              <div id="method-i-remove_states_auto_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 603</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">remove_states_auto</span>
+  <span class="ruby-identifier">clear_action_results</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@state_turns</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">clone</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@state_turns</span>[<span class="ruby-identifier">i</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+      <span class="ruby-ivar">@state_turns</span>[<span class="ruby-identifier">i</span>] <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">rand</span>(<span class="ruby-number">100</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">$data_states</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">auto_release_prob</span>
+      <span class="ruby-identifier">remove_state</span>(<span class="ruby-identifier">i</span>)
+      <span class="ruby-ivar">@removed_states</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">i</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-remove_states_battle">
+            
+              <b>remove_states_battle</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-remove_states_battle" name="method-i-remove_states_battle" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>戦闘用ステートの解除 (戦闘終了時に呼び出し)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-remove_states_battle_source')" id="l_method-i-remove_states_battle_source">show</a>
+                
+              </p>
+              <div id="method-i-remove_states_battle_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 594</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">remove_states_battle</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">state</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">states</span>
+    <span class="ruby-identifier">remove_state</span>(<span class="ruby-identifier">state</span>.<span class="ruby-identifier">id</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">battle_only</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-remove_states_shock">
+            
+              <b>remove_states_shock</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-remove_states_shock" name="method-i-remove_states_shock" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ダメージによるステート解除 (ダメージごとに呼び出し)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-remove_states_shock_source')" id="l_method-i-remove_states_shock_source">show</a>
+                
+              </p>
+              <div id="method-i-remove_states_shock_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 618</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">remove_states_shock</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">state</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">states</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">release_by_damage</span>
+      <span class="ruby-identifier">remove_state</span>(<span class="ruby-identifier">state</span>.<span class="ruby-identifier">id</span>)
+      <span class="ruby-ivar">@removed_states</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">state</span>.<span class="ruby-identifier">id</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-removed_states">
+            
+              <b>removed_states</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-removed_states" name="method-i-removed_states" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>直前の行動で解除されたステートをオブジェクトの配列で取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-removed_states_source')" id="l_method-i-removed_states_source">show</a>
+                
+              </p>
+              <div id="method-i-removed_states_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">removed_states</span>
+  <span class="ruby-identifier">result</span> = []
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@removed_states</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">$data_states</span>[<span class="ruby-identifier">i</span>])
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-restriction">
+            
+              <b>restriction</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-restriction" name="method-i-restriction" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>制約の取得</p>
+
+<p>現在付加されているステートから最大の restriction
+を取得する。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-restriction_source')" id="l_method-i-restriction_source">show</a>
+                
+              </p>
+              <div id="method-i-restriction_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 551</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">restriction</span>
+  <span class="ruby-identifier">restriction_max</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">state</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">states</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">restriction</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">restriction_max</span>
+      <span class="ruby-identifier">restriction_max</span> = <span class="ruby-identifier">state</span>.<span class="ruby-identifier">restriction</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">restriction_max</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-silent-3F">
+            
+              <b>silent?</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-silent-3F" name="method-i-silent-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>沈黙状態判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-silent-3F_source')" id="l_method-i-silent-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-silent-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 365</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">silent?</span>
+  <span class="ruby-keyword">return</span> (<span class="ruby-keyword">not</span> <span class="ruby-ivar">@hidden</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">restriction</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-skill_can_use-3F">
+            
+              <b>skill_can_use?</b>(skill)
+            
+            <a href="../classes/Game_Battler.html#method-i-skill_can_use-3F" name="method-i-skill_can_use-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スキルの使用可能判定</p>
+
+<p>skill : スキル</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-skill_can_use-3F_source')" id="l_method-i-skill_can_use-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-skill_can_use-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 643</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">skill_can_use?</span>(<span class="ruby-identifier">skill</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">skill</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Skill</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">movable?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">silent?</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">skill</span>.<span class="ruby-identifier">spi_f</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">calc_mp_cost</span>(<span class="ruby-identifier">skill</span>) <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">mp</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">in_battle</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">skill</span>.<span class="ruby-identifier">battle_ok?</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">skill</span>.<span class="ruby-identifier">menu_ok?</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-skill_effect">
+            
+              <b>skill_effect</b>(user, skill)
+            
+            <a href="../classes/Game_Battler.html#method-i-skill_effect" name="method-i-skill_effect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スキルの効果適用</p>
+
+<p>user  : スキルの使用者 skill : スキル</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-skill_effect_source')" id="l_method-i-skill_effect_source">show</a>
+                
+              </p>
+              <div id="method-i-skill_effect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 944</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">skill_effect</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">skill</span>)
+  <span class="ruby-identifier">clear_action_results</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">skill_effective?</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">skill</span>)
+    <span class="ruby-ivar">@skipped</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">rand</span>(<span class="ruby-number">100</span>) <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">calc_hit</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">skill</span>)         <span class="ruby-comment"># 命中判定</span>
+    <span class="ruby-ivar">@missed</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">rand</span>(<span class="ruby-number">100</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">calc_eva</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">skill</span>)          <span class="ruby-comment"># 回避判定</span>
+    <span class="ruby-ivar">@evaded</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">make_obj_damage_value</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">skill</span>)            <span class="ruby-comment"># ダメージ計算</span>
+  <span class="ruby-identifier">make_obj_absorb_effect</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">skill</span>)           <span class="ruby-comment"># 吸収効果計算</span>
+  <span class="ruby-identifier">execute_damage</span>(<span class="ruby-identifier">user</span>)                          <span class="ruby-comment"># ダメージ反映</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">skill</span>.<span class="ruby-identifier">physical_attack</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@hp_damage</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>  <span class="ruby-comment"># 物理ノーダメージ判定</span>
+    <span class="ruby-keyword">return</span>                                    
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">apply_state_changes</span>(<span class="ruby-identifier">skill</span>)                    <span class="ruby-comment"># ステート変化</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-skill_effective-3F">
+            
+              <b>skill_effective?</b>(user, skill)
+            
+            <a href="../classes/Game_Battler.html#method-i-skill_effective-3F" name="method-i-skill_effective-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スキルの適用可能判定</p>
+
+<p>user  : スキルの使用者 skill : スキル</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-skill_effective-3F_source')" id="l_method-i-skill_effective-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-skill_effective-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 908</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">skill_effective?</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">skill</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">skill</span>.<span class="ruby-identifier">for_dead_friend?</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">dead?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">in_battle</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">skill</span>.<span class="ruby-identifier">for_friend?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">skill_test</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">skill</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-skill_test">
+            
+              <b>skill_test</b>(user, skill)
+            
+            <a href="../classes/Game_Battler.html#method-i-skill_test" name="method-i-skill_test" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スキルの適用テスト</p>
+
+<p>user  : スキルの使用者 skill : スキル
+使用対象が全快しているときの回復禁止などを判定する。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-skill_test_source')" id="l_method-i-skill_test_source">show</a>
+                
+              </p>
+              <div id="method-i-skill_test_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 924</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">skill_test</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">skill</span>)
+  <span class="ruby-identifier">tester</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">clone</span>
+  <span class="ruby-identifier">tester</span>.<span class="ruby-identifier">make_obj_damage_value</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">skill</span>)
+  <span class="ruby-identifier">tester</span>.<span class="ruby-identifier">apply_state_changes</span>(<span class="ruby-identifier">skill</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">tester</span>.<span class="ruby-identifier">hp_damage</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">tester</span>.<span class="ruby-identifier">hp</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">tester</span>.<span class="ruby-identifier">maxhp</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">tester</span>.<span class="ruby-identifier">mp_damage</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">tester</span>.<span class="ruby-identifier">mp</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">tester</span>.<span class="ruby-identifier">maxmp</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">tester</span>.<span class="ruby-identifier">added_states</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">tester</span>.<span class="ruby-identifier">removed_states</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-slip_damage-3F">
+            
+              <b>slip_damage?</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-slip_damage-3F" name="method-i-slip_damage-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ステート [スリップダメージ] 判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-slip_damage-3F_source')" id="l_method-i-slip_damage-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-slip_damage-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 564</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">slip_damage?</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">state</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">states</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">slip_damage</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-slip_damage_effect">
+            
+              <b>slip_damage_effect</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-slip_damage_effect" name="method-i-slip_damage_effect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スリップダメージの効果適用</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-slip_damage_effect_source')" id="l_method-i-slip_damage_effect_source">show</a>
+                
+              </p>
+              <div id="method-i-slip_damage_effect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 1064</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">slip_damage_effect</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">slip_damage?</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@hp</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@hp_damage</span> = <span class="ruby-identifier">apply_variance</span>(<span class="ruby-identifier">maxhp</span> <span class="ruby-operator">/</span> <span class="ruby-number">10</span>, <span class="ruby-number">10</span>)
+    <span class="ruby-ivar">@hp_damage</span> = <span class="ruby-ivar">@hp</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@hp_damage</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-ivar">@hp</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">hp</span> <span class="ruby-operator">-=</span> <span class="ruby-ivar">@hp_damage</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-sort_states">
+            
+              <b>sort_states</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-sort_states" name="method-i-sort_states" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ステートの並び替え</p>
+
+<p>配列 `@states`
+の内容を表示優先度の大きい順に並び替える。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-sort_states_source')" id="l_method-i-sort_states_source">show</a>
+                
+              </p>
+              <div id="method-i-sort_states_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 495</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">sort_states</span>
+  <span class="ruby-ivar">@states</span>.<span class="ruby-identifier">sort!</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">state_a</span> = <span class="ruby-identifier">$data_states</span>[<span class="ruby-identifier">a</span>]
+    <span class="ruby-identifier">state_b</span> = <span class="ruby-identifier">$data_states</span>[<span class="ruby-identifier">b</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">state_a</span>.<span class="ruby-identifier">priority</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">state_b</span>.<span class="ruby-identifier">priority</span>
+      <span class="ruby-identifier">state_b</span>.<span class="ruby-identifier">priority</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">state_a</span>.<span class="ruby-identifier">priority</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-spi">
+            
+              <b>spi</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-spi" name="method-i-spi" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>精神力の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-spi_source')" id="l_method-i-spi_source">show</a>
+                
+              </p>
+              <div id="method-i-spi_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 187</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">spi</span>
+  <span class="ruby-identifier">n</span> = [[<span class="ruby-identifier">base_spi</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@spi_plus</span>, <span class="ruby-number">1</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">999</span>].<span class="ruby-identifier">min</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">state</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">states</span> <span class="ruby-keyword">do</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">*=</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">spi_rate</span> <span class="ruby-operator">/</span> <span class="ruby-number">100.0</span> <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">n</span> = [[<span class="ruby-constant">Integer</span>(<span class="ruby-identifier">n</span>), <span class="ruby-number">1</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">999</span>].<span class="ruby-identifier">min</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">n</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-spi-3D">
+            
+              <b>spi=</b>(new_spi)
+            
+            <a href="../classes/Game_Battler.html#method-i-spi-3D" name="method-i-spi-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>精神力の設定</p>
+
+<p>new_spi : 新しい精神力</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-spi-3D_source')" id="l_method-i-spi-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-spi-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 281</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">spi=</span>(<span class="ruby-identifier">new_spi</span>)
+  <span class="ruby-ivar">@spi_plus</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">new_spi</span> <span class="ruby-operator">-</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">spi</span>
+  <span class="ruby-ivar">@spi_plus</span> = [[<span class="ruby-ivar">@spi_plus</span>, <span class="ruby-number">-999</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">999</span>].<span class="ruby-identifier">min</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-state-3F">
+            
+              <b>state?</b>(state_id)
+            
+            <a href="../classes/Game_Battler.html#method-i-state-3F" name="method-i-state-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ステートの検査</p>
+
+<p>state_id : ステート ID
+該当するステートが付加されていれば true を返す。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-state-3F_source')" id="l_method-i-state-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-state-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 439</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">state?</span>(<span class="ruby-identifier">state_id</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@states</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">state_id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-state_full-3F">
+            
+              <b>state_full?</b>(state_id)
+            
+            <a href="../classes/Game_Battler.html#method-i-state_full-3F" name="method-i-state_full-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ステートがフルかどうかの判定</p>
+
+<p>state_id : ステート ID
+持続ターン数が自然解除の最低ターン数と同じなら true
+を返す。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-state_full-3F_source')" id="l_method-i-state_full-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-state_full-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 448</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">state_full?</span>(<span class="ruby-identifier">state_id</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">state?</span>(<span class="ruby-identifier">state_id</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@state_turns</span>[<span class="ruby-identifier">state_id</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">$data_states</span>[<span class="ruby-identifier">state_id</span>].<span class="ruby-identifier">hold_turn</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-state_ignore-3F">
+            
+              <b>state_ignore?</b>(state_id)
+            
+            <a href="../classes/Game_Battler.html#method-i-state_ignore-3F" name="method-i-state_ignore-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>無視するべきステートかどうかの判定</p>
+
+<p>state_id : ステート ID 次の条件を満たすときに true
+を返す。
+＊付加しようとする新しいステートＡが、現在付加されているステートＢの</p>
+<dl class="rdoc-list label-list"><dt>解除するステート
+<dd>
+<p>のリストに含まれている。</p>
+</dd></dl>
+
+<p>＊そのステートＢが新しいステートＡの
+[解除するステート] のリストには 含まれていない。
+この条件は、戦闘不能のときに毒を付加しようとした場合などに該当する。
+攻撃力下降のときに攻撃力上昇を付加するような場合には該当しない。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-state_ignore-3F_source')" id="l_method-i-state_ignore-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-state_ignore-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 464</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">state_ignore?</span>(<span class="ruby-identifier">state_id</span>)
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">state</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">states</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">state_set</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">state_id</span>) <span class="ruby-keyword">and</span>
+       <span class="ruby-keyword">not</span> <span class="ruby-identifier">$data_states</span>[<span class="ruby-identifier">state_id</span>].<span class="ruby-identifier">state_set</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">state</span>.<span class="ruby-identifier">id</span>)
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-state_offset-3F">
+            
+              <b>state_offset?</b>(state_id)
+            
+            <a href="../classes/Game_Battler.html#method-i-state_offset-3F" name="method-i-state_offset-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>相殺するべきステートかどうかの判定</p>
+
+<p>state_id : ステート ID 次の条件を満たすときに true
+を返す。 ＊新しいステートのオプション
+[逆効果と相殺] が有効である。
+＊付加しようとする新しいステートの
+[解除するステート] のリストに、
+現在付加されているステートの少なくともひとつが含まれている。
+攻撃力下降のときに攻撃力上昇を付加する場合などに該当する。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-state_offset-3F_source')" id="l_method-i-state_offset-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-state_offset-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 483</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">state_offset?</span>(<span class="ruby-identifier">state_id</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">$data_states</span>[<span class="ruby-identifier">state_id</span>].<span class="ruby-identifier">offset_by_opposite</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@states</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$data_states</span>[<span class="ruby-identifier">state_id</span>].<span class="ruby-identifier">state_set</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">i</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-state_probability">
+            
+              <b>state_probability</b>(state_id)
+            
+            <a href="../classes/Game_Battler.html#method-i-state_probability" name="method-i-state_probability" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ステートの付加成功率の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-state_probability_source')" id="l_method-i-state_probability_source">show</a>
+                
+              </p>
+              <div id="method-i-state_probability_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 401</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">state_probability</span>(<span class="ruby-identifier">state_id</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-state_resist-3F">
+            
+              <b>state_resist?</b>(state_id)
+            
+            <a href="../classes/Game_Battler.html#method-i-state_resist-3F" name="method-i-state_resist-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ステート無効化判定</p>
+
+<p>state_id : ステート ID</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-state_resist-3F_source')" id="l_method-i-state_resist-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-state_resist-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 409</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">state_resist?</span>(<span class="ruby-identifier">state_id</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-states">
+            
+              <b>states</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-states" name="method-i-states" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>現在のステートをオブジェクトの配列で取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-states_source')" id="l_method-i-states_source">show</a>
+                
+              </p>
+              <div id="method-i-states_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">states</span>
+  <span class="ruby-identifier">result</span> = []
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@states</span>
+    <span class="ruby-identifier">result</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">$data_states</span>[<span class="ruby-identifier">i</span>])
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-states_active-3F">
+            
+              <b>states_active?</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-states_active-3F" name="method-i-states_active-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>直前の行動でステートに対して何らかの働きかけがあったかを判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-states_active-3F_source')" id="l_method-i-states_active-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-states_active-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 136</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">states_active?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@added_states</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@removed_states</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@remained_states</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-super_guard">
+            
+              <b>super_guard</b>()
+            
+            <a href="../classes/Game_Battler.html#method-i-super_guard" name="method-i-super_guard" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>オプション [強力防御] の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-super_guard_source')" id="l_method-i-super_guard_source">show</a>
+                
+              </p>
+              <div id="method-i-super_guard_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Battler.rb, line 207</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">super_guard</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Window_EquipItem</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Window_EquipItem 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Window_ItemList.html">Window_ItemList</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Window_EquipItem_rb.html">Window_EquipItem.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>装备画面中，显示可替换装备的窗口。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-actor-3D">actor=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-enable-3F">enable?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-include-3F">include?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-select_last">select_last</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-slot_id-3D">slot_id=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-status_window-3D">status_window=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update_help">update_help</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>status_window</td>
+            <td class='attr-desc'><p>定义实例变量</p></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(x, y, width, height)
+            
+            <a href="../classes/Window_EquipItem.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>初始化对象</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_EquipItem.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>)
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-ivar">@actor</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@slot_id</span> = <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-actor-3D">
+            
+              <b>actor=</b>(actor)
+            
+            <a href="../classes/Window_EquipItem.html#method-i-actor-3D" name="method-i-actor-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>设置角色</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-actor-3D_source')" id="l_method-i-actor-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-actor-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_EquipItem.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">actor=</span>(<span class="ruby-identifier">actor</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@actor</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">actor</span>
+  <span class="ruby-ivar">@actor</span> = <span class="ruby-identifier">actor</span>
+  <span class="ruby-identifier">refresh</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-enable-3F">
+            
+              <b>enable?</b>(item)
+            
+            <a href="../classes/Window_EquipItem.html#method-i-enable-3F" name="method-i-enable-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>查询此文件是否可以装备</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-enable-3F_source')" id="l_method-i-enable-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-enable-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_EquipItem.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">enable?</span>(<span class="ruby-identifier">item</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-include-3F">
+            
+              <b>include?</b>(item)
+            
+            <a href="../classes/Window_EquipItem.html#method-i-include-3F" name="method-i-include-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>查询使用列表中是否含有此物品</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-include-3F_source')" id="l_method-i-include-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-include-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_EquipItem.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">include?</span>(<span class="ruby-identifier">item</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">item</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">EquipItem</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@slot_id</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">etype_id</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@actor</span>.<span class="ruby-identifier">equip_slots</span>[<span class="ruby-ivar">@slot_id</span>]
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@actor</span>.<span class="ruby-identifier">equippable?</span>(<span class="ruby-identifier">item</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-select_last">
+            
+              <b>select_last</b>()
+            
+            <a href="../classes/Window_EquipItem.html#method-i-select_last" name="method-i-select_last" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>返回上一个选择的位置</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-select_last_source')" id="l_method-i-select_last_source">show</a>
+                
+              </p>
+              <div id="method-i-select_last_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_EquipItem.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">select_last</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-slot_id-3D">
+            
+              <b>slot_id=</b>(slot_id)
+            
+            <a href="../classes/Window_EquipItem.html#method-i-slot_id-3D" name="method-i-slot_id-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>设置装备栏 ID</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-slot_id-3D_source')" id="l_method-i-slot_id-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-slot_id-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_EquipItem.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">slot_id=</span>(<span class="ruby-identifier">slot_id</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@slot_id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">slot_id</span>
+  <span class="ruby-ivar">@slot_id</span> = <span class="ruby-identifier">slot_id</span>
+  <span class="ruby-identifier">refresh</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-status_window-3D">
+            
+              <b>status_window=</b>(status_window)
+            
+            <a href="../classes/Window_EquipItem.html#method-i-status_window-3D" name="method-i-status_window-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>设置状态窗口</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-status_window-3D_source')" id="l_method-i-status_window-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-status_window-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_EquipItem.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">status_window=</span>(<span class="ruby-identifier">status_window</span>)
+  <span class="ruby-ivar">@status_window</span> = <span class="ruby-identifier">status_window</span>
+  <span class="ruby-identifier">call_update_help</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_help">
+            
+              <b>update_help</b>()
+            
+            <a href="../classes/Window_EquipItem.html#method-i-update_help" name="method-i-update_help" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>更新帮助内容</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_help_source')" id="l_method-i-update_help_source">show</a>
+                
+              </p>
+              <div id="method-i-update_help_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_EquipItem.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_help</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@actor</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@status_window</span>
+    <span class="ruby-identifier">temp_actor</span> = <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-ivar">@actor</span>))
+    <span class="ruby-identifier">temp_actor</span>.<span class="ruby-identifier">force_change_equip</span>(<span class="ruby-ivar">@slot_id</span>, <span class="ruby-identifier">item</span>)
+    <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">set_temp_actor</span>(<span class="ruby-identifier">temp_actor</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

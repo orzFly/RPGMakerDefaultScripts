@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Game_ActionResult</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Game_ActionResult 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Game_ActionResult_rb.html">Game_ActionResult.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This class handles the results of battle actions. It is used internally for
+the <a href="Game_Battler.html">Game_Battler</a> class.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-added_state_objects">added_state_objects</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-clear">clear</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-clear_damage_values">clear_damage_values</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-clear_hit_flags">clear_hit_flags</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-clear_status_effects">clear_status_effects</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-hit-3F">hit?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-hp_damage_text">hp_damage_text</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-make_damage">make_damage</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-mp_damage_text">mp_damage_text</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-removed_state_objects">removed_state_objects</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-status_affected-3F">status_affected?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-tp_damage_text">tp_damage_text</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>added_buffs</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>added_debuffs</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>added_states</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>critical</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>evaded</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>hp_damage</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>hp_drain</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>missed</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>mp_damage</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>mp_drain</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>removed_buffs</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>removed_states</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>success</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>tp_damage</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>used</td>
+            <td class='attr-desc'><p>Public Instance Variables</p></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(battler)
+            
+            <a href="../classes/Game_ActionResult.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p><a href="Object.html">Object</a> Initialization</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_ActionResult.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">battler</span>)
+  <span class="ruby-ivar">@battler</span> = <span class="ruby-identifier">battler</span>
+  <span class="ruby-identifier">clear</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-added_state_objects">
+            
+              <b>added_state_objects</b>()
+            
+            <a href="../classes/Game_ActionResult.html#method-i-added_state_objects" name="method-i-added_state_objects" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Added States as an <a href="Object.html">Object</a> Array</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-added_state_objects_source')" id="l_method-i-added_state_objects_source">show</a>
+                
+              </p>
+              <div id="method-i-added_state_objects_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_ActionResult.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">added_state_objects</span>
+  <span class="ruby-ivar">@added_states</span>.<span class="ruby-identifier">collect</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">id</span><span class="ruby-operator">|</span> <span class="ruby-identifier">$data_states</span>[<span class="ruby-identifier">id</span>] }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear">
+            
+              <b>clear</b>()
+            
+            <a href="../classes/Game_ActionResult.html#method-i-clear" name="method-i-clear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Clear</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_source')" id="l_method-i-clear_source">show</a>
+                
+              </p>
+              <div id="method-i-clear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_ActionResult.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear</span>
+  <span class="ruby-identifier">clear_hit_flags</span>
+  <span class="ruby-identifier">clear_damage_values</span>
+  <span class="ruby-identifier">clear_status_effects</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear_damage_values">
+            
+              <b>clear_damage_values</b>()
+            
+            <a href="../classes/Game_ActionResult.html#method-i-clear_damage_values" name="method-i-clear_damage_values" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Clear Damage Values</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_damage_values_source')" id="l_method-i-clear_damage_values_source">show</a>
+                
+              </p>
+              <div id="method-i-clear_damage_values_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_ActionResult.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear_damage_values</span>
+  <span class="ruby-ivar">@hp_damage</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@mp_damage</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@tp_damage</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@hp_drain</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@mp_drain</span> = <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear_hit_flags">
+            
+              <b>clear_hit_flags</b>()
+            
+            <a href="../classes/Game_ActionResult.html#method-i-clear_hit_flags" name="method-i-clear_hit_flags" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Clear Hit Flags</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_hit_flags_source')" id="l_method-i-clear_hit_flags_source">show</a>
+                
+              </p>
+              <div id="method-i-clear_hit_flags_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_ActionResult.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear_hit_flags</span>
+  <span class="ruby-ivar">@used</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@missed</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@evaded</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@critical</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@success</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear_status_effects">
+            
+              <b>clear_status_effects</b>()
+            
+            <a href="../classes/Game_ActionResult.html#method-i-clear_status_effects" name="method-i-clear_status_effects" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Clear Status Effects</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_status_effects_source')" id="l_method-i-clear_status_effects_source">show</a>
+                
+              </p>
+              <div id="method-i-clear_status_effects_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_ActionResult.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear_status_effects</span>
+  <span class="ruby-ivar">@added_states</span> = []
+  <span class="ruby-ivar">@removed_states</span> = []
+  <span class="ruby-ivar">@added_buffs</span> = []
+  <span class="ruby-ivar">@added_debuffs</span> = []
+  <span class="ruby-ivar">@removed_buffs</span> = []
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-hit-3F">
+            
+              <b>hit?</b>()
+            
+            <a href="../classes/Game_ActionResult.html#method-i-hit-3F" name="method-i-hit-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine Final Hit</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-hit-3F_source')" id="l_method-i-hit-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-hit-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_ActionResult.rb, line 116</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">hit?</span>
+  <span class="ruby-ivar">@used</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@missed</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@evaded</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-hp_damage_text">
+            
+              <b>hp_damage_text</b>()
+            
+            <a href="../classes/Game_ActionResult.html#method-i-hp_damage_text" name="method-i-hp_damage_text" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Text for HP Damage</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-hp_damage_text_source')" id="l_method-i-hp_damage_text_source">show</a>
+                
+              </p>
+              <div id="method-i-hp_damage_text_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_ActionResult.rb, line 123</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">hp_damage_text</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@hp_drain</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">fmt</span> = <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">actor?</span> <span class="ruby-operator">?</span> <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">ActorDrain</span> <span class="ruby-operator">:</span> <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">EnemyDrain</span>
+    <span class="ruby-identifier">sprintf</span>(<span class="ruby-identifier">fmt</span>, <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">name</span>, <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-identifier">hp</span>, <span class="ruby-ivar">@hp_drain</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@hp_damage</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">fmt</span> = <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">actor?</span> <span class="ruby-operator">?</span> <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">ActorDamage</span> <span class="ruby-operator">:</span> <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">EnemyDamage</span>
+    <span class="ruby-identifier">sprintf</span>(<span class="ruby-identifier">fmt</span>, <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">name</span>, <span class="ruby-ivar">@hp_damage</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@hp_damage</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">fmt</span> = <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">actor?</span> <span class="ruby-operator">?</span> <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">ActorRecovery</span> <span class="ruby-operator">:</span> <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">EnemyRecovery</span>
+    <span class="ruby-identifier">sprintf</span>(<span class="ruby-identifier">fmt</span>, <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">name</span>, <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-identifier">hp</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">hp_damage</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">fmt</span> = <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">actor?</span> <span class="ruby-operator">?</span> <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">ActorNoDamage</span> <span class="ruby-operator">:</span> <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">EnemyNoDamage</span>
+    <span class="ruby-identifier">sprintf</span>(<span class="ruby-identifier">fmt</span>, <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">name</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-make_damage">
+            
+              <b>make_damage</b>(value, item)
+            
+            <a href="../classes/Game_ActionResult.html#method-i-make_damage" name="method-i-make_damage" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Damage</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-make_damage_source')" id="l_method-i-make_damage_source">show</a>
+                
+              </p>
+              <div id="method-i-make_damage_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_ActionResult.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">make_damage</span>(<span class="ruby-identifier">value</span>, <span class="ruby-identifier">item</span>)
+  <span class="ruby-ivar">@critical</span> = <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@hp_damage</span> = <span class="ruby-identifier">value</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">damage</span>.<span class="ruby-identifier">to_hp?</span>
+  <span class="ruby-ivar">@mp_damage</span> = <span class="ruby-identifier">value</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">damage</span>.<span class="ruby-identifier">to_mp?</span>
+  <span class="ruby-ivar">@mp_damage</span> = [<span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">mp</span>, <span class="ruby-ivar">@mp_damage</span>].<span class="ruby-identifier">min</span>
+  <span class="ruby-ivar">@hp_drain</span> = <span class="ruby-ivar">@hp_damage</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">damage</span>.<span class="ruby-identifier">drain?</span>
+  <span class="ruby-ivar">@mp_drain</span> = <span class="ruby-ivar">@mp_damage</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">damage</span>.<span class="ruby-identifier">drain?</span>
+  <span class="ruby-ivar">@hp_drain</span> = [<span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">hp</span>, <span class="ruby-ivar">@hp_drain</span>].<span class="ruby-identifier">min</span>
+  <span class="ruby-ivar">@success</span> = <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">damage</span>.<span class="ruby-identifier">to_hp?</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@mp_damage</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-mp_damage_text">
+            
+              <b>mp_damage_text</b>()
+            
+            <a href="../classes/Game_ActionResult.html#method-i-mp_damage_text" name="method-i-mp_damage_text" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Text for MP Damage</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-mp_damage_text_source')" id="l_method-i-mp_damage_text_source">show</a>
+                
+              </p>
+              <div id="method-i-mp_damage_text_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_ActionResult.rb, line 142</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">mp_damage_text</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@mp_drain</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">fmt</span> = <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">actor?</span> <span class="ruby-operator">?</span> <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">ActorDrain</span> <span class="ruby-operator">:</span> <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">EnemyDrain</span>
+    <span class="ruby-identifier">sprintf</span>(<span class="ruby-identifier">fmt</span>, <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">name</span>, <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-identifier">mp</span>, <span class="ruby-ivar">@mp_drain</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@mp_damage</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">fmt</span> = <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">actor?</span> <span class="ruby-operator">?</span> <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">ActorLoss</span> <span class="ruby-operator">:</span> <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">EnemyLoss</span>
+    <span class="ruby-identifier">sprintf</span>(<span class="ruby-identifier">fmt</span>, <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">name</span>, <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-identifier">mp</span>, <span class="ruby-ivar">@mp_damage</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@mp_damage</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">fmt</span> = <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">actor?</span> <span class="ruby-operator">?</span> <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">ActorRecovery</span> <span class="ruby-operator">:</span> <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">EnemyRecovery</span>
+    <span class="ruby-identifier">sprintf</span>(<span class="ruby-identifier">fmt</span>, <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">name</span>, <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-identifier">mp</span>, <span class="ruby-operator">-</span><span class="ruby-ivar">@mp_damage</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-removed_state_objects">
+            
+              <b>removed_state_objects</b>()
+            
+            <a href="../classes/Game_ActionResult.html#method-i-removed_state_objects" name="method-i-removed_state_objects" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Removed States as an <a href="Object.html">Object</a> Array</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-removed_state_objects_source')" id="l_method-i-removed_state_objects_source">show</a>
+                
+              </p>
+              <div id="method-i-removed_state_objects_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_ActionResult.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">removed_state_objects</span>
+  <span class="ruby-ivar">@removed_states</span>.<span class="ruby-identifier">collect</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">id</span><span class="ruby-operator">|</span> <span class="ruby-identifier">$data_states</span>[<span class="ruby-identifier">id</span>] }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-status_affected-3F">
+            
+              <b>status_affected?</b>()
+            
+            <a href="../classes/Game_ActionResult.html#method-i-status_affected-3F" name="method-i-status_affected-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine Whether Some Sort of Status (Parameter or State) Was Affected</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-status_affected-3F_source')" id="l_method-i-status_affected-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-status_affected-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_ActionResult.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">status_affected?</span>
+  <span class="ruby-operator">!</span>(<span class="ruby-ivar">@added_states</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@removed_states</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span>
+    <span class="ruby-ivar">@added_buffs</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@added_debuffs</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@removed_buffs</span>.<span class="ruby-identifier">empty?</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tp_damage_text">
+            
+              <b>tp_damage_text</b>()
+            
+            <a href="../classes/Game_ActionResult.html#method-i-tp_damage_text" name="method-i-tp_damage_text" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Text for TP Damage</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tp_damage_text_source')" id="l_method-i-tp_damage_text_source">show</a>
+                
+              </p>
+              <div id="method-i-tp_damage_text_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_ActionResult.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tp_damage_text</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@tp_damage</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">fmt</span> = <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">actor?</span> <span class="ruby-operator">?</span> <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">ActorLoss</span> <span class="ruby-operator">:</span> <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">EnemyLoss</span>
+    <span class="ruby-identifier">sprintf</span>(<span class="ruby-identifier">fmt</span>, <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">name</span>, <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-identifier">tp</span>, <span class="ruby-ivar">@tp_damage</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@tp_damage</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">fmt</span> = <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">actor?</span> <span class="ruby-operator">?</span> <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">ActorGain</span> <span class="ruby-operator">:</span> <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">EnemyGain</span>
+    <span class="ruby-identifier">sprintf</span>(<span class="ruby-identifier">fmt</span>, <span class="ruby-ivar">@battler</span>.<span class="ruby-identifier">name</span>, <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-identifier">tp</span>, <span class="ruby-operator">-</span><span class="ruby-ivar">@tp_damage</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

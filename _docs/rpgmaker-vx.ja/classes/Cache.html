@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Cache</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Cache 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Cache_rb.html">Cache.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>各種グラフィックを読み込み、Bitmap
+オブジェクトを作成、保持するモジュール
+です。読み込みの高速化とメモリ節約のため、作成した
+Bitmap オブジェクトを内部
+のハッシュに保存し、同じビットマップが再度要求されたときに既存のオブジェクト
+を返すようになっています。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-animation">animation</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-battler">battler</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-character">character</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-clear">clear</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-face">face</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-load_bitmap">load_bitmap</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-parallax">parallax</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-picture">picture</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-system">system</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-animation">
+            
+              <b>animation</b>(filename, hue)
+            
+            <a href="../classes/Cache.html#method-c-animation" name="method-c-animation" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>アニメーション グラフィックの取得</p>
+
+<p>filename : ファイル名 hue      : 色相変化値</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-animation_source')" id="l_method-c-animation_source">show</a>
+                
+              </p>
+              <div id="method-c-animation_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Cache.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">animation</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-identifier">hue</span>)
+  <span class="ruby-identifier">load_bitmap</span>(<span class="ruby-string">&quot;Graphics/Animations/&quot;</span>, <span class="ruby-identifier">filename</span>, <span class="ruby-identifier">hue</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-battler">
+            
+              <b>battler</b>(filename, hue)
+            
+            <a href="../classes/Cache.html#method-c-battler" name="method-c-battler" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>戦闘グラフィックの取得</p>
+
+<p>filename : ファイル名 hue      : 色相変化値</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-battler_source')" id="l_method-c-battler_source">show</a>
+                
+              </p>
+              <div id="method-c-battler_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Cache.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">battler</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-identifier">hue</span>)
+  <span class="ruby-identifier">load_bitmap</span>(<span class="ruby-string">&quot;Graphics/Battlers/&quot;</span>, <span class="ruby-identifier">filename</span>, <span class="ruby-identifier">hue</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-character">
+            
+              <b>character</b>(filename)
+            
+            <a href="../classes/Cache.html#method-c-character" name="method-c-character" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>歩行グラフィックの取得</p>
+
+<p>filename : ファイル名</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-character_source')" id="l_method-c-character_source">show</a>
+                
+              </p>
+              <div id="method-c-character_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Cache.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">character</span>(<span class="ruby-identifier">filename</span>)
+  <span class="ruby-identifier">load_bitmap</span>(<span class="ruby-string">&quot;Graphics/Characters/&quot;</span>, <span class="ruby-identifier">filename</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-clear">
+            
+              <b>clear</b>()
+            
+            <a href="../classes/Cache.html#method-c-clear" name="method-c-clear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>キャッシュのクリア</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-clear_source')" id="l_method-c-clear_source">show</a>
+                
+              </p>
+              <div id="method-c-clear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Cache.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-ivar">@cache</span> = {} <span class="ruby-keyword">if</span> <span class="ruby-ivar">@cache</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@cache</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-constant">GC</span>.<span class="ruby-identifier">start</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-face">
+            
+              <b>face</b>(filename)
+            
+            <a href="../classes/Cache.html#method-c-face" name="method-c-face" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>顔グラフィックの取得</p>
+
+<p>filename : ファイル名</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-face_source')" id="l_method-c-face_source">show</a>
+                
+              </p>
+              <div id="method-c-face_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Cache.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">face</span>(<span class="ruby-identifier">filename</span>)
+  <span class="ruby-identifier">load_bitmap</span>(<span class="ruby-string">&quot;Graphics/Faces/&quot;</span>, <span class="ruby-identifier">filename</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-load_bitmap">
+            
+              <b>load_bitmap</b>(folder_name, filename, hue = 0)
+            
+            <a href="../classes/Cache.html#method-c-load_bitmap" name="method-c-load_bitmap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ビットマップの読み込み</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-load_bitmap_source')" id="l_method-c-load_bitmap_source">show</a>
+                
+              </p>
+              <div id="method-c-load_bitmap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Cache.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">load_bitmap</span>(<span class="ruby-identifier">folder_name</span>, <span class="ruby-identifier">filename</span>, <span class="ruby-identifier">hue</span> = <span class="ruby-number">0</span>)
+  <span class="ruby-ivar">@cache</span> = {} <span class="ruby-keyword">if</span> <span class="ruby-ivar">@cache</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">path</span> = <span class="ruby-identifier">folder_name</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">filename</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-ivar">@cache</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">path</span>) <span class="ruby-keyword">or</span> <span class="ruby-ivar">@cache</span>[<span class="ruby-identifier">path</span>].<span class="ruby-identifier">disposed?</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">filename</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-ivar">@cache</span>[<span class="ruby-identifier">path</span>] = <span class="ruby-constant">Bitmap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">32</span>, <span class="ruby-number">32</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@cache</span>[<span class="ruby-identifier">path</span>] = <span class="ruby-constant">Bitmap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">path</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">hue</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-ivar">@cache</span>[<span class="ruby-identifier">path</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">key</span> = [<span class="ruby-identifier">path</span>, <span class="ruby-identifier">hue</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-ivar">@cache</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">key</span>) <span class="ruby-keyword">or</span> <span class="ruby-ivar">@cache</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">disposed?</span>
+      <span class="ruby-ivar">@cache</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-ivar">@cache</span>[<span class="ruby-identifier">path</span>].<span class="ruby-identifier">clone</span>
+      <span class="ruby-ivar">@cache</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">hue_change</span>(<span class="ruby-identifier">hue</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-ivar">@cache</span>[<span class="ruby-identifier">key</span>]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-parallax">
+            
+              <b>parallax</b>(filename)
+            
+            <a href="../classes/Cache.html#method-c-parallax" name="method-c-parallax" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>遠景グラフィックの取得</p>
+
+<p>filename : ファイル名</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-parallax_source')" id="l_method-c-parallax_source">show</a>
+                
+              </p>
+              <div id="method-c-parallax_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Cache.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">parallax</span>(<span class="ruby-identifier">filename</span>)
+  <span class="ruby-identifier">load_bitmap</span>(<span class="ruby-string">&quot;Graphics/Parallaxes/&quot;</span>, <span class="ruby-identifier">filename</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-picture">
+            
+              <b>picture</b>(filename)
+            
+            <a href="../classes/Cache.html#method-c-picture" name="method-c-picture" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ピクチャ グラフィックの取得</p>
+
+<p>filename : ファイル名</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-picture_source')" id="l_method-c-picture_source">show</a>
+                
+              </p>
+              <div id="method-c-picture_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Cache.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">picture</span>(<span class="ruby-identifier">filename</span>)
+  <span class="ruby-identifier">load_bitmap</span>(<span class="ruby-string">&quot;Graphics/Pictures/&quot;</span>, <span class="ruby-identifier">filename</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-system">
+            
+              <b>system</b>(filename)
+            
+            <a href="../classes/Cache.html#method-c-system" name="method-c-system" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>システム グラフィックの取得</p>
+
+<p>filename : ファイル名</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-system_source')" id="l_method-c-system_source">show</a>
+                
+              </p>
+              <div id="method-c-system_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Cache.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">system</span>(<span class="ruby-identifier">filename</span>)
+  <span class="ruby-identifier">load_bitmap</span>(<span class="ruby-string">&quot;Graphics/System/&quot;</span>, <span class="ruby-identifier">filename</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

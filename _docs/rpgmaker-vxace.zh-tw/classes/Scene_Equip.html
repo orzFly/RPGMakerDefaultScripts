@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_Equip</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_Equip 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Scene_MenuBase.html">Scene_MenuBase</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_Equip_rb.html">Scene_Equip.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>裝備畫面</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-command_clear">command_clear</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-command_equip">command_equip</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-command_optimize">command_optimize</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_command_window">create_command_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_item_window">create_item_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_slot_window">create_slot_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_status_window">create_status_window</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-on_actor_change">on_actor_change</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_item_cancel">on_item_cancel</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_item_ok">on_item_ok</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_slot_cancel">on_slot_cancel</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_slot_ok">on_slot_ok</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-start">start</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-command_clear">
+            
+              <b>command_clear</b>()
+            
+            <a href="../classes/Scene_Equip.html#method-i-command_clear" name="method-i-command_clear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>指令“全部卸下”</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-command_clear_source')" id="l_method-i-command_clear_source">show</a>
+                
+              </p>
+              <div id="method-i-command_clear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Equip.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">command_clear</span>
+  <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_equip</span>
+  <span class="ruby-ivar">@actor</span>.<span class="ruby-identifier">clear_equipments</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">refresh</span>
+  <span class="ruby-ivar">@slot_window</span>.<span class="ruby-identifier">refresh</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">activate</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-command_equip">
+            
+              <b>command_equip</b>()
+            
+            <a href="../classes/Scene_Equip.html#method-i-command_equip" name="method-i-command_equip" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>指令“更換裝備”</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-command_equip_source')" id="l_method-i-command_equip_source">show</a>
+                
+              </p>
+              <div id="method-i-command_equip_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Equip.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">command_equip</span>
+  <span class="ruby-ivar">@slot_window</span>.<span class="ruby-identifier">activate</span>
+  <span class="ruby-ivar">@slot_window</span>.<span class="ruby-identifier">select</span>(<span class="ruby-number">0</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-command_optimize">
+            
+              <b>command_optimize</b>()
+            
+            <a href="../classes/Scene_Equip.html#method-i-command_optimize" name="method-i-command_optimize" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>指令“最強裝備”</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-command_optimize_source')" id="l_method-i-command_optimize_source">show</a>
+                
+              </p>
+              <div id="method-i-command_optimize_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Equip.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">command_optimize</span>
+  <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_equip</span>
+  <span class="ruby-ivar">@actor</span>.<span class="ruby-identifier">optimize_equipments</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">refresh</span>
+  <span class="ruby-ivar">@slot_window</span>.<span class="ruby-identifier">refresh</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">activate</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_command_window">
+            
+              <b>create_command_window</b>()
+            
+            <a href="../classes/Scene_Equip.html#method-i-create_command_window" name="method-i-create_command_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>生成指令視窗</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_command_window_source')" id="l_method-i-create_command_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_command_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Equip.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_command_window</span>
+  <span class="ruby-identifier">wx</span> = <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">width</span>
+  <span class="ruby-identifier">wy</span> = <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">height</span>
+  <span class="ruby-identifier">ww</span> = <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">width</span>
+  <span class="ruby-ivar">@command_window</span> = <span class="ruby-constant">Window_EquipCommand</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">wx</span>, <span class="ruby-identifier">wy</span>, <span class="ruby-identifier">ww</span>)
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">viewport</span> = <span class="ruby-ivar">@viewport</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">help_window</span> = <span class="ruby-ivar">@help_window</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:equip</span>,    <span class="ruby-identifier">method</span>(<span class="ruby-value">:command_equip</span>))
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:optimize</span>, <span class="ruby-identifier">method</span>(<span class="ruby-value">:command_optimize</span>))
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:clear</span>,    <span class="ruby-identifier">method</span>(<span class="ruby-value">:command_clear</span>))
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:cancel</span>,   <span class="ruby-identifier">method</span>(<span class="ruby-value">:return_scene</span>))
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:pagedown</span>, <span class="ruby-identifier">method</span>(<span class="ruby-value">:next_actor</span>))
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:pageup</span>,   <span class="ruby-identifier">method</span>(<span class="ruby-value">:prev_actor</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_item_window">
+            
+              <b>create_item_window</b>()
+            
+            <a href="../classes/Scene_Equip.html#method-i-create_item_window" name="method-i-create_item_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>生成物品視窗</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_item_window_source')" id="l_method-i-create_item_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_item_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Equip.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_item_window</span>
+  <span class="ruby-identifier">wx</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">wy</span> = <span class="ruby-ivar">@slot_window</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@slot_window</span>.<span class="ruby-identifier">height</span>
+  <span class="ruby-identifier">ww</span> = <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span>
+  <span class="ruby-identifier">wh</span> = <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">wy</span>
+  <span class="ruby-ivar">@item_window</span> = <span class="ruby-constant">Window_EquipItem</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">wx</span>, <span class="ruby-identifier">wy</span>, <span class="ruby-identifier">ww</span>, <span class="ruby-identifier">wh</span>)
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">viewport</span> = <span class="ruby-ivar">@viewport</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">help_window</span> = <span class="ruby-ivar">@help_window</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">status_window</span> = <span class="ruby-ivar">@status_window</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">actor</span> = <span class="ruby-ivar">@actor</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:ok</span>,     <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_item_ok</span>))
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:cancel</span>, <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_item_cancel</span>))
+  <span class="ruby-ivar">@slot_window</span>.<span class="ruby-identifier">item_window</span> = <span class="ruby-ivar">@item_window</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_slot_window">
+            
+              <b>create_slot_window</b>()
+            
+            <a href="../classes/Scene_Equip.html#method-i-create_slot_window" name="method-i-create_slot_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>生成裝備欄視窗</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_slot_window_source')" id="l_method-i-create_slot_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_slot_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Equip.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_slot_window</span>
+  <span class="ruby-identifier">wx</span> = <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">width</span>
+  <span class="ruby-identifier">wy</span> = <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">height</span>
+  <span class="ruby-identifier">ww</span> = <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">width</span>
+  <span class="ruby-ivar">@slot_window</span> = <span class="ruby-constant">Window_EquipSlot</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">wx</span>, <span class="ruby-identifier">wy</span>, <span class="ruby-identifier">ww</span>)
+  <span class="ruby-ivar">@slot_window</span>.<span class="ruby-identifier">viewport</span> = <span class="ruby-ivar">@viewport</span>
+  <span class="ruby-ivar">@slot_window</span>.<span class="ruby-identifier">help_window</span> = <span class="ruby-ivar">@help_window</span>
+  <span class="ruby-ivar">@slot_window</span>.<span class="ruby-identifier">status_window</span> = <span class="ruby-ivar">@status_window</span>
+  <span class="ruby-ivar">@slot_window</span>.<span class="ruby-identifier">actor</span> = <span class="ruby-ivar">@actor</span>
+  <span class="ruby-ivar">@slot_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:ok</span>,       <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_slot_ok</span>))
+  <span class="ruby-ivar">@slot_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:cancel</span>,   <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_slot_cancel</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_status_window">
+            
+              <b>create_status_window</b>()
+            
+            <a href="../classes/Scene_Equip.html#method-i-create_status_window" name="method-i-create_status_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>生成狀態視窗</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_status_window_source')" id="l_method-i-create_status_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_status_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Equip.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_status_window</span>
+  <span class="ruby-ivar">@status_window</span> = <span class="ruby-constant">Window_EquipStatus</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">height</span>)
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">viewport</span> = <span class="ruby-ivar">@viewport</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">actor</span> = <span class="ruby-ivar">@actor</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_actor_change">
+            
+              <b>on_actor_change</b>()
+            
+            <a href="../classes/Scene_Equip.html#method-i-on_actor_change" name="method-i-on_actor_change" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>切換角色</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_actor_change_source')" id="l_method-i-on_actor_change_source">show</a>
+                
+              </p>
+              <div id="method-i-on_actor_change_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Equip.rb, line 149</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_actor_change</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">actor</span> = <span class="ruby-ivar">@actor</span>
+  <span class="ruby-ivar">@slot_window</span>.<span class="ruby-identifier">actor</span> = <span class="ruby-ivar">@actor</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">actor</span> = <span class="ruby-ivar">@actor</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">activate</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_item_cancel">
+            
+              <b>on_item_cancel</b>()
+            
+            <a href="../classes/Scene_Equip.html#method-i-on_item_cancel" name="method-i-on_item_cancel" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>物品“取消”</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_item_cancel_source')" id="l_method-i-on_item_cancel_source">show</a>
+                
+              </p>
+              <div id="method-i-on_item_cancel_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Equip.rb, line 141</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_item_cancel</span>
+  <span class="ruby-ivar">@slot_window</span>.<span class="ruby-identifier">activate</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">unselect</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_item_ok">
+            
+              <b>on_item_ok</b>()
+            
+            <a href="../classes/Scene_Equip.html#method-i-on_item_ok" name="method-i-on_item_ok" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>物品“確定”</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_item_ok_source')" id="l_method-i-on_item_ok_source">show</a>
+                
+              </p>
+              <div id="method-i-on_item_ok_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Equip.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_item_ok</span>
+  <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_equip</span>
+  <span class="ruby-ivar">@actor</span>.<span class="ruby-identifier">change_equip</span>(<span class="ruby-ivar">@slot_window</span>.<span class="ruby-identifier">index</span>, <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">item</span>)
+  <span class="ruby-ivar">@slot_window</span>.<span class="ruby-identifier">activate</span>
+  <span class="ruby-ivar">@slot_window</span>.<span class="ruby-identifier">refresh</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">unselect</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_slot_cancel">
+            
+              <b>on_slot_cancel</b>()
+            
+            <a href="../classes/Scene_Equip.html#method-i-on_slot_cancel" name="method-i-on_slot_cancel" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>裝備欄“取消”</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_slot_cancel_source')" id="l_method-i-on_slot_cancel_source">show</a>
+                
+              </p>
+              <div id="method-i-on_slot_cancel_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Equip.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_slot_cancel</span>
+  <span class="ruby-ivar">@slot_window</span>.<span class="ruby-identifier">unselect</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">activate</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_slot_ok">
+            
+              <b>on_slot_ok</b>()
+            
+            <a href="../classes/Scene_Equip.html#method-i-on_slot_ok" name="method-i-on_slot_ok" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>裝備欄“確定”</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_slot_ok_source')" id="l_method-i-on_slot_ok_source">show</a>
+                
+              </p>
+              <div id="method-i-on_slot_ok_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Equip.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_slot_ok</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">activate</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">select</span>(<span class="ruby-number">0</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start">
+            
+              <b>start</b>()
+            
+            <a href="../classes/Scene_Equip.html#method-i-start" name="method-i-start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>開始處理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_source')" id="l_method-i-start_source">show</a>
+                
+              </p>
+              <div id="method-i-start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Equip.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">create_help_window</span>
+  <span class="ruby-identifier">create_status_window</span>
+  <span class="ruby-identifier">create_command_window</span>
+  <span class="ruby-identifier">create_slot_window</span>
+  <span class="ruby-identifier">create_item_window</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

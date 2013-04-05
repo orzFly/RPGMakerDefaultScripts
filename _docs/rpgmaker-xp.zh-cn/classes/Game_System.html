@@ -1,0 +1,1183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Game_System</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Game_System 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Game_System_rb.html">Game_System.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>处理系统附属数据的类。也可执行诸如 BGM
+管理之类的功能。本类的实例请参考 $game_system 。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-battle_bgm">battle_bgm</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-battle_bgm-3D">battle_bgm=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-battle_end_me">battle_end_me</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-battle_end_me-3D">battle_end_me=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-bgm_fade">bgm_fade</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-bgm_memorize">bgm_memorize</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-bgm_play">bgm_play</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-bgm_restore">bgm_restore</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-bgm_stop">bgm_stop</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-bgs_fade">bgs_fade</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-bgs_memorize">bgs_memorize</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-bgs_play">bgs_play</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-bgs_restore">bgs_restore</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-me_play">me_play</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-playing_bgm">playing_bgm</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-playing_bgs">playing_bgs</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-se_play">se_play</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-se_stop">se_stop</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-windowskin_name">windowskin_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-windowskin_name-3D">windowskin_name=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>battle_interpreter</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>encounter_disabled</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>magic_number</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>map_interpreter</td>
+            <td class='attr-desc'><p>定义实例变量</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>menu_disabled</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>message_frame</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>message_position</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>save_count</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>save_disabled</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>timer</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>timer_working</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Game_System.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>初始化对像</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_System.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-ivar">@map_interpreter</span> = <span class="ruby-constant">Interpreter</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-keyword">true</span>)
+  <span class="ruby-ivar">@battle_interpreter</span> = <span class="ruby-constant">Interpreter</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-keyword">false</span>)
+  <span class="ruby-ivar">@timer</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@timer_working</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@save_disabled</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@menu_disabled</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@encounter_disabled</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@message_position</span> = <span class="ruby-number">2</span>
+  <span class="ruby-ivar">@message_frame</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@save_count</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@magic_number</span> = <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-battle_bgm">
+            
+              <b>battle_bgm</b>()
+            
+            <a href="../classes/Game_System.html#method-i-battle_bgm" name="method-i-battle_bgm" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取战斗 BGM</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-battle_bgm_source')" id="l_method-i-battle_bgm_source">show</a>
+                
+              </p>
+              <div id="method-i-battle_bgm_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_System.rb, line 187</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">battle_bgm</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@battle_bgm</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">battle_bgm</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-ivar">@battle_bgm</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-battle_bgm-3D">
+            
+              <b>battle_bgm=</b>(battle_bgm)
+            
+            <a href="../classes/Game_System.html#method-i-battle_bgm-3D" name="method-i-battle_bgm-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>设置战斗 BGM</p>
+
+<p><a href="Game_System.html#method-i-battle_bgm">#battle_bgm</a> :
+新的战斗 BGM</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-battle_bgm-3D_source')" id="l_method-i-battle_bgm-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-battle_bgm-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_System.rb, line 199</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">battle_bgm=</span>(<span class="ruby-identifier">battle_bgm</span>)
+  <span class="ruby-ivar">@battle_bgm</span> = <span class="ruby-identifier">battle_bgm</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-battle_end_me">
+            
+              <b>battle_end_me</b>()
+            
+            <a href="../classes/Game_System.html#method-i-battle_end_me" name="method-i-battle_end_me" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取战斗结束的 BGM</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-battle_end_me_source')" id="l_method-i-battle_end_me_source">show</a>
+                
+              </p>
+              <div id="method-i-battle_end_me_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_System.rb, line 206</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">battle_end_me</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@battle_end_me</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">battle_end_me</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-ivar">@battle_end_me</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-battle_end_me-3D">
+            
+              <b>battle_end_me=</b>(battle_end_me)
+            
+            <a href="../classes/Game_System.html#method-i-battle_end_me-3D" name="method-i-battle_end_me-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>设置战斗结束的 BGM</p>
+
+<p><a href="Game_System.html#method-i-battle_end_me">#battle_end_me</a> :
+新的战斗结束 BGM</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-battle_end_me-3D_source')" id="l_method-i-battle_end_me-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-battle_end_me-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_System.rb, line 218</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">battle_end_me=</span>(<span class="ruby-identifier">battle_end_me</span>)
+  <span class="ruby-ivar">@battle_end_me</span> = <span class="ruby-identifier">battle_end_me</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bgm_fade">
+            
+              <b>bgm_fade</b>(time)
+            
+            <a href="../classes/Game_System.html#method-i-bgm_fade" name="method-i-bgm_fade" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>BGM 的淡出</p>
+
+<p>time : 淡出时间 (秒)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bgm_fade_source')" id="l_method-i-bgm_fade_source">show</a>
+                
+              </p>
+              <div id="method-i-bgm_fade_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_System.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bgm_fade</span>(<span class="ruby-identifier">time</span>)
+  <span class="ruby-ivar">@playing_bgm</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-constant">Audio</span>.<span class="ruby-identifier">bgm_fade</span>(<span class="ruby-identifier">time</span> * <span class="ruby-number">1000</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bgm_memorize">
+            
+              <b>bgm_memorize</b>()
+            
+            <a href="../classes/Game_System.html#method-i-bgm_memorize" name="method-i-bgm_memorize" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>记忆 BGM</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bgm_memorize_source')" id="l_method-i-bgm_memorize_source">show</a>
+                
+              </p>
+              <div id="method-i-bgm_memorize_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_System.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bgm_memorize</span>
+  <span class="ruby-ivar">@memorized_bgm</span> = <span class="ruby-ivar">@playing_bgm</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bgm_play">
+            
+              <b>bgm_play</b>(bgm)
+            
+            <a href="../classes/Game_System.html#method-i-bgm_play" name="method-i-bgm_play" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>演奏 BGM</p>
+
+<p>bgm : 演奏的 BGM</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bgm_play_source')" id="l_method-i-bgm_play_source">show</a>
+                
+              </p>
+              <div id="method-i-bgm_play_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_System.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bgm_play</span>(<span class="ruby-identifier">bgm</span>)
+  <span class="ruby-ivar">@playing_bgm</span> = <span class="ruby-identifier">bgm</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">bgm</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">bgm</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;&quot;</span>
+    <span class="ruby-constant">Audio</span>.<span class="ruby-identifier">bgm_play</span>(<span class="ruby-string">&quot;Audio/BGM/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">bgm</span>.<span class="ruby-identifier">name</span>, <span class="ruby-identifier">bgm</span>.<span class="ruby-identifier">volume</span>, <span class="ruby-identifier">bgm</span>.<span class="ruby-identifier">pitch</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">Audio</span>.<span class="ruby-identifier">bgm_stop</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">frame_reset</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bgm_restore">
+            
+              <b>bgm_restore</b>()
+            
+            <a href="../classes/Game_System.html#method-i-bgm_restore" name="method-i-bgm_restore" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>还原 BGM</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bgm_restore_source')" id="l_method-i-bgm_restore_source">show</a>
+                
+              </p>
+              <div id="method-i-bgm_restore_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_System.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bgm_restore</span>
+  <span class="ruby-identifier">bgm_play</span>(<span class="ruby-ivar">@memorized_bgm</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bgm_stop">
+            
+              <b>bgm_stop</b>()
+            
+            <a href="../classes/Game_System.html#method-i-bgm_stop" name="method-i-bgm_stop" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>停止 BGM</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bgm_stop_source')" id="l_method-i-bgm_stop_source">show</a>
+                
+              </p>
+              <div id="method-i-bgm_stop_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_System.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bgm_stop</span>
+  <span class="ruby-constant">Audio</span>.<span class="ruby-identifier">bgm_stop</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bgs_fade">
+            
+              <b>bgs_fade</b>(time)
+            
+            <a href="../classes/Game_System.html#method-i-bgs_fade" name="method-i-bgs_fade" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>BGS 的淡出</p>
+
+<p>time : 淡出时间 (秒)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bgs_fade_source')" id="l_method-i-bgs_fade_source">show</a>
+                
+              </p>
+              <div id="method-i-bgs_fade_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_System.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bgs_fade</span>(<span class="ruby-identifier">time</span>)
+  <span class="ruby-ivar">@playing_bgs</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-constant">Audio</span>.<span class="ruby-identifier">bgs_fade</span>(<span class="ruby-identifier">time</span> * <span class="ruby-number">1000</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bgs_memorize">
+            
+              <b>bgs_memorize</b>()
+            
+            <a href="../classes/Game_System.html#method-i-bgs_memorize" name="method-i-bgs_memorize" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>记忆 BGS</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bgs_memorize_source')" id="l_method-i-bgs_memorize_source">show</a>
+                
+              </p>
+              <div id="method-i-bgs_memorize_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_System.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bgs_memorize</span>
+  <span class="ruby-ivar">@memorized_bgs</span> = <span class="ruby-ivar">@playing_bgs</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bgs_play">
+            
+              <b>bgs_play</b>(bgs)
+            
+            <a href="../classes/Game_System.html#method-i-bgs_play" name="method-i-bgs_play" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>演奏 BGS</p>
+
+<p>bgs : 演奏的 BGS</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bgs_play_source')" id="l_method-i-bgs_play_source">show</a>
+                
+              </p>
+              <div id="method-i-bgs_play_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_System.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bgs_play</span>(<span class="ruby-identifier">bgs</span>)
+  <span class="ruby-ivar">@playing_bgs</span> = <span class="ruby-identifier">bgs</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">bgs</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">bgs</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;&quot;</span>
+    <span class="ruby-constant">Audio</span>.<span class="ruby-identifier">bgs_play</span>(<span class="ruby-string">&quot;Audio/BGS/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">bgs</span>.<span class="ruby-identifier">name</span>, <span class="ruby-identifier">bgs</span>.<span class="ruby-identifier">volume</span>, <span class="ruby-identifier">bgs</span>.<span class="ruby-identifier">pitch</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">Audio</span>.<span class="ruby-identifier">bgs_stop</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">frame_reset</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bgs_restore">
+            
+              <b>bgs_restore</b>()
+            
+            <a href="../classes/Game_System.html#method-i-bgs_restore" name="method-i-bgs_restore" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>还原 BGS</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bgs_restore_source')" id="l_method-i-bgs_restore_source">show</a>
+                
+              </p>
+              <div id="method-i-bgs_restore_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_System.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bgs_restore</span>
+  <span class="ruby-identifier">bgs_play</span>(<span class="ruby-ivar">@memorized_bgs</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-me_play">
+            
+              <b>me_play</b>(me)
+            
+            <a href="../classes/Game_System.html#method-i-me_play" name="method-i-me_play" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ME 的演奏</p>
+
+<p>me : 演奏的 ME</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-me_play_source')" id="l_method-i-me_play_source">show</a>
+                
+              </p>
+              <div id="method-i-me_play_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_System.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">me_play</span>(<span class="ruby-identifier">me</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">me</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">me</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;&quot;</span>
+    <span class="ruby-constant">Audio</span>.<span class="ruby-identifier">me_play</span>(<span class="ruby-string">&quot;Audio/ME/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">me</span>.<span class="ruby-identifier">name</span>, <span class="ruby-identifier">me</span>.<span class="ruby-identifier">volume</span>, <span class="ruby-identifier">me</span>.<span class="ruby-identifier">pitch</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">Audio</span>.<span class="ruby-identifier">me_stop</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">frame_reset</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-playing_bgm">
+            
+              <b>playing_bgm</b>()
+            
+            <a href="../classes/Game_System.html#method-i-playing_bgm" name="method-i-playing_bgm" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取演奏中 BGM</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-playing_bgm_source')" id="l_method-i-playing_bgm_source">show</a>
+                
+              </p>
+              <div id="method-i-playing_bgm_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_System.rb, line 154</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">playing_bgm</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@playing_bgm</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-playing_bgs">
+            
+              <b>playing_bgs</b>()
+            
+            <a href="../classes/Game_System.html#method-i-playing_bgs" name="method-i-playing_bgs" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取演奏中 BGS</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-playing_bgs_source')" id="l_method-i-playing_bgs_source">show</a>
+                
+              </p>
+              <div id="method-i-playing_bgs_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_System.rb, line 161</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">playing_bgs</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@playing_bgs</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-se_play">
+            
+              <b>se_play</b>(se)
+            
+            <a href="../classes/Game_System.html#method-i-se_play" name="method-i-se_play" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>SE 的演奏</p>
+
+<p>se : 演奏的 SE</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-se_play_source')" id="l_method-i-se_play_source">show</a>
+                
+              </p>
+              <div id="method-i-se_play_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_System.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">se_play</span>(<span class="ruby-identifier">se</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">se</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">se</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;&quot;</span>
+    <span class="ruby-constant">Audio</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-string">&quot;Audio/SE/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">se</span>.<span class="ruby-identifier">name</span>, <span class="ruby-identifier">se</span>.<span class="ruby-identifier">volume</span>, <span class="ruby-identifier">se</span>.<span class="ruby-identifier">pitch</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-se_stop">
+            
+              <b>se_stop</b>()
+            
+            <a href="../classes/Game_System.html#method-i-se_stop" name="method-i-se_stop" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>停止 SE</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-se_stop_source')" id="l_method-i-se_stop_source">show</a>
+                
+              </p>
+              <div id="method-i-se_stop_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_System.rb, line 147</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">se_stop</span>
+  <span class="ruby-constant">Audio</span>.<span class="ruby-identifier">se_stop</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Game_System.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新画面</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_System.rb, line 225</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-comment"># 计时器减 1</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@timer_working</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@timer</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@timer</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-windowskin_name">
+            
+              <b>windowskin_name</b>()
+            
+            <a href="../classes/Game_System.html#method-i-windowskin_name" name="method-i-windowskin_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取窗口外观的文件名</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-windowskin_name_source')" id="l_method-i-windowskin_name_source">show</a>
+                
+              </p>
+              <div id="method-i-windowskin_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_System.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">windowskin_name</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@windowskin_name</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">windowskin_name</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-ivar">@windowskin_name</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-windowskin_name-3D">
+            
+              <b>windowskin_name=</b>(windowskin_name)
+            
+            <a href="../classes/Game_System.html#method-i-windowskin_name-3D" name="method-i-windowskin_name-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>设置窗口外观的文件名</p>
+
+<p><a href="Game_System.html#method-i-windowskin_name">#windowskin_name</a> :
+新的窗口外观文件名</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-windowskin_name-3D_source')" id="l_method-i-windowskin_name-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-windowskin_name-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_System.rb, line 180</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">windowskin_name=</span>(<span class="ruby-identifier">windowskin_name</span>)
+  <span class="ruby-ivar">@windowskin_name</span> = <span class="ruby-identifier">windowskin_name</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,3331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_Battle</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_Battle 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Scene_Base.html">Scene_Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_Battle_rb.html">Scene_Battle.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>バトル画面の処理を行うクラスです。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-abs_wait">abs_wait</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-abs_wait_short">abs_wait_short</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-all_battle_members">all_battle_members</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-apply_item_effects">apply_item_effects</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-apply_substitute">apply_substitute</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-battle_start">battle_start</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-check_substitute">check_substitute</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-command_attack">command_attack</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-command_escape">command_escape</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-command_fight">command_fight</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-command_guard">command_guard</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-command_item">command_item</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-command_skill">command_skill</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_actor_command_window">create_actor_command_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_actor_window">create_actor_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_all_windows">create_all_windows</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_enemy_window">create_enemy_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_help_window">create_help_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_info_viewport">create_info_viewport</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_item_window">create_item_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_log_window">create_log_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_message_window">create_message_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_party_command_window">create_party_command_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_scroll_text_window">create_scroll_text_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_skill_window">create_skill_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_spriteset">create_spriteset</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_status_window">create_status_window</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dispose_spriteset">dispose_spriteset</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-execute_action">execute_action</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-invoke_counter_attack">invoke_counter_attack</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-invoke_item">invoke_item</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-invoke_magic_reflection">invoke_magic_reflection</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-move_info_viewport">move_info_viewport</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-next_command">next_command</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-on_actor_cancel">on_actor_cancel</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_actor_ok">on_actor_ok</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_enemy_cancel">on_enemy_cancel</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_enemy_ok">on_enemy_ok</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_item_cancel">on_item_cancel</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_item_ok">on_item_ok</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_skill_cancel">on_skill_cancel</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_skill_ok">on_skill_ok</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-post_start">post_start</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-pre_terminate">pre_terminate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-prior_command">prior_command</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-process_action">process_action</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-process_action_end">process_action_end</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-process_event">process_event</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-process_forced_action">process_forced_action</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-refresh_status">refresh_status</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-select_actor_selection">select_actor_selection</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-select_enemy_selection">select_enemy_selection</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-show_animation">show_animation</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-show_attack_animation">show_attack_animation</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-show_fast-3F">show_fast?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-show_normal_animation">show_normal_animation</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start">start</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start_actor_command_selection">start_actor_command_selection</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start_party_command_selection">start_party_command_selection</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-terminate">terminate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-turn_end">turn_end</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-turn_start">turn_start</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_basic">update_basic</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_for_wait">update_for_wait</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_info_viewport">update_info_viewport</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_message_open">update_message_open</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-use_item">use_item</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-wait">wait</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-wait_for_animation">wait_for_animation</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-wait_for_effect">wait_for_effect</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-wait_for_message">wait_for_message</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-abs_wait">
+            
+              <b>abs_wait</b>(duration)
+            
+            <a href="../classes/Scene_Battle.html#method-i-abs_wait" name="method-i-abs_wait" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ウェイト（早送り無効）</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-abs_wait_source')" id="l_method-i-abs_wait_source">show</a>
+                
+              </p>
+              <div id="method-i-abs_wait_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">abs_wait</span>(<span class="ruby-identifier">duration</span>)
+  <span class="ruby-identifier">duration</span>.<span class="ruby-identifier">times</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">update_for_wait</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-abs_wait_short">
+            
+              <b>abs_wait_short</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-abs_wait_short" name="method-i-abs_wait_short" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>短時間ウェイト（早送り無効）</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-abs_wait_short_source')" id="l_method-i-abs_wait_short_source">show</a>
+                
+              </p>
+              <div id="method-i-abs_wait_short_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">abs_wait_short</span>
+  <span class="ruby-identifier">abs_wait</span>(<span class="ruby-number">15</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-all_battle_members">
+            
+              <b>all_battle_members</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-all_battle_members" name="method-i-all_battle_members" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>敵味方合わせた全バトルメンバーの取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-all_battle_members_source')" id="l_method-i-all_battle_members_source">show</a>
+                
+              </p>
+              <div id="method-i-all_battle_members_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 562</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">all_battle_members</span>
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">members</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">members</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-apply_item_effects">
+            
+              <b>apply_item_effects</b>(target, item)
+            
+            <a href="../classes/Scene_Battle.html#method-i-apply_item_effects" name="method-i-apply_item_effects" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スキル／アイテムの効果を適用</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-apply_item_effects_source')" id="l_method-i-apply_item_effects_source">show</a>
+                
+              </p>
+              <div id="method-i-apply_item_effects_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 667</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">apply_item_effects</span>(<span class="ruby-identifier">target</span>, <span class="ruby-identifier">item</span>)
+  <span class="ruby-identifier">target</span>.<span class="ruby-identifier">item_apply</span>(<span class="ruby-ivar">@subject</span>, <span class="ruby-identifier">item</span>)
+  <span class="ruby-identifier">refresh_status</span>
+  <span class="ruby-ivar">@log_window</span>.<span class="ruby-identifier">display_action_results</span>(<span class="ruby-identifier">target</span>, <span class="ruby-identifier">item</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-apply_substitute">
+            
+              <b>apply_substitute</b>(target, item)
+            
+            <a href="../classes/Scene_Battle.html#method-i-apply_substitute" name="method-i-apply_substitute" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>身代わりの適用</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-apply_substitute_source')" id="l_method-i-apply_substitute_source">show</a>
+                
+              </p>
+              <div id="method-i-apply_substitute_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 695</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">apply_substitute</span>(<span class="ruby-identifier">target</span>, <span class="ruby-identifier">item</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">check_substitute</span>(<span class="ruby-identifier">target</span>, <span class="ruby-identifier">item</span>)
+    <span class="ruby-identifier">substitute</span> = <span class="ruby-identifier">target</span>.<span class="ruby-identifier">friends_unit</span>.<span class="ruby-identifier">substitute_battler</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">substitute</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">target</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">substitute</span>
+      <span class="ruby-ivar">@log_window</span>.<span class="ruby-identifier">display_substitute</span>(<span class="ruby-identifier">substitute</span>, <span class="ruby-identifier">target</span>)
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">substitute</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">target</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-battle_start">
+            
+              <b>battle_start</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-battle_start" name="method-i-battle_start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>戦闘開始</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-battle_start_source')" id="l_method-i-battle_start_source">show</a>
+                
+              </p>
+              <div id="method-i-battle_start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 525</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">battle_start</span>
+  <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">battle_start</span>
+  <span class="ruby-identifier">process_event</span>
+  <span class="ruby-identifier">start_party_command_selection</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-check_substitute">
+            
+              <b>check_substitute</b>(target, item)
+            
+            <a href="../classes/Scene_Battle.html#method-i-check_substitute" name="method-i-check_substitute" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>身代わり条件チェック</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-check_substitute_source')" id="l_method-i-check_substitute_source">show</a>
+                
+              </p>
+              <div id="method-i-check_substitute_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 709</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">check_substitute</span>(<span class="ruby-identifier">target</span>, <span class="ruby-identifier">item</span>)
+  <span class="ruby-identifier">target</span>.<span class="ruby-identifier">hp</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">target</span>.<span class="ruby-identifier">mhp</span> <span class="ruby-operator">/</span> <span class="ruby-number">4</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-operator">!</span><span class="ruby-identifier">item</span> <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">item</span>.<span class="ruby-identifier">certain?</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-command_attack">
+            
+              <b>command_attack</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-command_attack" name="method-i-command_attack" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>コマンド［攻撃］</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-command_attack_source')" id="l_method-i-command_attack_source">show</a>
+                
+              </p>
+              <div id="method-i-command_attack_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 375</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">command_attack</span>
+  <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">actor</span>.<span class="ruby-identifier">input</span>.<span class="ruby-identifier">set_attack</span>
+  <span class="ruby-identifier">select_enemy_selection</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-command_escape">
+            
+              <b>command_escape</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-command_escape" name="method-i-command_escape" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>コマンド［逃げる］</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-command_escape_source')" id="l_method-i-command_escape_source">show</a>
+                
+              </p>
+              <div id="method-i-command_escape_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 359</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">command_escape</span>
+  <span class="ruby-identifier">turn_start</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">process_escape</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-command_fight">
+            
+              <b>command_fight</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-command_fight" name="method-i-command_fight" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>コマンド［戦う］</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-command_fight_source')" id="l_method-i-command_fight_source">show</a>
+                
+              </p>
+              <div id="method-i-command_fight_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 352</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">command_fight</span>
+  <span class="ruby-identifier">next_command</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-command_guard">
+            
+              <b>command_guard</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-command_guard" name="method-i-command_guard" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>コマンド［防御］</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-command_guard_source')" id="l_method-i-command_guard_source">show</a>
+                
+              </p>
+              <div id="method-i-command_guard_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 393</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">command_guard</span>
+  <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">actor</span>.<span class="ruby-identifier">input</span>.<span class="ruby-identifier">set_guard</span>
+  <span class="ruby-identifier">next_command</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-command_item">
+            
+              <b>command_item</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-command_item" name="method-i-command_item" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>コマンド［アイテム］</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-command_item_source')" id="l_method-i-command_item_source">show</a>
+                
+              </p>
+              <div id="method-i-command_item_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 401</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">command_item</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">refresh</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">show</span>.<span class="ruby-identifier">activate</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-command_skill">
+            
+              <b>command_skill</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-command_skill" name="method-i-command_skill" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>コマンド［スキル］</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-command_skill_source')" id="l_method-i-command_skill_source">show</a>
+                
+              </p>
+              <div id="method-i-command_skill_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 383</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">command_skill</span>
+  <span class="ruby-ivar">@skill_window</span>.<span class="ruby-identifier">actor</span> = <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">actor</span>
+  <span class="ruby-ivar">@skill_window</span>.<span class="ruby-identifier">stype_id</span> = <span class="ruby-ivar">@actor_command_window</span>.<span class="ruby-identifier">current_ext</span>
+  <span class="ruby-ivar">@skill_window</span>.<span class="ruby-identifier">refresh</span>
+  <span class="ruby-ivar">@skill_window</span>.<span class="ruby-identifier">show</span>.<span class="ruby-identifier">activate</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_actor_command_window">
+            
+              <b>create_actor_command_window</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-create_actor_command_window" name="method-i-create_actor_command_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>アクターコマンドウィンドウの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_actor_command_window_source')" id="l_method-i-create_actor_command_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_actor_command_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 247</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_actor_command_window</span>
+  <span class="ruby-ivar">@actor_command_window</span> = <span class="ruby-constant">Window_ActorCommand</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@actor_command_window</span>.<span class="ruby-identifier">viewport</span> = <span class="ruby-ivar">@info_viewport</span>
+  <span class="ruby-ivar">@actor_command_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:attack</span>, <span class="ruby-identifier">method</span>(<span class="ruby-value">:command_attack</span>))
+  <span class="ruby-ivar">@actor_command_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:skill</span>,  <span class="ruby-identifier">method</span>(<span class="ruby-value">:command_skill</span>))
+  <span class="ruby-ivar">@actor_command_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:guard</span>,  <span class="ruby-identifier">method</span>(<span class="ruby-value">:command_guard</span>))
+  <span class="ruby-ivar">@actor_command_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:item</span>,   <span class="ruby-identifier">method</span>(<span class="ruby-value">:command_item</span>))
+  <span class="ruby-ivar">@actor_command_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:cancel</span>, <span class="ruby-identifier">method</span>(<span class="ruby-value">:prior_command</span>))
+  <span class="ruby-ivar">@actor_command_window</span>.<span class="ruby-identifier">x</span> = <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_actor_window">
+            
+              <b>create_actor_window</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-create_actor_window" name="method-i-create_actor_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>アクターウィンドウの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_actor_window_source')" id="l_method-i-create_actor_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_actor_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 287</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_actor_window</span>
+  <span class="ruby-ivar">@actor_window</span> = <span class="ruby-constant">Window_BattleActor</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@info_viewport</span>)
+  <span class="ruby-ivar">@actor_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:ok</span>,     <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_actor_ok</span>))
+  <span class="ruby-ivar">@actor_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:cancel</span>, <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_actor_cancel</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_all_windows">
+            
+              <b>create_all_windows</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-create_all_windows" name="method-i-create_all_windows" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>全ウィンドウの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_all_windows_source')" id="l_method-i-create_all_windows_source">show</a>
+                
+              </p>
+              <div id="method-i-create_all_windows_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 175</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_all_windows</span>
+  <span class="ruby-identifier">create_message_window</span>
+  <span class="ruby-identifier">create_scroll_text_window</span>
+  <span class="ruby-identifier">create_log_window</span>
+  <span class="ruby-identifier">create_status_window</span>
+  <span class="ruby-identifier">create_info_viewport</span>
+  <span class="ruby-identifier">create_party_command_window</span>
+  <span class="ruby-identifier">create_actor_command_window</span>
+  <span class="ruby-identifier">create_help_window</span>
+  <span class="ruby-identifier">create_skill_window</span>
+  <span class="ruby-identifier">create_item_window</span>
+  <span class="ruby-identifier">create_actor_window</span>
+  <span class="ruby-identifier">create_enemy_window</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_enemy_window">
+            
+              <b>create_enemy_window</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-create_enemy_window" name="method-i-create_enemy_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>敵キャラウィンドウの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_enemy_window_source')" id="l_method-i-create_enemy_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_enemy_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 296</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_enemy_window</span>
+  <span class="ruby-ivar">@enemy_window</span> = <span class="ruby-constant">Window_BattleEnemy</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@info_viewport</span>)
+  <span class="ruby-ivar">@enemy_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:ok</span>,     <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_enemy_ok</span>))
+  <span class="ruby-ivar">@enemy_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:cancel</span>, <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_enemy_cancel</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_help_window">
+            
+              <b>create_help_window</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-create_help_window" name="method-i-create_help_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ヘルプウィンドウの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_help_window_source')" id="l_method-i-create_help_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_help_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 261</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_help_window</span>
+  <span class="ruby-ivar">@help_window</span> = <span class="ruby-constant">Window_Help</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_info_viewport">
+            
+              <b>create_info_viewport</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-create_info_viewport" name="method-i-create_info_viewport" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>情報表示ビューポートの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_info_viewport_source')" id="l_method-i-create_info_viewport_source">show</a>
+                
+              </p>
+              <div id="method-i-create_info_viewport_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 224</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_info_viewport</span>
+  <span class="ruby-ivar">@info_viewport</span> = <span class="ruby-constant">Viewport</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@info_viewport</span>.<span class="ruby-identifier">rect</span>.<span class="ruby-identifier">y</span> = <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">height</span>
+  <span class="ruby-ivar">@info_viewport</span>.<span class="ruby-identifier">rect</span>.<span class="ruby-identifier">height</span> = <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">height</span>
+  <span class="ruby-ivar">@info_viewport</span>.<span class="ruby-identifier">z</span> = <span class="ruby-number">100</span>
+  <span class="ruby-ivar">@info_viewport</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-number">64</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">viewport</span> = <span class="ruby-ivar">@info_viewport</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_item_window">
+            
+              <b>create_item_window</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-create_item_window" name="method-i-create_item_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>アイテムウィンドウの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_item_window_source')" id="l_method-i-create_item_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_item_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 278</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_item_window</span>
+  <span class="ruby-ivar">@item_window</span> = <span class="ruby-constant">Window_BattleItem</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@help_window</span>, <span class="ruby-ivar">@info_viewport</span>)
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:ok</span>,     <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_item_ok</span>))
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:cancel</span>, <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_item_cancel</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_log_window">
+            
+              <b>create_log_window</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-create_log_window" name="method-i-create_log_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ログウィンドウの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_log_window_source')" id="l_method-i-create_log_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_log_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 207</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_log_window</span>
+  <span class="ruby-ivar">@log_window</span> = <span class="ruby-constant">Window_BattleLog</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@log_window</span>.<span class="ruby-identifier">method_wait</span> = <span class="ruby-identifier">method</span>(<span class="ruby-value">:wait</span>)
+  <span class="ruby-ivar">@log_window</span>.<span class="ruby-identifier">method_wait_for_effect</span> = <span class="ruby-identifier">method</span>(<span class="ruby-value">:wait_for_effect</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_message_window">
+            
+              <b>create_message_window</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-create_message_window" name="method-i-create_message_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>メッセージウィンドウの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_message_window_source')" id="l_method-i-create_message_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_message_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 193</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_message_window</span>
+  <span class="ruby-ivar">@message_window</span> = <span class="ruby-constant">Window_Message</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_party_command_window">
+            
+              <b>create_party_command_window</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-create_party_command_window" name="method-i-create_party_command_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>パーティコマンドウィンドウの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_party_command_window_source')" id="l_method-i-create_party_command_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_party_command_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 236</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_party_command_window</span>
+  <span class="ruby-ivar">@party_command_window</span> = <span class="ruby-constant">Window_PartyCommand</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@party_command_window</span>.<span class="ruby-identifier">viewport</span> = <span class="ruby-ivar">@info_viewport</span>
+  <span class="ruby-ivar">@party_command_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:fight</span>,  <span class="ruby-identifier">method</span>(<span class="ruby-value">:command_fight</span>))
+  <span class="ruby-ivar">@party_command_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:escape</span>, <span class="ruby-identifier">method</span>(<span class="ruby-value">:command_escape</span>))
+  <span class="ruby-ivar">@party_command_window</span>.<span class="ruby-identifier">unselect</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_scroll_text_window">
+            
+              <b>create_scroll_text_window</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-create_scroll_text_window" name="method-i-create_scroll_text_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スクロール文章ウィンドウの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_scroll_text_window_source')" id="l_method-i-create_scroll_text_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_scroll_text_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 200</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_scroll_text_window</span>
+  <span class="ruby-ivar">@scroll_text_window</span> = <span class="ruby-constant">Window_ScrollText</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_skill_window">
+            
+              <b>create_skill_window</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-create_skill_window" name="method-i-create_skill_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スキルウィンドウの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_skill_window_source')" id="l_method-i-create_skill_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_skill_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 269</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_skill_window</span>
+  <span class="ruby-ivar">@skill_window</span> = <span class="ruby-constant">Window_BattleSkill</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@help_window</span>, <span class="ruby-ivar">@info_viewport</span>)
+  <span class="ruby-ivar">@skill_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:ok</span>,     <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_skill_ok</span>))
+  <span class="ruby-ivar">@skill_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:cancel</span>, <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_skill_cancel</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_spriteset">
+            
+              <b>create_spriteset</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-create_spriteset" name="method-i-create_spriteset" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スプライトセットの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_spriteset_source')" id="l_method-i-create_spriteset_source">show</a>
+                
+              </p>
+              <div id="method-i-create_spriteset_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 161</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_spriteset</span>
+  <span class="ruby-ivar">@spriteset</span> = <span class="ruby-constant">Spriteset_Battle</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_status_window">
+            
+              <b>create_status_window</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-create_status_window" name="method-i-create_status_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ステータスウィンドウの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_status_window_source')" id="l_method-i-create_status_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_status_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 216</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_status_window</span>
+  <span class="ruby-ivar">@status_window</span> = <span class="ruby-constant">Window_BattleStatus</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">x</span> = <span class="ruby-number">128</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_spriteset">
+            
+              <b>dispose_spriteset</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-dispose_spriteset" name="method-i-dispose_spriteset" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スプライトセットの解放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_spriteset_source')" id="l_method-i-dispose_spriteset_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_spriteset_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_spriteset</span>
+  <span class="ruby-ivar">@spriteset</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-execute_action">
+            
+              <b>execute_action</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-execute_action" name="method-i-execute_action" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>戦闘行動の実行</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-execute_action_source')" id="l_method-i-execute_action_source">show</a>
+                
+              </p>
+              <div id="method-i-execute_action_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 631</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">execute_action</span>
+  <span class="ruby-ivar">@subject</span>.<span class="ruby-identifier">sprite_effect_type</span> = <span class="ruby-value">:whiten</span>
+  <span class="ruby-identifier">use_item</span>
+  <span class="ruby-ivar">@log_window</span>.<span class="ruby-identifier">wait_and_clear</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-invoke_counter_attack">
+            
+              <b>invoke_counter_attack</b>(target, item)
+            
+            <a href="../classes/Scene_Battle.html#method-i-invoke_counter_attack" name="method-i-invoke_counter_attack" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>反撃の発動</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-invoke_counter_attack_source')" id="l_method-i-invoke_counter_attack_source">show</a>
+                
+              </p>
+              <div id="method-i-invoke_counter_attack_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 676</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">invoke_counter_attack</span>(<span class="ruby-identifier">target</span>, <span class="ruby-identifier">item</span>)
+  <span class="ruby-ivar">@log_window</span>.<span class="ruby-identifier">display_counter</span>(<span class="ruby-identifier">target</span>, <span class="ruby-identifier">item</span>)
+  <span class="ruby-identifier">attack_skill</span> = <span class="ruby-identifier">$data_skills</span>[<span class="ruby-identifier">target</span>.<span class="ruby-identifier">attack_skill_id</span>]
+  <span class="ruby-ivar">@subject</span>.<span class="ruby-identifier">item_apply</span>(<span class="ruby-identifier">target</span>, <span class="ruby-identifier">attack_skill</span>)
+  <span class="ruby-identifier">refresh_status</span>
+  <span class="ruby-ivar">@log_window</span>.<span class="ruby-identifier">display_action_results</span>(<span class="ruby-ivar">@subject</span>, <span class="ruby-identifier">attack_skill</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-invoke_item">
+            
+              <b>invoke_item</b>(target, item)
+            
+            <a href="../classes/Scene_Battle.html#method-i-invoke_item" name="method-i-invoke_item" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スキル／アイテムの発動</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-invoke_item_source')" id="l_method-i-invoke_item_source">show</a>
+                
+              </p>
+              <div id="method-i-invoke_item_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 653</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">invoke_item</span>(<span class="ruby-identifier">target</span>, <span class="ruby-identifier">item</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">rand</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">target</span>.<span class="ruby-identifier">item_cnt</span>(<span class="ruby-ivar">@subject</span>, <span class="ruby-identifier">item</span>)
+    <span class="ruby-identifier">invoke_counter_attack</span>(<span class="ruby-identifier">target</span>, <span class="ruby-identifier">item</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">rand</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">target</span>.<span class="ruby-identifier">item_mrf</span>(<span class="ruby-ivar">@subject</span>, <span class="ruby-identifier">item</span>)
+    <span class="ruby-identifier">invoke_magic_reflection</span>(<span class="ruby-identifier">target</span>, <span class="ruby-identifier">item</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">apply_item_effects</span>(<span class="ruby-identifier">apply_substitute</span>(<span class="ruby-identifier">target</span>, <span class="ruby-identifier">item</span>), <span class="ruby-identifier">item</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@subject</span>.<span class="ruby-identifier">last_target_index</span> = <span class="ruby-identifier">target</span>.<span class="ruby-identifier">index</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-invoke_magic_reflection">
+            
+              <b>invoke_magic_reflection</b>(target, item)
+            
+            <a href="../classes/Scene_Battle.html#method-i-invoke_magic_reflection" name="method-i-invoke_magic_reflection" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>魔法反射の発動</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-invoke_magic_reflection_source')" id="l_method-i-invoke_magic_reflection_source">show</a>
+                
+              </p>
+              <div id="method-i-invoke_magic_reflection_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 687</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">invoke_magic_reflection</span>(<span class="ruby-identifier">target</span>, <span class="ruby-identifier">item</span>)
+  <span class="ruby-ivar">@log_window</span>.<span class="ruby-identifier">display_reflection</span>(<span class="ruby-identifier">target</span>, <span class="ruby-identifier">item</span>)
+  <span class="ruby-identifier">apply_item_effects</span>(<span class="ruby-ivar">@subject</span>, <span class="ruby-identifier">item</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move_info_viewport">
+            
+              <b>move_info_viewport</b>(ox)
+            
+            <a href="../classes/Scene_Battle.html#method-i-move_info_viewport" name="method-i-move_info_viewport" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>情報表示ビューポートの移動</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_info_viewport_source')" id="l_method-i-move_info_viewport_source">show</a>
+                
+              </p>
+              <div id="method-i-move_info_viewport_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 139</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move_info_viewport</span>(<span class="ruby-identifier">ox</span>)
+  <span class="ruby-identifier">current_ox</span> = <span class="ruby-ivar">@info_viewport</span>.<span class="ruby-identifier">ox</span>
+  <span class="ruby-ivar">@info_viewport</span>.<span class="ruby-identifier">ox</span> = [<span class="ruby-identifier">ox</span>, <span class="ruby-identifier">current_ox</span> <span class="ruby-operator">+</span> <span class="ruby-number">16</span>].<span class="ruby-identifier">min</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_ox</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">ox</span>
+  <span class="ruby-ivar">@info_viewport</span>.<span class="ruby-identifier">ox</span> = [<span class="ruby-identifier">ox</span>, <span class="ruby-identifier">current_ox</span> <span class="ruby-operator">-</span> <span class="ruby-number">16</span>].<span class="ruby-identifier">max</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_ox</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ox</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-next_command">
+            
+              <b>next_command</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-next_command" name="method-i-next_command" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>次のコマンド入力へ</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-next_command_source')" id="l_method-i-next_command_source">show</a>
+                
+              </p>
+              <div id="method-i-next_command_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 312</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">next_command</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">next_command</span>
+    <span class="ruby-identifier">start_actor_command_selection</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">turn_start</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_actor_cancel">
+            
+              <b>on_actor_cancel</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-on_actor_cancel" name="method-i-on_actor_cancel" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>アクター［キャンセル］</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_actor_cancel_source')" id="l_method-i-on_actor_cancel_source">show</a>
+                
+              </p>
+              <div id="method-i-on_actor_cancel_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 428</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_actor_cancel</span>
+  <span class="ruby-ivar">@actor_window</span>.<span class="ruby-identifier">hide</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-ivar">@actor_command_window</span>.<span class="ruby-identifier">current_symbol</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:skill</span>
+    <span class="ruby-ivar">@skill_window</span>.<span class="ruby-identifier">activate</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:item</span>
+    <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">activate</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_actor_ok">
+            
+              <b>on_actor_ok</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-on_actor_ok" name="method-i-on_actor_ok" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>アクター［決定］</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_actor_ok_source')" id="l_method-i-on_actor_ok_source">show</a>
+                
+              </p>
+              <div id="method-i-on_actor_ok_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 417</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_actor_ok</span>
+  <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">actor</span>.<span class="ruby-identifier">input</span>.<span class="ruby-identifier">target_index</span> = <span class="ruby-ivar">@actor_window</span>.<span class="ruby-identifier">index</span>
+  <span class="ruby-ivar">@actor_window</span>.<span class="ruby-identifier">hide</span>
+  <span class="ruby-ivar">@skill_window</span>.<span class="ruby-identifier">hide</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">hide</span>
+  <span class="ruby-identifier">next_command</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_enemy_cancel">
+            
+              <b>on_enemy_cancel</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-on_enemy_cancel" name="method-i-on_enemy_cancel" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>敵キャラ［キャンセル］</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_enemy_cancel_source')" id="l_method-i-on_enemy_cancel_source">show</a>
+                
+              </p>
+              <div id="method-i-on_enemy_cancel_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 460</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_enemy_cancel</span>
+  <span class="ruby-ivar">@enemy_window</span>.<span class="ruby-identifier">hide</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-ivar">@actor_command_window</span>.<span class="ruby-identifier">current_symbol</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:attack</span>
+    <span class="ruby-ivar">@actor_command_window</span>.<span class="ruby-identifier">activate</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:skill</span>
+    <span class="ruby-ivar">@skill_window</span>.<span class="ruby-identifier">activate</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:item</span>
+    <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">activate</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_enemy_ok">
+            
+              <b>on_enemy_ok</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-on_enemy_ok" name="method-i-on_enemy_ok" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>敵キャラ［決定］</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_enemy_ok_source')" id="l_method-i-on_enemy_ok_source">show</a>
+                
+              </p>
+              <div id="method-i-on_enemy_ok_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 449</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_enemy_ok</span>
+  <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">actor</span>.<span class="ruby-identifier">input</span>.<span class="ruby-identifier">target_index</span> = <span class="ruby-ivar">@enemy_window</span>.<span class="ruby-identifier">enemy</span>.<span class="ruby-identifier">index</span>
+  <span class="ruby-ivar">@enemy_window</span>.<span class="ruby-identifier">hide</span>
+  <span class="ruby-ivar">@skill_window</span>.<span class="ruby-identifier">hide</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">hide</span>
+  <span class="ruby-identifier">next_command</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_item_cancel">
+            
+              <b>on_item_cancel</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-on_item_cancel" name="method-i-on_item_cancel" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>アイテム［キャンセル］</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_item_cancel_source')" id="l_method-i-on_item_cancel_source">show</a>
+                
+              </p>
+              <div id="method-i-on_item_cancel_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 517</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_item_cancel</span>
+  <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">hide</span>
+  <span class="ruby-ivar">@actor_command_window</span>.<span class="ruby-identifier">activate</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_item_ok">
+            
+              <b>on_item_ok</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-on_item_ok" name="method-i-on_item_ok" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>アイテム［決定］</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_item_ok_source')" id="l_method-i-on_item_ok_source">show</a>
+                
+              </p>
+              <div id="method-i-on_item_ok_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 500</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_item_ok</span>
+  <span class="ruby-ivar">@item</span> = <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">item</span>
+  <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">actor</span>.<span class="ruby-identifier">input</span>.<span class="ruby-identifier">set_item</span>(<span class="ruby-ivar">@item</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@item</span>.<span class="ruby-identifier">need_selection?</span>
+    <span class="ruby-ivar">@item_window</span>.<span class="ruby-identifier">hide</span>
+    <span class="ruby-identifier">next_command</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">for_opponent?</span>
+    <span class="ruby-identifier">select_enemy_selection</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">select_actor_selection</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">last_item</span>.<span class="ruby-identifier">object</span> = <span class="ruby-ivar">@item</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_skill_cancel">
+            
+              <b>on_skill_cancel</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-on_skill_cancel" name="method-i-on_skill_cancel" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スキル［キャンセル］</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_skill_cancel_source')" id="l_method-i-on_skill_cancel_source">show</a>
+                
+              </p>
+              <div id="method-i-on_skill_cancel_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 492</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_skill_cancel</span>
+  <span class="ruby-ivar">@skill_window</span>.<span class="ruby-identifier">hide</span>
+  <span class="ruby-ivar">@actor_command_window</span>.<span class="ruby-identifier">activate</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_skill_ok">
+            
+              <b>on_skill_ok</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-on_skill_ok" name="method-i-on_skill_ok" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スキル［決定］</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_skill_ok_source')" id="l_method-i-on_skill_ok_source">show</a>
+                
+              </p>
+              <div id="method-i-on_skill_ok_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 475</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_skill_ok</span>
+  <span class="ruby-ivar">@skill</span> = <span class="ruby-ivar">@skill_window</span>.<span class="ruby-identifier">item</span>
+  <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">actor</span>.<span class="ruby-identifier">input</span>.<span class="ruby-identifier">set_skill</span>(<span class="ruby-ivar">@skill</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">actor</span>.<span class="ruby-identifier">last_skill</span>.<span class="ruby-identifier">object</span> = <span class="ruby-ivar">@skill</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@skill</span>.<span class="ruby-identifier">need_selection?</span>
+    <span class="ruby-ivar">@skill_window</span>.<span class="ruby-identifier">hide</span>
+    <span class="ruby-identifier">next_command</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@skill</span>.<span class="ruby-identifier">for_opponent?</span>
+    <span class="ruby-identifier">select_enemy_selection</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">select_actor_selection</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-post_start">
+            
+              <b>post_start</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-post_start" name="method-i-post_start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>開始後処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-post_start_source')" id="l_method-i-post_start_source">show</a>
+                
+              </p>
+              <div id="method-i-post_start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">post_start</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">battle_start</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pre_terminate">
+            
+              <b>pre_terminate</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-pre_terminate" name="method-i-pre_terminate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>終了前処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pre_terminate_source')" id="l_method-i-pre_terminate_source">show</a>
+                
+              </p>
+              <div id="method-i-pre_terminate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pre_terminate</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">fadeout</span>(<span class="ruby-number">30</span>) <span class="ruby-keyword">if</span> <span class="ruby-constant">SceneManager</span>.<span class="ruby-identifier">scene_is?</span>(<span class="ruby-constant">Scene_Map</span>)
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">fadeout</span>(<span class="ruby-number">60</span>) <span class="ruby-keyword">if</span> <span class="ruby-constant">SceneManager</span>.<span class="ruby-identifier">scene_is?</span>(<span class="ruby-constant">Scene_Title</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-prior_command">
+            
+              <b>prior_command</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-prior_command" name="method-i-prior_command" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>前のコマンド入力へ</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-prior_command_source')" id="l_method-i-prior_command_source">show</a>
+                
+              </p>
+              <div id="method-i-prior_command_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 323</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">prior_command</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">prior_command</span>
+    <span class="ruby-identifier">start_actor_command_selection</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">start_party_command_selection</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-process_action">
+            
+              <b>process_action</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-process_action" name="method-i-process_action" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>戦闘行動の処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-process_action_source')" id="l_method-i-process_action_source">show</a>
+                
+              </p>
+              <div id="method-i-process_action_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 598</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">process_action</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">scene_changing?</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@subject</span> <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@subject</span>.<span class="ruby-identifier">current_action</span>
+    <span class="ruby-ivar">@subject</span> = <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">next_subject</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">turn_end</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@subject</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@subject</span>.<span class="ruby-identifier">current_action</span>
+    <span class="ruby-ivar">@subject</span>.<span class="ruby-identifier">current_action</span>.<span class="ruby-identifier">prepare</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@subject</span>.<span class="ruby-identifier">current_action</span>.<span class="ruby-identifier">valid?</span>
+      <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">open</span>
+      <span class="ruby-identifier">execute_action</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-ivar">@subject</span>.<span class="ruby-identifier">remove_current_action</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">process_action_end</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@subject</span>.<span class="ruby-identifier">current_action</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-process_action_end">
+            
+              <b>process_action_end</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-process_action_end" name="method-i-process_action_end" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>戦闘行動終了時の処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-process_action_end_source')" id="l_method-i-process_action_end_source">show</a>
+                
+              </p>
+              <div id="method-i-process_action_end_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 618</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">process_action_end</span>
+  <span class="ruby-ivar">@subject</span>.<span class="ruby-identifier">on_action_end</span>
+  <span class="ruby-identifier">refresh_status</span>
+  <span class="ruby-ivar">@log_window</span>.<span class="ruby-identifier">display_auto_affected_status</span>(<span class="ruby-ivar">@subject</span>)
+  <span class="ruby-ivar">@log_window</span>.<span class="ruby-identifier">wait_and_clear</span>
+  <span class="ruby-ivar">@log_window</span>.<span class="ruby-identifier">display_current_state</span>(<span class="ruby-ivar">@subject</span>)
+  <span class="ruby-ivar">@log_window</span>.<span class="ruby-identifier">wait_and_clear</span>
+  <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">judge_win_loss</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-process_event">
+            
+              <b>process_event</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-process_event" name="method-i-process_event" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>イベントの処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-process_event_source')" id="l_method-i-process_event_source">show</a>
+                
+              </p>
+              <div id="method-i-process_event_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 569</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">process_event</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-operator">!</span><span class="ruby-identifier">scene_changing?</span>
+    <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">interpreter</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">setup_battle_event</span>
+    <span class="ruby-identifier">wait_for_message</span>
+    <span class="ruby-identifier">wait_for_effect</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">all_dead?</span>
+    <span class="ruby-identifier">process_forced_action</span>
+    <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">judge_win_loss</span>
+    <span class="ruby-keyword">break</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">interpreter</span>.<span class="ruby-identifier">running?</span>
+    <span class="ruby-identifier">update_for_wait</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-process_forced_action">
+            
+              <b>process_forced_action</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-process_forced_action" name="method-i-process_forced_action" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>強制された戦闘行動の処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-process_forced_action_source')" id="l_method-i-process_forced_action_source">show</a>
+                
+              </p>
+              <div id="method-i-process_forced_action_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 585</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">process_forced_action</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">action_forced?</span>
+    <span class="ruby-identifier">last_subject</span> = <span class="ruby-ivar">@subject</span>
+    <span class="ruby-ivar">@subject</span> = <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">action_forced_battler</span>
+    <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">clear_action_force</span>
+    <span class="ruby-identifier">process_action</span>
+    <span class="ruby-ivar">@subject</span> = <span class="ruby-identifier">last_subject</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refresh_status">
+            
+              <b>refresh_status</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-refresh_status" name="method-i-refresh_status" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ステータスウィンドウの情報を更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refresh_status_source')" id="l_method-i-refresh_status_source">show</a>
+                
+              </p>
+              <div id="method-i-refresh_status_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 305</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refresh_status</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-select_actor_selection">
+            
+              <b>select_actor_selection</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-select_actor_selection" name="method-i-select_actor_selection" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>アクター選択の開始</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-select_actor_selection_source')" id="l_method-i-select_actor_selection_source">show</a>
+                
+              </p>
+              <div id="method-i-select_actor_selection_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 409</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">select_actor_selection</span>
+  <span class="ruby-ivar">@actor_window</span>.<span class="ruby-identifier">refresh</span>
+  <span class="ruby-ivar">@actor_window</span>.<span class="ruby-identifier">show</span>.<span class="ruby-identifier">activate</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-select_enemy_selection">
+            
+              <b>select_enemy_selection</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-select_enemy_selection" name="method-i-select_enemy_selection" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>敵キャラ選択の開始</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-select_enemy_selection_source')" id="l_method-i-select_enemy_selection_source">show</a>
+                
+              </p>
+              <div id="method-i-select_enemy_selection_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 441</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">select_enemy_selection</span>
+  <span class="ruby-ivar">@enemy_window</span>.<span class="ruby-identifier">refresh</span>
+  <span class="ruby-ivar">@enemy_window</span>.<span class="ruby-identifier">show</span>.<span class="ruby-identifier">activate</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-show_animation">
+            
+              <b>show_animation</b>(targets, animation_id)
+            
+            <a href="../classes/Scene_Battle.html#method-i-show_animation" name="method-i-show_animation" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>アニメーションの表示</p>
+
+<p>targets      : 対象者の配列 animation_id : アニメーション
+ID（-1: 通常攻撃と同じ）</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-show_animation_source')" id="l_method-i-show_animation_source">show</a>
+                
+              </p>
+              <div id="method-i-show_animation_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 718</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">show_animation</span>(<span class="ruby-identifier">targets</span>, <span class="ruby-identifier">animation_id</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">animation_id</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">show_attack_animation</span>(<span class="ruby-identifier">targets</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">show_normal_animation</span>(<span class="ruby-identifier">targets</span>, <span class="ruby-identifier">animation_id</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@log_window</span>.<span class="ruby-identifier">wait</span>
+  <span class="ruby-identifier">wait_for_animation</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-show_attack_animation">
+            
+              <b>show_attack_animation</b>(targets)
+            
+            <a href="../classes/Scene_Battle.html#method-i-show_attack_animation" name="method-i-show_attack_animation" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>攻撃アニメーションの表示</p>
+
+<p>targets : 対象者の配列
+アクターの場合は二刀流を考慮（左手武器は反転して表示）。
+敵キャラの場合は [敵の通常攻撃]
+効果音を演奏して一瞬待つ。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-show_attack_animation_source')" id="l_method-i-show_attack_animation_source">show</a>
+                
+              </p>
+              <div id="method-i-show_attack_animation_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 734</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">show_attack_animation</span>(<span class="ruby-identifier">targets</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@subject</span>.<span class="ruby-identifier">actor?</span>
+    <span class="ruby-identifier">show_normal_animation</span>(<span class="ruby-identifier">targets</span>, <span class="ruby-ivar">@subject</span>.<span class="ruby-identifier">atk_animation_id1</span>, <span class="ruby-keyword">false</span>)
+    <span class="ruby-identifier">show_normal_animation</span>(<span class="ruby-identifier">targets</span>, <span class="ruby-ivar">@subject</span>.<span class="ruby-identifier">atk_animation_id2</span>, <span class="ruby-keyword">true</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_enemy_attack</span>
+    <span class="ruby-identifier">abs_wait_short</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-show_fast-3F">
+            
+              <b>show_fast?</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-show_fast-3F" name="method-i-show_fast-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>早送り判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-show_fast-3F_source')" id="l_method-i-show_fast-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-show_fast-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">show_fast?</span>
+  <span class="ruby-constant">Input</span>.<span class="ruby-identifier">press?</span>(<span class="ruby-value">:A</span>) <span class="ruby-operator">||</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">press?</span>(<span class="ruby-value">:C</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-show_normal_animation">
+            
+              <b>show_normal_animation</b>(targets, animation_id, mirror = false)
+            
+            <a href="../classes/Scene_Battle.html#method-i-show_normal_animation" name="method-i-show_normal_animation" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>通常アニメーションの表示</p>
+
+<p>targets      : 対象者の配列 animation_id : アニメーション ID
+mirror       : 左右反転</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-show_normal_animation_source')" id="l_method-i-show_normal_animation_source">show</a>
+                
+              </p>
+              <div id="method-i-show_normal_animation_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 750</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">show_normal_animation</span>(<span class="ruby-identifier">targets</span>, <span class="ruby-identifier">animation_id</span>, <span class="ruby-identifier">mirror</span> = <span class="ruby-keyword">false</span>)
+  <span class="ruby-identifier">animation</span> = <span class="ruby-identifier">$data_animations</span>[<span class="ruby-identifier">animation_id</span>]
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">animation</span>
+    <span class="ruby-identifier">targets</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">target</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">target</span>.<span class="ruby-identifier">animation_id</span> = <span class="ruby-identifier">animation_id</span>
+      <span class="ruby-identifier">target</span>.<span class="ruby-identifier">animation_mirror</span> = <span class="ruby-identifier">mirror</span>
+      <span class="ruby-identifier">abs_wait_short</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">animation</span>.<span class="ruby-identifier">to_screen?</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">abs_wait_short</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">animation</span>.<span class="ruby-identifier">to_screen?</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start">
+            
+              <b>start</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-start" name="method-i-start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>開始処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_source')" id="l_method-i-start_source">show</a>
+                
+              </p>
+              <div id="method-i-start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">create_spriteset</span>
+  <span class="ruby-identifier">create_all_windows</span>
+  <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">method_wait_for_message</span> = <span class="ruby-identifier">method</span>(<span class="ruby-value">:wait_for_message</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start_actor_command_selection">
+            
+              <b>start_actor_command_selection</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-start_actor_command_selection" name="method-i-start_actor_command_selection" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>アクターコマンド選択の開始</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_actor_command_selection_source')" id="l_method-i-start_actor_command_selection_source">show</a>
+                
+              </p>
+              <div id="method-i-start_actor_command_selection_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 366</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start_actor_command_selection</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">select</span>(<span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">actor</span>.<span class="ruby-identifier">index</span>)
+  <span class="ruby-ivar">@party_command_window</span>.<span class="ruby-identifier">close</span>
+  <span class="ruby-ivar">@actor_command_window</span>.<span class="ruby-identifier">setup</span>(<span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">actor</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start_party_command_selection">
+            
+              <b>start_party_command_selection</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-start_party_command_selection" name="method-i-start_party_command_selection" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>パーティコマンド選択の開始</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_party_command_selection_source')" id="l_method-i-start_party_command_selection_source">show</a>
+                
+              </p>
+              <div id="method-i-start_party_command_selection_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 334</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start_party_command_selection</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">scene_changing?</span>
+    <span class="ruby-identifier">refresh_status</span>
+    <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">unselect</span>
+    <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">open</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">input_start</span>
+      <span class="ruby-ivar">@actor_command_window</span>.<span class="ruby-identifier">close</span>
+      <span class="ruby-ivar">@party_command_window</span>.<span class="ruby-identifier">setup</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@party_command_window</span>.<span class="ruby-identifier">deactivate</span>
+      <span class="ruby-identifier">turn_start</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-terminate">
+            
+              <b>terminate</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-terminate" name="method-i-terminate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>終了処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-terminate_source')" id="l_method-i-terminate_source">show</a>
+                
+              </p>
+              <div id="method-i-terminate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">terminate</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">dispose_spriteset</span>
+  <span class="ruby-ivar">@info_viewport</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">ME</span>.<span class="ruby-identifier">stop</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-turn_end">
+            
+              <b>turn_end</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-turn_end" name="method-i-turn_end" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ターン終了</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-turn_end_source')" id="l_method-i-turn_end_source">show</a>
+                
+              </p>
+              <div id="method-i-turn_end_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 547</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">turn_end</span>
+  <span class="ruby-identifier">all_battle_members</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">battler</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">battler</span>.<span class="ruby-identifier">on_turn_end</span>
+    <span class="ruby-identifier">refresh_status</span>
+    <span class="ruby-ivar">@log_window</span>.<span class="ruby-identifier">display_auto_affected_status</span>(<span class="ruby-identifier">battler</span>)
+    <span class="ruby-ivar">@log_window</span>.<span class="ruby-identifier">wait_and_clear</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">turn_end</span>
+  <span class="ruby-identifier">process_event</span>
+  <span class="ruby-identifier">start_party_command_selection</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-turn_start">
+            
+              <b>turn_start</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-turn_start" name="method-i-turn_start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ターン開始</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-turn_start_source')" id="l_method-i-turn_start_source">show</a>
+                
+              </p>
+              <div id="method-i-turn_start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 534</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">turn_start</span>
+  <span class="ruby-ivar">@party_command_window</span>.<span class="ruby-identifier">close</span>
+  <span class="ruby-ivar">@actor_command_window</span>.<span class="ruby-identifier">close</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">unselect</span>
+  <span class="ruby-ivar">@subject</span> =  <span class="ruby-keyword">nil</span>
+  <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">turn_start</span>
+  <span class="ruby-ivar">@log_window</span>.<span class="ruby-identifier">wait</span>
+  <span class="ruby-ivar">@log_window</span>.<span class="ruby-identifier">clear</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>フレーム更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">in_turn?</span>
+    <span class="ruby-identifier">process_event</span>
+    <span class="ruby-identifier">process_action</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">judge_win_loss</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_basic">
+            
+              <b>update_basic</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-update_basic" name="method-i-update_basic" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>フレーム更新（基本）</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_basic_source')" id="l_method-i-update_basic_source">show</a>
+                
+              </p>
+              <div id="method-i-update_basic_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_basic</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">$game_timer</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@spriteset</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-identifier">update_info_viewport</span>
+  <span class="ruby-identifier">update_message_open</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_for_wait">
+            
+              <b>update_for_wait</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-update_for_wait" name="method-i-update_for_wait" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>フレーム更新（ウェイト用）</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_for_wait_source')" id="l_method-i-update_for_wait_source">show</a>
+                
+              </p>
+              <div id="method-i-update_for_wait_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_for_wait</span>
+  <span class="ruby-identifier">update_basic</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_info_viewport">
+            
+              <b>update_info_viewport</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-update_info_viewport" name="method-i-update_info_viewport" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>情報表示ビューポートの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_info_viewport_source')" id="l_method-i-update_info_viewport_source">show</a>
+                
+              </p>
+              <div id="method-i-update_info_viewport_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_info_viewport</span>
+  <span class="ruby-identifier">move_info_viewport</span>(<span class="ruby-number">0</span>)   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@party_command_window</span>.<span class="ruby-identifier">active</span>
+  <span class="ruby-identifier">move_info_viewport</span>(<span class="ruby-number">128</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@actor_command_window</span>.<span class="ruby-identifier">active</span>
+  <span class="ruby-identifier">move_info_viewport</span>(<span class="ruby-number">64</span>)  <span class="ruby-keyword">if</span> <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">in_turn?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_message_open">
+            
+              <b>update_message_open</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-update_message_open" name="method-i-update_message_open" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>メッセージウィンドウを開く処理の更新</p>
+
+<p>ステータスウィンドウなどが閉じ終わるまでオープン度を
+0 にする。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_message_open_source')" id="l_method-i-update_message_open_source">show</a>
+                
+              </p>
+              <div id="method-i-update_message_open_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 149</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_message_open</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">busy?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">close?</span>
+    <span class="ruby-ivar">@message_window</span>.<span class="ruby-identifier">openness</span> = <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">close</span>
+    <span class="ruby-ivar">@party_command_window</span>.<span class="ruby-identifier">close</span>
+    <span class="ruby-ivar">@actor_command_window</span>.<span class="ruby-identifier">close</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-use_item">
+            
+              <b>use_item</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-use_item" name="method-i-use_item" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スキル／アイテムの使用</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-use_item_source')" id="l_method-i-use_item_source">show</a>
+                
+              </p>
+              <div id="method-i-use_item_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 640</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">use_item</span>
+  <span class="ruby-identifier">item</span> = <span class="ruby-ivar">@subject</span>.<span class="ruby-identifier">current_action</span>.<span class="ruby-identifier">item</span>
+  <span class="ruby-ivar">@log_window</span>.<span class="ruby-identifier">display_use_item</span>(<span class="ruby-ivar">@subject</span>, <span class="ruby-identifier">item</span>)
+  <span class="ruby-ivar">@subject</span>.<span class="ruby-identifier">use_item</span>(<span class="ruby-identifier">item</span>)
+  <span class="ruby-identifier">refresh_status</span>
+  <span class="ruby-identifier">targets</span> = <span class="ruby-ivar">@subject</span>.<span class="ruby-identifier">current_action</span>.<span class="ruby-identifier">make_targets</span>.<span class="ruby-identifier">compact</span>
+  <span class="ruby-identifier">show_animation</span>(<span class="ruby-identifier">targets</span>, <span class="ruby-identifier">item</span>.<span class="ruby-identifier">animation_id</span>)
+  <span class="ruby-identifier">targets</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">target</span><span class="ruby-operator">|</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">repeats</span>.<span class="ruby-identifier">times</span> { <span class="ruby-identifier">invoke_item</span>(<span class="ruby-identifier">target</span>, <span class="ruby-identifier">item</span>) } }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-wait">
+            
+              <b>wait</b>(duration)
+            
+            <a href="../classes/Scene_Battle.html#method-i-wait" name="method-i-wait" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ウェイト</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-wait_source')" id="l_method-i-wait_source">show</a>
+                
+              </p>
+              <div id="method-i-wait_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">wait</span>(<span class="ruby-identifier">duration</span>)
+  <span class="ruby-identifier">duration</span>.<span class="ruby-identifier">times</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">update_for_wait</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">duration</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span> <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">show_fast?</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-wait_for_animation">
+            
+              <b>wait_for_animation</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-wait_for_animation" name="method-i-wait_for_animation" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>アニメーション表示が終わるまでウェイト</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-wait_for_animation_source')" id="l_method-i-wait_for_animation_source">show</a>
+                
+              </p>
+              <div id="method-i-wait_for_animation_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">wait_for_animation</span>
+  <span class="ruby-identifier">update_for_wait</span>
+  <span class="ruby-identifier">update_for_wait</span> <span class="ruby-keyword">while</span> <span class="ruby-ivar">@spriteset</span>.<span class="ruby-identifier">animation?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-wait_for_effect">
+            
+              <b>wait_for_effect</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-wait_for_effect" name="method-i-wait_for_effect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>エフェクト実行が終わるまでウェイト</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-wait_for_effect_source')" id="l_method-i-wait_for_effect_source">show</a>
+                
+              </p>
+              <div id="method-i-wait_for_effect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">wait_for_effect</span>
+  <span class="ruby-identifier">update_for_wait</span>
+  <span class="ruby-identifier">update_for_wait</span> <span class="ruby-keyword">while</span> <span class="ruby-ivar">@spriteset</span>.<span class="ruby-identifier">effect?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-wait_for_message">
+            
+              <b>wait_for_message</b>()
+            
+            <a href="../classes/Scene_Battle.html#method-i-wait_for_message" name="method-i-wait_for_message" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>メッセージ表示が終わるまでウェイト</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-wait_for_message_source')" id="l_method-i-wait_for_message_source">show</a>
+                
+              </p>
+              <div id="method-i-wait_for_message_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Battle.rb, line 106</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">wait_for_message</span>
+  <span class="ruby-ivar">@message_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-identifier">update_for_wait</span> <span class="ruby-keyword">while</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">visible</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

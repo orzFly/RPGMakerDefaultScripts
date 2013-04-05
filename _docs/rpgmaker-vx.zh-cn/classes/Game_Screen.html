@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Game_Screen</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Game_Screen 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Game_Screen_rb.html">Game_Screen.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>更改色调以及画面闪烁、保存画面全体关系处理数据的类。
+这个类是Game_Map类、Game_Troop类的内部所使用的。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-clear">clear</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-start_fadein">start_fadein</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start_fadeout">start_fadeout</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start_flash">start_flash</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start_shake">start_shake</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start_tone_change">start_tone_change</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_fadein">update_fadein</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_fadeout">update_fadeout</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_flash">update_flash</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_pictures">update_pictures</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_shake">update_shake</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_tone">update_tone</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_weather">update_weather</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-weather">weather</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>brightness</td>
+            <td class='attr-desc'><p>定义实例变量</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>flash_color</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>pictures</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>shake</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>tone</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>weather_max</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>weather_type</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Game_Screen.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>初始化对象</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Screen.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-identifier">clear</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-clear">
+            
+              <b>clear</b>()
+            
+            <a href="../classes/Game_Screen.html#method-i-clear" name="method-i-clear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>清除</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_source')" id="l_method-i-clear_source">show</a>
+                
+              </p>
+              <div id="method-i-clear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Screen.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear</span>
+  <span class="ruby-ivar">@brightness</span> = <span class="ruby-number">255</span>
+  <span class="ruby-ivar">@fadeout_duration</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@fadein_duration</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@tone</span> = <span class="ruby-constant">Tone</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>)
+  <span class="ruby-ivar">@tone_target</span> = <span class="ruby-constant">Tone</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>)
+  <span class="ruby-ivar">@tone_duration</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@flash_color</span> = <span class="ruby-constant">Color</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>)
+  <span class="ruby-ivar">@flash_duration</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@shake_power</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@shake_speed</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@shake_duration</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@shake_direction</span> = <span class="ruby-number">1</span>
+  <span class="ruby-ivar">@shake</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@pictures</span> = []
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">0</span><span class="ruby-operator">..</span><span class="ruby-number">20</span>
+    <span class="ruby-ivar">@pictures</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Game_Picture</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">i</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@weather_type</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@weather_max</span> = <span class="ruby-number">0.0</span>
+  <span class="ruby-ivar">@weather_type_target</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@weather_max_target</span> = <span class="ruby-number">0.0</span>
+  <span class="ruby-ivar">@weather_duration</span> = <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start_fadein">
+            
+              <b>start_fadein</b>(duration)
+            
+            <a href="../classes/Game_Screen.html#method-i-start_fadein" name="method-i-start_fadein" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>开始淡入</p>
+
+<p>duration : 时间</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_fadein_source')" id="l_method-i-start_fadein_source">show</a>
+                
+              </p>
+              <div id="method-i-start_fadein_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Screen.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start_fadein</span>(<span class="ruby-identifier">duration</span>)
+  <span class="ruby-ivar">@fadein_duration</span> = <span class="ruby-identifier">duration</span>
+  <span class="ruby-ivar">@fadeout_duration</span> = <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start_fadeout">
+            
+              <b>start_fadeout</b>(duration)
+            
+            <a href="../classes/Game_Screen.html#method-i-start_fadeout" name="method-i-start_fadeout" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>开始淡出</p>
+
+<p>duration : 时间</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_fadeout_source')" id="l_method-i-start_fadeout_source">show</a>
+                
+              </p>
+              <div id="method-i-start_fadeout_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Screen.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start_fadeout</span>(<span class="ruby-identifier">duration</span>)
+  <span class="ruby-ivar">@fadeout_duration</span> = <span class="ruby-identifier">duration</span>
+  <span class="ruby-ivar">@fadein_duration</span> = <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start_flash">
+            
+              <b>start_flash</b>(color, duration)
+            
+            <a href="../classes/Game_Screen.html#method-i-start_flash" name="method-i-start_flash" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>开始画面闪烁</p>
+
+<p>color    : 色 duration : 时间</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_flash_source')" id="l_method-i-start_flash_source">show</a>
+                
+              </p>
+              <div id="method-i-start_flash_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Screen.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start_flash</span>(<span class="ruby-identifier">color</span>, <span class="ruby-identifier">duration</span>)
+  <span class="ruby-ivar">@flash_color</span> = <span class="ruby-identifier">color</span>.<span class="ruby-identifier">clone</span>
+  <span class="ruby-ivar">@flash_duration</span> = <span class="ruby-identifier">duration</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start_shake">
+            
+              <b>start_shake</b>(power, speed, duration)
+            
+            <a href="../classes/Game_Screen.html#method-i-start_shake" name="method-i-start_shake" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>开始震动</p>
+
+<p>power    : 强度 speed    : 速度 duration : 时间</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_shake_source')" id="l_method-i-start_shake_source">show</a>
+                
+              </p>
+              <div id="method-i-start_shake_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Screen.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start_shake</span>(<span class="ruby-identifier">power</span>, <span class="ruby-identifier">speed</span>, <span class="ruby-identifier">duration</span>)
+  <span class="ruby-ivar">@shake_power</span> = <span class="ruby-identifier">power</span>
+  <span class="ruby-ivar">@shake_speed</span> = <span class="ruby-identifier">speed</span>
+  <span class="ruby-ivar">@shake_duration</span> = <span class="ruby-identifier">duration</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start_tone_change">
+            
+              <b>start_tone_change</b>(tone, duration)
+            
+            <a href="../classes/Game_Screen.html#method-i-start_tone_change" name="method-i-start_tone_change" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>开始更改色调</p>
+
+<p>tone     : 色调 duration : 时间</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_tone_change_source')" id="l_method-i-start_tone_change_source">show</a>
+                
+              </p>
+              <div id="method-i-start_tone_change_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Screen.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start_tone_change</span>(<span class="ruby-identifier">tone</span>, <span class="ruby-identifier">duration</span>)
+  <span class="ruby-ivar">@tone_target</span> = <span class="ruby-identifier">tone</span>.<span class="ruby-identifier">clone</span>
+  <span class="ruby-ivar">@tone_duration</span> = <span class="ruby-identifier">duration</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@tone_duration</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@tone</span> = <span class="ruby-ivar">@tone_target</span>.<span class="ruby-identifier">clone</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Game_Screen.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新画面</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Screen.rb, line 133</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-identifier">update_fadeout</span>
+  <span class="ruby-identifier">update_fadein</span>
+  <span class="ruby-identifier">update_tone</span>
+  <span class="ruby-identifier">update_flash</span>
+  <span class="ruby-identifier">update_shake</span>
+  <span class="ruby-identifier">update_weather</span>
+  <span class="ruby-identifier">update_pictures</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_fadein">
+            
+              <b>update_fadein</b>()
+            
+            <a href="../classes/Game_Screen.html#method-i-update_fadein" name="method-i-update_fadein" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新淡入</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_fadein_source')" id="l_method-i-update_fadein_source">show</a>
+                
+              </p>
+              <div id="method-i-update_fadein_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Screen.rb, line 157</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_fadein</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@fadein_duration</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">1</span>
+    <span class="ruby-identifier">d</span> = <span class="ruby-ivar">@fadein_duration</span>
+    <span class="ruby-ivar">@brightness</span> = (<span class="ruby-ivar">@brightness</span> * (<span class="ruby-identifier">d</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>) <span class="ruby-operator">+</span> <span class="ruby-number">255</span>) <span class="ruby-operator">/</span> <span class="ruby-identifier">d</span>
+    <span class="ruby-ivar">@fadein_duration</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_fadeout">
+            
+              <b>update_fadeout</b>()
+            
+            <a href="../classes/Game_Screen.html#method-i-update_fadeout" name="method-i-update_fadeout" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新淡出</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_fadeout_source')" id="l_method-i-update_fadeout_source">show</a>
+                
+              </p>
+              <div id="method-i-update_fadeout_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Screen.rb, line 146</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_fadeout</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@fadeout_duration</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">1</span>
+    <span class="ruby-identifier">d</span> = <span class="ruby-ivar">@fadeout_duration</span>
+    <span class="ruby-ivar">@brightness</span> = (<span class="ruby-ivar">@brightness</span> * (<span class="ruby-identifier">d</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>)) <span class="ruby-operator">/</span> <span class="ruby-identifier">d</span>
+    <span class="ruby-ivar">@fadeout_duration</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_flash">
+            
+              <b>update_flash</b>()
+            
+            <a href="../classes/Game_Screen.html#method-i-update_flash" name="method-i-update_flash" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新闪烁</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_flash_source')" id="l_method-i-update_flash_source">show</a>
+                
+              </p>
+              <div id="method-i-update_flash_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Screen.rb, line 182</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_flash</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@flash_duration</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">1</span>
+    <span class="ruby-identifier">d</span> = <span class="ruby-ivar">@flash_duration</span>
+    <span class="ruby-ivar">@flash_color</span>.<span class="ruby-identifier">alpha</span> = <span class="ruby-ivar">@flash_color</span>.<span class="ruby-identifier">alpha</span> * (<span class="ruby-identifier">d</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>) <span class="ruby-operator">/</span> <span class="ruby-identifier">d</span>
+    <span class="ruby-ivar">@flash_duration</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_pictures">
+            
+              <b>update_pictures</b>()
+            
+            <a href="../classes/Game_Screen.html#method-i-update_pictures" name="method-i-update_pictures" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新图片</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_pictures_source')" id="l_method-i-update_pictures_source">show</a>
+                
+              </p>
+              <div id="method-i-update_pictures_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Screen.rb, line 230</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_pictures</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">picture</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@pictures</span>
+    <span class="ruby-identifier">picture</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_shake">
+            
+              <b>update_shake</b>()
+            
+            <a href="../classes/Game_Screen.html#method-i-update_shake" name="method-i-update_shake" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新震动</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_shake_source')" id="l_method-i-update_shake_source">show</a>
+                
+              </p>
+              <div id="method-i-update_shake_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Screen.rb, line 193</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_shake</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@shake_duration</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">1</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@shake</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">delta</span> = (<span class="ruby-ivar">@shake_power</span> * <span class="ruby-ivar">@shake_speed</span> * <span class="ruby-ivar">@shake_direction</span>) <span class="ruby-operator">/</span> <span class="ruby-number">10.0</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@shake_duration</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-number">1</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@shake</span> * (<span class="ruby-ivar">@shake</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">delta</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>
+      <span class="ruby-ivar">@shake</span> = <span class="ruby-number">0</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@shake</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">delta</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@shake</span> <span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@shake_power</span> * <span class="ruby-number">2</span>
+      <span class="ruby-ivar">@shake_direction</span> = <span class="ruby-number">-1</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@shake</span> <span class="ruby-operator">&lt;</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@shake_power</span> * <span class="ruby-number">2</span>
+      <span class="ruby-ivar">@shake_direction</span> = <span class="ruby-number">1</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@shake_duration</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">1</span>
+      <span class="ruby-ivar">@shake_duration</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_tone">
+            
+              <b>update_tone</b>()
+            
+            <a href="../classes/Game_Screen.html#method-i-update_tone" name="method-i-update_tone" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新色调</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_tone_source')" id="l_method-i-update_tone_source">show</a>
+                
+              </p>
+              <div id="method-i-update_tone_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Screen.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_tone</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@tone_duration</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">1</span>
+    <span class="ruby-identifier">d</span> = <span class="ruby-ivar">@tone_duration</span>
+    <span class="ruby-ivar">@tone</span>.<span class="ruby-identifier">red</span> = (<span class="ruby-ivar">@tone</span>.<span class="ruby-identifier">red</span> * (<span class="ruby-identifier">d</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>) <span class="ruby-operator">+</span> <span class="ruby-ivar">@tone_target</span>.<span class="ruby-identifier">red</span>) <span class="ruby-operator">/</span> <span class="ruby-identifier">d</span>
+    <span class="ruby-ivar">@tone</span>.<span class="ruby-identifier">green</span> = (<span class="ruby-ivar">@tone</span>.<span class="ruby-identifier">green</span> * (<span class="ruby-identifier">d</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>) <span class="ruby-operator">+</span> <span class="ruby-ivar">@tone_target</span>.<span class="ruby-identifier">green</span>) <span class="ruby-operator">/</span> <span class="ruby-identifier">d</span>
+    <span class="ruby-ivar">@tone</span>.<span class="ruby-identifier">blue</span> = (<span class="ruby-ivar">@tone</span>.<span class="ruby-identifier">blue</span> * (<span class="ruby-identifier">d</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>) <span class="ruby-operator">+</span> <span class="ruby-ivar">@tone_target</span>.<span class="ruby-identifier">blue</span>) <span class="ruby-operator">/</span> <span class="ruby-identifier">d</span>
+    <span class="ruby-ivar">@tone</span>.<span class="ruby-identifier">gray</span> = (<span class="ruby-ivar">@tone</span>.<span class="ruby-identifier">gray</span> * (<span class="ruby-identifier">d</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>) <span class="ruby-operator">+</span> <span class="ruby-ivar">@tone_target</span>.<span class="ruby-identifier">gray</span>) <span class="ruby-operator">/</span> <span class="ruby-identifier">d</span>
+    <span class="ruby-ivar">@tone_duration</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_weather">
+            
+              <b>update_weather</b>()
+            
+            <a href="../classes/Game_Screen.html#method-i-update_weather" name="method-i-update_weather" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新天气</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_weather_source')" id="l_method-i-update_weather_source">show</a>
+                
+              </p>
+              <div id="method-i-update_weather_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Screen.rb, line 216</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_weather</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@weather_duration</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">1</span>
+    <span class="ruby-identifier">d</span> = <span class="ruby-ivar">@weather_duration</span>
+    <span class="ruby-ivar">@weather_max</span> = (<span class="ruby-ivar">@weather_max</span> * (<span class="ruby-identifier">d</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>) <span class="ruby-operator">+</span> <span class="ruby-ivar">@weather_max_target</span>) <span class="ruby-operator">/</span> <span class="ruby-identifier">d</span>
+    <span class="ruby-ivar">@weather_duration</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@weather_duration</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+      <span class="ruby-ivar">@weather_type</span> = <span class="ruby-ivar">@weather_type_target</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-weather">
+            
+              <b>weather</b>(type, power, duration)
+            
+            <a href="../classes/Game_Screen.html#method-i-weather" name="method-i-weather" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>设定天气</p>
+
+<p>type     : 类型 power    : 强度 duration : 时间</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-weather_source')" id="l_method-i-weather_source">show</a>
+                
+              </p>
+              <div id="method-i-weather_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Screen.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">weather</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">power</span>, <span class="ruby-identifier">duration</span>)
+  <span class="ruby-ivar">@weather_type_target</span> = <span class="ruby-identifier">type</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@weather_type_target</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@weather_type</span> = <span class="ruby-ivar">@weather_type_target</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@weather_type_target</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@weather_max_target</span> = <span class="ruby-number">0.0</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@weather_max_target</span> = (<span class="ruby-identifier">power</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span>) * <span class="ruby-number">4.0</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@weather_duration</span> = <span class="ruby-identifier">duration</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@weather_duration</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@weather_type</span> = <span class="ruby-ivar">@weather_type_target</span>
+    <span class="ruby-ivar">@weather_max</span> = <span class="ruby-ivar">@weather_max_target</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

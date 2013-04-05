@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_Shop</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_Shop 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_Shop_rb.html">Scene_Shop.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>处理商店画面的类。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-main">main</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_buy">update_buy</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_command">update_command</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_number">update_number</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_sell">update_sell</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-main">
+            
+              <b>main</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-main" name="method-i-main" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>主处理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-main_source')" id="l_method-i-main_source">show</a>
+                
+              </p>
+              <div id="method-i-main_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">main</span>
+  <span class="ruby-comment"># 生成帮助窗口</span>
+  <span class="ruby-ivar">@help_window</span> = <span class="ruby-constant">Window_Help</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-comment"># 生成指令窗口</span>
+  <span class="ruby-ivar">@command_window</span> = <span class="ruby-constant">Window_ShopCommand</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-comment"># 生成金钱窗口</span>
+  <span class="ruby-ivar">@gold_window</span> = <span class="ruby-constant">Window_Gold</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">x</span> = <span class="ruby-number">480</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">y</span> = <span class="ruby-number">64</span>
+  <span class="ruby-comment"># 生成时间窗口</span>
+  <span class="ruby-ivar">@dummy_window</span> = <span class="ruby-constant">Window_Base</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">128</span>, <span class="ruby-number">640</span>, <span class="ruby-number">352</span>)
+  <span class="ruby-comment"># 生成购买窗口</span>
+  <span class="ruby-ivar">@buy_window</span> = <span class="ruby-constant">Window_ShopBuy</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">shop_goods</span>)
+  <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">help_window</span> = <span class="ruby-ivar">@help_window</span>
+  <span class="ruby-comment"># 生成卖出窗口</span>
+  <span class="ruby-ivar">@sell_window</span> = <span class="ruby-constant">Window_ShopSell</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">help_window</span> = <span class="ruby-ivar">@help_window</span>
+  <span class="ruby-comment"># 生成数量输入窗口</span>
+  <span class="ruby-ivar">@number_window</span> = <span class="ruby-constant">Window_ShopNumber</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-comment"># 生成状态窗口</span>
+  <span class="ruby-ivar">@status_window</span> = <span class="ruby-constant">Window_ShopStatus</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-comment"># 执行过渡</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">transition</span>
+  <span class="ruby-comment"># 主循环</span>
+  <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-comment"># 刷新游戏画面</span>
+    <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># 刷新输入信息</span>
+    <span class="ruby-constant">Input</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># 刷新画面</span>
+    <span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># 如果画面切换的话就中断循环</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$scene</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">self</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 准备过渡</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">freeze</span>
+  <span class="ruby-comment"># 释放窗口</span>
+  <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@dummy_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新画面</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-comment"># 刷新窗口</span>
+  <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@dummy_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-comment"># 指令窗口激活的情况下: 调用 update_command</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">active</span>
+    <span class="ruby-identifier">update_command</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 购买窗口激活的情况下: 调用 update_buy</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">active</span>
+    <span class="ruby-identifier">update_buy</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 卖出窗口激活的情况下: 调用 update_sell</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">active</span>
+    <span class="ruby-identifier">update_sell</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 个数输入窗口激活的情况下: 调用 update_number</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">active</span>
+    <span class="ruby-identifier">update_number</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_buy">
+            
+              <b>update_buy</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-update_buy" name="method-i-update_buy" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新画面 (购买窗口激活的情况下)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_buy_source')" id="l_method-i-update_buy_source">show</a>
+                
+              </p>
+              <div id="method-i-update_buy_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 149</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_buy</span>
+  <span class="ruby-comment"># 设置状态窗口的物品</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">item</span> = <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">item</span>
+  <span class="ruby-comment"># 按下 B 键的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>)
+    <span class="ruby-comment"># 演奏取消 SE</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cancel_se</span>)
+    <span class="ruby-comment"># 窗口状态转向初期模式</span>
+    <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@dummy_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">item</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-comment"># 删除帮助文本</span>
+    <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">set_text</span>(<span class="ruby-string">&quot;&quot;</span>)
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 按下 C 键的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+    <span class="ruby-comment"># 获取物品</span>
+    <span class="ruby-ivar">@item</span> = <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">item</span>
+    <span class="ruby-comment"># 物品无效的情况下、或者价格在所持金以上的情况下</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@item</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">price</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">gold</span>
+      <span class="ruby-comment"># 演奏冻结 SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">buzzer_se</span>)
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># 获取物品所持数</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-ivar">@item</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Item</span>
+      <span class="ruby-identifier">number</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">item_number</span>(<span class="ruby-ivar">@item</span>.<span class="ruby-identifier">id</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Weapon</span>
+      <span class="ruby-identifier">number</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">weapon_number</span>(<span class="ruby-ivar">@item</span>.<span class="ruby-identifier">id</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Armor</span>
+      <span class="ruby-identifier">number</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">armor_number</span>(<span class="ruby-ivar">@item</span>.<span class="ruby-identifier">id</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># 如果已经拥有了 99 个情况下</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">number</span> <span class="ruby-operator">==</span> <span class="ruby-number">99</span>
+      <span class="ruby-comment"># 演奏冻结 SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">buzzer_se</span>)
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># 演奏确定 SE</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">decision_se</span>)
+    <span class="ruby-comment"># 计算可以最多购买的数量</span>
+    <span class="ruby-identifier">max</span> = <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">price</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-number">99</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">gold</span> <span class="ruby-operator">/</span> <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">price</span>
+    <span class="ruby-identifier">max</span> = [<span class="ruby-identifier">max</span>, <span class="ruby-number">99</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">number</span>].<span class="ruby-identifier">min</span>
+    <span class="ruby-comment"># 窗口状态转向数值输入模式</span>
+    <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">set</span>(<span class="ruby-ivar">@item</span>, <span class="ruby-identifier">max</span>, <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">price</span>)
+    <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_command">
+            
+              <b>update_command</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-update_command" name="method-i-update_command" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新画面 (指令窗口激活的情况下)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_command_source')" id="l_method-i-update_command_source">show</a>
+                
+              </p>
+              <div id="method-i-update_command_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 104</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_command</span>
+  <span class="ruby-comment"># 按下 B 键的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>)
+    <span class="ruby-comment"># 演奏取消 SE</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cancel_se</span>)
+    <span class="ruby-comment"># 切换到地图画面</span>
+    <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Map</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 按下 C 键的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+    <span class="ruby-comment"># 命令窗口光标位置分支</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">index</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">0</span>  <span class="ruby-comment"># 购买</span>
+      <span class="ruby-comment"># 演奏确定 SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">decision_se</span>)
+      <span class="ruby-comment"># 窗口状态转向购买模式</span>
+      <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-ivar">@dummy_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">refresh</span>
+      <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>  <span class="ruby-comment"># 卖出</span>
+      <span class="ruby-comment"># 演奏确定 SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">decision_se</span>)
+      <span class="ruby-comment"># 窗口状态转向卖出模式</span>
+      <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-ivar">@dummy_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">refresh</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>  <span class="ruby-comment"># 取消</span>
+      <span class="ruby-comment"># 演奏确定 SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">decision_se</span>)
+      <span class="ruby-comment"># 切换到地图画面</span>
+      <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Map</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_number">
+            
+              <b>update_number</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-update_number" name="method-i-update_number" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新画面 (个数输入窗口激活的情况下)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_number_source')" id="l_method-i-update_number_source">show</a>
+                
+              </p>
+              <div id="method-i-update_number_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 262</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_number</span>
+  <span class="ruby-comment"># 按下 B 键的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>)
+    <span class="ruby-comment"># 演奏取消 SE</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cancel_se</span>)
+    <span class="ruby-comment"># 设置个数输入窗口为不活动·非可视状态</span>
+    <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-comment"># 命令窗口光标位置分支</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">index</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">0</span>  <span class="ruby-comment"># 购买</span>
+      <span class="ruby-comment"># 窗口状态转向购买模式</span>
+      <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>  <span class="ruby-comment"># 卖出</span>
+      <span class="ruby-comment"># 窗口状态转向卖出模式</span>
+      <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 按下 C 键的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+    <span class="ruby-comment"># 演奏商店 SE</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">shop_se</span>)
+    <span class="ruby-comment"># 设置个数输入窗口为不活动·非可视状态</span>
+    <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-comment"># 命令窗口光标位置分支</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">index</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">0</span>  <span class="ruby-comment"># 购买</span>
+      <span class="ruby-comment"># 购买处理</span>
+      <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">lose_gold</span>(<span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">number</span> * <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">price</span>)
+      <span class="ruby-keyword">case</span> <span class="ruby-ivar">@item</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Item</span>
+        <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">gain_item</span>(<span class="ruby-ivar">@item</span>.<span class="ruby-identifier">id</span>, <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">number</span>)
+      <span class="ruby-keyword">when</span> <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Weapon</span>
+        <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">gain_weapon</span>(<span class="ruby-ivar">@item</span>.<span class="ruby-identifier">id</span>, <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">number</span>)
+      <span class="ruby-keyword">when</span> <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Armor</span>
+        <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">gain_armor</span>(<span class="ruby-ivar">@item</span>.<span class="ruby-identifier">id</span>, <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">number</span>)
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-comment"># 刷新各窗口</span>
+      <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">refresh</span>
+      <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">refresh</span>
+      <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">refresh</span>
+      <span class="ruby-comment"># 窗口状态转向购买模式</span>
+      <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>  <span class="ruby-comment"># 卖出</span>
+      <span class="ruby-comment"># 卖出处理</span>
+      <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">gain_gold</span>(<span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">number</span> * (<span class="ruby-ivar">@item</span>.<span class="ruby-identifier">price</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>))
+      <span class="ruby-keyword">case</span> <span class="ruby-ivar">@item</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Item</span>
+        <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">lose_item</span>(<span class="ruby-ivar">@item</span>.<span class="ruby-identifier">id</span>, <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">number</span>)
+      <span class="ruby-keyword">when</span> <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Weapon</span>
+        <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">lose_weapon</span>(<span class="ruby-ivar">@item</span>.<span class="ruby-identifier">id</span>, <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">number</span>)
+      <span class="ruby-keyword">when</span> <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Armor</span>
+        <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">lose_armor</span>(<span class="ruby-ivar">@item</span>.<span class="ruby-identifier">id</span>, <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">number</span>)
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-comment"># 刷新各窗口</span>
+      <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">refresh</span>
+      <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">refresh</span>
+      <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">refresh</span>
+      <span class="ruby-comment"># 窗口状态转向卖出模式</span>
+      <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_sell">
+            
+              <b>update_sell</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-update_sell" name="method-i-update_sell" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>画面更新 (卖出窗口激活的情况下)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_sell_source')" id="l_method-i-update_sell_source">show</a>
+                
+              </p>
+              <div id="method-i-update_sell_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 209</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_sell</span>
+  <span class="ruby-comment"># 按下 B 键的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>)
+    <span class="ruby-comment"># 演奏取消 SE</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cancel_se</span>)
+    <span class="ruby-comment"># 窗口状态转向初期模式</span>
+    <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@dummy_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">item</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-comment"># 删除帮助文本</span>
+    <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">set_text</span>(<span class="ruby-string">&quot;&quot;</span>)
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 按下 C 键的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+    <span class="ruby-comment"># 获取物品</span>
+    <span class="ruby-ivar">@item</span> = <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">item</span>
+    <span class="ruby-comment"># 设置状态窗口的物品</span>
+    <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">item</span> = <span class="ruby-ivar">@item</span>
+    <span class="ruby-comment"># 物品无效的情况下、或者价格为 0 (不能卖出) 的情况下</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@item</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">price</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+      <span class="ruby-comment"># 演奏冻结 SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">buzzer_se</span>)
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># 演奏确定 SE</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">decision_se</span>)
+    <span class="ruby-comment"># 获取物品的所持数</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-ivar">@item</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Item</span>
+      <span class="ruby-identifier">number</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">item_number</span>(<span class="ruby-ivar">@item</span>.<span class="ruby-identifier">id</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Weapon</span>
+      <span class="ruby-identifier">number</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">weapon_number</span>(<span class="ruby-ivar">@item</span>.<span class="ruby-identifier">id</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Armor</span>
+      <span class="ruby-identifier">number</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">armor_number</span>(<span class="ruby-ivar">@item</span>.<span class="ruby-identifier">id</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># 最大卖出个数 = 物品的所持数</span>
+    <span class="ruby-identifier">max</span> = <span class="ruby-identifier">number</span>
+    <span class="ruby-comment"># 窗口状态转向个数输入模式</span>
+    <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">set</span>(<span class="ruby-ivar">@item</span>, <span class="ruby-identifier">max</span>, <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">price</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>)
+    <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

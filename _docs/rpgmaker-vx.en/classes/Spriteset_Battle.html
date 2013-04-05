@@ -1,0 +1,1250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Spriteset_Battle</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Spriteset_Battle 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Spriteset_Battle_rb.html">Spriteset_Battle.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This class brings together battle screen sprites. It’s used within the <a
+href="Scene_Battle.html">Scene_Battle</a> class.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-animation-3F">animation?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-create_actors">create_actors</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_battleback">create_battleback</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_battlefloor">create_battlefloor</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_enemies">create_enemies</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_pictures">create_pictures</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_timer">create_timer</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_viewports">create_viewports</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dispose">dispose</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_actors">dispose_actors</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_battleback">dispose_battleback</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_battleback_bitmap">dispose_battleback_bitmap</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_battlefloor">dispose_battlefloor</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_enemies">dispose_enemies</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_pictures">dispose_pictures</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_timer">dispose_timer</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_viewports">dispose_viewports</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_actors">update_actors</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_battleback">update_battleback</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_battlefloor">update_battlefloor</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_enemies">update_enemies</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_pictures">update_pictures</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_timer">update_timer</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_viewports">update_viewports</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Object Initialization</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-identifier">create_viewports</span>
+  <span class="ruby-identifier">create_battleback</span>
+  <span class="ruby-identifier">create_battlefloor</span>
+  <span class="ruby-identifier">create_enemies</span>
+  <span class="ruby-identifier">create_actors</span>
+  <span class="ruby-identifier">create_pictures</span>
+  <span class="ruby-identifier">create_timer</span>
+  <span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-animation-3F">
+            
+              <b>animation?</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-animation-3F" name="method-i-animation-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if animation is being displayed</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-animation-3F_source')" id="l_method-i-animation-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-animation-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 263</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">animation?</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">sprite</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@enemy_sprites</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@actor_sprites</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">animation?</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_actors">
+            
+              <b>create_actors</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-create_actors" name="method-i-create_actors" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Actor Sprite</p>
+
+<p>By default, the actor image is not displayed, but a dummy sprite is created
+for treating enemies and allies the same, if required.</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_actors_source')" id="l_method-i-create_actors_source">show</a>
+                
+              </p>
+              <div id="method-i-create_actors_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_actors</span>
+  <span class="ruby-ivar">@actor_sprites</span> = []
+  <span class="ruby-ivar">@actor_sprites</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Sprite_Battler</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport1</span>))
+  <span class="ruby-ivar">@actor_sprites</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Sprite_Battler</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport1</span>))
+  <span class="ruby-ivar">@actor_sprites</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Sprite_Battler</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport1</span>))
+  <span class="ruby-ivar">@actor_sprites</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Sprite_Battler</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport1</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_battleback">
+            
+              <b>create_battleback</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-create_battleback" name="method-i-create_battleback" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Battleback Sprite</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_battleback_source')" id="l_method-i-create_battleback_source">show</a>
+                
+              </p>
+              <div id="method-i-create_battleback_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_battleback</span>
+  <span class="ruby-identifier">source</span> = <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">background_bitmap</span>
+  <span class="ruby-identifier">bitmap</span> = <span class="ruby-constant">Bitmap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">640</span>, <span class="ruby-number">480</span>)
+  <span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">stretch_blt</span>(<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">rect</span>, <span class="ruby-identifier">source</span>, <span class="ruby-identifier">source</span>.<span class="ruby-identifier">rect</span>)
+  <span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">radial_blur</span>(<span class="ruby-number">90</span>, <span class="ruby-number">12</span>)
+  <span class="ruby-ivar">@battleback_sprite</span> = <span class="ruby-constant">Sprite</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport1</span>)
+  <span class="ruby-ivar">@battleback_sprite</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-identifier">bitmap</span>
+  <span class="ruby-ivar">@battleback_sprite</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-number">320</span>
+  <span class="ruby-ivar">@battleback_sprite</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-number">240</span>
+  <span class="ruby-ivar">@battleback_sprite</span>.<span class="ruby-identifier">x</span> = <span class="ruby-number">272</span>
+  <span class="ruby-ivar">@battleback_sprite</span>.<span class="ruby-identifier">y</span> = <span class="ruby-number">176</span>
+  <span class="ruby-ivar">@battleback_sprite</span>.<span class="ruby-identifier">wave_amp</span> = <span class="ruby-number">8</span>
+  <span class="ruby-ivar">@battleback_sprite</span>.<span class="ruby-identifier">wave_length</span> = <span class="ruby-number">240</span>
+  <span class="ruby-ivar">@battleback_sprite</span>.<span class="ruby-identifier">wave_speed</span> = <span class="ruby-number">120</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_battlefloor">
+            
+              <b>create_battlefloor</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-create_battlefloor" name="method-i-create_battlefloor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Battlefloor Sprite</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_battlefloor_source')" id="l_method-i-create_battlefloor_source">show</a>
+                
+              </p>
+              <div id="method-i-create_battlefloor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_battlefloor</span>
+  <span class="ruby-ivar">@battlefloor_sprite</span> = <span class="ruby-constant">Sprite</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport1</span>)
+  <span class="ruby-ivar">@battlefloor_sprite</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-constant">Cache</span>.<span class="ruby-identifier">system</span>(<span class="ruby-string">&quot;BattleFloor&quot;</span>)
+  <span class="ruby-ivar">@battlefloor_sprite</span>.<span class="ruby-identifier">x</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@battlefloor_sprite</span>.<span class="ruby-identifier">y</span> = <span class="ruby-number">192</span>
+  <span class="ruby-ivar">@battlefloor_sprite</span>.<span class="ruby-identifier">z</span> = <span class="ruby-number">1</span>
+  <span class="ruby-ivar">@battlefloor_sprite</span>.<span class="ruby-identifier">opacity</span> = <span class="ruby-number">128</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_enemies">
+            
+              <b>create_enemies</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-create_enemies" name="method-i-create_enemies" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Enemy Sprite</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_enemies_source')" id="l_method-i-create_enemies_source">show</a>
+                
+              </p>
+              <div id="method-i-create_enemies_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_enemies</span>
+  <span class="ruby-ivar">@enemy_sprites</span> = []
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">enemy</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">members</span>.<span class="ruby-identifier">reverse</span>
+    <span class="ruby-ivar">@enemy_sprites</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Sprite_Battler</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport1</span>, <span class="ruby-identifier">enemy</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_pictures">
+            
+              <b>create_pictures</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-create_pictures" name="method-i-create_pictures" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Picture Sprite</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_pictures_source')" id="l_method-i-create_pictures_source">show</a>
+                
+              </p>
+              <div id="method-i-create_pictures_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_pictures</span>
+  <span class="ruby-ivar">@picture_sprites</span> = []
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-number">20</span>
+    <span class="ruby-ivar">@picture_sprites</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Sprite_Picture</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport2</span>,
+      <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">screen</span>.<span class="ruby-identifier">pictures</span>[<span class="ruby-identifier">i</span>]))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_timer">
+            
+              <b>create_timer</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-create_timer" name="method-i-create_timer" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Timer Sprite</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_timer_source')" id="l_method-i-create_timer_source">show</a>
+                
+              </p>
+              <div id="method-i-create_timer_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_timer</span>
+  <span class="ruby-ivar">@timer_sprite</span> = <span class="ruby-constant">Sprite_Timer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport2</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_viewports">
+            
+              <b>create_viewports</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-create_viewports" name="method-i-create_viewports" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Viewport</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_viewports_source')" id="l_method-i-create_viewports_source">show</a>
+                
+              </p>
+              <div id="method-i-create_viewports_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_viewports</span>
+  <span class="ruby-ivar">@viewport1</span> = <span class="ruby-constant">Viewport</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">544</span>, <span class="ruby-number">416</span>)
+  <span class="ruby-ivar">@viewport2</span> = <span class="ruby-constant">Viewport</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">544</span>, <span class="ruby-number">416</span>)
+  <span class="ruby-ivar">@viewport3</span> = <span class="ruby-constant">Viewport</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">544</span>, <span class="ruby-number">416</span>)
+  <span class="ruby-ivar">@viewport2</span>.<span class="ruby-identifier">z</span> = <span class="ruby-number">50</span>
+  <span class="ruby-ivar">@viewport3</span>.<span class="ruby-identifier">z</span> = <span class="ruby-number">100</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose">
+            
+              <b>dispose</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-dispose" name="method-i-dispose" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Dispose</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_source')" id="l_method-i-dispose_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose</span>
+  <span class="ruby-identifier">dispose_battleback_bitmap</span>
+  <span class="ruby-identifier">dispose_battleback</span>
+  <span class="ruby-identifier">dispose_battlefloor</span>
+  <span class="ruby-identifier">dispose_enemies</span>
+  <span class="ruby-identifier">dispose_actors</span>
+  <span class="ruby-identifier">dispose_pictures</span>
+  <span class="ruby-identifier">dispose_timer</span>
+  <span class="ruby-identifier">dispose_viewports</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_actors">
+            
+              <b>dispose_actors</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-dispose_actors" name="method-i-dispose_actors" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Dispose of Actor Sprite</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_actors_source')" id="l_method-i-dispose_actors_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_actors_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 152</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_actors</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">sprite</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@actor_sprites</span>
+    <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_battleback">
+            
+              <b>dispose_battleback</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-dispose_battleback" name="method-i-dispose_battleback" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Dispose of Battleback Sprite</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_battleback_source')" id="l_method-i-dispose_battleback_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_battleback_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_battleback</span>
+  <span class="ruby-ivar">@battleback_sprite</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_battleback_bitmap">
+            
+              <b>dispose_battleback_bitmap</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-dispose_battleback_bitmap" name="method-i-dispose_battleback_bitmap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Dispose of Battleback Bitmap</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_battleback_bitmap_source')" id="l_method-i-dispose_battleback_bitmap_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_battleback_bitmap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_battleback_bitmap</span>
+  <span class="ruby-ivar">@battleback_sprite</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_battlefloor">
+            
+              <b>dispose_battlefloor</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-dispose_battlefloor" name="method-i-dispose_battlefloor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Dispose of Battlefloor Sprite</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_battlefloor_source')" id="l_method-i-dispose_battlefloor_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_battlefloor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 136</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_battlefloor</span>
+  <span class="ruby-ivar">@battlefloor_sprite</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_enemies">
+            
+              <b>dispose_enemies</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-dispose_enemies" name="method-i-dispose_enemies" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Dispose of Enemy Sprite</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_enemies_source')" id="l_method-i-dispose_enemies_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_enemies_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 143</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_enemies</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">sprite</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@enemy_sprites</span>
+    <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_pictures">
+            
+              <b>dispose_pictures</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-dispose_pictures" name="method-i-dispose_pictures" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Dispose of Picture Sprite</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_pictures_source')" id="l_method-i-dispose_pictures_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_pictures_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 161</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_pictures</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">sprite</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@picture_sprites</span>
+    <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_timer">
+            
+              <b>dispose_timer</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-dispose_timer" name="method-i-dispose_timer" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Dispose of Timer Sprite</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_timer_source')" id="l_method-i-dispose_timer_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_timer_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 170</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_timer</span>
+  <span class="ruby-ivar">@timer_sprite</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_viewports">
+            
+              <b>dispose_viewports</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-dispose_viewports" name="method-i-dispose_viewports" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Dispose of Viewport</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_viewports_source')" id="l_method-i-dispose_viewports_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_viewports_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 177</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_viewports</span>
+  <span class="ruby-ivar">@viewport1</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@viewport2</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@viewport3</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Frame Update</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 186</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-identifier">update_battleback</span>
+  <span class="ruby-identifier">update_battlefloor</span>
+  <span class="ruby-identifier">update_enemies</span>
+  <span class="ruby-identifier">update_actors</span>
+  <span class="ruby-identifier">update_pictures</span>
+  <span class="ruby-identifier">update_timer</span>
+  <span class="ruby-identifier">update_viewports</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_actors">
+            
+              <b>update_actors</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-update_actors" name="method-i-update_actors" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Actor Sprite</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_actors_source')" id="l_method-i-update_actors_source">show</a>
+                
+              </p>
+              <div id="method-i-update_actors_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 222</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_actors</span>
+  <span class="ruby-ivar">@actor_sprites</span>[<span class="ruby-number">0</span>].<span class="ruby-identifier">battler</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">members</span>[<span class="ruby-number">0</span>]
+  <span class="ruby-ivar">@actor_sprites</span>[<span class="ruby-number">1</span>].<span class="ruby-identifier">battler</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">members</span>[<span class="ruby-number">1</span>]
+  <span class="ruby-ivar">@actor_sprites</span>[<span class="ruby-number">2</span>].<span class="ruby-identifier">battler</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">members</span>[<span class="ruby-number">2</span>]
+  <span class="ruby-ivar">@actor_sprites</span>[<span class="ruby-number">3</span>].<span class="ruby-identifier">battler</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">members</span>[<span class="ruby-number">3</span>]
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">sprite</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@actor_sprites</span>
+    <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_battleback">
+            
+              <b>update_battleback</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-update_battleback" name="method-i-update_battleback" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Battleback</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_battleback_source')" id="l_method-i-update_battleback_source">show</a>
+                
+              </p>
+              <div id="method-i-update_battleback_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 199</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_battleback</span>
+  <span class="ruby-ivar">@battleback_sprite</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_battlefloor">
+            
+              <b>update_battlefloor</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-update_battlefloor" name="method-i-update_battlefloor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Battlefloor</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_battlefloor_source')" id="l_method-i-update_battlefloor_source">show</a>
+                
+              </p>
+              <div id="method-i-update_battlefloor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 206</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_battlefloor</span>
+  <span class="ruby-ivar">@battlefloor_sprite</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_enemies">
+            
+              <b>update_enemies</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-update_enemies" name="method-i-update_enemies" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Enemy Sprite</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_enemies_source')" id="l_method-i-update_enemies_source">show</a>
+                
+              </p>
+              <div id="method-i-update_enemies_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 213</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_enemies</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">sprite</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@enemy_sprites</span>
+    <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_pictures">
+            
+              <b>update_pictures</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-update_pictures" name="method-i-update_pictures" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>*Update Picture Sprite</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_pictures_source')" id="l_method-i-update_pictures_source">show</a>
+                
+              </p>
+              <div id="method-i-update_pictures_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 234</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_pictures</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">sprite</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@picture_sprites</span>
+    <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_timer">
+            
+              <b>update_timer</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-update_timer" name="method-i-update_timer" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Timer Sprite</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_timer_source')" id="l_method-i-update_timer_source">show</a>
+                
+              </p>
+              <div id="method-i-update_timer_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 243</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_timer</span>
+  <span class="ruby-ivar">@timer_sprite</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_viewports">
+            
+              <b>update_viewports</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-update_viewports" name="method-i-update_viewports" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Viewport</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_viewports_source')" id="l_method-i-update_viewports_source">show</a>
+                
+              </p>
+              <div id="method-i-update_viewports_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 250</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_viewports</span>
+  <span class="ruby-ivar">@viewport1</span>.<span class="ruby-identifier">tone</span> = <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">screen</span>.<span class="ruby-identifier">tone</span>
+  <span class="ruby-ivar">@viewport1</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">screen</span>.<span class="ruby-identifier">shake</span>
+  <span class="ruby-ivar">@viewport2</span>.<span class="ruby-identifier">color</span> = <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">screen</span>.<span class="ruby-identifier">flash_color</span>
+  <span class="ruby-ivar">@viewport3</span>.<span class="ruby-identifier">color</span>.<span class="ruby-identifier">set</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">255</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">screen</span>.<span class="ruby-identifier">brightness</span>)
+  <span class="ruby-ivar">@viewport1</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@viewport2</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@viewport3</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_Title 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Scene_Base.html">Scene_Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_Title_rb.html">Scene_Title.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>タイトル画面の処理を行うクラスです。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-center_sprite">center_sprite</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-close_command_window">close_command_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-command_continue">command_continue</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-command_new_game">command_new_game</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-command_shutdown">command_shutdown</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_background">create_background</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_command_window">create_command_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_foreground">create_foreground</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dispose_background">dispose_background</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_foreground">dispose_foreground</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-draw_game_title">draw_game_title</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-play_title_music">play_title_music</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-start">start</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-terminate">terminate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-transition_speed">transition_speed</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-center_sprite">
+            
+              <b>center_sprite</b>(sprite)
+            
+            <a href="../classes/Scene_Title.html#method-i-center_sprite" name="method-i-center_sprite" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スプライトを画面中央に移動</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-center_sprite_source')" id="l_method-i-center_sprite_source">show</a>
+                
+              </p>
+              <div id="method-i-center_sprite_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Title.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">center_sprite</span>(<span class="ruby-identifier">sprite</span>)
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">x</span> = <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">y</span> = <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-close_command_window">
+            
+              <b>close_command_window</b>()
+            
+            <a href="../classes/Scene_Title.html#method-i-close_command_window" name="method-i-close_command_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>コマンドウィンドウを閉じる</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-close_command_window_source')" id="l_method-i-close_command_window_source">show</a>
+                
+              </p>
+              <div id="method-i-close_command_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Title.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">close_command_window</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">close</span>
+  <span class="ruby-identifier">update</span> <span class="ruby-keyword">until</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">close?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-command_continue">
+            
+              <b>command_continue</b>()
+            
+            <a href="../classes/Scene_Title.html#method-i-command_continue" name="method-i-command_continue" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>コマンド［コンティニュー］</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-command_continue_source')" id="l_method-i-command_continue_source">show</a>
+                
+              </p>
+              <div id="method-i-command_continue_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Title.rb, line 128</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">command_continue</span>
+  <span class="ruby-identifier">close_command_window</span>
+  <span class="ruby-constant">SceneManager</span>.<span class="ruby-identifier">call</span>(<span class="ruby-constant">Scene_Load</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-command_new_game">
+            
+              <b>command_new_game</b>()
+            
+            <a href="../classes/Scene_Title.html#method-i-command_new_game" name="method-i-command_new_game" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>コマンド［ニューゲーム］</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-command_new_game_source')" id="l_method-i-command_new_game_source">show</a>
+                
+              </p>
+              <div id="method-i-command_new_game_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Title.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">command_new_game</span>
+  <span class="ruby-constant">DataManager</span>.<span class="ruby-identifier">setup_new_game</span>
+  <span class="ruby-identifier">close_command_window</span>
+  <span class="ruby-identifier">fadeout_all</span>
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">autoplay</span>
+  <span class="ruby-constant">SceneManager</span>.<span class="ruby-identifier">goto</span>(<span class="ruby-constant">Scene_Map</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-command_shutdown">
+            
+              <b>command_shutdown</b>()
+            
+            <a href="../classes/Scene_Title.html#method-i-command_shutdown" name="method-i-command_shutdown" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>コマンド［シャットダウン］</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-command_shutdown_source')" id="l_method-i-command_shutdown_source">show</a>
+                
+              </p>
+              <div id="method-i-command_shutdown_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Title.rb, line 136</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">command_shutdown</span>
+  <span class="ruby-identifier">close_command_window</span>
+  <span class="ruby-identifier">fadeout_all</span>
+  <span class="ruby-constant">SceneManager</span>.<span class="ruby-identifier">exit</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_background">
+            
+              <b>create_background</b>()
+            
+            <a href="../classes/Scene_Title.html#method-i-create_background" name="method-i-create_background" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>背景の作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_background_source')" id="l_method-i-create_background_source">show</a>
+                
+              </p>
+              <div id="method-i-create_background_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Title.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_background</span>
+  <span class="ruby-ivar">@sprite1</span> = <span class="ruby-constant">Sprite</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@sprite1</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-constant">Cache</span>.<span class="ruby-identifier">title1</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">title1_name</span>)
+  <span class="ruby-ivar">@sprite2</span> = <span class="ruby-constant">Sprite</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@sprite2</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-constant">Cache</span>.<span class="ruby-identifier">title2</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">title2_name</span>)
+  <span class="ruby-identifier">center_sprite</span>(<span class="ruby-ivar">@sprite1</span>)
+  <span class="ruby-identifier">center_sprite</span>(<span class="ruby-ivar">@sprite2</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_command_window">
+            
+              <b>create_command_window</b>()
+            
+            <a href="../classes/Scene_Title.html#method-i-create_command_window" name="method-i-create_command_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>コマンドウィンドウの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_command_window_source')" id="l_method-i-create_command_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_command_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Title.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_command_window</span>
+  <span class="ruby-ivar">@command_window</span> = <span class="ruby-constant">Window_TitleCommand</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:new_game</span>, <span class="ruby-identifier">method</span>(<span class="ruby-value">:command_new_game</span>))
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:continue</span>, <span class="ruby-identifier">method</span>(<span class="ruby-value">:command_continue</span>))
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:shutdown</span>, <span class="ruby-identifier">method</span>(<span class="ruby-value">:command_shutdown</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_foreground">
+            
+              <b>create_foreground</b>()
+            
+            <a href="../classes/Scene_Title.html#method-i-create_foreground" name="method-i-create_foreground" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>前景の作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_foreground_source')" id="l_method-i-create_foreground_source">show</a>
+                
+              </p>
+              <div id="method-i-create_foreground_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Title.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_foreground</span>
+  <span class="ruby-ivar">@foreground_sprite</span> = <span class="ruby-constant">Sprite</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@foreground_sprite</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-constant">Bitmap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span>, <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">height</span>)
+  <span class="ruby-ivar">@foreground_sprite</span>.<span class="ruby-identifier">z</span> = <span class="ruby-number">100</span>
+  <span class="ruby-identifier">draw_game_title</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">opt_draw_title</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_background">
+            
+              <b>dispose_background</b>()
+            
+            <a href="../classes/Scene_Title.html#method-i-dispose_background" name="method-i-dispose_background" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>背景の解放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_background_source')" id="l_method-i-dispose_background_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_background_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Title.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_background</span>
+  <span class="ruby-ivar">@sprite1</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@sprite1</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@sprite2</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@sprite2</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_foreground">
+            
+              <b>dispose_foreground</b>()
+            
+            <a href="../classes/Scene_Title.html#method-i-dispose_foreground" name="method-i-dispose_foreground" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>前景の解放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_foreground_source')" id="l_method-i-dispose_foreground_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_foreground_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Title.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_foreground</span>
+  <span class="ruby-ivar">@foreground_sprite</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@foreground_sprite</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-draw_game_title">
+            
+              <b>draw_game_title</b>()
+            
+            <a href="../classes/Scene_Title.html#method-i-draw_game_title" name="method-i-draw_game_title" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ゲームタイトルの描画</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-draw_game_title_source')" id="l_method-i-draw_game_title_source">show</a>
+                
+              </p>
+              <div id="method-i-draw_game_title_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Title.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">draw_game_title</span>
+  <span class="ruby-ivar">@foreground_sprite</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">font</span>.<span class="ruby-identifier">size</span> = <span class="ruby-number">48</span>
+  <span class="ruby-identifier">rect</span> = <span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span>, <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>)
+  <span class="ruby-ivar">@foreground_sprite</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">draw_text</span>(<span class="ruby-identifier">rect</span>, <span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">game_title</span>, <span class="ruby-number">1</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-play_title_music">
+            
+              <b>play_title_music</b>()
+            
+            <a href="../classes/Scene_Title.html#method-i-play_title_music" name="method-i-play_title_music" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>タイトル画面の音楽演奏</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-play_title_music_source')" id="l_method-i-play_title_music_source">show</a>
+                
+              </p>
+              <div id="method-i-play_title_music_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Title.rb, line 145</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">play_title_music</span>
+  <span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">title_bgm</span>.<span class="ruby-identifier">play</span>
+  <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">BGS</span>.<span class="ruby-identifier">stop</span>
+  <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">ME</span>.<span class="ruby-identifier">stop</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start">
+            
+              <b>start</b>()
+            
+            <a href="../classes/Scene_Title.html#method-i-start" name="method-i-start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>開始処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_source')" id="l_method-i-start_source">show</a>
+                
+              </p>
+              <div id="method-i-start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Title.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-constant">SceneManager</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">freeze</span>
+  <span class="ruby-identifier">create_background</span>
+  <span class="ruby-identifier">create_foreground</span>
+  <span class="ruby-identifier">create_command_window</span>
+  <span class="ruby-identifier">play_title_music</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-terminate">
+            
+              <b>terminate</b>()
+            
+            <a href="../classes/Scene_Title.html#method-i-terminate" name="method-i-terminate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>終了処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-terminate_source')" id="l_method-i-terminate_source">show</a>
+                
+              </p>
+              <div id="method-i-terminate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Title.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">terminate</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-constant">SceneManager</span>.<span class="ruby-identifier">snapshot_for_background</span>
+  <span class="ruby-identifier">dispose_background</span>
+  <span class="ruby-identifier">dispose_foreground</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-transition_speed">
+            
+              <b>transition_speed</b>()
+            
+            <a href="../classes/Scene_Title.html#method-i-transition_speed" name="method-i-transition_speed" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>トランジション速度の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-transition_speed_source')" id="l_method-i-transition_speed_source">show</a>
+                
+              </p>
+              <div id="method-i-transition_speed_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Title.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">transition_speed</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">20</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

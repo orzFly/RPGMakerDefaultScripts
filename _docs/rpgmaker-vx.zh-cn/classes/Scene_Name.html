@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_Name</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_Name 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Scene_Base.html">Scene_Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_Name_rb.html">Scene_Name.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>处理姓名输入画面的类。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-return_scene">return_scene</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-start">start</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-terminate">terminate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-return_scene">
+            
+              <b>return_scene</b>()
+            
+            <a href="../classes/Scene_Name.html#method-i-return_scene" name="method-i-return_scene" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>返回前一个画面</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-return_scene_source')" id="l_method-i-return_scene_source">show</a>
+                
+              </p>
+              <div id="method-i-return_scene_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Name.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">return_scene</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Map</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start">
+            
+              <b>start</b>()
+            
+            <a href="../classes/Scene_Name.html#method-i-start" name="method-i-start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>开始处理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_source')" id="l_method-i-start_source">show</a>
+                
+              </p>
+              <div id="method-i-start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Name.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">create_menu_background</span>
+  <span class="ruby-ivar">@actor</span> = <span class="ruby-identifier">$game_actors</span>[<span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">name_actor_id</span>]
+  <span class="ruby-ivar">@edit_window</span> = <span class="ruby-constant">Window_NameEdit</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@actor</span>, <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">name_max_char</span>)
+  <span class="ruby-ivar">@input_window</span> = <span class="ruby-constant">Window_NameInput</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-terminate">
+            
+              <b>terminate</b>()
+            
+            <a href="../classes/Scene_Name.html#method-i-terminate" name="method-i-terminate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>结束处理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-terminate_source')" id="l_method-i-terminate_source">show</a>
+                
+              </p>
+              <div id="method-i-terminate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Name.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">terminate</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">dispose_menu_background</span>
+  <span class="ruby-ivar">@edit_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@input_window</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Scene_Name.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新画面</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Name.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">update_menu_background</span>
+  <span class="ruby-ivar">@edit_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@input_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@edit_window</span>.<span class="ruby-identifier">index</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>             <span class="ruby-comment"># 文字位置不在左端</span>
+      <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_cancel</span>
+      <span class="ruby-ivar">@edit_window</span>.<span class="ruby-identifier">back</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@input_window</span>.<span class="ruby-identifier">is_decision</span>          <span class="ruby-comment"># 光标位置在 [决定] 的情况</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@edit_window</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;&quot;</span>          <span class="ruby-comment"># 姓名为空的情况</span>
+        <span class="ruby-ivar">@edit_window</span>.<span class="ruby-identifier">restore_default</span>      <span class="ruby-comment"># 返回默认姓名</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@edit_window</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;&quot;</span>
+          <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_buzzer</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_decision</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_decision</span>
+        <span class="ruby-ivar">@actor</span>.<span class="ruby-identifier">name</span> = <span class="ruby-ivar">@edit_window</span>.<span class="ruby-identifier">name</span>   <span class="ruby-comment"># 变更角色姓名</span>
+        <span class="ruby-identifier">return_scene</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@input_window</span>.<span class="ruby-identifier">character</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;&quot;</span>   <span class="ruby-comment"># 文字不为空的情况</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@edit_window</span>.<span class="ruby-identifier">index</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@edit_window</span>.<span class="ruby-identifier">max_char</span>    <span class="ruby-comment"># 文字位置在右端</span>
+        <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_buzzer</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_decision</span>
+        <span class="ruby-ivar">@edit_window</span>.<span class="ruby-identifier">add</span>(<span class="ruby-ivar">@input_window</span>.<span class="ruby-identifier">character</span>)       <span class="ruby-comment"># 追加文字</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

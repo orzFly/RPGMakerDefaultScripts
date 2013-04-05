@@ -1,0 +1,1464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Game_Party</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Game_Party 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Game_Party_rb.html">Game_Party.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>处理同伴的类。包含金钱以及物品的信息。本类的实例
+请参考 $game_party。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-add_actor">add_actor</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-all_dead-3F">all_dead?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-armor_number">armor_number</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-check_map_slip_damage">check_map_slip_damage</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-clear_actions">clear_actions</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-gain_armor">gain_armor</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-gain_gold">gain_gold</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-gain_item">gain_item</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-gain_weapon">gain_weapon</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-increase_steps">increase_steps</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-inputable-3F">inputable?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-item_can_use-3F">item_can_use?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-item_number">item_number</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-lose_armor">lose_armor</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-lose_gold">lose_gold</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-lose_item">lose_item</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-lose_weapon">lose_weapon</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-max_level">max_level</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-random_target_actor">random_target_actor</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-random_target_actor_hp0">random_target_actor_hp0</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-refresh">refresh</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-remove_actor">remove_actor</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-setup_battle_test_members">setup_battle_test_members</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-setup_starting_members">setup_starting_members</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-smooth_target_actor">smooth_target_actor</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-weapon_number">weapon_number</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>actors</td>
+            <td class='attr-desc'><p>定义实例变量</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>gold</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>steps</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Game_Party.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>初始化对像</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-comment"># 建立角色序列</span>
+  <span class="ruby-ivar">@actors</span> = []
+  <span class="ruby-comment"># 初始化金钱与步数</span>
+  <span class="ruby-ivar">@gold</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@steps</span> = <span class="ruby-number">0</span>
+  <span class="ruby-comment"># 生成物品、武器、防具的所持数 hash</span>
+  <span class="ruby-ivar">@items</span> = {}
+  <span class="ruby-ivar">@weapons</span> = {}
+  <span class="ruby-ivar">@armors</span> = {}
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-add_actor">
+            
+              <b>add_actor</b>(actor_id)
+            
+            <a href="../classes/Game_Party.html#method-i-add_actor" name="method-i-add_actor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>加入同伴</p>
+
+<p>actor_id : 角色 ID</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_actor_source')" id="l_method-i-add_actor_source">show</a>
+                
+              </p>
+              <div id="method-i-add_actor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 111</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_actor</span>(<span class="ruby-identifier">actor_id</span>)
+  <span class="ruby-comment"># 获取角色</span>
+  <span class="ruby-identifier">actor</span> = <span class="ruby-identifier">$game_actors</span>[<span class="ruby-identifier">actor_id</span>]
+  <span class="ruby-comment"># 同伴人数未满 4 人、本角色不在队伍中的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@actors</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">4</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-ivar">@actors</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">actor</span>)
+    <span class="ruby-comment"># 添加角色</span>
+    <span class="ruby-ivar">@actors</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">actor</span>)
+    <span class="ruby-comment"># 还原主角</span>
+    <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">refresh</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-all_dead-3F">
+            
+              <b>all_dead?</b>()
+            
+            <a href="../classes/Game_Party.html#method-i-all_dead-3F" name="method-i-all_dead-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>全灭判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-all_dead-3F_source')" id="l_method-i-all_dead-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-all_dead-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 298</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">all_dead?</span>
+  <span class="ruby-comment"># 同伴人数为 0 的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">actors</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 同伴中无人 HP 在 0 以上</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">actor</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@actors</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">hp</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 全灭</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-armor_number">
+            
+              <b>armor_number</b>(armor_id)
+            
+            <a href="../classes/Game_Party.html#method-i-armor_number" name="method-i-armor_number" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取防具所持数</p>
+
+<p>armor_id : 防具 ID</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-armor_number_source')" id="l_method-i-armor_number_source">show</a>
+                
+              </p>
+              <div id="method-i-armor_number_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 180</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">armor_number</span>(<span class="ruby-identifier">armor_id</span>)
+  <span class="ruby-comment"># 如果 hash 个数数值不存在就返回 0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@armors</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">armor_id</span>) <span class="ruby-operator">?</span> <span class="ruby-ivar">@armors</span>[<span class="ruby-identifier">armor_id</span>] <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-check_map_slip_damage">
+            
+              <b>check_map_slip_damage</b>()
+            
+            <a href="../classes/Game_Party.html#method-i-check_map_slip_damage" name="method-i-check_map_slip_damage" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>检查连续伤害 (地图用)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-check_map_slip_damage_source')" id="l_method-i-check_map_slip_damage_source">show</a>
+                
+              </p>
+              <div id="method-i-check_map_slip_damage_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 316</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">check_map_slip_damage</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">actor</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@actors</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">hp</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">slip_damage?</span>
+      <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">hp</span> <span class="ruby-operator">-=</span> [<span class="ruby-identifier">actor</span>.<span class="ruby-identifier">maxhp</span> <span class="ruby-operator">/</span> <span class="ruby-number">100</span>, <span class="ruby-number">1</span>].<span class="ruby-identifier">max</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">hp</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+        <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">actor_collapse_se</span>)
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">$game_screen</span>.<span class="ruby-identifier">start_flash</span>(<span class="ruby-constant">Color</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">255</span>,<span class="ruby-number">0</span>,<span class="ruby-number">0</span>,<span class="ruby-number">128</span>), <span class="ruby-number">4</span>)
+      <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">gameover</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">all_dead?</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear_actions">
+            
+              <b>clear_actions</b>()
+            
+            <a href="../classes/Game_Party.html#method-i-clear_actions" name="method-i-clear_actions" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>清除全体的行动</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_actions_source')" id="l_method-i-clear_actions_source">show</a>
+                
+              </p>
+              <div id="method-i-clear_actions_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 275</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear_actions</span>
+  <span class="ruby-comment"># 清除全体同伴的行为</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">actor</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@actors</span>
+    <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">current_action</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-gain_armor">
+            
+              <b>gain_armor</b>(armor_id, n)
+            
+            <a href="../classes/Game_Party.html#method-i-gain_armor" name="method-i-gain_armor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>增加防具 (减少)</p>
+
+<p>armor_id : 防具 ID n        : 个数</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-gain_armor_source')" id="l_method-i-gain_armor_source">show</a>
+                
+              </p>
+              <div id="method-i-gain_armor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 214</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">gain_armor</span>(<span class="ruby-identifier">armor_id</span>, <span class="ruby-identifier">n</span>)
+  <span class="ruby-comment"># 更新 hash 的个数数据</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">armor_id</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@armors</span>[<span class="ruby-identifier">armor_id</span>] = [[<span class="ruby-identifier">armor_number</span>(<span class="ruby-identifier">armor_id</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">n</span>, <span class="ruby-number">0</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">99</span>].<span class="ruby-identifier">min</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-gain_gold">
+            
+              <b>gain_gold</b>(n)
+            
+            <a href="../classes/Game_Party.html#method-i-gain_gold" name="method-i-gain_gold" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>增加金钱 (减少)</p>
+
+<p>n : 金额</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-gain_gold_source')" id="l_method-i-gain_gold_source">show</a>
+                
+              </p>
+              <div id="method-i-gain_gold_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">gain_gold</span>(<span class="ruby-identifier">n</span>)
+  <span class="ruby-ivar">@gold</span> = [[<span class="ruby-ivar">@gold</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">n</span>, <span class="ruby-number">0</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">9999999</span>].<span class="ruby-identifier">min</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-gain_item">
+            
+              <b>gain_item</b>(item_id, n)
+            
+            <a href="../classes/Game_Party.html#method-i-gain_item" name="method-i-gain_item" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>增加物品 (减少)</p>
+
+<p>item_id : 物品 ID n       : 个数</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-gain_item_source')" id="l_method-i-gain_item_source">show</a>
+                
+              </p>
+              <div id="method-i-gain_item_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 190</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">gain_item</span>(<span class="ruby-identifier">item_id</span>, <span class="ruby-identifier">n</span>)
+  <span class="ruby-comment"># 更新 hash 的个数数据</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">item_id</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@items</span>[<span class="ruby-identifier">item_id</span>] = [[<span class="ruby-identifier">item_number</span>(<span class="ruby-identifier">item_id</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">n</span>, <span class="ruby-number">0</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">99</span>].<span class="ruby-identifier">min</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-gain_weapon">
+            
+              <b>gain_weapon</b>(weapon_id, n)
+            
+            <a href="../classes/Game_Party.html#method-i-gain_weapon" name="method-i-gain_weapon" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>增加武器 (减少)</p>
+
+<p>weapon_id : 武器 ID n         : 个数</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-gain_weapon_source')" id="l_method-i-gain_weapon_source">show</a>
+                
+              </p>
+              <div id="method-i-gain_weapon_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 202</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">gain_weapon</span>(<span class="ruby-identifier">weapon_id</span>, <span class="ruby-identifier">n</span>)
+  <span class="ruby-comment"># 更新 hash 的个数数据</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">weapon_id</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@weapons</span>[<span class="ruby-identifier">weapon_id</span>] = [[<span class="ruby-identifier">weapon_number</span>(<span class="ruby-identifier">weapon_id</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">n</span>, <span class="ruby-number">0</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">99</span>].<span class="ruby-identifier">min</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-increase_steps">
+            
+              <b>increase_steps</b>()
+            
+            <a href="../classes/Game_Party.html#method-i-increase_steps" name="method-i-increase_steps" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>增加步数</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-increase_steps_source')" id="l_method-i-increase_steps_source">show</a>
+                
+              </p>
+              <div id="method-i-increase_steps_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 154</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">increase_steps</span>
+  <span class="ruby-ivar">@steps</span> = [<span class="ruby-ivar">@steps</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span>, <span class="ruby-number">9999999</span>].<span class="ruby-identifier">min</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-inputable-3F">
+            
+              <b>inputable?</b>()
+            
+            <a href="../classes/Game_Party.html#method-i-inputable-3F" name="method-i-inputable-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>可以输入命令的判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-inputable-3F_source')" id="l_method-i-inputable-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-inputable-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 285</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">inputable?</span>
+  <span class="ruby-comment"># 如果一可以输入命令就返回 true</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">actor</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@actors</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">inputable?</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-item_can_use-3F">
+            
+              <b>item_can_use?</b>(item_id)
+            
+            <a href="../classes/Game_Party.html#method-i-item_can_use-3F" name="method-i-item_can_use-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判断物品可以使用</p>
+
+<p>item_id : 物品 ID</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-item_can_use-3F_source')" id="l_method-i-item_can_use-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-item_can_use-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 255</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">item_can_use?</span>(<span class="ruby-identifier">item_id</span>)
+  <span class="ruby-comment"># 物品个数为 0 的情况</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">item_number</span>(<span class="ruby-identifier">item_id</span>) <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-comment"># 不能使用</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 获取可以使用的时候</span>
+  <span class="ruby-identifier">occasion</span> = <span class="ruby-identifier">$data_items</span>[<span class="ruby-identifier">item_id</span>].<span class="ruby-identifier">occasion</span>
+  <span class="ruby-comment"># 战斗的情况</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">in_battle</span>
+    <span class="ruby-comment"># 可以使用时为 0 (平时) 或者是 1 (战斗时) 可以使用</span>
+    <span class="ruby-keyword">return</span> (<span class="ruby-identifier">occasion</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">occasion</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 可以使用时为 0 (平时) 或者是 2 (菜单时) 可以使用</span>
+  <span class="ruby-keyword">return</span> (<span class="ruby-identifier">occasion</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">occasion</span> <span class="ruby-operator">==</span> <span class="ruby-number">2</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-item_number">
+            
+              <b>item_number</b>(item_id)
+            
+            <a href="../classes/Game_Party.html#method-i-item_number" name="method-i-item_number" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取物品的所持数</p>
+
+<p>item_id : 物品 ID</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-item_number_source')" id="l_method-i-item_number_source">show</a>
+                
+              </p>
+              <div id="method-i-item_number_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 162</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">item_number</span>(<span class="ruby-identifier">item_id</span>)
+  <span class="ruby-comment"># 如果 hash 个数数值不存在就返回 0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@items</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">item_id</span>) <span class="ruby-operator">?</span> <span class="ruby-ivar">@items</span>[<span class="ruby-identifier">item_id</span>] <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-lose_armor">
+            
+              <b>lose_armor</b>(armor_id, n)
+            
+            <a href="../classes/Game_Party.html#method-i-lose_armor" name="method-i-lose_armor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>减少防具</p>
+
+<p>armor_id : 防具 ID n        : 个数</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-lose_armor_source')" id="l_method-i-lose_armor_source">show</a>
+                
+              </p>
+              <div id="method-i-lose_armor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 246</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">lose_armor</span>(<span class="ruby-identifier">armor_id</span>, <span class="ruby-identifier">n</span>)
+  <span class="ruby-comment"># 调用 gain_armor 的数值逆转</span>
+  <span class="ruby-identifier">gain_armor</span>(<span class="ruby-identifier">armor_id</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">n</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-lose_gold">
+            
+              <b>lose_gold</b>(n)
+            
+            <a href="../classes/Game_Party.html#method-i-lose_gold" name="method-i-lose_gold" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>减少金钱</p>
+
+<p>n : 金额</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-lose_gold_source')" id="l_method-i-lose_gold_source">show</a>
+                
+              </p>
+              <div id="method-i-lose_gold_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 146</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">lose_gold</span>(<span class="ruby-identifier">n</span>)
+  <span class="ruby-comment"># 调用数值逆转 gain_gold </span>
+  <span class="ruby-identifier">gain_gold</span>(<span class="ruby-operator">-</span><span class="ruby-identifier">n</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-lose_item">
+            
+              <b>lose_item</b>(item_id, n)
+            
+            <a href="../classes/Game_Party.html#method-i-lose_item" name="method-i-lose_item" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>减少物品</p>
+
+<p>item_id : 物品 ID n       : 个数</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-lose_item_source')" id="l_method-i-lose_item_source">show</a>
+                
+              </p>
+              <div id="method-i-lose_item_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 226</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">lose_item</span>(<span class="ruby-identifier">item_id</span>, <span class="ruby-identifier">n</span>)
+  <span class="ruby-comment"># 调用 gain_item 的数值逆转</span>
+  <span class="ruby-identifier">gain_item</span>(<span class="ruby-identifier">item_id</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">n</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-lose_weapon">
+            
+              <b>lose_weapon</b>(weapon_id, n)
+            
+            <a href="../classes/Game_Party.html#method-i-lose_weapon" name="method-i-lose_weapon" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>减少武器</p>
+
+<p>weapon_id : 武器 ID n         : 个数</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-lose_weapon_source')" id="l_method-i-lose_weapon_source">show</a>
+                
+              </p>
+              <div id="method-i-lose_weapon_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 236</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">lose_weapon</span>(<span class="ruby-identifier">weapon_id</span>, <span class="ruby-identifier">n</span>)
+  <span class="ruby-comment"># 调用 gain_weapon 的数值逆转</span>
+  <span class="ruby-identifier">gain_weapon</span>(<span class="ruby-identifier">weapon_id</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">n</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-max_level">
+            
+              <b>max_level</b>()
+            
+            <a href="../classes/Game_Party.html#method-i-max_level" name="method-i-max_level" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取最大等级</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-max_level_source')" id="l_method-i-max_level_source">show</a>
+                
+              </p>
+              <div id="method-i-max_level_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">max_level</span>
+  <span class="ruby-comment"># 同伴人数为 0 的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@actors</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 初始化本地变量 level</span>
+  <span class="ruby-identifier">level</span> = <span class="ruby-number">0</span>
+  <span class="ruby-comment"># 求得同伴的最大等级</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">actor</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@actors</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">level</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">level</span>
+      <span class="ruby-identifier">level</span> = <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">level</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">level</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-random_target_actor">
+            
+              <b>random_target_actor</b>(hp0 = false)
+            
+            <a href="../classes/Game_Party.html#method-i-random_target_actor" name="method-i-random_target_actor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>对像角色的随机确定</p>
+
+<p>hp0 : 限制为 HP 0 的角色</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-random_target_actor_source')" id="l_method-i-random_target_actor_source">show</a>
+                
+              </p>
+              <div id="method-i-random_target_actor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 333</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">random_target_actor</span>(<span class="ruby-identifier">hp0</span> = <span class="ruby-keyword">false</span>)
+  <span class="ruby-comment"># 初始化轮流</span>
+  <span class="ruby-identifier">roulette</span> = []
+  <span class="ruby-comment"># 循环</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">actor</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@actors</span>
+    <span class="ruby-comment"># 符合条件的场合</span>
+    <span class="ruby-keyword">if</span> (<span class="ruby-keyword">not</span> <span class="ruby-identifier">hp0</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">exist?</span>) <span class="ruby-keyword">or</span> (<span class="ruby-identifier">hp0</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">hp0?</span>)
+      <span class="ruby-comment"># 获取角色职业的位置 [位置]</span>
+      <span class="ruby-identifier">position</span> = <span class="ruby-identifier">$data_classes</span>[<span class="ruby-identifier">actor</span>.<span class="ruby-identifier">class_id</span>].<span class="ruby-identifier">position</span>
+      <span class="ruby-comment"># 前卫的话 n = 4、中卫的话 n = 3、后卫的话 n = 2</span>
+      <span class="ruby-identifier">n</span> = <span class="ruby-number">4</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">position</span>
+      <span class="ruby-comment"># 添加角色的轮流 n 回</span>
+      <span class="ruby-identifier">n</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span>
+        <span class="ruby-identifier">roulette</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">actor</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 轮流大小为 0 的情况</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">roulette</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 转轮盘赌，决定角色</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">roulette</span>[<span class="ruby-identifier">rand</span>(<span class="ruby-identifier">roulette</span>.<span class="ruby-identifier">size</span>)]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-random_target_actor_hp0">
+            
+              <b>random_target_actor_hp0</b>()
+            
+            <a href="../classes/Game_Party.html#method-i-random_target_actor_hp0" name="method-i-random_target_actor_hp0" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>对像角色的随机确定 (HP 0)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-random_target_actor_hp0_source')" id="l_method-i-random_target_actor_hp0_source">show</a>
+                
+              </p>
+              <div id="method-i-random_target_actor_hp0_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 361</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">random_target_actor_hp0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">random_target_actor</span>(<span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refresh">
+            
+              <b>refresh</b>()
+            
+            <a href="../classes/Game_Party.html#method-i-refresh" name="method-i-refresh" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>同伴成员的还原</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refresh_source')" id="l_method-i-refresh_source">show</a>
+                
+              </p>
+              <div id="method-i-refresh_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refresh</span>
+  <span class="ruby-comment"># 游戏数据载入后角色对像直接从 $game_actors</span>
+  <span class="ruby-comment"># 分离。</span>
+  <span class="ruby-comment"># 回避由于载入造成的角色再设置的问题。</span>
+  <span class="ruby-identifier">new_actors</span> = []
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">0</span><span class="ruby-operator">...</span><span class="ruby-ivar">@actors</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$data_actors</span>[<span class="ruby-ivar">@actors</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">id</span>] <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+      <span class="ruby-identifier">new_actors</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">$game_actors</span>[<span class="ruby-ivar">@actors</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">id</span>])
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@actors</span> = <span class="ruby-identifier">new_actors</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-remove_actor">
+            
+              <b>remove_actor</b>(actor_id)
+            
+            <a href="../classes/Game_Party.html#method-i-remove_actor" name="method-i-remove_actor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>角色离开</p>
+
+<p>actor_id : 角色 ID</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-remove_actor_source')" id="l_method-i-remove_actor_source">show</a>
+                
+              </p>
+              <div id="method-i-remove_actor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 127</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">remove_actor</span>(<span class="ruby-identifier">actor_id</span>)
+  <span class="ruby-comment"># 删除觉得</span>
+  <span class="ruby-ivar">@actors</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">$game_actors</span>[<span class="ruby-identifier">actor_id</span>])
+  <span class="ruby-comment"># 还原主角</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-setup_battle_test_members">
+            
+              <b>setup_battle_test_members</b>()
+            
+            <a href="../classes/Game_Party.html#method-i-setup_battle_test_members" name="method-i-setup_battle_test_members" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>设置战斗测试用同伴</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-setup_battle_test_members_source')" id="l_method-i-setup_battle_test_members_source">show</a>
+                
+              </p>
+              <div id="method-i-setup_battle_test_members_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">setup_battle_test_members</span>
+  <span class="ruby-ivar">@actors</span> = []
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">battler</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">test_battlers</span>
+    <span class="ruby-identifier">actor</span> = <span class="ruby-identifier">$game_actors</span>[<span class="ruby-identifier">battler</span>.<span class="ruby-identifier">actor_id</span>]
+    <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">level</span> = <span class="ruby-identifier">battler</span>.<span class="ruby-identifier">level</span>
+    <span class="ruby-identifier">gain_weapon</span>(<span class="ruby-identifier">battler</span>.<span class="ruby-identifier">weapon_id</span>, <span class="ruby-number">1</span>)
+    <span class="ruby-identifier">gain_armor</span>(<span class="ruby-identifier">battler</span>.<span class="ruby-identifier">armor1_id</span>, <span class="ruby-number">1</span>)
+    <span class="ruby-identifier">gain_armor</span>(<span class="ruby-identifier">battler</span>.<span class="ruby-identifier">armor2_id</span>, <span class="ruby-number">1</span>)
+    <span class="ruby-identifier">gain_armor</span>(<span class="ruby-identifier">battler</span>.<span class="ruby-identifier">armor3_id</span>, <span class="ruby-number">1</span>)
+    <span class="ruby-identifier">gain_armor</span>(<span class="ruby-identifier">battler</span>.<span class="ruby-identifier">armor4_id</span>, <span class="ruby-number">1</span>)
+    <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">equip</span>(<span class="ruby-number">0</span>, <span class="ruby-identifier">battler</span>.<span class="ruby-identifier">weapon_id</span>)
+    <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">equip</span>(<span class="ruby-number">1</span>, <span class="ruby-identifier">battler</span>.<span class="ruby-identifier">armor1_id</span>)
+    <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">equip</span>(<span class="ruby-number">2</span>, <span class="ruby-identifier">battler</span>.<span class="ruby-identifier">armor2_id</span>)
+    <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">equip</span>(<span class="ruby-number">3</span>, <span class="ruby-identifier">battler</span>.<span class="ruby-identifier">armor3_id</span>)
+    <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">equip</span>(<span class="ruby-number">4</span>, <span class="ruby-identifier">battler</span>.<span class="ruby-identifier">armor4_id</span>)
+    <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">recover_all</span>
+    <span class="ruby-ivar">@actors</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">actor</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@items</span> = {}
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">1</span><span class="ruby-operator">...</span><span class="ruby-identifier">$data_items</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$data_items</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">name</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;&quot;</span>
+      <span class="ruby-identifier">occasion</span> = <span class="ruby-identifier">$data_items</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">occasion</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">occasion</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">occasion</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>
+        <span class="ruby-ivar">@items</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-number">99</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-setup_starting_members">
+            
+              <b>setup_starting_members</b>()
+            
+            <a href="../classes/Game_Party.html#method-i-setup_starting_members" name="method-i-setup_starting_members" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>设置初期同伴</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-setup_starting_members_source')" id="l_method-i-setup_starting_members_source">show</a>
+                
+              </p>
+              <div id="method-i-setup_starting_members_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">setup_starting_members</span>
+  <span class="ruby-ivar">@actors</span> = []
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">party_members</span>
+    <span class="ruby-ivar">@actors</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">$game_actors</span>[<span class="ruby-identifier">i</span>])
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-smooth_target_actor">
+            
+              <b>smooth_target_actor</b>(actor_index)
+            
+            <a href="../classes/Game_Party.html#method-i-smooth_target_actor" name="method-i-smooth_target_actor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>对像角色的顺序确定</p>
+
+<p>actor_index : 角色索引</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-smooth_target_actor_source')" id="l_method-i-smooth_target_actor_source">show</a>
+                
+              </p>
+              <div id="method-i-smooth_target_actor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 369</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">smooth_target_actor</span>(<span class="ruby-identifier">actor_index</span>)
+  <span class="ruby-comment"># 取得对像</span>
+  <span class="ruby-identifier">actor</span> = <span class="ruby-ivar">@actors</span>[<span class="ruby-identifier">actor_index</span>]
+  <span class="ruby-comment"># 对像存在的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">actor</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">exist?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">actor</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 循环</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">actor</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@actors</span>
+    <span class="ruby-comment"># 对像存在的情况下</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">exist?</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">actor</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-weapon_number">
+            
+              <b>weapon_number</b>(weapon_id)
+            
+            <a href="../classes/Game_Party.html#method-i-weapon_number" name="method-i-weapon_number" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取武器所持数</p>
+
+<p>weapon_id : 武器 ID</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-weapon_number_source')" id="l_method-i-weapon_number_source">show</a>
+                
+              </p>
+              <div id="method-i-weapon_number_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Party.rb, line 171</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">weapon_number</span>(<span class="ruby-identifier">weapon_id</span>)
+  <span class="ruby-comment"># 如果 hash 个数数值不存在就返回 0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@weapons</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">weapon_id</span>) <span class="ruby-operator">?</span> <span class="ruby-ivar">@weapons</span>[<span class="ruby-identifier">weapon_id</span>] <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

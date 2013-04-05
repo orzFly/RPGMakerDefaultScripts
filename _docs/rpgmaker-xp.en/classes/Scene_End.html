@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_End</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_End 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_End_rb.html">Scene_End.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This class performs game end screen processing.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-command_cancel">command_cancel</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-command_shutdown">command_shutdown</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-command_to_title">command_to_title</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-main">main</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-command_cancel">
+            
+              <b>command_cancel</b>()
+            
+            <a href="../classes/Scene_End.html#method-i-command_cancel" name="method-i-command_cancel" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Process When Choosing [Cancel] Command</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-command_cancel_source')" id="l_method-i-command_cancel_source">show</a>
+                
+              </p>
+              <div id="method-i-command_cancel_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_End.rb, line 105</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">command_cancel</span>
+  <span class="ruby-comment"># Play decision SE</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">decision_se</span>)
+  <span class="ruby-comment"># Switch to menu screen</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Menu</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">5</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-command_shutdown">
+            
+              <b>command_shutdown</b>()
+            
+            <a href="../classes/Scene_End.html#method-i-command_shutdown" name="method-i-command_shutdown" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Process When Choosing [Shutdown] Command</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-command_shutdown_source')" id="l_method-i-command_shutdown_source">show</a>
+                
+              </p>
+              <div id="method-i-command_shutdown_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_End.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">command_shutdown</span>
+  <span class="ruby-comment"># Play decision SE</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">decision_se</span>)
+  <span class="ruby-comment"># Fade out BGM, BGS, and ME</span>
+  <span class="ruby-constant">Audio</span>.<span class="ruby-identifier">bgm_fade</span>(<span class="ruby-number">800</span>)
+  <span class="ruby-constant">Audio</span>.<span class="ruby-identifier">bgs_fade</span>(<span class="ruby-number">800</span>)
+  <span class="ruby-constant">Audio</span>.<span class="ruby-identifier">me_fade</span>(<span class="ruby-number">800</span>)
+  <span class="ruby-comment"># Shutdown</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-command_to_title">
+            
+              <b>command_to_title</b>()
+            
+            <a href="../classes/Scene_End.html#method-i-command_to_title" name="method-i-command_to_title" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Process When Choosing [To Title] Command</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-command_to_title_source')" id="l_method-i-command_to_title_source">show</a>
+                
+              </p>
+              <div id="method-i-command_to_title_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_End.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">command_to_title</span>
+  <span class="ruby-comment"># Play decision SE</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">decision_se</span>)
+  <span class="ruby-comment"># Fade out BGM, BGS, and ME</span>
+  <span class="ruby-constant">Audio</span>.<span class="ruby-identifier">bgm_fade</span>(<span class="ruby-number">800</span>)
+  <span class="ruby-constant">Audio</span>.<span class="ruby-identifier">bgs_fade</span>(<span class="ruby-number">800</span>)
+  <span class="ruby-constant">Audio</span>.<span class="ruby-identifier">me_fade</span>(<span class="ruby-number">800</span>)
+  <span class="ruby-comment"># Switch to title screen</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Title</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-main">
+            
+              <b>main</b>()
+            
+            <a href="../classes/Scene_End.html#method-i-main" name="method-i-main" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Main Processing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-main_source')" id="l_method-i-main_source">show</a>
+                
+              </p>
+              <div id="method-i-main_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_End.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">main</span>
+  <span class="ruby-comment"># Make command window</span>
+  <span class="ruby-identifier">s1</span> = <span class="ruby-string">&quot;To Title&quot;</span>
+  <span class="ruby-identifier">s2</span> = <span class="ruby-string">&quot;Shutdown&quot;</span>
+  <span class="ruby-identifier">s3</span> = <span class="ruby-string">&quot;Cancel&quot;</span>
+  <span class="ruby-ivar">@command_window</span> = <span class="ruby-constant">Window_Command</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">192</span>, [<span class="ruby-identifier">s1</span>, <span class="ruby-identifier">s2</span>, <span class="ruby-identifier">s3</span>])
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">x</span> = <span class="ruby-number">320</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">y</span> = <span class="ruby-number">240</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+  <span class="ruby-comment"># Execute transition</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">transition</span>
+  <span class="ruby-comment"># Main loop</span>
+  <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-comment"># Update game screen</span>
+    <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># Update input information</span>
+    <span class="ruby-constant">Input</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># Frame Update</span>
+    <span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># Abort loop if screen is changed</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$scene</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">self</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Prepare for transition</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">freeze</span>
+  <span class="ruby-comment"># Dispose of window</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-comment"># If switching to title screen</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$scene</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Scene_Title</span>)
+    <span class="ruby-comment"># Fade out screen</span>
+    <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">transition</span>
+    <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">freeze</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Scene_End.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Frame Update</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_End.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-comment"># Update command window</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-comment"># If B button was pressed</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>)
+    <span class="ruby-comment"># Play cancel SE</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cancel_se</span>)
+    <span class="ruby-comment"># Switch to menu screen</span>
+    <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Menu</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">5</span>)
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If C button was pressed</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+    <span class="ruby-comment"># Branch by command window cursor position</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">index</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">0</span>  <span class="ruby-comment"># to title</span>
+      <span class="ruby-identifier">command_to_title</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>  <span class="ruby-comment"># shutdown</span>
+      <span class="ruby-identifier">command_shutdown</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>  <span class="ruby-comment"># quit</span>
+      <span class="ruby-identifier">command_cancel</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

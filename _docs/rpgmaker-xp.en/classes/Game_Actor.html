@@ -1,0 +1,2364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Game_Actor</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Game_Actor 
+            
+                <span class="parent">&lt; 
+                    
+                    Game_Battler
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Game_Actor_rb.html">Game_Actor.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This class handles the actor. It’s used within the <a
+href="Game_Actors.html">Game_Actors</a> class ($game_actors) and refers to
+the <a href="Game_Party.html">Game_Party</a> class ($game_party).</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-animation1_id">animation1_id</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-animation2_id">animation2_id</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-base_agi">base_agi</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-base_atk">base_atk</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-base_dex">base_dex</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-base_eva">base_eva</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-base_int">base_int</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-base_maxhp">base_maxhp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-base_maxsp">base_maxsp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-base_mdef">base_mdef</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-base_pdef">base_pdef</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-base_str">base_str</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-class_id-3D">class_id=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-class_name">class_name</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-element_rate">element_rate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-element_set">element_set</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-equip">equip</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-equip_fix-3F">equip_fix?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-equippable-3F">equippable?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-exp-3D">exp=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-exp_s">exp_s</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-forget_skill">forget_skill</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-id">id</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-index">index</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-learn_skill">learn_skill</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-level-3D">level=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-make_exp_list">make_exp_list</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-maxhp">maxhp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-minus_state_set">minus_state_set</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-name-3D">name=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-next_exp_s">next_exp_s</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-next_rest_exp_s">next_rest_exp_s</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-plus_state_set">plus_state_set</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-screen_x">screen_x</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-screen_y">screen_y</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-screen_z">screen_z</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_graphic">set_graphic</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-setup">setup</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-skill_can_use-3F">skill_can_use?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-skill_learn-3F">skill_learn?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-state_guard-3F">state_guard?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-state_ranks">state_ranks</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update_auto_state">update_auto_state</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>armor1_id</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>armor2_id</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>armor3_id</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>armor4_id</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>character_hue</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>character_name</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>class_id</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>exp</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>level</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>name</td>
+            <td class='attr-desc'><p>Public Instance Variables</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>skills</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>weapon_id</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(actor_id)
+            
+            <a href="../classes/Game_Actor.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Object Initialization</p>
+
+<p>actor_id : actor ID</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">actor_id</span>)
+  <span class="ruby-keyword">super</span>()
+  <span class="ruby-identifier">setup</span>(<span class="ruby-identifier">actor_id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-animation1_id">
+            
+              <b>animation1_id</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-animation1_id" name="method-i-animation1_id" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Offensive Animation ID for Normal Attacks</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-animation1_id_source')" id="l_method-i-animation1_id_source">show</a>
+                
+              </p>
+              <div id="method-i-animation1_id_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 342</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">animation1_id</span>
+  <span class="ruby-identifier">weapon</span> = <span class="ruby-identifier">$data_weapons</span>[<span class="ruby-ivar">@weapon_id</span>]
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">weapon</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">weapon</span>.<span class="ruby-identifier">animation1_id</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-animation2_id">
+            
+              <b>animation2_id</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-animation2_id" name="method-i-animation2_id" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Target Animation ID for Normal Attacks</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-animation2_id_source')" id="l_method-i-animation2_id_source">show</a>
+                
+              </p>
+              <div id="method-i-animation2_id_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 350</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">animation2_id</span>
+  <span class="ruby-identifier">weapon</span> = <span class="ruby-identifier">$data_weapons</span>[<span class="ruby-ivar">@weapon_id</span>]
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">weapon</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">weapon</span>.<span class="ruby-identifier">animation2_id</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-base_agi">
+            
+              <b>base_agi</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-base_agi" name="method-i-base_agi" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Basic Agility</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-base_agi_source')" id="l_method-i-base_agi_source">show</a>
+                
+              </p>
+              <div id="method-i-base_agi_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 249</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">base_agi</span>
+  <span class="ruby-identifier">n</span> = <span class="ruby-identifier">$data_actors</span>[<span class="ruby-ivar">@actor_id</span>].<span class="ruby-identifier">parameters</span>[<span class="ruby-number">4</span>, <span class="ruby-ivar">@level</span>]
+  <span class="ruby-identifier">weapon</span> = <span class="ruby-identifier">$data_weapons</span>[<span class="ruby-ivar">@weapon_id</span>]
+  <span class="ruby-identifier">armor1</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor1_id</span>]
+  <span class="ruby-identifier">armor2</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor2_id</span>]
+  <span class="ruby-identifier">armor3</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor3_id</span>]
+  <span class="ruby-identifier">armor4</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor4_id</span>]
+  <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">weapon</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">weapon</span>.<span class="ruby-identifier">agi_plus</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">armor1</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor1</span>.<span class="ruby-identifier">agi_plus</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">armor2</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor2</span>.<span class="ruby-identifier">agi_plus</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">armor3</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor3</span>.<span class="ruby-identifier">agi_plus</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">armor4</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor4</span>.<span class="ruby-identifier">agi_plus</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> [[<span class="ruby-identifier">n</span>, <span class="ruby-number">1</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">999</span>].<span class="ruby-identifier">min</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-base_atk">
+            
+              <b>base_atk</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-base_atk" name="method-i-base_atk" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Basic Attack Power</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-base_atk_source')" id="l_method-i-base_atk_source">show</a>
+                
+              </p>
+              <div id="method-i-base_atk_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 285</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">base_atk</span>
+  <span class="ruby-identifier">weapon</span> = <span class="ruby-identifier">$data_weapons</span>[<span class="ruby-ivar">@weapon_id</span>]
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">weapon</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">weapon</span>.<span class="ruby-identifier">atk</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-base_dex">
+            
+              <b>base_dex</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-base_dex" name="method-i-base_dex" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Basic Dexterity</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-base_dex_source')" id="l_method-i-base_dex_source">show</a>
+                
+              </p>
+              <div id="method-i-base_dex_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 231</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">base_dex</span>
+  <span class="ruby-identifier">n</span> = <span class="ruby-identifier">$data_actors</span>[<span class="ruby-ivar">@actor_id</span>].<span class="ruby-identifier">parameters</span>[<span class="ruby-number">3</span>, <span class="ruby-ivar">@level</span>]
+  <span class="ruby-identifier">weapon</span> = <span class="ruby-identifier">$data_weapons</span>[<span class="ruby-ivar">@weapon_id</span>]
+  <span class="ruby-identifier">armor1</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor1_id</span>]
+  <span class="ruby-identifier">armor2</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor2_id</span>]
+  <span class="ruby-identifier">armor3</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor3_id</span>]
+  <span class="ruby-identifier">armor4</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor4_id</span>]
+  <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">weapon</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">weapon</span>.<span class="ruby-identifier">dex_plus</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">armor1</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor1</span>.<span class="ruby-identifier">dex_plus</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">armor2</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor2</span>.<span class="ruby-identifier">dex_plus</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">armor3</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor3</span>.<span class="ruby-identifier">dex_plus</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">armor4</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor4</span>.<span class="ruby-identifier">dex_plus</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> [[<span class="ruby-identifier">n</span>, <span class="ruby-number">1</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">999</span>].<span class="ruby-identifier">min</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-base_eva">
+            
+              <b>base_eva</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-base_eva" name="method-i-base_eva" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Basic Evasion Correction</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-base_eva_source')" id="l_method-i-base_eva_source">show</a>
+                
+              </p>
+              <div id="method-i-base_eva_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 327</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">base_eva</span>
+  <span class="ruby-identifier">armor1</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor1_id</span>]
+  <span class="ruby-identifier">armor2</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor2_id</span>]
+  <span class="ruby-identifier">armor3</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor3_id</span>]
+  <span class="ruby-identifier">armor4</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor4_id</span>]
+  <span class="ruby-identifier">eva1</span> = <span class="ruby-identifier">armor1</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor1</span>.<span class="ruby-identifier">eva</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">eva2</span> = <span class="ruby-identifier">armor2</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor2</span>.<span class="ruby-identifier">eva</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">eva3</span> = <span class="ruby-identifier">armor3</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor3</span>.<span class="ruby-identifier">eva</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">eva4</span> = <span class="ruby-identifier">armor4</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor4</span>.<span class="ruby-identifier">eva</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">eva1</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">eva2</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">eva3</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">eva4</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-base_int">
+            
+              <b>base_int</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-base_int" name="method-i-base_int" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Basic Intelligence</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-base_int_source')" id="l_method-i-base_int_source">show</a>
+                
+              </p>
+              <div id="method-i-base_int_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 267</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">base_int</span>
+  <span class="ruby-identifier">n</span> = <span class="ruby-identifier">$data_actors</span>[<span class="ruby-ivar">@actor_id</span>].<span class="ruby-identifier">parameters</span>[<span class="ruby-number">5</span>, <span class="ruby-ivar">@level</span>]
+  <span class="ruby-identifier">weapon</span> = <span class="ruby-identifier">$data_weapons</span>[<span class="ruby-ivar">@weapon_id</span>]
+  <span class="ruby-identifier">armor1</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor1_id</span>]
+  <span class="ruby-identifier">armor2</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor2_id</span>]
+  <span class="ruby-identifier">armor3</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor3_id</span>]
+  <span class="ruby-identifier">armor4</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor4_id</span>]
+  <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">weapon</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">weapon</span>.<span class="ruby-identifier">int_plus</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">armor1</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor1</span>.<span class="ruby-identifier">int_plus</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">armor2</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor2</span>.<span class="ruby-identifier">int_plus</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">armor3</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor3</span>.<span class="ruby-identifier">int_plus</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">armor4</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor4</span>.<span class="ruby-identifier">int_plus</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> [[<span class="ruby-identifier">n</span>, <span class="ruby-number">1</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">999</span>].<span class="ruby-identifier">min</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-base_maxhp">
+            
+              <b>base_maxhp</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-base_maxhp" name="method-i-base_maxhp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Basic Maximum HP</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-base_maxhp_source')" id="l_method-i-base_maxhp_source">show</a>
+                
+              </p>
+              <div id="method-i-base_maxhp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 199</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">base_maxhp</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">$data_actors</span>[<span class="ruby-ivar">@actor_id</span>].<span class="ruby-identifier">parameters</span>[<span class="ruby-number">0</span>, <span class="ruby-ivar">@level</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-base_maxsp">
+            
+              <b>base_maxsp</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-base_maxsp" name="method-i-base_maxsp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Basic Maximum SP</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-base_maxsp_source')" id="l_method-i-base_maxsp_source">show</a>
+                
+              </p>
+              <div id="method-i-base_maxsp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 206</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">base_maxsp</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">$data_actors</span>[<span class="ruby-ivar">@actor_id</span>].<span class="ruby-identifier">parameters</span>[<span class="ruby-number">1</span>, <span class="ruby-ivar">@level</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-base_mdef">
+            
+              <b>base_mdef</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-base_mdef" name="method-i-base_mdef" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Basic Magic Defense</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-base_mdef_source')" id="l_method-i-base_mdef_source">show</a>
+                
+              </p>
+              <div id="method-i-base_mdef_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 310</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">base_mdef</span>
+  <span class="ruby-identifier">weapon</span> = <span class="ruby-identifier">$data_weapons</span>[<span class="ruby-ivar">@weapon_id</span>]
+  <span class="ruby-identifier">armor1</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor1_id</span>]
+  <span class="ruby-identifier">armor2</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor2_id</span>]
+  <span class="ruby-identifier">armor3</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor3_id</span>]
+  <span class="ruby-identifier">armor4</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor4_id</span>]
+  <span class="ruby-identifier">mdef1</span> = <span class="ruby-identifier">weapon</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">weapon</span>.<span class="ruby-identifier">mdef</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">mdef2</span> = <span class="ruby-identifier">armor1</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor1</span>.<span class="ruby-identifier">mdef</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">mdef3</span> = <span class="ruby-identifier">armor2</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor2</span>.<span class="ruby-identifier">mdef</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">mdef4</span> = <span class="ruby-identifier">armor3</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor3</span>.<span class="ruby-identifier">mdef</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">mdef5</span> = <span class="ruby-identifier">armor4</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor4</span>.<span class="ruby-identifier">mdef</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">mdef1</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">mdef2</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">mdef3</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">mdef4</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">mdef5</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-base_pdef">
+            
+              <b>base_pdef</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-base_pdef" name="method-i-base_pdef" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Basic Physical Defense</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-base_pdef_source')" id="l_method-i-base_pdef_source">show</a>
+                
+              </p>
+              <div id="method-i-base_pdef_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 293</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">base_pdef</span>
+  <span class="ruby-identifier">weapon</span> = <span class="ruby-identifier">$data_weapons</span>[<span class="ruby-ivar">@weapon_id</span>]
+  <span class="ruby-identifier">armor1</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor1_id</span>]
+  <span class="ruby-identifier">armor2</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor2_id</span>]
+  <span class="ruby-identifier">armor3</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor3_id</span>]
+  <span class="ruby-identifier">armor4</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor4_id</span>]
+  <span class="ruby-identifier">pdef1</span> = <span class="ruby-identifier">weapon</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">weapon</span>.<span class="ruby-identifier">pdef</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">pdef2</span> = <span class="ruby-identifier">armor1</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor1</span>.<span class="ruby-identifier">pdef</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">pdef3</span> = <span class="ruby-identifier">armor2</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor2</span>.<span class="ruby-identifier">pdef</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">pdef4</span> = <span class="ruby-identifier">armor3</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor3</span>.<span class="ruby-identifier">pdef</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">pdef5</span> = <span class="ruby-identifier">armor4</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor4</span>.<span class="ruby-identifier">pdef</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">pdef1</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">pdef2</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">pdef3</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">pdef4</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">pdef5</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-base_str">
+            
+              <b>base_str</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-base_str" name="method-i-base_str" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Basic Strength</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-base_str_source')" id="l_method-i-base_str_source">show</a>
+                
+              </p>
+              <div id="method-i-base_str_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 213</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">base_str</span>
+  <span class="ruby-identifier">n</span> = <span class="ruby-identifier">$data_actors</span>[<span class="ruby-ivar">@actor_id</span>].<span class="ruby-identifier">parameters</span>[<span class="ruby-number">2</span>, <span class="ruby-ivar">@level</span>]
+  <span class="ruby-identifier">weapon</span> = <span class="ruby-identifier">$data_weapons</span>[<span class="ruby-ivar">@weapon_id</span>]
+  <span class="ruby-identifier">armor1</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor1_id</span>]
+  <span class="ruby-identifier">armor2</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor2_id</span>]
+  <span class="ruby-identifier">armor3</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor3_id</span>]
+  <span class="ruby-identifier">armor4</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor4_id</span>]
+  <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">weapon</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">weapon</span>.<span class="ruby-identifier">str_plus</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">armor1</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor1</span>.<span class="ruby-identifier">str_plus</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">armor2</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor2</span>.<span class="ruby-identifier">str_plus</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">armor3</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor3</span>.<span class="ruby-identifier">str_plus</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">armor4</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">armor4</span>.<span class="ruby-identifier">str_plus</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">return</span> [[<span class="ruby-identifier">n</span>, <span class="ruby-number">1</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">999</span>].<span class="ruby-identifier">min</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-class_id-3D">
+            
+              <b>class_id=</b>(class_id)
+            
+            <a href="../classes/Game_Actor.html#method-i-class_id-3D" name="method-i-class_id-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Change Class ID</p>
+
+<p><a href="Game_Actor.html#attribute-i-class_id">#class_id</a> : new class ID</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-class_id-3D_source')" id="l_method-i-class_id-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-class_id-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 572</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">class_id=</span>(<span class="ruby-identifier">class_id</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$data_classes</span>[<span class="ruby-identifier">class_id</span>] <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-ivar">@class_id</span> = <span class="ruby-identifier">class_id</span>
+    <span class="ruby-comment"># Remove items that are no longer equippable</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">equippable?</span>(<span class="ruby-identifier">$data_weapons</span>[<span class="ruby-ivar">@weapon_id</span>])
+      <span class="ruby-identifier">equip</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">equippable?</span>(<span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor1_id</span>])
+      <span class="ruby-identifier">equip</span>(<span class="ruby-number">1</span>, <span class="ruby-number">0</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">equippable?</span>(<span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor2_id</span>])
+      <span class="ruby-identifier">equip</span>(<span class="ruby-number">2</span>, <span class="ruby-number">0</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">equippable?</span>(<span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor3_id</span>])
+      <span class="ruby-identifier">equip</span>(<span class="ruby-number">3</span>, <span class="ruby-number">0</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">equippable?</span>(<span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor4_id</span>])
+      <span class="ruby-identifier">equip</span>(<span class="ruby-number">4</span>, <span class="ruby-number">0</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-class_name">
+            
+              <b>class_name</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-class_name" name="method-i-class_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Class Name</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-class_name_source')" id="l_method-i-class_name_source">show</a>
+                
+              </p>
+              <div id="method-i-class_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 358</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">class_name</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">$data_classes</span>[<span class="ruby-ivar">@class_id</span>].<span class="ruby-identifier">name</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-element_rate">
+            
+              <b>element_rate</b>(element_id)
+            
+            <a href="../classes/Game_Actor.html#method-i-element_rate" name="method-i-element_rate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Element Revision Value</p>
+
+<p>element_id : element ID</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-element_rate_source')" id="l_method-i-element_rate_source">show</a>
+                
+              </p>
+              <div id="method-i-element_rate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 116</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">element_rate</span>(<span class="ruby-identifier">element_id</span>)
+  <span class="ruby-comment"># Get values corresponding to element effectiveness</span>
+  <span class="ruby-identifier">table</span> = [<span class="ruby-number">0</span>,<span class="ruby-number">200</span>,<span class="ruby-number">150</span>,<span class="ruby-number">100</span>,<span class="ruby-number">50</span>,<span class="ruby-number">0</span>,<span class="ruby-number">-100</span>]
+  <span class="ruby-identifier">result</span> = <span class="ruby-identifier">table</span>[<span class="ruby-identifier">$data_classes</span>[<span class="ruby-ivar">@class_id</span>].<span class="ruby-identifier">element_ranks</span>[<span class="ruby-identifier">element_id</span>]]
+  <span class="ruby-comment"># If this element is protected by armor, then it's reduced by half</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> [<span class="ruby-ivar">@armor1_id</span>, <span class="ruby-ivar">@armor2_id</span>, <span class="ruby-ivar">@armor3_id</span>, <span class="ruby-ivar">@armor4_id</span>]
+    <span class="ruby-identifier">armor</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-identifier">i</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">armor</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">armor</span>.<span class="ruby-identifier">guard_element_set</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">element_id</span>)
+      <span class="ruby-identifier">result</span> <span class="ruby-operator">/=</span> <span class="ruby-number">2</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If this element is protected by states, then it's reduced by half</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@states</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$data_states</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">guard_element_set</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">element_id</span>)
+      <span class="ruby-identifier">result</span> <span class="ruby-operator">/=</span> <span class="ruby-number">2</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># End Method</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-element_set">
+            
+              <b>element_set</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-element_set" name="method-i-element_set" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Normal Attack Element</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-element_set_source')" id="l_method-i-element_set_source">show</a>
+                
+              </p>
+              <div id="method-i-element_set_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 163</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">element_set</span>
+  <span class="ruby-identifier">weapon</span> = <span class="ruby-identifier">$data_weapons</span>[<span class="ruby-ivar">@weapon_id</span>]
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">weapon</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">weapon</span>.<span class="ruby-identifier">element_set</span> <span class="ruby-operator">:</span> []
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-equip">
+            
+              <b>equip</b>(equip_type, id)
+            
+            <a href="../classes/Game_Actor.html#method-i-equip" name="method-i-equip" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Change Equipment</p>
+
+<p>equip_type : type of equipment id    : weapon or armor ID (If 0, remove
+equipment)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-equip_source')" id="l_method-i-equip_source">show</a>
+                
+              </p>
+              <div id="method-i-equip_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 425</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">equip</span>(<span class="ruby-identifier">equip_type</span>, <span class="ruby-identifier">id</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">equip_type</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">0</span>  <span class="ruby-comment"># Weapon</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">id</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">weapon_number</span>(<span class="ruby-identifier">id</span>) <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">gain_weapon</span>(<span class="ruby-ivar">@weapon_id</span>, <span class="ruby-number">1</span>)
+      <span class="ruby-ivar">@weapon_id</span> = <span class="ruby-identifier">id</span>
+      <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">lose_weapon</span>(<span class="ruby-identifier">id</span>, <span class="ruby-number">1</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>  <span class="ruby-comment"># Shield</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">id</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">armor_number</span>(<span class="ruby-identifier">id</span>) <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">update_auto_state</span>(<span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor1_id</span>], <span class="ruby-identifier">$data_armors</span>[<span class="ruby-identifier">id</span>])
+      <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">gain_armor</span>(<span class="ruby-ivar">@armor1_id</span>, <span class="ruby-number">1</span>)
+      <span class="ruby-ivar">@armor1_id</span> = <span class="ruby-identifier">id</span>
+      <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">lose_armor</span>(<span class="ruby-identifier">id</span>, <span class="ruby-number">1</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>  <span class="ruby-comment"># Head</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">id</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">armor_number</span>(<span class="ruby-identifier">id</span>) <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">update_auto_state</span>(<span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor2_id</span>], <span class="ruby-identifier">$data_armors</span>[<span class="ruby-identifier">id</span>])
+      <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">gain_armor</span>(<span class="ruby-ivar">@armor2_id</span>, <span class="ruby-number">1</span>)
+      <span class="ruby-ivar">@armor2_id</span> = <span class="ruby-identifier">id</span>
+      <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">lose_armor</span>(<span class="ruby-identifier">id</span>, <span class="ruby-number">1</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">3</span>  <span class="ruby-comment"># Body</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">id</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">armor_number</span>(<span class="ruby-identifier">id</span>) <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">update_auto_state</span>(<span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor3_id</span>], <span class="ruby-identifier">$data_armors</span>[<span class="ruby-identifier">id</span>])
+      <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">gain_armor</span>(<span class="ruby-ivar">@armor3_id</span>, <span class="ruby-number">1</span>)
+      <span class="ruby-ivar">@armor3_id</span> = <span class="ruby-identifier">id</span>
+      <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">lose_armor</span>(<span class="ruby-identifier">id</span>, <span class="ruby-number">1</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">4</span>  <span class="ruby-comment"># Accessory</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">id</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">armor_number</span>(<span class="ruby-identifier">id</span>) <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">update_auto_state</span>(<span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor4_id</span>], <span class="ruby-identifier">$data_armors</span>[<span class="ruby-identifier">id</span>])
+      <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">gain_armor</span>(<span class="ruby-ivar">@armor4_id</span>, <span class="ruby-number">1</span>)
+      <span class="ruby-ivar">@armor4_id</span> = <span class="ruby-identifier">id</span>
+      <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">lose_armor</span>(<span class="ruby-identifier">id</span>, <span class="ruby-number">1</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-equip_fix-3F">
+            
+              <b>equip_fix?</b>(equip_type)
+            
+            <a href="../classes/Game_Actor.html#method-i-equip_fix-3F" name="method-i-equip_fix-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine Fixed Equipment</p>
+
+<p>equip_type : type of equipment</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-equip_fix-3F_source')" id="l_method-i-equip_fix-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-equip_fix-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 404</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">equip_fix?</span>(<span class="ruby-identifier">equip_type</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">equip_type</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">0</span>  <span class="ruby-comment"># Weapon</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">$data_actors</span>[<span class="ruby-ivar">@actor_id</span>].<span class="ruby-identifier">weapon_fix</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">1</span>  <span class="ruby-comment"># Shield</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">$data_actors</span>[<span class="ruby-ivar">@actor_id</span>].<span class="ruby-identifier">armor1_fix</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>  <span class="ruby-comment"># Head</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">$data_actors</span>[<span class="ruby-ivar">@actor_id</span>].<span class="ruby-identifier">armor2_fix</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">3</span>  <span class="ruby-comment"># Body</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">$data_actors</span>[<span class="ruby-ivar">@actor_id</span>].<span class="ruby-identifier">armor3_fix</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">4</span>  <span class="ruby-comment"># Accessory</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">$data_actors</span>[<span class="ruby-ivar">@actor_id</span>].<span class="ruby-identifier">armor4_fix</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-equippable-3F">
+            
+              <b>equippable?</b>(item)
+            
+            <a href="../classes/Game_Actor.html#method-i-equippable-3F" name="method-i-equippable-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if Equippable</p>
+
+<p>item : item</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-equippable-3F_source')" id="l_method-i-equippable-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-equippable-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 468</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">equippable?</span>(<span class="ruby-identifier">item</span>)
+  <span class="ruby-comment"># If weapon</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Weapon</span>)
+    <span class="ruby-comment"># If included among equippable weapons in current class</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$data_classes</span>[<span class="ruby-ivar">@class_id</span>].<span class="ruby-identifier">weapon_set</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">item</span>.<span class="ruby-identifier">id</span>)
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If armor</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Armor</span>)
+    <span class="ruby-comment"># If included among equippable armor in current class</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$data_classes</span>[<span class="ruby-ivar">@class_id</span>].<span class="ruby-identifier">armor_set</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">item</span>.<span class="ruby-identifier">id</span>)
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-exp-3D">
+            
+              <b>exp=</b>(exp)
+            
+            <a href="../classes/Game_Actor.html#method-i-exp-3D" name="method-i-exp-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Change EXP</p>
+
+<p>exp : new EXP</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-exp-3D_source')" id="l_method-i-exp-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-exp-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 490</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">exp=</span>(<span class="ruby-identifier">exp</span>)
+  <span class="ruby-ivar">@exp</span> = [[<span class="ruby-identifier">exp</span>, <span class="ruby-number">9999999</span>].<span class="ruby-identifier">min</span>, <span class="ruby-number">0</span>].<span class="ruby-identifier">max</span>
+  <span class="ruby-comment"># Level up</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-ivar">@exp</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-ivar">@exp_list</span>[<span class="ruby-ivar">@level</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>] <span class="ruby-keyword">and</span> <span class="ruby-ivar">@exp_list</span>[<span class="ruby-ivar">@level</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@level</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+    <span class="ruby-comment"># Learn skill</span>
+    <span class="ruby-keyword">for</span> <span class="ruby-identifier">j</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">$data_classes</span>[<span class="ruby-ivar">@class_id</span>].<span class="ruby-identifier">learnings</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">j</span>.<span class="ruby-identifier">level</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@level</span>
+        <span class="ruby-identifier">learn_skill</span>(<span class="ruby-identifier">j</span>.<span class="ruby-identifier">skill_id</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Level down</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-ivar">@exp</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@exp_list</span>[<span class="ruby-ivar">@level</span>]
+    <span class="ruby-ivar">@level</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Correction if exceeding current max HP and max SP</span>
+  <span class="ruby-ivar">@hp</span> = [<span class="ruby-ivar">@hp</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">maxhp</span>].<span class="ruby-identifier">min</span>
+  <span class="ruby-ivar">@sp</span> = [<span class="ruby-ivar">@sp</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">maxsp</span>].<span class="ruby-identifier">min</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-exp_s">
+            
+              <b>exp_s</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-exp_s" name="method-i-exp_s" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get EXP String</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-exp_s_source')" id="l_method-i-exp_s_source">show</a>
+                
+              </p>
+              <div id="method-i-exp_s_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 365</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">exp_s</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@exp_list</span>[<span class="ruby-ivar">@level</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@exp</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">:</span> <span class="ruby-string">&quot;-------&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-forget_skill">
+            
+              <b>forget_skill</b>(skill_id)
+            
+            <a href="../classes/Game_Actor.html#method-i-forget_skill" name="method-i-forget_skill" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Forget Skill</p>
+
+<p>skill_id : skill ID</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-forget_skill_source')" id="l_method-i-forget_skill_source">show</a>
+                
+              </p>
+              <div id="method-i-forget_skill_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 537</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">forget_skill</span>(<span class="ruby-identifier">skill_id</span>)
+  <span class="ruby-ivar">@skills</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">skill_id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-id">
+            
+              <b>id</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-id" name="method-i-id" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Actor ID</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-id_source')" id="l_method-i-id_source">show</a>
+                
+              </p>
+              <div id="method-i-id_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">id</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@actor_id</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-index">
+            
+              <b>index</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-index" name="method-i-index" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Index</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-index_source')" id="l_method-i-index_source">show</a>
+                
+              </p>
+              <div id="method-i-index_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">index</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">actors</span>.<span class="ruby-identifier">index</span>(<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-learn_skill">
+            
+              <b>learn_skill</b>(skill_id)
+            
+            <a href="../classes/Game_Actor.html#method-i-learn_skill" name="method-i-learn_skill" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Learn Skill</p>
+
+<p>skill_id : skill ID</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-learn_skill_source')" id="l_method-i-learn_skill_source">show</a>
+                
+              </p>
+              <div id="method-i-learn_skill_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 526</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">learn_skill</span>(<span class="ruby-identifier">skill_id</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">skill_id</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">skill_learn?</span>(<span class="ruby-identifier">skill_id</span>)
+    <span class="ruby-ivar">@skills</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">skill_id</span>)
+    <span class="ruby-ivar">@skills</span>.<span class="ruby-identifier">sort!</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-level-3D">
+            
+              <b>level=</b>(level)
+            
+            <a href="../classes/Game_Actor.html#method-i-level-3D" name="method-i-level-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Change Level</p>
+
+<p>level : new level</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-level-3D_source')" id="l_method-i-level-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-level-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 515</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">level=</span>(<span class="ruby-identifier">level</span>)
+  <span class="ruby-comment"># Check up and down limits</span>
+  <span class="ruby-identifier">level</span> = [[<span class="ruby-identifier">level</span>, <span class="ruby-identifier">$data_actors</span>[<span class="ruby-ivar">@actor_id</span>].<span class="ruby-identifier">final_level</span>].<span class="ruby-identifier">min</span>, <span class="ruby-number">1</span>].<span class="ruby-identifier">max</span>
+  <span class="ruby-comment"># Change EXP</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">exp</span> = <span class="ruby-ivar">@exp_list</span>[<span class="ruby-identifier">level</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-make_exp_list">
+            
+              <b>make_exp_list</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-make_exp_list" name="method-i-make_exp_list" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Calculate EXP</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-make_exp_list_source')" id="l_method-i-make_exp_list_source">show</a>
+                
+              </p>
+              <div id="method-i-make_exp_list_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">make_exp_list</span>
+  <span class="ruby-identifier">actor</span> = <span class="ruby-identifier">$data_actors</span>[<span class="ruby-ivar">@actor_id</span>]
+  <span class="ruby-ivar">@exp_list</span>[<span class="ruby-number">1</span>] = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">pow_i</span> = <span class="ruby-number">2.4</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">exp_inflation</span> <span class="ruby-operator">/</span> <span class="ruby-number">100.0</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">2</span><span class="ruby-operator">..</span><span class="ruby-number">100</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">final_level</span>
+      <span class="ruby-ivar">@exp_list</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-number">0</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">n</span> = <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">exp_basis</span> * ((<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-number">3</span>) <span class="ruby-operator">**</span> <span class="ruby-identifier">pow_i</span>) <span class="ruby-operator">/</span> (<span class="ruby-number">5</span> <span class="ruby-operator">**</span> <span class="ruby-identifier">pow_i</span>)
+      <span class="ruby-ivar">@exp_list</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-ivar">@exp_list</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">-</span><span class="ruby-number">1</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">Integer</span>(<span class="ruby-identifier">n</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-maxhp">
+            
+              <b>maxhp</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-maxhp" name="method-i-maxhp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Maximum HP</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-maxhp_source')" id="l_method-i-maxhp_source">show</a>
+                
+              </p>
+              <div id="method-i-maxhp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 187</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">maxhp</span>
+  <span class="ruby-identifier">n</span> = [[<span class="ruby-identifier">base_maxhp</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@maxhp_plus</span>, <span class="ruby-number">1</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">9999</span>].<span class="ruby-identifier">min</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@states</span>
+    <span class="ruby-identifier">n</span> <span class="ruby-operator">*=</span> <span class="ruby-identifier">$data_states</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">maxhp_rate</span> <span class="ruby-operator">/</span> <span class="ruby-number">100.0</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">n</span> = [[<span class="ruby-constant">Integer</span>(<span class="ruby-identifier">n</span>), <span class="ruby-number">1</span>].<span class="ruby-identifier">max</span>, <span class="ruby-number">9999</span>].<span class="ruby-identifier">min</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">n</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-minus_state_set">
+            
+              <b>minus_state_set</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-minus_state_set" name="method-i-minus_state_set" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Normal Attack State Change (-)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-minus_state_set_source')" id="l_method-i-minus_state_set_source">show</a>
+                
+              </p>
+              <div id="method-i-minus_state_set_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 179</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">minus_state_set</span>
+  <span class="ruby-identifier">weapon</span> = <span class="ruby-identifier">$data_weapons</span>[<span class="ruby-ivar">@weapon_id</span>]
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">weapon</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">weapon</span>.<span class="ruby-identifier">minus_state_set</span> <span class="ruby-operator">:</span> []
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-name-3D">
+            
+              <b>name=</b>(name)
+            
+            <a href="../classes/Game_Actor.html#method-i-name-3D" name="method-i-name-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Change Name</p>
+
+<p>name : new name</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-name-3D_source')" id="l_method-i-name-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-name-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 564</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">name=</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">name</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-next_exp_s">
+            
+              <b>next_exp_s</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-next_exp_s" name="method-i-next_exp_s" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Next Level EXP String</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-next_exp_s_source')" id="l_method-i-next_exp_s_source">show</a>
+                
+              </p>
+              <div id="method-i-next_exp_s_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 372</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">next_exp_s</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@exp_list</span>[<span class="ruby-ivar">@level</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@exp_list</span>[<span class="ruby-ivar">@level</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>].<span class="ruby-identifier">to_s</span> <span class="ruby-operator">:</span> <span class="ruby-string">&quot;-------&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-next_rest_exp_s">
+            
+              <b>next_rest_exp_s</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-next_rest_exp_s" name="method-i-next_rest_exp_s" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Until Next Level EXP String</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-next_rest_exp_s_source')" id="l_method-i-next_rest_exp_s_source">show</a>
+                
+              </p>
+              <div id="method-i-next_rest_exp_s_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 379</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">next_rest_exp_s</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@exp_list</span>[<span class="ruby-ivar">@level</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span>
+    (<span class="ruby-ivar">@exp_list</span>[<span class="ruby-ivar">@level</span><span class="ruby-operator">+</span><span class="ruby-number">1</span>] <span class="ruby-operator">-</span> <span class="ruby-ivar">@exp</span>).<span class="ruby-identifier">to_s</span> <span class="ruby-operator">:</span> <span class="ruby-string">&quot;-------&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-plus_state_set">
+            
+              <b>plus_state_set</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-plus_state_set" name="method-i-plus_state_set" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Normal Attack State Change (+)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-plus_state_set_source')" id="l_method-i-plus_state_set_source">show</a>
+                
+              </p>
+              <div id="method-i-plus_state_set_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 171</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">plus_state_set</span>
+  <span class="ruby-identifier">weapon</span> = <span class="ruby-identifier">$data_weapons</span>[<span class="ruby-ivar">@weapon_id</span>]
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">weapon</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">weapon</span>.<span class="ruby-identifier">plus_state_set</span> <span class="ruby-operator">:</span> []
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-screen_x">
+            
+              <b>screen_x</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-screen_x" name="method-i-screen_x" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Battle Screen X-Coordinate</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-screen_x_source')" id="l_method-i-screen_x_source">show</a>
+                
+              </p>
+              <div id="method-i-screen_x_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 611</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">screen_x</span>
+  <span class="ruby-comment"># Return after calculating x-coordinate by order of members in party</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">index</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">index</span> * <span class="ruby-number">160</span> <span class="ruby-operator">+</span> <span class="ruby-number">80</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-screen_y">
+            
+              <b>screen_y</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-screen_y" name="method-i-screen_y" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Battle Screen Y-Coordinate</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-screen_y_source')" id="l_method-i-screen_y_source">show</a>
+                
+              </p>
+              <div id="method-i-screen_y_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 623</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">screen_y</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">464</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-screen_z">
+            
+              <b>screen_z</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-screen_z" name="method-i-screen_z" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Battle Screen Z-Coordinate</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-screen_z_source')" id="l_method-i-screen_z_source">show</a>
+                
+              </p>
+              <div id="method-i-screen_z_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 630</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">screen_z</span>
+  <span class="ruby-comment"># Return after calculating z-coordinate by order of members in party</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">index</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-number">4</span> <span class="ruby-operator">-</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">index</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_graphic">
+            
+              <b>set_graphic</b>(character_name, character_hue, battler_name, battler_hue)
+            
+            <a href="../classes/Game_Actor.html#method-i-set_graphic" name="method-i-set_graphic" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Change Graphics</p>
+
+<p><a href="Game_Actor.html#attribute-i-character_name">#character_name</a> :
+new character file name <a
+href="Game_Actor.html#attribute-i-character_hue">#character_hue</a>  : new
+character hue battler_name   : new battler file name battler_hue    : new
+battler hue</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_graphic_source')" id="l_method-i-set_graphic_source">show</a>
+                
+              </p>
+              <div id="method-i-set_graphic_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 601</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_graphic</span>(<span class="ruby-identifier">character_name</span>, <span class="ruby-identifier">character_hue</span>, <span class="ruby-identifier">battler_name</span>, <span class="ruby-identifier">battler_hue</span>)
+  <span class="ruby-ivar">@character_name</span> = <span class="ruby-identifier">character_name</span>
+  <span class="ruby-ivar">@character_hue</span> = <span class="ruby-identifier">character_hue</span>
+  <span class="ruby-ivar">@battler_name</span> = <span class="ruby-identifier">battler_name</span>
+  <span class="ruby-ivar">@battler_hue</span> = <span class="ruby-identifier">battler_hue</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-setup">
+            
+              <b>setup</b>(actor_id)
+            
+            <a href="../classes/Game_Actor.html#method-i-setup" name="method-i-setup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Setup</p>
+
+<p>actor_id : actor ID</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-setup_source')" id="l_method-i-setup_source">show</a>
+                
+              </p>
+              <div id="method-i-setup_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">setup</span>(<span class="ruby-identifier">actor_id</span>)
+  <span class="ruby-identifier">actor</span> = <span class="ruby-identifier">$data_actors</span>[<span class="ruby-identifier">actor_id</span>]
+  <span class="ruby-ivar">@actor_id</span> = <span class="ruby-identifier">actor_id</span>
+  <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">name</span>
+  <span class="ruby-ivar">@character_name</span> = <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">character_name</span>
+  <span class="ruby-ivar">@character_hue</span> = <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">character_hue</span>
+  <span class="ruby-ivar">@battler_name</span> = <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">battler_name</span>
+  <span class="ruby-ivar">@battler_hue</span> = <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">battler_hue</span>
+  <span class="ruby-ivar">@class_id</span> = <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">class_id</span>
+  <span class="ruby-ivar">@weapon_id</span> = <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">weapon_id</span>
+  <span class="ruby-ivar">@armor1_id</span> = <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">armor1_id</span>
+  <span class="ruby-ivar">@armor2_id</span> = <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">armor2_id</span>
+  <span class="ruby-ivar">@armor3_id</span> = <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">armor3_id</span>
+  <span class="ruby-ivar">@armor4_id</span> = <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">armor4_id</span>
+  <span class="ruby-ivar">@level</span> = <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">initial_level</span>
+  <span class="ruby-ivar">@exp_list</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">101</span>)
+  <span class="ruby-identifier">make_exp_list</span>
+  <span class="ruby-ivar">@exp</span> = <span class="ruby-ivar">@exp_list</span>[<span class="ruby-ivar">@level</span>]
+  <span class="ruby-ivar">@skills</span> = []
+  <span class="ruby-ivar">@hp</span> = <span class="ruby-identifier">maxhp</span>
+  <span class="ruby-ivar">@sp</span> = <span class="ruby-identifier">maxsp</span>
+  <span class="ruby-ivar">@states</span> = []
+  <span class="ruby-ivar">@states_turn</span> = {}
+  <span class="ruby-ivar">@maxhp_plus</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@maxsp_plus</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@str_plus</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@dex_plus</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@agi_plus</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@int_plus</span> = <span class="ruby-number">0</span>
+  <span class="ruby-comment"># Learn skill</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">1</span><span class="ruby-operator">..</span><span class="ruby-ivar">@level</span>
+    <span class="ruby-keyword">for</span> <span class="ruby-identifier">j</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">$data_classes</span>[<span class="ruby-ivar">@class_id</span>].<span class="ruby-identifier">learnings</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">j</span>.<span class="ruby-identifier">level</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">i</span>
+        <span class="ruby-identifier">learn_skill</span>(<span class="ruby-identifier">j</span>.<span class="ruby-identifier">skill_id</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Update auto state</span>
+  <span class="ruby-identifier">update_auto_state</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor1_id</span>])
+  <span class="ruby-identifier">update_auto_state</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor2_id</span>])
+  <span class="ruby-identifier">update_auto_state</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor3_id</span>])
+  <span class="ruby-identifier">update_auto_state</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">$data_armors</span>[<span class="ruby-ivar">@armor4_id</span>])
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-skill_can_use-3F">
+            
+              <b>skill_can_use?</b>(skill_id)
+            
+            <a href="../classes/Game_Actor.html#method-i-skill_can_use-3F" name="method-i-skill_can_use-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if Skill can be Used</p>
+
+<p>skill_id : skill ID</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-skill_can_use-3F_source')" id="l_method-i-skill_can_use-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-skill_can_use-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 553</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">skill_can_use?</span>(<span class="ruby-identifier">skill_id</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">skill_learn?</span>(<span class="ruby-identifier">skill_id</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-skill_learn-3F">
+            
+              <b>skill_learn?</b>(skill_id)
+            
+            <a href="../classes/Game_Actor.html#method-i-skill_learn-3F" name="method-i-skill_learn-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if Finished Learning Skill</p>
+
+<p>skill_id : skill ID</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-skill_learn-3F_source')" id="l_method-i-skill_learn-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-skill_learn-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 545</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">skill_learn?</span>(<span class="ruby-identifier">skill_id</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@skills</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">skill_id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-state_guard-3F">
+            
+              <b>state_guard?</b>(state_id)
+            
+            <a href="../classes/Game_Actor.html#method-i-state_guard-3F" name="method-i-state_guard-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine State Guard</p>
+
+<p>state_id : state ID</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-state_guard-3F_source')" id="l_method-i-state_guard-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-state_guard-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">state_guard?</span>(<span class="ruby-identifier">state_id</span>)
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> [<span class="ruby-ivar">@armor1_id</span>, <span class="ruby-ivar">@armor2_id</span>, <span class="ruby-ivar">@armor3_id</span>, <span class="ruby-ivar">@armor4_id</span>]
+    <span class="ruby-identifier">armor</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-identifier">i</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">armor</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">armor</span>.<span class="ruby-identifier">guard_state_set</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">state_id</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-state_ranks">
+            
+              <b>state_ranks</b>()
+            
+            <a href="../classes/Game_Actor.html#method-i-state_ranks" name="method-i-state_ranks" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get State Effectiveness</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-state_ranks_source')" id="l_method-i-state_ranks_source">show</a>
+                
+              </p>
+              <div id="method-i-state_ranks_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 140</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">state_ranks</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">$data_classes</span>[<span class="ruby-ivar">@class_id</span>].<span class="ruby-identifier">state_ranks</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_auto_state">
+            
+              <b>update_auto_state</b>(old_armor, new_armor)
+            
+            <a href="../classes/Game_Actor.html#method-i-update_auto_state" name="method-i-update_auto_state" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Auto State</p>
+
+<p>old_armor : unequipped armor new_armor : equipped armor</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_auto_state_source')" id="l_method-i-update_auto_state_source">show</a>
+                
+              </p>
+              <div id="method-i-update_auto_state_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Actor.rb, line 389</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_auto_state</span>(<span class="ruby-identifier">old_armor</span>, <span class="ruby-identifier">new_armor</span>)
+  <span class="ruby-comment"># Forcefully remove unequipped armor's auto state</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">old_armor</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">old_armor</span>.<span class="ruby-identifier">auto_state_id</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">remove_state</span>(<span class="ruby-identifier">old_armor</span>.<span class="ruby-identifier">auto_state_id</span>, <span class="ruby-keyword">true</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Forcefully add unequipped armor's auto state</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">new_armor</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">new_armor</span>.<span class="ruby-identifier">auto_state_id</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">add_state</span>(<span class="ruby-identifier">new_armor</span>.<span class="ruby-identifier">auto_state_id</span>, <span class="ruby-keyword">true</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

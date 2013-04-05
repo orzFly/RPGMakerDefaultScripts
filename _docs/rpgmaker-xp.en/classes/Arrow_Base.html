@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Arrow_Base</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Arrow_Base 
+            
+                <span class="parent">&lt; 
+                    
+                    Sprite
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Arrow_Base_rb.html">Arrow_Base.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This sprite is used as an arrow cursor for the battle screen. This class is
+used as a superclass for the <a href="Arrow_Enemy.html">Arrow_Enemy</a> and
+<a href="Arrow_Actor.html">Arrow_Actor</a> classes.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-help_window-3D">help_window=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-index-3D">index=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>help_window</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>index</td>
+            <td class='attr-desc'><p>Public Instance Variables</p></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(viewport)
+            
+            <a href="../classes/Arrow_Base.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Object Initialization</p>
+
+<p>viewport : viewport</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Arrow_Base.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">viewport</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">viewport</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Cache</span>.<span class="ruby-identifier">windowskin</span>(<span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">windowskin_name</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-number">16</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-number">64</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">z</span> = <span class="ruby-number">2500</span>
+  <span class="ruby-ivar">@blink_count</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@index</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@help_window</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-help_window-3D">
+            
+              <b>help_window=</b>(help_window)
+            
+            <a href="../classes/Arrow_Base.html#method-i-help_window-3D" name="method-i-help_window-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Set Help Window</p>
+
+<p><a href="Arrow_Base.html#attribute-i-help_window">#help_window</a> : new
+help window</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-help_window-3D_source')" id="l_method-i-help_window-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-help_window-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Arrow_Base.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">help_window=</span>(<span class="ruby-identifier">help_window</span>)
+  <span class="ruby-ivar">@help_window</span> = <span class="ruby-identifier">help_window</span>
+  <span class="ruby-comment"># Update help text (update_help is defined by the subclasses)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@help_window</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">update_help</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-index-3D">
+            
+              <b>index=</b>(index)
+            
+            <a href="../classes/Arrow_Base.html#method-i-index-3D" name="method-i-index-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Set Cursor Position</p>
+
+<p>index : new cursor position</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-index-3D_source')" id="l_method-i-index-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-index-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Arrow_Base.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">index=</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-ivar">@index</span> = <span class="ruby-identifier">index</span>
+  <span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Arrow_Base.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Frame Update</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Arrow_Base.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-comment"># Update blink count</span>
+  <span class="ruby-ivar">@blink_count</span> = (<span class="ruby-ivar">@blink_count</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span>) <span class="ruby-operator">%</span> <span class="ruby-number">8</span>
+  <span class="ruby-comment"># Set forwarding origin rectangle</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@blink_count</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">4</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">src_rect</span>.<span class="ruby-identifier">set</span>(<span class="ruby-number">128</span>, <span class="ruby-number">96</span>, <span class="ruby-number">32</span>, <span class="ruby-number">32</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">src_rect</span>.<span class="ruby-identifier">set</span>(<span class="ruby-number">160</span>, <span class="ruby-number">96</span>, <span class="ruby-number">32</span>, <span class="ruby-number">32</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Update help text (update_help is defined by the subclasses)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@help_window</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">update_help</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

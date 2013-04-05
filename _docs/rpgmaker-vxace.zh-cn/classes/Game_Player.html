@@ -1,0 +1,2364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Game_Player</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Game_Player 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Game_Character.html">Game_Character</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Game_Player_rb.html">Game_Player.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>处理玩家人物的类。拥有事件启动的判定、地图的卷动等功能。
+本类的实例请参考 $game_player 。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-actor">actor</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-center">center</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-center_x">center_x</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-center_y">center_y</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-check_action_event">check_action_event</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-check_event_trigger_here">check_event_trigger_here</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-check_event_trigger_there">check_event_trigger_there</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-check_event_trigger_touch">check_event_trigger_touch</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-check_touch_event">check_touch_event</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-clear_transfer_info">clear_transfer_info</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-collide-3F">collide?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dash-3F">dash?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-debug_through-3F">debug_through?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-encounter">encounter</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-encounter_ok-3F">encounter_ok?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-encounter_progress_value">encounter_progress_value</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-force_move_forward">force_move_forward</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get_off_vehicle">get_off_vehicle</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_on_off_vehicle">get_on_off_vehicle</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_on_vehicle">get_on_vehicle</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-in_airship-3F">in_airship?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-in_boat-3F">in_boat?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-in_ship-3F">in_ship?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-increase_steps">increase_steps</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-make_encounter_count">make_encounter_count</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-make_encounter_troop_id">make_encounter_troop_id</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-map_passable-3F">map_passable?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-movable-3F">movable?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-move_by_input">move_by_input</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-move_diagonal">move_diagonal</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-move_straight">move_straight</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-moveto">moveto</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-normal_walk-3F">normal_walk?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-on_damage_floor-3F">on_damage_floor?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-perform_transfer">perform_transfer</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-refresh">refresh</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-reserve_transfer">reserve_transfer</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-start_map_event">start_map_event</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-stopping-3F">stopping?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-transfer-3F">transfer?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_encounter">update_encounter</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_nonmoving">update_nonmoving</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_scroll">update_scroll</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_vehicle">update_vehicle</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_vehicle_get_off">update_vehicle_get_off</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_vehicle_get_on">update_vehicle_get_on</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-vehicle">vehicle</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>followers</td>
+            <td class='attr-desc'><p>定义实例变量</p></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Game_Player.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>初始化对象</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-ivar">@vehicle_type</span> = <span class="ruby-value">:walk</span>           <span class="ruby-comment"># 当前乘坐载具的种类</span>
+  <span class="ruby-ivar">@vehicle_getting_on</span> = <span class="ruby-keyword">false</span>     <span class="ruby-comment"># 正在登上载具的标志</span>
+  <span class="ruby-ivar">@vehicle_getting_off</span> = <span class="ruby-keyword">false</span>    <span class="ruby-comment"># 正在离开载具的标志</span>
+  <span class="ruby-ivar">@followers</span> = <span class="ruby-constant">Game_Followers</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>)
+  <span class="ruby-ivar">@transparent</span> = <span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">opt_transparent</span>
+  <span class="ruby-identifier">clear_transfer_info</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-actor">
+            
+              <b>actor</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-actor" name="method-i-actor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取对应的角色</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-actor_source')" id="l_method-i-actor_source">show</a>
+                
+              </p>
+              <div id="method-i-actor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">actor</span>
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">battle_members</span>[<span class="ruby-number">0</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-center">
+            
+              <b>center</b>(x, y)
+            
+            <a href="../classes/Game_Player.html#method-i-center" name="method-i-center" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>设置显示位置为地图中央</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-center_source')" id="l_method-i-center_source">show</a>
+                
+              </p>
+              <div id="method-i-center_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 188</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">center</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">set_display_pos</span>(<span class="ruby-identifier">x</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">center_x</span>, <span class="ruby-identifier">y</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">center_y</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-center_x">
+            
+              <b>center_x</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-center_x" name="method-i-center_x" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>画面中央的 X 坐标</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-center_x_source')" id="l_method-i-center_x_source">show</a>
+                
+              </p>
+              <div id="method-i-center_x_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 174</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">center_x</span>
+  (<span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">/</span> <span class="ruby-number">32</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>) <span class="ruby-operator">/</span> <span class="ruby-number">2.0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-center_y">
+            
+              <b>center_y</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-center_y" name="method-i-center_y" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>画面中央的 Y 坐标</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-center_y_source')" id="l_method-i-center_y_source">show</a>
+                
+              </p>
+              <div id="method-i-center_y_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 181</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">center_y</span>
+  (<span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">/</span> <span class="ruby-number">32</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>) <span class="ruby-operator">/</span> <span class="ruby-number">2.0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-check_action_event">
+            
+              <b>check_action_event</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-check_action_event" name="method-i-check_action_event" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定事件是否由确认键启动</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-check_action_event_source')" id="l_method-i-check_action_event_source">show</a>
+                
+              </p>
+              <div id="method-i-check_action_event_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 444</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">check_action_event</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">in_airship?</span>
+  <span class="ruby-identifier">check_event_trigger_here</span>([<span class="ruby-number">0</span>])
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">setup_starting_event</span>
+  <span class="ruby-identifier">check_event_trigger_there</span>([<span class="ruby-number">0</span>,<span class="ruby-number">1</span>,<span class="ruby-number">2</span>])
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">setup_starting_event</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-check_event_trigger_here">
+            
+              <b>check_event_trigger_here</b>(triggers)
+            
+            <a href="../classes/Game_Player.html#method-i-check_event_trigger_here" name="method-i-check_event_trigger_here" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定同位置事件是否被启动</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-check_event_trigger_here_source')" id="l_method-i-check_event_trigger_here_source">show</a>
+                
+              </p>
+              <div id="method-i-check_event_trigger_here_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 280</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">check_event_trigger_here</span>(<span class="ruby-identifier">triggers</span>)
+  <span class="ruby-identifier">start_map_event</span>(<span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span>, <span class="ruby-identifier">triggers</span>, <span class="ruby-keyword">false</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-check_event_trigger_there">
+            
+              <b>check_event_trigger_there</b>(triggers)
+            
+            <a href="../classes/Game_Player.html#method-i-check_event_trigger_there" name="method-i-check_event_trigger_there" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定前方事件是否被启动</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-check_event_trigger_there_source')" id="l_method-i-check_event_trigger_there_source">show</a>
+                
+              </p>
+              <div id="method-i-check_event_trigger_there_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 287</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">check_event_trigger_there</span>(<span class="ruby-identifier">triggers</span>)
+  <span class="ruby-identifier">x2</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">round_x_with_direction</span>(<span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@direction</span>)
+  <span class="ruby-identifier">y2</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">round_y_with_direction</span>(<span class="ruby-ivar">@y</span>, <span class="ruby-ivar">@direction</span>)
+  <span class="ruby-identifier">start_map_event</span>(<span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>, <span class="ruby-identifier">triggers</span>, <span class="ruby-keyword">true</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">any_event_starting?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">counter?</span>(<span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>)
+  <span class="ruby-identifier">x3</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">round_x_with_direction</span>(<span class="ruby-identifier">x2</span>, <span class="ruby-ivar">@direction</span>)
+  <span class="ruby-identifier">y3</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">round_y_with_direction</span>(<span class="ruby-identifier">y2</span>, <span class="ruby-ivar">@direction</span>)
+  <span class="ruby-identifier">start_map_event</span>(<span class="ruby-identifier">x3</span>, <span class="ruby-identifier">y3</span>, <span class="ruby-identifier">triggers</span>, <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-check_event_trigger_touch">
+            
+              <b>check_event_trigger_touch</b>(x, y)
+            
+            <a href="../classes/Game_Player.html#method-i-check_event_trigger_touch" name="method-i-check_event_trigger_touch" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定接触事件是否被启动</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-check_event_trigger_touch_source')" id="l_method-i-check_event_trigger_touch_source">show</a>
+                
+              </p>
+              <div id="method-i-check_event_trigger_touch_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 301</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">check_event_trigger_touch</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">start_map_event</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, [<span class="ruby-number">1</span>,<span class="ruby-number">2</span>], <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-check_touch_event">
+            
+              <b>check_touch_event</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-check_touch_event" name="method-i-check_touch_event" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定事件是否由接触启动（重叠）</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-check_touch_event_source')" id="l_method-i-check_touch_event_source">show</a>
+                
+              </p>
+              <div id="method-i-check_touch_event_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 435</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">check_touch_event</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">in_airship?</span>
+  <span class="ruby-identifier">check_event_trigger_here</span>([<span class="ruby-number">1</span>,<span class="ruby-number">2</span>])
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">setup_starting_event</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear_transfer_info">
+            
+              <b>clear_transfer_info</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-clear_transfer_info" name="method-i-clear_transfer_info" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>清除场所移动的信息</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_transfer_info_source')" id="l_method-i-clear_transfer_info_source">show</a>
+                
+              </p>
+              <div id="method-i-clear_transfer_info_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear_transfer_info</span>
+  <span class="ruby-ivar">@transferring</span> = <span class="ruby-keyword">false</span>           <span class="ruby-comment"># 场所移动的标志</span>
+  <span class="ruby-ivar">@new_map_id</span> = <span class="ruby-number">0</span>                 <span class="ruby-comment"># 移动后的地图 ID</span>
+  <span class="ruby-ivar">@new_x</span> = <span class="ruby-number">0</span>                      <span class="ruby-comment"># 移动后的X 坐标</span>
+  <span class="ruby-ivar">@new_y</span> = <span class="ruby-number">0</span>                      <span class="ruby-comment"># 移动后的Y 坐标</span>
+  <span class="ruby-ivar">@new_direction</span> = <span class="ruby-number">0</span>              <span class="ruby-comment"># 移动后的方向</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-collide-3F">
+            
+              <b>collide?</b>(x, y)
+            
+            <a href="../classes/Game_Player.html#method-i-collide-3F" name="method-i-collide-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定是否碰撞（包含跟随角色）</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-collide-3F_source')" id="l_method-i-collide-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-collide-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 167</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">collide?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-operator">!</span><span class="ruby-ivar">@through</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">pos?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">followers</span>.<span class="ruby-identifier">collide?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dash-3F">
+            
+              <b>dash?</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-dash-3F" name="method-i-dash-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定是否跑步状态</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dash-3F_source')" id="l_method-i-dash-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-dash-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 150</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dash?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@move_route_forcing</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">disable_dash?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">vehicle</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">press?</span>(<span class="ruby-value">:A</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-debug_through-3F">
+            
+              <b>debug_through?</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-debug_through-3F" name="method-i-debug_through-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定是否调试时穿透状态</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-debug_through-3F_source')" id="l_method-i-debug_through-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-debug_through-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">debug_through?</span>
+  <span class="ruby-identifier">$TEST</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">press?</span>(<span class="ruby-value">:CTRL</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-encounter">
+            
+              <b>encounter</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-encounter" name="method-i-encounter" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>执行遇敌处理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-encounter_source')" id="l_method-i-encounter_source">show</a>
+                
+              </p>
+              <div id="method-i-encounter_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 252</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">encounter</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">interpreter</span>.<span class="ruby-identifier">running?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">encounter_disabled</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@encounter_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">make_encounter_count</span>
+  <span class="ruby-identifier">troop_id</span> = <span class="ruby-identifier">make_encounter_troop_id</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">$data_troops</span>[<span class="ruby-identifier">troop_id</span>]
+  <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">setup</span>(<span class="ruby-identifier">troop_id</span>)
+  <span class="ruby-constant">BattleManager</span>.<span class="ruby-identifier">on_encounter</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-encounter_ok-3F">
+            
+              <b>encounter_ok?</b>(encounter)
+            
+            <a href="../classes/Game_Player.html#method-i-encounter_ok-3F" name="method-i-encounter_ok-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定是否会遇敌</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-encounter_ok-3F_source')" id="l_method-i-encounter_ok-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-encounter_ok-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 243</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">encounter_ok?</span>(<span class="ruby-identifier">encounter</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">encounter</span>.<span class="ruby-identifier">region_set</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">encounter</span>.<span class="ruby-identifier">region_set</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">region_id</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-encounter_progress_value">
+            
+              <b>encounter_progress_value</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-encounter_progress_value" name="method-i-encounter_progress_value" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取遇敌进行值</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-encounter_progress_value_source')" id="l_method-i-encounter_progress_value_source">show</a>
+                
+              </p>
+              <div id="method-i-encounter_progress_value_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 425</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">encounter_progress_value</span>
+  <span class="ruby-identifier">value</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">bush?</span>(<span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span>) <span class="ruby-operator">?</span> <span class="ruby-number">2</span> <span class="ruby-operator">:</span> <span class="ruby-number">1</span>
+  <span class="ruby-identifier">value</span> <span class="ruby-operator">*=</span> <span class="ruby-number">0.5</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">encounter_half?</span>
+  <span class="ruby-identifier">value</span> <span class="ruby-operator">*=</span> <span class="ruby-number">0.5</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">in_ship?</span>
+  <span class="ruby-identifier">value</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-force_move_forward">
+            
+              <b>force_move_forward</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-force_move_forward" name="method-i-force_move_forward" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>强制前进一步</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-force_move_forward_source')" id="l_method-i-force_move_forward_source">show</a>
+                
+              </p>
+              <div id="method-i-force_move_forward_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 506</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">force_move_forward</span>
+  <span class="ruby-ivar">@through</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-identifier">move_forward</span>
+  <span class="ruby-ivar">@through</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_off_vehicle">
+            
+              <b>get_off_vehicle</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-get_off_vehicle" name="method-i-get_off_vehicle" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>离开载具</p>
+
+<p>前提是乘坐着载具。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_off_vehicle_source')" id="l_method-i-get_off_vehicle_source">show</a>
+                
+              </p>
+              <div id="method-i-get_off_vehicle_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 485</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_off_vehicle</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">vehicle</span>.<span class="ruby-identifier">land_ok?</span>(<span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span>, <span class="ruby-ivar">@direction</span>)
+    <span class="ruby-identifier">set_direction</span>(<span class="ruby-number">2</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">in_airship?</span>
+    <span class="ruby-ivar">@followers</span>.<span class="ruby-identifier">synchronize</span>(<span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span>, <span class="ruby-ivar">@direction</span>)
+    <span class="ruby-identifier">vehicle</span>.<span class="ruby-identifier">get_off</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">in_airship?</span>
+      <span class="ruby-identifier">force_move_forward</span>
+      <span class="ruby-ivar">@transparent</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-ivar">@vehicle_getting_off</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@move_speed</span> = <span class="ruby-number">4</span>
+    <span class="ruby-ivar">@through</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-identifier">make_encounter_count</span>
+    <span class="ruby-ivar">@followers</span>.<span class="ruby-identifier">gather</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@vehicle_getting_off</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_on_off_vehicle">
+            
+              <b>get_on_off_vehicle</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-get_on_off_vehicle" name="method-i-get_on_off_vehicle" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>载具的乘降</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_on_off_vehicle_source')" id="l_method-i-get_on_off_vehicle_source">show</a>
+                
+              </p>
+              <div id="method-i-get_on_off_vehicle_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 455</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_on_off_vehicle</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">vehicle</span>
+    <span class="ruby-identifier">get_off_vehicle</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">get_on_vehicle</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-get_on_vehicle">
+            
+              <b>get_on_vehicle</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-get_on_vehicle" name="method-i-get_on_vehicle" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>登上载具</p>
+
+<p>前提是没有乘坐着载具。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-get_on_vehicle_source')" id="l_method-i-get_on_vehicle_source">show</a>
+                
+              </p>
+              <div id="method-i-get_on_vehicle_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 467</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">get_on_vehicle</span>
+  <span class="ruby-identifier">front_x</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">round_x_with_direction</span>(<span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@direction</span>)
+  <span class="ruby-identifier">front_y</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">round_y_with_direction</span>(<span class="ruby-ivar">@y</span>, <span class="ruby-ivar">@direction</span>)
+  <span class="ruby-ivar">@vehicle_type</span> = <span class="ruby-value">:boat</span>    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">boat</span>.<span class="ruby-identifier">pos?</span>(<span class="ruby-identifier">front_x</span>, <span class="ruby-identifier">front_y</span>)
+  <span class="ruby-ivar">@vehicle_type</span> = <span class="ruby-value">:ship</span>    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">ship</span>.<span class="ruby-identifier">pos?</span>(<span class="ruby-identifier">front_x</span>, <span class="ruby-identifier">front_y</span>)
+  <span class="ruby-ivar">@vehicle_type</span> = <span class="ruby-value">:airship</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">airship</span>.<span class="ruby-identifier">pos?</span>(<span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">vehicle</span>
+    <span class="ruby-ivar">@vehicle_getting_on</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-identifier">force_move_forward</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">in_airship?</span>
+    <span class="ruby-ivar">@followers</span>.<span class="ruby-identifier">gather</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@vehicle_getting_on</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-in_airship-3F">
+            
+              <b>in_airship?</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-in_airship-3F" name="method-i-in_airship-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定是否乘坐着飞艇</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-in_airship-3F_source')" id="l_method-i-in_airship-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-in_airship-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 136</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">in_airship?</span>
+  <span class="ruby-ivar">@vehicle_type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:airship</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-in_boat-3F">
+            
+              <b>in_boat?</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-in_boat-3F" name="method-i-in_boat-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定是否乘坐着小舟</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-in_boat-3F_source')" id="l_method-i-in_boat-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-in_boat-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">in_boat?</span>
+  <span class="ruby-ivar">@vehicle_type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:boat</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-in_ship-3F">
+            
+              <b>in_ship?</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-in_ship-3F" name="method-i-in_ship-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定是否乘坐着大船</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-in_ship-3F_source')" id="l_method-i-in_ship-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-in_ship-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">in_ship?</span>
+  <span class="ruby-ivar">@vehicle_type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:ship</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-increase_steps">
+            
+              <b>increase_steps</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-increase_steps" name="method-i-increase_steps" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>增加步数</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-increase_steps_source')" id="l_method-i-increase_steps_source">show</a>
+                
+              </p>
+              <div id="method-i-increase_steps_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 206</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">increase_steps</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">increase_steps</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">normal_walk?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-make_encounter_count">
+            
+              <b>make_encounter_count</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-make_encounter_count" name="method-i-make_encounter_count" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>生成遇敌计数</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-make_encounter_count_source')" id="l_method-i-make_encounter_count_source">show</a>
+                
+              </p>
+              <div id="method-i-make_encounter_count_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 214</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">make_encounter_count</span>
+  <span class="ruby-identifier">n</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">encounter_step</span>
+  <span class="ruby-ivar">@encounter_count</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-identifier">n</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">rand</span>(<span class="ruby-identifier">n</span>) <span class="ruby-operator">+</span> <span class="ruby-number">1</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-make_encounter_troop_id">
+            
+              <b>make_encounter_troop_id</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-make_encounter_troop_id" name="method-i-make_encounter_troop_id" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>生成敌群的 ID</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-make_encounter_troop_id_source')" id="l_method-i-make_encounter_troop_id_source">show</a>
+                
+              </p>
+              <div id="method-i-make_encounter_troop_id_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 222</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">make_encounter_troop_id</span>
+  <span class="ruby-identifier">encounter_list</span> = []
+  <span class="ruby-identifier">weight_sum</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">encounter_list</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">encounter</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">encounter_ok?</span>(<span class="ruby-identifier">encounter</span>)
+    <span class="ruby-identifier">encounter_list</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">encounter</span>)
+    <span class="ruby-identifier">weight_sum</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">encounter</span>.<span class="ruby-identifier">weight</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">weight_sum</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">value</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-identifier">weight_sum</span>)
+    <span class="ruby-identifier">encounter_list</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">encounter</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">value</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">encounter</span>.<span class="ruby-identifier">weight</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">encounter</span>.<span class="ruby-identifier">troop_id</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-map_passable-3F">
+            
+              <b>map_passable?</b>(x, y, d)
+            
+            <a href="../classes/Game_Player.html#method-i-map_passable-3F" name="method-i-map_passable-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定地图能否通行</p>
+
+<p>d : 方向（2,4,6,8）</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-map_passable-3F_source')" id="l_method-i-map_passable-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-map_passable-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">map_passable?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">d</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-ivar">@vehicle_type</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:boat</span>
+    <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">boat_passable?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:ship</span>
+    <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">ship_passable?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:airship</span>
+    <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">super</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-movable-3F">
+            
+              <b>movable?</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-movable-3F" name="method-i-movable-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定是否可以移动</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-movable-3F_source')" id="l_method-i-movable-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-movable-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 316</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">movable?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">moving?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@move_route_forcing</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@followers</span>.<span class="ruby-identifier">gathering?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@vehicle_getting_on</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@vehicle_getting_off</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">busy?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">visible</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">vehicle</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">vehicle</span>.<span class="ruby-identifier">movable?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move_by_input">
+            
+              <b>move_by_input</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-move_by_input" name="method-i-move_by_input" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>由方向键移动</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_by_input_source')" id="l_method-i-move_by_input_source">show</a>
+                
+              </p>
+              <div id="method-i-move_by_input_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 308</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move_by_input</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">movable?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">interpreter</span>.<span class="ruby-identifier">running?</span>
+  <span class="ruby-identifier">move_straight</span>(<span class="ruby-constant">Input</span>.<span class="ruby-identifier">dir4</span>) <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">dir4</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move_diagonal">
+            
+              <b>move_diagonal</b>(horz, vert)
+            
+            <a href="../classes/Game_Player.html#method-i-move_diagonal" name="method-i-move_diagonal" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>斜向移动</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_diagonal_source')" id="l_method-i-move_diagonal_source">show</a>
+                
+              </p>
+              <div id="method-i-move_diagonal_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 530</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move_diagonal</span>(<span class="ruby-identifier">horz</span>, <span class="ruby-identifier">vert</span>)
+  <span class="ruby-ivar">@followers</span>.<span class="ruby-identifier">move</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">diagonal_passable?</span>(<span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span>, <span class="ruby-identifier">horz</span>, <span class="ruby-identifier">vert</span>)
+  <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move_straight">
+            
+              <b>move_straight</b>(d, turn_ok = true)
+            
+            <a href="../classes/Game_Player.html#method-i-move_straight" name="method-i-move_straight" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>径向移动</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_straight_source')" id="l_method-i-move_straight_source">show</a>
+                
+              </p>
+              <div id="method-i-move_straight_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 522</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move_straight</span>(<span class="ruby-identifier">d</span>, <span class="ruby-identifier">turn_ok</span> = <span class="ruby-keyword">true</span>)
+  <span class="ruby-ivar">@followers</span>.<span class="ruby-identifier">move</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">passable?</span>(<span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span>, <span class="ruby-identifier">d</span>)
+  <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-moveto">
+            
+              <b>moveto</b>(x, y)
+            
+            <a href="../classes/Game_Player.html#method-i-moveto" name="method-i-moveto" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>移动到指定位置</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-moveto_source')" id="l_method-i-moveto_source">show</a>
+                
+              </p>
+              <div id="method-i-moveto_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 195</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">moveto</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">center</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">make_encounter_count</span>
+  <span class="ruby-identifier">vehicle</span>.<span class="ruby-identifier">refresh</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">vehicle</span>
+  <span class="ruby-ivar">@followers</span>.<span class="ruby-identifier">synchronize</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">direction</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-normal_walk-3F">
+            
+              <b>normal_walk?</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-normal_walk-3F" name="method-i-normal_walk-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定是否正在步行</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-normal_walk-3F_source')" id="l_method-i-normal_walk-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-normal_walk-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 143</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">normal_walk?</span>
+  <span class="ruby-ivar">@vehicle_type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:walk</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@move_route_forcing</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_damage_floor-3F">
+            
+              <b>on_damage_floor?</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-on_damage_floor-3F" name="method-i-on_damage_floor-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定是否伤害地形</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_damage_floor-3F_source')" id="l_method-i-on_damage_floor-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-on_damage_floor-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 515</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_damage_floor?</span>
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">damage_floor?</span>(<span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">in_airship?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-perform_transfer">
+            
+              <b>perform_transfer</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-perform_transfer" name="method-i-perform_transfer" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>执行场所移动</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-perform_transfer_source')" id="l_method-i-perform_transfer_source">show</a>
+                
+              </p>
+              <div id="method-i-perform_transfer_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">perform_transfer</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">transfer?</span>
+    <span class="ruby-identifier">set_direction</span>(<span class="ruby-ivar">@new_direction</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@new_map_id</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">map_id</span>
+      <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">setup</span>(<span class="ruby-ivar">@new_map_id</span>)
+      <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">autoplay</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">moveto</span>(<span class="ruby-ivar">@new_x</span>, <span class="ruby-ivar">@new_y</span>)
+    <span class="ruby-identifier">clear_transfer_info</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refresh">
+            
+              <b>refresh</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-refresh" name="method-i-refresh" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refresh_source')" id="l_method-i-refresh_source">show</a>
+                
+              </p>
+              <div id="method-i-refresh_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refresh</span>
+  <span class="ruby-ivar">@character_name</span> = <span class="ruby-identifier">actor</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">character_name</span> <span class="ruby-operator">:</span> <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-ivar">@character_index</span> = <span class="ruby-identifier">actor</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">character_index</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@followers</span>.<span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-reserve_transfer">
+            
+              <b>reserve_transfer</b>(map_id, x, y, d = 2)
+            
+            <a href="../classes/Game_Player.html#method-i-reserve_transfer" name="method-i-reserve_transfer" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>预定场所移动的位置</p>
+
+<p>d : 移动后的方向（2,4,6,8）</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-reserve_transfer_source')" id="l_method-i-reserve_transfer_source">show</a>
+                
+              </p>
+              <div id="method-i-reserve_transfer_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">reserve_transfer</span>(<span class="ruby-identifier">map_id</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">d</span> = <span class="ruby-number">2</span>)
+  <span class="ruby-ivar">@transferring</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-ivar">@new_map_id</span> = <span class="ruby-identifier">map_id</span>
+  <span class="ruby-ivar">@new_x</span> = <span class="ruby-identifier">x</span>
+  <span class="ruby-ivar">@new_y</span> = <span class="ruby-identifier">y</span>
+  <span class="ruby-ivar">@new_direction</span> = <span class="ruby-identifier">d</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start_map_event">
+            
+              <b>start_map_event</b>(x, y, triggers, normal)
+            
+            <a href="../classes/Game_Player.html#method-i-start_map_event" name="method-i-start_map_event" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>启动地图事件</p>
+
+<p>triggers : 启动方式的数组 normal   :
+优先级“与人物一样”还是其他</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_map_event_source')" id="l_method-i-start_map_event_source">show</a>
+                
+              </p>
+              <div id="method-i-start_map_event_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 269</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start_map_event</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">triggers</span>, <span class="ruby-identifier">normal</span>)
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">events_xy</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">event</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">event</span>.<span class="ruby-identifier">trigger_in?</span>(<span class="ruby-identifier">triggers</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">event</span>.<span class="ruby-identifier">normal_priority?</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">normal</span>
+      <span class="ruby-identifier">event</span>.<span class="ruby-identifier">start</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-stopping-3F">
+            
+              <b>stopping?</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-stopping-3F" name="method-i-stopping-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定是否静止</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-stopping-3F_source')" id="l_method-i-stopping-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-stopping-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">stopping?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@vehicle_getting_on</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@vehicle_getting_off</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-transfer-3F">
+            
+              <b>transfer?</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-transfer-3F" name="method-i-transfer-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定是否预定了场所移动的行为</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-transfer-3F_source')" id="l_method-i-transfer-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-transfer-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">transfer?</span>
+  <span class="ruby-ivar">@transferring</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>更新画面</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 328</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-identifier">last_real_x</span> = <span class="ruby-ivar">@real_x</span>
+  <span class="ruby-identifier">last_real_y</span> = <span class="ruby-ivar">@real_y</span>
+  <span class="ruby-identifier">last_moving</span> = <span class="ruby-identifier">moving?</span>
+  <span class="ruby-identifier">move_by_input</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">update_scroll</span>(<span class="ruby-identifier">last_real_x</span>, <span class="ruby-identifier">last_real_y</span>)
+  <span class="ruby-identifier">update_vehicle</span>
+  <span class="ruby-identifier">update_nonmoving</span>(<span class="ruby-identifier">last_moving</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">moving?</span>
+  <span class="ruby-ivar">@followers</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_encounter">
+            
+              <b>update_encounter</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-update_encounter" name="method-i-update_encounter" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>更新遇敌</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_encounter_source')" id="l_method-i-update_encounter_source">show</a>
+                
+              </p>
+              <div id="method-i-update_encounter_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 414</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_encounter</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$TEST</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">press?</span>(<span class="ruby-value">:CTRL</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">encounter_none?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">in_airship?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@move_route_forcing</span>
+  <span class="ruby-ivar">@encounter_count</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">encounter_progress_value</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_nonmoving">
+            
+              <b>update_nonmoving</b>(last_moving)
+            
+            <a href="../classes/Game_Player.html#method-i-update_nonmoving" name="method-i-update_nonmoving" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>非移动中的处理</p>
+
+<p>last_moving : 此前是否正在移动</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_nonmoving_source')" id="l_method-i-update_nonmoving_source">show</a>
+                
+              </p>
+              <div id="method-i-update_nonmoving_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 398</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_nonmoving</span>(<span class="ruby-identifier">last_moving</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">interpreter</span>.<span class="ruby-identifier">running?</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">last_moving</span>
+    <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">on_player_walk</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">check_touch_event</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">movable?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-value">:C</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">get_on_off_vehicle</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">check_action_event</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">update_encounter</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">last_moving</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_scroll">
+            
+              <b>update_scroll</b>(last_real_x, last_real_y)
+            
+            <a href="../classes/Game_Player.html#method-i-update_scroll" name="method-i-update_scroll" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>处理卷动</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_scroll_source')" id="l_method-i-update_scroll_source">show</a>
+                
+              </p>
+              <div id="method-i-update_scroll_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 343</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_scroll</span>(<span class="ruby-identifier">last_real_x</span>, <span class="ruby-identifier">last_real_y</span>)
+  <span class="ruby-identifier">ax1</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">adjust_x</span>(<span class="ruby-identifier">last_real_x</span>)
+  <span class="ruby-identifier">ay1</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">adjust_y</span>(<span class="ruby-identifier">last_real_y</span>)
+  <span class="ruby-identifier">ax2</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">adjust_x</span>(<span class="ruby-ivar">@real_x</span>)
+  <span class="ruby-identifier">ay2</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">adjust_y</span>(<span class="ruby-ivar">@real_y</span>)
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">scroll_down</span> (<span class="ruby-identifier">ay2</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">ay1</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">ay2</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ay1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">ay2</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">center_y</span>
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">scroll_left</span> (<span class="ruby-identifier">ax1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">ax2</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">ax2</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">ax1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">ax2</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">center_x</span>
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">scroll_right</span>(<span class="ruby-identifier">ax2</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">ax1</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">ax2</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ax1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">ax2</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">center_x</span>
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">scroll_up</span>   (<span class="ruby-identifier">ay1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">ay2</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">ay2</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">ay1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">ay2</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">center_y</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_vehicle">
+            
+              <b>update_vehicle</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-update_vehicle" name="method-i-update_vehicle" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>处理载具的升降与移动</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_vehicle_source')" id="l_method-i-update_vehicle_source">show</a>
+                
+              </p>
+              <div id="method-i-update_vehicle_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 357</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_vehicle</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@followers</span>.<span class="ruby-identifier">gathering?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">vehicle</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@vehicle_getting_on</span>
+    <span class="ruby-identifier">update_vehicle_get_on</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@vehicle_getting_off</span>
+    <span class="ruby-identifier">update_vehicle_get_off</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">vehicle</span>.<span class="ruby-identifier">sync_with_player</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_vehicle_get_off">
+            
+              <b>update_vehicle_get_off</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-update_vehicle_get_off" name="method-i-update_vehicle_get_off" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>更新离开载具</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_vehicle_get_off_source')" id="l_method-i-update_vehicle_get_off_source">show</a>
+                
+              </p>
+              <div id="method-i-update_vehicle_get_off_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 386</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_vehicle_get_off</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@followers</span>.<span class="ruby-identifier">gathering?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">vehicle</span>.<span class="ruby-identifier">altitude</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@vehicle_getting_off</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@vehicle_type</span> = <span class="ruby-value">:walk</span>
+    <span class="ruby-ivar">@transparent</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_vehicle_get_on">
+            
+              <b>update_vehicle_get_on</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-update_vehicle_get_on" name="method-i-update_vehicle_get_on" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>更新登上载具</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_vehicle_get_on_source')" id="l_method-i-update_vehicle_get_on_source">show</a>
+                
+              </p>
+              <div id="method-i-update_vehicle_get_on_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 372</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_vehicle_get_on</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@followers</span>.<span class="ruby-identifier">gathering?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">moving?</span>
+    <span class="ruby-ivar">@direction</span> = <span class="ruby-identifier">vehicle</span>.<span class="ruby-identifier">direction</span>
+    <span class="ruby-ivar">@move_speed</span> = <span class="ruby-identifier">vehicle</span>.<span class="ruby-identifier">speed</span>
+    <span class="ruby-ivar">@vehicle_getting_on</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@transparent</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@through</span> = <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">in_airship?</span>
+    <span class="ruby-identifier">vehicle</span>.<span class="ruby-identifier">get_on</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-vehicle">
+            
+              <b>vehicle</b>()
+            
+            <a href="../classes/Game_Player.html#method-i-vehicle" name="method-i-vehicle" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取当前乘坐载具</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-vehicle_source')" id="l_method-i-vehicle_source">show</a>
+                
+              </p>
+              <div id="method-i-vehicle_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Player.rb, line 115</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">vehicle</span>
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">vehicle</span>(<span class="ruby-ivar">@vehicle_type</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_Save</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_Save 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Scene_File.html">Scene_File</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_Save_rb.html">Scene_Save.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This class performs save screen processing.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-on_cancel">on_cancel</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_decision">on_decision</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-write_save_data">write_save_data</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Scene_Save.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Object Initialization</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Save.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-keyword">super</span>(<span class="ruby-string">&quot;Which file would you like to save to?&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-on_cancel">
+            
+              <b>on_cancel</b>()
+            
+            <a href="../classes/Scene_Save.html#method-i-on_cancel" name="method-i-on_cancel" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Cancel Processing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_cancel_source')" id="l_method-i-on_cancel_source">show</a>
+                
+              </p>
+              <div id="method-i-on_cancel_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Save.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_cancel</span>
+  <span class="ruby-comment"># Play cancel SE</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cancel_se</span>)
+  <span class="ruby-comment"># If called from event</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">save_calling</span>
+    <span class="ruby-comment"># Clear save call flag</span>
+    <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">save_calling</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-comment"># Switch to map screen</span>
+    <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Map</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Switch to menu screen</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Menu</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">4</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_decision">
+            
+              <b>on_decision</b>(filename)
+            
+            <a href="../classes/Scene_Save.html#method-i-on_decision" name="method-i-on_decision" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Decision Processing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_decision_source')" id="l_method-i-on_decision_source">show</a>
+                
+              </p>
+              <div id="method-i-on_decision_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Save.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_decision</span>(<span class="ruby-identifier">filename</span>)
+  <span class="ruby-comment"># Play save SE</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">save_se</span>)
+  <span class="ruby-comment"># Write save data</span>
+  <span class="ruby-identifier">file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-string">&quot;wb&quot;</span>)
+  <span class="ruby-identifier">write_save_data</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-identifier">file</span>.<span class="ruby-identifier">close</span>
+  <span class="ruby-comment"># If called from event</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">save_calling</span>
+    <span class="ruby-comment"># Clear save call flag</span>
+    <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">save_calling</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-comment"># Switch to map screen</span>
+    <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Map</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Switch to menu screen</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Menu</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">4</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-write_save_data">
+            
+              <b>write_save_data</b>(file)
+            
+            <a href="../classes/Scene_Save.html#method-i-write_save_data" name="method-i-write_save_data" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Write Save Data</p>
+
+<p>file : write file object (opened)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-write_save_data_source')" id="l_method-i-write_save_data_source">show</a>
+                
+              </p>
+              <div id="method-i-write_save_data_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Save.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">write_save_data</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-comment"># Make character data for drawing save file</span>
+  <span class="ruby-identifier">characters</span> = []
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">actors</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-identifier">actor</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">actors</span>[<span class="ruby-identifier">i</span>]
+    <span class="ruby-identifier">characters</span>.<span class="ruby-identifier">push</span>([<span class="ruby-identifier">actor</span>.<span class="ruby-identifier">character_name</span>, <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">character_hue</span>])
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Write character data for drawing save file</span>
+  <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">characters</span>, <span class="ruby-identifier">file</span>)
+  <span class="ruby-comment"># Wrire frame count for measuring play time</span>
+  <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">frame_count</span>, <span class="ruby-identifier">file</span>)
+  <span class="ruby-comment"># Increase save count by 1</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">save_count</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+  <span class="ruby-comment"># Save magic number</span>
+  <span class="ruby-comment"># (A random value will be written each time saving with editor)</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">magic_number</span> = <span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">magic_number</span>
+  <span class="ruby-comment"># Write each type of game object</span>
+  <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">$game_system</span>, <span class="ruby-identifier">file</span>)
+  <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">$game_switches</span>, <span class="ruby-identifier">file</span>)
+  <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">$game_variables</span>, <span class="ruby-identifier">file</span>)
+  <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">$game_self_switches</span>, <span class="ruby-identifier">file</span>)
+  <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">$game_screen</span>, <span class="ruby-identifier">file</span>)
+  <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">$game_actors</span>, <span class="ruby-identifier">file</span>)
+  <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">$game_party</span>, <span class="ruby-identifier">file</span>)
+  <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">$game_troop</span>, <span class="ruby-identifier">file</span>)
+  <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">$game_map</span>, <span class="ruby-identifier">file</span>)
+  <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">$game_player</span>, <span class="ruby-identifier">file</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

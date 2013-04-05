@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_Map</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_Map 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_Map_rb.html">Scene_Map.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>处理地图画面的类。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-call_battle">call_battle</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-call_debug">call_debug</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-call_menu">call_menu</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-call_name">call_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-call_save">call_save</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-call_shop">call_shop</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-main">main</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-transfer_player">transfer_player</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-call_battle">
+            
+              <b>call_battle</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-call_battle" name="method-i-call_battle" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>调用战斗</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_battle_source')" id="l_method-i-call_battle_source">show</a>
+                
+              </p>
+              <div id="method-i-call_battle_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 158</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_battle</span>
+  <span class="ruby-comment"># 清除战斗调用标志</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">battle_calling</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-comment"># 清除菜单调用标志</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">menu_calling</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">menu_beep</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-comment"># 生成遇敌计数</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">make_encounter_count</span>
+  <span class="ruby-comment"># 记忆地图 BGM 、停止 BGM</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">map_bgm</span> = <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">playing_bgm</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">bgm_stop</span>
+  <span class="ruby-comment"># 演奏战斗开始 SE</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">battle_start_se</span>)
+  <span class="ruby-comment"># 演奏战斗 BGM</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">bgm_play</span>(<span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">battle_bgm</span>)
+  <span class="ruby-comment"># 矫正主角姿势</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">straighten</span>
+  <span class="ruby-comment"># 切换到战斗画面</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Battle</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-call_debug">
+            
+              <b>call_debug</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-call_debug" name="method-i-call_debug" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>调用调试</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_debug_source')" id="l_method-i-call_debug_source">show</a>
+                
+              </p>
+              <div id="method-i-call_debug_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 235</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_debug</span>
+  <span class="ruby-comment"># 清除商店调用调试标志</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">debug_calling</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-comment"># 演奏确定 SE</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">decision_se</span>)
+  <span class="ruby-comment"># 矫正主角姿势</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">straighten</span>
+  <span class="ruby-comment"># 切换到调试画面</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Debug</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-call_menu">
+            
+              <b>call_menu</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-call_menu" name="method-i-call_menu" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>调用菜单</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_menu_source')" id="l_method-i-call_menu_source">show</a>
+                
+              </p>
+              <div id="method-i-call_menu_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 206</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_menu</span>
+  <span class="ruby-comment"># 清除商店调用菜单标志</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">menu_calling</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-comment"># 已经设置了菜单 SE 演奏标志的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">menu_beep</span>
+    <span class="ruby-comment"># 演奏确定 SE</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">decision_se</span>)
+    <span class="ruby-comment"># 清除菜单演奏 SE 标志</span>
+    <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">menu_beep</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 矫正主角姿势</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">straighten</span>
+  <span class="ruby-comment"># 切换到菜单画面</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Menu</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-call_name">
+            
+              <b>call_name</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-call_name" name="method-i-call_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>调用名称输入</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_name_source')" id="l_method-i-call_name_source">show</a>
+                
+              </p>
+              <div id="method-i-call_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 194</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_name</span>
+  <span class="ruby-comment"># 清除商店调用名称输入标志</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">name_calling</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-comment"># 矫正主角姿势</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">straighten</span>
+  <span class="ruby-comment"># 切换到名称输入画面</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Name</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-call_save">
+            
+              <b>call_save</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-call_save" name="method-i-call_save" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>调用存档</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_save_source')" id="l_method-i-call_save_source">show</a>
+                
+              </p>
+              <div id="method-i-call_save_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 225</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_save</span>
+  <span class="ruby-comment"># 矫正主角姿势</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">straighten</span>
+  <span class="ruby-comment"># 切换到存档画面</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Save</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-call_shop">
+            
+              <b>call_shop</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-call_shop" name="method-i-call_shop" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>调用商店</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_shop_source')" id="l_method-i-call_shop_source">show</a>
+                
+              </p>
+              <div id="method-i-call_shop_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 182</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_shop</span>
+  <span class="ruby-comment"># 清除商店调用标志</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">shop_calling</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-comment"># 矫正主角姿势</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">straighten</span>
+  <span class="ruby-comment"># 切换到商店画面</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Shop</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-main">
+            
+              <b>main</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-main" name="method-i-main" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>主处理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-main_source')" id="l_method-i-main_source">show</a>
+                
+              </p>
+              <div id="method-i-main_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">main</span>
+  <span class="ruby-comment"># 生成活动块</span>
+  <span class="ruby-ivar">@spriteset</span> = <span class="ruby-constant">Spriteset_Map</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-comment"># 生成信息窗口</span>
+  <span class="ruby-ivar">@message_window</span> = <span class="ruby-constant">Window_Message</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-comment"># 执行过渡</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">transition</span>
+  <span class="ruby-comment"># 主循环</span>
+  <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-comment"># 刷新游戏画面</span>
+    <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># 刷新输入信息</span>
+    <span class="ruby-constant">Input</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># 刷新画面</span>
+    <span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># 如果画面切换的话就中断循环</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$scene</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">self</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 准备过渡</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">freeze</span>
+  <span class="ruby-comment"># 释放活动块</span>
+  <span class="ruby-ivar">@spriteset</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-comment"># 释放信息窗口</span>
+  <span class="ruby-ivar">@message_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-comment"># 标题画面切换中的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$scene</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Scene_Title</span>)
+    <span class="ruby-comment"># 淡入淡出画面</span>
+    <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">transition</span>
+    <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">freeze</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-transfer_player">
+            
+              <b>transfer_player</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-transfer_player" name="method-i-transfer_player" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>主角的场所移动</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-transfer_player_source')" id="l_method-i-transfer_player_source">show</a>
+                
+              </p>
+              <div id="method-i-transfer_player_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 249</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">transfer_player</span>
+  <span class="ruby-comment"># 清除主角场所移动调试标志</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">player_transferring</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-comment"># 移动目标与现在的地图有差异的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">map_id</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">player_new_map_id</span>
+    <span class="ruby-comment"># 设置新地图</span>
+    <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">setup</span>(<span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">player_new_map_id</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 设置主角位置</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">moveto</span>(<span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">player_new_x</span>, <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">player_new_y</span>)
+  <span class="ruby-comment"># 设置主角朝向</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">player_new_direction</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>  <span class="ruby-comment"># 下</span>
+    <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">turn_down</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">4</span>  <span class="ruby-comment"># 左</span>
+    <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">turn_left</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">6</span>  <span class="ruby-comment"># 右</span>
+    <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">turn_right</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">8</span>  <span class="ruby-comment"># 上</span>
+    <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">turn_up</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 矫正主角姿势</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">straighten</span>
+  <span class="ruby-comment"># 刷新地图 (执行并行事件)</span>
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-comment"># 在生成活动块</span>
+  <span class="ruby-ivar">@spriteset</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@spriteset</span> = <span class="ruby-constant">Spriteset_Map</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-comment"># 处理过渡中的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">transition_processing</span>
+    <span class="ruby-comment"># 清除过渡处理中标志</span>
+    <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">transition_processing</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-comment"># 执行过渡</span>
+    <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">transition</span>(<span class="ruby-number">20</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 执行地图设置的 BGM、BGS 的自动切换</span>
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">autoplay</span>
+  <span class="ruby-comment"># 设置画面</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">frame_reset</span>
+  <span class="ruby-comment"># 刷新输入信息</span>
+  <span class="ruby-constant">Input</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新画面</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-comment"># 循环</span>
+  <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-comment"># 按照地图、实例、主角的顺序刷新</span>
+    <span class="ruby-comment"># (本更新顺序不会在的满足事件的执行条件下成为给予角色瞬间移动</span>
+    <span class="ruby-comment"># 的机会的重要因素)</span>
+    <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">map_interpreter</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># 系统 (计时器)、画面刷新</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-identifier">$game_screen</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># 如果主角在场所移动中就中断循环</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">player_transferring</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># 执行场所移动</span>
+    <span class="ruby-identifier">transfer_player</span>
+    <span class="ruby-comment"># 处理过渡中的情况下、中断循环</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">transition_processing</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 刷新活动块</span>
+  <span class="ruby-ivar">@spriteset</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-comment"># 刷新信息窗口</span>
+  <span class="ruby-ivar">@message_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-comment"># 游戏结束的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">gameover</span>
+    <span class="ruby-comment"># 切换的游戏结束画面</span>
+    <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Gameover</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 返回标题画面的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">to_title</span>
+    <span class="ruby-comment"># 切换到标题画面</span>
+    <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Title</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 处理过渡中的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">transition_processing</span>
+    <span class="ruby-comment"># 清除过渡处理中标志</span>
+    <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">transition_processing</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-comment"># 执行过渡</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">transition_name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;&quot;</span>
+      <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">transition</span>(<span class="ruby-number">20</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">transition</span>(<span class="ruby-number">40</span>, <span class="ruby-string">&quot;Graphics/Transitions/&quot;</span> <span class="ruby-operator">+</span>
+        <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">transition_name</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 显示信息窗口中的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">message_window_showing</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 遇敌计数为 0 且、且遇敌列表不为空的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">encounter_count</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">encounter_list</span> <span class="ruby-operator">!=</span> []
+    <span class="ruby-comment"># 不是在事件执行中或者禁止遇敌中</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">map_interpreter</span>.<span class="ruby-identifier">running?</span> <span class="ruby-keyword">or</span>
+           <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">encounter_disabled</span>
+      <span class="ruby-comment"># 确定队伍</span>
+      <span class="ruby-identifier">n</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">encounter_list</span>.<span class="ruby-identifier">size</span>)
+      <span class="ruby-identifier">troop_id</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">encounter_list</span>[<span class="ruby-identifier">n</span>]
+      <span class="ruby-comment"># 队伍有效的话</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">$data_troops</span>[<span class="ruby-identifier">troop_id</span>] <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-comment"># 设置调用战斗标志</span>
+        <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">battle_calling</span> = <span class="ruby-keyword">true</span>
+        <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">battle_troop_id</span> = <span class="ruby-identifier">troop_id</span>
+        <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">battle_can_escape</span> = <span class="ruby-keyword">true</span>
+        <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">battle_can_lose</span> = <span class="ruby-keyword">false</span>
+        <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">battle_proc</span> = <span class="ruby-keyword">nil</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 按下 B 键的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>)
+    <span class="ruby-comment"># 不是在事件执行中或菜单禁止中</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">map_interpreter</span>.<span class="ruby-identifier">running?</span> <span class="ruby-keyword">or</span>
+           <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">menu_disabled</span>
+      <span class="ruby-comment"># 设置菜单调用标志以及 SE 演奏</span>
+      <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">menu_calling</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">menu_beep</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 调试模式为 ON 并且按下 F9 键的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$DEBUG</span> <span class="ruby-keyword">and</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">press?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">F9</span>)
+    <span class="ruby-comment"># 设置调用调试标志</span>
+    <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">debug_calling</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 不在主角移动中的情况下</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">moving?</span>
+    <span class="ruby-comment"># 执行各种画面的调用</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">battle_calling</span>
+      <span class="ruby-identifier">call_battle</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">shop_calling</span>
+      <span class="ruby-identifier">call_shop</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">name_calling</span>
+      <span class="ruby-identifier">call_name</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">menu_calling</span>
+      <span class="ruby-identifier">call_menu</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">save_calling</span>
+      <span class="ruby-identifier">call_save</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">debug_calling</span>
+      <span class="ruby-identifier">call_debug</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

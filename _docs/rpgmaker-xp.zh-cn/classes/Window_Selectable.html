@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Window_Selectable</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Window_Selectable 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Window_Base.html">Window_Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Window_Selectable_rb.html">Window_Selectable.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>拥有光标的移动以及滚动功能的窗口类。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-help_window-3D">help_window=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-index-3D">index=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-page_item_max">page_item_max</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-page_row_max">page_row_max</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-row_max">row_max</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-top_row">top_row</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-top_row-3D">top_row=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_cursor_rect">update_cursor_rect</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>help_window</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>index</td>
+            <td class='attr-desc'><p>定义实例变量</p></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(x, y, width, height)
+            
+            <a href="../classes/Window_Selectable.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>初始画对像</p>
+
+<p>x      : 窗口的 X 坐标 y      : 窗口的 Y 坐标 width  :
+窗口的宽 height : 窗口的高</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>)
+  <span class="ruby-ivar">@item_max</span> = <span class="ruby-number">1</span>
+  <span class="ruby-ivar">@column_max</span> = <span class="ruby-number">1</span>
+  <span class="ruby-ivar">@index</span> = <span class="ruby-number">-1</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-help_window-3D">
+            
+              <b>help_window=</b>(help_window)
+            
+            <a href="../classes/Window_Selectable.html#method-i-help_window-3D" name="method-i-help_window-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>帮助窗口的设置</p>
+
+<p><a href="Window_Selectable.html#attribute-i-help_window">#help_window</a> :
+新的帮助窗口</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-help_window-3D_source')" id="l_method-i-help_window-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-help_window-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">help_window=</span>(<span class="ruby-identifier">help_window</span>)
+  <span class="ruby-ivar">@help_window</span> = <span class="ruby-identifier">help_window</span>
+  <span class="ruby-comment"># 刷新帮助文本 (update_help 定义了继承目标)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">active</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@help_window</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">update_help</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-index-3D">
+            
+              <b>index=</b>(index)
+            
+            <a href="../classes/Window_Selectable.html#method-i-index-3D" name="method-i-index-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>设置光标的位置</p>
+
+<p>index : 新的光标位置</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-index-3D_source')" id="l_method-i-index-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-index-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">index=</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-ivar">@index</span> = <span class="ruby-identifier">index</span>
+  <span class="ruby-comment"># 刷新帮助文本 (update_help 定义了继承目标)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">active</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@help_window</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">update_help</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 刷新光标矩形</span>
+  <span class="ruby-identifier">update_cursor_rect</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-page_item_max">
+            
+              <b>page_item_max</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-page_item_max" name="method-i-page_item_max" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取 1 页可以显示的项目数</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-page_item_max_source')" id="l_method-i-page_item_max_source">show</a>
+                
+              </p>
+              <div id="method-i-page_item_max_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">page_item_max</span>
+  <span class="ruby-comment"># 将行数 page_row_max 乘上列数 @column_max</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">page_row_max</span> * <span class="ruby-ivar">@column_max</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-page_row_max">
+            
+              <b>page_row_max</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-page_row_max" name="method-i-page_row_max" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取 1 页可以显示的行数</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-page_row_max_source')" id="l_method-i-page_row_max_source">show</a>
+                
+              </p>
+              <div id="method-i-page_row_max_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">page_row_max</span>
+  <span class="ruby-comment"># 窗口的高度，设置画面的高度减去 32 ，除以 1 行的高度 32 </span>
+  <span class="ruby-keyword">return</span> (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-number">32</span>) <span class="ruby-operator">/</span> <span class="ruby-number">32</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-row_max">
+            
+              <b>row_max</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-row_max" name="method-i-row_max" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取行数</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-row_max_source')" id="l_method-i-row_max_source">show</a>
+                
+              </p>
+              <div id="method-i-row_max_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">row_max</span>
+  <span class="ruby-comment"># 由项目数和列数计算出行数</span>
+  <span class="ruby-keyword">return</span> (<span class="ruby-ivar">@item_max</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@column_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>) <span class="ruby-operator">/</span> <span class="ruby-ivar">@column_max</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-top_row">
+            
+              <b>top_row</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-top_row" name="method-i-top_row" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取开头行</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-top_row_source')" id="l_method-i-top_row_source">show</a>
+                
+              </p>
+              <div id="method-i-top_row_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">top_row</span>
+  <span class="ruby-comment"># 将窗口内容的传送源 Y 坐标、1 行的高 32 等分</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">oy</span> <span class="ruby-operator">/</span> <span class="ruby-number">32</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-top_row-3D">
+            
+              <b>top_row=</b>(row)
+            
+            <a href="../classes/Window_Selectable.html#method-i-top_row-3D" name="method-i-top_row-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>设置开头行</p>
+
+<p>row : 显示开头的行</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-top_row-3D_source')" id="l_method-i-top_row-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-top_row-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">top_row=</span>(<span class="ruby-identifier">row</span>)
+  <span class="ruby-comment"># row 未满 0 的场合更正为 0</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">row</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># row 超过 row_max - 1 的情况下更正为 row_max - 1 </span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">row_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>
+    <span class="ruby-identifier">row</span> = <span class="ruby-identifier">row_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># row 1 行高的 32 倍、窗口内容的传送源 Y 坐标</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-identifier">row</span> * <span class="ruby-number">32</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新画面</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 135</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-comment"># 可以移动光标的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">active</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@item_max</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">0</span>
+    <span class="ruby-comment"># 方向键下被按下的情况下</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">DOWN</span>)
+      <span class="ruby-comment"># 列数不是 1 并且方向键的下的按下状态不是重复的情况、</span>
+      <span class="ruby-comment"># 或光标位置在(项目数-列数)之前的情况下</span>
+      <span class="ruby-keyword">if</span> (<span class="ruby-ivar">@column_max</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span> <span class="ruby-keyword">and</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">DOWN</span>)) <span class="ruby-keyword">or</span>
+         <span class="ruby-ivar">@index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@item_max</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@column_max</span>
+        <span class="ruby-comment"># 光标向下移动</span>
+        <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+        <span class="ruby-ivar">@index</span> = (<span class="ruby-ivar">@index</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@column_max</span>) <span class="ruby-operator">%</span> <span class="ruby-ivar">@item_max</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># 方向键上被按下的情况下</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">UP</span>)
+      <span class="ruby-comment"># 列数不是 1 并且方向键的下的按下状态不是重复的情况、</span>
+      <span class="ruby-comment"># 或光标位置在列之后的情况下</span>
+      <span class="ruby-keyword">if</span> (<span class="ruby-ivar">@column_max</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span> <span class="ruby-keyword">and</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">UP</span>)) <span class="ruby-keyword">or</span>
+         <span class="ruby-ivar">@index</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-ivar">@column_max</span>
+        <span class="ruby-comment"># 光标向上移动</span>
+        <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+        <span class="ruby-ivar">@index</span> = (<span class="ruby-ivar">@index</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@column_max</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@item_max</span>) <span class="ruby-operator">%</span> <span class="ruby-ivar">@item_max</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># 方向键右被按下的情况下</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">RIGHT</span>)
+      <span class="ruby-comment"># 列数为 2 以上并且、光标位置在(项目数 - 1)之前的情况下</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@column_max</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">2</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@item_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>
+        <span class="ruby-comment"># 光标向右移动</span>
+        <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+        <span class="ruby-ivar">@index</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># 方向键左被按下的情况下</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">LEFT</span>)
+      <span class="ruby-comment"># 列数为 2 以上并且、光标位置在 0 之后的情况下</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@column_max</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">2</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+        <span class="ruby-comment"># 光标向左移动</span>
+        <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+        <span class="ruby-ivar">@index</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># R 键被按下的情况下</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">R</span>)
+      <span class="ruby-comment"># 显示的最后行在数据中最后行上方的情况下</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_row</span> <span class="ruby-operator">+</span> (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">page_row_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>) <span class="ruby-operator">&lt;</span> (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">row_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>)
+        <span class="ruby-comment"># 光标向后移动一页</span>
+        <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+        <span class="ruby-ivar">@index</span> = [<span class="ruby-ivar">@index</span> <span class="ruby-operator">+</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">page_item_max</span>, <span class="ruby-ivar">@item_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>].<span class="ruby-identifier">min</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_row</span> <span class="ruby-operator">+=</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">page_row_max</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># L 键被按下的情况下</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">L</span>)
+      <span class="ruby-comment"># 显示的开头行在位置 0 之后的情况下</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_row</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+        <span class="ruby-comment"># 光标向前移动一页</span>
+        <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+        <span class="ruby-ivar">@index</span> = [<span class="ruby-ivar">@index</span> <span class="ruby-operator">-</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">page_item_max</span>, <span class="ruby-number">0</span>].<span class="ruby-identifier">max</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_row</span> <span class="ruby-operator">-=</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">page_row_max</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 刷新帮助文本 (update_help 定义了继承目标)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">active</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@help_window</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">update_help</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 刷新光标矩形</span>
+  <span class="ruby-identifier">update_cursor_rect</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_cursor_rect">
+            
+              <b>update_cursor_rect</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-update_cursor_rect" name="method-i-update_cursor_rect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>更新光标举行</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_cursor_rect_source')" id="l_method-i-update_cursor_rect_source">show</a>
+                
+              </p>
+              <div id="method-i-update_cursor_rect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 105</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_cursor_rect</span>
+  <span class="ruby-comment"># 光标位置不满 0 的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">cursor_rect</span>.<span class="ruby-identifier">empty</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 获取当前的行</span>
+  <span class="ruby-identifier">row</span> = <span class="ruby-ivar">@index</span> <span class="ruby-operator">/</span> <span class="ruby-ivar">@column_max</span>
+  <span class="ruby-comment"># 当前行被显示开头行前面的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">&lt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_row</span>
+    <span class="ruby-comment"># 从当前行向开头行滚动</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_row</span> = <span class="ruby-identifier">row</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 当前行被显示末尾行之后的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">&gt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_row</span> <span class="ruby-operator">+</span> (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">page_row_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>)
+    <span class="ruby-comment"># 从当前行向末尾滚动</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_row</span> = <span class="ruby-identifier">row</span> <span class="ruby-operator">-</span> (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">page_row_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 计算光标的宽</span>
+  <span class="ruby-identifier">cursor_width</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">/</span> <span class="ruby-ivar">@column_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">32</span>
+  <span class="ruby-comment"># 计算光标坐标</span>
+  <span class="ruby-identifier">x</span> = <span class="ruby-ivar">@index</span> <span class="ruby-operator">%</span> <span class="ruby-ivar">@column_max</span> * (<span class="ruby-identifier">cursor_width</span> <span class="ruby-operator">+</span> <span class="ruby-number">32</span>)
+  <span class="ruby-identifier">y</span> = <span class="ruby-ivar">@index</span> <span class="ruby-operator">/</span> <span class="ruby-ivar">@column_max</span> * <span class="ruby-number">32</span> <span class="ruby-operator">-</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">oy</span>
+  <span class="ruby-comment"># 更新国标矩形</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">cursor_rect</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">cursor_width</span>, <span class="ruby-number">32</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

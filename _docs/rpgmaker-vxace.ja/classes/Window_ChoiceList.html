@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Window_ChoiceList</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Window_ChoiceList 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Window_Command.html">Window_Command</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Window_ChoiceList_rb.html">Window_ChoiceList.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>イベントコマンド［選択肢の表示］に使用するウィンドウです。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-call_cancel_handler">call_cancel_handler</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-call_ok_handler">call_ok_handler</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cancel_enabled-3F">cancel_enabled?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-contents_height">contents_height</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-draw_item">draw_item</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-make_command_list">make_command_list</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-max_choice_width">max_choice_width</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-start">start</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update_placement">update_placement</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(message_window)
+            
+            <a href="../classes/Window_ChoiceList.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>オブジェクト初期化</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ChoiceList.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">message_window</span>)
+  <span class="ruby-ivar">@message_window</span> = <span class="ruby-identifier">message_window</span>
+  <span class="ruby-keyword">super</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">openness</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">deactivate</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-call_cancel_handler">
+            
+              <b>call_cancel_handler</b>()
+            
+            <a href="../classes/Window_ChoiceList.html#method-i-call_cancel_handler" name="method-i-call_cancel_handler" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>キャンセルハンドラの呼び出し</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_cancel_handler_source')" id="l_method-i-call_cancel_handler_source">show</a>
+                
+              </p>
+              <div id="method-i-call_cancel_handler_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ChoiceList.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_cancel_handler</span>
+  <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">choice_proc</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">choice_cancel_type</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>)
+  <span class="ruby-identifier">close</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-call_ok_handler">
+            
+              <b>call_ok_handler</b>()
+            
+            <a href="../classes/Window_ChoiceList.html#method-i-call_ok_handler" name="method-i-call_ok_handler" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>決定ハンドラの呼び出し</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_ok_handler_source')" id="l_method-i-call_ok_handler_source">show</a>
+                
+              </p>
+              <div id="method-i-call_ok_handler_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ChoiceList.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_ok_handler</span>
+  <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">choice_proc</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">close</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cancel_enabled-3F">
+            
+              <b>cancel_enabled?</b>()
+            
+            <a href="../classes/Window_ChoiceList.html#method-i-cancel_enabled-3F" name="method-i-cancel_enabled-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>キャンセル処理の有効状態を取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cancel_enabled-3F_source')" id="l_method-i-cancel_enabled-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-cancel_enabled-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ChoiceList.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cancel_enabled?</span>
+  <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">choice_cancel_type</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-contents_height">
+            
+              <b>contents_height</b>()
+            
+            <a href="../classes/Window_ChoiceList.html#method-i-contents_height" name="method-i-contents_height" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ウィンドウ内容の高さを計算</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-contents_height_source')" id="l_method-i-contents_height_source">show</a>
+                
+              </p>
+              <div id="method-i-contents_height_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ChoiceList.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">contents_height</span>
+  <span class="ruby-identifier">item_max</span> * <span class="ruby-identifier">item_height</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-draw_item">
+            
+              <b>draw_item</b>(index)
+            
+            <a href="../classes/Window_ChoiceList.html#method-i-draw_item" name="method-i-draw_item" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>項目の描画</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-draw_item_source')" id="l_method-i-draw_item_source">show</a>
+                
+              </p>
+              <div id="method-i-draw_item_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ChoiceList.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">draw_item</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">rect</span> = <span class="ruby-identifier">item_rect_for_text</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">draw_text_ex</span>(<span class="ruby-identifier">rect</span>.<span class="ruby-identifier">x</span>, <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">y</span>, <span class="ruby-identifier">command_name</span>(<span class="ruby-identifier">index</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-make_command_list">
+            
+              <b>make_command_list</b>()
+            
+            <a href="../classes/Window_ChoiceList.html#method-i-make_command_list" name="method-i-make_command_list" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>コマンドリストの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-make_command_list_source')" id="l_method-i-make_command_list_source">show</a>
+                
+              </p>
+              <div id="method-i-make_command_list_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ChoiceList.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">make_command_list</span>
+  <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">choices</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">choice</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">add_command</span>(<span class="ruby-identifier">choice</span>, <span class="ruby-value">:choice</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-max_choice_width">
+            
+              <b>max_choice_width</b>()
+            
+            <a href="../classes/Window_ChoiceList.html#method-i-max_choice_width" name="method-i-max_choice_width" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>選択肢の最大幅を取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-max_choice_width_source')" id="l_method-i-max_choice_width_source">show</a>
+                
+              </p>
+              <div id="method-i-max_choice_width_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ChoiceList.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">max_choice_width</span>
+  <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">choices</span>.<span class="ruby-identifier">collect</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">text_size</span>(<span class="ruby-identifier">s</span>).<span class="ruby-identifier">width</span> }.<span class="ruby-identifier">max</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start">
+            
+              <b>start</b>()
+            
+            <a href="../classes/Window_ChoiceList.html#method-i-start" name="method-i-start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>入力処理の開始</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_source')" id="l_method-i-start_source">show</a>
+                
+              </p>
+              <div id="method-i-start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ChoiceList.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start</span>
+  <span class="ruby-identifier">update_placement</span>
+  <span class="ruby-identifier">refresh</span>
+  <span class="ruby-identifier">select</span>(<span class="ruby-number">0</span>)
+  <span class="ruby-identifier">open</span>
+  <span class="ruby-identifier">activate</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_placement">
+            
+              <b>update_placement</b>()
+            
+            <a href="../classes/Window_ChoiceList.html#method-i-update_placement" name="method-i-update_placement" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ウィンドウ位置の更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_placement_source')" id="l_method-i-update_placement_source">show</a>
+                
+              </p>
+              <div id="method-i-update_placement_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ChoiceList.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_placement</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">width</span> = [<span class="ruby-identifier">max_choice_width</span> <span class="ruby-operator">+</span> <span class="ruby-number">12</span>, <span class="ruby-number">96</span>].<span class="ruby-identifier">max</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">padding</span> * <span class="ruby-number">2</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">width</span> = [<span class="ruby-identifier">width</span>, <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span>].<span class="ruby-identifier">min</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">height</span> = <span class="ruby-identifier">fitting_height</span>(<span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">choices</span>.<span class="ruby-identifier">size</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">x</span> = <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">width</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@message_window</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">y</span> = <span class="ruby-ivar">@message_window</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">height</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">y</span> = <span class="ruby-ivar">@message_window</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@message_window</span>.<span class="ruby-identifier">height</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

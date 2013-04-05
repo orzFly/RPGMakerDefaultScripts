@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Window_BattleStatus</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Window_BattleStatus 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Window_Selectable.html">Window_Selectable</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Window_BattleStatus_rb.html">Window_BattleStatus.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This window is for displaying the status of party members on the battle
+screen.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-basic_area_rect">basic_area_rect</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-draw_basic_area">draw_basic_area</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-draw_gauge_area">draw_gauge_area</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-draw_gauge_area_with_tp">draw_gauge_area_with_tp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-draw_gauge_area_without_tp">draw_gauge_area_without_tp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-draw_item">draw_item</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-gauge_area_rect">gauge_area_rect</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-gauge_area_width">gauge_area_width</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-item_max">item_max</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-refresh">refresh</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-visible_line_number">visible_line_number</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-window_height">window_height</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-window_width">window_width</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Window_BattleStatus.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p><a href="Object.html">Object</a> Initialization</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleStatus.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-keyword">super</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-identifier">window_width</span>, <span class="ruby-identifier">window_height</span>)
+  <span class="ruby-identifier">refresh</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">openness</span> = <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-basic_area_rect">
+            
+              <b>basic_area_rect</b>(index)
+            
+            <a href="../classes/Window_BattleStatus.html#method-i-basic_area_rect" name="method-i-basic_area_rect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Basic Area Retangle</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-basic_area_rect_source')" id="l_method-i-basic_area_rect_source">show</a>
+                
+              </p>
+              <div id="method-i-basic_area_rect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleStatus.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">basic_area_rect</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">rect</span> = <span class="ruby-identifier">item_rect_for_text</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">gauge_area_width</span> <span class="ruby-operator">+</span> <span class="ruby-number">10</span>
+  <span class="ruby-identifier">rect</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-draw_basic_area">
+            
+              <b>draw_basic_area</b>(rect, actor)
+            
+            <a href="../classes/Window_BattleStatus.html#method-i-draw_basic_area" name="method-i-draw_basic_area" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Draw Basic Area</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-draw_basic_area_source')" id="l_method-i-draw_basic_area_source">show</a>
+                
+              </p>
+              <div id="method-i-draw_basic_area_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleStatus.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">draw_basic_area</span>(<span class="ruby-identifier">rect</span>, <span class="ruby-identifier">actor</span>)
+  <span class="ruby-identifier">draw_actor_name</span>(<span class="ruby-identifier">actor</span>, <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-number">0</span>, <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">y</span>, <span class="ruby-number">100</span>)
+  <span class="ruby-identifier">draw_actor_icons</span>(<span class="ruby-identifier">actor</span>, <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-number">104</span>, <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">y</span>, <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-number">104</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-draw_gauge_area">
+            
+              <b>draw_gauge_area</b>(rect, actor)
+            
+            <a href="../classes/Window_BattleStatus.html#method-i-draw_gauge_area" name="method-i-draw_gauge_area" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Draw Gauge Area</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-draw_gauge_area_source')" id="l_method-i-draw_gauge_area_source">show</a>
+                
+              </p>
+              <div id="method-i-draw_gauge_area_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleStatus.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">draw_gauge_area</span>(<span class="ruby-identifier">rect</span>, <span class="ruby-identifier">actor</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">opt_display_tp</span>
+    <span class="ruby-identifier">draw_gauge_area_with_tp</span>(<span class="ruby-identifier">rect</span>, <span class="ruby-identifier">actor</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">draw_gauge_area_without_tp</span>(<span class="ruby-identifier">rect</span>, <span class="ruby-identifier">actor</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-draw_gauge_area_with_tp">
+            
+              <b>draw_gauge_area_with_tp</b>(rect, actor)
+            
+            <a href="../classes/Window_BattleStatus.html#method-i-draw_gauge_area_with_tp" name="method-i-draw_gauge_area_with_tp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Draw Gauge Area (with TP)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-draw_gauge_area_with_tp_source')" id="l_method-i-draw_gauge_area_with_tp_source">show</a>
+                
+              </p>
+              <div id="method-i-draw_gauge_area_with_tp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleStatus.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">draw_gauge_area_with_tp</span>(<span class="ruby-identifier">rect</span>, <span class="ruby-identifier">actor</span>)
+  <span class="ruby-identifier">draw_actor_hp</span>(<span class="ruby-identifier">actor</span>, <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-number">0</span>, <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">y</span>, <span class="ruby-number">72</span>)
+  <span class="ruby-identifier">draw_actor_mp</span>(<span class="ruby-identifier">actor</span>, <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-number">82</span>, <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">y</span>, <span class="ruby-number">64</span>)
+  <span class="ruby-identifier">draw_actor_tp</span>(<span class="ruby-identifier">actor</span>, <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-number">156</span>, <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">y</span>, <span class="ruby-number">64</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-draw_gauge_area_without_tp">
+            
+              <b>draw_gauge_area_without_tp</b>(rect, actor)
+            
+            <a href="../classes/Window_BattleStatus.html#method-i-draw_gauge_area_without_tp" name="method-i-draw_gauge_area_without_tp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Draw Gauge Area (without TP)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-draw_gauge_area_without_tp_source')" id="l_method-i-draw_gauge_area_without_tp_source">show</a>
+                
+              </p>
+              <div id="method-i-draw_gauge_area_without_tp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleStatus.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">draw_gauge_area_without_tp</span>(<span class="ruby-identifier">rect</span>, <span class="ruby-identifier">actor</span>)
+  <span class="ruby-identifier">draw_actor_hp</span>(<span class="ruby-identifier">actor</span>, <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-number">0</span>, <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">y</span>, <span class="ruby-number">134</span>)
+  <span class="ruby-identifier">draw_actor_mp</span>(<span class="ruby-identifier">actor</span>, <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-number">144</span>,  <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">y</span>, <span class="ruby-number">76</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-draw_item">
+            
+              <b>draw_item</b>(index)
+            
+            <a href="../classes/Window_BattleStatus.html#method-i-draw_item" name="method-i-draw_item" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Draw Item</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-draw_item_source')" id="l_method-i-draw_item_source">show</a>
+                
+              </p>
+              <div id="method-i-draw_item_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleStatus.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">draw_item</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">actor</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">battle_members</span>[<span class="ruby-identifier">index</span>]
+  <span class="ruby-identifier">draw_basic_area</span>(<span class="ruby-identifier">basic_area_rect</span>(<span class="ruby-identifier">index</span>), <span class="ruby-identifier">actor</span>)
+  <span class="ruby-identifier">draw_gauge_area</span>(<span class="ruby-identifier">gauge_area_rect</span>(<span class="ruby-identifier">index</span>), <span class="ruby-identifier">actor</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-gauge_area_rect">
+            
+              <b>gauge_area_rect</b>(index)
+            
+            <a href="../classes/Window_BattleStatus.html#method-i-gauge_area_rect" name="method-i-gauge_area_rect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Gauge Area Rectangle</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-gauge_area_rect_source')" id="l_method-i-gauge_area_rect_source">show</a>
+                
+              </p>
+              <div id="method-i-gauge_area_rect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleStatus.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">gauge_area_rect</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">rect</span> = <span class="ruby-identifier">item_rect_for_text</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">gauge_area_width</span>
+  <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">width</span> = <span class="ruby-identifier">gauge_area_width</span>
+  <span class="ruby-identifier">rect</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-gauge_area_width">
+            
+              <b>gauge_area_width</b>()
+            
+            <a href="../classes/Window_BattleStatus.html#method-i-gauge_area_width" name="method-i-gauge_area_width" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Gauge Area Width</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-gauge_area_width_source')" id="l_method-i-gauge_area_width_source">show</a>
+                
+              </p>
+              <div id="method-i-gauge_area_width_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleStatus.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">gauge_area_width</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">220</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-item_max">
+            
+              <b>item_max</b>()
+            
+            <a href="../classes/Window_BattleStatus.html#method-i-item_max" name="method-i-item_max" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Number of Items</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-item_max_source')" id="l_method-i-item_max_source">show</a>
+                
+              </p>
+              <div id="method-i-item_max_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleStatus.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">item_max</span>
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">battle_members</span>.<span class="ruby-identifier">size</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refresh">
+            
+              <b>refresh</b>()
+            
+            <a href="../classes/Window_BattleStatus.html#method-i-refresh" name="method-i-refresh" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Refresh</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refresh_source')" id="l_method-i-refresh_source">show</a>
+                
+              </p>
+              <div id="method-i-refresh_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleStatus.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refresh</span>
+  <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-identifier">draw_all_items</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-visible_line_number">
+            
+              <b>visible_line_number</b>()
+            
+            <a href="../classes/Window_BattleStatus.html#method-i-visible_line_number" name="method-i-visible_line_number" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Number of Lines to Show</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-visible_line_number_source')" id="l_method-i-visible_line_number_source">show</a>
+                
+              </p>
+              <div id="method-i-visible_line_number_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleStatus.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">visible_line_number</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">4</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-window_height">
+            
+              <b>window_height</b>()
+            
+            <a href="../classes/Window_BattleStatus.html#method-i-window_height" name="method-i-window_height" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Window Height</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-window_height_source')" id="l_method-i-window_height_source">show</a>
+                
+              </p>
+              <div id="method-i-window_height_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleStatus.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">window_height</span>
+  <span class="ruby-identifier">fitting_height</span>(<span class="ruby-identifier">visible_line_number</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-window_width">
+            
+              <b>window_width</b>()
+            
+            <a href="../classes/Window_BattleStatus.html#method-i-window_width" name="method-i-window_width" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Window Width</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-window_width_source')" id="l_method-i-window_width_source">show</a>
+                
+              </p>
+              <div id="method-i-window_width_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleStatus.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">window_width</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-number">128</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

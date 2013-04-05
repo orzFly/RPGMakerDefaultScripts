@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Window_BattleMessage</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Window_BattleMessage 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Window_Message.html">Window_Message</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Window_BattleMessage_rb.html">Window_BattleMessage.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>戦闘中に表示するメッセージウィンドウです。通常のメッセージウィンドウの機能
+に加え、戦闘進行のナレーションを表示する機能を持ちます。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-add_instant_text">add_instant_text</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-back_one">back_one</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-back_to">back_to</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-clear">clear</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-close">close</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dispose">dispose</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-draw_line">draw_line</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-last_instant_text">last_instant_text</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-line_number">line_number</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-open">open</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-refresh">refresh</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-replace_instant_text">replace_instant_text</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-reset_window">reset_window</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Window_BattleMessage.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>オブジェクト初期化</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleMessage.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">openness</span> = <span class="ruby-number">255</span>
+  <span class="ruby-ivar">@lines</span> = []
+  <span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-add_instant_text">
+            
+              <b>add_instant_text</b>(text)
+            
+            <a href="../classes/Window_BattleMessage.html#method-i-add_instant_text" name="method-i-add_instant_text" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>文章の追加</p>
+
+<p>text : 追加する文章</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_instant_text_source')" id="l_method-i-add_instant_text_source">show</a>
+                
+              </p>
+              <div id="method-i-add_instant_text_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleMessage.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_instant_text</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-ivar">@lines</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-back_one">
+            
+              <b>back_one</b>()
+            
+            <a href="../classes/Window_BattleMessage.html#method-i-back_one" name="method-i-back_one" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>一行戻る</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-back_one_source')" id="l_method-i-back_one_source">show</a>
+                
+              </p>
+              <div id="method-i-back_one_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleMessage.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">back_one</span>
+  <span class="ruby-ivar">@lines</span>.<span class="ruby-identifier">pop</span>
+  <span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-back_to">
+            
+              <b>back_to</b>(line_number)
+            
+            <a href="../classes/Window_BattleMessage.html#method-i-back_to" name="method-i-back_to" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>指定した行に戻る</p>
+
+<p><a href="Window_BattleMessage.html#method-i-line_number">#line_number</a> :
+行番号</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-back_to_source')" id="l_method-i-back_to_source">show</a>
+                
+              </p>
+              <div id="method-i-back_to_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleMessage.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">back_to</span>(<span class="ruby-identifier">line_number</span>)
+  <span class="ruby-keyword">while</span> <span class="ruby-ivar">@lines</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">line_number</span>
+    <span class="ruby-ivar">@lines</span>.<span class="ruby-identifier">pop</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear">
+            
+              <b>clear</b>()
+            
+            <a href="../classes/Window_BattleMessage.html#method-i-clear" name="method-i-clear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>クリア</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_source')" id="l_method-i-clear_source">show</a>
+                
+              </p>
+              <div id="method-i-clear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleMessage.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear</span>
+  <span class="ruby-ivar">@lines</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-close">
+            
+              <b>close</b>()
+            
+            <a href="../classes/Window_BattleMessage.html#method-i-close" name="method-i-close" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ウィンドウを閉じる (無効化)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-close_source')" id="l_method-i-close_source">show</a>
+                
+              </p>
+              <div id="method-i-close_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleMessage.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">close</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose">
+            
+              <b>dispose</b>()
+            
+            <a href="../classes/Window_BattleMessage.html#method-i-dispose" name="method-i-dispose" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>解放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_source')" id="l_method-i-dispose_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleMessage.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose</span>
+  <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-draw_line">
+            
+              <b>draw_line</b>(index)
+            
+            <a href="../classes/Window_BattleMessage.html#method-i-draw_line" name="method-i-draw_line" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>行の描画</p>
+
+<p>index : 行番号</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-draw_line_source')" id="l_method-i-draw_line_source">show</a>
+                
+              </p>
+              <div id="method-i-draw_line_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleMessage.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">draw_line</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">rect</span> = <span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>)
+  <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">+=</span> <span class="ruby-number">4</span>
+  <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">index</span> * <span class="ruby-constant">WLH</span>
+  <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">width</span> = <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-number">8</span>
+  <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">height</span> = <span class="ruby-constant">WLH</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">clear_rect</span>(<span class="ruby-identifier">rect</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">font</span>.<span class="ruby-identifier">color</span> = <span class="ruby-identifier">normal_color</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">draw_text</span>(<span class="ruby-identifier">rect</span>, <span class="ruby-ivar">@lines</span>[<span class="ruby-identifier">index</span>])
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-last_instant_text">
+            
+              <b>last_instant_text</b>()
+            
+            <a href="../classes/Window_BattleMessage.html#method-i-last_instant_text" name="method-i-last_instant_text" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>最下行の文章の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-last_instant_text_source')" id="l_method-i-last_instant_text_source">show</a>
+                
+              </p>
+              <div id="method-i-last_instant_text_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleMessage.rb, line 107</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">last_instant_text</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@lines</span>[<span class="ruby-number">-1</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-line_number">
+            
+              <b>line_number</b>()
+            
+            <a href="../classes/Window_BattleMessage.html#method-i-line_number" name="method-i-line_number" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>行数の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-line_number_source')" id="l_method-i-line_number_source">show</a>
+                
+              </p>
+              <div id="method-i-line_number_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleMessage.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">line_number</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@lines</span>.<span class="ruby-identifier">size</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-open">
+            
+              <b>open</b>()
+            
+            <a href="../classes/Window_BattleMessage.html#method-i-open" name="method-i-open" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ウィンドウを開く (無効化)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-open_source')" id="l_method-i-open_source">show</a>
+                
+              </p>
+              <div id="method-i-open_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleMessage.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">open</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refresh">
+            
+              <b>refresh</b>()
+            
+            <a href="../classes/Window_BattleMessage.html#method-i-refresh" name="method-i-refresh" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>リフレッシュ</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refresh_source')" id="l_method-i-refresh_source">show</a>
+                
+              </p>
+              <div id="method-i-refresh_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleMessage.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refresh</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">0</span><span class="ruby-operator">...</span><span class="ruby-ivar">@lines</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-identifier">draw_line</span>(<span class="ruby-identifier">i</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-replace_instant_text">
+            
+              <b>replace_instant_text</b>(text)
+            
+            <a href="../classes/Window_BattleMessage.html#method-i-replace_instant_text" name="method-i-replace_instant_text" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>文章の置き換え</p>
+
+<p>text : 置き換える文章 最下行を別の文章に置き換える。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-replace_instant_text_source')" id="l_method-i-replace_instant_text_source">show</a>
+                
+              </p>
+              <div id="method-i-replace_instant_text_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleMessage.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">replace_instant_text</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-ivar">@lines</span>.<span class="ruby-identifier">pop</span>
+  <span class="ruby-ivar">@lines</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-reset_window">
+            
+              <b>reset_window</b>()
+            
+            <a href="../classes/Window_BattleMessage.html#method-i-reset_window" name="method-i-reset_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ウィンドウの背景と位置の設定 (無効化)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-reset_window_source')" id="l_method-i-reset_window_source">show</a>
+                
+              </p>
+              <div id="method-i-reset_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleMessage.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">reset_window</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Window_BattleMessage.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>フレーム更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_BattleMessage.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

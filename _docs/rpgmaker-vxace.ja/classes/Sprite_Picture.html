@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Sprite_Picture</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Sprite_Picture 
+            
+                <span class="parent">&lt; 
+                    
+                    Sprite
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Sprite_Picture_rb.html">Sprite_Picture.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>ピクチャ表示用のスプライトです。Game_Picture
+クラスのインスタンスを監視し、
+スプライトの状態を自動的に変化させます。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dispose">dispose</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_bitmap">update_bitmap</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_origin">update_origin</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_other">update_other</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_position">update_position</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_zoom">update_zoom</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(viewport, picture)
+            
+            <a href="../classes/Sprite_Picture.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>オブジェクト初期化</p>
+
+<p>picture : <a href="Game_Picture.html">Game_Picture</a></p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Picture.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">viewport</span>, <span class="ruby-identifier">picture</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">viewport</span>)
+  <span class="ruby-ivar">@picture</span> = <span class="ruby-identifier">picture</span>
+  <span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose">
+            
+              <b>dispose</b>()
+            
+            <a href="../classes/Sprite_Picture.html#method-i-dispose" name="method-i-dispose" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>解放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_source')" id="l_method-i-dispose_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Picture.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose</span>
+  <span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">dispose</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">bitmap</span>
+  <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Sprite_Picture.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>フレーム更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Picture.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">update_bitmap</span>
+  <span class="ruby-identifier">update_origin</span>
+  <span class="ruby-identifier">update_position</span>
+  <span class="ruby-identifier">update_zoom</span>
+  <span class="ruby-identifier">update_other</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_bitmap">
+            
+              <b>update_bitmap</b>()
+            
+            <a href="../classes/Sprite_Picture.html#method-i-update_bitmap" name="method-i-update_bitmap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>転送元ビットマップの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_bitmap_source')" id="l_method-i-update_bitmap_source">show</a>
+                
+              </p>
+              <div id="method-i-update_bitmap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Picture.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_bitmap</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-constant">Cache</span>.<span class="ruby-identifier">picture</span>(<span class="ruby-ivar">@picture</span>.<span class="ruby-identifier">name</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_origin">
+            
+              <b>update_origin</b>()
+            
+            <a href="../classes/Sprite_Picture.html#method-i-update_origin" name="method-i-update_origin" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>原点の更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_origin_source')" id="l_method-i-update_origin_source">show</a>
+                
+              </p>
+              <div id="method-i-update_origin_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Picture.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_origin</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@picture</span>.<span class="ruby-identifier">origin</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-number">0</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_other">
+            
+              <b>update_other</b>()
+            
+            <a href="../classes/Sprite_Picture.html#method-i-update_other" name="method-i-update_other" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>その他の更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_other_source')" id="l_method-i-update_other_source">show</a>
+                
+              </p>
+              <div id="method-i-update_other_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Picture.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_other</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">opacity</span> = <span class="ruby-ivar">@picture</span>.<span class="ruby-identifier">opacity</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">blend_type</span> = <span class="ruby-ivar">@picture</span>.<span class="ruby-identifier">blend_type</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">angle</span> = <span class="ruby-ivar">@picture</span>.<span class="ruby-identifier">angle</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">tone</span>.<span class="ruby-identifier">set</span>(<span class="ruby-ivar">@picture</span>.<span class="ruby-identifier">tone</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_position">
+            
+              <b>update_position</b>()
+            
+            <a href="../classes/Sprite_Picture.html#method-i-update_position" name="method-i-update_position" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>位置の更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_position_source')" id="l_method-i-update_position_source">show</a>
+                
+              </p>
+              <div id="method-i-update_position_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Picture.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_position</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">x</span> = <span class="ruby-ivar">@picture</span>.<span class="ruby-identifier">x</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">y</span> = <span class="ruby-ivar">@picture</span>.<span class="ruby-identifier">y</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">z</span> = <span class="ruby-ivar">@picture</span>.<span class="ruby-identifier">number</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_zoom">
+            
+              <b>update_zoom</b>()
+            
+            <a href="../classes/Sprite_Picture.html#method-i-update_zoom" name="method-i-update_zoom" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>拡大率の更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_zoom_source')" id="l_method-i-update_zoom_source">show</a>
+                
+              </p>
+              <div id="method-i-update_zoom_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Picture.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_zoom</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">zoom_x</span> = <span class="ruby-ivar">@picture</span>.<span class="ruby-identifier">zoom_x</span> <span class="ruby-operator">/</span> <span class="ruby-number">100.0</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">zoom_y</span> = <span class="ruby-ivar">@picture</span>.<span class="ruby-identifier">zoom_y</span> <span class="ruby-operator">/</span> <span class="ruby-number">100.0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

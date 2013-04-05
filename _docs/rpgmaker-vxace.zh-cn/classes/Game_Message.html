@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Game_Message</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Game_Message 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Game_Message_rb.html">Game_Message.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>处理信息窗口状态、文字显示、选项等的类。本类的实例请参考
+$game_message 。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-add">add</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-all_text">all_text</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-busy-3F">busy?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-choice-3F">choice?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-clear">clear</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-has_text-3F">has_text?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-item_choice-3F">item_choice?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-new_page">new_page</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-num_input-3F">num_input?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>background</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>choice_cancel_type</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>choice_proc</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>choices</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>face_index</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>face_name</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>item_choice_variable_id</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>num_input_digits_max</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>num_input_variable_id</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>position</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>scroll_mode</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>scroll_no_fast</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>scroll_speed</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>texts</td>
+            <td class='attr-desc'><p>定义实例变量</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>visible</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Game_Message.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>初始化对象</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Message.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-identifier">clear</span>
+  <span class="ruby-ivar">@visible</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-add">
+            
+              <b>add</b>(text)
+            
+            <a href="../classes/Game_Message.html#method-i-add" name="method-i-add" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>添加内容</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_source')" id="l_method-i-add_source">show</a>
+                
+              </p>
+              <div id="method-i-add_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Message.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-ivar">@texts</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">text</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-all_text">
+            
+              <b>all_text</b>()
+            
+            <a href="../classes/Game_Message.html#method-i-all_text" name="method-i-all_text" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取包括换行符的所有内容</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-all_text_source')" id="l_method-i-all_text_source">show</a>
+                
+              </p>
+              <div id="method-i-all_text_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Message.rb, line 106</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">all_text</span>
+  <span class="ruby-ivar">@texts</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-string">&quot;&quot;</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">r</span>, <span class="ruby-identifier">text</span><span class="ruby-operator">|</span> <span class="ruby-identifier">r</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">text</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-busy-3F">
+            
+              <b>busy?</b>()
+            
+            <a href="../classes/Game_Message.html#method-i-busy-3F" name="method-i-busy-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定是否为繁忙状态</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-busy-3F_source')" id="l_method-i-busy-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-busy-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Message.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">busy?</span>
+  <span class="ruby-identifier">has_text?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">choice?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">num_input?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">item_choice?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-choice-3F">
+            
+              <b>choice?</b>()
+            
+            <a href="../classes/Game_Message.html#method-i-choice-3F" name="method-i-choice-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定是否为选择模式</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-choice-3F_source')" id="l_method-i-choice-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-choice-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Message.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">choice?</span>
+  <span class="ruby-ivar">@choices</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear">
+            
+              <b>clear</b>()
+            
+            <a href="../classes/Game_Message.html#method-i-clear" name="method-i-clear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>清除</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_source')" id="l_method-i-clear_source">show</a>
+                
+              </p>
+              <div id="method-i-clear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Message.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear</span>
+  <span class="ruby-ivar">@texts</span> = []
+  <span class="ruby-ivar">@choices</span> = []
+  <span class="ruby-ivar">@face_name</span> = <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-ivar">@face_index</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@background</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@position</span> = <span class="ruby-number">2</span>
+  <span class="ruby-ivar">@choice_cancel_type</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@choice_proc</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@num_input_variable_id</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@num_input_digits_max</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@item_choice_variable_id</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@scroll_mode</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@scroll_speed</span> = <span class="ruby-number">2</span>
+  <span class="ruby-ivar">@scroll_no_fast</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-has_text-3F">
+            
+              <b>has_text?</b>()
+            
+            <a href="../classes/Game_Message.html#method-i-has_text-3F" name="method-i-has_text-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定是否存在显示内容</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-has_text-3F_source')" id="l_method-i-has_text-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-has_text-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Message.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">has_text?</span>
+  <span class="ruby-ivar">@texts</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-item_choice-3F">
+            
+              <b>item_choice?</b>()
+            
+            <a href="../classes/Game_Message.html#method-i-item_choice-3F" name="method-i-item_choice-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定是否为物品选择模式</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-item_choice-3F_source')" id="l_method-i-item_choice-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-item_choice-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Message.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">item_choice?</span>
+  <span class="ruby-ivar">@item_choice_variable_id</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-new_page">
+            
+              <b>new_page</b>()
+            
+            <a href="../classes/Game_Message.html#method-i-new_page" name="method-i-new_page" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>翻页</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-new_page_source')" id="l_method-i-new_page_source">show</a>
+                
+              </p>
+              <div id="method-i-new_page_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Message.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">new_page</span>
+  <span class="ruby-ivar">@texts</span>[<span class="ruby-number">-1</span>] <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;\f&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@texts</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-num_input-3F">
+            
+              <b>num_input?</b>()
+            
+            <a href="../classes/Game_Message.html#method-i-num_input-3F" name="method-i-num_input-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定是否为数值输入模式</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-num_input-3F_source')" id="l_method-i-num_input-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-num_input-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Message.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">num_input?</span>
+  <span class="ruby-ivar">@num_input_variable_id</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

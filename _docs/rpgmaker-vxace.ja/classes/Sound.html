@@ -1,0 +1,1093 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Sound</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            Sound 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Sound_rb.html">Sound.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>効果音を演奏するモジュールです。グローバル変数
+$data_system からデータベー スで設定された SE
+の内容を取得し、演奏します。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-play_actor_collapse">play_actor_collapse</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_actor_damage">play_actor_damage</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_battle_start">play_battle_start</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_boss_collapse1">play_boss_collapse1</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_boss_collapse2">play_boss_collapse2</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_buzzer">play_buzzer</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_cancel">play_cancel</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_cursor">play_cursor</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_enemy_attack">play_enemy_attack</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_enemy_collapse">play_enemy_collapse</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_enemy_damage">play_enemy_damage</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_equip">play_equip</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_escape">play_escape</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_evasion">play_evasion</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_load">play_load</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_magic_evasion">play_magic_evasion</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_miss">play_miss</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_ok">play_ok</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_recovery">play_recovery</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_reflection">play_reflection</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_save">play_save</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_shop">play_shop</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_system_sound">play_system_sound</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_use_item">play_use_item</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_use_skill">play_use_skill</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-play_actor_collapse">
+            
+              <b>play_actor_collapse</b>()
+            
+            <a href="../classes/Sound.html#method-c-play_actor_collapse" name="method-c-play_actor_collapse" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>味方戦闘不能</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_actor_collapse_source')" id="l_method-c-play_actor_collapse_source">show</a>
+                
+              </p>
+              <div id="method-c-play_actor_collapse_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_actor_collapse</span>
+  <span class="ruby-identifier">play_system_sound</span>(<span class="ruby-number">15</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_actor_damage">
+            
+              <b>play_actor_damage</b>()
+            
+            <a href="../classes/Sound.html#method-c-play_actor_damage" name="method-c-play_actor_damage" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>味方ダメージ</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_actor_damage_source')" id="l_method-c-play_actor_damage_source">show</a>
+                
+              </p>
+              <div id="method-c-play_actor_damage_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_actor_damage</span>
+  <span class="ruby-identifier">play_system_sound</span>(<span class="ruby-number">14</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_battle_start">
+            
+              <b>play_battle_start</b>()
+            
+            <a href="../classes/Sound.html#method-c-play_battle_start" name="method-c-play_battle_start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>戦闘開始</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_battle_start_source')" id="l_method-c-play_battle_start_source">show</a>
+                
+              </p>
+              <div id="method-c-play_battle_start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_battle_start</span>
+  <span class="ruby-identifier">play_system_sound</span>(<span class="ruby-number">7</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_boss_collapse1">
+            
+              <b>play_boss_collapse1</b>()
+            
+            <a href="../classes/Sound.html#method-c-play_boss_collapse1" name="method-c-play_boss_collapse1" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ボス消滅 1</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_boss_collapse1_source')" id="l_method-c-play_boss_collapse1_source">show</a>
+                
+              </p>
+              <div id="method-c-play_boss_collapse1_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_boss_collapse1</span>
+  <span class="ruby-identifier">play_system_sound</span>(<span class="ruby-number">12</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_boss_collapse2">
+            
+              <b>play_boss_collapse2</b>()
+            
+            <a href="../classes/Sound.html#method-c-play_boss_collapse2" name="method-c-play_boss_collapse2" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ボス消滅 2</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_boss_collapse2_source')" id="l_method-c-play_boss_collapse2_source">show</a>
+                
+              </p>
+              <div id="method-c-play_boss_collapse2_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_boss_collapse2</span>
+  <span class="ruby-identifier">play_system_sound</span>(<span class="ruby-number">13</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_buzzer">
+            
+              <b>play_buzzer</b>()
+            
+            <a href="../classes/Sound.html#method-c-play_buzzer" name="method-c-play_buzzer" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ブザー</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_buzzer_source')" id="l_method-c-play_buzzer_source">show</a>
+                
+              </p>
+              <div id="method-c-play_buzzer_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_buzzer</span>
+  <span class="ruby-identifier">play_system_sound</span>(<span class="ruby-number">3</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_cancel">
+            
+              <b>play_cancel</b>()
+            
+            <a href="../classes/Sound.html#method-c-play_cancel" name="method-c-play_cancel" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>キャンセル</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_cancel_source')" id="l_method-c-play_cancel_source">show</a>
+                
+              </p>
+              <div id="method-c-play_cancel_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_cancel</span>
+  <span class="ruby-identifier">play_system_sound</span>(<span class="ruby-number">2</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_cursor">
+            
+              <b>play_cursor</b>()
+            
+            <a href="../classes/Sound.html#method-c-play_cursor" name="method-c-play_cursor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>カーソル移動</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_cursor_source')" id="l_method-c-play_cursor_source">show</a>
+                
+              </p>
+              <div id="method-c-play_cursor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_cursor</span>
+  <span class="ruby-identifier">play_system_sound</span>(<span class="ruby-number">0</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_enemy_attack">
+            
+              <b>play_enemy_attack</b>()
+            
+            <a href="../classes/Sound.html#method-c-play_enemy_attack" name="method-c-play_enemy_attack" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>敵の通常攻撃</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_enemy_attack_source')" id="l_method-c-play_enemy_attack_source">show</a>
+                
+              </p>
+              <div id="method-c-play_enemy_attack_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_enemy_attack</span>
+  <span class="ruby-identifier">play_system_sound</span>(<span class="ruby-number">9</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_enemy_collapse">
+            
+              <b>play_enemy_collapse</b>()
+            
+            <a href="../classes/Sound.html#method-c-play_enemy_collapse" name="method-c-play_enemy_collapse" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>敵消滅</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_enemy_collapse_source')" id="l_method-c-play_enemy_collapse_source">show</a>
+                
+              </p>
+              <div id="method-c-play_enemy_collapse_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_enemy_collapse</span>
+  <span class="ruby-identifier">play_system_sound</span>(<span class="ruby-number">11</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_enemy_damage">
+            
+              <b>play_enemy_damage</b>()
+            
+            <a href="../classes/Sound.html#method-c-play_enemy_damage" name="method-c-play_enemy_damage" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>敵ダメージ</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_enemy_damage_source')" id="l_method-c-play_enemy_damage_source">show</a>
+                
+              </p>
+              <div id="method-c-play_enemy_damage_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_enemy_damage</span>
+  <span class="ruby-identifier">play_system_sound</span>(<span class="ruby-number">10</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_equip">
+            
+              <b>play_equip</b>()
+            
+            <a href="../classes/Sound.html#method-c-play_equip" name="method-c-play_equip" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>装備</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_equip_source')" id="l_method-c-play_equip_source">show</a>
+                
+              </p>
+              <div id="method-c-play_equip_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_equip</span>
+  <span class="ruby-identifier">play_system_sound</span>(<span class="ruby-number">4</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_escape">
+            
+              <b>play_escape</b>()
+            
+            <a href="../classes/Sound.html#method-c-play_escape" name="method-c-play_escape" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>逃走</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_escape_source')" id="l_method-c-play_escape_source">show</a>
+                
+              </p>
+              <div id="method-c-play_escape_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_escape</span>
+  <span class="ruby-identifier">play_system_sound</span>(<span class="ruby-number">8</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_evasion">
+            
+              <b>play_evasion</b>()
+            
+            <a href="../classes/Sound.html#method-c-play_evasion" name="method-c-play_evasion" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>攻撃回避</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_evasion_source')" id="l_method-c-play_evasion_source">show</a>
+                
+              </p>
+              <div id="method-c-play_evasion_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 104</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_evasion</span>
+  <span class="ruby-identifier">play_system_sound</span>(<span class="ruby-number">18</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_load">
+            
+              <b>play_load</b>()
+            
+            <a href="../classes/Sound.html#method-c-play_load" name="method-c-play_load" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ロード</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_load_source')" id="l_method-c-play_load_source">show</a>
+                
+              </p>
+              <div id="method-c-play_load_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_load</span>
+  <span class="ruby-identifier">play_system_sound</span>(<span class="ruby-number">6</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_magic_evasion">
+            
+              <b>play_magic_evasion</b>()
+            
+            <a href="../classes/Sound.html#method-c-play_magic_evasion" name="method-c-play_magic_evasion" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>魔法回避</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_magic_evasion_source')" id="l_method-c-play_magic_evasion_source">show</a>
+                
+              </p>
+              <div id="method-c-play_magic_evasion_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_magic_evasion</span>
+  <span class="ruby-identifier">play_system_sound</span>(<span class="ruby-number">19</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_miss">
+            
+              <b>play_miss</b>()
+            
+            <a href="../classes/Sound.html#method-c-play_miss" name="method-c-play_miss" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ミス</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_miss_source')" id="l_method-c-play_miss_source">show</a>
+                
+              </p>
+              <div id="method-c-play_miss_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_miss</span>
+  <span class="ruby-identifier">play_system_sound</span>(<span class="ruby-number">17</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_ok">
+            
+              <b>play_ok</b>()
+            
+            <a href="../classes/Sound.html#method-c-play_ok" name="method-c-play_ok" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>決定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_ok_source')" id="l_method-c-play_ok_source">show</a>
+                
+              </p>
+              <div id="method-c-play_ok_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_ok</span>
+  <span class="ruby-identifier">play_system_sound</span>(<span class="ruby-number">1</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_recovery">
+            
+              <b>play_recovery</b>()
+            
+            <a href="../classes/Sound.html#method-c-play_recovery" name="method-c-play_recovery" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>回復</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_recovery_source')" id="l_method-c-play_recovery_source">show</a>
+                
+              </p>
+              <div id="method-c-play_recovery_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_recovery</span>
+  <span class="ruby-identifier">play_system_sound</span>(<span class="ruby-number">16</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_reflection">
+            
+              <b>play_reflection</b>()
+            
+            <a href="../classes/Sound.html#method-c-play_reflection" name="method-c-play_reflection" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>魔法反射</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_reflection_source')" id="l_method-c-play_reflection_source">show</a>
+                
+              </p>
+              <div id="method-c-play_reflection_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_reflection</span>
+  <span class="ruby-identifier">play_system_sound</span>(<span class="ruby-number">20</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_save">
+            
+              <b>play_save</b>()
+            
+            <a href="../classes/Sound.html#method-c-play_save" name="method-c-play_save" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>セーブ</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_save_source')" id="l_method-c-play_save_source">show</a>
+                
+              </p>
+              <div id="method-c-play_save_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_save</span>
+  <span class="ruby-identifier">play_system_sound</span>(<span class="ruby-number">5</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_shop">
+            
+              <b>play_shop</b>()
+            
+            <a href="../classes/Sound.html#method-c-play_shop" name="method-c-play_shop" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ショップ</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_shop_source')" id="l_method-c-play_shop_source">show</a>
+                
+              </p>
+              <div id="method-c-play_shop_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_shop</span>
+  <span class="ruby-identifier">play_system_sound</span>(<span class="ruby-number">21</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_system_sound">
+            
+              <b>play_system_sound</b>(n)
+            
+            <a href="../classes/Sound.html#method-c-play_system_sound" name="method-c-play_system_sound" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>システム効果音</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_system_sound_source')" id="l_method-c-play_system_sound_source">show</a>
+                
+              </p>
+              <div id="method-c-play_system_sound_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_system_sound</span>(<span class="ruby-identifier">n</span>)
+  <span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">sounds</span>[<span class="ruby-identifier">n</span>].<span class="ruby-identifier">play</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_use_item">
+            
+              <b>play_use_item</b>()
+            
+            <a href="../classes/Sound.html#method-c-play_use_item" name="method-c-play_use_item" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>アイテム使用</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_use_item_source')" id="l_method-c-play_use_item_source">show</a>
+                
+              </p>
+              <div id="method-c-play_use_item_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_use_item</span>
+  <span class="ruby-identifier">play_system_sound</span>(<span class="ruby-number">22</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_use_skill">
+            
+              <b>play_use_skill</b>()
+            
+            <a href="../classes/Sound.html#method-c-play_use_skill" name="method-c-play_use_skill" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スキル使用</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_use_skill_source')" id="l_method-c-play_use_skill_source">show</a>
+                
+              </p>
+              <div id="method-c-play_use_skill_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sound.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_use_skill</span>
+  <span class="ruby-identifier">play_system_sound</span>(<span class="ruby-number">23</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

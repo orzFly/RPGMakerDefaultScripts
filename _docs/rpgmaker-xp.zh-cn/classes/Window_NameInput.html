@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Window_NameInput</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Window_NameInput 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Window_Base.html">Window_Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Window_NameInput_rb.html">Window_NameInput.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>输入名称的画面、文字选择窗口。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-character">character</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-refresh">refresh</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_cursor_rect">update_cursor_rect</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">CHARACTER_TABLE</td>
+            <td>=</td>
+            <td class="attr-value">[
+&quot;あ&quot;,&quot;い&quot;,&quot;う&quot;,&quot;え&quot;,&quot;お&quot;,
+&quot;か&quot;,&quot;き&quot;,&quot;く&quot;,&quot;け&quot;,&quot;こ&quot;,
+&quot;さ&quot;,&quot;し&quot;,&quot;す&quot;,&quot;せ&quot;,&quot;そ&quot;,
+&quot;た&quot;,&quot;ち&quot;,&quot;つ&quot;,&quot;て&quot;,&quot;と&quot;,
+&quot;な&quot;,&quot;に&quot;,&quot;ぬ&quot;,&quot;ね&quot;,&quot;の&quot;,
+&quot;は&quot;,&quot;ひ&quot;,&quot;ふ&quot;,&quot;へ&quot;,&quot;ほ&quot;,
+&quot;ま&quot;,&quot;み&quot;,&quot;む&quot;,&quot;め&quot;,&quot;も&quot;,
+&quot;や&quot;, &quot;&quot; ,&quot;ゆ&quot;, &quot;&quot; ,&quot;よ&quot;,
+&quot;ら&quot;,&quot;り&quot;,&quot;る&quot;,&quot;れ&quot;,&quot;ろ&quot;,
+&quot;わ&quot;, &quot;&quot; ,&quot;を&quot;, &quot;&quot; ,&quot;ん&quot;,
+&quot;が&quot;,&quot;ぎ&quot;,&quot;ぐ&quot;,&quot;げ&quot;,&quot;ご&quot;,
+&quot;ざ&quot;,&quot;じ&quot;,&quot;ず&quot;,&quot;ぜ&quot;,&quot;ぞ&quot;,
+&quot;だ&quot;,&quot;ぢ&quot;,&quot;づ&quot;,&quot;で&quot;,&quot;ど&quot;,
+&quot;ば&quot;,&quot;び&quot;,&quot;ぶ&quot;,&quot;べ&quot;,&quot;ぼ&quot;,
+&quot;ぱ&quot;,&quot;ぴ&quot;,&quot;ぷ&quot;,&quot;ぺ&quot;,&quot;ぽ&quot;,
+&quot;ゃ&quot;,&quot;ゅ&quot;,&quot;ょ&quot;,&quot;っ&quot;,&quot;ゎ&quot;,
+&quot;ぁ&quot;,&quot;ぃ&quot;,&quot;ぅ&quot;,&quot;ぇ&quot;,&quot;ぉ&quot;,
+&quot;ー&quot;,&quot;・&quot;, &quot;&quot; , &quot;&quot; , &quot;&quot; ,
+&quot;ア&quot;,&quot;イ&quot;,&quot;ウ&quot;,&quot;エ&quot;,&quot;オ&quot;,
+&quot;カ&quot;,&quot;キ&quot;,&quot;ク&quot;,&quot;ケ&quot;,&quot;コ&quot;,
+&quot;サ&quot;,&quot;シ&quot;,&quot;ス&quot;,&quot;セ&quot;,&quot;ソ&quot;,
+&quot;タ&quot;,&quot;チ&quot;,&quot;ツ&quot;,&quot;テ&quot;,&quot;ト&quot;,
+&quot;ナ&quot;,&quot;ニ&quot;,&quot;ヌ&quot;,&quot;ネ&quot;,&quot;ノ&quot;,
+&quot;ハ&quot;,&quot;ヒ&quot;,&quot;フ&quot;,&quot;ヘ&quot;,&quot;ホ&quot;,
+&quot;マ&quot;,&quot;ミ&quot;,&quot;ム&quot;,&quot;メ&quot;,&quot;モ&quot;,
+&quot;ヤ&quot;, &quot;&quot; ,&quot;ユ&quot;, &quot;&quot; ,&quot;ヨ&quot;,
+&quot;ラ&quot;,&quot;リ&quot;,&quot;ル&quot;,&quot;レ&quot;,&quot;ロ&quot;,
+&quot;ワ&quot;, &quot;&quot; ,&quot;ヲ&quot;, &quot;&quot; ,&quot;ン&quot;,
+&quot;ガ&quot;,&quot;ギ&quot;,&quot;グ&quot;,&quot;ゲ&quot;,&quot;ゴ&quot;,
+&quot;ザ&quot;,&quot;ジ&quot;,&quot;ズ&quot;,&quot;ゼ&quot;,&quot;ゾ&quot;,
+&quot;ダ&quot;,&quot;ヂ&quot;,&quot;ヅ&quot;,&quot;デ&quot;,&quot;ド&quot;,
+&quot;バ&quot;,&quot;ビ&quot;,&quot;ブ&quot;,&quot;ベ&quot;,&quot;ボ&quot;,
+&quot;パ&quot;,&quot;ピ&quot;,&quot;プ&quot;,&quot;ペ&quot;,&quot;ポ&quot;,
+&quot;ャ&quot;,&quot;ュ&quot;,&quot;ョ&quot;,&quot;ッ&quot;,&quot;ヮ&quot;,
+&quot;ァ&quot;,&quot;ィ&quot;,&quot;ゥ&quot;,&quot;ェ&quot;,&quot;ォ&quot;,
+&quot;ー&quot;,&quot;・&quot;,&quot;ヴ&quot;, &quot;&quot; , &quot;&quot; ,
+]</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Window_NameInput.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>初始化对像</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NameInput.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-keyword">super</span>(<span class="ruby-number">0</span>, <span class="ruby-number">128</span>, <span class="ruby-number">640</span>, <span class="ruby-number">352</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span> = <span class="ruby-constant">Bitmap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-number">32</span>, <span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-number">32</span>)
+  <span class="ruby-ivar">@index</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">refresh</span>
+  <span class="ruby-identifier">update_cursor_rect</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-character">
+            
+              <b>character</b>()
+            
+            <a href="../classes/Window_NameInput.html#method-i-character" name="method-i-character" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取文字</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-character_source')" id="l_method-i-character_source">show</a>
+                
+              </p>
+              <div id="method-i-character_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NameInput.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">character</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">CHARACTER_TABLE</span>[<span class="ruby-ivar">@index</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refresh">
+            
+              <b>refresh</b>()
+            
+            <a href="../classes/Window_NameInput.html#method-i-refresh" name="method-i-refresh" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refresh_source')" id="l_method-i-refresh_source">show</a>
+                
+              </p>
+              <div id="method-i-refresh_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NameInput.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refresh</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">0</span><span class="ruby-operator">..</span><span class="ruby-number">179</span>
+    <span class="ruby-identifier">x</span> = <span class="ruby-number">4</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">/</span> <span class="ruby-number">5</span> <span class="ruby-operator">/</span> <span class="ruby-number">9</span> * <span class="ruby-number">152</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">%</span> <span class="ruby-number">5</span> * <span class="ruby-number">28</span>
+    <span class="ruby-identifier">y</span> = <span class="ruby-identifier">i</span> <span class="ruby-operator">/</span> <span class="ruby-number">5</span> <span class="ruby-operator">%</span> <span class="ruby-number">9</span> * <span class="ruby-number">32</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">draw_text</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-number">28</span>, <span class="ruby-number">32</span>, <span class="ruby-constant">CHARACTER_TABLE</span>[<span class="ruby-identifier">i</span>], <span class="ruby-number">1</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">draw_text</span>(<span class="ruby-number">544</span>, <span class="ruby-number">9</span> * <span class="ruby-number">32</span>, <span class="ruby-number">64</span>, <span class="ruby-number">32</span>, <span class="ruby-string">&quot;确定&quot;</span>, <span class="ruby-number">1</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Window_NameInput.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新画面</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NameInput.rb, line 95</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-comment"># 光标位置在 [确定] 的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">180</span>
+    <span class="ruby-comment"># 光标下</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">DOWN</span>)
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+      <span class="ruby-ivar">@index</span> <span class="ruby-operator">-=</span> <span class="ruby-number">180</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># 光标上</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">UP</span>)
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+      <span class="ruby-ivar">@index</span> <span class="ruby-operator">-=</span> <span class="ruby-number">180</span> <span class="ruby-operator">-</span> <span class="ruby-number">40</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 光标位置在 [确定] 以外的情况下</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># 按下方向键右的情况下</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">RIGHT</span>)
+      <span class="ruby-comment"># 按下状态不是重复的情况下、</span>
+      <span class="ruby-comment"># 光标位置不在右端的情况下</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">RIGHT</span>) <span class="ruby-keyword">or</span>
+         <span class="ruby-ivar">@index</span> <span class="ruby-operator">/</span> <span class="ruby-number">45</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">3</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">%</span> <span class="ruby-number">5</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">4</span>
+        <span class="ruby-comment"># 光标向右移动</span>
+        <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">%</span> <span class="ruby-number">5</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">4</span>
+          <span class="ruby-ivar">@index</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-ivar">@index</span> <span class="ruby-operator">+=</span> <span class="ruby-number">45</span> <span class="ruby-operator">-</span> <span class="ruby-number">4</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">180</span>
+          <span class="ruby-ivar">@index</span> <span class="ruby-operator">-=</span> <span class="ruby-number">180</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># 按下方向键左的情况下</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">LEFT</span>)
+      <span class="ruby-comment"># 按下状态不是重复的情况下、</span>
+      <span class="ruby-comment"># 光标位置不在左端的情况下</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">LEFT</span>) <span class="ruby-keyword">or</span>
+         <span class="ruby-ivar">@index</span> <span class="ruby-operator">/</span> <span class="ruby-number">45</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">%</span> <span class="ruby-number">5</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+        <span class="ruby-comment"># 光标向右移动</span>
+        <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">%</span> <span class="ruby-number">5</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+          <span class="ruby-ivar">@index</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-ivar">@index</span> <span class="ruby-operator">-=</span> <span class="ruby-number">45</span> <span class="ruby-operator">-</span> <span class="ruby-number">4</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>
+          <span class="ruby-ivar">@index</span> <span class="ruby-operator">+=</span> <span class="ruby-number">180</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># 按下方向键下的情况下</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">DOWN</span>)
+      <span class="ruby-comment"># 光标向下移动</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">%</span> <span class="ruby-number">45</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">40</span>
+        <span class="ruby-ivar">@index</span> <span class="ruby-operator">+=</span> <span class="ruby-number">5</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-ivar">@index</span> <span class="ruby-operator">+=</span> <span class="ruby-number">180</span> <span class="ruby-operator">-</span> <span class="ruby-number">40</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># 按下方向键上的情况下</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">UP</span>)
+      <span class="ruby-comment"># 按下状态不是重复的情况下、</span>
+      <span class="ruby-comment"># 光标位置不在上端的情况下</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">UP</span>) <span class="ruby-keyword">or</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">%</span> <span class="ruby-number">45</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">5</span>
+        <span class="ruby-comment"># 光标向上移动</span>
+        <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">%</span> <span class="ruby-number">45</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">5</span>
+          <span class="ruby-ivar">@index</span> <span class="ruby-operator">-=</span> <span class="ruby-number">5</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-ivar">@index</span> <span class="ruby-operator">+=</span> <span class="ruby-number">180</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># L 键与 R 键被按下的情况下</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">L</span>) <span class="ruby-keyword">or</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">R</span>)
+      <span class="ruby-comment"># 平假名 / 片假名 之间移动</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">/</span> <span class="ruby-number">45</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">2</span>
+        <span class="ruby-ivar">@index</span> <span class="ruby-operator">+=</span> <span class="ruby-number">90</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-ivar">@index</span> <span class="ruby-operator">-=</span> <span class="ruby-number">90</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">update_cursor_rect</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_cursor_rect">
+            
+              <b>update_cursor_rect</b>()
+            
+            <a href="../classes/Window_NameInput.html#method-i-update_cursor_rect" name="method-i-update_cursor_rect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新光标矩形</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_cursor_rect_source')" id="l_method-i-update_cursor_rect_source">show</a>
+                
+              </p>
+              <div id="method-i-update_cursor_rect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_NameInput.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_cursor_rect</span>
+  <span class="ruby-comment"># 光标位置在 [确定] 的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">180</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">cursor_rect</span>.<span class="ruby-identifier">set</span>(<span class="ruby-number">544</span>, <span class="ruby-number">9</span> * <span class="ruby-number">32</span>, <span class="ruby-number">64</span>, <span class="ruby-number">32</span>)
+  <span class="ruby-comment"># 光标位置在 [确定] 以外的情况下</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">x</span> = <span class="ruby-number">4</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">/</span> <span class="ruby-number">5</span> <span class="ruby-operator">/</span> <span class="ruby-number">9</span> * <span class="ruby-number">152</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">%</span> <span class="ruby-number">5</span> * <span class="ruby-number">28</span>
+    <span class="ruby-identifier">y</span> = <span class="ruby-ivar">@index</span> <span class="ruby-operator">/</span> <span class="ruby-number">5</span> <span class="ruby-operator">%</span> <span class="ruby-number">9</span> * <span class="ruby-number">32</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">cursor_rect</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-number">28</span>, <span class="ruby-number">32</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

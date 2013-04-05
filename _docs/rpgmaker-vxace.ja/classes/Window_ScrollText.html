@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Window_ScrollText</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Window_ScrollText 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Window_Base.html">Window_Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Window_ScrollText_rb.html">Window_ScrollText.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>文章のスクロール表示に使うウィンドウです。枠は表示しませんが、便宜上ウィン
+ドウとして扱います。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-contents_height">contents_height</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-refresh">refresh</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-scroll_speed">scroll_speed</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-show_fast-3F">show_fast?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start_message">start_message</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-terminate_message">terminate_message</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_all_text_height">update_all_text_height</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_message">update_message</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Window_ScrollText.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>オブジェクト初期化</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ScrollText.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-keyword">super</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span>, <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">height</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">opacity</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">arrows_visible</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">hide</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-contents_height">
+            
+              <b>contents_height</b>()
+            
+            <a href="../classes/Window_ScrollText.html#method-i-contents_height" name="method-i-contents_height" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ウィンドウ内容の高さを計算</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-contents_height_source')" id="l_method-i-contents_height_source">show</a>
+                
+              </p>
+              <div id="method-i-contents_height_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ScrollText.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">contents_height</span>
+  <span class="ruby-ivar">@all_text_height</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@all_text_height</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refresh">
+            
+              <b>refresh</b>()
+            
+            <a href="../classes/Window_ScrollText.html#method-i-refresh" name="method-i-refresh" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>リフレッシュ</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refresh_source')" id="l_method-i-refresh_source">show</a>
+                
+              </p>
+              <div id="method-i-refresh_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ScrollText.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refresh</span>
+  <span class="ruby-identifier">reset_font_settings</span>
+  <span class="ruby-identifier">update_all_text_height</span>
+  <span class="ruby-identifier">create_contents</span>
+  <span class="ruby-identifier">draw_text_ex</span>(<span class="ruby-number">4</span>, <span class="ruby-number">0</span>, <span class="ruby-ivar">@text</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-ivar">@scroll_pos</span> = <span class="ruby-operator">-</span><span class="ruby-identifier">height</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-scroll_speed">
+            
+              <b>scroll_speed</b>()
+            
+            <a href="../classes/Window_ScrollText.html#method-i-scroll_speed" name="method-i-scroll_speed" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スクロール速度の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-scroll_speed_source')" id="l_method-i-scroll_speed_source">show</a>
+                
+              </p>
+              <div id="method-i-scroll_speed_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ScrollText.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">scroll_speed</span>
+  <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">scroll_speed</span> * (<span class="ruby-identifier">show_fast?</span> <span class="ruby-operator">?</span> <span class="ruby-number">1.0</span> <span class="ruby-operator">:</span> <span class="ruby-number">0.5</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-show_fast-3F">
+            
+              <b>show_fast?</b>()
+            
+            <a href="../classes/Window_ScrollText.html#method-i-show_fast-3F" name="method-i-show_fast-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>早送り判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-show_fast-3F_source')" id="l_method-i-show_fast-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-show_fast-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ScrollText.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">show_fast?</span>
+  <span class="ruby-operator">!</span><span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">scroll_no_fast</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-constant">Input</span>.<span class="ruby-identifier">press?</span>(<span class="ruby-value">:A</span>) <span class="ruby-operator">||</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">press?</span>(<span class="ruby-value">:C</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start_message">
+            
+              <b>start_message</b>()
+            
+            <a href="../classes/Window_ScrollText.html#method-i-start_message" name="method-i-start_message" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>メッセージの開始</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_message_source')" id="l_method-i-start_message_source">show</a>
+                
+              </p>
+              <div id="method-i-start_message_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ScrollText.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start_message</span>
+  <span class="ruby-ivar">@text</span> = <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">all_text</span>
+  <span class="ruby-identifier">refresh</span>
+  <span class="ruby-identifier">show</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-terminate_message">
+            
+              <b>terminate_message</b>()
+            
+            <a href="../classes/Window_ScrollText.html#method-i-terminate_message" name="method-i-terminate_message" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>メッセージの終了</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-terminate_message_source')" id="l_method-i-terminate_message_source">show</a>
+                
+              </p>
+              <div id="method-i-terminate_message_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ScrollText.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">terminate_message</span>
+  <span class="ruby-ivar">@text</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-identifier">hide</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Window_ScrollText.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>フレーム更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ScrollText.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">scroll_mode</span>
+    <span class="ruby-identifier">update_message</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@text</span>
+    <span class="ruby-identifier">start_message</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@text</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">has_text?</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_all_text_height">
+            
+              <b>update_all_text_height</b>()
+            
+            <a href="../classes/Window_ScrollText.html#method-i-update_all_text_height" name="method-i-update_all_text_height" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>全テキストの描画に必要な高さを更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_all_text_height_source')" id="l_method-i-update_all_text_height_source">show</a>
+                
+              </p>
+              <div id="method-i-update_all_text_height_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ScrollText.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_all_text_height</span>
+  <span class="ruby-ivar">@all_text_height</span> = <span class="ruby-number">1</span>
+  <span class="ruby-identifier">convert_escape_characters</span>(<span class="ruby-ivar">@text</span>).<span class="ruby-identifier">each_line</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@all_text_height</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">calc_line_height</span>(<span class="ruby-identifier">line</span>, <span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">reset_font_settings</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_message">
+            
+              <b>update_message</b>()
+            
+            <a href="../classes/Window_ScrollText.html#method-i-update_message" name="method-i-update_message" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>メッセージの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_message_source')" id="l_method-i-update_message_source">show</a>
+                
+              </p>
+              <div id="method-i-update_message_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ScrollText.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_message</span>
+  <span class="ruby-ivar">@scroll_pos</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">scroll_speed</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-ivar">@scroll_pos</span>
+  <span class="ruby-identifier">terminate_message</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@scroll_pos</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">height</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,1420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Spriteset_Map</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Spriteset_Map 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Spriteset_Map_rb.html">Spriteset_Map.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>マップ画面のスプライトやタイルマップなどをまとめたクラスです。このクラスは
+<a href="Scene_Map.html">Scene_Map</a>
+クラスの内部で使用されます。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-create_characters">create_characters</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_parallax">create_parallax</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_pictures">create_pictures</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_shadow">create_shadow</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_tilemap">create_tilemap</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_timer">create_timer</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_viewports">create_viewports</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_weather">create_weather</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dispose">dispose</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_characters">dispose_characters</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_parallax">dispose_parallax</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_pictures">dispose_pictures</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_shadow">dispose_shadow</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_tilemap">dispose_tilemap</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_timer">dispose_timer</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_viewports">dispose_viewports</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_weather">dispose_weather</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-load_tileset">load_tileset</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-refresh_characters">refresh_characters</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_characters">update_characters</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_parallax">update_parallax</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_pictures">update_pictures</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_shadow">update_shadow</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_tilemap">update_tilemap</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_tileset">update_tileset</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_timer">update_timer</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_viewports">update_viewports</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_weather">update_weather</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>オブジェクト初期化</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-identifier">create_viewports</span>
+  <span class="ruby-identifier">create_tilemap</span>
+  <span class="ruby-identifier">create_parallax</span>
+  <span class="ruby-identifier">create_characters</span>
+  <span class="ruby-identifier">create_shadow</span>
+  <span class="ruby-identifier">create_weather</span>
+  <span class="ruby-identifier">create_pictures</span>
+  <span class="ruby-identifier">create_timer</span>
+  <span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-create_characters">
+            
+              <b>create_characters</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-create_characters" name="method-i-create_characters" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>キャラクタースプライトの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_characters_source')" id="l_method-i-create_characters_source">show</a>
+                
+              </p>
+              <div id="method-i-create_characters_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_characters</span>
+  <span class="ruby-ivar">@character_sprites</span> = []
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">events</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">event</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@character_sprites</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Sprite_Character</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport1</span>, <span class="ruby-identifier">event</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">vehicles</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">vehicle</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@character_sprites</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Sprite_Character</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport1</span>, <span class="ruby-identifier">vehicle</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">followers</span>.<span class="ruby-identifier">reverse_each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">follower</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@character_sprites</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Sprite_Character</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport1</span>, <span class="ruby-identifier">follower</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@character_sprites</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Sprite_Character</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport1</span>, <span class="ruby-identifier">$game_player</span>))
+  <span class="ruby-ivar">@map_id</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">map_id</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_parallax">
+            
+              <b>create_parallax</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-create_parallax" name="method-i-create_parallax" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>遠景の作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_parallax_source')" id="l_method-i-create_parallax_source">show</a>
+                
+              </p>
+              <div id="method-i-create_parallax_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_parallax</span>
+  <span class="ruby-ivar">@parallax</span> = <span class="ruby-constant">Plane</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport1</span>)
+  <span class="ruby-ivar">@parallax</span>.<span class="ruby-identifier">z</span> = <span class="ruby-number">-100</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_pictures">
+            
+              <b>create_pictures</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-create_pictures" name="method-i-create_pictures" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ピクチャスプライトの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_pictures_source')" id="l_method-i-create_pictures_source">show</a>
+                
+              </p>
+              <div id="method-i-create_pictures_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_pictures</span>
+  <span class="ruby-ivar">@picture_sprites</span> = []
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_shadow">
+            
+              <b>create_shadow</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-create_shadow" name="method-i-create_shadow" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>飛行船の影スプライトの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_shadow_source')" id="l_method-i-create_shadow_source">show</a>
+                
+              </p>
+              <div id="method-i-create_shadow_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_shadow</span>
+  <span class="ruby-ivar">@shadow_sprite</span> = <span class="ruby-constant">Sprite</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport1</span>)
+  <span class="ruby-ivar">@shadow_sprite</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-constant">Cache</span>.<span class="ruby-identifier">system</span>(<span class="ruby-string">&quot;Shadow&quot;</span>)
+  <span class="ruby-ivar">@shadow_sprite</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-ivar">@shadow_sprite</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+  <span class="ruby-ivar">@shadow_sprite</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-ivar">@shadow_sprite</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">height</span>
+  <span class="ruby-ivar">@shadow_sprite</span>.<span class="ruby-identifier">z</span> = <span class="ruby-number">180</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_tilemap">
+            
+              <b>create_tilemap</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-create_tilemap" name="method-i-create_tilemap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>タイルマップの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_tilemap_source')" id="l_method-i-create_tilemap_source">show</a>
+                
+              </p>
+              <div id="method-i-create_tilemap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_tilemap</span>
+  <span class="ruby-ivar">@tilemap</span> = <span class="ruby-constant">Tilemap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport1</span>)
+  <span class="ruby-ivar">@tilemap</span>.<span class="ruby-identifier">map_data</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">data</span>
+  <span class="ruby-identifier">load_tileset</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_timer">
+            
+              <b>create_timer</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-create_timer" name="method-i-create_timer" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>タイマースプライトの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_timer_source')" id="l_method-i-create_timer_source">show</a>
+                
+              </p>
+              <div id="method-i-create_timer_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_timer</span>
+  <span class="ruby-ivar">@timer_sprite</span> = <span class="ruby-constant">Sprite_Timer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport2</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_viewports">
+            
+              <b>create_viewports</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-create_viewports" name="method-i-create_viewports" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ビューポートの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_viewports_source')" id="l_method-i-create_viewports_source">show</a>
+                
+              </p>
+              <div id="method-i-create_viewports_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_viewports</span>
+  <span class="ruby-ivar">@viewport1</span> = <span class="ruby-constant">Viewport</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@viewport2</span> = <span class="ruby-constant">Viewport</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@viewport3</span> = <span class="ruby-constant">Viewport</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@viewport2</span>.<span class="ruby-identifier">z</span> = <span class="ruby-number">50</span>
+  <span class="ruby-ivar">@viewport3</span>.<span class="ruby-identifier">z</span> = <span class="ruby-number">100</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_weather">
+            
+              <b>create_weather</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-create_weather" name="method-i-create_weather" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>天候の作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_weather_source')" id="l_method-i-create_weather_source">show</a>
+                
+              </p>
+              <div id="method-i-create_weather_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_weather</span>
+  <span class="ruby-ivar">@weather</span> = <span class="ruby-constant">Spriteset_Weather</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport2</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose">
+            
+              <b>dispose</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-dispose" name="method-i-dispose" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>解放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_source')" id="l_method-i-dispose_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 115</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose</span>
+  <span class="ruby-identifier">dispose_tilemap</span>
+  <span class="ruby-identifier">dispose_parallax</span>
+  <span class="ruby-identifier">dispose_characters</span>
+  <span class="ruby-identifier">dispose_shadow</span>
+  <span class="ruby-identifier">dispose_weather</span>
+  <span class="ruby-identifier">dispose_pictures</span>
+  <span class="ruby-identifier">dispose_timer</span>
+  <span class="ruby-identifier">dispose_viewports</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_characters">
+            
+              <b>dispose_characters</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-dispose_characters" name="method-i-dispose_characters" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>キャラクタースプライトの解放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_characters_source')" id="l_method-i-dispose_characters_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_characters_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 144</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_characters</span>
+  <span class="ruby-ivar">@character_sprites</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">sprite</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">dispose</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_parallax">
+            
+              <b>dispose_parallax</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-dispose_parallax" name="method-i-dispose_parallax" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>遠景の解放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_parallax_source')" id="l_method-i-dispose_parallax_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_parallax_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 136</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_parallax</span>
+  <span class="ruby-ivar">@parallax</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">dispose</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@parallax</span>.<span class="ruby-identifier">bitmap</span>
+  <span class="ruby-ivar">@parallax</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_pictures">
+            
+              <b>dispose_pictures</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-dispose_pictures" name="method-i-dispose_pictures" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ピクチャスプライトの解放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_pictures_source')" id="l_method-i-dispose_pictures_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_pictures_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 165</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_pictures</span>
+  <span class="ruby-ivar">@picture_sprites</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">sprite</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">dispose</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_shadow">
+            
+              <b>dispose_shadow</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-dispose_shadow" name="method-i-dispose_shadow" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>飛行船の影スプライトの解放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_shadow_source')" id="l_method-i-dispose_shadow_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_shadow_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 151</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_shadow</span>
+  <span class="ruby-ivar">@shadow_sprite</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_tilemap">
+            
+              <b>dispose_tilemap</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-dispose_tilemap" name="method-i-dispose_tilemap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>タイルマップの解放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_tilemap_source')" id="l_method-i-dispose_tilemap_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_tilemap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_tilemap</span>
+  <span class="ruby-ivar">@tilemap</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_timer">
+            
+              <b>dispose_timer</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-dispose_timer" name="method-i-dispose_timer" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>タイマースプライトの解放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_timer_source')" id="l_method-i-dispose_timer_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_timer_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 172</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_timer</span>
+  <span class="ruby-ivar">@timer_sprite</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_viewports">
+            
+              <b>dispose_viewports</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-dispose_viewports" name="method-i-dispose_viewports" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ビューポートの解放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_viewports_source')" id="l_method-i-dispose_viewports_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_viewports_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 179</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_viewports</span>
+  <span class="ruby-ivar">@viewport1</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@viewport2</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@viewport3</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_weather">
+            
+              <b>dispose_weather</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-dispose_weather" name="method-i-dispose_weather" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>天候の解放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_weather_source')" id="l_method-i-dispose_weather_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_weather_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 158</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_weather</span>
+  <span class="ruby-ivar">@weather</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-load_tileset">
+            
+              <b>load_tileset</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-load_tileset" name="method-i-load_tileset" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>タイルセットのロード</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-load_tileset_source')" id="l_method-i-load_tileset_source">show</a>
+                
+              </p>
+              <div id="method-i-load_tileset_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">load_tileset</span>
+  <span class="ruby-ivar">@tileset</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">tileset</span>
+  <span class="ruby-ivar">@tileset</span>.<span class="ruby-identifier">tileset_names</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@tilemap</span>.<span class="ruby-identifier">bitmaps</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-constant">Cache</span>.<span class="ruby-identifier">tileset</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@tilemap</span>.<span class="ruby-identifier">flags</span> = <span class="ruby-ivar">@tileset</span>.<span class="ruby-identifier">flags</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refresh_characters">
+            
+              <b>refresh_characters</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-refresh_characters" name="method-i-refresh_characters" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>キャラクターのリフレッシュ</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refresh_characters_source')" id="l_method-i-refresh_characters_source">show</a>
+                
+              </p>
+              <div id="method-i-refresh_characters_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 188</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refresh_characters</span>
+  <span class="ruby-identifier">dispose_characters</span>
+  <span class="ruby-identifier">create_characters</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>フレーム更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 196</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-identifier">update_tileset</span>
+  <span class="ruby-identifier">update_tilemap</span>
+  <span class="ruby-identifier">update_parallax</span>
+  <span class="ruby-identifier">update_characters</span>
+  <span class="ruby-identifier">update_shadow</span>
+  <span class="ruby-identifier">update_weather</span>
+  <span class="ruby-identifier">update_pictures</span>
+  <span class="ruby-identifier">update_timer</span>
+  <span class="ruby-identifier">update_viewports</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_characters">
+            
+              <b>update_characters</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-update_characters" name="method-i-update_characters" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>キャラクタースプライトの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_characters_source')" id="l_method-i-update_characters_source">show</a>
+                
+              </p>
+              <div id="method-i-update_characters_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 245</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_characters</span>
+  <span class="ruby-identifier">refresh_characters</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@map_id</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">map_id</span>
+  <span class="ruby-ivar">@character_sprites</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">sprite</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">update</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_parallax">
+            
+              <b>update_parallax</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-update_parallax" name="method-i-update_parallax" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>遠景の更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_parallax_source')" id="l_method-i-update_parallax_source">show</a>
+                
+              </p>
+              <div id="method-i-update_parallax_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 231</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_parallax</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@parallax_name</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">parallax_name</span>
+    <span class="ruby-ivar">@parallax_name</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">parallax_name</span>
+    <span class="ruby-ivar">@parallax</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">dispose</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@parallax</span>.<span class="ruby-identifier">bitmap</span>
+    <span class="ruby-ivar">@parallax</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-constant">Cache</span>.<span class="ruby-identifier">parallax</span>(<span class="ruby-ivar">@parallax_name</span>)
+    <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">frame_reset</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@parallax</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">parallax_ox</span>(<span class="ruby-ivar">@parallax</span>.<span class="ruby-identifier">bitmap</span>)
+  <span class="ruby-ivar">@parallax</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">parallax_oy</span>(<span class="ruby-ivar">@parallax</span>.<span class="ruby-identifier">bitmap</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_pictures">
+            
+              <b>update_pictures</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-update_pictures" name="method-i-update_pictures" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ピクチャスプライトの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_pictures_source')" id="l_method-i-update_pictures_source">show</a>
+                
+              </p>
+              <div id="method-i-update_pictures_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 275</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_pictures</span>
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">screen</span>.<span class="ruby-identifier">pictures</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">pic</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@picture_sprites</span>[<span class="ruby-identifier">pic</span>.<span class="ruby-identifier">number</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">Sprite_Picture</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport2</span>, <span class="ruby-identifier">pic</span>)
+    <span class="ruby-ivar">@picture_sprites</span>[<span class="ruby-identifier">pic</span>.<span class="ruby-identifier">number</span>].<span class="ruby-identifier">update</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_shadow">
+            
+              <b>update_shadow</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-update_shadow" name="method-i-update_shadow" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>飛行船の影スプライトの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_shadow_source')" id="l_method-i-update_shadow_source">show</a>
+                
+              </p>
+              <div id="method-i-update_shadow_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 253</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_shadow</span>
+  <span class="ruby-identifier">airship</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">airship</span>
+  <span class="ruby-ivar">@shadow_sprite</span>.<span class="ruby-identifier">x</span> = <span class="ruby-identifier">airship</span>.<span class="ruby-identifier">screen_x</span>
+  <span class="ruby-ivar">@shadow_sprite</span>.<span class="ruby-identifier">y</span> = <span class="ruby-identifier">airship</span>.<span class="ruby-identifier">screen_y</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">airship</span>.<span class="ruby-identifier">altitude</span>
+  <span class="ruby-ivar">@shadow_sprite</span>.<span class="ruby-identifier">opacity</span> = <span class="ruby-identifier">airship</span>.<span class="ruby-identifier">altitude</span> * <span class="ruby-number">8</span>
+  <span class="ruby-ivar">@shadow_sprite</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_tilemap">
+            
+              <b>update_tilemap</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-update_tilemap" name="method-i-update_tilemap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>タイルマップの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_tilemap_source')" id="l_method-i-update_tilemap_source">show</a>
+                
+              </p>
+              <div id="method-i-update_tilemap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 221</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_tilemap</span>
+  <span class="ruby-ivar">@tilemap</span>.<span class="ruby-identifier">map_data</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">data</span>
+  <span class="ruby-ivar">@tilemap</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">display_x</span> * <span class="ruby-number">32</span>
+  <span class="ruby-ivar">@tilemap</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">display_y</span> * <span class="ruby-number">32</span>
+  <span class="ruby-ivar">@tilemap</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_tileset">
+            
+              <b>update_tileset</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-update_tileset" name="method-i-update_tileset" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>タイルセットの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_tileset_source')" id="l_method-i-update_tileset_source">show</a>
+                
+              </p>
+              <div id="method-i-update_tileset_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 211</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_tileset</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@tileset</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">tileset</span>
+    <span class="ruby-identifier">load_tileset</span>
+    <span class="ruby-identifier">refresh_characters</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_timer">
+            
+              <b>update_timer</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-update_timer" name="method-i-update_timer" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>タイマースプライトの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_timer_source')" id="l_method-i-update_timer_source">show</a>
+                
+              </p>
+              <div id="method-i-update_timer_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 285</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_timer</span>
+  <span class="ruby-ivar">@timer_sprite</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_viewports">
+            
+              <b>update_viewports</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-update_viewports" name="method-i-update_viewports" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ビューポートの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_viewports_source')" id="l_method-i-update_viewports_source">show</a>
+                
+              </p>
+              <div id="method-i-update_viewports_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 292</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_viewports</span>
+  <span class="ruby-ivar">@viewport1</span>.<span class="ruby-identifier">tone</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">screen</span>.<span class="ruby-identifier">tone</span>)
+  <span class="ruby-ivar">@viewport1</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">screen</span>.<span class="ruby-identifier">shake</span>
+  <span class="ruby-ivar">@viewport2</span>.<span class="ruby-identifier">color</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">screen</span>.<span class="ruby-identifier">flash_color</span>)
+  <span class="ruby-ivar">@viewport3</span>.<span class="ruby-identifier">color</span>.<span class="ruby-identifier">set</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">255</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">screen</span>.<span class="ruby-identifier">brightness</span>)
+  <span class="ruby-ivar">@viewport1</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@viewport2</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@viewport3</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_weather">
+            
+              <b>update_weather</b>()
+            
+            <a href="../classes/Spriteset_Map.html#method-i-update_weather" name="method-i-update_weather" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>天候の更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_weather_source')" id="l_method-i-update_weather_source">show</a>
+                
+              </p>
+              <div id="method-i-update_weather_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Map.rb, line 264</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_weather</span>
+  <span class="ruby-ivar">@weather</span>.<span class="ruby-identifier">type</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">screen</span>.<span class="ruby-identifier">weather_type</span>
+  <span class="ruby-ivar">@weather</span>.<span class="ruby-identifier">power</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">screen</span>.<span class="ruby-identifier">weather_power</span>
+  <span class="ruby-ivar">@weather</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">display_x</span> * <span class="ruby-number">32</span>
+  <span class="ruby-ivar">@weather</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">display_y</span> * <span class="ruby-number">32</span>
+  <span class="ruby-ivar">@weather</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

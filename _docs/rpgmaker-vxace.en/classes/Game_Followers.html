@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Game_Followers</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Game_Followers 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Game_Followers_rb.html">Game_Followers.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This is a wrapper for a follower array. This class is used internally for
+the <a href="Game_Player.html">Game_Player</a> class.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>#</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-5B-5D">[]</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-collide-3F">collide?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-each">each</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-gather">gather</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-gather-3F">gather?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-gathering-3F">gathering?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-move">move</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-moving-3F">moving?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-refresh">refresh</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-reverse_each">reverse_each</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-synchronize">synchronize</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-visible_folloers">visible_folloers</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>visible</td>
+            <td class='attr-desc'><p>Public Instance Variables</p></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(leader)
+            
+            <a href="../classes/Game_Followers.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p><a href="Object.html">Object</a> Initialization</p>
+
+<p>leader:  Lead character</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Followers.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">leader</span>)
+  <span class="ruby-ivar">@visible</span> = <span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">opt_followers</span>
+  <span class="ruby-ivar">@gathering</span> = <span class="ruby-keyword">false</span>                    <span class="ruby-comment"># Gathering processing underway flag</span>
+  <span class="ruby-ivar">@data</span> = []
+  <span class="ruby-ivar">@data</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Game_Follower</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">1</span>, <span class="ruby-identifier">leader</span>))
+  (<span class="ruby-number">2</span><span class="ruby-operator">...</span><span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">max_battle_members</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@data</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Game_Follower</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">index</span>, <span class="ruby-ivar">@data</span>[<span class="ruby-number">-1</span>]))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-5B-5D">
+            
+              <b>[]</b>(index)
+            
+            <a href="../classes/Game_Followers.html#method-i-5B-5D" name="method-i-5B-5D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Followers</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-5B-5D_source')" id="l_method-i-5B-5D_source">show</a>
+                
+              </p>
+              <div id="method-i-5B-5D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Followers.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-keyword ruby-title">index</span>)
+  <span class="ruby-ivar">@data</span>[<span class="ruby-identifier">index</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-collide-3F">
+            
+              <b>collide?</b>(x, y)
+            
+            <a href="../classes/Game_Followers.html#method-i-collide-3F" name="method-i-collide-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Detect Collision</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-collide-3F_source')" id="l_method-i-collide-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-collide-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Followers.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">collide?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">visible_folloers</span>.<span class="ruby-identifier">any?</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">follower</span><span class="ruby-operator">|</span> <span class="ruby-identifier">follower</span>.<span class="ruby-identifier">pos?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>) }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-each">
+            
+              <b>each</b>()
+            
+            <a href="../classes/Game_Followers.html#method-i-each" name="method-i-each" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Iterator</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-each_source')" id="l_method-i-each_source">show</a>
+                
+              </p>
+              <div id="method-i-each_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Followers.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">each</span>
+  <span class="ruby-ivar">@data</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">follower</span><span class="ruby-operator">|</span> <span class="ruby-keyword">yield</span> <span class="ruby-identifier">follower</span> } <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-gather">
+            
+              <b>gather</b>()
+            
+            <a href="../classes/Game_Followers.html#method-i-gather" name="method-i-gather" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Gather</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-gather_source')" id="l_method-i-gather_source">show</a>
+                
+              </p>
+              <div id="method-i-gather_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Followers.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">gather</span>
+  <span class="ruby-ivar">@gathering</span> = <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-gather-3F">
+            
+              <b>gather?</b>()
+            
+            <a href="../classes/Game_Followers.html#method-i-gather-3F" name="method-i-gather-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if Gathered</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-gather-3F_source')" id="l_method-i-gather-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-gather-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Followers.rb, line 115</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">gather?</span>
+  <span class="ruby-identifier">visible_folloers</span>.<span class="ruby-identifier">all?</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">follower</span><span class="ruby-operator">|</span> <span class="ruby-identifier">follower</span>.<span class="ruby-identifier">gather?</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-gathering-3F">
+            
+              <b>gathering?</b>()
+            
+            <a href="../classes/Game_Followers.html#method-i-gathering-3F" name="method-i-gathering-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if Gathering</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-gathering-3F_source')" id="l_method-i-gathering-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-gathering-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Followers.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">gathering?</span>
+  <span class="ruby-ivar">@gathering</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-move">
+            
+              <b>move</b>()
+            
+            <a href="../classes/Game_Followers.html#method-i-move" name="method-i-move" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Movement</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-move_source')" id="l_method-i-move_source">show</a>
+                
+              </p>
+              <div id="method-i-move_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Followers.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">move</span>
+  <span class="ruby-identifier">reverse_each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">follower</span><span class="ruby-operator">|</span> <span class="ruby-identifier">follower</span>.<span class="ruby-identifier">chase_preceding_character</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-moving-3F">
+            
+              <b>moving?</b>()
+            
+            <a href="../classes/Game_Followers.html#method-i-moving-3F" name="method-i-moving-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if Moving</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-moving-3F_source')" id="l_method-i-moving-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-moving-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Followers.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">moving?</span>
+  <span class="ruby-identifier">visible_folloers</span>.<span class="ruby-identifier">any?</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">follower</span><span class="ruby-operator">|</span> <span class="ruby-identifier">follower</span>.<span class="ruby-identifier">moving?</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refresh">
+            
+              <b>refresh</b>()
+            
+            <a href="../classes/Game_Followers.html#method-i-refresh" name="method-i-refresh" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Refresh</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refresh_source')" id="l_method-i-refresh_source">show</a>
+                
+              </p>
+              <div id="method-i-refresh_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Followers.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refresh</span>
+  <span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">follower</span><span class="ruby-operator">|</span> <span class="ruby-identifier">follower</span>.<span class="ruby-identifier">refresh</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-reverse_each">
+            
+              <b>reverse_each</b>()
+            
+            <a href="../classes/Game_Followers.html#method-i-reverse_each" name="method-i-reverse_each" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Iterator (Reverse)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-reverse_each_source')" id="l_method-i-reverse_each_source">show</a>
+                
+              </p>
+              <div id="method-i-reverse_each_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Followers.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">reverse_each</span>
+  <span class="ruby-ivar">@data</span>.<span class="ruby-identifier">reverse</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">follower</span><span class="ruby-operator">|</span> <span class="ruby-keyword">yield</span> <span class="ruby-identifier">follower</span> } <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-synchronize">
+            
+              <b>synchronize</b>(x, y, d)
+            
+            <a href="../classes/Game_Followers.html#method-i-synchronize" name="method-i-synchronize" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Synchronize</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-synchronize_source')" id="l_method-i-synchronize_source">show</a>
+                
+              </p>
+              <div id="method-i-synchronize_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Followers.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">synchronize</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">d</span>)
+  <span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">follower</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">follower</span>.<span class="ruby-identifier">moveto</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+    <span class="ruby-identifier">follower</span>.<span class="ruby-identifier">set_direction</span>(<span class="ruby-identifier">d</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Game_Followers.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Frame Update</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Followers.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">gathering?</span>
+    <span class="ruby-identifier">move</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">moving?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">moving?</span>
+    <span class="ruby-ivar">@gathering</span> = <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">gather?</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">follower</span><span class="ruby-operator">|</span> <span class="ruby-identifier">follower</span>.<span class="ruby-identifier">update</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-visible_folloers">
+            
+              <b>visible_folloers</b>()
+            
+            <a href="../classes/Game_Followers.html#method-i-visible_folloers" name="method-i-visible_folloers" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Array of Displayed Followers</p>
+
+<p>“folloers” is typo, but retained because of the compatibility.</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-visible_folloers_source')" id="l_method-i-visible_folloers_source">show</a>
+                
+              </p>
+              <div id="method-i-visible_folloers_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Followers.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">visible_folloers</span>
+  <span class="ruby-ivar">@data</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">follower</span><span class="ruby-operator">|</span> <span class="ruby-identifier">follower</span>.<span class="ruby-identifier">visible?</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

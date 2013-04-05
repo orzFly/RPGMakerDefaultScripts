@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_Debug</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_Debug 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_Debug_rb.html">Scene_Debug.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>处理调试画面的类。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-main">main</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_left">update_left</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_right">update_right</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-main">
+            
+              <b>main</b>()
+            
+            <a href="../classes/Scene_Debug.html#method-i-main" name="method-i-main" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>主处理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-main_source')" id="l_method-i-main_source">show</a>
+                
+              </p>
+              <div id="method-i-main_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Debug.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">main</span>
+  <span class="ruby-comment"># 生成窗口</span>
+  <span class="ruby-ivar">@left_window</span> = <span class="ruby-constant">Window_DebugLeft</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@right_window</span> = <span class="ruby-constant">Window_DebugRight</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@help_window</span> = <span class="ruby-constant">Window_Base</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">192</span>, <span class="ruby-number">352</span>, <span class="ruby-number">448</span>, <span class="ruby-number">128</span>)
+  <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">contents</span> = <span class="ruby-constant">Bitmap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">406</span>, <span class="ruby-number">96</span>)
+  <span class="ruby-comment"># 还原为上次选择的项目</span>
+  <span class="ruby-ivar">@left_window</span>.<span class="ruby-identifier">top_row</span> = <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">debug_top_row</span>
+  <span class="ruby-ivar">@left_window</span>.<span class="ruby-identifier">index</span> = <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">debug_index</span>
+  <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">mode</span> = <span class="ruby-ivar">@left_window</span>.<span class="ruby-identifier">mode</span>
+  <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">top_id</span> = <span class="ruby-ivar">@left_window</span>.<span class="ruby-identifier">top_id</span>
+  <span class="ruby-comment"># 执行过渡</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">transition</span>
+  <span class="ruby-comment"># 主循环</span>
+  <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-comment"># 刷新游戏画面</span>
+    <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># 刷新输入情报</span>
+    <span class="ruby-constant">Input</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># 刷新画面</span>
+    <span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># 如果画面被切换的话就中断循环</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$scene</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">self</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 刷新地图</span>
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">refresh</span>
+  <span class="ruby-comment"># 装备过渡</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">freeze</span>
+  <span class="ruby-comment"># 释放窗口</span>
+  <span class="ruby-ivar">@left_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Scene_Debug.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新画面</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Debug.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-comment"># 刷新窗口</span>
+  <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">mode</span> = <span class="ruby-ivar">@left_window</span>.<span class="ruby-identifier">mode</span>
+  <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">top_id</span> = <span class="ruby-ivar">@left_window</span>.<span class="ruby-identifier">top_id</span>
+  <span class="ruby-ivar">@left_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-comment"># 记忆选择中的项目</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">debug_top_row</span> = <span class="ruby-ivar">@left_window</span>.<span class="ruby-identifier">top_row</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">debug_index</span> = <span class="ruby-ivar">@left_window</span>.<span class="ruby-identifier">index</span>
+  <span class="ruby-comment"># 左侧窗口被激活的情况下: 调用 update_left</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@left_window</span>.<span class="ruby-identifier">active</span>
+    <span class="ruby-identifier">update_left</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 右侧窗口被激活的情况下: 调用 update_right</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">active</span>
+    <span class="ruby-identifier">update_right</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_left">
+            
+              <b>update_left</b>()
+            
+            <a href="../classes/Scene_Debug.html#method-i-update_left" name="method-i-update_left" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新画面 (左侧窗口被激活的情况下)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_left_source')" id="l_method-i-update_left_source">show</a>
+                
+              </p>
+              <div id="method-i-update_left_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Debug.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_left</span>
+  <span class="ruby-comment"># 按下 B 键的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>)
+    <span class="ruby-comment"># 演奏取消 SE</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cancel_se</span>)
+    <span class="ruby-comment"># 切换到地图画面</span>
+    <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Map</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 按下 C 键的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+    <span class="ruby-comment"># 演奏确定 SE</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">decision_se</span>)
+    <span class="ruby-comment"># 显示帮助</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@left_window</span>.<span class="ruby-identifier">mode</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">text1</span> = <span class="ruby-string">&quot;C (Enter) : ON / OFF&quot;</span>
+      <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">draw_text</span>(<span class="ruby-number">4</span>, <span class="ruby-number">0</span>, <span class="ruby-number">406</span>, <span class="ruby-number">32</span>, <span class="ruby-identifier">text1</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">text1</span> = <span class="ruby-string">&quot;← : -1   → : +1&quot;</span>
+      <span class="ruby-identifier">text2</span> = <span class="ruby-string">&quot;L (Pageup) : -10&quot;</span>
+      <span class="ruby-identifier">text3</span> = <span class="ruby-string">&quot;R (Pagedown) : +10&quot;</span>
+      <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">draw_text</span>(<span class="ruby-number">4</span>, <span class="ruby-number">0</span>, <span class="ruby-number">406</span>, <span class="ruby-number">32</span>, <span class="ruby-identifier">text1</span>)
+      <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">draw_text</span>(<span class="ruby-number">4</span>, <span class="ruby-number">32</span>, <span class="ruby-number">406</span>, <span class="ruby-number">32</span>, <span class="ruby-identifier">text2</span>)
+      <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">draw_text</span>(<span class="ruby-number">4</span>, <span class="ruby-number">64</span>, <span class="ruby-number">406</span>, <span class="ruby-number">32</span>, <span class="ruby-identifier">text3</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># 激活右侧窗口</span>
+    <span class="ruby-ivar">@left_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">index</span> = <span class="ruby-number">0</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_right">
+            
+              <b>update_right</b>()
+            
+            <a href="../classes/Scene_Debug.html#method-i-update_right" name="method-i-update_right" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新画面 (右侧窗口被激活的情况下)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_right_source')" id="l_method-i-update_right_source">show</a>
+                
+              </p>
+              <div id="method-i-update_right_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Debug.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_right</span>
+  <span class="ruby-comment"># 按下 B 键的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>)
+    <span class="ruby-comment"># 演奏取消 SE</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cancel_se</span>)
+    <span class="ruby-comment"># 激活左侧窗口</span>
+    <span class="ruby-ivar">@left_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">index</span> = <span class="ruby-number">-1</span>
+    <span class="ruby-comment"># 删除帮助</span>
+    <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">clear</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 获取被选择的开关 / 变量的 ID</span>
+  <span class="ruby-identifier">current_id</span> = <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">top_id</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">index</span>
+  <span class="ruby-comment"># 开关的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">mode</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-comment"># 按下 C 键的情况下</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>)
+      <span class="ruby-comment"># 演奏确定 SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">decision_se</span>)
+      <span class="ruby-comment"># 逆转 ON / OFF 状态</span>
+      <span class="ruby-identifier">$game_switches</span>[<span class="ruby-identifier">current_id</span>] = (<span class="ruby-keyword">not</span> <span class="ruby-identifier">$game_switches</span>[<span class="ruby-identifier">current_id</span>])
+      <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">refresh</span>
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 变量的情况下</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">mode</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>
+    <span class="ruby-comment"># 按下右键的情况下</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">RIGHT</span>)
+      <span class="ruby-comment"># 演奏光标 SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+      <span class="ruby-comment"># 变量加 1</span>
+      <span class="ruby-identifier">$game_variables</span>[<span class="ruby-identifier">current_id</span>] <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+      <span class="ruby-comment"># 检查上限</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_variables</span>[<span class="ruby-identifier">current_id</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-number">99999999</span>
+        <span class="ruby-identifier">$game_variables</span>[<span class="ruby-identifier">current_id</span>] = <span class="ruby-number">99999999</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">refresh</span>
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># 按下左键的情况下</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">LEFT</span>)
+      <span class="ruby-comment"># 演奏光标 SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+      <span class="ruby-comment"># 变量减 1</span>
+      <span class="ruby-identifier">$game_variables</span>[<span class="ruby-identifier">current_id</span>] <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+      <span class="ruby-comment"># 检查下限</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_variables</span>[<span class="ruby-identifier">current_id</span>] <span class="ruby-operator">&lt;</span> <span class="ruby-number">-99999999</span>
+        <span class="ruby-identifier">$game_variables</span>[<span class="ruby-identifier">current_id</span>] = <span class="ruby-number">-99999999</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">refresh</span>
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># 按下 R 键的情况下</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">R</span>)
+      <span class="ruby-comment"># 演奏光标 SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+      <span class="ruby-comment"># 变量加 10</span>
+      <span class="ruby-identifier">$game_variables</span>[<span class="ruby-identifier">current_id</span>] <span class="ruby-operator">+=</span> <span class="ruby-number">10</span>
+      <span class="ruby-comment"># 检查上限</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_variables</span>[<span class="ruby-identifier">current_id</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-number">99999999</span>
+        <span class="ruby-identifier">$game_variables</span>[<span class="ruby-identifier">current_id</span>] = <span class="ruby-number">99999999</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">refresh</span>
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># 按下 L 键的情况下</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">L</span>)
+      <span class="ruby-comment"># 演奏光标 SE</span>
+      <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">cursor_se</span>)
+      <span class="ruby-comment"># 变量减 10</span>
+      <span class="ruby-identifier">$game_variables</span>[<span class="ruby-identifier">current_id</span>] <span class="ruby-operator">-=</span> <span class="ruby-number">10</span>
+      <span class="ruby-comment"># 检查下限</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_variables</span>[<span class="ruby-identifier">current_id</span>] <span class="ruby-operator">&lt;</span> <span class="ruby-number">-99999999</span>
+        <span class="ruby-identifier">$game_variables</span>[<span class="ruby-identifier">current_id</span>] = <span class="ruby-number">-99999999</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">refresh</span>
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Sprite_Character</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Sprite_Character 
+            
+                <span class="parent">&lt; 
+                    
+                    RPG::Sprite
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Sprite_Character_rb.html">Sprite_Character.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This sprite is used to display the character.It observes the Game_Character
+class and automatically changes sprite conditions.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>character</td>
+            <td class='attr-desc'><p>Public Instance Variables</p></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(viewport, character = nil)
+            
+            <a href="../classes/Sprite_Character.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Object Initialization</p>
+
+<p>viewport  : viewport character : character (Game_Character)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Character.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">viewport</span>, <span class="ruby-identifier">character</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">viewport</span>)
+  <span class="ruby-ivar">@character</span> = <span class="ruby-identifier">character</span>
+  <span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Sprite_Character.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Frame Update</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Character.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-comment"># If tile ID, file name, or hue are different from current ones</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@tile_id</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">tile_id</span> <span class="ruby-keyword">or</span>
+     <span class="ruby-ivar">@character_name</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">character_name</span> <span class="ruby-keyword">or</span>
+     <span class="ruby-ivar">@character_hue</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">character_hue</span>
+    <span class="ruby-comment"># Remember tile ID, file name, and hue</span>
+    <span class="ruby-ivar">@tile_id</span> = <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">tile_id</span>
+    <span class="ruby-ivar">@character_name</span> = <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">character_name</span>
+    <span class="ruby-ivar">@character_hue</span> = <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">character_hue</span>
+    <span class="ruby-comment"># If tile ID value is valid</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@tile_id</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">384</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Cache</span>.<span class="ruby-identifier">tile</span>(<span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">tileset_name</span>,
+        <span class="ruby-ivar">@tile_id</span>, <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">character_hue</span>)
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">src_rect</span>.<span class="ruby-identifier">set</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">32</span>, <span class="ruby-number">32</span>)
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-number">16</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-number">32</span>
+    <span class="ruby-comment"># If tile ID value is invalid</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Cache</span>.<span class="ruby-identifier">character</span>(<span class="ruby-ivar">@character</span>.<span class="ruby-identifier">character_name</span>,
+        <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">character_hue</span>)
+      <span class="ruby-ivar">@cw</span> = <span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">/</span> <span class="ruby-number">4</span>
+      <span class="ruby-ivar">@ch</span> = <span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">/</span> <span class="ruby-number">4</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-ivar">@cw</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-ivar">@ch</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Set visible situation</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">visible</span> = (<span class="ruby-keyword">not</span> <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">transparent</span>)
+  <span class="ruby-comment"># If graphic is character</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@tile_id</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-comment"># Set rectangular transfer</span>
+    <span class="ruby-identifier">sx</span> = <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">pattern</span> * <span class="ruby-ivar">@cw</span>
+    <span class="ruby-identifier">sy</span> = (<span class="ruby-ivar">@character</span>.<span class="ruby-identifier">direction</span> <span class="ruby-operator">-</span> <span class="ruby-number">2</span>) <span class="ruby-operator">/</span> <span class="ruby-number">2</span> * <span class="ruby-ivar">@ch</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">src_rect</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">sx</span>, <span class="ruby-identifier">sy</span>, <span class="ruby-ivar">@cw</span>, <span class="ruby-ivar">@ch</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Set sprite coordinates</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">x</span> = <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">screen_x</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">y</span> = <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">screen_y</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">z</span> = <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">screen_z</span>(<span class="ruby-ivar">@ch</span>)
+  <span class="ruby-comment"># Set opacity level, blend method, and bush depth</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">opacity</span> = <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">opacity</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">blend_type</span> = <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">blend_type</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bush_depth</span> = <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">bush_depth</span>
+  <span class="ruby-comment"># Animation</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">animation_id</span> <span class="ruby-operator">!=</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">animation</span> = <span class="ruby-identifier">$data_animations</span>[<span class="ruby-ivar">@character</span>.<span class="ruby-identifier">animation_id</span>]
+    <span class="ruby-identifier">animation</span>(<span class="ruby-identifier">animation</span>, <span class="ruby-keyword">true</span>)
+    <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">animation_id</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

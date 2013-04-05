@@ -1,0 +1,1043 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Spriteset_Weather</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Spriteset_Weather 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Spriteset_Weather_rb.html">Spriteset_Weather.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>天候エフェクト（雨、嵐、雪）のクラスです。このクラスは
+<a href="Spriteset_Map.html">Spriteset_Map</a> クラ
+スの内部で使用されます。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-add_sprite">add_sprite</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-create_new_particle">create_new_particle</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_rain_bitmap">create_rain_bitmap</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_snow_bitmap">create_snow_bitmap</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_storm_bitmap">create_storm_bitmap</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dimness">dimness</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose">dispose</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-init_members">init_members</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-particle_color1">particle_color1</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-particle_color2">particle_color2</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-power-3D">power=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-remove_sprite">remove_sprite</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-sprite_max">sprite_max</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_screen">update_screen</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_sprite">update_sprite</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_sprite_rain">update_sprite_rain</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_sprite_snow">update_sprite_snow</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_sprite_storm">update_sprite_storm</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>ox</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>oy</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>power</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>type</td>
+            <td class='attr-desc'><p>公開インスタンス変数</p></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(viewport = nil)
+            
+            <a href="../classes/Spriteset_Weather.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>オブジェクト初期化</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Weather.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">viewport</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@viewport</span> = <span class="ruby-identifier">viewport</span>
+  <span class="ruby-identifier">init_members</span>
+  <span class="ruby-identifier">create_rain_bitmap</span>
+  <span class="ruby-identifier">create_storm_bitmap</span>
+  <span class="ruby-identifier">create_snow_bitmap</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-add_sprite">
+            
+              <b>add_sprite</b>()
+            
+            <a href="../classes/Spriteset_Weather.html#method-i-add_sprite" name="method-i-add_sprite" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スプライトの追加</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_sprite_source')" id="l_method-i-add_sprite_source">show</a>
+                
+              </p>
+              <div id="method-i-add_sprite_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Weather.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_sprite</span>
+  <span class="ruby-identifier">sprite</span> = <span class="ruby-constant">Sprite</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport</span>)
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">opacity</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@sprites</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">sprite</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_new_particle">
+            
+              <b>create_new_particle</b>(sprite)
+            
+            <a href="../classes/Spriteset_Weather.html#method-i-create_new_particle" name="method-i-create_new_particle" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>新しい粒子の作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_new_particle_source')" id="l_method-i-create_new_particle_source">show</a>
+                
+              </p>
+              <div id="method-i-create_new_particle_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Weather.rb, line 198</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_new_particle</span>(<span class="ruby-identifier">sprite</span>)
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">x</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">+</span> <span class="ruby-number">100</span>) <span class="ruby-operator">-</span> <span class="ruby-number">100</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@ox</span>
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">y</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">+</span> <span class="ruby-number">200</span>) <span class="ruby-operator">-</span> <span class="ruby-number">200</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@oy</span>
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">opacity</span> = <span class="ruby-number">160</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">rand</span>(<span class="ruby-number">96</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_rain_bitmap">
+            
+              <b>create_rain_bitmap</b>()
+            
+            <a href="../classes/Spriteset_Weather.html#method-i-create_rain_bitmap" name="method-i-create_rain_bitmap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>天候［雨］のビットマップを作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_rain_bitmap_source')" id="l_method-i-create_rain_bitmap_source">show</a>
+                
+              </p>
+              <div id="method-i-create_rain_bitmap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Weather.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_rain_bitmap</span>
+  <span class="ruby-ivar">@rain_bitmap</span> = <span class="ruby-constant">Bitmap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">7</span>, <span class="ruby-number">42</span>)
+  <span class="ruby-number">7</span>.<span class="ruby-identifier">times</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@rain_bitmap</span>.<span class="ruby-identifier">fill_rect</span>(<span class="ruby-number">6</span><span class="ruby-operator">-</span><span class="ruby-identifier">i</span>, <span class="ruby-identifier">i</span>*<span class="ruby-number">6</span>, <span class="ruby-number">1</span>, <span class="ruby-number">6</span>, <span class="ruby-identifier">particle_color1</span>) }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_snow_bitmap">
+            
+              <b>create_snow_bitmap</b>()
+            
+            <a href="../classes/Spriteset_Weather.html#method-i-create_snow_bitmap" name="method-i-create_snow_bitmap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>天候［雪］のビットマップを作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_snow_bitmap_source')" id="l_method-i-create_snow_bitmap_source">show</a>
+                
+              </p>
+              <div id="method-i-create_snow_bitmap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Weather.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_snow_bitmap</span>
+  <span class="ruby-ivar">@snow_bitmap</span> = <span class="ruby-constant">Bitmap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">6</span>, <span class="ruby-number">6</span>)
+  <span class="ruby-ivar">@snow_bitmap</span>.<span class="ruby-identifier">fill_rect</span>(<span class="ruby-number">0</span>, <span class="ruby-number">1</span>, <span class="ruby-number">6</span>, <span class="ruby-number">4</span>, <span class="ruby-identifier">particle_color2</span>)
+  <span class="ruby-ivar">@snow_bitmap</span>.<span class="ruby-identifier">fill_rect</span>(<span class="ruby-number">1</span>, <span class="ruby-number">0</span>, <span class="ruby-number">4</span>, <span class="ruby-number">6</span>, <span class="ruby-identifier">particle_color2</span>)
+  <span class="ruby-ivar">@snow_bitmap</span>.<span class="ruby-identifier">fill_rect</span>(<span class="ruby-number">1</span>, <span class="ruby-number">2</span>, <span class="ruby-number">4</span>, <span class="ruby-number">2</span>, <span class="ruby-identifier">particle_color1</span>)
+  <span class="ruby-ivar">@snow_bitmap</span>.<span class="ruby-identifier">fill_rect</span>(<span class="ruby-number">2</span>, <span class="ruby-number">1</span>, <span class="ruby-number">2</span>, <span class="ruby-number">4</span>, <span class="ruby-identifier">particle_color1</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_storm_bitmap">
+            
+              <b>create_storm_bitmap</b>()
+            
+            <a href="../classes/Spriteset_Weather.html#method-i-create_storm_bitmap" name="method-i-create_storm_bitmap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>天候［嵐］のビットマップを作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_storm_bitmap_source')" id="l_method-i-create_storm_bitmap_source">show</a>
+                
+              </p>
+              <div id="method-i-create_storm_bitmap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Weather.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_storm_bitmap</span>
+  <span class="ruby-ivar">@storm_bitmap</span> = <span class="ruby-constant">Bitmap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">34</span>, <span class="ruby-number">64</span>)
+  <span class="ruby-number">32</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@storm_bitmap</span>.<span class="ruby-identifier">fill_rect</span>(<span class="ruby-number">33</span><span class="ruby-operator">-</span><span class="ruby-identifier">i</span>, <span class="ruby-identifier">i</span>*<span class="ruby-number">2</span>, <span class="ruby-number">1</span>, <span class="ruby-number">2</span>, <span class="ruby-identifier">particle_color2</span>)
+    <span class="ruby-ivar">@storm_bitmap</span>.<span class="ruby-identifier">fill_rect</span>(<span class="ruby-number">32</span><span class="ruby-operator">-</span><span class="ruby-identifier">i</span>, <span class="ruby-identifier">i</span>*<span class="ruby-number">2</span>, <span class="ruby-number">1</span>, <span class="ruby-number">2</span>, <span class="ruby-identifier">particle_color1</span>)
+    <span class="ruby-ivar">@storm_bitmap</span>.<span class="ruby-identifier">fill_rect</span>(<span class="ruby-number">31</span><span class="ruby-operator">-</span><span class="ruby-identifier">i</span>, <span class="ruby-identifier">i</span>*<span class="ruby-number">2</span>, <span class="ruby-number">1</span>, <span class="ruby-number">2</span>, <span class="ruby-identifier">particle_color2</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dimness">
+            
+              <b>dimness</b>()
+            
+            <a href="../classes/Spriteset_Weather.html#method-i-dimness" name="method-i-dimness" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>暗さの取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dimness_source')" id="l_method-i-dimness_source">show</a>
+                
+              </p>
+              <div id="method-i-dimness_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Weather.rb, line 144</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dimness</span>
+  (<span class="ruby-ivar">@power</span> * <span class="ruby-number">6</span>).<span class="ruby-identifier">to_i</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose">
+            
+              <b>dispose</b>()
+            
+            <a href="../classes/Spriteset_Weather.html#method-i-dispose" name="method-i-dispose" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>解放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_source')" id="l_method-i-dispose_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Weather.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose</span>
+  <span class="ruby-ivar">@sprites</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">sprite</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">dispose</span> }
+  <span class="ruby-ivar">@rain_bitmap</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@storm_bitmap</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@snow_bitmap</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-init_members">
+            
+              <b>init_members</b>()
+            
+            <a href="../classes/Spriteset_Weather.html#method-i-init_members" name="method-i-init_members" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>メンバ変数の初期化</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-init_members_source')" id="l_method-i-init_members_source">show</a>
+                
+              </p>
+              <div id="method-i-init_members_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Weather.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">init_members</span>
+  <span class="ruby-ivar">@type</span> = <span class="ruby-value">:none</span>
+  <span class="ruby-ivar">@ox</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@oy</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@power</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@sprites</span> = []
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-particle_color1">
+            
+              <b>particle_color1</b>()
+            
+            <a href="../classes/Spriteset_Weather.html#method-i-particle_color1" name="method-i-particle_color1" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>粒子の色 1</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-particle_color1_source')" id="l_method-i-particle_color1_source">show</a>
+                
+              </p>
+              <div id="method-i-particle_color1_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Weather.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">particle_color1</span>
+  <span class="ruby-constant">Color</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">255</span>, <span class="ruby-number">255</span>, <span class="ruby-number">255</span>, <span class="ruby-number">192</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-particle_color2">
+            
+              <b>particle_color2</b>()
+            
+            <a href="../classes/Spriteset_Weather.html#method-i-particle_color2" name="method-i-particle_color2" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>粒子の色 2</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-particle_color2_source')" id="l_method-i-particle_color2_source">show</a>
+                
+              </p>
+              <div id="method-i-particle_color2_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Weather.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">particle_color2</span>
+  <span class="ruby-constant">Color</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">255</span>, <span class="ruby-number">255</span>, <span class="ruby-number">255</span>, <span class="ruby-number">96</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-power-3D">
+            
+              <b>power=</b>(power)
+            
+            <a href="../classes/Spriteset_Weather.html#method-i-power-3D" name="method-i-power-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>天候の強さを設定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-power-3D_source')" id="l_method-i-power-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-power-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Weather.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">power=</span>(<span class="ruby-identifier">power</span>)
+  <span class="ruby-ivar">@power</span> = <span class="ruby-identifier">power</span>
+  (<span class="ruby-identifier">sprite_max</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@sprites</span>.<span class="ruby-identifier">size</span>).<span class="ruby-identifier">times</span> { <span class="ruby-identifier">add_sprite</span> }
+  (<span class="ruby-ivar">@sprites</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">sprite_max</span>).<span class="ruby-identifier">times</span> { <span class="ruby-identifier">remove_sprite</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-remove_sprite">
+            
+              <b>remove_sprite</b>()
+            
+            <a href="../classes/Spriteset_Weather.html#method-i-remove_sprite" name="method-i-remove_sprite" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スプライトの削除</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-remove_sprite_source')" id="l_method-i-remove_sprite_source">show</a>
+                
+              </p>
+              <div id="method-i-remove_sprite_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Weather.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">remove_sprite</span>
+  <span class="ruby-identifier">sprite</span> = <span class="ruby-ivar">@sprites</span>.<span class="ruby-identifier">pop</span>
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">dispose</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">sprite</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-sprite_max">
+            
+              <b>sprite_max</b>()
+            
+            <a href="../classes/Spriteset_Weather.html#method-i-sprite_max" name="method-i-sprite_max" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スプライトの最大数を取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-sprite_max_source')" id="l_method-i-sprite_max_source">show</a>
+                
+              </p>
+              <div id="method-i-sprite_max_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Weather.rb, line 105</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">sprite_max</span>
+  (<span class="ruby-ivar">@power</span> * <span class="ruby-number">10</span>).<span class="ruby-identifier">to_i</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Spriteset_Weather.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>フレーム更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Weather.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-identifier">update_screen</span>
+  <span class="ruby-ivar">@sprites</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">sprite</span><span class="ruby-operator">|</span> <span class="ruby-identifier">update_sprite</span>(<span class="ruby-identifier">sprite</span>) }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_screen">
+            
+              <b>update_screen</b>()
+            
+            <a href="../classes/Spriteset_Weather.html#method-i-update_screen" name="method-i-update_screen" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>画面の更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_screen_source')" id="l_method-i-update_screen_source">show</a>
+                
+              </p>
+              <div id="method-i-update_screen_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Weather.rb, line 137</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_screen</span>
+  <span class="ruby-ivar">@viewport</span>.<span class="ruby-identifier">tone</span>.<span class="ruby-identifier">set</span>(<span class="ruby-operator">-</span><span class="ruby-identifier">dimness</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">dimness</span>, <span class="ruby-operator">-</span><span class="ruby-identifier">dimness</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_sprite">
+            
+              <b>update_sprite</b>(sprite)
+            
+            <a href="../classes/Spriteset_Weather.html#method-i-update_sprite" name="method-i-update_sprite" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スプライトの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_sprite_source')" id="l_method-i-update_sprite_source">show</a>
+                
+              </p>
+              <div id="method-i-update_sprite_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Weather.rb, line 151</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_sprite</span>(<span class="ruby-identifier">sprite</span>)
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-ivar">@ox</span>
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-ivar">@oy</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-ivar">@type</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:rain</span>
+    <span class="ruby-identifier">update_sprite_rain</span>(<span class="ruby-identifier">sprite</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:storm</span>
+    <span class="ruby-identifier">update_sprite_storm</span>(<span class="ruby-identifier">sprite</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:snow</span>
+    <span class="ruby-identifier">update_sprite_snow</span>(<span class="ruby-identifier">sprite</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">create_new_particle</span>(<span class="ruby-identifier">sprite</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">opacity</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">64</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_sprite_rain">
+            
+              <b>update_sprite_rain</b>(sprite)
+            
+            <a href="../classes/Spriteset_Weather.html#method-i-update_sprite_rain" name="method-i-update_sprite_rain" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スプライトの更新［雨］</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_sprite_rain_source')" id="l_method-i-update_sprite_rain_source">show</a>
+                
+              </p>
+              <div id="method-i-update_sprite_rain_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Weather.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_sprite_rain</span>(<span class="ruby-identifier">sprite</span>)
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-ivar">@rain_bitmap</span>
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">+=</span> <span class="ruby-number">6</span>
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">opacity</span> <span class="ruby-operator">-=</span> <span class="ruby-number">12</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_sprite_snow">
+            
+              <b>update_sprite_snow</b>(sprite)
+            
+            <a href="../classes/Spriteset_Weather.html#method-i-update_sprite_snow" name="method-i-update_sprite_snow" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スプライトの更新［雪］</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_sprite_snow_source')" id="l_method-i-update_sprite_snow_source">show</a>
+                
+              </p>
+              <div id="method-i-update_sprite_snow_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Weather.rb, line 188</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_sprite_snow</span>(<span class="ruby-identifier">sprite</span>)
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-ivar">@snow_bitmap</span>
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">+=</span> <span class="ruby-number">3</span>
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">opacity</span> <span class="ruby-operator">-=</span> <span class="ruby-number">12</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_sprite_storm">
+            
+              <b>update_sprite_storm</b>(sprite)
+            
+            <a href="../classes/Spriteset_Weather.html#method-i-update_sprite_storm" name="method-i-update_sprite_storm" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>スプライトの更新［嵐］</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_sprite_storm_source')" id="l_method-i-update_sprite_storm_source">show</a>
+                
+              </p>
+              <div id="method-i-update_sprite_storm_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Weather.rb, line 178</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_sprite_storm</span>(<span class="ruby-identifier">sprite</span>)
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-ivar">@storm_bitmap</span>
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">-=</span> <span class="ruby-number">3</span>
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">+=</span> <span class="ruby-number">6</span>
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">opacity</span> <span class="ruby-operator">-=</span> <span class="ruby-number">12</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

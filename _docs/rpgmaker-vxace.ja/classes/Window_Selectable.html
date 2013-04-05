@@ -1,0 +1,2629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Window_Selectable</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Window_Selectable 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Window_Base.html">Window_Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Window_Selectable_rb.html">Window_Selectable.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>カーソルの移動やスクロールの機能を持つウィンドウクラスです。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-active-3D">active=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-bottom_row">bottom_row</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-bottom_row-3D">bottom_row=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-call_cancel_handler">call_cancel_handler</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-call_handler">call_handler</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-call_ok_handler">call_ok_handler</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-call_update_help">call_update_help</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cancel_enabled-3F">cancel_enabled?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-clear_item">clear_item</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-col_max">col_max</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-contents_height">contents_height</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-current_item_enabled-3F">current_item_enabled?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cursor_down">cursor_down</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cursor_left">cursor_left</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cursor_movable-3F">cursor_movable?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cursor_pagedown">cursor_pagedown</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cursor_pageup">cursor_pageup</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cursor_right">cursor_right</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cursor_up">cursor_up</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-draw_all_items">draw_all_items</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-draw_item">draw_item</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-ensure_cursor_visible">ensure_cursor_visible</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-handle-3F">handle?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-height-3D">height=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-help_window-3D">help_window=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-horizontal-3F">horizontal?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-index-3D">index=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-item_height">item_height</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-item_max">item_max</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-item_rect">item_rect</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-item_rect_for_text">item_rect_for_text</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-item_width">item_width</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-ok_enabled-3F">ok_enabled?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-page_item_max">page_item_max</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-page_row_max">page_row_max</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-process_cancel">process_cancel</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-process_cursor_move">process_cursor_move</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-process_handling">process_handling</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-process_ok">process_ok</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-process_pagedown">process_pagedown</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-process_pageup">process_pageup</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-redraw_current_item">redraw_current_item</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-redraw_item">redraw_item</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-refresh">refresh</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-row">row</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-row_max">row_max</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-select">select</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_handler">set_handler</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-spacing">spacing</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-top_row">top_row</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-top_row-3D">top_row=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-unselect">unselect</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_cursor">update_cursor</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_help">update_help</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_padding">update_padding</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_padding_bottom">update_padding_bottom</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>cursor_all</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>cursor_fix</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>help_window</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>index</td>
+            <td class='attr-desc'><p>公開インスタンス変数</p></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(x, y, width, height)
+            
+            <a href="../classes/Window_Selectable.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>オブジェクト初期化</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>)
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-ivar">@index</span> = <span class="ruby-number">-1</span>
+  <span class="ruby-ivar">@handler</span> = {}
+  <span class="ruby-ivar">@cursor_fix</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@cursor_all</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">update_padding</span>
+  <span class="ruby-identifier">deactivate</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-active-3D">
+            
+              <b>active=</b>(active)
+            
+            <a href="../classes/Window_Selectable.html#method-i-active-3D" name="method-i-active-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>アクティブ状態の変更</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-active-3D_source')" id="l_method-i-active-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-active-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 104</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">active=</span>(<span class="ruby-identifier">active</span>)
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">update_cursor</span>
+  <span class="ruby-identifier">call_update_help</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bottom_row">
+            
+              <b>bottom_row</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-bottom_row" name="method-i-bottom_row" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>末尾の行の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bottom_row_source')" id="l_method-i-bottom_row_source">show</a>
+                
+              </p>
+              <div id="method-i-bottom_row_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 180</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bottom_row</span>
+  <span class="ruby-identifier">top_row</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">page_row_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-bottom_row-3D">
+            
+              <b>bottom_row=</b>(row)
+            
+            <a href="../classes/Window_Selectable.html#method-i-bottom_row-3D" name="method-i-bottom_row-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>末尾の行の設定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-bottom_row-3D_source')" id="l_method-i-bottom_row-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-bottom_row-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 187</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">bottom_row=</span>(<span class="ruby-identifier">row</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_row</span> = <span class="ruby-identifier">row</span> <span class="ruby-operator">-</span> (<span class="ruby-identifier">page_row_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-call_cancel_handler">
+            
+              <b>call_cancel_handler</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-call_cancel_handler" name="method-i-call_cancel_handler" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>キャンセルハンドラの呼び出し</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_cancel_handler_source')" id="l_method-i-call_cancel_handler_source">show</a>
+                
+              </p>
+              <div id="method-i-call_cancel_handler_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 389</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_cancel_handler</span>
+  <span class="ruby-identifier">call_handler</span>(<span class="ruby-value">:cancel</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-call_handler">
+            
+              <b>call_handler</b>(symbol)
+            
+            <a href="../classes/Window_Selectable.html#method-i-call_handler" name="method-i-call_handler" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ハンドラの呼び出し</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_handler_source')" id="l_method-i-call_handler_source">show</a>
+                
+              </p>
+              <div id="method-i-call_handler_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 239</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_handler</span>(<span class="ruby-identifier">symbol</span>)
+  <span class="ruby-ivar">@handler</span>[<span class="ruby-identifier">symbol</span>].<span class="ruby-identifier">call</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">handle?</span>(<span class="ruby-identifier">symbol</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-call_ok_handler">
+            
+              <b>call_ok_handler</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-call_ok_handler" name="method-i-call_ok_handler" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>決定ハンドラの呼び出し</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_ok_handler_source')" id="l_method-i-call_ok_handler_source">show</a>
+                
+              </p>
+              <div id="method-i-call_ok_handler_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 372</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_ok_handler</span>
+  <span class="ruby-identifier">call_handler</span>(<span class="ruby-value">:ok</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-call_update_help">
+            
+              <b>call_update_help</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-call_update_help" name="method-i-call_update_help" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ヘルプウィンドウ更新メソッドの呼び出し</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_update_help_source')" id="l_method-i-call_update_help_source">show</a>
+                
+              </p>
+              <div id="method-i-call_update_help_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 439</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_update_help</span>
+  <span class="ruby-identifier">update_help</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">active</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@help_window</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cancel_enabled-3F">
+            
+              <b>cancel_enabled?</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-cancel_enabled-3F" name="method-i-cancel_enabled-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>キャンセル処理の有効状態を取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cancel_enabled-3F_source')" id="l_method-i-cancel_enabled-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-cancel_enabled-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 351</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cancel_enabled?</span>
+  <span class="ruby-identifier">handle?</span>(<span class="ruby-value">:cancel</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear_item">
+            
+              <b>clear_item</b>(index)
+            
+            <a href="../classes/Window_Selectable.html#method-i-clear_item" name="method-i-clear_item" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>項目の消去</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_item_source')" id="l_method-i-clear_item_source">show</a>
+                
+              </p>
+              <div id="method-i-clear_item_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 473</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear_item</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">clear_rect</span>(<span class="ruby-identifier">item_rect</span>(<span class="ruby-identifier">index</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-col_max">
+            
+              <b>col_max</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-col_max" name="method-i-col_max" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>桁数の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-col_max_source')" id="l_method-i-col_max_source">show</a>
+                
+              </p>
+              <div id="method-i-col_max_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">col_max</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">1</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-contents_height">
+            
+              <b>contents_height</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-contents_height" name="method-i-contents_height" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ウィンドウ内容の高さを計算</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-contents_height_source')" id="l_method-i-contents_height_source">show</a>
+                
+              </p>
+              <div id="method-i-contents_height_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">contents_height</span>
+  [<span class="ruby-keyword">super</span> <span class="ruby-operator">-</span> <span class="ruby-keyword">super</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">item_height</span>, <span class="ruby-identifier">row_max</span> * <span class="ruby-identifier">item_height</span>].<span class="ruby-identifier">max</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-current_item_enabled-3F">
+            
+              <b>current_item_enabled?</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-current_item_enabled-3F" name="method-i-current_item_enabled-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>選択項目の有効状態を取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-current_item_enabled-3F_source')" id="l_method-i-current_item_enabled-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-current_item_enabled-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 453</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">current_item_enabled?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cursor_down">
+            
+              <b>cursor_down</b>(wrap = false)
+            
+            <a href="../classes/Window_Selectable.html#method-i-cursor_down" name="method-i-cursor_down" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>カーソルを下に移動</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cursor_down_source')" id="l_method-i-cursor_down_source">show</a>
+                
+              </p>
+              <div id="method-i-cursor_down_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 253</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cursor_down</span>(<span class="ruby-identifier">wrap</span> = <span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">item_max</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">col_max</span> <span class="ruby-operator">||</span> (<span class="ruby-identifier">wrap</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">col_max</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>)
+    <span class="ruby-identifier">select</span>((<span class="ruby-identifier">index</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">col_max</span>) <span class="ruby-operator">%</span> <span class="ruby-identifier">item_max</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cursor_left">
+            
+              <b>cursor_left</b>(wrap = false)
+            
+            <a href="../classes/Window_Selectable.html#method-i-cursor_left" name="method-i-cursor_left" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>カーソルを左に移動</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cursor_left_source')" id="l_method-i-cursor_left_source">show</a>
+                
+              </p>
+              <div id="method-i-cursor_left_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 280</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cursor_left</span>(<span class="ruby-identifier">wrap</span> = <span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">col_max</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">2</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">index</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span> <span class="ruby-operator">||</span> (<span class="ruby-identifier">wrap</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">horizontal?</span>))
+    <span class="ruby-identifier">select</span>((<span class="ruby-identifier">index</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">item_max</span>) <span class="ruby-operator">%</span> <span class="ruby-identifier">item_max</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cursor_movable-3F">
+            
+              <b>cursor_movable?</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-cursor_movable-3F" name="method-i-cursor_movable-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>カーソルの移動可能判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cursor_movable-3F_source')" id="l_method-i-cursor_movable-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-cursor_movable-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 246</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cursor_movable?</span>
+  <span class="ruby-identifier">active</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">open?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@cursor_fix</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@cursor_all</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">item_max</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cursor_pagedown">
+            
+              <b>cursor_pagedown</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-cursor_pagedown" name="method-i-cursor_pagedown" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>カーソルを 1 ページ後ろに移動</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cursor_pagedown_source')" id="l_method-i-cursor_pagedown_source">show</a>
+                
+              </p>
+              <div id="method-i-cursor_pagedown_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 289</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cursor_pagedown</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">top_row</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">page_row_max</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">row_max</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_row</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">page_row_max</span>
+    <span class="ruby-identifier">select</span>([<span class="ruby-ivar">@index</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">page_item_max</span>, <span class="ruby-identifier">item_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>].<span class="ruby-identifier">min</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cursor_pageup">
+            
+              <b>cursor_pageup</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-cursor_pageup" name="method-i-cursor_pageup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>カーソルを 1 ページ前に移動</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cursor_pageup_source')" id="l_method-i-cursor_pageup_source">show</a>
+                
+              </p>
+              <div id="method-i-cursor_pageup_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 299</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cursor_pageup</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">top_row</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_row</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">page_row_max</span>
+    <span class="ruby-identifier">select</span>([<span class="ruby-ivar">@index</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">page_item_max</span>, <span class="ruby-number">0</span>].<span class="ruby-identifier">max</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cursor_right">
+            
+              <b>cursor_right</b>(wrap = false)
+            
+            <a href="../classes/Window_Selectable.html#method-i-cursor_right" name="method-i-cursor_right" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>カーソルを右に移動</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cursor_right_source')" id="l_method-i-cursor_right_source">show</a>
+                
+              </p>
+              <div id="method-i-cursor_right_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 271</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cursor_right</span>(<span class="ruby-identifier">wrap</span> = <span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">col_max</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">2</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">item_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span> <span class="ruby-operator">||</span> (<span class="ruby-identifier">wrap</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">horizontal?</span>))
+    <span class="ruby-identifier">select</span>((<span class="ruby-identifier">index</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span>) <span class="ruby-operator">%</span> <span class="ruby-identifier">item_max</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cursor_up">
+            
+              <b>cursor_up</b>(wrap = false)
+            
+            <a href="../classes/Window_Selectable.html#method-i-cursor_up" name="method-i-cursor_up" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>カーソルを上に移動</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cursor_up_source')" id="l_method-i-cursor_up_source">show</a>
+                
+              </p>
+              <div id="method-i-cursor_up_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 262</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cursor_up</span>(<span class="ruby-identifier">wrap</span> = <span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">col_max</span> <span class="ruby-operator">||</span> (<span class="ruby-identifier">wrap</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">col_max</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>)
+    <span class="ruby-identifier">select</span>((<span class="ruby-identifier">index</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">col_max</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">item_max</span>) <span class="ruby-operator">%</span> <span class="ruby-identifier">item_max</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-draw_all_items">
+            
+              <b>draw_all_items</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-draw_all_items" name="method-i-draw_all_items" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>全項目の描画</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-draw_all_items_source')" id="l_method-i-draw_all_items_source">show</a>
+                
+              </p>
+              <div id="method-i-draw_all_items_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 460</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">draw_all_items</span>
+  <span class="ruby-identifier">item_max</span>.<span class="ruby-identifier">times</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">draw_item</span>(<span class="ruby-identifier">i</span>) }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-draw_item">
+            
+              <b>draw_item</b>(index)
+            
+            <a href="../classes/Window_Selectable.html#method-i-draw_item" name="method-i-draw_item" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>項目の描画</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-draw_item_source')" id="l_method-i-draw_item_source">show</a>
+                
+              </p>
+              <div id="method-i-draw_item_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 467</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">draw_item</span>(<span class="ruby-identifier">index</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-ensure_cursor_visible">
+            
+              <b>ensure_cursor_visible</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-ensure_cursor_visible" name="method-i-ensure_cursor_visible" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>カーソル位置が画面内になるようにスクロール</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-ensure_cursor_visible_source')" id="l_method-i-ensure_cursor_visible_source">show</a>
+                
+              </p>
+              <div id="method-i-ensure_cursor_visible_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 431</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">ensure_cursor_visible</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_row</span> = <span class="ruby-identifier">row</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">top_row</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bottom_row</span> = <span class="ruby-identifier">row</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">bottom_row</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-handle-3F">
+            
+              <b>handle?</b>(symbol)
+            
+            <a href="../classes/Window_Selectable.html#method-i-handle-3F" name="method-i-handle-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ハンドラの存在確認</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-handle-3F_source')" id="l_method-i-handle-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-handle-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 232</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">handle?</span>(<span class="ruby-identifier">symbol</span>)
+  <span class="ruby-ivar">@handler</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">symbol</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-height-3D">
+            
+              <b>height=</b>(height)
+            
+            <a href="../classes/Window_Selectable.html#method-i-height-3D" name="method-i-height-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>高さの設定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-height-3D_source')" id="l_method-i-height-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-height-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">height=</span>(<span class="ruby-identifier">height</span>)
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">update_padding</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-help_window-3D">
+            
+              <b>help_window=</b>(help_window)
+            
+            <a href="../classes/Window_Selectable.html#method-i-help_window-3D" name="method-i-help_window-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ヘルプウィンドウの設定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-help_window-3D_source')" id="l_method-i-help_window-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-help_window-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 216</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">help_window=</span>(<span class="ruby-identifier">help_window</span>)
+  <span class="ruby-ivar">@help_window</span> = <span class="ruby-identifier">help_window</span>
+  <span class="ruby-identifier">call_update_help</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-horizontal-3F">
+            
+              <b>horizontal?</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-horizontal-3F" name="method-i-horizontal-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>横選択判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-horizontal-3F_source')" id="l_method-i-horizontal-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-horizontal-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">horizontal?</span>
+  <span class="ruby-identifier">page_row_max</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-index-3D">
+            
+              <b>index=</b>(index)
+            
+            <a href="../classes/Window_Selectable.html#method-i-index-3D" name="method-i-index-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>カーソル位置の設定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-index-3D_source')" id="l_method-i-index-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-index-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">index=</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-ivar">@index</span> = <span class="ruby-identifier">index</span>
+  <span class="ruby-identifier">update_cursor</span>
+  <span class="ruby-identifier">call_update_help</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-item_height">
+            
+              <b>item_height</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-item_height" name="method-i-item_height" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>項目の高さを取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-item_height_source')" id="l_method-i-item_height_source">show</a>
+                
+              </p>
+              <div id="method-i-item_height_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">item_height</span>
+  <span class="ruby-identifier">line_height</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-item_max">
+            
+              <b>item_max</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-item_max" name="method-i-item_max" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>項目数の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-item_max_source')" id="l_method-i-item_max_source">show</a>
+                
+              </p>
+              <div id="method-i-item_max_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">item_max</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-item_rect">
+            
+              <b>item_rect</b>(index)
+            
+            <a href="../classes/Window_Selectable.html#method-i-item_rect" name="method-i-item_rect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>項目を描画する矩形の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-item_rect_source')" id="l_method-i-item_rect_source">show</a>
+                
+              </p>
+              <div id="method-i-item_rect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 194</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">item_rect</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">rect</span> = <span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">width</span> = <span class="ruby-identifier">item_width</span>
+  <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">height</span> = <span class="ruby-identifier">item_height</span>
+  <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">x</span> = <span class="ruby-identifier">index</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">col_max</span> * (<span class="ruby-identifier">item_width</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">spacing</span>)
+  <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">y</span> = <span class="ruby-identifier">index</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">col_max</span> * <span class="ruby-identifier">item_height</span>
+  <span class="ruby-identifier">rect</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-item_rect_for_text">
+            
+              <b>item_rect_for_text</b>(index)
+            
+            <a href="../classes/Window_Selectable.html#method-i-item_rect_for_text" name="method-i-item_rect_for_text" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>項目を描画する矩形の取得（テキスト用）</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-item_rect_for_text_source')" id="l_method-i-item_rect_for_text_source">show</a>
+                
+              </p>
+              <div id="method-i-item_rect_for_text_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 206</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">item_rect_for_text</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">rect</span> = <span class="ruby-identifier">item_rect</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">+=</span> <span class="ruby-number">4</span>
+  <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">-=</span> <span class="ruby-number">8</span>
+  <span class="ruby-identifier">rect</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-item_width">
+            
+              <b>item_width</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-item_width" name="method-i-item_width" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>項目の幅を取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-item_width_source')" id="l_method-i-item_width_source">show</a>
+                
+              </p>
+              <div id="method-i-item_width_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">item_width</span>
+  (<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">standard_padding</span> * <span class="ruby-number">2</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">spacing</span>) <span class="ruby-operator">/</span> <span class="ruby-identifier">col_max</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">spacing</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-ok_enabled-3F">
+            
+              <b>ok_enabled?</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-ok_enabled-3F" name="method-i-ok_enabled-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>決定処理の有効状態を取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-ok_enabled-3F_source')" id="l_method-i-ok_enabled-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-ok_enabled-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 344</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">ok_enabled?</span>
+  <span class="ruby-identifier">handle?</span>(<span class="ruby-value">:ok</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-page_item_max">
+            
+              <b>page_item_max</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-page_item_max" name="method-i-page_item_max" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>1 ページに表示できる項目数の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-page_item_max_source')" id="l_method-i-page_item_max_source">show</a>
+                
+              </p>
+              <div id="method-i-page_item_max_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 166</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">page_item_max</span>
+  <span class="ruby-identifier">page_row_max</span> * <span class="ruby-identifier">col_max</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-page_row_max">
+            
+              <b>page_row_max</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-page_row_max" name="method-i-page_row_max" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>1 ページに表示できる行数の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-page_row_max_source')" id="l_method-i-page_row_max_source">show</a>
+                
+              </p>
+              <div id="method-i-page_row_max_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">page_row_max</span>
+  (<span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">padding</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">padding_bottom</span>) <span class="ruby-operator">/</span> <span class="ruby-identifier">item_height</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-process_cancel">
+            
+              <b>process_cancel</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-process_cancel" name="method-i-process_cancel" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>キャンセルボタンが押されたときの処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-process_cancel_source')" id="l_method-i-process_cancel_source">show</a>
+                
+              </p>
+              <div id="method-i-process_cancel_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 379</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">process_cancel</span>
+  <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_cancel</span>
+  <span class="ruby-constant">Input</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-identifier">deactivate</span>
+  <span class="ruby-identifier">call_cancel_handler</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-process_cursor_move">
+            
+              <b>process_cursor_move</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-process_cursor_move" name="method-i-process_cursor_move" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>カーソルの移動処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-process_cursor_move_source')" id="l_method-i-process_cursor_move_source">show</a>
+                
+              </p>
+              <div id="method-i-process_cursor_move_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 318</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">process_cursor_move</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">cursor_movable?</span>
+  <span class="ruby-identifier">last_index</span> = <span class="ruby-ivar">@index</span>
+  <span class="ruby-identifier">cursor_down</span> (<span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-value">:DOWN</span>))  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-value">:DOWN</span>)
+  <span class="ruby-identifier">cursor_up</span>   (<span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-value">:UP</span>))    <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-value">:UP</span>)
+  <span class="ruby-identifier">cursor_right</span>(<span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-value">:RIGHT</span>)) <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-value">:RIGHT</span>)
+  <span class="ruby-identifier">cursor_left</span> (<span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-value">:LEFT</span>))  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-value">:LEFT</span>)
+  <span class="ruby-identifier">cursor_pagedown</span>   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">handle?</span>(<span class="ruby-value">:pagedown</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-value">:R</span>)
+  <span class="ruby-identifier">cursor_pageup</span>     <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">handle?</span>(<span class="ruby-value">:pageup</span>)   <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-value">:L</span>)
+  <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_cursor</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">last_index</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-process_handling">
+            
+              <b>process_handling</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-process_handling" name="method-i-process_handling" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>決定やキャンセルなどのハンドリング処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-process_handling_source')" id="l_method-i-process_handling_source">show</a>
+                
+              </p>
+              <div id="method-i-process_handling_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 333</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">process_handling</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">open?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">active</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">process_ok</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">ok_enabled?</span>        <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-value">:C</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">process_cancel</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">cancel_enabled?</span>    <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-value">:B</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">process_pagedown</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">handle?</span>(<span class="ruby-value">:pagedown</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-value">:R</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">process_pageup</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">handle?</span>(<span class="ruby-value">:pageup</span>)   <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-value">:L</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-process_ok">
+            
+              <b>process_ok</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-process_ok" name="method-i-process_ok" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>決定ボタンが押されたときの処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-process_ok_source')" id="l_method-i-process_ok_source">show</a>
+                
+              </p>
+              <div id="method-i-process_ok_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 358</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">process_ok</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_item_enabled?</span>
+    <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_ok</span>
+    <span class="ruby-constant">Input</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-identifier">deactivate</span>
+    <span class="ruby-identifier">call_ok_handler</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_buzzer</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-process_pagedown">
+            
+              <b>process_pagedown</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-process_pagedown" name="method-i-process_pagedown" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>R ボタン（PageDown）が押されたときの処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-process_pagedown_source')" id="l_method-i-process_pagedown_source">show</a>
+                
+              </p>
+              <div id="method-i-process_pagedown_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 406</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">process_pagedown</span>
+  <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_cursor</span>
+  <span class="ruby-constant">Input</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-identifier">deactivate</span>
+  <span class="ruby-identifier">call_handler</span>(<span class="ruby-value">:pagedown</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-process_pageup">
+            
+              <b>process_pageup</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-process_pageup" name="method-i-process_pageup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>L ボタン（PageUp）が押されたときの処理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-process_pageup_source')" id="l_method-i-process_pageup_source">show</a>
+                
+              </p>
+              <div id="method-i-process_pageup_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 396</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">process_pageup</span>
+  <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_cursor</span>
+  <span class="ruby-constant">Input</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-identifier">deactivate</span>
+  <span class="ruby-identifier">call_handler</span>(<span class="ruby-value">:pageup</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-redraw_current_item">
+            
+              <b>redraw_current_item</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-redraw_current_item" name="method-i-redraw_current_item" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>選択項目の再描画</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-redraw_current_item_source')" id="l_method-i-redraw_current_item_source">show</a>
+                
+              </p>
+              <div id="method-i-redraw_current_item_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 488</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">redraw_current_item</span>
+  <span class="ruby-identifier">redraw_item</span>(<span class="ruby-ivar">@index</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-redraw_item">
+            
+              <b>redraw_item</b>(index)
+            
+            <a href="../classes/Window_Selectable.html#method-i-redraw_item" name="method-i-redraw_item" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>項目の再描画</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-redraw_item_source')" id="l_method-i-redraw_item_source">show</a>
+                
+              </p>
+              <div id="method-i-redraw_item_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 480</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">redraw_item</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">clear_item</span>(<span class="ruby-identifier">index</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">draw_item</span>(<span class="ruby-identifier">index</span>)  <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refresh">
+            
+              <b>refresh</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-refresh" name="method-i-refresh" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>リフレッシュ</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refresh_source')" id="l_method-i-refresh_source">show</a>
+                
+              </p>
+              <div id="method-i-refresh_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 495</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refresh</span>
+  <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-identifier">draw_all_items</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-row">
+            
+              <b>row</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-row" name="method-i-row" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>現在の行の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-row_source')" id="l_method-i-row_source">show</a>
+                
+              </p>
+              <div id="method-i-row_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 136</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">row</span>
+  <span class="ruby-identifier">index</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">col_max</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-row_max">
+            
+              <b>row_max</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-row_max" name="method-i-row_max" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>行数の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-row_max_source')" id="l_method-i-row_max_source">show</a>
+                
+              </p>
+              <div id="method-i-row_max_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">row_max</span>
+  [(<span class="ruby-identifier">item_max</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">col_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>) <span class="ruby-operator">/</span> <span class="ruby-identifier">col_max</span>, <span class="ruby-number">1</span>].<span class="ruby-identifier">max</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-select">
+            
+              <b>select</b>(index)
+            
+            <a href="../classes/Window_Selectable.html#method-i-select" name="method-i-select" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>項目の選択</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-select_source')" id="l_method-i-select_source">show</a>
+                
+              </p>
+              <div id="method-i-select_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">select</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">index</span> = <span class="ruby-identifier">index</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_handler">
+            
+              <b>set_handler</b>(symbol, method)
+            
+            <a href="../classes/Window_Selectable.html#method-i-set_handler" name="method-i-set_handler" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>動作に対応するハンドラの設定</p>
+
+<p>method : ハンドラとして設定するメソッド (Method
+オブジェクト)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_handler_source')" id="l_method-i-set_handler_source">show</a>
+                
+              </p>
+              <div id="method-i-set_handler_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 225</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_handler</span>(<span class="ruby-identifier">symbol</span>, <span class="ruby-identifier">method</span>)
+  <span class="ruby-ivar">@handler</span>[<span class="ruby-identifier">symbol</span>] = <span class="ruby-identifier">method</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-spacing">
+            
+              <b>spacing</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-spacing" name="method-i-spacing" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>横に項目が並ぶときの空白の幅を取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-spacing_source')" id="l_method-i-spacing_source">show</a>
+                
+              </p>
+              <div id="method-i-spacing_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">spacing</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">32</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-top_row">
+            
+              <b>top_row</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-top_row" name="method-i-top_row" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>先頭の行の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-top_row_source')" id="l_method-i-top_row_source">show</a>
+                
+              </p>
+              <div id="method-i-top_row_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 143</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">top_row</span>
+  <span class="ruby-identifier">oy</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">item_height</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-top_row-3D">
+            
+              <b>top_row=</b>(row)
+            
+            <a href="../classes/Window_Selectable.html#method-i-top_row-3D" name="method-i-top_row-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>先頭の行の設定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-top_row-3D_source')" id="l_method-i-top_row-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-top_row-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 150</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">top_row=</span>(<span class="ruby-identifier">row</span>)
+  <span class="ruby-identifier">row</span> = <span class="ruby-number">0</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">row</span> = <span class="ruby-identifier">row_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">row_max</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-identifier">row</span> * <span class="ruby-identifier">item_height</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-unselect">
+            
+              <b>unselect</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-unselect" name="method-i-unselect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>項目の選択解除</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-unselect_source')" id="l_method-i-unselect_source">show</a>
+                
+              </p>
+              <div id="method-i-unselect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">unselect</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">index</span> = <span class="ruby-number">-1</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>フレーム更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 309</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">process_cursor_move</span>
+  <span class="ruby-identifier">process_handling</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_cursor">
+            
+              <b>update_cursor</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-update_cursor" name="method-i-update_cursor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>カーソルの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_cursor_source')" id="l_method-i-update_cursor_source">show</a>
+                
+              </p>
+              <div id="method-i-update_cursor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 416</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_cursor</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@cursor_all</span>
+    <span class="ruby-identifier">cursor_rect</span>.<span class="ruby-identifier">set</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">width</span>, <span class="ruby-identifier">row_max</span> * <span class="ruby-identifier">item_height</span>)
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">top_row</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">cursor_rect</span>.<span class="ruby-identifier">empty</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">ensure_cursor_visible</span>
+    <span class="ruby-identifier">cursor_rect</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">item_rect</span>(<span class="ruby-ivar">@index</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_help">
+            
+              <b>update_help</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-update_help" name="method-i-update_help" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ヘルプウィンドウの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_help_source')" id="l_method-i-update_help_source">show</a>
+                
+              </p>
+              <div id="method-i-update_help_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 446</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_help</span>
+  <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">clear</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_padding">
+            
+              <b>update_padding</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-update_padding" name="method-i-update_padding" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>パディングの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_padding_source')" id="l_method-i-update_padding_source">show</a>
+                
+              </p>
+              <div id="method-i-update_padding_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_padding</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">update_padding_bottom</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_padding_bottom">
+            
+              <b>update_padding_bottom</b>()
+            
+            <a href="../classes/Window_Selectable.html#method-i-update_padding_bottom" name="method-i-update_padding_bottom" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>下端パディングの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_padding_bottom_source')" id="l_method-i-update_padding_bottom_source">show</a>
+                
+              </p>
+              <div id="method-i-update_padding_bottom_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_Selectable.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_padding_bottom</span>
+  <span class="ruby-identifier">surplus</span> = (<span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">standard_padding</span> * <span class="ruby-number">2</span>) <span class="ruby-operator">%</span> <span class="ruby-identifier">item_height</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">padding_bottom</span> = <span class="ruby-identifier">padding</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">surplus</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

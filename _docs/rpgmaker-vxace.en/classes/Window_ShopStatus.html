@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Window_ShopStatus</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Window_ShopStatus 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Window_Base.html">Window_Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Window_ShopStatus_rb.html">Window_ShopStatus.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This window displays number of items in possession and the actor’s
+equipment on the shop screen.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-current_equipped_item">current_equipped_item</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-draw_actor_equip_info">draw_actor_equip_info</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-draw_actor_param_change">draw_actor_param_change</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-draw_equip_info">draw_equip_info</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-draw_possession">draw_possession</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-item-3D">item=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-page_max">page_max</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-page_size">page_size</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-param_id">param_id</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-refresh">refresh</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-status_members">status_members</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_page">update_page</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(x, y, width, height)
+            
+            <a href="../classes/Window_ShopStatus.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p><a href="Object.html">Object</a> Initialization</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopStatus.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>)
+  <span class="ruby-ivar">@item</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@page_index</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-current_equipped_item">
+            
+              <b>current_equipped_item</b>(actor, etype_id)
+            
+            <a href="../classes/Window_ShopStatus.html#method-i-current_equipped_item" name="method-i-current_equipped_item" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Current Equipment</p>
+
+<p>Returns the weaker equipment if there is more than one of the same type,
+such as with dual wield.</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-current_equipped_item_source')" id="l_method-i-current_equipped_item_source">show</a>
+                
+              </p>
+              <div id="method-i-current_equipped_item_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopStatus.rb, line 111</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">current_equipped_item</span>(<span class="ruby-identifier">actor</span>, <span class="ruby-identifier">etype_id</span>)
+  <span class="ruby-identifier">list</span> = []
+  <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">equip_slots</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">slot_etype_id</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">list</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">actor</span>.<span class="ruby-identifier">equips</span>[<span class="ruby-identifier">i</span>]) <span class="ruby-keyword">if</span> <span class="ruby-identifier">slot_etype_id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">etype_id</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">list</span>.<span class="ruby-identifier">min_by</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">item</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">params</span>[<span class="ruby-identifier">param_id</span>] <span class="ruby-operator">:</span> <span class="ruby-number">0</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-draw_actor_equip_info">
+            
+              <b>draw_actor_equip_info</b>(x, y, actor)
+            
+            <a href="../classes/Window_ShopStatus.html#method-i-draw_actor_equip_info" name="method-i-draw_actor_equip_info" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Draw Actor Equipment Information</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-draw_actor_equip_info_source')" id="l_method-i-draw_actor_equip_info_source">show</a>
+                
+              </p>
+              <div id="method-i-draw_actor_equip_info_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopStatus.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">draw_actor_equip_info</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">actor</span>)
+  <span class="ruby-identifier">enabled</span> = <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">equippable?</span>(<span class="ruby-ivar">@item</span>)
+  <span class="ruby-identifier">change_color</span>(<span class="ruby-identifier">normal_color</span>, <span class="ruby-identifier">enabled</span>)
+  <span class="ruby-identifier">draw_text</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-number">112</span>, <span class="ruby-identifier">line_height</span>, <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">item1</span> = <span class="ruby-identifier">current_equipped_item</span>(<span class="ruby-identifier">actor</span>, <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">etype_id</span>)
+  <span class="ruby-identifier">draw_actor_param_change</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">actor</span>, <span class="ruby-identifier">item1</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">enabled</span>
+  <span class="ruby-identifier">draw_item_name</span>(<span class="ruby-identifier">item1</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">line_height</span>, <span class="ruby-identifier">enabled</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-draw_actor_param_change">
+            
+              <b>draw_actor_param_change</b>(x, y, actor, item1)
+            
+            <a href="../classes/Window_ShopStatus.html#method-i-draw_actor_param_change" name="method-i-draw_actor_param_change" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Draw Actor Parameter Change</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-draw_actor_param_change_source')" id="l_method-i-draw_actor_param_change_source">show</a>
+                
+              </p>
+              <div id="method-i-draw_actor_param_change_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopStatus.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">draw_actor_param_change</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">actor</span>, <span class="ruby-identifier">item1</span>)
+  <span class="ruby-identifier">rect</span> = <span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-number">4</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">x</span>, <span class="ruby-identifier">line_height</span>)
+  <span class="ruby-identifier">change</span> = <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">params</span>[<span class="ruby-identifier">param_id</span>] <span class="ruby-operator">-</span> (<span class="ruby-identifier">item1</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">item1</span>.<span class="ruby-identifier">params</span>[<span class="ruby-identifier">param_id</span>] <span class="ruby-operator">:</span> <span class="ruby-number">0</span>)
+  <span class="ruby-identifier">change_color</span>(<span class="ruby-identifier">param_change_color</span>(<span class="ruby-identifier">change</span>))
+  <span class="ruby-identifier">draw_text</span>(<span class="ruby-identifier">rect</span>, <span class="ruby-identifier">sprintf</span>(<span class="ruby-string">&quot;%+d&quot;</span>, <span class="ruby-identifier">change</span>), <span class="ruby-number">2</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-draw_equip_info">
+            
+              <b>draw_equip_info</b>(x, y)
+            
+            <a href="../classes/Window_ShopStatus.html#method-i-draw_equip_info" name="method-i-draw_equip_info" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Draw Equipment Information</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-draw_equip_info_source')" id="l_method-i-draw_equip_info_source">show</a>
+                
+              </p>
+              <div id="method-i-draw_equip_info_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopStatus.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">draw_equip_info</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">status_members</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">actor</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">draw_actor_equip_info</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">line_height</span> * (<span class="ruby-identifier">i</span> * <span class="ruby-number">2.4</span>), <span class="ruby-identifier">actor</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-draw_possession">
+            
+              <b>draw_possession</b>(x, y)
+            
+            <a href="../classes/Window_ShopStatus.html#method-i-draw_possession" name="method-i-draw_possession" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Draw Quantity Possessed</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-draw_possession_source')" id="l_method-i-draw_possession_source">show</a>
+                
+              </p>
+              <div id="method-i-draw_possession_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopStatus.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">draw_possession</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-identifier">rect</span> = <span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-number">4</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">x</span>, <span class="ruby-identifier">line_height</span>)
+  <span class="ruby-identifier">change_color</span>(<span class="ruby-identifier">system_color</span>)
+  <span class="ruby-identifier">draw_text</span>(<span class="ruby-identifier">rect</span>, <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">Possession</span>)
+  <span class="ruby-identifier">change_color</span>(<span class="ruby-identifier">normal_color</span>)
+  <span class="ruby-identifier">draw_text</span>(<span class="ruby-identifier">rect</span>, <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">item_number</span>(<span class="ruby-ivar">@item</span>), <span class="ruby-number">2</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-item-3D">
+            
+              <b>item=</b>(item)
+            
+            <a href="../classes/Window_ShopStatus.html#method-i-item-3D" name="method-i-item-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Set Item</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-item-3D_source')" id="l_method-i-item-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-item-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopStatus.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">item=</span>(<span class="ruby-identifier">item</span>)
+  <span class="ruby-ivar">@item</span> = <span class="ruby-identifier">item</span>
+  <span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-page_max">
+            
+              <b>page_max</b>()
+            
+            <a href="../classes/Window_ShopStatus.html#method-i-page_max" name="method-i-page_max" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Maximum Number of Pages</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-page_max_source')" id="l_method-i-page_max_source">show</a>
+                
+              </p>
+              <div id="method-i-page_max_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopStatus.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">page_max</span>
+  (<span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">members</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">page_size</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>) <span class="ruby-operator">/</span> <span class="ruby-identifier">page_size</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-page_size">
+            
+              <b>page_size</b>()
+            
+            <a href="../classes/Window_ShopStatus.html#method-i-page_size" name="method-i-page_size" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Number of Actors Displayable at Once</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-page_size_source')" id="l_method-i-page_size_source">show</a>
+                
+              </p>
+              <div id="method-i-page_size_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopStatus.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">page_size</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">4</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-param_id">
+            
+              <b>param_id</b>()
+            
+            <a href="../classes/Window_ShopStatus.html#method-i-param_id" name="method-i-param_id" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Parameter ID Corresponding to Selected Item</p>
+
+<p>By default, ATK if weapon and DEF if armor.</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-param_id_source')" id="l_method-i-param_id_source">show</a>
+                
+              </p>
+              <div id="method-i-param_id_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopStatus.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">param_id</span>
+  <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Weapon</span>) <span class="ruby-operator">?</span> <span class="ruby-number">2</span> <span class="ruby-operator">:</span> <span class="ruby-number">3</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refresh">
+            
+              <b>refresh</b>()
+            
+            <a href="../classes/Window_ShopStatus.html#method-i-refresh" name="method-i-refresh" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Refresh</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refresh_source')" id="l_method-i-refresh_source">show</a>
+                
+              </p>
+              <div id="method-i-refresh_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopStatus.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refresh</span>
+  <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-identifier">draw_possession</span>(<span class="ruby-number">4</span>, <span class="ruby-number">0</span>)
+  <span class="ruby-identifier">draw_equip_info</span>(<span class="ruby-number">4</span>, <span class="ruby-identifier">line_height</span> * <span class="ruby-number">2</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">EquipItem</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-status_members">
+            
+              <b>status_members</b>()
+            
+            <a href="../classes/Window_ShopStatus.html#method-i-status_members" name="method-i-status_members" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Array of Actors for Which to Draw Equipment Information</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-status_members_source')" id="l_method-i-status_members_source">show</a>
+                
+              </p>
+              <div id="method-i-status_members_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopStatus.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">status_members</span>
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">members</span>[<span class="ruby-ivar">@page_index</span> * <span class="ruby-identifier">page_size</span>, <span class="ruby-identifier">page_size</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Window_ShopStatus.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Frame Update</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopStatus.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">update_page</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_page">
+            
+              <b>update_page</b>()
+            
+            <a href="../classes/Window_ShopStatus.html#method-i-update_page" name="method-i-update_page" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Update Page</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_page_source')" id="l_method-i-update_page_source">show</a>
+                
+              </p>
+              <div id="method-i-update_page_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopStatus.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_page</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">visible</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-value">:A</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">page_max</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">1</span>
+    <span class="ruby-ivar">@page_index</span> = (<span class="ruby-ivar">@page_index</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span>) <span class="ruby-operator">%</span> <span class="ruby-identifier">page_max</span>
+    <span class="ruby-identifier">refresh</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Game_Unit</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Game_Unit 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Game_Unit_rb.html">Game_Unit.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>管理游戲單位的類。是 <a href="Game_Party.html">Game_Party</a> 和
+<a href="Game_Troop.html">Game_Troop</a> 類的父類。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-agi">agi</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-alive_members">alive_members</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-all_dead-3F">all_dead?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-clear_actions">clear_actions</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-clear_results">clear_results</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dead_members">dead_members</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-make_actions">make_actions</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-members">members</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-movable_members">movable_members</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-on_battle_end">on_battle_end</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_battle_start">on_battle_start</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-random_dead_target">random_dead_target</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-random_target">random_target</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-smooth_dead_target">smooth_dead_target</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-smooth_target">smooth_target</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-substitute_battler">substitute_battler</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-tgr_sum">tgr_sum</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>in_battle</td>
+            <td class='attr-desc'><p>定義案例變量</p></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Game_Unit.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>初始化物件</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Unit.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-ivar">@in_battle</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-agi">
+            
+              <b>agi</b>()
+            
+            <a href="../classes/Game_Unit.html#method-i-agi" name="method-i-agi" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>計算敏捷值的平均值</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-agi_source')" id="l_method-i-agi_source">show</a>
+                
+              </p>
+              <div id="method-i-agi_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Unit.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">agi</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">members</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+  <span class="ruby-identifier">members</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-number">0</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">r</span>, <span class="ruby-identifier">member</span><span class="ruby-operator">|</span> <span class="ruby-identifier">r</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">member</span>.<span class="ruby-identifier">agi</span> } <span class="ruby-operator">/</span> <span class="ruby-identifier">members</span>.<span class="ruby-identifier">size</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-alive_members">
+            
+              <b>alive_members</b>()
+            
+            <a href="../classes/Game_Unit.html#method-i-alive_members" name="method-i-alive_members" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>取得存活的成員數組</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-alive_members_source')" id="l_method-i-alive_members_source">show</a>
+                
+              </p>
+              <div id="method-i-alive_members_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Unit.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">alive_members</span>
+  <span class="ruby-identifier">members</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">member</span><span class="ruby-operator">|</span> <span class="ruby-identifier">member</span>.<span class="ruby-identifier">alive?</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-all_dead-3F">
+            
+              <b>all_dead?</b>()
+            
+            <a href="../classes/Game_Unit.html#method-i-all_dead-3F" name="method-i-all_dead-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定是否全滅</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-all_dead-3F_source')" id="l_method-i-all_dead-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-all_dead-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Unit.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">all_dead?</span>
+  <span class="ruby-identifier">alive_members</span>.<span class="ruby-identifier">empty?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear_actions">
+            
+              <b>clear_actions</b>()
+            
+            <a href="../classes/Game_Unit.html#method-i-clear_actions" name="method-i-clear_actions" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>清除全員的戰鬥行為</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_actions_source')" id="l_method-i-clear_actions_source">show</a>
+                
+              </p>
+              <div id="method-i-clear_actions_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Unit.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear_actions</span>
+  <span class="ruby-identifier">members</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">member</span><span class="ruby-operator">|</span> <span class="ruby-identifier">member</span>.<span class="ruby-identifier">clear_actions</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-clear_results">
+            
+              <b>clear_results</b>()
+            
+            <a href="../classes/Game_Unit.html#method-i-clear_results" name="method-i-clear_results" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>清除行動結果</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_results_source')" id="l_method-i-clear_results_source">show</a>
+                
+              </p>
+              <div id="method-i-clear_results_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Unit.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear_results</span>
+  <span class="ruby-identifier">members</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">member</span><span class="ruby-operator">|</span> <span class="ruby-identifier">member</span>.<span class="ruby-identifier">result</span>.<span class="ruby-identifier">clear</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dead_members">
+            
+              <b>dead_members</b>()
+            
+            <a href="../classes/Game_Unit.html#method-i-dead_members" name="method-i-dead_members" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>取得死亡的成員數組</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dead_members_source')" id="l_method-i-dead_members_source">show</a>
+                
+              </p>
+              <div id="method-i-dead_members_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Unit.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dead_members</span>
+  <span class="ruby-identifier">members</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">member</span><span class="ruby-operator">|</span> <span class="ruby-identifier">member</span>.<span class="ruby-identifier">dead?</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-make_actions">
+            
+              <b>make_actions</b>()
+            
+            <a href="../classes/Game_Unit.html#method-i-make_actions" name="method-i-make_actions" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>生成戰鬥行動</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-make_actions_source')" id="l_method-i-make_actions_source">show</a>
+                
+              </p>
+              <div id="method-i-make_actions_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Unit.rb, line 131</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">make_actions</span>
+  <span class="ruby-identifier">members</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">member</span><span class="ruby-operator">|</span> <span class="ruby-identifier">member</span>.<span class="ruby-identifier">make_actions</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-members">
+            
+              <b>members</b>()
+            
+            <a href="../classes/Game_Unit.html#method-i-members" name="method-i-members" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>取得成員</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-members_source')" id="l_method-i-members_source">show</a>
+                
+              </p>
+              <div id="method-i-members_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Unit.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">members</span>
+  <span class="ruby-keyword">return</span> []
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-movable_members">
+            
+              <b>movable_members</b>()
+            
+            <a href="../classes/Game_Unit.html#method-i-movable_members" name="method-i-movable_members" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>取得可以行動的成員數組</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-movable_members_source')" id="l_method-i-movable_members_source">show</a>
+                
+              </p>
+              <div id="method-i-movable_members_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Unit.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">movable_members</span>
+  <span class="ruby-identifier">members</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">member</span><span class="ruby-operator">|</span> <span class="ruby-identifier">member</span>.<span class="ruby-identifier">movable?</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_battle_end">
+            
+              <b>on_battle_end</b>()
+            
+            <a href="../classes/Game_Unit.html#method-i-on_battle_end" name="method-i-on_battle_end" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>戰鬥結束處理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_battle_end_source')" id="l_method-i-on_battle_end_source">show</a>
+                
+              </p>
+              <div id="method-i-on_battle_end_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Unit.rb, line 123</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_battle_end</span>
+  <span class="ruby-ivar">@in_battle</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">members</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">member</span><span class="ruby-operator">|</span> <span class="ruby-identifier">member</span>.<span class="ruby-identifier">on_battle_end</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_battle_start">
+            
+              <b>on_battle_start</b>()
+            
+            <a href="../classes/Game_Unit.html#method-i-on_battle_start" name="method-i-on_battle_start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>戰鬥開始處理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_battle_start_source')" id="l_method-i-on_battle_start_source">show</a>
+                
+              </p>
+              <div id="method-i-on_battle_start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Unit.rb, line 115</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_battle_start</span>
+  <span class="ruby-identifier">members</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">member</span><span class="ruby-operator">|</span> <span class="ruby-identifier">member</span>.<span class="ruby-identifier">on_battle_start</span> }
+  <span class="ruby-ivar">@in_battle</span> = <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-random_dead_target">
+            
+              <b>random_dead_target</b>()
+            
+            <a href="../classes/Game_Unit.html#method-i-random_dead_target" name="method-i-random_dead_target" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>隨機決定目的（無法戰鬥）</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-random_dead_target_source')" id="l_method-i-random_dead_target_source">show</a>
+                
+              </p>
+              <div id="method-i-random_dead_target_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Unit.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">random_dead_target</span>
+  <span class="ruby-identifier">dead_members</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">dead_members</span>[<span class="ruby-identifier">rand</span>(<span class="ruby-identifier">dead_members</span>.<span class="ruby-identifier">size</span>)]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-random_target">
+            
+              <b>random_target</b>()
+            
+            <a href="../classes/Game_Unit.html#method-i-random_target" name="method-i-random_target" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>隨機決定目的</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-random_target_source')" id="l_method-i-random_target_source">show</a>
+                
+              </p>
+              <div id="method-i-random_target_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Unit.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">random_target</span>
+  <span class="ruby-identifier">tgr_rand</span> = <span class="ruby-identifier">rand</span> * <span class="ruby-identifier">tgr_sum</span>
+  <span class="ruby-identifier">alive_members</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">member</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">tgr_rand</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">member</span>.<span class="ruby-identifier">tgr</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">member</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">tgr_rand</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">alive_members</span>[<span class="ruby-number">0</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-smooth_dead_target">
+            
+              <b>smooth_dead_target</b>(index)
+            
+            <a href="../classes/Game_Unit.html#method-i-smooth_dead_target" name="method-i-smooth_dead_target" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>決定順帶目的（無法戰鬥）</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-smooth_dead_target_source')" id="l_method-i-smooth_dead_target_source">show</a>
+                
+              </p>
+              <div id="method-i-smooth_dead_target_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Unit.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">smooth_dead_target</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">member</span> = <span class="ruby-identifier">members</span>[<span class="ruby-identifier">index</span>]
+  (<span class="ruby-identifier">member</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">member</span>.<span class="ruby-identifier">dead?</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">member</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">dead_members</span>[<span class="ruby-number">0</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-smooth_target">
+            
+              <b>smooth_target</b>(index)
+            
+            <a href="../classes/Game_Unit.html#method-i-smooth_target" name="method-i-smooth_target" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>決定順帶目的</p>
+
+<p>也就是如果上下目的無效，則取得下一個目的</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-smooth_target_source')" id="l_method-i-smooth_target_source">show</a>
+                
+              </p>
+              <div id="method-i-smooth_target_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Unit.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">smooth_target</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">member</span> = <span class="ruby-identifier">members</span>[<span class="ruby-identifier">index</span>]
+  (<span class="ruby-identifier">member</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">member</span>.<span class="ruby-identifier">alive?</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">member</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">alive_members</span>[<span class="ruby-number">0</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-substitute_battler">
+            
+              <b>substitute_battler</b>()
+            
+            <a href="../classes/Game_Unit.html#method-i-substitute_battler" name="method-i-substitute_battler" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>取得保護弱者的戰鬥者</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-substitute_battler_source')" id="l_method-i-substitute_battler_source">show</a>
+                
+              </p>
+              <div id="method-i-substitute_battler_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Unit.rb, line 145</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">substitute_battler</span>
+  <span class="ruby-identifier">members</span>.<span class="ruby-identifier">find</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">member</span><span class="ruby-operator">|</span> <span class="ruby-identifier">member</span>.<span class="ruby-identifier">substitute?</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tgr_sum">
+            
+              <b>tgr_sum</b>()
+            
+            <a href="../classes/Game_Unit.html#method-i-tgr_sum" name="method-i-tgr_sum" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>計算受到攻擊的幾率的總數</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tgr_sum_source')" id="l_method-i-tgr_sum_source">show</a>
+                
+              </p>
+              <div id="method-i-tgr_sum_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_Unit.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tgr_sum</span>
+  <span class="ruby-identifier">alive_members</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-number">0</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">r</span>, <span class="ruby-identifier">member</span><span class="ruby-operator">|</span> <span class="ruby-identifier">r</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">member</span>.<span class="ruby-identifier">tgr</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

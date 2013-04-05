@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>SceneManager</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            SceneManager 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/SceneManager_rb.html">SceneManager.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This module manages scene transitions. For example, it can handle
+hierarchical structures such as calling the item screen from the main menu
+or returning from the item screen to the main menu.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-background_bitmap">background_bitmap</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-call">call</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-clear">clear</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-exit">exit</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-first_scene_class">first_scene_class</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-goto">goto</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-return">return</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-run">run</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-scene">scene</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-scene_is-3F">scene_is?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-snapshot_for_background">snapshot_for_background</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-use_midi-3F">use_midi?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-background_bitmap">
+            
+              <b>background_bitmap</b>()
+            
+            <a href="../classes/SceneManager.html#method-c-background_bitmap" name="method-c-background_bitmap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Background Bitmap</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-background_bitmap_source')" id="l_method-c-background_bitmap_source">show</a>
+                
+              </p>
+              <div id="method-c-background_bitmap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File SceneManager.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">background_bitmap</span>
+  <span class="ruby-ivar">@background_bitmap</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-call">
+            
+              <b>call</b>(scene_class)
+            
+            <a href="../classes/SceneManager.html#method-c-call" name="method-c-call" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Call</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-call_source')" id="l_method-c-call_source">show</a>
+                
+              </p>
+              <div id="method-c-call_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File SceneManager.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">scene_class</span>)
+  <span class="ruby-ivar">@stack</span>.<span class="ruby-identifier">push</span>(<span class="ruby-ivar">@scene</span>)
+  <span class="ruby-ivar">@scene</span> = <span class="ruby-identifier">scene_class</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-clear">
+            
+              <b>clear</b>()
+            
+            <a href="../classes/SceneManager.html#method-c-clear" name="method-c-clear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Clear Call Stack</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-clear_source')" id="l_method-c-clear_source">show</a>
+                
+              </p>
+              <div id="method-c-clear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File SceneManager.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-ivar">@stack</span>.<span class="ruby-identifier">clear</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-exit">
+            
+              <b>exit</b>()
+            
+            <a href="../classes/SceneManager.html#method-c-exit" name="method-c-exit" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Exit Game</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-exit_source')" id="l_method-c-exit_source">show</a>
+                
+              </p>
+              <div id="method-c-exit_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File SceneManager.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">exit</span>
+  <span class="ruby-ivar">@scene</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-first_scene_class">
+            
+              <b>first_scene_class</b>()
+            
+            <a href="../classes/SceneManager.html#method-c-first_scene_class" name="method-c-first_scene_class" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get First Scene Class</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-first_scene_class_source')" id="l_method-c-first_scene_class_source">show</a>
+                
+              </p>
+              <div id="method-c-first_scene_class_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File SceneManager.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">first_scene_class</span>
+  <span class="ruby-identifier">$BTEST</span> <span class="ruby-operator">?</span> <span class="ruby-constant">Scene_Battle</span> <span class="ruby-operator">:</span> <span class="ruby-constant">Scene_Title</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-goto">
+            
+              <b>goto</b>(scene_class)
+            
+            <a href="../classes/SceneManager.html#method-c-goto" name="method-c-goto" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Direct Transition</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-goto_source')" id="l_method-c-goto_source">show</a>
+                
+              </p>
+              <div id="method-c-goto_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File SceneManager.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">goto</span>(<span class="ruby-identifier">scene_class</span>)
+  <span class="ruby-ivar">@scene</span> = <span class="ruby-identifier">scene_class</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-return">
+            
+              <b>return</b>()
+            
+            <a href="../classes/SceneManager.html#method-c-return" name="method-c-return" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Return to Caller</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-return_source')" id="l_method-c-return_source">show</a>
+                
+              </p>
+              <div id="method-c-return_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File SceneManager.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-keyword">return</span>
+  <span class="ruby-ivar">@scene</span> = <span class="ruby-ivar">@stack</span>.<span class="ruby-identifier">pop</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-run">
+            
+              <b>run</b>()
+            
+            <a href="../classes/SceneManager.html#method-c-run" name="method-c-run" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Execute</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-run_source')" id="l_method-c-run_source">show</a>
+                
+              </p>
+              <div id="method-c-run_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File SceneManager.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">run</span>
+  <span class="ruby-constant">DataManager</span>.<span class="ruby-identifier">init</span>
+  <span class="ruby-constant">Audio</span>.<span class="ruby-identifier">setup_midi</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">use_midi?</span>
+  <span class="ruby-ivar">@scene</span> = <span class="ruby-identifier">first_scene_class</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@scene</span>.<span class="ruby-identifier">main</span> <span class="ruby-keyword">while</span> <span class="ruby-ivar">@scene</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-scene">
+            
+              <b>scene</b>()
+            
+            <a href="../classes/SceneManager.html#method-c-scene" name="method-c-scene" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Current Scene</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-scene_source')" id="l_method-c-scene_source">show</a>
+                
+              </p>
+              <div id="method-c-scene_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File SceneManager.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">scene</span>
+  <span class="ruby-ivar">@scene</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-scene_is-3F">
+            
+              <b>scene_is?</b>(scene_class)
+            
+            <a href="../classes/SceneManager.html#method-c-scene_is-3F" name="method-c-scene_is-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine Current Scene Class</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-scene_is-3F_source')" id="l_method-c-scene_is-3F_source">show</a>
+                
+              </p>
+              <div id="method-c-scene_is-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File SceneManager.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">scene_is?</span>(<span class="ruby-identifier">scene_class</span>)
+  <span class="ruby-ivar">@scene</span>.<span class="ruby-identifier">instance_of?</span>(<span class="ruby-identifier">scene_class</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-snapshot_for_background">
+            
+              <b>snapshot_for_background</b>()
+            
+            <a href="../classes/SceneManager.html#method-c-snapshot_for_background" name="method-c-snapshot_for_background" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Snapshot to Use as Background</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-snapshot_for_background_source')" id="l_method-c-snapshot_for_background_source">show</a>
+                
+              </p>
+              <div id="method-c-snapshot_for_background_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File SceneManager.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">snapshot_for_background</span>
+  <span class="ruby-ivar">@background_bitmap</span>.<span class="ruby-identifier">dispose</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@background_bitmap</span>
+  <span class="ruby-ivar">@background_bitmap</span> = <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">snap_to_bitmap</span>
+  <span class="ruby-ivar">@background_bitmap</span>.<span class="ruby-identifier">blur</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-use_midi-3F">
+            
+              <b>use_midi?</b>()
+            
+            <a href="../classes/SceneManager.html#method-c-use_midi-3F" name="method-c-use_midi-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Use MIDI?</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-use_midi-3F_source')" id="l_method-c-use_midi-3F_source">show</a>
+                
+              </p>
+              <div id="method-c-use_midi-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File SceneManager.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">use_midi?</span>
+  <span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">opt_use_midi</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

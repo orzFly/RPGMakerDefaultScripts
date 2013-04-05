@@ -1,0 +1,1044 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Sprite_Character</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Sprite_Character 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Sprite_Base.html">Sprite_Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Sprite_Character_rb.html">Sprite_Character.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>キャラクター表示用のスプライトです。Game_Character
+クラスのインスタンスを
+監視し、スプライトの状態を自動的に変化させます。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-balloon_frame_index">balloon_frame_index</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-balloon_speed">balloon_speed</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-balloon_wait">balloon_wait</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dispose">dispose</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_balloon">dispose_balloon</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-end_animation">end_animation</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-end_balloon">end_balloon</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-graphic_changed-3F">graphic_changed?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set_character_bitmap">set_character_bitmap</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_tile_bitmap">set_tile_bitmap</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-setup_new_effect">setup_new_effect</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start_balloon">start_balloon</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-tileset_bitmap">tileset_bitmap</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_balloon">update_balloon</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_bitmap">update_bitmap</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_other">update_other</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_position">update_position</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_src_rect">update_src_rect</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>character</td>
+            <td class='attr-desc'><p>公開インスタンス変数</p></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(viewport, character = nil)
+            
+            <a href="../classes/Sprite_Character.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>オブジェクト初期化</p>
+
+<p>character : <a href="Game_Character.html">Game_Character</a></p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Character.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">viewport</span>, <span class="ruby-identifier">character</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">viewport</span>)
+  <span class="ruby-ivar">@character</span> = <span class="ruby-identifier">character</span>
+  <span class="ruby-ivar">@balloon_duration</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-balloon_frame_index">
+            
+              <b>balloon_frame_index</b>()
+            
+            <a href="../classes/Sprite_Character.html#method-i-balloon_frame_index" name="method-i-balloon_frame_index" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>フキダシアイコンのフレーム番号</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-balloon_frame_index_source')" id="l_method-i-balloon_frame_index_source">show</a>
+                
+              </p>
+              <div id="method-i-balloon_frame_index_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Character.rb, line 228</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">balloon_frame_index</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">7</span> <span class="ruby-operator">-</span> [(<span class="ruby-ivar">@balloon_duration</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">balloon_wait</span>) <span class="ruby-operator">/</span> <span class="ruby-identifier">balloon_speed</span>, <span class="ruby-number">0</span>].<span class="ruby-identifier">max</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-balloon_speed">
+            
+              <b>balloon_speed</b>()
+            
+            <a href="../classes/Sprite_Character.html#method-i-balloon_speed" name="method-i-balloon_speed" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>フキダシアイコンの表示速度</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-balloon_speed_source')" id="l_method-i-balloon_speed_source">show</a>
+                
+              </p>
+              <div id="method-i-balloon_speed_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Character.rb, line 214</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">balloon_speed</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">8</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-balloon_wait">
+            
+              <b>balloon_wait</b>()
+            
+            <a href="../classes/Sprite_Character.html#method-i-balloon_wait" name="method-i-balloon_wait" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>フキダシ最終フレームのウェイト時間</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-balloon_wait_source')" id="l_method-i-balloon_wait_source">show</a>
+                
+              </p>
+              <div id="method-i-balloon_wait_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Character.rb, line 221</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">balloon_wait</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">12</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose">
+            
+              <b>dispose</b>()
+            
+            <a href="../classes/Sprite_Character.html#method-i-dispose" name="method-i-dispose" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>解放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_source')" id="l_method-i-dispose_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Character.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose</span>
+  <span class="ruby-identifier">end_animation</span>
+  <span class="ruby-identifier">end_balloon</span>
+  <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_balloon">
+            
+              <b>dispose_balloon</b>()
+            
+            <a href="../classes/Sprite_Character.html#method-i-dispose_balloon" name="method-i-dispose_balloon" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>フキダシアイコンの解放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_balloon_source')" id="l_method-i-dispose_balloon_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_balloon_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Character.rb, line 177</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_balloon</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@balloon_sprite</span>
+    <span class="ruby-ivar">@balloon_sprite</span>.<span class="ruby-identifier">dispose</span>
+    <span class="ruby-ivar">@balloon_sprite</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-end_animation">
+            
+              <b>end_animation</b>()
+            
+            <a href="../classes/Sprite_Character.html#method-i-end_animation" name="method-i-end_animation" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>アニメーションの終了</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-end_animation_source')" id="l_method-i-end_animation_source">show</a>
+                
+              </p>
+              <div id="method-i-end_animation_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Character.rb, line 156</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">end_animation</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">animation_id</span> = <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-end_balloon">
+            
+              <b>end_balloon</b>()
+            
+            <a href="../classes/Sprite_Character.html#method-i-end_balloon" name="method-i-end_balloon" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>フキダシアイコンの終了</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-end_balloon_source')" id="l_method-i-end_balloon_source">show</a>
+                
+              </p>
+              <div id="method-i-end_balloon_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Character.rb, line 206</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">end_balloon</span>
+  <span class="ruby-identifier">dispose_balloon</span>
+  <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">balloon_id</span> = <span class="ruby-number">0</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-graphic_changed-3F">
+            
+              <b>graphic_changed?</b>()
+            
+            <a href="../classes/Sprite_Character.html#method-i-graphic_changed-3F" name="method-i-graphic_changed-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>グラフィックの変更判定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-graphic_changed-3F_source')" id="l_method-i-graphic_changed-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-graphic_changed-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Character.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">graphic_changed?</span>
+  <span class="ruby-ivar">@tile_id</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">tile_id</span> <span class="ruby-operator">||</span>
+  <span class="ruby-ivar">@character_name</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">character_name</span> <span class="ruby-operator">||</span>
+  <span class="ruby-ivar">@character_index</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">character_index</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_character_bitmap">
+            
+              <b>set_character_bitmap</b>()
+            
+            <a href="../classes/Sprite_Character.html#method-i-set_character_bitmap" name="method-i-set_character_bitmap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>キャラクターのビットマップを設定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_character_bitmap_source')" id="l_method-i-set_character_bitmap_source">show</a>
+                
+              </p>
+              <div id="method-i-set_character_bitmap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Character.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_character_bitmap</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-constant">Cache</span>.<span class="ruby-identifier">character</span>(<span class="ruby-ivar">@character_name</span>)
+  <span class="ruby-identifier">sign</span> = <span class="ruby-ivar">@character_name</span>[<span class="ruby-regexp">/^[\!\$]./</span>]
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">sign</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">sign</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">'$'</span>)
+    <span class="ruby-ivar">@cw</span> = <span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">/</span> <span class="ruby-number">3</span>
+    <span class="ruby-ivar">@ch</span> = <span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">/</span> <span class="ruby-number">4</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@cw</span> = <span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">/</span> <span class="ruby-number">12</span>
+    <span class="ruby-ivar">@ch</span> = <span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">/</span> <span class="ruby-number">8</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-ivar">@cw</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-ivar">@ch</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set_tile_bitmap">
+            
+              <b>set_tile_bitmap</b>()
+            
+            <a href="../classes/Sprite_Character.html#method-i-set_tile_bitmap" name="method-i-set_tile_bitmap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>タイルのビットマップを設定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_tile_bitmap_source')" id="l_method-i-set_tile_bitmap_source">show</a>
+                
+              </p>
+              <div id="method-i-set_tile_bitmap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Character.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set_tile_bitmap</span>
+  <span class="ruby-identifier">sx</span> = (<span class="ruby-ivar">@tile_id</span> <span class="ruby-operator">/</span> <span class="ruby-number">128</span> <span class="ruby-operator">%</span> <span class="ruby-number">2</span> * <span class="ruby-number">8</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@tile_id</span> <span class="ruby-operator">%</span> <span class="ruby-number">8</span>) * <span class="ruby-number">32</span>;
+  <span class="ruby-identifier">sy</span> = <span class="ruby-ivar">@tile_id</span> <span class="ruby-operator">%</span> <span class="ruby-number">256</span> <span class="ruby-operator">/</span> <span class="ruby-number">8</span> <span class="ruby-operator">%</span> <span class="ruby-number">16</span> * <span class="ruby-number">32</span>;
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-identifier">tileset_bitmap</span>(<span class="ruby-ivar">@tile_id</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">src_rect</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">sx</span>, <span class="ruby-identifier">sy</span>, <span class="ruby-number">32</span>, <span class="ruby-number">32</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-number">16</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-number">32</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-setup_new_effect">
+            
+              <b>setup_new_effect</b>()
+            
+            <a href="../classes/Sprite_Character.html#method-i-setup_new_effect" name="method-i-setup_new_effect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>新しいエフェクトの設定</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-setup_new_effect_source')" id="l_method-i-setup_new_effect_source">show</a>
+                
+              </p>
+              <div id="method-i-setup_new_effect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Character.rb, line 142</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">setup_new_effect</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">animation?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">animation_id</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">animation</span> = <span class="ruby-identifier">$data_animations</span>[<span class="ruby-ivar">@character</span>.<span class="ruby-identifier">animation_id</span>]
+    <span class="ruby-identifier">start_animation</span>(<span class="ruby-identifier">animation</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@balloon_sprite</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">balloon_id</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@balloon_id</span> = <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">balloon_id</span>
+    <span class="ruby-identifier">start_balloon</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start_balloon">
+            
+              <b>start_balloon</b>()
+            
+            <a href="../classes/Sprite_Character.html#method-i-start_balloon" name="method-i-start_balloon" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>フキダシアイコン表示の開始</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_balloon_source')" id="l_method-i-start_balloon_source">show</a>
+                
+              </p>
+              <div id="method-i-start_balloon_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Character.rb, line 164</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start_balloon</span>
+  <span class="ruby-identifier">dispose_balloon</span>
+  <span class="ruby-ivar">@balloon_duration</span> = <span class="ruby-number">8</span> * <span class="ruby-identifier">balloon_speed</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">balloon_wait</span>
+  <span class="ruby-ivar">@balloon_sprite</span> = <span class="ruby-operator">::</span><span class="ruby-constant">Sprite</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">viewport</span>)
+  <span class="ruby-ivar">@balloon_sprite</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-constant">Cache</span>.<span class="ruby-identifier">system</span>(<span class="ruby-string">&quot;Balloon&quot;</span>)
+  <span class="ruby-ivar">@balloon_sprite</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-number">16</span>
+  <span class="ruby-ivar">@balloon_sprite</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-number">32</span>
+  <span class="ruby-identifier">update_balloon</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-tileset_bitmap">
+            
+              <b>tileset_bitmap</b>(tile_id)
+            
+            <a href="../classes/Sprite_Character.html#method-i-tileset_bitmap" name="method-i-tileset_bitmap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>指定されたタイルが含まれるタイルセット画像の取得</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-tileset_bitmap_source')" id="l_method-i-tileset_bitmap_source">show</a>
+                
+              </p>
+              <div id="method-i-tileset_bitmap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Character.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">tileset_bitmap</span>(<span class="ruby-identifier">tile_id</span>)
+  <span class="ruby-constant">Cache</span>.<span class="ruby-identifier">tileset</span>(<span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">tileset</span>.<span class="ruby-identifier">tileset_names</span>[<span class="ruby-number">5</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">tile_id</span> <span class="ruby-operator">/</span> <span class="ruby-number">256</span>])
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Sprite_Character.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>フレーム更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Character.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">update_bitmap</span>
+  <span class="ruby-identifier">update_src_rect</span>
+  <span class="ruby-identifier">update_position</span>
+  <span class="ruby-identifier">update_other</span>
+  <span class="ruby-identifier">update_balloon</span>
+  <span class="ruby-identifier">setup_new_effect</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_balloon">
+            
+              <b>update_balloon</b>()
+            
+            <a href="../classes/Sprite_Character.html#method-i-update_balloon" name="method-i-update_balloon" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>フキダシアイコンの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_balloon_source')" id="l_method-i-update_balloon_source">show</a>
+                
+              </p>
+              <div id="method-i-update_balloon_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Character.rb, line 187</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_balloon</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@balloon_duration</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-ivar">@balloon_duration</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@balloon_duration</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+      <span class="ruby-ivar">@balloon_sprite</span>.<span class="ruby-identifier">x</span> = <span class="ruby-identifier">x</span>
+      <span class="ruby-ivar">@balloon_sprite</span>.<span class="ruby-identifier">y</span> = <span class="ruby-identifier">y</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">height</span>
+      <span class="ruby-ivar">@balloon_sprite</span>.<span class="ruby-identifier">z</span> = <span class="ruby-identifier">z</span> <span class="ruby-operator">+</span> <span class="ruby-number">200</span>
+      <span class="ruby-identifier">sx</span> = <span class="ruby-identifier">balloon_frame_index</span> * <span class="ruby-number">32</span>
+      <span class="ruby-identifier">sy</span> = (<span class="ruby-ivar">@balloon_id</span> <span class="ruby-operator">-</span> <span class="ruby-number">1</span>) * <span class="ruby-number">32</span>
+      <span class="ruby-ivar">@balloon_sprite</span>.<span class="ruby-identifier">src_rect</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">sx</span>, <span class="ruby-identifier">sy</span>, <span class="ruby-number">32</span>, <span class="ruby-number">32</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">end_balloon</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_bitmap">
+            
+              <b>update_bitmap</b>()
+            
+            <a href="../classes/Sprite_Character.html#method-i-update_bitmap" name="method-i-update_bitmap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>転送元ビットマップの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_bitmap_source')" id="l_method-i-update_bitmap_source">show</a>
+                
+              </p>
+              <div id="method-i-update_bitmap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Character.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_bitmap</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">graphic_changed?</span>
+    <span class="ruby-ivar">@tile_id</span> = <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">tile_id</span>
+    <span class="ruby-ivar">@character_name</span> = <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">character_name</span>
+    <span class="ruby-ivar">@character_index</span> = <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">character_index</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@tile_id</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">set_tile_bitmap</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">set_character_bitmap</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_other">
+            
+              <b>update_other</b>()
+            
+            <a href="../classes/Sprite_Character.html#method-i-update_other" name="method-i-update_other" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>その他の更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_other_source')" id="l_method-i-update_other_source">show</a>
+                
+              </p>
+              <div id="method-i-update_other_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Character.rb, line 132</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_other</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">opacity</span> = <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">opacity</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">blend_type</span> = <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">blend_type</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bush_depth</span> = <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">bush_depth</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-operator">!</span><span class="ruby-ivar">@character</span>.<span class="ruby-identifier">transparent</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_position">
+            
+              <b>update_position</b>()
+            
+            <a href="../classes/Sprite_Character.html#method-i-update_position" name="method-i-update_position" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>位置の更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_position_source')" id="l_method-i-update_position_source">show</a>
+                
+              </p>
+              <div id="method-i-update_position_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Character.rb, line 123</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_position</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">x</span> = <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">screen_x</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">y</span> = <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">screen_y</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">z</span> = <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">screen_z</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_src_rect">
+            
+              <b>update_src_rect</b>()
+            
+            <a href="../classes/Sprite_Character.html#method-i-update_src_rect" name="method-i-update_src_rect" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>転送元矩形の更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_src_rect_source')" id="l_method-i-update_src_rect_source">show</a>
+                
+              </p>
+              <div id="method-i-update_src_rect_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Character.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_src_rect</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@tile_id</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">index</span> = <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">character_index</span>
+    <span class="ruby-identifier">pattern</span> = <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">pattern</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">3</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@character</span>.<span class="ruby-identifier">pattern</span> <span class="ruby-operator">:</span> <span class="ruby-number">1</span>
+    <span class="ruby-identifier">sx</span> = (<span class="ruby-identifier">index</span> <span class="ruby-operator">%</span> <span class="ruby-number">4</span> * <span class="ruby-number">3</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">pattern</span>) * <span class="ruby-ivar">@cw</span>
+    <span class="ruby-identifier">sy</span> = (<span class="ruby-identifier">index</span> <span class="ruby-operator">/</span> <span class="ruby-number">4</span> * <span class="ruby-number">4</span> <span class="ruby-operator">+</span> (<span class="ruby-ivar">@character</span>.<span class="ruby-identifier">direction</span> <span class="ruby-operator">-</span> <span class="ruby-number">2</span>) <span class="ruby-operator">/</span> <span class="ruby-number">2</span>) * <span class="ruby-ivar">@ch</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">src_rect</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">sx</span>, <span class="ruby-identifier">sy</span>, <span class="ruby-ivar">@cw</span>, <span class="ruby-ivar">@ch</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,1504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_Shop</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_Shop 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Scene_MenuBase.html">Scene_MenuBase</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_Shop_rb.html">Scene_Shop.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This class performs shop screen processing.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-activate_buy_window">activate_buy_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-activate_sell_window">activate_sell_window</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-buying_price">buying_price</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-command_buy">command_buy</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-command_sell">command_sell</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_buy_window">create_buy_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_category_window">create_category_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_command_window">create_command_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_dummy_window">create_dummy_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_gold_window">create_gold_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_number_window">create_number_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_sell_window">create_sell_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_status_window">create_status_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-currency_unit">currency_unit</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-do_buy">do_buy</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-do_sell">do_sell</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-end_number_input">end_number_input</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-max_buy">max_buy</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-max_sell">max_sell</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-money">money</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-on_buy_cancel">on_buy_cancel</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_buy_ok">on_buy_ok</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_category_cancel">on_category_cancel</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_category_ok">on_category_ok</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_number_cancel">on_number_cancel</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_number_ok">on_number_ok</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_sell_cancel">on_sell_cancel</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_sell_ok">on_sell_ok</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-prepare">prepare</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-selling_price">selling_price</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-start">start</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-activate_buy_window">
+            
+              <b>activate_buy_window</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-activate_buy_window" name="method-i-activate_buy_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Activate Purchase Window</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-activate_buy_window_source')" id="l_method-i-activate_buy_window_source">show</a>
+                
+              </p>
+              <div id="method-i-activate_buy_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 135</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">activate_buy_window</span>
+  <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">money</span> = <span class="ruby-identifier">money</span>
+  <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">show</span>.<span class="ruby-identifier">activate</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">show</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-activate_sell_window">
+            
+              <b>activate_sell_window</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-activate_sell_window" name="method-i-activate_sell_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Activate Sell Window</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-activate_sell_window_source')" id="l_method-i-activate_sell_window_source">show</a>
+                
+              </p>
+              <div id="method-i-activate_sell_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 144</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">activate_sell_window</span>
+  <span class="ruby-ivar">@category_window</span>.<span class="ruby-identifier">show</span>
+  <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">refresh</span>
+  <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">show</span>.<span class="ruby-identifier">activate</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">hide</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-buying_price">
+            
+              <b>buying_price</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-buying_price" name="method-i-buying_price" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Purchase Price</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-buying_price_source')" id="l_method-i-buying_price_source">show</a>
+                
+              </p>
+              <div id="method-i-buying_price_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 317</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">buying_price</span>
+  <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">price</span>(<span class="ruby-ivar">@item</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-command_buy">
+            
+              <b>command_buy</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-command_buy" name="method-i-command_buy" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <dl class="rdoc-list label-list"><dt>Buy
+<dd>
+<p>Command</p>
+</dd></dl>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-command_buy_source')" id="l_method-i-command_buy_source">show</a>
+                
+              </p>
+              <div id="method-i-command_buy_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 154</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">command_buy</span>
+  <span class="ruby-ivar">@dummy_window</span>.<span class="ruby-identifier">hide</span>
+  <span class="ruby-identifier">activate_buy_window</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-command_sell">
+            
+              <b>command_sell</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-command_sell" name="method-i-command_sell" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <dl class="rdoc-list label-list"><dt>Sell
+<dd>
+<p>Command</p>
+</dd></dl>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-command_sell_source')" id="l_method-i-command_sell_source">show</a>
+                
+              </p>
+              <div id="method-i-command_sell_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 162</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">command_sell</span>
+  <span class="ruby-ivar">@dummy_window</span>.<span class="ruby-identifier">hide</span>
+  <span class="ruby-ivar">@category_window</span>.<span class="ruby-identifier">show</span>.<span class="ruby-identifier">activate</span>
+  <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">show</span>
+  <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">unselect</span>
+  <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_buy_window">
+            
+              <b>create_buy_window</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-create_buy_window" name="method-i-create_buy_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Purchase Window</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_buy_window_source')" id="l_method-i-create_buy_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_buy_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_buy_window</span>
+  <span class="ruby-identifier">wy</span> = <span class="ruby-ivar">@dummy_window</span>.<span class="ruby-identifier">y</span>
+  <span class="ruby-identifier">wh</span> = <span class="ruby-ivar">@dummy_window</span>.<span class="ruby-identifier">height</span>
+  <span class="ruby-ivar">@buy_window</span> = <span class="ruby-constant">Window_ShopBuy</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-identifier">wy</span>, <span class="ruby-identifier">wh</span>, <span class="ruby-ivar">@goods</span>)
+  <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">viewport</span> = <span class="ruby-ivar">@viewport</span>
+  <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">help_window</span> = <span class="ruby-ivar">@help_window</span>
+  <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">status_window</span> = <span class="ruby-ivar">@status_window</span>
+  <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">hide</span>
+  <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:ok</span>,     <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_buy_ok</span>))
+  <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:cancel</span>, <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_buy_cancel</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_category_window">
+            
+              <b>create_category_window</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-create_category_window" name="method-i-create_category_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Category Window</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_category_window_source')" id="l_method-i-create_category_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_category_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 107</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_category_window</span>
+  <span class="ruby-ivar">@category_window</span> = <span class="ruby-constant">Window_ItemCategory</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@category_window</span>.<span class="ruby-identifier">viewport</span> = <span class="ruby-ivar">@viewport</span>
+  <span class="ruby-ivar">@category_window</span>.<span class="ruby-identifier">help_window</span> = <span class="ruby-ivar">@help_window</span>
+  <span class="ruby-ivar">@category_window</span>.<span class="ruby-identifier">y</span> = <span class="ruby-ivar">@dummy_window</span>.<span class="ruby-identifier">y</span>
+  <span class="ruby-ivar">@category_window</span>.<span class="ruby-identifier">hide</span>.<span class="ruby-identifier">deactivate</span>
+  <span class="ruby-ivar">@category_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:ok</span>,     <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_category_ok</span>))
+  <span class="ruby-ivar">@category_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:cancel</span>, <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_category_cancel</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_command_window">
+            
+              <b>create_command_window</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-create_command_window" name="method-i-create_command_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Command Window</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_command_window_source')" id="l_method-i-create_command_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_command_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_command_window</span>
+  <span class="ruby-ivar">@command_window</span> = <span class="ruby-constant">Window_ShopCommand</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">x</span>, <span class="ruby-ivar">@purchase_only</span>)
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">viewport</span> = <span class="ruby-ivar">@viewport</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">y</span> = <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">height</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:buy</span>,    <span class="ruby-identifier">method</span>(<span class="ruby-value">:command_buy</span>))
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:sell</span>,   <span class="ruby-identifier">method</span>(<span class="ruby-value">:command_sell</span>))
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:cancel</span>, <span class="ruby-identifier">method</span>(<span class="ruby-value">:return_scene</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_dummy_window">
+            
+              <b>create_dummy_window</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-create_dummy_window" name="method-i-create_dummy_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Dummy Window</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_dummy_window_source')" id="l_method-i-create_dummy_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_dummy_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_dummy_window</span>
+  <span class="ruby-identifier">wy</span> = <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">height</span>
+  <span class="ruby-identifier">wh</span> = <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">wy</span>
+  <span class="ruby-ivar">@dummy_window</span> = <span class="ruby-constant">Window_Base</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-identifier">wy</span>, <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span>, <span class="ruby-identifier">wh</span>)
+  <span class="ruby-ivar">@dummy_window</span>.<span class="ruby-identifier">viewport</span> = <span class="ruby-ivar">@viewport</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_gold_window">
+            
+              <b>create_gold_window</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-create_gold_window" name="method-i-create_gold_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Gold Window</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_gold_window_source')" id="l_method-i-create_gold_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_gold_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_gold_window</span>
+  <span class="ruby-ivar">@gold_window</span> = <span class="ruby-constant">Window_Gold</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">viewport</span> = <span class="ruby-ivar">@viewport</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">x</span> = <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">width</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">y</span> = <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">height</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_number_window">
+            
+              <b>create_number_window</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-create_number_window" name="method-i-create_number_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Quantity Input Window</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_number_window_source')" id="l_method-i-create_number_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_number_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_number_window</span>
+  <span class="ruby-identifier">wy</span> = <span class="ruby-ivar">@dummy_window</span>.<span class="ruby-identifier">y</span>
+  <span class="ruby-identifier">wh</span> = <span class="ruby-ivar">@dummy_window</span>.<span class="ruby-identifier">height</span>
+  <span class="ruby-ivar">@number_window</span> = <span class="ruby-constant">Window_ShopNumber</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-identifier">wy</span>, <span class="ruby-identifier">wh</span>)
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">viewport</span> = <span class="ruby-ivar">@viewport</span>
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">hide</span>
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:ok</span>,     <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_number_ok</span>))
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:cancel</span>, <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_number_cancel</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_sell_window">
+            
+              <b>create_sell_window</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-create_sell_window" name="method-i-create_sell_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Sell Window</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_sell_window_source')" id="l_method-i-create_sell_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_sell_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 120</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_sell_window</span>
+  <span class="ruby-identifier">wy</span> = <span class="ruby-ivar">@category_window</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@category_window</span>.<span class="ruby-identifier">height</span>
+  <span class="ruby-identifier">wh</span> = <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">wy</span>
+  <span class="ruby-ivar">@sell_window</span> = <span class="ruby-constant">Window_ShopSell</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-identifier">wy</span>, <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span>, <span class="ruby-identifier">wh</span>)
+  <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">viewport</span> = <span class="ruby-ivar">@viewport</span>
+  <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">help_window</span> = <span class="ruby-ivar">@help_window</span>
+  <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">hide</span>
+  <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:ok</span>,     <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_sell_ok</span>))
+  <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:cancel</span>, <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_sell_cancel</span>))
+  <span class="ruby-ivar">@category_window</span>.<span class="ruby-identifier">item_window</span> = <span class="ruby-ivar">@sell_window</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_status_window">
+            
+              <b>create_status_window</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-create_status_window" name="method-i-create_status_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Status Window</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_status_window_source')" id="l_method-i-create_status_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_status_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_status_window</span>
+  <span class="ruby-identifier">wx</span> = <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">width</span>
+  <span class="ruby-identifier">wy</span> = <span class="ruby-ivar">@dummy_window</span>.<span class="ruby-identifier">y</span>
+  <span class="ruby-identifier">ww</span> = <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">wx</span>
+  <span class="ruby-identifier">wh</span> = <span class="ruby-ivar">@dummy_window</span>.<span class="ruby-identifier">height</span>
+  <span class="ruby-ivar">@status_window</span> = <span class="ruby-constant">Window_ShopStatus</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">wx</span>, <span class="ruby-identifier">wy</span>, <span class="ruby-identifier">ww</span>, <span class="ruby-identifier">wh</span>)
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">viewport</span> = <span class="ruby-ivar">@viewport</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">hide</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-currency_unit">
+            
+              <b>currency_unit</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-currency_unit" name="method-i-currency_unit" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Currency Unit</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-currency_unit_source')" id="l_method-i-currency_unit_source">show</a>
+                
+              </p>
+              <div id="method-i-currency_unit_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 310</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">currency_unit</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">currency_unit</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-do_buy">
+            
+              <b>do_buy</b>(number)
+            
+            <a href="../classes/Scene_Shop.html#method-i-do_buy" name="method-i-do_buy" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Execute Purchase</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-do_buy_source')" id="l_method-i-do_buy_source">show</a>
+                
+              </p>
+              <div id="method-i-do_buy_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 260</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">do_buy</span>(<span class="ruby-identifier">number</span>)
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">lose_gold</span>(<span class="ruby-identifier">number</span> * <span class="ruby-identifier">buying_price</span>)
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">gain_item</span>(<span class="ruby-ivar">@item</span>, <span class="ruby-identifier">number</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-do_sell">
+            
+              <b>do_sell</b>(number)
+            
+            <a href="../classes/Scene_Shop.html#method-i-do_sell" name="method-i-do_sell" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Execute Sale</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-do_sell_source')" id="l_method-i-do_sell_source">show</a>
+                
+              </p>
+              <div id="method-i-do_sell_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 268</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">do_sell</span>(<span class="ruby-identifier">number</span>)
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">gain_gold</span>(<span class="ruby-identifier">number</span> * <span class="ruby-identifier">selling_price</span>)
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">lose_item</span>(<span class="ruby-ivar">@item</span>, <span class="ruby-identifier">number</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-end_number_input">
+            
+              <b>end_number_input</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-end_number_input" name="method-i-end_number_input" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Exit Quantity Input</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-end_number_input_source')" id="l_method-i-end_number_input_source">show</a>
+                
+              </p>
+              <div id="method-i-end_number_input_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 276</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">end_number_input</span>
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">hide</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">current_symbol</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:buy</span>
+    <span class="ruby-identifier">activate_buy_window</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:sell</span>
+    <span class="ruby-identifier">activate_sell_window</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-max_buy">
+            
+              <b>max_buy</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-max_buy" name="method-i-max_buy" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Maximum Quantity Buyable</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-max_buy_source')" id="l_method-i-max_buy_source">show</a>
+                
+              </p>
+              <div id="method-i-max_buy_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 289</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">max_buy</span>
+  <span class="ruby-identifier">max</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">max_item_number</span>(<span class="ruby-ivar">@item</span>) <span class="ruby-operator">-</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">item_number</span>(<span class="ruby-ivar">@item</span>)
+  <span class="ruby-identifier">buying_price</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">max</span> <span class="ruby-operator">:</span> [<span class="ruby-identifier">max</span>, <span class="ruby-identifier">money</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">buying_price</span>].<span class="ruby-identifier">min</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-max_sell">
+            
+              <b>max_sell</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-max_sell" name="method-i-max_sell" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Maximum Quantity Sellable</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-max_sell_source')" id="l_method-i-max_sell_source">show</a>
+                
+              </p>
+              <div id="method-i-max_sell_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 297</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">max_sell</span>
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">item_number</span>(<span class="ruby-ivar">@item</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-money">
+            
+              <b>money</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-money" name="method-i-money" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Party Gold</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-money_source')" id="l_method-i-money_source">show</a>
+                
+              </p>
+              <div id="method-i-money_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 304</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">money</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">value</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_buy_cancel">
+            
+              <b>on_buy_cancel</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-on_buy_cancel" name="method-i-on_buy_cancel" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Buy [Cancel]</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_buy_cancel_source')" id="l_method-i-on_buy_cancel_source">show</a>
+                
+              </p>
+              <div id="method-i-on_buy_cancel_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 183</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_buy_cancel</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">activate</span>
+  <span class="ruby-ivar">@dummy_window</span>.<span class="ruby-identifier">show</span>
+  <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">hide</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">hide</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">item</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">clear</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_buy_ok">
+            
+              <b>on_buy_ok</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-on_buy_ok" name="method-i-on_buy_ok" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Buy [OK]</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_buy_ok_source')" id="l_method-i-on_buy_ok_source">show</a>
+                
+              </p>
+              <div id="method-i-on_buy_ok_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_buy_ok</span>
+  <span class="ruby-ivar">@item</span> = <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">item</span>
+  <span class="ruby-ivar">@buy_window</span>.<span class="ruby-identifier">hide</span>
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">set</span>(<span class="ruby-ivar">@item</span>, <span class="ruby-identifier">max_buy</span>, <span class="ruby-identifier">buying_price</span>, <span class="ruby-identifier">currency_unit</span>)
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">show</span>.<span class="ruby-identifier">activate</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_category_cancel">
+            
+              <b>on_category_cancel</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-on_category_cancel" name="method-i-on_category_cancel" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Category [Cancel]</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_category_cancel_source')" id="l_method-i-on_category_cancel_source">show</a>
+                
+              </p>
+              <div id="method-i-on_category_cancel_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 203</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_category_cancel</span>
+  <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">activate</span>
+  <span class="ruby-ivar">@dummy_window</span>.<span class="ruby-identifier">show</span>
+  <span class="ruby-ivar">@category_window</span>.<span class="ruby-identifier">hide</span>
+  <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">hide</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_category_ok">
+            
+              <b>on_category_ok</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-on_category_ok" name="method-i-on_category_ok" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Category [OK]</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_category_ok_source')" id="l_method-i-on_category_ok_source">show</a>
+                
+              </p>
+              <div id="method-i-on_category_ok_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 195</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_category_ok</span>
+  <span class="ruby-identifier">activate_sell_window</span>
+  <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">select</span>(<span class="ruby-number">0</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_number_cancel">
+            
+              <b>on_number_cancel</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-on_number_cancel" name="method-i-on_number_cancel" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Quantity Input [Cancel]</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_number_cancel_source')" id="l_method-i-on_number_cancel_source">show</a>
+                
+              </p>
+              <div id="method-i-on_number_cancel_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 252</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_number_cancel</span>
+  <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_cancel</span>
+  <span class="ruby-identifier">end_number_input</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_number_ok">
+            
+              <b>on_number_ok</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-on_number_ok" name="method-i-on_number_ok" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Quantity Input [OK]</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_number_ok_source')" id="l_method-i-on_number_ok_source">show</a>
+                
+              </p>
+              <div id="method-i-on_number_ok_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 236</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_number_ok</span>
+  <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_shop</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-ivar">@command_window</span>.<span class="ruby-identifier">current_symbol</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:buy</span>
+    <span class="ruby-identifier">do_buy</span>(<span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">number</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:sell</span>
+    <span class="ruby-identifier">do_sell</span>(<span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">number</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">end_number_input</span>
+  <span class="ruby-ivar">@gold_window</span>.<span class="ruby-identifier">refresh</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_sell_cancel">
+            
+              <b>on_sell_cancel</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-on_sell_cancel" name="method-i-on_sell_cancel" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Sell [Cancel]</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_sell_cancel_source')" id="l_method-i-on_sell_cancel_source">show</a>
+                
+              </p>
+              <div id="method-i-on_sell_cancel_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 226</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_sell_cancel</span>
+  <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">unselect</span>
+  <span class="ruby-ivar">@category_window</span>.<span class="ruby-identifier">activate</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">item</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@help_window</span>.<span class="ruby-identifier">clear</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_sell_ok">
+            
+              <b>on_sell_ok</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-on_sell_ok" name="method-i-on_sell_ok" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Sell [OK]</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_sell_ok_source')" id="l_method-i-on_sell_ok_source">show</a>
+                
+              </p>
+              <div id="method-i-on_sell_ok_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 213</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_sell_ok</span>
+  <span class="ruby-ivar">@item</span> = <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">item</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">item</span> = <span class="ruby-ivar">@item</span>
+  <span class="ruby-ivar">@category_window</span>.<span class="ruby-identifier">hide</span>
+  <span class="ruby-ivar">@sell_window</span>.<span class="ruby-identifier">hide</span>
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">set</span>(<span class="ruby-ivar">@item</span>, <span class="ruby-identifier">max_sell</span>, <span class="ruby-identifier">selling_price</span>, <span class="ruby-identifier">currency_unit</span>)
+  <span class="ruby-ivar">@number_window</span>.<span class="ruby-identifier">show</span>.<span class="ruby-identifier">activate</span>
+  <span class="ruby-ivar">@status_window</span>.<span class="ruby-identifier">show</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-prepare">
+            
+              <b>prepare</b>(goods, purchase_only)
+            
+            <a href="../classes/Scene_Shop.html#method-i-prepare" name="method-i-prepare" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Prepare</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-prepare_source')" id="l_method-i-prepare_source">show</a>
+                
+              </p>
+              <div id="method-i-prepare_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">prepare</span>(<span class="ruby-identifier">goods</span>, <span class="ruby-identifier">purchase_only</span>)
+  <span class="ruby-ivar">@goods</span> = <span class="ruby-identifier">goods</span>
+  <span class="ruby-ivar">@purchase_only</span> = <span class="ruby-identifier">purchase_only</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-selling_price">
+            
+              <b>selling_price</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-selling_price" name="method-i-selling_price" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Sale Price</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-selling_price_source')" id="l_method-i-selling_price_source">show</a>
+                
+              </p>
+              <div id="method-i-selling_price_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 324</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">selling_price</span>
+  <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">price</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start">
+            
+              <b>start</b>()
+            
+            <a href="../classes/Scene_Shop.html#method-i-start" name="method-i-start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Start Processing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_source')" id="l_method-i-start_source">show</a>
+                
+              </p>
+              <div id="method-i-start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Shop.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">create_help_window</span>
+  <span class="ruby-identifier">create_gold_window</span>
+  <span class="ruby-identifier">create_command_window</span>
+  <span class="ruby-identifier">create_dummy_window</span>
+  <span class="ruby-identifier">create_number_window</span>
+  <span class="ruby-identifier">create_status_window</span>
+  <span class="ruby-identifier">create_buy_window</span>
+  <span class="ruby-identifier">create_category_window</span>
+  <span class="ruby-identifier">create_sell_window</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_Debug</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_Debug 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Scene_MenuBase.html">Scene_MenuBase</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_Debug_rb.html">Scene_Debug.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This class performs debug screen processing.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-create_debug_help_window">create_debug_help_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_left_window">create_left_window</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_right_window">create_right_window</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-help_text">help_text</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-on_left_ok">on_left_ok</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-on_right_cancel">on_right_cancel</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-refresh_help_window">refresh_help_window</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-start">start</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-terminate">terminate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-create_debug_help_window">
+            
+              <b>create_debug_help_window</b>()
+            
+            <a href="../classes/Scene_Debug.html#method-i-create_debug_help_window" name="method-i-create_debug_help_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Help Window</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_debug_help_window_source')" id="l_method-i-create_debug_help_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_debug_help_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Debug.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_debug_help_window</span>
+  <span class="ruby-identifier">wx</span> = <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">x</span>
+  <span class="ruby-identifier">wy</span> = <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">height</span>
+  <span class="ruby-identifier">ww</span> = <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">width</span>
+  <span class="ruby-identifier">wh</span> = <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">wy</span>
+  <span class="ruby-ivar">@debug_help_window</span> = <span class="ruby-constant">Window_Base</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">wx</span>, <span class="ruby-identifier">wy</span>, <span class="ruby-identifier">ww</span>, <span class="ruby-identifier">wh</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_left_window">
+            
+              <b>create_left_window</b>()
+            
+            <a href="../classes/Scene_Debug.html#method-i-create_left_window" name="method-i-create_left_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Left Window</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_left_window_source')" id="l_method-i-create_left_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_left_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Debug.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_left_window</span>
+  <span class="ruby-ivar">@left_window</span> = <span class="ruby-constant">Window_DebugLeft</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>)
+  <span class="ruby-ivar">@left_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:ok</span>,     <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_left_ok</span>))
+  <span class="ruby-ivar">@left_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:cancel</span>, <span class="ruby-identifier">method</span>(<span class="ruby-value">:return_scene</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_right_window">
+            
+              <b>create_right_window</b>()
+            
+            <a href="../classes/Scene_Debug.html#method-i-create_right_window" name="method-i-create_right_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Create Right Window</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_right_window_source')" id="l_method-i-create_right_window_source">show</a>
+                
+              </p>
+              <div id="method-i-create_right_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Debug.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_right_window</span>
+  <span class="ruby-identifier">wx</span> = <span class="ruby-ivar">@left_window</span>.<span class="ruby-identifier">width</span>
+  <span class="ruby-identifier">ww</span> = <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">wx</span>
+  <span class="ruby-ivar">@right_window</span> = <span class="ruby-constant">Window_DebugRight</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">wx</span>, <span class="ruby-number">0</span>, <span class="ruby-identifier">ww</span>)
+  <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">set_handler</span>(<span class="ruby-value">:cancel</span>, <span class="ruby-identifier">method</span>(<span class="ruby-value">:on_right_cancel</span>))
+  <span class="ruby-ivar">@left_window</span>.<span class="ruby-identifier">right_window</span> = <span class="ruby-ivar">@right_window</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-help_text">
+            
+              <b>help_text</b>()
+            
+            <a href="../classes/Scene_Debug.html#method-i-help_text" name="method-i-help_text" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Get Help Text</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-help_text_source')" id="l_method-i-help_text_source">show</a>
+                
+              </p>
+              <div id="method-i-help_text_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Debug.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">help_text</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@left_window</span>.<span class="ruby-identifier">mode</span> <span class="ruby-operator">==</span> <span class="ruby-value">:switch</span>
+    <span class="ruby-string">&quot;C (Enter) : ON / OFF&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-string">&quot;← (Left)    :  -1\n&quot;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-string">&quot;→ (Right)   :  +1\n&quot;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-string">&quot;L (Pageup)   : -10\n&quot;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-string">&quot;R (Pagedown) : +10&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_left_ok">
+            
+              <b>on_left_ok</b>()
+            
+            <a href="../classes/Scene_Debug.html#method-i-on_left_ok" name="method-i-on_left_ok" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Left [OK]</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_left_ok_source')" id="l_method-i-on_left_ok_source">show</a>
+                
+              </p>
+              <div id="method-i-on_left_ok_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Debug.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_left_ok</span>
+  <span class="ruby-identifier">refresh_help_window</span>
+  <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">activate</span>
+  <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">select</span>(<span class="ruby-number">0</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-on_right_cancel">
+            
+              <b>on_right_cancel</b>()
+            
+            <a href="../classes/Scene_Debug.html#method-i-on_right_cancel" name="method-i-on_right_cancel" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Right [Cancel]</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-on_right_cancel_source')" id="l_method-i-on_right_cancel_source">show</a>
+                
+              </p>
+              <div id="method-i-on_right_cancel_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Debug.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">on_right_cancel</span>
+  <span class="ruby-ivar">@left_window</span>.<span class="ruby-identifier">activate</span>
+  <span class="ruby-ivar">@right_window</span>.<span class="ruby-identifier">unselect</span>
+  <span class="ruby-ivar">@debug_help_window</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">clear</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refresh_help_window">
+            
+              <b>refresh_help_window</b>()
+            
+            <a href="../classes/Scene_Debug.html#method-i-refresh_help_window" name="method-i-refresh_help_window" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Refresh Help Window</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refresh_help_window_source')" id="l_method-i-refresh_help_window_source">show</a>
+                
+              </p>
+              <div id="method-i-refresh_help_window_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Debug.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refresh_help_window</span>
+  <span class="ruby-ivar">@debug_help_window</span>.<span class="ruby-identifier">draw_text_ex</span>(<span class="ruby-number">4</span>, <span class="ruby-number">0</span>, <span class="ruby-identifier">help_text</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-start">
+            
+              <b>start</b>()
+            
+            <a href="../classes/Scene_Debug.html#method-i-start" name="method-i-start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Start Processing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-start_source')" id="l_method-i-start_source">show</a>
+                
+              </p>
+              <div id="method-i-start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Debug.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">start</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">create_left_window</span>
+  <span class="ruby-identifier">create_right_window</span>
+  <span class="ruby-identifier">create_debug_help_window</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-terminate">
+            
+              <b>terminate</b>()
+            
+            <a href="../classes/Scene_Debug.html#method-i-terminate" name="method-i-terminate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Termination Processing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-terminate_source')" id="l_method-i-terminate_source">show</a>
+                
+              </p>
+              <div id="method-i-terminate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Debug.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">terminate</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-comment">#$game_map.refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

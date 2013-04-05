@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Sprite_Timer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Sprite_Timer 
+            
+                <span class="parent">&lt; 
+                    
+                    Sprite
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Sprite_Timer_rb.html">Sprite_Timer.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>タイマー表示用のスプライトです。$game_timer
+を監視し、スプライトの状態を
+自動的に変化させます。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-create_bitmap">create_bitmap</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-dispose">dispose</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-redraw">redraw</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-timer_text">timer_text</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_bitmap">update_bitmap</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_position">update_position</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_visibility">update_visibility</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(viewport)
+            
+            <a href="../classes/Sprite_Timer.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>オブジェクト初期化</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Timer.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">viewport</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">viewport</span>)
+  <span class="ruby-identifier">create_bitmap</span>
+  <span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-create_bitmap">
+            
+              <b>create_bitmap</b>()
+            
+            <a href="../classes/Sprite_Timer.html#method-i-create_bitmap" name="method-i-create_bitmap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>ビットマップの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_bitmap_source')" id="l_method-i-create_bitmap_source">show</a>
+                
+              </p>
+              <div id="method-i-create_bitmap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Timer.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_bitmap</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-constant">Bitmap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">96</span>, <span class="ruby-number">48</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">font</span>.<span class="ruby-identifier">size</span> = <span class="ruby-number">32</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">font</span>.<span class="ruby-identifier">color</span>.<span class="ruby-identifier">set</span>(<span class="ruby-number">255</span>, <span class="ruby-number">255</span>, <span class="ruby-number">255</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose">
+            
+              <b>dispose</b>()
+            
+            <a href="../classes/Sprite_Timer.html#method-i-dispose" name="method-i-dispose" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>解放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_source')" id="l_method-i-dispose_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Timer.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-redraw">
+            
+              <b>redraw</b>()
+            
+            <a href="../classes/Sprite_Timer.html#method-i-redraw" name="method-i-redraw" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>再描画</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-redraw_source')" id="l_method-i-redraw_source">show</a>
+                
+              </p>
+              <div id="method-i-redraw_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Timer.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">redraw</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">draw_text</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">rect</span>, <span class="ruby-identifier">timer_text</span>, <span class="ruby-number">1</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-timer_text">
+            
+              <b>timer_text</b>()
+            
+            <a href="../classes/Sprite_Timer.html#method-i-timer_text" name="method-i-timer_text" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>描画用テキストの作成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-timer_text_source')" id="l_method-i-timer_text_source">show</a>
+                
+              </p>
+              <div id="method-i-timer_text_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Timer.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">timer_text</span>
+  <span class="ruby-identifier">sprintf</span>(<span class="ruby-string">&quot;%02d:%02d&quot;</span>, <span class="ruby-ivar">@total_sec</span> <span class="ruby-operator">/</span> <span class="ruby-number">60</span>, <span class="ruby-ivar">@total_sec</span> <span class="ruby-operator">%</span> <span class="ruby-number">60</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Sprite_Timer.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>フレーム更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Timer.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">update_bitmap</span>
+  <span class="ruby-identifier">update_position</span>
+  <span class="ruby-identifier">update_visibility</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_bitmap">
+            
+              <b>update_bitmap</b>()
+            
+            <a href="../classes/Sprite_Timer.html#method-i-update_bitmap" name="method-i-update_bitmap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>転送元ビットマップの更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_bitmap_source')" id="l_method-i-update_bitmap_source">show</a>
+                
+              </p>
+              <div id="method-i-update_bitmap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Timer.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_bitmap</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_timer</span>.<span class="ruby-identifier">sec</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@total_sec</span>
+    <span class="ruby-ivar">@total_sec</span> = <span class="ruby-identifier">$game_timer</span>.<span class="ruby-identifier">sec</span>
+    <span class="ruby-identifier">redraw</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_position">
+            
+              <b>update_position</b>()
+            
+            <a href="../classes/Sprite_Timer.html#method-i-update_position" name="method-i-update_position" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>位置の更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_position_source')" id="l_method-i-update_position_source">show</a>
+                
+              </p>
+              <div id="method-i-update_position_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Timer.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_position</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">x</span> = <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">width</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">y</span> = <span class="ruby-number">0</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">z</span> = <span class="ruby-number">200</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_visibility">
+            
+              <b>update_visibility</b>()
+            
+            <a href="../classes/Sprite_Timer.html#method-i-update_visibility" name="method-i-update_visibility" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>可視状態の更新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_visibility_source')" id="l_method-i-update_visibility_source">show</a>
+                
+              </p>
+              <div id="method-i-update_visibility_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Sprite_Timer.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_visibility</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">visible</span> = <span class="ruby-identifier">$game_timer</span>.<span class="ruby-identifier">working?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

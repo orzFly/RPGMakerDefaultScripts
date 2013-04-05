@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Window_ShopStatus</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Window_ShopStatus 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Window_Base.html">Window_Base</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Window_ShopStatus_rb.html">Window_ShopStatus.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>商店画面、显示物品所持数与角色装备的窗口。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-item-3D">item=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-refresh">refresh</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Window_ShopStatus.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>初始化对像</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopStatus.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-keyword">super</span>(<span class="ruby-number">368</span>, <span class="ruby-number">128</span>, <span class="ruby-number">272</span>, <span class="ruby-number">352</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span> = <span class="ruby-constant">Bitmap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-number">32</span>, <span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-number">32</span>)
+  <span class="ruby-ivar">@item</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-item-3D">
+            
+              <b>item=</b>(item)
+            
+            <a href="../classes/Window_ShopStatus.html#method-i-item-3D" name="method-i-item-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>设置物品</p>
+
+<p>item : 新的物品</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-item-3D_source')" id="l_method-i-item-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-item-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopStatus.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">item=</span>(<span class="ruby-identifier">item</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@item</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">item</span>
+    <span class="ruby-ivar">@item</span> = <span class="ruby-identifier">item</span>
+    <span class="ruby-identifier">refresh</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refresh">
+            
+              <b>refresh</b>()
+            
+            <a href="../classes/Window_ShopStatus.html#method-i-refresh" name="method-i-refresh" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refresh_source')" id="l_method-i-refresh_source">show</a>
+                
+              </p>
+              <div id="method-i-refresh_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopStatus.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refresh</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@item</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-ivar">@item</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Item</span>
+    <span class="ruby-identifier">number</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">item_number</span>(<span class="ruby-ivar">@item</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Weapon</span>
+    <span class="ruby-identifier">number</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">weapon_number</span>(<span class="ruby-ivar">@item</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Armor</span>
+    <span class="ruby-identifier">number</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">armor_number</span>(<span class="ruby-ivar">@item</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">font</span>.<span class="ruby-identifier">color</span> = <span class="ruby-identifier">system_color</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">draw_text</span>(<span class="ruby-number">4</span>, <span class="ruby-number">0</span>, <span class="ruby-number">200</span>, <span class="ruby-number">32</span>, <span class="ruby-string">&quot;所持数&quot;</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">font</span>.<span class="ruby-identifier">color</span> = <span class="ruby-identifier">normal_color</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">draw_text</span>(<span class="ruby-number">204</span>, <span class="ruby-number">0</span>, <span class="ruby-number">32</span>, <span class="ruby-number">32</span>, <span class="ruby-identifier">number</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-number">2</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Item</span>)
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 添加装备品信息</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-number">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">actors</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-comment"># 获取角色</span>
+    <span class="ruby-identifier">actor</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">actors</span>[<span class="ruby-identifier">i</span>]
+    <span class="ruby-comment"># 可以装备为普通文字颜色、不能装备设置为无效文字颜色</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">equippable?</span>(<span class="ruby-ivar">@item</span>)
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">font</span>.<span class="ruby-identifier">color</span> = <span class="ruby-identifier">normal_color</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">font</span>.<span class="ruby-identifier">color</span> = <span class="ruby-identifier">disabled_color</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># 描绘角色名字</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">draw_text</span>(<span class="ruby-number">4</span>, <span class="ruby-number">64</span> <span class="ruby-operator">+</span> <span class="ruby-number">64</span> * <span class="ruby-identifier">i</span>, <span class="ruby-number">120</span>, <span class="ruby-number">32</span>, <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">name</span>)
+    <span class="ruby-comment"># 获取当前的装备品</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Weapon</span>)
+      <span class="ruby-identifier">item1</span> = <span class="ruby-identifier">$data_weapons</span>[<span class="ruby-identifier">actor</span>.<span class="ruby-identifier">weapon_id</span>]
+    <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span>
+      <span class="ruby-identifier">item1</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-identifier">actor</span>.<span class="ruby-identifier">armor1_id</span>]
+    <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span>
+      <span class="ruby-identifier">item1</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-identifier">actor</span>.<span class="ruby-identifier">armor2_id</span>]
+    <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-number">2</span>
+      <span class="ruby-identifier">item1</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-identifier">actor</span>.<span class="ruby-identifier">armor3_id</span>]
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">item1</span> = <span class="ruby-identifier">$data_armors</span>[<span class="ruby-identifier">actor</span>.<span class="ruby-identifier">armor4_id</span>]
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># 可以装备的情况</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">equippable?</span>(<span class="ruby-ivar">@item</span>)
+      <span class="ruby-comment"># 武器的情况</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Weapon</span>)
+        <span class="ruby-identifier">atk1</span> = <span class="ruby-identifier">item1</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">item1</span>.<span class="ruby-identifier">atk</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+        <span class="ruby-identifier">atk2</span> = <span class="ruby-ivar">@item</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">atk</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+        <span class="ruby-identifier">change</span> = <span class="ruby-identifier">atk2</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">atk1</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-comment"># 防具的情况</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Armor</span>)
+        <span class="ruby-identifier">pdef1</span> = <span class="ruby-identifier">item1</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">item1</span>.<span class="ruby-identifier">pdef</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+        <span class="ruby-identifier">mdef1</span> = <span class="ruby-identifier">item1</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">item1</span>.<span class="ruby-identifier">mdef</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+        <span class="ruby-identifier">pdef2</span> = <span class="ruby-ivar">@item</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">pdef</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+        <span class="ruby-identifier">mdef2</span> = <span class="ruby-ivar">@item</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@item</span>.<span class="ruby-identifier">mdef</span> <span class="ruby-operator">:</span> <span class="ruby-number">0</span>
+        <span class="ruby-identifier">change</span> = <span class="ruby-identifier">pdef2</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">pdef1</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">mdef2</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">mdef1</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-comment"># 描绘能力值变化</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">draw_text</span>(<span class="ruby-number">124</span>, <span class="ruby-number">64</span> <span class="ruby-operator">+</span> <span class="ruby-number">64</span> * <span class="ruby-identifier">i</span>, <span class="ruby-number">112</span>, <span class="ruby-number">32</span>,
+        <span class="ruby-identifier">sprintf</span>(<span class="ruby-string">&quot;%+d&quot;</span>, <span class="ruby-identifier">change</span>), <span class="ruby-number">2</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># 描绘物品</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">item1</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+      <span class="ruby-identifier">x</span> = <span class="ruby-number">4</span>
+      <span class="ruby-identifier">y</span> = <span class="ruby-number">64</span> <span class="ruby-operator">+</span> <span class="ruby-number">64</span> * <span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-number">32</span>
+      <span class="ruby-identifier">bitmap</span> = <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">Cache</span>.<span class="ruby-identifier">icon</span>(<span class="ruby-identifier">item1</span>.<span class="ruby-identifier">icon_name</span>)
+      <span class="ruby-identifier">opacity</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">font</span>.<span class="ruby-identifier">color</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">normal_color</span> <span class="ruby-operator">?</span> <span class="ruby-number">255</span> <span class="ruby-operator">:</span> <span class="ruby-number">128</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">blt</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> <span class="ruby-number">4</span>, <span class="ruby-identifier">bitmap</span>, <span class="ruby-constant">Rect</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">24</span>, <span class="ruby-number">24</span>), <span class="ruby-identifier">opacity</span>)
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">draw_text</span>(<span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-number">28</span>, <span class="ruby-identifier">y</span>, <span class="ruby-number">212</span>, <span class="ruby-number">32</span>, <span class="ruby-identifier">item1</span>.<span class="ruby-identifier">name</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

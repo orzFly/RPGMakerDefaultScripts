@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Window_ShopNumber</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Window_ShopNumber 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Window_Selectable.html">Window_Selectable</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Window_ShopNumber_rb.html">Window_ShopNumber.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>商店画面中，输入“物品买入／卖出数量”的窗口。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-change_number">change_number</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-currency_unit-3D">currency_unit=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cursor_width">cursor_width</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cursor_x">cursor_x</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-draw_number">draw_number</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-draw_total_price">draw_total_price</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-figures">figures</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-item_y">item_y</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-price_y">price_y</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-refresh">refresh</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set">set</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_cursor">update_cursor</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_number">update_number</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-window_width">window_width</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>number</td>
+            <td class='attr-desc'><p>定义实例变量</p></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(x, y, height)
+            
+            <a href="../classes/Window_ShopNumber.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>初始化对象</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopNumber.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">height</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">window_width</span>, <span class="ruby-identifier">height</span>)
+  <span class="ruby-ivar">@item</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@max</span> = <span class="ruby-number">1</span>
+  <span class="ruby-ivar">@price</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@number</span> = <span class="ruby-number">1</span>
+  <span class="ruby-ivar">@currency_unit</span> = <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-identifier">currency_unit</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-change_number">
+            
+              <b>change_number</b>(amount)
+            
+            <a href="../classes/Window_ShopNumber.html#method-i-change_number" name="method-i-change_number" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>更改数量</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-change_number_source')" id="l_method-i-change_number_source">show</a>
+                
+              </p>
+              <div id="method-i-change_number_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopNumber.rb, line 141</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">change_number</span>(<span class="ruby-identifier">amount</span>)
+  <span class="ruby-ivar">@number</span> = [[<span class="ruby-ivar">@number</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">amount</span>, <span class="ruby-ivar">@max</span>].<span class="ruby-identifier">min</span>, <span class="ruby-number">1</span>].<span class="ruby-identifier">max</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-currency_unit-3D">
+            
+              <b>currency_unit=</b>(currency_unit)
+            
+            <a href="../classes/Window_ShopNumber.html#method-i-currency_unit-3D" name="method-i-currency_unit-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>设置货币单位</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-currency_unit-3D_source')" id="l_method-i-currency_unit-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-currency_unit-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopNumber.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">currency_unit=</span>(<span class="ruby-identifier">currency_unit</span>)
+  <span class="ruby-ivar">@currency_unit</span> = <span class="ruby-identifier">currency_unit</span>
+  <span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cursor_width">
+            
+              <b>cursor_width</b>()
+            
+            <a href="../classes/Window_ShopNumber.html#method-i-cursor_width" name="method-i-cursor_width" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取光标的宽度</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cursor_width_source')" id="l_method-i-cursor_width_source">show</a>
+                
+              </p>
+              <div id="method-i-cursor_width_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopNumber.rb, line 95</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cursor_width</span>
+  <span class="ruby-identifier">figures</span> * <span class="ruby-number">10</span> <span class="ruby-operator">+</span> <span class="ruby-number">12</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-cursor_x">
+            
+              <b>cursor_x</b>()
+            
+            <a href="../classes/Window_ShopNumber.html#method-i-cursor_x" name="method-i-cursor_x" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取光标的 X 坐标</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-cursor_x_source')" id="l_method-i-cursor_x_source">show</a>
+                
+              </p>
+              <div id="method-i-cursor_x_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopNumber.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">cursor_x</span>
+  <span class="ruby-identifier">contents_width</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">cursor_width</span> <span class="ruby-operator">-</span> <span class="ruby-number">4</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-draw_number">
+            
+              <b>draw_number</b>()
+            
+            <a href="../classes/Window_ShopNumber.html#method-i-draw_number" name="method-i-draw_number" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>绘制数量</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-draw_number_source')" id="l_method-i-draw_number_source">show</a>
+                
+              </p>
+              <div id="method-i-draw_number_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopNumber.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">draw_number</span>
+  <span class="ruby-identifier">change_color</span>(<span class="ruby-identifier">normal_color</span>)
+  <span class="ruby-identifier">draw_text</span>(<span class="ruby-identifier">cursor_x</span> <span class="ruby-operator">-</span> <span class="ruby-number">28</span>, <span class="ruby-identifier">item_y</span>, <span class="ruby-number">22</span>, <span class="ruby-identifier">line_height</span>, <span class="ruby-string">&quot;×&quot;</span>)
+  <span class="ruby-identifier">draw_text</span>(<span class="ruby-identifier">cursor_x</span>, <span class="ruby-identifier">item_y</span>, <span class="ruby-identifier">cursor_width</span> <span class="ruby-operator">-</span> <span class="ruby-number">4</span>, <span class="ruby-identifier">line_height</span>, <span class="ruby-ivar">@number</span>, <span class="ruby-number">2</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-draw_total_price">
+            
+              <b>draw_total_price</b>()
+            
+            <a href="../classes/Window_ShopNumber.html#method-i-draw_total_price" name="method-i-draw_total_price" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>绘制总价</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-draw_total_price_source')" id="l_method-i-draw_total_price_source">show</a>
+                
+              </p>
+              <div id="method-i-draw_total_price_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopNumber.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">draw_total_price</span>
+  <span class="ruby-identifier">width</span> = <span class="ruby-identifier">contents_width</span> <span class="ruby-operator">-</span> <span class="ruby-number">8</span>
+  <span class="ruby-identifier">draw_currency_value</span>(<span class="ruby-ivar">@price</span> * <span class="ruby-ivar">@number</span>, <span class="ruby-ivar">@currency_unit</span>, <span class="ruby-number">4</span>, <span class="ruby-identifier">price_y</span>, <span class="ruby-identifier">width</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-figures">
+            
+              <b>figures</b>()
+            
+            <a href="../classes/Window_ShopNumber.html#method-i-figures" name="method-i-figures" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取数量显示的最大列数</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-figures_source')" id="l_method-i-figures_source">show</a>
+                
+              </p>
+              <div id="method-i-figures_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopNumber.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">figures</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">2</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-item_y">
+            
+              <b>item_y</b>()
+            
+            <a href="../classes/Window_ShopNumber.html#method-i-item_y" name="method-i-item_y" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>显示物品名称行的 Y 坐标</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-item_y_source')" id="l_method-i-item_y_source">show</a>
+                
+              </p>
+              <div id="method-i-item_y_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopNumber.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">item_y</span>
+  <span class="ruby-identifier">contents_height</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">line_height</span> * <span class="ruby-number">3</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-price_y">
+            
+              <b>price_y</b>()
+            
+            <a href="../classes/Window_ShopNumber.html#method-i-price_y" name="method-i-price_y" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>显示价格行的 Y 坐标</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-price_y_source')" id="l_method-i-price_y_source">show</a>
+                
+              </p>
+              <div id="method-i-price_y_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopNumber.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">price_y</span>
+  <span class="ruby-identifier">contents_height</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">line_height</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-refresh">
+            
+              <b>refresh</b>()
+            
+            <a href="../classes/Window_ShopNumber.html#method-i-refresh" name="method-i-refresh" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>刷新</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-refresh_source')" id="l_method-i-refresh_source">show</a>
+                
+              </p>
+              <div id="method-i-refresh_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopNumber.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">refresh</span>
+  <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-identifier">draw_item_name</span>(<span class="ruby-ivar">@item</span>, <span class="ruby-number">0</span>, <span class="ruby-identifier">item_y</span>)
+  <span class="ruby-identifier">draw_number</span>
+  <span class="ruby-identifier">draw_total_price</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-set">
+            
+              <b>set</b>(item, max, price, currency_unit = nil)
+            
+            <a href="../classes/Window_ShopNumber.html#method-i-set" name="method-i-set" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>设置物品、最大值、价格、货币单位</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-set_source')" id="l_method-i-set_source">show</a>
+                
+              </p>
+              <div id="method-i-set_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopNumber.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">set</span>(<span class="ruby-identifier">item</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">price</span>, <span class="ruby-identifier">currency_unit</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@item</span> = <span class="ruby-identifier">item</span>
+  <span class="ruby-ivar">@max</span> = <span class="ruby-identifier">max</span>
+  <span class="ruby-ivar">@price</span> = <span class="ruby-identifier">price</span>
+  <span class="ruby-ivar">@currency_unit</span> = <span class="ruby-identifier">currency_unit</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">currency_unit</span>
+  <span class="ruby-ivar">@number</span> = <span class="ruby-number">1</span>
+  <span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Window_ShopNumber.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>更新画面</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopNumber.rb, line 116</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">active</span>
+    <span class="ruby-identifier">last_number</span> = <span class="ruby-ivar">@number</span>
+    <span class="ruby-identifier">update_number</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@number</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">last_number</span>
+      <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_cursor</span>
+      <span class="ruby-identifier">refresh</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_cursor">
+            
+              <b>update_cursor</b>()
+            
+            <a href="../classes/Window_ShopNumber.html#method-i-update_cursor" name="method-i-update_cursor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>更新光标</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_cursor_source')" id="l_method-i-update_cursor_source">show</a>
+                
+              </p>
+              <div id="method-i-update_cursor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopNumber.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_cursor</span>
+  <span class="ruby-identifier">cursor_rect</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">cursor_x</span>, <span class="ruby-identifier">item_y</span>, <span class="ruby-identifier">cursor_width</span>, <span class="ruby-identifier">line_height</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_number">
+            
+              <b>update_number</b>()
+            
+            <a href="../classes/Window_ShopNumber.html#method-i-update_number" name="method-i-update_number" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>更新数量</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_number_source')" id="l_method-i-update_number_source">show</a>
+                
+              </p>
+              <div id="method-i-update_number_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopNumber.rb, line 131</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_number</span>
+  <span class="ruby-identifier">change_number</span>(<span class="ruby-number">1</span>)   <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-value">:RIGHT</span>)
+  <span class="ruby-identifier">change_number</span>(<span class="ruby-number">-1</span>)  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-value">:LEFT</span>)
+  <span class="ruby-identifier">change_number</span>(<span class="ruby-number">10</span>)  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-value">:UP</span>)
+  <span class="ruby-identifier">change_number</span>(<span class="ruby-number">-10</span>) <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">repeat?</span>(<span class="ruby-value">:DOWN</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-window_width">
+            
+              <b>window_width</b>()
+            
+            <a href="../classes/Window_ShopNumber.html#method-i-window_width" name="method-i-window_width" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取窗口的宽度</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-window_width_source')" id="l_method-i-window_width_source">show</a>
+                
+              </p>
+              <div id="method-i-window_width_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_ShopNumber.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">window_width</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">304</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

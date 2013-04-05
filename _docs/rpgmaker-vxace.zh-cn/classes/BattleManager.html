@@ -1,0 +1,2051 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>BattleManager</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Module</span> 
+            BattleManager 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/BattleManager_rb.html">BattleManager.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>战斗过程的管理器。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-abort">abort</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-aborting-3F">aborting?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-action_forced-3F">action_forced?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-action_forced_battler">action_forced_battler</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-actor">actor</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-battle_end">battle_end</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-battle_start">battle_start</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-can_escape-3F">can_escape?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-clear_action_force">clear_action_force</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-clear_actor">clear_actor</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-display_exp">display_exp</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-event_proc-3D">event_proc=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-force_action">force_action</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-gain_drop_items">gain_drop_items</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-gain_exp">gain_exp</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-gain_gold">gain_gold</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-in_turn-3F">in_turn?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-init_members">init_members</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-input_start">input_start</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>J</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-judge_win_loss">judge_win_loss</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-make_action_orders">make_action_orders</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-make_escape_ratio">make_escape_ratio</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-method_wait_for_message-3D">method_wait_for_message=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-next_command">next_command</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-next_subject">next_subject</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-on_encounter">on_encounter</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-play_battle_bgm">play_battle_bgm</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-play_battle_end_me">play_battle_end_me</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-prior_command">prior_command</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-process_abort">process_abort</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-process_defeat">process_defeat</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-process_escape">process_escape</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-process_victory">process_victory</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-rate_preemptive">rate_preemptive</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-rate_surprise">rate_surprise</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-replay_bgm_and_bgs">replay_bgm_and_bgs</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-revive_battle_members">revive_battle_members</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-save_bgm_and_bgs">save_bgm_and_bgs</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-setup">setup</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-turn_end">turn_end</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-turn_end-3F">turn_end?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-turn_start">turn_start</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-wait_for_message">wait_for_message</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-abort">
+            
+              <b>abort</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-abort" name="method-c-abort" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>中止战斗</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-abort_source')" id="l_method-c-abort_source">show</a>
+                
+              </p>
+              <div id="method-c-abort_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 205</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">abort</span>
+  <span class="ruby-ivar">@phase</span> = <span class="ruby-value">:aborting</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-aborting-3F">
+            
+              <b>aborting?</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-aborting-3F" name="method-c-aborting-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定是否中止战斗</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-aborting-3F_source')" id="l_method-c-aborting-3F_source">show</a>
+                
+              </p>
+              <div id="method-c-aborting-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">aborting?</span>
+  <span class="ruby-ivar">@phase</span> <span class="ruby-operator">==</span> <span class="ruby-value">:aborting</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-action_forced-3F">
+            
+              <b>action_forced?</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-action_forced-3F" name="method-c-action_forced-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取战斗行动的强制状态</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-action_forced-3F_source')" id="l_method-c-action_forced-3F_source">show</a>
+                
+              </p>
+              <div id="method-c-action_forced-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 401</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">action_forced?</span>
+  <span class="ruby-ivar">@action_forced</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-action_forced_battler">
+            
+              <b>action_forced_battler</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-action_forced_battler" name="method-c-action_forced_battler" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取强制行动的战斗者</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-action_forced_battler_source')" id="l_method-c-action_forced_battler_source">show</a>
+                
+              </p>
+              <div id="method-c-action_forced_battler_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 408</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">action_forced_battler</span>
+  <span class="ruby-ivar">@action_forced</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-actor">
+            
+              <b>actor</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-actor" name="method-c-actor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取指令输入中的角色</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-actor_source')" id="l_method-c-actor_source">show</a>
+                
+              </p>
+              <div id="method-c-actor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 126</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">actor</span>
+  <span class="ruby-ivar">@actor_index</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">members</span>[<span class="ruby-ivar">@actor_index</span>] <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-battle_end">
+            
+              <b>battle_end</b>(result)
+            
+            <a href="../classes/BattleManager.html#method-c-battle_end" name="method-c-battle_end" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>战斗结束</p>
+
+<p>result : 结果（0:胜利 1:撤退 2:全灭）</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-battle_end_source')" id="l_method-c-battle_end_source">show</a>
+                
+              </p>
+              <div id="method-c-battle_end_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 296</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">battle_end</span>(<span class="ruby-identifier">result</span>)
+  <span class="ruby-ivar">@phase</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@event_proc</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">result</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@event_proc</span>
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">on_battle_end</span>
+  <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">on_battle_end</span>
+  <span class="ruby-constant">SceneManager</span>.<span class="ruby-identifier">exit</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$BTEST</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-battle_start">
+            
+              <b>battle_start</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-battle_start" name="method-c-battle_start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>战斗开始</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-battle_start_source')" id="l_method-c-battle_start_source">show</a>
+                
+              </p>
+              <div id="method-c-battle_start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 187</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">battle_start</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">battle_count</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">on_battle_start</span>
+  <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">on_battle_start</span>
+  <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">enemy_names</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">sprintf</span>(<span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">Emerge</span>, <span class="ruby-identifier">name</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@preemptive</span>
+    <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">sprintf</span>(<span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">Preemptive</span>, <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">name</span>))
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@surprise</span>
+    <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">sprintf</span>(<span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">Surprise</span>, <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">name</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">wait_for_message</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-can_escape-3F">
+            
+              <b>can_escape?</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-can_escape-3F" name="method-c-can_escape-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取是否允许撤退</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-can_escape-3F_source')" id="l_method-c-can_escape-3F_source">show</a>
+                
+              </p>
+              <div id="method-c-can_escape-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">can_escape?</span>
+  <span class="ruby-ivar">@can_escape</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-clear_action_force">
+            
+              <b>clear_action_force</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-clear_action_force" name="method-c-clear_action_force" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>清除强制的战斗行动</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-clear_action_force_source')" id="l_method-c-clear_action_force_source">show</a>
+                
+              </p>
+              <div id="method-c-clear_action_force_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 415</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">clear_action_force</span>
+  <span class="ruby-ivar">@action_forced</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-clear_actor">
+            
+              <b>clear_actor</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-clear_actor" name="method-c-clear_actor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>清除指令输入中的角色</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-clear_actor_source')" id="l_method-c-clear_actor_source">show</a>
+                
+              </p>
+              <div id="method-c-clear_actor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 133</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">clear_actor</span>
+  <span class="ruby-ivar">@actor_index</span> = <span class="ruby-number">-1</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-display_exp">
+            
+              <b>display_exp</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-display_exp" name="method-c-display_exp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>显示获得的经验值</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-display_exp_source')" id="l_method-c-display_exp_source">show</a>
+                
+              </p>
+              <div id="method-c-display_exp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 339</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">display_exp</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">exp_total</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">text</span> = <span class="ruby-identifier">sprintf</span>(<span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">ObtainExp</span>, <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">exp_total</span>)
+    <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">add</span>(<span class="ruby-string">'\.'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">text</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-event_proc-3D">
+            
+              <b>event_proc=</b>(proc)
+            
+            <a href="../classes/BattleManager.html#method-c-event_proc-3D" name="method-c-event_proc-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>设置返回事件的回调用 Proc</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-event_proc-3D_source')" id="l_method-c-event_proc-3D_source">show</a>
+                
+              </p>
+              <div id="method-c-event_proc-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 166</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">event_proc=</span>(<span class="ruby-identifier">proc</span>)
+  <span class="ruby-ivar">@event_proc</span> = <span class="ruby-identifier">proc</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-force_action">
+            
+              <b>force_action</b>(battler)
+            
+            <a href="../classes/BattleManager.html#method-c-force_action" name="method-c-force_action" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>强制行动</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-force_action_source')" id="l_method-c-force_action_source">show</a>
+                
+              </p>
+              <div id="method-c-force_action_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 393</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">force_action</span>(<span class="ruby-identifier">battler</span>)
+  <span class="ruby-ivar">@action_forced</span> = <span class="ruby-identifier">battler</span>
+  <span class="ruby-ivar">@action_battlers</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">battler</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-gain_drop_items">
+            
+              <b>gain_drop_items</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-gain_drop_items" name="method-c-gain_drop_items" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>显示获得的物品</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-gain_drop_items_source')" id="l_method-c-gain_drop_items_source">show</a>
+                
+              </p>
+              <div id="method-c-gain_drop_items_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 361</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">gain_drop_items</span>
+  <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">make_drop_items</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">gain_item</span>(<span class="ruby-identifier">item</span>, <span class="ruby-number">1</span>)
+    <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">sprintf</span>(<span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">ObtainItem</span>, <span class="ruby-identifier">item</span>.<span class="ruby-identifier">name</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">wait_for_message</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-gain_exp">
+            
+              <b>gain_exp</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-gain_exp" name="method-c-gain_exp" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>显示获得经验值和等级上升</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-gain_exp_source')" id="l_method-c-gain_exp_source">show</a>
+                
+              </p>
+              <div id="method-c-gain_exp_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 372</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">gain_exp</span>
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">all_members</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">actor</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">gain_exp</span>(<span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">exp_total</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">wait_for_message</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-gain_gold">
+            
+              <b>gain_gold</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-gain_gold" name="method-c-gain_gold" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>显示获得的金钱</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-gain_gold_source')" id="l_method-c-gain_gold_source">show</a>
+                
+              </p>
+              <div id="method-c-gain_gold_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 349</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">gain_gold</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">gold_total</span> <span class="ruby-operator">&gt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-identifier">text</span> = <span class="ruby-identifier">sprintf</span>(<span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">ObtainGold</span>, <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">gold_total</span>)
+    <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">add</span>(<span class="ruby-string">'\.'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">text</span>)
+    <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">gain_gold</span>(<span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">gold_total</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">wait_for_message</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-in_turn-3F">
+            
+              <b>in_turn?</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-in_turn-3F" name="method-c-in_turn-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定是否回合执行中</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-in_turn-3F_source')" id="l_method-c-in_turn-3F_source">show</a>
+                
+              </p>
+              <div id="method-c-in_turn-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">in_turn?</span>
+  <span class="ruby-ivar">@phase</span> <span class="ruby-operator">==</span> <span class="ruby-value">:turn</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-init_members">
+            
+              <b>init_members</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-init_members" name="method-c-init_members" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>初始化成员</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-init_members_source')" id="l_method-c-init_members_source">show</a>
+                
+              </p>
+              <div id="method-c-init_members_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">init_members</span>
+  <span class="ruby-ivar">@phase</span> = <span class="ruby-value">:init</span>              <span class="ruby-comment"># 战斗阶段</span>
+  <span class="ruby-ivar">@can_escape</span> = <span class="ruby-keyword">false</span>         <span class="ruby-comment"># 允许撤退的标志</span>
+  <span class="ruby-ivar">@can_lose</span> = <span class="ruby-keyword">false</span>           <span class="ruby-comment"># 允许全灭的标志</span>
+  <span class="ruby-ivar">@event_proc</span> = <span class="ruby-keyword">nil</span>           <span class="ruby-comment"># 事件用回调</span>
+  <span class="ruby-ivar">@preemptive</span> = <span class="ruby-keyword">false</span>         <span class="ruby-comment"># 先制攻击的标志</span>
+  <span class="ruby-ivar">@surprise</span> = <span class="ruby-keyword">false</span>           <span class="ruby-comment"># 被偷袭的标志</span>
+  <span class="ruby-ivar">@actor_index</span> = <span class="ruby-number">-1</span>           <span class="ruby-comment"># 指令输入中的角色</span>
+  <span class="ruby-ivar">@action_forced</span> = <span class="ruby-keyword">nil</span>        <span class="ruby-comment"># 强制的战斗行动</span>
+  <span class="ruby-ivar">@map_bgm</span> = <span class="ruby-keyword">nil</span>              <span class="ruby-comment"># 战斗前的 BGM（记忆用）</span>
+  <span class="ruby-ivar">@map_bgs</span> = <span class="ruby-keyword">nil</span>              <span class="ruby-comment"># 战斗前的 BGS（记忆用）</span>
+  <span class="ruby-ivar">@action_battlers</span> = []       <span class="ruby-comment"># 行动顺序列表</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-input_start">
+            
+              <b>input_start</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-input_start" name="method-c-input_start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>开始输入指令</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-input_start_source')" id="l_method-c-input_start_source">show</a>
+                
+              </p>
+              <div id="method-c-input_start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 307</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">input_start</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@phase</span> <span class="ruby-operator">!=</span> <span class="ruby-value">:input</span>
+    <span class="ruby-ivar">@phase</span> = <span class="ruby-value">:input</span>
+    <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">make_actions</span>
+    <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">make_actions</span>
+    <span class="ruby-identifier">clear_actor</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@surprise</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">inputable?</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-judge_win_loss">
+            
+              <b>judge_win_loss</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-judge_win_loss" name="method-c-judge_win_loss" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定胜败</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-judge_win_loss_source')" id="l_method-c-judge_win_loss_source">show</a>
+                
+              </p>
+              <div id="method-c-judge_win_loss_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 212</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">judge_win_loss</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@phase</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">process_abort</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">members</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">process_defeat</span>  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">all_dead?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">process_victory</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">all_dead?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">process_abort</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">aborting?</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-make_action_orders">
+            
+              <b>make_action_orders</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-make_action_orders" name="method-c-make_action_orders" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>生成行动顺序</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-make_action_orders_source')" id="l_method-c-make_action_orders_source">show</a>
+                
+              </p>
+              <div id="method-c-make_action_orders_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 382</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">make_action_orders</span>
+  <span class="ruby-ivar">@action_battlers</span> = []
+  <span class="ruby-ivar">@action_battlers</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">members</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@surprise</span>
+  <span class="ruby-ivar">@action_battlers</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">members</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@preemptive</span>
+  <span class="ruby-ivar">@action_battlers</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">battler</span><span class="ruby-operator">|</span> <span class="ruby-identifier">battler</span>.<span class="ruby-identifier">make_speed</span> }
+  <span class="ruby-ivar">@action_battlers</span>.<span class="ruby-identifier">sort!</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">speed</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">speed</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-make_escape_ratio">
+            
+              <b>make_escape_ratio</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-make_escape_ratio" name="method-c-make_escape_ratio" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>生成撤退成功率</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-make_escape_ratio_source')" id="l_method-c-make_escape_ratio_source">show</a>
+                
+              </p>
+              <div id="method-c-make_escape_ratio_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">make_escape_ratio</span>
+  <span class="ruby-ivar">@escape_ratio</span> = <span class="ruby-number">1.5</span> <span class="ruby-operator">-</span> <span class="ruby-number">1.0</span> * <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">agi</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">agi</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-method_wait_for_message-3D">
+            
+              <b>method_wait_for_message=</b>(method)
+            
+            <a href="../classes/BattleManager.html#method-c-method_wait_for_message-3D" name="method-c-method_wait_for_message-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>设置等待用方法</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-method_wait_for_message-3D_source')" id="l_method-c-method_wait_for_message-3D_source">show</a>
+                
+              </p>
+              <div id="method-c-method_wait_for_message-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">method_wait_for_message=</span>(<span class="ruby-identifier">method</span>)
+  <span class="ruby-ivar">@method_wait_for_message</span> = <span class="ruby-identifier">method</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-next_command">
+            
+              <b>next_command</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-next_command" name="method-c-next_command" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>进行下一个指令输入</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-next_command_source')" id="l_method-c-next_command_source">show</a>
+                
+              </p>
+              <div id="method-c-next_command_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 140</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">next_command</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">actor</span> <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">actor</span>.<span class="ruby-identifier">next_command</span>
+      <span class="ruby-ivar">@actor_index</span> <span class="ruby-operator">+=</span> <span class="ruby-number">1</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@actor_index</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">members</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span> <span class="ruby-keyword">until</span> <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">inputable?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-next_subject">
+            
+              <b>next_subject</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-next_subject" name="method-c-next_subject" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取下一个行动角色</p>
+
+<p>获取处于行动顺序列表顶端的战斗者。
+没有获取角色时（index 为 nil,
+或者战斗事件在战斗后发生）则跳过此行动。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-next_subject_source')" id="l_method-c-next_subject_source">show</a>
+                
+              </p>
+              <div id="method-c-next_subject_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 424</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">next_subject</span>
+  <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">battler</span> = <span class="ruby-ivar">@action_battlers</span>.<span class="ruby-identifier">shift</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">battler</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">battler</span>.<span class="ruby-identifier">index</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">battler</span>.<span class="ruby-identifier">alive?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">battler</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-on_encounter">
+            
+              <b>on_encounter</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-on_encounter" name="method-c-on_encounter" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>遇敌时的处理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-on_encounter_source')" id="l_method-c-on_encounter_source">show</a>
+                
+              </p>
+              <div id="method-c-on_encounter_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">on_encounter</span>
+  <span class="ruby-ivar">@preemptive</span> = (<span class="ruby-identifier">rand</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">rate_preemptive</span>)
+  <span class="ruby-ivar">@surprise</span> = (<span class="ruby-identifier">rand</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">rate_surprise</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@preemptive</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_battle_bgm">
+            
+              <b>play_battle_bgm</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-play_battle_bgm" name="method-c-play_battle_bgm" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>播放战斗 BGM</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_battle_bgm_source')" id="l_method-c-play_battle_bgm_source">show</a>
+                
+              </p>
+              <div id="method-c-play_battle_bgm_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_battle_bgm</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">battle_bgm</span>.<span class="ruby-identifier">play</span>
+  <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">BGS</span>.<span class="ruby-identifier">stop</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-play_battle_end_me">
+            
+              <b>play_battle_end_me</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-play_battle_end_me" name="method-c-play_battle_end_me" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>播放战斗结束 ME</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-play_battle_end_me_source')" id="l_method-c-play_battle_end_me_source">show</a>
+                
+              </p>
+              <div id="method-c-play_battle_end_me_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">play_battle_end_me</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">battle_end_me</span>.<span class="ruby-identifier">play</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-prior_command">
+            
+              <b>prior_command</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-prior_command" name="method-c-prior_command" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>返回上一个指令输入</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-prior_command_source')" id="l_method-c-prior_command_source">show</a>
+                
+              </p>
+              <div id="method-c-prior_command_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 153</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">prior_command</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">actor</span> <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">actor</span>.<span class="ruby-identifier">prior_command</span>
+      <span class="ruby-ivar">@actor_index</span> <span class="ruby-operator">-=</span> <span class="ruby-number">1</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@actor_index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">0</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span> <span class="ruby-keyword">until</span> <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">inputable?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-process_abort">
+            
+              <b>process_abort</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-process_abort" name="method-c-process_abort" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>中止时的处理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-process_abort_source')" id="l_method-c-process_abort_source">show</a>
+                
+              </p>
+              <div id="method-c-process_abort_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 259</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">process_abort</span>
+  <span class="ruby-identifier">replay_bgm_and_bgs</span>
+  <span class="ruby-constant">SceneManager</span>.<span class="ruby-identifier">return</span>
+  <span class="ruby-identifier">battle_end</span>(<span class="ruby-number">1</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-process_defeat">
+            
+              <b>process_defeat</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-process_defeat" name="method-c-process_defeat" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>全灭时的处理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-process_defeat_source')" id="l_method-c-process_defeat_source">show</a>
+                
+              </p>
+              <div id="method-c-process_defeat_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 269</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">process_defeat</span>
+  <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">sprintf</span>(<span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">Defeat</span>, <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">name</span>))
+  <span class="ruby-identifier">wait_for_message</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@can_lose</span>
+    <span class="ruby-identifier">revive_battle_members</span>
+    <span class="ruby-identifier">replay_bgm_and_bgs</span>
+    <span class="ruby-constant">SceneManager</span>.<span class="ruby-identifier">return</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">SceneManager</span>.<span class="ruby-identifier">goto</span>(<span class="ruby-constant">Scene_Gameover</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">battle_end</span>(<span class="ruby-number">2</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-process_escape">
+            
+              <b>process_escape</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-process_escape" name="method-c-process_escape" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>撤退时的处理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-process_escape_source')" id="l_method-c-process_escape_source">show</a>
+                
+              </p>
+              <div id="method-c-process_escape_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 241</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">process_escape</span>
+  <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">sprintf</span>(<span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">EscapeStart</span>, <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">name</span>))
+  <span class="ruby-identifier">success</span> = <span class="ruby-ivar">@preemptive</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">true</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">rand</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@escape_ratio</span>)
+  <span class="ruby-constant">Sound</span>.<span class="ruby-identifier">play_escape</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">success</span>
+    <span class="ruby-identifier">process_abort</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@escape_ratio</span> <span class="ruby-operator">+=</span> <span class="ruby-number">0.1</span>
+    <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">add</span>(<span class="ruby-string">'\.'</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">EscapeFailure</span>)
+    <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">clear_actions</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">wait_for_message</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">success</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-process_victory">
+            
+              <b>process_victory</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-process_victory" name="method-c-process_victory" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>胜利时的处理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-process_victory_source')" id="l_method-c-process_victory_source">show</a>
+                
+              </p>
+              <div id="method-c-process_victory_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 225</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">process_victory</span>
+  <span class="ruby-identifier">play_battle_end_me</span>
+  <span class="ruby-identifier">replay_bgm_and_bgs</span>
+  <span class="ruby-identifier">$game_message</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">sprintf</span>(<span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">Victory</span>, <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">name</span>))
+  <span class="ruby-identifier">display_exp</span>
+  <span class="ruby-identifier">gain_gold</span>
+  <span class="ruby-identifier">gain_drop_items</span>
+  <span class="ruby-identifier">gain_exp</span>
+  <span class="ruby-constant">SceneManager</span>.<span class="ruby-identifier">return</span>
+  <span class="ruby-identifier">battle_end</span>(<span class="ruby-number">0</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-rate_preemptive">
+            
+              <b>rate_preemptive</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-rate_preemptive" name="method-c-rate_preemptive" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取先制攻击的几率</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-rate_preemptive_source')" id="l_method-c-rate_preemptive_source">show</a>
+                
+              </p>
+              <div id="method-c-rate_preemptive_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">rate_preemptive</span>
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">rate_preemptive</span>(<span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">agi</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-rate_surprise">
+            
+              <b>rate_surprise</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-rate_surprise" name="method-c-rate_surprise" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取被偷袭的几率</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-rate_surprise_source')" id="l_method-c-rate_surprise_source">show</a>
+                
+              </p>
+              <div id="method-c-rate_surprise_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">rate_surprise</span>
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">rate_surprise</span>(<span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">agi</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-replay_bgm_and_bgs">
+            
+              <b>replay_bgm_and_bgs</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-replay_bgm_and_bgs" name="method-c-replay_bgm_and_bgs" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>重播 BGM 和 BGS</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-replay_bgm_and_bgs_source')" id="l_method-c-replay_bgm_and_bgs_source">show</a>
+                
+              </p>
+              <div id="method-c-replay_bgm_and_bgs_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">replay_bgm_and_bgs</span>
+  <span class="ruby-ivar">@map_bgm</span>.<span class="ruby-identifier">replay</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">$BTEST</span>
+  <span class="ruby-ivar">@map_bgs</span>.<span class="ruby-identifier">replay</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">$BTEST</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-revive_battle_members">
+            
+              <b>revive_battle_members</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-revive_battle_members" name="method-c-revive_battle_members" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>复活参战角色（全灭时）</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-revive_battle_members_source')" id="l_method-c-revive_battle_members_source">show</a>
+                
+              </p>
+              <div id="method-c-revive_battle_members_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 286</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">revive_battle_members</span>
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">battle_members</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">actor</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">hp</span> = <span class="ruby-number">1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">actor</span>.<span class="ruby-identifier">dead?</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-save_bgm_and_bgs">
+            
+              <b>save_bgm_and_bgs</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-save_bgm_and_bgs" name="method-c-save_bgm_and_bgs" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>保存 BGM 和 BGS</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-save_bgm_and_bgs_source')" id="l_method-c-save_bgm_and_bgs_source">show</a>
+                
+              </p>
+              <div id="method-c-save_bgm_and_bgs_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">save_bgm_and_bgs</span>
+  <span class="ruby-ivar">@map_bgm</span> = <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">BGM</span>.<span class="ruby-identifier">last</span>
+  <span class="ruby-ivar">@map_bgs</span> = <span class="ruby-constant">RPG</span><span class="ruby-operator">::</span><span class="ruby-constant">BGS</span>.<span class="ruby-identifier">last</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-setup">
+            
+              <b>setup</b>(troop_id, can_escape = true, can_lose = false)
+            
+            <a href="../classes/BattleManager.html#method-c-setup" name="method-c-setup" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>设置</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-setup_source')" id="l_method-c-setup_source">show</a>
+                
+              </p>
+              <div id="method-c-setup_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">setup</span>(<span class="ruby-identifier">troop_id</span>, <span class="ruby-identifier">can_escape</span> = <span class="ruby-keyword">true</span>, <span class="ruby-identifier">can_lose</span> = <span class="ruby-keyword">false</span>)
+  <span class="ruby-identifier">init_members</span>
+  <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">setup</span>(<span class="ruby-identifier">troop_id</span>)
+  <span class="ruby-ivar">@can_escape</span> = <span class="ruby-identifier">can_escape</span>
+  <span class="ruby-ivar">@can_lose</span> = <span class="ruby-identifier">can_lose</span>
+  <span class="ruby-identifier">make_escape_ratio</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-turn_end">
+            
+              <b>turn_end</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-turn_end" name="method-c-turn_end" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>回合结束</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-turn_end_source')" id="l_method-c-turn_end_source">show</a>
+                
+              </p>
+              <div id="method-c-turn_end_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 330</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">turn_end</span>
+  <span class="ruby-ivar">@phase</span> = <span class="ruby-value">:turn_end</span>
+  <span class="ruby-ivar">@preemptive</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@surprise</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-turn_end-3F">
+            
+              <b>turn_end?</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-turn_end-3F" name="method-c-turn_end-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定是否回合结束</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-turn_end-3F_source')" id="l_method-c-turn_end-3F_source">show</a>
+                
+              </p>
+              <div id="method-c-turn_end-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 105</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">turn_end?</span>
+  <span class="ruby-ivar">@phase</span> <span class="ruby-operator">==</span> <span class="ruby-value">:turn_end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-turn_start">
+            
+              <b>turn_start</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-turn_start" name="method-c-turn_start" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>回合开始</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-turn_start_source')" id="l_method-c-turn_start_source">show</a>
+                
+              </p>
+              <div id="method-c-turn_start_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 320</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">turn_start</span>
+  <span class="ruby-ivar">@phase</span> = <span class="ruby-value">:turn</span>
+  <span class="ruby-identifier">clear_actor</span>
+  <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">increase_turn</span>
+  <span class="ruby-identifier">make_action_orders</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-wait_for_message">
+            
+              <b>wait_for_message</b>()
+            
+            <a href="../classes/BattleManager.html#method-c-wait_for_message" name="method-c-wait_for_message" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>等待信息显示的结束</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-wait_for_message_source')" id="l_method-c-wait_for_message_source">show</a>
+                
+              </p>
+              <div id="method-c-wait_for_message_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File BattleManager.rb, line 180</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">wait_for_message</span>
+  <span class="ruby-ivar">@method_wait_for_message</span>.<span class="ruby-identifier">call</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@method_wait_for_message</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                        </div>
+
+    </div>
+  </body>
+</html>    

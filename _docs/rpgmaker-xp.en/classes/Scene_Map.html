@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Scene_Map</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Scene_Map 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Scene_Map_rb.html">Scene_Map.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This class performs map screen processing.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-call_battle">call_battle</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-call_debug">call_debug</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-call_menu">call_menu</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-call_name">call_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-call_save">call_save</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-call_shop">call_shop</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-main">main</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-transfer_player">transfer_player</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+        
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-call_battle">
+            
+              <b>call_battle</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-call_battle" name="method-i-call_battle" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Battle Call</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_battle_source')" id="l_method-i-call_battle_source">show</a>
+                
+              </p>
+              <div id="method-i-call_battle_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_battle</span>
+  <span class="ruby-comment"># Clear battle calling flag</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">battle_calling</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-comment"># Clear menu calling flag</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">menu_calling</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">menu_beep</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-comment"># Make encounter count</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">make_encounter_count</span>
+  <span class="ruby-comment"># Memorize map BGM and stop BGM</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">map_bgm</span> = <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">playing_bgm</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">bgm_stop</span>
+  <span class="ruby-comment"># Play battle start SE</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">battle_start_se</span>)
+  <span class="ruby-comment"># Play battle BGM</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">bgm_play</span>(<span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">battle_bgm</span>)
+  <span class="ruby-comment"># Straighten player position</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">straighten</span>
+  <span class="ruby-comment"># Switch to battle screen</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Battle</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-call_debug">
+            
+              <b>call_debug</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-call_debug" name="method-i-call_debug" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Debug Call</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_debug_source')" id="l_method-i-call_debug_source">show</a>
+                
+              </p>
+              <div id="method-i-call_debug_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 236</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_debug</span>
+  <span class="ruby-comment"># Clear debug call flag</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">debug_calling</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-comment"># Play decision SE</span>
+  <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">decision_se</span>)
+  <span class="ruby-comment"># Straighten player position</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">straighten</span>
+  <span class="ruby-comment"># Switch to debug screen</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Debug</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-call_menu">
+            
+              <b>call_menu</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-call_menu" name="method-i-call_menu" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Menu Call</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_menu_source')" id="l_method-i-call_menu_source">show</a>
+                
+              </p>
+              <div id="method-i-call_menu_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 207</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_menu</span>
+  <span class="ruby-comment"># Clear menu call flag</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">menu_calling</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-comment"># If menu beep flag is set</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">menu_beep</span>
+    <span class="ruby-comment"># Play decision SE</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">se_play</span>(<span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">decision_se</span>)
+    <span class="ruby-comment"># Clear menu beep flag</span>
+    <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">menu_beep</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Straighten player position</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">straighten</span>
+  <span class="ruby-comment"># Switch to menu screen</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Menu</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-call_name">
+            
+              <b>call_name</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-call_name" name="method-i-call_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Name Input Call</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_name_source')" id="l_method-i-call_name_source">show</a>
+                
+              </p>
+              <div id="method-i-call_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 195</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_name</span>
+  <span class="ruby-comment"># Clear name input call flag</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">name_calling</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-comment"># Straighten player position</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">straighten</span>
+  <span class="ruby-comment"># Switch to name input screen</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Name</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-call_save">
+            
+              <b>call_save</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-call_save" name="method-i-call_save" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Save Call</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_save_source')" id="l_method-i-call_save_source">show</a>
+                
+              </p>
+              <div id="method-i-call_save_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 226</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_save</span>
+  <span class="ruby-comment"># Straighten player position</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">straighten</span>
+  <span class="ruby-comment"># Switch to save screen</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Save</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-call_shop">
+            
+              <b>call_shop</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-call_shop" name="method-i-call_shop" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Shop Call</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-call_shop_source')" id="l_method-i-call_shop_source">show</a>
+                
+              </p>
+              <div id="method-i-call_shop_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 183</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">call_shop</span>
+  <span class="ruby-comment"># Clear shop call flag</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">shop_calling</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-comment"># Straighten player position</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">straighten</span>
+  <span class="ruby-comment"># Switch to shop screen</span>
+  <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Shop</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-main">
+            
+              <b>main</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-main" name="method-i-main" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Main Processing</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-main_source')" id="l_method-i-main_source">show</a>
+                
+              </p>
+              <div id="method-i-main_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">main</span>
+  <span class="ruby-comment"># Make sprite set</span>
+  <span class="ruby-ivar">@spriteset</span> = <span class="ruby-constant">Spriteset_Map</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-comment"># Make message window</span>
+  <span class="ruby-ivar">@message_window</span> = <span class="ruby-constant">Window_Message</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-comment"># Transition run</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">transition</span>
+  <span class="ruby-comment"># Main loop</span>
+  <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-comment"># Update game screen</span>
+    <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># Update input information</span>
+    <span class="ruby-constant">Input</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># Frame update</span>
+    <span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># Abort loop if screen is changed</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$scene</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">self</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Prepare for transition</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">freeze</span>
+  <span class="ruby-comment"># Dispose of sprite set</span>
+  <span class="ruby-ivar">@spriteset</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-comment"># Dispose of message window</span>
+  <span class="ruby-ivar">@message_window</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-comment"># If switching to title screen</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$scene</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Scene_Title</span>)
+    <span class="ruby-comment"># Fade out screen</span>
+    <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">transition</span>
+    <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">freeze</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-transfer_player">
+            
+              <b>transfer_player</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-transfer_player" name="method-i-transfer_player" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Player Place Move</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-transfer_player_source')" id="l_method-i-transfer_player_source">show</a>
+                
+              </p>
+              <div id="method-i-transfer_player_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 250</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">transfer_player</span>
+  <span class="ruby-comment"># Clear player place move call flag</span>
+  <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">player_transferring</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-comment"># If move destination is different than current map</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">map_id</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">player_new_map_id</span>
+    <span class="ruby-comment"># Set up a new map</span>
+    <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">setup</span>(<span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">player_new_map_id</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Set up player position</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">moveto</span>(<span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">player_new_x</span>, <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">player_new_y</span>)
+  <span class="ruby-comment"># Set player direction</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">player_new_direction</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">2</span>  <span class="ruby-comment"># down</span>
+    <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">turn_down</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">4</span>  <span class="ruby-comment"># left</span>
+    <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">turn_left</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">6</span>  <span class="ruby-comment"># right</span>
+    <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">turn_right</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">8</span>  <span class="ruby-comment"># up</span>
+    <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">turn_up</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Straighten player position</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">straighten</span>
+  <span class="ruby-comment"># Update map (run parallel process event)</span>
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-comment"># Remake sprite set</span>
+  <span class="ruby-ivar">@spriteset</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@spriteset</span> = <span class="ruby-constant">Spriteset_Map</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-comment"># If processing transition</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">transition_processing</span>
+    <span class="ruby-comment"># Clear transition processing flag</span>
+    <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">transition_processing</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-comment"># Execute transition</span>
+    <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">transition</span>(<span class="ruby-number">20</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Run automatic change for BGM and BGS set on the map</span>
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">autoplay</span>
+  <span class="ruby-comment"># Frame reset</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">frame_reset</span>
+  <span class="ruby-comment"># Update input information</span>
+  <span class="ruby-constant">Input</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Scene_Map.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Frame Update</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Scene_Map.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-comment"># Loop</span>
+  <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-comment"># Update map, interpreter, and player order</span>
+    <span class="ruby-comment"># (this update order is important for when conditions are fulfilled </span>
+    <span class="ruby-comment"># to run any event, and the player isn't provided the opportunity to</span>
+    <span class="ruby-comment"># move in an instant)</span>
+    <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">map_interpreter</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># Update system (timer), screen</span>
+    <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-identifier">$game_screen</span>.<span class="ruby-identifier">update</span>
+    <span class="ruby-comment"># Abort loop if player isn't place moving</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">player_transferring</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># Run place move</span>
+    <span class="ruby-identifier">transfer_player</span>
+    <span class="ruby-comment"># Abort loop if transition processing</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">transition_processing</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Update sprite set</span>
+  <span class="ruby-ivar">@spriteset</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-comment"># Update message window</span>
+  <span class="ruby-ivar">@message_window</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-comment"># If game over</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">gameover</span>
+    <span class="ruby-comment"># Switch to game over screen</span>
+    <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Gameover</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If returning to title screen</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">to_title</span>
+    <span class="ruby-comment"># Change to title screen</span>
+    <span class="ruby-identifier">$scene</span> = <span class="ruby-constant">Scene_Title</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If transition processing</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">transition_processing</span>
+    <span class="ruby-comment"># Clear transition processing flag</span>
+    <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">transition_processing</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-comment"># Execute transition</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">transition_name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;&quot;</span>
+      <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">transition</span>(<span class="ruby-number">20</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">transition</span>(<span class="ruby-number">40</span>, <span class="ruby-string">&quot;Graphics/Transitions/&quot;</span> <span class="ruby-operator">+</span>
+        <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">transition_name</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If showing message window</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">message_window_showing</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If encounter list isn't empty, and encounter count is 0</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">encounter_count</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">encounter_list</span> <span class="ruby-operator">!=</span> []
+    <span class="ruby-comment"># If event is running or encounter is not forbidden</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">map_interpreter</span>.<span class="ruby-identifier">running?</span> <span class="ruby-keyword">or</span>
+           <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">encounter_disabled</span>
+      <span class="ruby-comment"># Confirm troop</span>
+      <span class="ruby-identifier">n</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">encounter_list</span>.<span class="ruby-identifier">size</span>)
+      <span class="ruby-identifier">troop_id</span> = <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">encounter_list</span>[<span class="ruby-identifier">n</span>]
+      <span class="ruby-comment"># If troop is valid</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">$data_troops</span>[<span class="ruby-identifier">troop_id</span>] <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-comment"># Set battle calling flag</span>
+        <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">battle_calling</span> = <span class="ruby-keyword">true</span>
+        <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">battle_troop_id</span> = <span class="ruby-identifier">troop_id</span>
+        <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">battle_can_escape</span> = <span class="ruby-keyword">true</span>
+        <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">battle_can_lose</span> = <span class="ruby-keyword">false</span>
+        <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">battle_proc</span> = <span class="ruby-keyword">nil</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If B button was pressed</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">trigger?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">B</span>)
+    <span class="ruby-comment"># If event is running, or menu is not forbidden</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">map_interpreter</span>.<span class="ruby-identifier">running?</span> <span class="ruby-keyword">or</span>
+           <span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">menu_disabled</span>
+      <span class="ruby-comment"># Set menu calling flag or beep flag</span>
+      <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">menu_calling</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">menu_beep</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If debug mode is ON and F9 key was pressed</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$DEBUG</span> <span class="ruby-keyword">and</span> <span class="ruby-constant">Input</span>.<span class="ruby-identifier">press?</span>(<span class="ruby-constant">Input</span><span class="ruby-operator">::</span><span class="ruby-constant">F9</span>)
+    <span class="ruby-comment"># Set debug calling flag</span>
+    <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">debug_calling</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If player is not moving</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">moving?</span>
+    <span class="ruby-comment"># Run calling of each screen</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">battle_calling</span>
+      <span class="ruby-identifier">call_battle</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">shop_calling</span>
+      <span class="ruby-identifier">call_shop</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">name_calling</span>
+      <span class="ruby-identifier">call_name</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">menu_calling</span>
+      <span class="ruby-identifier">call_menu</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">save_calling</span>
+      <span class="ruby-identifier">call_save</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">$game_temp</span>.<span class="ruby-identifier">debug_calling</span>
+      <span class="ruby-identifier">call_debug</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

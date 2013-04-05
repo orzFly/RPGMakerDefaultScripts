@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Window_MenuStatus</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Window_MenuStatus 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Window_Selectable.html">Window_Selectable</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Window_MenuStatus_rb.html">Window_MenuStatus.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>選單畫面中，顯示隊伍成員狀態的視窗</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-draw_item">draw_item</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-draw_item_background">draw_item_background</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-item_height">item_height</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-item_max">item_max</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-pending_index-3D">pending_index=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-process_ok">process_ok</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-select_last">select_last</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-window_height">window_height</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-window_width">window_width</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>pending_index</td>
+            <td class='attr-desc'><p>定義案例變量</p></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>(x, y)
+            
+            <a href="../classes/Window_MenuStatus.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>初始化物件</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuStatus.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">window_width</span>, <span class="ruby-identifier">window_height</span>)
+  <span class="ruby-ivar">@pending_index</span> = <span class="ruby-number">-1</span>
+  <span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-draw_item">
+            
+              <b>draw_item</b>(index)
+            
+            <a href="../classes/Window_MenuStatus.html#method-i-draw_item" name="method-i-draw_item" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>繪制專案</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-draw_item_source')" id="l_method-i-draw_item_source">show</a>
+                
+              </p>
+              <div id="method-i-draw_item_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuStatus.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">draw_item</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">actor</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">members</span>[<span class="ruby-identifier">index</span>]
+  <span class="ruby-identifier">enabled</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">battle_members</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">actor</span>)
+  <span class="ruby-identifier">rect</span> = <span class="ruby-identifier">item_rect</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">draw_item_background</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">draw_actor_face</span>(<span class="ruby-identifier">actor</span>, <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span>, <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> <span class="ruby-number">1</span>, <span class="ruby-identifier">enabled</span>)
+  <span class="ruby-identifier">draw_actor_simple_status</span>(<span class="ruby-identifier">actor</span>, <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-number">108</span>, <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">line_height</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-draw_item_background">
+            
+              <b>draw_item_background</b>(index)
+            
+            <a href="../classes/Window_MenuStatus.html#method-i-draw_item_background" name="method-i-draw_item_background" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>繪制專案的背景</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-draw_item_background_source')" id="l_method-i-draw_item_background_source">show</a>
+                
+              </p>
+              <div id="method-i-draw_item_background_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuStatus.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">draw_item_background</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@pending_index</span>
+    <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">fill_rect</span>(<span class="ruby-identifier">item_rect</span>(<span class="ruby-identifier">index</span>), <span class="ruby-identifier">pending_color</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-item_height">
+            
+              <b>item_height</b>()
+            
+            <a href="../classes/Window_MenuStatus.html#method-i-item_height" name="method-i-item_height" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>取得專案的高度</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-item_height_source')" id="l_method-i-item_height_source">show</a>
+                
+              </p>
+              <div id="method-i-item_height_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuStatus.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">item_height</span>
+  (<span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">standard_padding</span> * <span class="ruby-number">2</span>) <span class="ruby-operator">/</span> <span class="ruby-number">4</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-item_max">
+            
+              <b>item_max</b>()
+            
+            <a href="../classes/Window_MenuStatus.html#method-i-item_max" name="method-i-item_max" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>取得專案數</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-item_max_source')" id="l_method-i-item_max_source">show</a>
+                
+              </p>
+              <div id="method-i-item_max_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuStatus.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">item_max</span>
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">members</span>.<span class="ruby-identifier">size</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-pending_index-3D">
+            
+              <b>pending_index=</b>(index)
+            
+            <a href="../classes/Window_MenuStatus.html#method-i-pending_index-3D" name="method-i-pending_index-3D" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>設定保留位置（整隊用）</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-pending_index-3D_source')" id="l_method-i-pending_index-3D_source">show</a>
+                
+              </p>
+              <div id="method-i-pending_index-3D_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuStatus.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">pending_index=</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">last_pending_index</span> = <span class="ruby-ivar">@pending_index</span>
+  <span class="ruby-ivar">@pending_index</span> = <span class="ruby-identifier">index</span>
+  <span class="ruby-identifier">redraw_item</span>(<span class="ruby-ivar">@pending_index</span>)
+  <span class="ruby-identifier">redraw_item</span>(<span class="ruby-identifier">last_pending_index</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-process_ok">
+            
+              <b>process_ok</b>()
+            
+            <a href="../classes/Window_MenuStatus.html#method-i-process_ok" name="method-i-process_ok" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>按下確定鍵時的處理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-process_ok_source')" id="l_method-i-process_ok_source">show</a>
+                
+              </p>
+              <div id="method-i-process_ok_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuStatus.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">process_ok</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">menu_actor</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">members</span>[<span class="ruby-identifier">index</span>]
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-select_last">
+            
+              <b>select_last</b>()
+            
+            <a href="../classes/Window_MenuStatus.html#method-i-select_last" name="method-i-select_last" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>返回上一個選擇的位置</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-select_last_source')" id="l_method-i-select_last_source">show</a>
+                
+              </p>
+              <div id="method-i-select_last_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuStatus.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">select_last</span>
+  <span class="ruby-identifier">select</span>(<span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">menu_actor</span>.<span class="ruby-identifier">index</span> <span class="ruby-operator">||</span> <span class="ruby-number">0</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-window_height">
+            
+              <b>window_height</b>()
+            
+            <a href="../classes/Window_MenuStatus.html#method-i-window_height" name="method-i-window_height" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>取得視窗的高度</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-window_height_source')" id="l_method-i-window_height_source">show</a>
+                
+              </p>
+              <div id="method-i-window_height_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuStatus.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">window_height</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">height</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-window_width">
+            
+              <b>window_width</b>()
+            
+            <a href="../classes/Window_MenuStatus.html#method-i-window_width" name="method-i-window_width" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>取得視窗的寬度</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-window_width_source')" id="l_method-i-window_width_source">show</a>
+                
+              </p>
+              <div id="method-i-window_width_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuStatus.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">window_width</span>
+  <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-number">160</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

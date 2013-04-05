@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Window_MenuCommand</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Window_MenuCommand 
+            
+                <span class="parent">&lt; 
+                    
+                    <a href="Window_Command.html">Window_Command</a>
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Window_MenuCommand_rb.html">Window_MenuCommand.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>選單畫面中顯示指令的視窗</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-add_formation_command">add_formation_command</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_game_end_command">add_game_end_command</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_main_commands">add_main_commands</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_original_commands">add_original_commands</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_save_command">add_save_command</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-formation_enabled">formation_enabled</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-init_command_position">init_command_position</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-main_commands_enabled">main_commands_enabled</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-make_command_list">make_command_list</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-process_ok">process_ok</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-save_enabled">save_enabled</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-select_last">select_last</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-visible_line_number">visible_line_number</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-window_width">window_width</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-init_command_position">
+            
+              <b>init_command_position</b>()
+            
+            <a href="../classes/Window_MenuCommand.html#method-c-init_command_position" name="method-c-init_command_position" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>初始化指令選擇位置（類方法）</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-init_command_position_source')" id="l_method-c-init_command_position_source">show</a>
+                
+              </p>
+              <div id="method-c-init_command_position_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuCommand.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">self</span>.<span class="ruby-identifier">init_command_position</span>
+  <span class="ruby-identifier">@@last_command_symbol</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Window_MenuCommand.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>初始化物件</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuCommand.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-keyword">super</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>)
+  <span class="ruby-identifier">select_last</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-add_formation_command">
+            
+              <b>add_formation_command</b>()
+            
+            <a href="../classes/Window_MenuCommand.html#method-i-add_formation_command" name="method-i-add_formation_command" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>加入整隊指令</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_formation_command_source')" id="l_method-i-add_formation_command_source">show</a>
+                
+              </p>
+              <div id="method-i-add_formation_command_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuCommand.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_formation_command</span>
+  <span class="ruby-identifier">add_command</span>(<span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-identifier">formation</span>, <span class="ruby-value">:formation</span>, <span class="ruby-identifier">formation_enabled</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add_game_end_command">
+            
+              <b>add_game_end_command</b>()
+            
+            <a href="../classes/Window_MenuCommand.html#method-i-add_game_end_command" name="method-i-add_game_end_command" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>加入游戲結束指令</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_game_end_command_source')" id="l_method-i-add_game_end_command_source">show</a>
+                
+              </p>
+              <div id="method-i-add_game_end_command_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuCommand.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_game_end_command</span>
+  <span class="ruby-identifier">add_command</span>(<span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-identifier">game_end</span>, <span class="ruby-value">:game_end</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add_main_commands">
+            
+              <b>add_main_commands</b>()
+            
+            <a href="../classes/Window_MenuCommand.html#method-i-add_main_commands" name="method-i-add_main_commands" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>向指令清單加入主要的指令</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_main_commands_source')" id="l_method-i-add_main_commands_source">show</a>
+                
+              </p>
+              <div id="method-i-add_main_commands_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuCommand.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_main_commands</span>
+  <span class="ruby-identifier">add_command</span>(<span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-identifier">item</span>,   <span class="ruby-value">:item</span>,   <span class="ruby-identifier">main_commands_enabled</span>)
+  <span class="ruby-identifier">add_command</span>(<span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-identifier">skill</span>,  <span class="ruby-value">:skill</span>,  <span class="ruby-identifier">main_commands_enabled</span>)
+  <span class="ruby-identifier">add_command</span>(<span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-identifier">equip</span>,  <span class="ruby-value">:equip</span>,  <span class="ruby-identifier">main_commands_enabled</span>)
+  <span class="ruby-identifier">add_command</span>(<span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-identifier">status</span>, <span class="ruby-value">:status</span>, <span class="ruby-identifier">main_commands_enabled</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add_original_commands">
+            
+              <b>add_original_commands</b>()
+            
+            <a href="../classes/Window_MenuCommand.html#method-i-add_original_commands" name="method-i-add_original_commands" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>獨自加入指令用</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_original_commands_source')" id="l_method-i-add_original_commands_source">show</a>
+                
+              </p>
+              <div id="method-i-add_original_commands_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuCommand.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_original_commands</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-add_save_command">
+            
+              <b>add_save_command</b>()
+            
+            <a href="../classes/Window_MenuCommand.html#method-i-add_save_command" name="method-i-add_save_command" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>加入存檔指令</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-add_save_command_source')" id="l_method-i-add_save_command_source">show</a>
+                
+              </p>
+              <div id="method-i-add_save_command_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuCommand.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">add_save_command</span>
+  <span class="ruby-identifier">add_command</span>(<span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-identifier">save</span>, <span class="ruby-value">:save</span>, <span class="ruby-identifier">save_enabled</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-formation_enabled">
+            
+              <b>formation_enabled</b>()
+            
+            <a href="../classes/Window_MenuCommand.html#method-i-formation_enabled" name="method-i-formation_enabled" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>取得整隊的有效狀態</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-formation_enabled_source')" id="l_method-i-formation_enabled_source">show</a>
+                
+              </p>
+              <div id="method-i-formation_enabled_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuCommand.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">formation_enabled</span>
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">members</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-number">2</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">formation_disabled</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-main_commands_enabled">
+            
+              <b>main_commands_enabled</b>()
+            
+            <a href="../classes/Window_MenuCommand.html#method-i-main_commands_enabled" name="method-i-main_commands_enabled" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>取得主要指令的有效狀態</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-main_commands_enabled_source')" id="l_method-i-main_commands_enabled_source">show</a>
+                
+              </p>
+              <div id="method-i-main_commands_enabled_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuCommand.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">main_commands_enabled</span>
+  <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">exists</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-make_command_list">
+            
+              <b>make_command_list</b>()
+            
+            <a href="../classes/Window_MenuCommand.html#method-i-make_command_list" name="method-i-make_command_list" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>生成指令清單</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-make_command_list_source')" id="l_method-i-make_command_list_source">show</a>
+                
+              </p>
+              <div id="method-i-make_command_list_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuCommand.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">make_command_list</span>
+  <span class="ruby-identifier">add_main_commands</span>
+  <span class="ruby-identifier">add_formation_command</span>
+  <span class="ruby-identifier">add_original_commands</span>
+  <span class="ruby-identifier">add_save_command</span>
+  <span class="ruby-identifier">add_game_end_command</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-process_ok">
+            
+              <b>process_ok</b>()
+            
+            <a href="../classes/Window_MenuCommand.html#method-i-process_ok" name="method-i-process_ok" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>按下確定鍵時的處理</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-process_ok_source')" id="l_method-i-process_ok_source">show</a>
+                
+              </p>
+              <div id="method-i-process_ok_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuCommand.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">process_ok</span>
+  <span class="ruby-identifier">@@last_command_symbol</span> = <span class="ruby-identifier">current_symbol</span>
+  <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-save_enabled">
+            
+              <b>save_enabled</b>()
+            
+            <a href="../classes/Window_MenuCommand.html#method-i-save_enabled" name="method-i-save_enabled" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>取得存檔的有效狀態</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-save_enabled_source')" id="l_method-i-save_enabled_source">show</a>
+                
+              </p>
+              <div id="method-i-save_enabled_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuCommand.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">save_enabled</span>
+  <span class="ruby-operator">!</span><span class="ruby-identifier">$game_system</span>.<span class="ruby-identifier">save_disabled</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-select_last">
+            
+              <b>select_last</b>()
+            
+            <a href="../classes/Window_MenuCommand.html#method-i-select_last" name="method-i-select_last" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>返回最後一個選項的位置</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-select_last_source')" id="l_method-i-select_last_source">show</a>
+                
+              </p>
+              <div id="method-i-select_last_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuCommand.rb, line 116</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">select_last</span>
+  <span class="ruby-identifier">select_symbol</span>(<span class="ruby-identifier">@@last_command_symbol</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-visible_line_number">
+            
+              <b>visible_line_number</b>()
+            
+            <a href="../classes/Window_MenuCommand.html#method-i-visible_line_number" name="method-i-visible_line_number" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>取得顯示行數</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-visible_line_number_source')" id="l_method-i-visible_line_number_source">show</a>
+                
+              </p>
+              <div id="method-i-visible_line_number_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuCommand.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">visible_line_number</span>
+  <span class="ruby-identifier">item_max</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-window_width">
+            
+              <b>window_width</b>()
+            
+            <a href="../classes/Window_MenuCommand.html#method-i-window_width" name="method-i-window_width" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>取得視窗的寬度</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-window_width_source')" id="l_method-i-window_width_source">show</a>
+                
+              </p>
+              <div id="method-i-window_width_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Window_MenuCommand.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">window_width</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-number">160</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

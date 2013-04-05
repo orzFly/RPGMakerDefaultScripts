@@ -1,0 +1,2039 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Spriteset_Battle</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Spriteset_Battle 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Spriteset_Battle_rb.html">Spriteset_Battle.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>处理战斗画面的精灵的类。本类在 <a
+href="Scene_Battle.html">Scene_Battle</a> 类的内部使用。</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-animation-3F">animation?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-autotile_type">autotile_type</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-battleback1_bitmap">battleback1_bitmap</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-battleback1_name">battleback1_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-battleback2_bitmap">battleback2_bitmap</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-battleback2_name">battleback2_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-battler_sprites">battler_sprites</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-center_sprite">center_sprite</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_actors">create_actors</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_battleback1">create_battleback1</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_battleback2">create_battleback2</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_blurry_background_bitmap">create_blurry_background_bitmap</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_enemies">create_enemies</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_pictures">create_pictures</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_timer">create_timer</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_viewports">create_viewports</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-default_battleback1_name">default_battleback1_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-default_battleback2_name">default_battleback2_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose">dispose</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_actors">dispose_actors</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_battleback1">dispose_battleback1</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_battleback2">dispose_battleback2</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_enemies">dispose_enemies</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_pictures">dispose_pictures</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_timer">dispose_timer</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-dispose_viewports">dispose_viewports</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-effect-3F">effect?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-normal_battleback1_name">normal_battleback1_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-normal_battleback2_name">normal_battleback2_name</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-overworld_battleback1_name">overworld_battleback1_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-overworld_battleback2_name">overworld_battleback2_name</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-ship_battleback1_name">ship_battleback1_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-ship_battleback2_name">ship_battleback2_name</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-terrain_battleback1_name">terrain_battleback1_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-terrain_battleback2_name">terrain_battleback2_name</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_actors">update_actors</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_battleback1">update_battleback1</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_battleback2">update_battleback2</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_enemies">update_enemies</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_pictures">update_pictures</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_timer">update_timer</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_viewports">update_viewports</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>初始化对象</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-identifier">create_viewports</span>
+  <span class="ruby-identifier">create_battleback1</span>
+  <span class="ruby-identifier">create_battleback2</span>
+  <span class="ruby-identifier">create_enemies</span>
+  <span class="ruby-identifier">create_actors</span>
+  <span class="ruby-identifier">create_pictures</span>
+  <span class="ruby-identifier">create_timer</span>
+  <span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-animation-3F">
+            
+              <b>animation?</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-animation-3F" name="method-i-animation-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定是否动画显示中</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-animation-3F_source')" id="l_method-i-animation-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-animation-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 418</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">animation?</span>
+  <span class="ruby-identifier">battler_sprites</span>.<span class="ruby-identifier">any?</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">sprite</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">animation?</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-autotile_type">
+            
+              <b>autotile_type</b>(z)
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-autotile_type" name="method-i-autotile_type" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取角色脚下的自动原件的种类</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-autotile_type_source')" id="l_method-i-autotile_type_source">show</a>
+                
+              </p>
+              <div id="method-i-autotile_type_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 222</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">autotile_type</span>(<span class="ruby-identifier">z</span>)
+  <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">autotile_type</span>(<span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">x</span>, <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">y</span>, <span class="ruby-identifier">z</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-battleback1_bitmap">
+            
+              <b>battleback1_bitmap</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-battleback1_bitmap" name="method-i-battleback1_bitmap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取战场背景（地面）的位图</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-battleback1_bitmap_source')" id="l_method-i-battleback1_bitmap_source">show</a>
+                
+              </p>
+              <div id="method-i-battleback1_bitmap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">battleback1_bitmap</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">battleback1_name</span>
+    <span class="ruby-constant">Cache</span>.<span class="ruby-identifier">battleback1</span>(<span class="ruby-identifier">battleback1_name</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">create_blurry_background_bitmap</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-battleback1_name">
+            
+              <b>battleback1_name</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-battleback1_name" name="method-i-battleback1_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取战场背景（地面）的文件名</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-battleback1_name_source')" id="l_method-i-battleback1_name_source">show</a>
+                
+              </p>
+              <div id="method-i-battleback1_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">battleback1_name</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$BTEST</span>
+    <span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">battleback1_name</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">battleback1_name</span>
+    <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">battleback1_name</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">overworld?</span>
+    <span class="ruby-identifier">overworld_battleback1_name</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-battleback2_bitmap">
+            
+              <b>battleback2_bitmap</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-battleback2_bitmap" name="method-i-battleback2_bitmap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取战场背景（墙壁）的位图</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-battleback2_bitmap_source')" id="l_method-i-battleback2_bitmap_source">show</a>
+                
+              </p>
+              <div id="method-i-battleback2_bitmap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">battleback2_bitmap</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">battleback2_name</span>
+    <span class="ruby-constant">Cache</span>.<span class="ruby-identifier">battleback2</span>(<span class="ruby-identifier">battleback2_name</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">Bitmap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">1</span>, <span class="ruby-number">1</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-battleback2_name">
+            
+              <b>battleback2_name</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-battleback2_name" name="method-i-battleback2_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取战场背景（墙壁）的文件名</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-battleback2_name_source')" id="l_method-i-battleback2_name_source">show</a>
+                
+              </p>
+              <div id="method-i-battleback2_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">battleback2_name</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">$BTEST</span>
+    <span class="ruby-identifier">$data_system</span>.<span class="ruby-identifier">battleback2_name</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">battleback2_name</span>
+    <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">battleback2_name</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">$game_map</span>.<span class="ruby-identifier">overworld?</span>
+    <span class="ruby-identifier">overworld_battleback2_name</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-battler_sprites">
+            
+              <b>battler_sprites</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-battler_sprites" name="method-i-battler_sprites" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取敌人和角色的精灵</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-battler_sprites_source')" id="l_method-i-battler_sprites_source">show</a>
+                
+              </p>
+              <div id="method-i-battler_sprites_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 411</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">battler_sprites</span>
+  <span class="ruby-ivar">@enemy_sprites</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@actor_sprites</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-center_sprite">
+            
+              <b>center_sprite</b>(sprite)
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-center_sprite" name="method-i-center_sprite" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>精灵居中</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-center_sprite_source')" id="l_method-i-center_sprite_source">show</a>
+                
+              </p>
+              <div id="method-i-center_sprite_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 229</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">center_sprite</span>(<span class="ruby-identifier">sprite</span>)
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">oy</span> = <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">x</span> = <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+  <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">y</span> = <span class="ruby-constant">Graphics</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">/</span> <span class="ruby-number">2</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_actors">
+            
+              <b>create_actors</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-create_actors" name="method-i-create_actors" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>生成角色精灵</p>
+
+<p>默认下不显示角色的图像。为了方便使用，敌我双方使用共通的精灵。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_actors_source')" id="l_method-i-create_actors_source">show</a>
+                
+              </p>
+              <div id="method-i-create_actors_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 249</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_actors</span>
+  <span class="ruby-ivar">@actor_sprites</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">4</span>) { <span class="ruby-constant">Sprite_Battler</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport1</span>) }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_battleback1">
+            
+              <b>create_battleback1</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-create_battleback1" name="method-i-create_battleback1" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>生成战场背景（地面）精灵</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_battleback1_source')" id="l_method-i-create_battleback1_source">show</a>
+                
+              </p>
+              <div id="method-i-create_battleback1_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_battleback1</span>
+  <span class="ruby-ivar">@back1_sprite</span> = <span class="ruby-constant">Sprite</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport1</span>)
+  <span class="ruby-ivar">@back1_sprite</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-identifier">battleback1_bitmap</span>
+  <span class="ruby-ivar">@back1_sprite</span>.<span class="ruby-identifier">z</span> = <span class="ruby-number">0</span>
+  <span class="ruby-identifier">center_sprite</span>(<span class="ruby-ivar">@back1_sprite</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_battleback2">
+            
+              <b>create_battleback2</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-create_battleback2" name="method-i-create_battleback2" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>生成战场背景（墙壁）精灵</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_battleback2_source')" id="l_method-i-create_battleback2_source">show</a>
+                
+              </p>
+              <div id="method-i-create_battleback2_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_battleback2</span>
+  <span class="ruby-ivar">@back2_sprite</span> = <span class="ruby-constant">Sprite</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport1</span>)
+  <span class="ruby-ivar">@back2_sprite</span>.<span class="ruby-identifier">bitmap</span> = <span class="ruby-identifier">battleback2_bitmap</span>
+  <span class="ruby-ivar">@back2_sprite</span>.<span class="ruby-identifier">z</span> = <span class="ruby-number">1</span>
+  <span class="ruby-identifier">center_sprite</span>(<span class="ruby-ivar">@back2_sprite</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_blurry_background_bitmap">
+            
+              <b>create_blurry_background_bitmap</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-create_blurry_background_bitmap" name="method-i-create_blurry_background_bitmap" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>生成由地图画面加工而来的战场背景</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_blurry_background_bitmap_source')" id="l_method-i-create_blurry_background_bitmap_source">show</a>
+                
+              </p>
+              <div id="method-i-create_blurry_background_bitmap_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_blurry_background_bitmap</span>
+  <span class="ruby-identifier">source</span> = <span class="ruby-constant">SceneManager</span>.<span class="ruby-identifier">background_bitmap</span>
+  <span class="ruby-identifier">bitmap</span> = <span class="ruby-constant">Bitmap</span>.<span class="ruby-identifier">new</span>(<span class="ruby-number">640</span>, <span class="ruby-number">480</span>)
+  <span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">stretch_blt</span>(<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">rect</span>, <span class="ruby-identifier">source</span>, <span class="ruby-identifier">source</span>.<span class="ruby-identifier">rect</span>)
+  <span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">radial_blur</span>(<span class="ruby-number">120</span>, <span class="ruby-number">16</span>)
+  <span class="ruby-identifier">bitmap</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_enemies">
+            
+              <b>create_enemies</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-create_enemies" name="method-i-create_enemies" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>敌人精灵生成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_enemies_source')" id="l_method-i-create_enemies_source">show</a>
+                
+              </p>
+              <div id="method-i-create_enemies_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 239</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_enemies</span>
+  <span class="ruby-ivar">@enemy_sprites</span> = <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">members</span>.<span class="ruby-identifier">reverse</span>.<span class="ruby-identifier">collect</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">enemy</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">Sprite_Battler</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport1</span>, <span class="ruby-identifier">enemy</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_pictures">
+            
+              <b>create_pictures</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-create_pictures" name="method-i-create_pictures" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>生成图片精灵</p>
+
+<p>游戏开始时生成空的数组，在需要使用时才添加内容。</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_pictures_source')" id="l_method-i-create_pictures_source">show</a>
+                
+              </p>
+              <div id="method-i-create_pictures_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 257</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_pictures</span>
+  <span class="ruby-ivar">@picture_sprites</span> = []
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_timer">
+            
+              <b>create_timer</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-create_timer" name="method-i-create_timer" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>计时器精灵生成</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_timer_source')" id="l_method-i-create_timer_source">show</a>
+                
+              </p>
+              <div id="method-i-create_timer_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 264</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_timer</span>
+  <span class="ruby-ivar">@timer_sprite</span> = <span class="ruby-constant">Sprite_Timer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport2</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_viewports">
+            
+              <b>create_viewports</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-create_viewports" name="method-i-create_viewports" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>生成显示端口</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_viewports_source')" id="l_method-i-create_viewports_source">show</a>
+                
+              </p>
+              <div id="method-i-create_viewports_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_viewports</span>
+  <span class="ruby-ivar">@viewport1</span> = <span class="ruby-constant">Viewport</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@viewport2</span> = <span class="ruby-constant">Viewport</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@viewport3</span> = <span class="ruby-constant">Viewport</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@viewport2</span>.<span class="ruby-identifier">z</span> = <span class="ruby-number">50</span>
+  <span class="ruby-ivar">@viewport3</span>.<span class="ruby-identifier">z</span> = <span class="ruby-number">100</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-default_battleback1_name">
+            
+              <b>default_battleback1_name</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-default_battleback1_name" name="method-i-default_battleback1_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取默认的战场背景（地面）文件名</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-default_battleback1_name_source')" id="l_method-i-default_battleback1_name_source">show</a>
+                
+              </p>
+              <div id="method-i-default_battleback1_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 194</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">default_battleback1_name</span>
+  <span class="ruby-string">&quot;Grassland&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-default_battleback2_name">
+            
+              <b>default_battleback2_name</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-default_battleback2_name" name="method-i-default_battleback2_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取默认的战场背景（墙壁）文件名</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-default_battleback2_name_source')" id="l_method-i-default_battleback2_name_source">show</a>
+                
+              </p>
+              <div id="method-i-default_battleback2_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 201</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">default_battleback2_name</span>
+  <span class="ruby-string">&quot;Grassland&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose">
+            
+              <b>dispose</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-dispose" name="method-i-dispose" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>释放</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_source')" id="l_method-i-dispose_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 271</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose</span>
+  <span class="ruby-identifier">dispose_battleback1</span>
+  <span class="ruby-identifier">dispose_battleback2</span>
+  <span class="ruby-identifier">dispose_enemies</span>
+  <span class="ruby-identifier">dispose_actors</span>
+  <span class="ruby-identifier">dispose_pictures</span>
+  <span class="ruby-identifier">dispose_timer</span>
+  <span class="ruby-identifier">dispose_viewports</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_actors">
+            
+              <b>dispose_actors</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-dispose_actors" name="method-i-dispose_actors" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>释放角色精灵</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_actors_source')" id="l_method-i-dispose_actors_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_actors_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 307</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_actors</span>
+  <span class="ruby-ivar">@actor_sprites</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">sprite</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">dispose</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_battleback1">
+            
+              <b>dispose_battleback1</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-dispose_battleback1" name="method-i-dispose_battleback1" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>释放战场背景的精灵（地面）</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_battleback1_source')" id="l_method-i-dispose_battleback1_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_battleback1_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 284</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_battleback1</span>
+  <span class="ruby-ivar">@back1_sprite</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@back1_sprite</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_battleback2">
+            
+              <b>dispose_battleback2</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-dispose_battleback2" name="method-i-dispose_battleback2" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>释放战场背景的精灵（墙壁）</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_battleback2_source')" id="l_method-i-dispose_battleback2_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_battleback2_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 292</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_battleback2</span>
+  <span class="ruby-ivar">@back2_sprite</span>.<span class="ruby-identifier">bitmap</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@back2_sprite</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_enemies">
+            
+              <b>dispose_enemies</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-dispose_enemies" name="method-i-dispose_enemies" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>释放敌人精灵</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_enemies_source')" id="l_method-i-dispose_enemies_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_enemies_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 300</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_enemies</span>
+  <span class="ruby-ivar">@enemy_sprites</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">sprite</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">dispose</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_pictures">
+            
+              <b>dispose_pictures</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-dispose_pictures" name="method-i-dispose_pictures" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>释放图片精灵</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_pictures_source')" id="l_method-i-dispose_pictures_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_pictures_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 314</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_pictures</span>
+  <span class="ruby-ivar">@picture_sprites</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">sprite</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">dispose</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_timer">
+            
+              <b>dispose_timer</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-dispose_timer" name="method-i-dispose_timer" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>释放计时器精灵</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_timer_source')" id="l_method-i-dispose_timer_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_timer_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 321</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_timer</span>
+  <span class="ruby-ivar">@timer_sprite</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-dispose_viewports">
+            
+              <b>dispose_viewports</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-dispose_viewports" name="method-i-dispose_viewports" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>释放显示端口</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-dispose_viewports_source')" id="l_method-i-dispose_viewports_source">show</a>
+                
+              </p>
+              <div id="method-i-dispose_viewports_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 328</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">dispose_viewports</span>
+  <span class="ruby-ivar">@viewport1</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@viewport2</span>.<span class="ruby-identifier">dispose</span>
+  <span class="ruby-ivar">@viewport3</span>.<span class="ruby-identifier">dispose</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-effect-3F">
+            
+              <b>effect?</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-effect-3F" name="method-i-effect-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>判定效果是否执行中</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-effect-3F_source')" id="l_method-i-effect-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-effect-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 425</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">effect?</span>
+  <span class="ruby-identifier">battler_sprites</span>.<span class="ruby-identifier">any?</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">sprite</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">effect?</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-normal_battleback1_name">
+            
+              <b>normal_battleback1_name</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-normal_battleback1_name" name="method-i-normal_battleback1_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取普通时的战场背景（地面）文件名</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-normal_battleback1_name_source')" id="l_method-i-normal_battleback1_name_source">show</a>
+                
+              </p>
+              <div id="method-i-normal_battleback1_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 128</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">normal_battleback1_name</span>
+  <span class="ruby-identifier">terrain_battleback1_name</span>(<span class="ruby-identifier">autotile_type</span>(<span class="ruby-number">1</span>)) <span class="ruby-operator">||</span>
+  <span class="ruby-identifier">terrain_battleback1_name</span>(<span class="ruby-identifier">autotile_type</span>(<span class="ruby-number">0</span>)) <span class="ruby-operator">||</span>
+  <span class="ruby-identifier">default_battleback1_name</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-normal_battleback2_name">
+            
+              <b>normal_battleback2_name</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-normal_battleback2_name" name="method-i-normal_battleback2_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取普通时的战场背景（墙壁）文件名</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-normal_battleback2_name_source')" id="l_method-i-normal_battleback2_name_source">show</a>
+                
+              </p>
+              <div id="method-i-normal_battleback2_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 137</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">normal_battleback2_name</span>
+  <span class="ruby-identifier">terrain_battleback2_name</span>(<span class="ruby-identifier">autotile_type</span>(<span class="ruby-number">1</span>)) <span class="ruby-operator">||</span>
+  <span class="ruby-identifier">terrain_battleback2_name</span>(<span class="ruby-identifier">autotile_type</span>(<span class="ruby-number">0</span>)) <span class="ruby-operator">||</span>
+  <span class="ruby-identifier">default_battleback2_name</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-overworld_battleback1_name">
+            
+              <b>overworld_battleback1_name</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-overworld_battleback1_name" name="method-i-overworld_battleback1_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取战场背景（地面）文件名</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-overworld_battleback1_name_source')" id="l_method-i-overworld_battleback1_name_source">show</a>
+                
+              </p>
+              <div id="method-i-overworld_battleback1_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">overworld_battleback1_name</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">vehicle</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">ship_battleback1_name</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">normal_battleback1_name</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-overworld_battleback2_name">
+            
+              <b>overworld_battleback2_name</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-overworld_battleback2_name" name="method-i-overworld_battleback2_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取战场背景（墙壁）文件名</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-overworld_battleback2_name_source')" id="l_method-i-overworld_battleback2_name_source">show</a>
+                
+              </p>
+              <div id="method-i-overworld_battleback2_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">overworld_battleback2_name</span>
+  <span class="ruby-identifier">$game_player</span>.<span class="ruby-identifier">vehicle</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">ship_battleback2_name</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">normal_battleback2_name</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-ship_battleback1_name">
+            
+              <b>ship_battleback1_name</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-ship_battleback1_name" name="method-i-ship_battleback1_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取乘船时的战场背景（地面）文件名</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-ship_battleback1_name_source')" id="l_method-i-ship_battleback1_name_source">show</a>
+                
+              </p>
+              <div id="method-i-ship_battleback1_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 208</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">ship_battleback1_name</span>
+  <span class="ruby-string">&quot;Ship&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-ship_battleback2_name">
+            
+              <b>ship_battleback2_name</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-ship_battleback2_name" name="method-i-ship_battleback2_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取乘船时的战场背景（墙壁）文件名</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-ship_battleback2_name_source')" id="l_method-i-ship_battleback2_name_source">show</a>
+                
+              </p>
+              <div id="method-i-ship_battleback2_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 215</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">ship_battleback2_name</span>
+  <span class="ruby-string">&quot;Ship&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-terrain_battleback1_name">
+            
+              <b>terrain_battleback1_name</b>(type)
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-terrain_battleback1_name" name="method-i-terrain_battleback1_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取与地形对应的战场背景（地面）文件名</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-terrain_battleback1_name_source')" id="l_method-i-terrain_battleback1_name_source">show</a>
+                
+              </p>
+              <div id="method-i-terrain_battleback1_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 146</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">terrain_battleback1_name</span>(<span class="ruby-identifier">type</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">type</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">24</span>,<span class="ruby-number">25</span>        <span class="ruby-comment"># 野外</span>
+    <span class="ruby-string">&quot;Wasteland&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">26</span>,<span class="ruby-number">27</span>        <span class="ruby-comment"># 泥地</span>
+    <span class="ruby-string">&quot;DirtField&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">32</span>,<span class="ruby-number">33</span>        <span class="ruby-comment"># 沙漠</span>
+    <span class="ruby-string">&quot;Desert&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">34</span>           <span class="ruby-comment"># 岩地</span>
+    <span class="ruby-string">&quot;Lava1&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">35</span>           <span class="ruby-comment"># 岩地（熔岩）</span>
+    <span class="ruby-string">&quot;Lava2&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">40</span>,<span class="ruby-number">41</span>        <span class="ruby-comment"># 雪原</span>
+    <span class="ruby-string">&quot;Snowfield&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">42</span>           <span class="ruby-comment"># 云端</span>
+    <span class="ruby-string">&quot;Clouds&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">4</span>,<span class="ruby-number">5</span>          <span class="ruby-comment"># 毒沼</span>
+    <span class="ruby-string">&quot;PoisonSwamp&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-terrain_battleback2_name">
+            
+              <b>terrain_battleback2_name</b>(type)
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-terrain_battleback2_name" name="method-i-terrain_battleback2_name" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>获取与地形对应的战场背景（墙壁）文件名</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-terrain_battleback2_name_source')" id="l_method-i-terrain_battleback2_name_source">show</a>
+                
+              </p>
+              <div id="method-i-terrain_battleback2_name_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 170</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">terrain_battleback2_name</span>(<span class="ruby-identifier">type</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">type</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">20</span>,<span class="ruby-number">21</span>        <span class="ruby-comment"># 森林</span>
+    <span class="ruby-string">&quot;Forest1&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">22</span>,<span class="ruby-number">30</span>,<span class="ruby-number">38</span>     <span class="ruby-comment"># 山丘</span>
+    <span class="ruby-string">&quot;Cliff&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">24</span>,<span class="ruby-number">25</span>,<span class="ruby-number">26</span>,<span class="ruby-number">27</span>  <span class="ruby-comment"># 野外、泥地</span>
+    <span class="ruby-string">&quot;Wasteland&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">32</span>,<span class="ruby-number">33</span>        <span class="ruby-comment"># 沙漠</span>
+    <span class="ruby-string">&quot;Desert&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">34</span>,<span class="ruby-number">35</span>        <span class="ruby-comment"># 岩地</span>
+    <span class="ruby-string">&quot;Lava&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">40</span>,<span class="ruby-number">41</span>        <span class="ruby-comment"># 雪原</span>
+    <span class="ruby-string">&quot;Snowfield&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">42</span>           <span class="ruby-comment"># 云端</span>
+    <span class="ruby-string">&quot;Clouds&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-number">4</span>,<span class="ruby-number">5</span>          <span class="ruby-comment"># 毒沼</span>
+    <span class="ruby-string">&quot;PoisonSwamp&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>更新画面</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 337</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update</span>
+  <span class="ruby-identifier">update_battleback1</span>
+  <span class="ruby-identifier">update_battleback2</span>
+  <span class="ruby-identifier">update_enemies</span>
+  <span class="ruby-identifier">update_actors</span>
+  <span class="ruby-identifier">update_pictures</span>
+  <span class="ruby-identifier">update_timer</span>
+  <span class="ruby-identifier">update_viewports</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_actors">
+            
+              <b>update_actors</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-update_actors" name="method-i-update_actors" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>更新角色的精灵</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_actors_source')" id="l_method-i-update_actors_source">show</a>
+                
+              </p>
+              <div id="method-i-update_actors_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 371</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_actors</span>
+  <span class="ruby-ivar">@actor_sprites</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">sprite</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">battler</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">members</span>[<span class="ruby-identifier">i</span>]
+    <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_battleback1">
+            
+              <b>update_battleback1</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-update_battleback1" name="method-i-update_battleback1" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>更新战场背景的精灵（地面）</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_battleback1_source')" id="l_method-i-update_battleback1_source">show</a>
+                
+              </p>
+              <div id="method-i-update_battleback1_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 350</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_battleback1</span>
+  <span class="ruby-ivar">@back1_sprite</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_battleback2">
+            
+              <b>update_battleback2</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-update_battleback2" name="method-i-update_battleback2" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>更新战场背景的精灵（墙壁）</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_battleback2_source')" id="l_method-i-update_battleback2_source">show</a>
+                
+              </p>
+              <div id="method-i-update_battleback2_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 357</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_battleback2</span>
+  <span class="ruby-ivar">@back2_sprite</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_enemies">
+            
+              <b>update_enemies</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-update_enemies" name="method-i-update_enemies" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>更新敌人的精灵</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_enemies_source')" id="l_method-i-update_enemies_source">show</a>
+                
+              </p>
+              <div id="method-i-update_enemies_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 364</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_enemies</span>
+  <span class="ruby-ivar">@enemy_sprites</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">sprite</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sprite</span>.<span class="ruby-identifier">update</span> }
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_pictures">
+            
+              <b>update_pictures</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-update_pictures" name="method-i-update_pictures" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>更新图片精灵</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_pictures_source')" id="l_method-i-update_pictures_source">show</a>
+                
+              </p>
+              <div id="method-i-update_pictures_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 381</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_pictures</span>
+  <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">screen</span>.<span class="ruby-identifier">pictures</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">pic</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@picture_sprites</span>[<span class="ruby-identifier">pic</span>.<span class="ruby-identifier">number</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">Sprite_Picture</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@viewport2</span>, <span class="ruby-identifier">pic</span>)
+    <span class="ruby-ivar">@picture_sprites</span>[<span class="ruby-identifier">pic</span>.<span class="ruby-identifier">number</span>].<span class="ruby-identifier">update</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_timer">
+            
+              <b>update_timer</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-update_timer" name="method-i-update_timer" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>更新计时器精灵</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_timer_source')" id="l_method-i-update_timer_source">show</a>
+                
+              </p>
+              <div id="method-i-update_timer_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 391</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_timer</span>
+  <span class="ruby-ivar">@timer_sprite</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-update_viewports">
+            
+              <b>update_viewports</b>()
+            
+            <a href="../classes/Spriteset_Battle.html#method-i-update_viewports" name="method-i-update_viewports" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>更新显示端口</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-update_viewports_source')" id="l_method-i-update_viewports_source">show</a>
+                
+              </p>
+              <div id="method-i-update_viewports_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Spriteset_Battle.rb, line 398</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">update_viewports</span>
+  <span class="ruby-ivar">@viewport1</span>.<span class="ruby-identifier">tone</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">screen</span>.<span class="ruby-identifier">tone</span>)
+  <span class="ruby-ivar">@viewport1</span>.<span class="ruby-identifier">ox</span> = <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">screen</span>.<span class="ruby-identifier">shake</span>
+  <span class="ruby-ivar">@viewport2</span>.<span class="ruby-identifier">color</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">screen</span>.<span class="ruby-identifier">flash_color</span>)
+  <span class="ruby-ivar">@viewport3</span>.<span class="ruby-identifier">color</span>.<span class="ruby-identifier">set</span>(<span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">0</span>, <span class="ruby-number">255</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">screen</span>.<span class="ruby-identifier">brightness</span>)
+  <span class="ruby-ivar">@viewport1</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@viewport2</span>.<span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@viewport3</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    

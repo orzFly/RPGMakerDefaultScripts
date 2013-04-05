@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Game_BattleAction</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            Game_BattleAction 
+            
+                <span class="parent">&lt; 
+                    
+                    Object
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/Game_BattleAction_rb.html">Game_BattleAction.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This class handles actions in battle. It’s used within the Game_Battler 
+class.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-clear">clear</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-decide_last_target_for_actor">decide_last_target_for_actor</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-decide_last_target_for_enemy">decide_last_target_for_enemy</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-decide_random_target_for_actor">decide_random_target_for_actor</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-decide_random_target_for_enemy">decide_random_target_for_enemy</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-for_one_friend-3F">for_one_friend?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-for_one_friend_hp0-3F">for_one_friend_hp0?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-valid-3F">valid?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>basic</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>forcing</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>item_id</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>kind</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>skill_id</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>speed</td>
+            <td class='attr-desc'><p>Public Instance Variables</p></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>target_index</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/Game_BattleAction.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Object Initialization</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_BattleAction.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">initialize</span>
+  <span class="ruby-identifier">clear</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-clear">
+            
+              <b>clear</b>()
+            
+            <a href="../classes/Game_BattleAction.html#method-i-clear" name="method-i-clear" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Clear</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-clear_source')" id="l_method-i-clear_source">show</a>
+                
+              </p>
+              <div id="method-i-clear_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_BattleAction.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">clear</span>
+  <span class="ruby-ivar">@speed</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@kind</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@basic</span> = <span class="ruby-number">3</span>
+  <span class="ruby-ivar">@skill_id</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@item_id</span> = <span class="ruby-number">0</span>
+  <span class="ruby-ivar">@target_index</span> = <span class="ruby-number">-1</span>
+  <span class="ruby-ivar">@forcing</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-decide_last_target_for_actor">
+            
+              <b>decide_last_target_for_actor</b>()
+            
+            <a href="../classes/Game_BattleAction.html#method-i-decide_last_target_for_actor" name="method-i-decide_last_target_for_actor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Last Target (for Actor)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-decide_last_target_for_actor_source')" id="l_method-i-decide_last_target_for_actor_source">show</a>
+                
+              </p>
+              <div id="method-i-decide_last_target_for_actor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_BattleAction.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">decide_last_target_for_actor</span>
+  <span class="ruby-comment"># If effect scope is ally, then it's an actor, anything else is an enemy</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@target_index</span> <span class="ruby-operator">==</span> <span class="ruby-number">-1</span>
+    <span class="ruby-identifier">battler</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">for_one_friend?</span>
+    <span class="ruby-identifier">battler</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">actors</span>[<span class="ruby-ivar">@target_index</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">battler</span> = <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">enemies</span>[<span class="ruby-ivar">@target_index</span>]
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Clear action if no target exists</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">battler</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">or</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">battler</span>.<span class="ruby-identifier">exist?</span>
+    <span class="ruby-identifier">clear</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-decide_last_target_for_enemy">
+            
+              <b>decide_last_target_for_enemy</b>()
+            
+            <a href="../classes/Game_BattleAction.html#method-i-decide_last_target_for_enemy" name="method-i-decide_last_target_for_enemy" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Last Target (for Enemy)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-decide_last_target_for_enemy_source')" id="l_method-i-decide_last_target_for_enemy_source">show</a>
+                
+              </p>
+              <div id="method-i-decide_last_target_for_enemy_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_BattleAction.rb, line 139</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">decide_last_target_for_enemy</span>
+  <span class="ruby-comment"># If effect scope is ally, then it's an enemy, anything else is an actor</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@target_index</span> <span class="ruby-operator">==</span> <span class="ruby-number">-1</span>
+    <span class="ruby-identifier">battler</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">for_one_friend?</span>
+    <span class="ruby-identifier">battler</span> = <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">enemies</span>[<span class="ruby-ivar">@target_index</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">battler</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">actors</span>[<span class="ruby-ivar">@target_index</span>]
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># Clear action if no target exists</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">battler</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">or</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">battler</span>.<span class="ruby-identifier">exist?</span>
+    <span class="ruby-identifier">clear</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-decide_random_target_for_actor">
+            
+              <b>decide_random_target_for_actor</b>()
+            
+            <a href="../classes/Game_BattleAction.html#method-i-decide_random_target_for_actor" name="method-i-decide_random_target_for_actor" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Random Target (for Actor)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-decide_random_target_for_actor_source')" id="l_method-i-decide_random_target_for_actor_source">show</a>
+                
+              </p>
+              <div id="method-i-decide_random_target_for_actor_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_BattleAction.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">decide_random_target_for_actor</span>
+  <span class="ruby-comment"># Diverge with effect scope</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">for_one_friend_hp0?</span>
+    <span class="ruby-identifier">battler</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">random_target_actor_hp0</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">for_one_friend?</span>
+    <span class="ruby-identifier">battler</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">random_target_actor</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">battler</span> = <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">random_target_enemy</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If a target exists, get an index, and if a target doesn't exist,</span>
+  <span class="ruby-comment"># clear the action</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">battler</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-ivar">@target_index</span> = <span class="ruby-identifier">battler</span>.<span class="ruby-identifier">index</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">clear</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-decide_random_target_for_enemy">
+            
+              <b>decide_random_target_for_enemy</b>()
+            
+            <a href="../classes/Game_BattleAction.html#method-i-decide_random_target_for_enemy" name="method-i-decide_random_target_for_enemy" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Random Target (for Enemy)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-decide_random_target_for_enemy_source')" id="l_method-i-decide_random_target_for_enemy_source">show</a>
+                
+              </p>
+              <div id="method-i-decide_random_target_for_enemy_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_BattleAction.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">decide_random_target_for_enemy</span>
+  <span class="ruby-comment"># Diverge with effect scope</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">for_one_friend_hp0?</span>
+    <span class="ruby-identifier">battler</span> = <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">random_target_enemy_hp0</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">for_one_friend?</span>
+    <span class="ruby-identifier">battler</span> = <span class="ruby-identifier">$game_troop</span>.<span class="ruby-identifier">random_target_enemy</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">battler</span> = <span class="ruby-identifier">$game_party</span>.<span class="ruby-identifier">random_target_actor</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If a target exists, get an index, and if a target doesn't exist,</span>
+  <span class="ruby-comment"># clear the action</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">battler</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-ivar">@target_index</span> = <span class="ruby-identifier">battler</span>.<span class="ruby-identifier">index</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">clear</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-for_one_friend-3F">
+            
+              <b>for_one_friend?</b>()
+            
+            <a href="../classes/Game_BattleAction.html#method-i-for_one_friend-3F" name="method-i-for_one_friend-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if for One Ally</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-for_one_friend-3F_source')" id="l_method-i-for_one_friend-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-for_one_friend-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_BattleAction.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">for_one_friend?</span>
+  <span class="ruby-comment"># If kind = skill, and effect scope is for ally (including 0 HP)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@kind</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span> <span class="ruby-keyword">and</span> [<span class="ruby-number">3</span>, <span class="ruby-number">5</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">$data_skills</span>[<span class="ruby-ivar">@skill_id</span>].<span class="ruby-identifier">scope</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If kind = item, and effect scope is for ally (including 0 HP)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@kind</span> <span class="ruby-operator">==</span> <span class="ruby-number">2</span> <span class="ruby-keyword">and</span> [<span class="ruby-number">3</span>, <span class="ruby-number">5</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">$data_items</span>[<span class="ruby-ivar">@item_id</span>].<span class="ruby-identifier">scope</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-for_one_friend_hp0-3F">
+            
+              <b>for_one_friend_hp0?</b>()
+            
+            <a href="../classes/Game_BattleAction.html#method-i-for_one_friend_hp0-3F" name="method-i-for_one_friend_hp0-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine if for One Ally (HP 0)</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-for_one_friend_hp0-3F_source')" id="l_method-i-for_one_friend_hp0-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-for_one_friend_hp0-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_BattleAction.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">for_one_friend_hp0?</span>
+  <span class="ruby-comment"># If kind = skill, and effect scope is for ally (only 0 HP)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@kind</span> <span class="ruby-operator">==</span> <span class="ruby-number">1</span> <span class="ruby-keyword">and</span> [<span class="ruby-number">5</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">$data_skills</span>[<span class="ruby-ivar">@skill_id</span>].<span class="ruby-identifier">scope</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># If kind = item, and effect scope is for ally (only 0 HP)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@kind</span> <span class="ruby-operator">==</span> <span class="ruby-number">2</span> <span class="ruby-keyword">and</span> [<span class="ruby-number">5</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">$data_items</span>[<span class="ruby-ivar">@item_id</span>].<span class="ruby-identifier">scope</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-valid-3F">
+            
+              <b>valid?</b>()
+            
+            <a href="../classes/Game_BattleAction.html#method-i-valid-3F" name="method-i-valid-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Determine Validity</p>
+            </div>
+          
+          
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-valid-3F_source')" id="l_method-i-valid-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-valid-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File Game_BattleAction.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">valid?</span>
+  <span class="ruby-keyword">return</span> (<span class="ruby-keyword">not</span> (<span class="ruby-ivar">@kind</span> <span class="ruby-operator">==</span> <span class="ruby-number">0</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@basic</span> <span class="ruby-operator">==</span> <span class="ruby-number">3</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    
