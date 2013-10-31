@@ -33,9 +33,9 @@ task :scripts => ["_sources"] do |t|
     scripts = load_rgssscript i
     building = File.basename(i)
     FileUtils.mkdir_p(File.basename(i)) rescue nil
+    files = {}
     scripts.each do |k, v|
-      next if k[/\s|\(|\)/] || k.length == 0
-      
+      next if k[/\(|\)/] || k.length == 0 || (k[/\s/] && !k[/\s\d+$/])
       v.gsub!(/\r\n/, "\n")
       v.gsub!(/\r/, "\n")
       v.gsub!(/#={10,}/, "#")
@@ -51,7 +51,14 @@ task :scripts => ["_sources"] do |t|
       while v[/(#.*?) (@[a-zA-Z._0-9]*) /]
         v.gsub!(/(#.*?) (@[a-zA-Z._0-9]*) /) { "#$1 `#$2` "}
       end
-      
+      k.gsub!(/\s+\d+$/, "")
+      if files[k]
+        files[k] += "\n\n" << v
+      else
+        files[k] = v
+      end
+    end
+    files.each do |k, v|
       File.open("#{File.basename(i)}/#{k}.rb", "w") do |io|
         io.write v
       end
